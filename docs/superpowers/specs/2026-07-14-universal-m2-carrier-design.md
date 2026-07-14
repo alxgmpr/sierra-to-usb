@@ -54,11 +54,11 @@ Three USB-C ports: **#1 data** (SS + USB2 + CC via HD3SS3220), **#2 power** (PD 
 ## 4. Power
 
 - **PD input:** USB-C #2 → CH224K (CFG1 24 kΩ → request 12 V; VDD via 1 kΩ + 1 µF; PG open-drain → LED). SMAJ13A TVS on VBUS_PD.
-- **PoE input:** RJ45 magjack center taps (all 4 pairs) → 2× diode bridges → SMAJ58A TVS → **TPS23730 802.3at PD + isolated active-clamp forward converter, copied verbatim from TI EVM-093** (opto feedback, Würth 750313355 transformer — the stocked, proven 12 V reference; supersedes the earlier "no-opto flyback" sketch per 2026-07-14 sourcing decision), Class 4 (25.5 W), 54 V → 12 V. Secondary GND = board GND; primary side moated per creepage rules.
+- **PoE input:** RJ45 magjack center taps (all 4 pairs) → 2× diode bridges → SMAJ58A TVS → **TPS23730 802.3at PD + isolated active-clamp forward converter, copied verbatim from TI EVM-093** (opto feedback, Würth 750313355 transformer — the stocked, proven 12 V reference; supersedes the earlier "no-opto flyback" sketch per 2026-07-14 sourcing decision), Class 4 (25.5 W — classification resistors RCLSA=RCLSB=32 Ω per TPS23730 DS Table 8-1, the ONE deliberate deviation from the EVM-093 BOM, which ships Class 6/802.3bt; user decision 2026-07-14), 54 V → 12 V. Secondary GND = board GND; primary side moated per creepage rules.
 - **ORing:** PD 12 V and PoE 12 V through ideal-diode OR → **12V node**.
 - **Main buck:** TPS565201, 12 V → 3.3 V. EN via 1 MΩ from the 12V node (starts ≥~8 V, i.e., only after a PD contract or PoE class — module never boots on pre-negotiation 5 V). Inductor: 2.2 µH with **Isat ≥ 5.6 A** (upgrade from SWPA6045S2R2MT's 4.4 A — budget below).
 - **Load budget:** module 3.0 A peak / 2.8 A cont (EM9293; EM9191 2.7 A) + RTL8125BG ~0.5 A + RP2040 & misc ~0.1 A ≈ **3.6 A peak** on 3V3.
-- **Bulk at M.2 VCC:** 2× 470 µF polymer + 6× 10 µF ceramic + 0.1 µF per VCC pin (brownout mitigation — the documented failure mode).
+- **Bulk at M.2 VCC:** 3× 470 µF polymer (≈1.5 mF, per EM92xx PTS r7.2 recommendation; user decision 2026-07-14) + 6× 10 µF ceramic + 0.1 µF per VCC pin (brownout mitigation — the documented failure mode).
 - **1.8 V:** AP2112K-1.8 off 3V3; feeds strap pull-ups only.
 - **RP2040 power:** dedicated AP2112K-3.3 fed by Schottky-OR of debug-port VBUS and main 3V3 — console alive with either source.
 - **HD3SS3220 local 3V3:** AP2112K-3.3 off VBUS_DATA (mux alive whenever a data cable is present, per original reviewed design).
