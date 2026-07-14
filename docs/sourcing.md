@@ -48,7 +48,7 @@
 | 470 µF 6.3 V polymer ×2 | Panasonic 6TPE470MI | 7343 SP-Cap | LCSC | C402828 | $$ ($1.45@1) | 8,795 — live page; 18 mΩ ESR confirmed. |
 | 2.2 µH ≥5.6 A inductor | Sunlord **SWPA8040S2R2MT** (or NT) | 8×8×4 shielded | LCSC | C36415 (MT) / C504645 (NT) | $ ($0.09) | MT 959 / NT 22 in stock. **Datasheet-verified: Isat 7.10 A max-rating / Irms 5.15 A max-rating (5.60 A typ)** — clears the ≥5.6 A Isat requirement with margin (the 6045 size the plan warns about is indeed undersized). Order MT variant; low-ish stock, buy early. |
 | Ideal-diode OR ctrl ×2 | TI **LM5050MKX-1/NOPB** | TSOT-23-6 | DigiKey | — | $$$ ($2.21@1) | **16,526 in stock (DigiKey, live).** Note: the plain LM5050MK-1/NOPB SKU showed 0 stock/16-wk lead — order the MKX (tape/reel cut) SKU. |
-| OR-path N-FET ×2 | NTD20N03L27-VB (VBsemi) (alternates: STD30NF03LT, DMC3032LSD) | DPAK (TO-252) | LCSC | C878885 | $ ($0.3757@1) | 1 in stock (thin; recheck/order early). 30 V, 7 mΩ Rds, ≫3 A. VBsemi version of onsemi NTD20N03L27. |
+| OR-path N-FET ×2 | Infineon **IRLR7843TRPBF** (alternates: VBsemi NTD20N03L27-VB C878885 — only 1 pc at LCSC; Diodes DMC3032LSD — 53 mΩ, fails ≤20 mΩ) | DPAK (TO-252) | DigiKey | — | $$$ ($2.04@1) | **16,728 in stock (DigiKey, live), Active.** 30 V, 3.3 mΩ max @ 10 V, ≫3 A — clears ≤20 mΩ with margin. Rejected: genuine onsemi NTD20N03L27 is 27 mΩ max @ 5 V per datasheet (the "7 mΩ" figure is clone marketing); STD30NF03LT and Vishay SUD50N03 are obsolete at DigiKey. |
 | PoE PD+DC/DC controller | TI **TPS23730RMTR** | VQFN-45 (7×5) | DigiKey | — | $$$ ($4.95@1) | **3,569 in stock (DigiKey, live).** See Decision (a). (Rejected alt TPS2373-4RGWR also real: 1,729 in stock, $3.40.) |
 
 ## 3. Decisions
