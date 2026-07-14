@@ -39,7 +39,7 @@ RP2040 PIO-USB host ────────────┘        Sierra EM919x
 USB-C #2 PD ── CH224K@12V ──┐   │ PCIe lane 0 (Quectel RC mode):               │
                             ├─OR┤   41/43 modTX → caps → RTL8125BG ── magjack ── RJ45 2.5GbE
 RJ45 PoE CTs ── bridges ──  │   │   47/49 modRX ← caps ← RTL8125BG        │
-  TPS23730 isolated flyback ┘   │   53/55 REFCLK (mod→PHY), 50 PERST# (OD out),│
+  TPS23730 iso fwd (EVM-093)┘   │   53/55 REFCLK (mod→PHY), 50 PERST# (OD out),│
         12V node → TPS565201 ───┤   52 CLKREQ#, 54 PEWAKE# (OD, pull-ups)      │
         → 3V3 (module, RTL8125) │                                              │
         → AP2112K-1.8 (straps)  │ UIM1 ── nano-SIM 1                           │
@@ -54,7 +54,7 @@ Three USB-C ports: **#1 data** (SS + USB2 + CC via HD3SS3220), **#2 power** (PD 
 ## 4. Power
 
 - **PD input:** USB-C #2 → CH224K (CFG1 24 kΩ → request 12 V; VDD via 1 kΩ + 1 µF; PG open-drain → LED). SMAJ13A TVS on VBUS_PD.
-- **PoE input:** RJ45 magjack center taps (all 4 pairs) → 2× diode bridges → SMAJ58A TVS → **TPS23730-class 802.3at PD + no-opto isolated flyback**, Class 4 (25.5 W), 54 V → 12 V. Secondary GND = board GND; primary side moated per creepage rules.
+- **PoE input:** RJ45 magjack center taps (all 4 pairs) → 2× diode bridges → SMAJ58A TVS → **TPS23730 802.3at PD + isolated active-clamp forward converter, copied verbatim from TI EVM-093** (opto feedback, Würth 750313355 transformer — the stocked, proven 12 V reference; supersedes the earlier "no-opto flyback" sketch per 2026-07-14 sourcing decision), Class 4 (25.5 W), 54 V → 12 V. Secondary GND = board GND; primary side moated per creepage rules.
 - **ORing:** PD 12 V and PoE 12 V through ideal-diode OR → **12V node**.
 - **Main buck:** TPS565201, 12 V → 3.3 V. EN via 1 MΩ from the 12V node (starts ≥~8 V, i.e., only after a PD contract or PoE class — module never boots on pre-negotiation 5 V). Inductor: 2.2 µH with **Isat ≥ 5.6 A** (upgrade from SWPA6045S2R2MT's 4.4 A — budget below).
 - **Load budget:** module 3.0 A peak / 2.8 A cont (EM9293; EM9191 2.7 A) + RTL8125BG ~0.5 A + RP2040 & misc ~0.1 A ≈ **3.6 A peak** on 3V3.
@@ -133,7 +133,7 @@ Hardwired (on kill rail): 12V-node, PoE-active (TPS23730 status), modem WWAN_LED
 - **Sourcing checks before capture** (soft gates — hand-soldering allows any distributor): 2.5G+PoE magjack (LINK-PP), PoE flyback transformer, eUICC chip, MHF4 receptacles.
 
 ## 12. Key parts
-M.2 socket Key-B 75-pin + standoff · **RP2040** + W25Q128 + 12 MHz · **RTL8125BG** · **HD3SS3220RNH** · **TS3USB221** · **CH224K** · **TPS565201** · **TPS23730** + PoE flyback transformer · **AP2112K-3.3 ×2 / -1.8** · **TS3A27518E** · MFF2 eUICC · **INA226 ×2** · TMP112 ×2 · TPD4EUSB30 ×3 · TPD4E05U06 · TPD4S009 ×2 · SMAJ13A / SMAJ58A · 2N7002 ×~7 · 2.5G PoE magjack · MHF4 ×5 · SMA ×5 · nano-SIM ×2 · USB-C ×3 · 4-pos DIP · slide switch · Qwiic JST-SH.
+M.2 socket Key-B (75-position/67-pin) + standoff · **RP2040** + W25Q128 + 12 MHz · **RTL8125BG** · **HD3SS3220RNH** · **TS3USB221** · **CH224K** · **TPS565201** · **TPS23730** + Würth 750313355 transformer (EVM-093 active-clamp forward) · **AP2112K-3.3 ×2 / -1.8** · **TS3A27518E** · MFF2 eUICC · **INA226 ×2** · TMP112 ×2 · TPD4EUSB30 ×3 · TPD4E05U06 · TPD4S009 ×2 · SMAJ13A / SMAJ58A · 2N7002 ×~7 · 2.5G PoE magjack · MHF4 ×5 · SMA ×5 · nano-SIM ×2 · USB-C ×3 · 4-pos DIP · slide switch · Qwiic JST-SH.
 
 ## 13. Verification items carried into implementation
 1. EM92xx PTS: confirm USB3 fig. matches EM919x (caps on 35/37 only) and pin-22 VIH — user has the PDF locally.
@@ -141,7 +141,7 @@ M.2 socket Key-B 75-pin + standoff · **RP2040** + W25Q128 + 12 MHz · **RTL8125
 3. Sierra pin 26/23/67 exact definitions in EM92xx PTS (Quectel side verified).
 4. RM551E pinout spot-check (user's reference card) against the RM520N assumptions.
 5. HD3SS3220 UFP wiring against datasheet (carried from reviewed design, re-verify in KiCad).
-6. TPS23730 vs TPS2373-4 + external controller: pick by transformer availability; confirm at-class (Class 4) config.
+6. ~~TPS23730 vs TPS2373-4~~ RESOLVED 2026-07-14: TPS23730 per TI EVM-093 verbatim (active-clamp forward, opto, Würth 750313355); confirm Class-4 resistor set at capture.
 7. eSIM DET polarity per vendor; TS3A27518E channel count covers VCC/RST/CLK/IO/DET.
 8. JLC impedance calculator geometries for all four diff classes + RF CPWG on JLC7628.
 
