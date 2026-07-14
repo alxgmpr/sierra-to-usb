@@ -85,7 +85,8 @@ def build_index(root: ET.Element):
     """pin_by_num[(ref, pinnum)] -> net ; pin_by_fn[(ref, pinfunction)] -> set(nets) ; net_pins[net] -> count"""
     by_num, by_fn, net_pins = {}, {}, {}
     for net in root.iter("net"):
-        name = net.get("name").lstrip("/")
+        # hierarchical nets export as "/sheet_path/NAME" — match on the leaf name
+        name = net.get("name").split("/")[-1]
         for node in net.iter("node"):
             ref, pin = node.get("ref"), node.get("pin")
             by_num[(ref, pin)] = name
