@@ -29,6 +29,21 @@ Pin 22 — **Table 2-3** row: `VBUS_SENSE, pin 22, "USB detection"`; **Table 2-1
 
 **Citation correction (non-substantive):** the spec/brief guessed "EM92xx PTS §3.3.1" for the USB3 figure. The actual r7.2 document numbers this **§2.3.1 / Figure 2-2** (not §3.3.1 — that section number doesn't exist in this doc's ToC). The *fact* is unaffected; only the pointer needs fixing if anyone chases it later.
 
+### Item 1d — VCC pin list
+
+**Status: VERIFIED — confirms spec §4's VCC policy.**
+
+EM92XX PTS r7.2, **§2.2 "Power Supply," Table 2-2 "Power Supply Requirements"**:
+
+> `VCCa (3.3V) — Pins 2, 4, 24b, 38b, 68b, 70, 72, 74 — Voltage range 3.135 / 3.3 / 4.4 V; Ripple voltage max 100 mVpp`
+> `GND — Pins 3, 5, 11, 27, 33, 39, 45, 51, 57, 71, 73`
+
+Footnote **b** (quoted verbatim, appears identically as footnote d of Table 2-1):
+
+> *"VCC pins 24, 38, and 68—These pins are optional, and can be left as NC."*
+
+**Conclusion:** this confirms spec §4's cross-vendor VCC policy exactly. The standard set **2, 4, 70, 72, 74** is the mandatory supply path; Sierra itself declares **24/38/68 optional and NC-safe**, so powering only the standard set costs nothing on Sierra (no footnote contradiction — "optional" is explicit, twice). The default-open solder jumpers to 24/38/68 for Sierra-only builds are a pure bonus (extra current sharing), and leaving them open is what protects Quectel cards (24 = VDDIO_1V8 *output*, 38 = WLAN_TX_EN 1.8 V input on RM520N-GL, 68 = RESERVED — per RM520N HW Design V1.3 pin table). No mismatch.
+
 ---
 
 ## Item 2 — Quectel RC-mode PCIe reference circuit: AC-cap ownership/values; REFCLK/PERST# wiring
@@ -130,10 +145,10 @@ Spec §13.6 says: *"~~TPS23730 vs TPS2373-4~~ RESOLVED 2026-07-14: TPS23730 per 
 **Table 8-1 "Class Resistor Selection" (TPS23730 datasheet), Class 4 row:** `Min/Max power at PD = 12.95/25.5 W`, `2–3 classification cycles`, `RCLSA = 32 Ω`, `RCLSB = 32 Ω`.
 
 **This is a real conflict, not a paperwork issue:** "copied verbatim from TI EVM-093" (Class 6, 51 W, 5 A @ 12 V) and "Class 4 (25.5 W)" cannot both be true simultaneously. Options for capture:
-1. **Keep EVM-093 verbatim including Class 6** — update spec §4/§12/§13.6 wording from "Class 4 (25.5 W)" to "Class 6 (51 W)"; power budget headroom only improves (3.6 A peak load is well inside a 51 W/12 V ≈ 4.25 A budget).
-2. **Deviate from EVM-093 on CLSA/CLSB only** — change to Class 4's `32 Ω / 32 Ω` (both resistors, not the EVM's 32 Ω / 130 Ω), keep the rest of the topology (transformer, opto, PWM controller, magnetics) unchanged. This matches the spec's explicit "Class 4 (25.5 W)" and "802.3at" wording, but is technically no longer "verbatim."
+1. **Keep EVM-093 verbatim including Class 6** — this is a **standards move, not a wattage relabel**. Class 6 is an **IEEE 802.3bt Type 3** classification (TPS23730 datasheet SLVSER6B §8.4.1 "PoE Overview": *"devices with higher power and enhanced classification is referred to as Type 3 (Class 5, 6) or 4 (Class 7, 8) devices"*; Class 4 is the ceiling of 802.3at/Type 2). Adopting it abandons the spec's **802.3at decision-of-record** (§2 "802.3at isolated PoE power", §4 "TPS23730 802.3at PD"): full 51 W is only granted by an **802.3bt Type 3 PSE**, it requires **4-event classification** (Table 8-1: Class 6 = 4 class cycles, RCLSA = 32 Ω / RCLSB = 130 Ω), and on the plain 802.3at Type 2 switches the spec targets, the PSE power-demotes the board to Class 4/25.5 W anyway (datasheet §8.4.5 "Hardware Classification": *"A Type 2 PSE will treat a Class 5 to 8 device like a Class 4 device, allotting 25.5W if it chooses to power the PD"*). If chosen, spec §2/§4/§12/§13.6 and the bring-up plan (§14.2 "class negotiation on an 802.3at switch") must all be rewritten for 802.3bt.
+2. **Deviate from EVM-093 on CLSA/CLSB only** — change to Class 4's `RCLSA = RCLSB = 32 Ω` (both resistors, per TPS23730 datasheet Table 8-1 — not the EVM's 32 Ω/130 Ω), keep the rest of the topology (transformer, opto, PWM controller, magnetics) unchanged. This **stays 802.3at** (Class 4 = Type 2, 2–3 class events, 25.5 W), matching the spec's explicit "Class 4 (25.5 W)"/"802.3at" decision-of-record, but is technically no longer "verbatim."
 
-**Recommendation:** since spec text commits repeatedly and specifically to "Class 4 (25.5 W)" / "802.3at" language (not just as an incidental mention), and the 3.6 A/3.3V ≈ 12 W main load doesn't need 51 W, **option 2 is the minimal, lowest-risk change** — flag for the person doing Task 4 (power section capture) to explicitly choose and update the spec/BOM CLSA/CLSB resistors to 32 Ω/32 Ω, not blindly copy the EVM BOM's classification resistors.
+**Recommendation:** since spec text commits repeatedly and specifically to "Class 4 (25.5 W)" / "802.3at" language (not just as an incidental mention), the 3.6 A/3.3V ≈ 12 W main load doesn't need 51 W, and option 1 would ripple into the standards baseline and test plan, **option 2 is the minimal, lowest-risk change** — flag for the person doing Task 4 (power section capture) to explicitly choose and update the spec/BOM CLSA/CLSB resistors to 32 Ω/32 Ω, not blindly copy the EVM BOM's classification resistors.
 
 ---
 
