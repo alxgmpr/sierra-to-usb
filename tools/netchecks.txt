@@ -196,23 +196,27 @@ NET SS_CON2_TXN PINS>=3
 NET SS_CON2_RXP PINS>=3
 NET SS_CON2_RXN PINS>=3
 
-# usb3_data -- module-side SS nets: THE rule verified a 3rd time here.
-# TX path (U1 module-side TX outputs, pins 6/7) gets 220nF caps (C58/C59)
-# before D22 (module-side TPD4EUSB30) and the CN1 35/37 global labels.
-# RX path (U1 module-side RX inputs, pins 9/10) connects straight through
-# D22 to the CN1 29/31 global labels -- NO caps.
-U1.pinfn:TXP = N_TXP_PRECAP
+# usb3_data -- module-side SS nets: Fix pass (task 7 review Fix 1) corrected
+# the local-vs-far-end TX/RX naming-frame bug. Per HD3SS3220 datasheet
+# SLLSES1E Fig 7-3/S4, U1's TXP/TXN (pins 6/7) and RXP/RXN (pins 9/10) are
+# named from U1's OWN perspective as the local controller (which it is here,
+# on the module side) -- so U1's RX inputs receive the module's TX output,
+# and U1's TX outputs drive the module's RX input. The 220nF caps (C58/C59)
+# are on the leg that ultimately reaches CN1 35/37 (SS_MOD_TX_C_P/N, module
+# RX input) regardless of which U1 pin number feeds it; CN1 29/31
+# (SS_MOD_RX_P/N, module TX output) stays cap-free.
+U1.pinfn:RXP = N_TXP_PRECAP
 C58.1 = N_TXP_PRECAP
 C58.2 = SS_MOD_TX_C_P
 D22.1 = SS_MOD_TX_C_P
-U1.pinfn:TXN = N_TXN_PRECAP
+U1.pinfn:RXN = N_TXN_PRECAP
 C59.1 = N_TXN_PRECAP
 C59.2 = SS_MOD_TX_C_N
 D22.2 = SS_MOD_TX_C_N
 D22.4 = SS_MOD_RX_P
-U1.pinfn:RXP = SS_MOD_RX_P
+U1.pinfn:TXP = SS_MOD_RX_P
 D22.5 = SS_MOD_RX_N
-U1.pinfn:RXN = SS_MOD_RX_N
+U1.pinfn:TXN = SS_MOD_RX_N
 NET SS_MOD_TX_C_N PINS>=2
 NET SS_MOD_RX_N PINS>=2
 
@@ -231,8 +235,11 @@ R69.1 = VBUS_DATA
 R69.2 = HD_VBUSDET
 D24.1 = VBUS_DATA
 D24.2 = GND
+# R71 DIR pull-up: Fix pass (task 7 review Fix 2) moved the top rail from
+# VBUS_DATA (5V, exceeds U1's VCC33+0.3V abs max) to +3V3_MUX, matching
+# TI's own UFP reference figure (DIR pulled 200k to VCC33).
 R71.1 = N_U1_DIR
-R71.2 = VBUS_DATA
+R71.2 = +3V3_MUX
 U1.pinfn:DIR = N_U1_DIR
 NET VBUS_DATA PINS>=8
 NET GND PINS>=8

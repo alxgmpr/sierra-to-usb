@@ -3272,12 +3272,12 @@
 		(uuid "bbdd2c4d-ca82-4606-857d-27fde629f9d3")
 	)
 	(label "N_TXP_PRECAP"
-		(at 99.52 77.78 0)
+		(at 99.52 85.4 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "2b29d759-6ebd-4f25-a944-59b4e682fc9f")
 	)
 	(label "N_TXN_PRECAP"
-		(at 99.52 80.32 0)
+		(at 99.52 87.94 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "8d6b20b1-ddfc-4691-a4ac-a547b9dd9010")
 	)
@@ -3288,17 +3288,17 @@
 	)
 	(global_label "SS_MOD_RX_P"
 		(shape input)
-		(at 99.52 85.4 0)
+		(at 99.52 77.78 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "b5a384ad-4e60-4a17-b451-7e6012e588f5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 99.52 85.4 0) (effects (font (size 1.27 1.27))))
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 99.52 77.78 0) (effects (font (size 1.27 1.27))))
 	)
 	(global_label "SS_MOD_RX_N"
 		(shape input)
-		(at 99.52 87.94 0)
+		(at 99.52 80.32 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "f308ee10-0b46-4e9e-b982-c13b65ffc69a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 99.52 87.94 0) (effects (font (size 1.27 1.27))))
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 99.52 80.32 0) (effects (font (size 1.27 1.27))))
 	)
 	(label "N_U1_DIR"
 		(at 99.52 49.84 0)
@@ -3981,12 +3981,10 @@
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "a6867397-d856-4e97-8e2e-613a45b0d606")
 	)
-	(global_label "VBUS_DATA"
-		(shape input)
+	(label "+3V3_MUX"
 		(at 100 72.54 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "4f183f6e-bb53-47d7-89c3-f026bfed9e24")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 100 72.54 0) (effects (font (size 1.27 1.27))))
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -4011,6 +4009,12 @@
 				)
 			)
 		)
+	)
+	(text "Check SS common-mode at U1 RX side during bring-up — RX pairs rely on far-end receiver biasing (TI Table 7-3); Sierra-mandated caps in path."
+		(exclude_from_sim no)
+		(at 135 12 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "94017abc-77eb-4977-937c-de41eda7e5d5")
 	)
 	(sheet_instances
 		(path "/"
