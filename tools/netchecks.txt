@@ -58,3 +58,22 @@ U23.3 = GND
 # power_input — D3 clamp DC-restore diode orientation (task 4 fix)
 D3.1 = POE_RTN
 D3.2 = N_CLAMP_G
+
+# power_rails (brief verbatim — Task 5 Step 1)
+# Brief-line amendment (same pattern as Task 4's U10.pinfn:VDD fix): the brief's
+# prose says "U13 INA226 shunt (2 mOhm) in series on +12V before U3" -- a real
+# series shunt necessarily creates two distinct KiCad nets (R's two pins can't
+# both be "+12V" without merging the shunt's own terminals into one net by
+# global-label name, which would electrically short it out of the netlist
+# model and defeat the current monitor). U13.IN+ keeps the upstream tap on the
+# true "+12V" rail (checked below); U3.VIN is fed from the shunt's downstream
+# side, named "+12V_BUCK" (mirrors "+3V3"/"+3V3_MOD" across U14's shunt, which
+# the brief itself specifies as two different names for exactly this reason).
+U3.pinfn:VIN = +12V_BUCK
+U3.pinfn:EN = BUCK_EN
+U13.pinfn:IN+ = +12V
+U5.pinfn:VOUT = +1V8
+U14.pinfn:IN+ = +3V3
+U14.pinfn:IN- = +3V3_MOD
+U17.pinfn:VOUT = +3V3_MCU
+NET VMON_12V PINS>=2
