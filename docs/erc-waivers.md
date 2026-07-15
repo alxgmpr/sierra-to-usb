@@ -360,3 +360,20 @@ exact same point). Not waived as a defect — documented as expected.
 | 2026-07-15 | (Task 9) `isolated_pin_label` ×3 — global labels `SIM_SEL`, `RTL_RST_N`, `UIM2_DET_CTL` (each a single touch on the whole project: the RP2040 GPIO that produces it) | The exact three forward references the task brief itself names as expected until Tasks 10/11 ("isolated forward refs SIM_SEL/UIM2_DET_CTL/RTL_RST_N expected until Tasks 10/11"). `POE_STS_RAW` is NOT in this row — verified directly against the ERC JSON, it never appears in the `isolated_pin_label` item list (it has 3 real pins: the pre-existing `N_BTSTAT` coincident point on `sheets/power_input.kicad_sch` plus this sheet's `R85.1`). Clears once the matching sheet (Task 10 for `RTL_RST_N`, Task 11 for `SIM_SEL`/`UIM2_DET_CTL`) supplies a second touch. |
 | 2026-07-15 | (Task 9) `pin_to_pin` ×2 — `U24.GPIO1`/`I2C_SCL` vs `#FLG015` (`power_rails.kicad_sch`) and `U24.GPIO10`/`MUX_USB2_SEL` vs `#FLG024` (`usb2_debug.kicad_sch`), both now-redundant forward-reference `PWR_FLAG`s | Same pattern as Task 7's carried-forward `usb3_data` row: this sheet now supplies a real driver on each net, but removing the redundant flags means editing two files outside this task's declared scope (`sheets/mcu.kicad_sch` + `tools/netchecks.txt`). Flagged as a carry-forward cleanup for whichever task next touches `power_rails.kicad_sch`/`usb2_debug.kicad_sch`. |
 | 2026-07-15 | (Task 9) `multiple_net_names` ×1 — `POE_STS_RAW`/`N_BTSTAT` coincident on `sheets/power_input.kicad_sch` | Intended mechanism (amendment 2's global-label-export technique), not a defect — see the accounting section above. |
+
+## Review Fix pass (mcu.kicad_sch, 2026-07-15)
+
+Five fixes applied to `sheets/mcu.kicad_sch` per the review brief (crystal
+series-R pin swap, rail-to-rail LED-kill rebuild, RGB series R, decoupling
+shortfall, minors) — full per-fix detail in `task-9-report.md`'s "Fix pass"
+section. `$KCLI sch erc sierra-to-usb.kicad_sch` baseline before this pass:
+**0 errors / 600 warnings** (Task 9's final state above). After the pass:
+**0 errors / 611 warnings** — a clean +11, entirely in the pre-existing
+`endpoint_off_grid` category (440 → 451); every other category is
+byte-for-byte unchanged (`footprint_link_issues` 131, `isolated_pin_label`
+18, `lib_symbol_mismatch` 6, `multiple_net_names` 1, `pin_to_pin` 4). No new
+category, no error introduced.
+
+| Date | Warning | Justification |
+| ---- | ------- | -------------- |
+| 2026-07-15 | (Fix pass) `endpoint_off_grid` +11 — new/re-labelled pins and labels from Fix 1 (crystal net rename), Fix 2 (Q35 2N7002 + repurposed R82/R84 + new labels), Fix 3 (R92 + RGB_DIN split), Fix 4 (C78-C82 decoupling caps) | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category project-wide — these coordinates are computed pin-exact (`abs = symbol_at + local_pin_offset`, local-Y negated), not grid-snapped, matching this project's established convention. Connectivity verified via `uv run tools/check_nets.py` (all pass, new + all pre-existing lines, none weakened) and direct `kicad-cli sch export netlist --format kicadxml` pin-to-net dumps for every touched net (tables in `task-9-report.md`'s Fix pass section). A new `same_local_global_label` category (LED_EN_CTL/RGB_DI/RGB_DIN/+3V3_MCU local labels colliding with pre-existing global labels of the same name) surfaced transiently during development and was resolved by construction — converting the 5 offending `label`s to `global_label`s (matching the existing scope of those net names elsewhere on the sheet) rather than waived — confirmed back to 0 instances in the final ERC run above. |

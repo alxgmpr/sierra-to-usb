@@ -11180,6 +11180,12 @@
 			)
 		)
 	)
+	(text "Note (mcu Fix 5b, review pass): D16 glows faintly (~75uA through R38+R85+R86 whenever PoE is present) -- D16 is on +12V_POE, NOT on the killable LED_PWR rail, so it is unkillable by SW2/GP9. This is expected/accepted, not a defect."
+		(exclude_from_sim no)
+		(at 555 140 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "d740437a-6b27-47df-ac08-a2d0ae5d4c80")
+	)
 	(text "TODO(mcu): POE_STATUS net dropped on this sheet — EVM-093 exposes BT only as an isolated LED indicator (U23 opto, D16/R38 from +12V_POE). Node N_BTSTAT swings ~0-11V, NOT 3V3-safe. Re-plan the MCU status input (e.g. repurpose U23 collector with a +3V3 pull-up in place of the D16/R38 LED chain) before wiring the mcu sheet."
 		(exclude_from_sim no)
 		(at 540 175 0)

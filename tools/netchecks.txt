@@ -317,20 +317,33 @@ R81.2 = +3V3_MCU
 U26.pinfn:ADD0 = GND
 U27.pinfn:ADD0 = +3V3_MCU
 
-# mcu -- LED-kill high-side gate network (amendment 1; truth table in report)
+# mcu -- LED-kill rail-to-rail gate network (review Fix 2, supersedes the
+# amendment-1 resistive-mixing design outright; R83 removed, R84 repurposed
+# 10k->100k, new Q35 2N7002 added; full truth table + arithmetic in
+# task-9-report.md "Fix pass" section). GP9/LED_EN_CTL polarity is now
+# ACTIVE-LOW kill (was active-HIGH before this fix).
 Q33.pinfn:S = +3V3
 Q33.pinfn:D = LED_PWR
+Q33.pinfn:G = N_LEDKILL_GATE
 SW2.pinfn:B = N_LEDKILL_GATE
 SW2.pinfn:A = N_SW2_KILL
 R82.1 = N_LEDKILL_GATE
-R82.2 = GND
-R83.1 = N_SW2_KILL
-R83.2 = +3V3
-R84.1 = N_LEDKILL_GATE
-R84.2 = LED_EN_CTL
+R82.2 = +3V3
+Q35.pinfn:D = N_SW2_KILL
+Q35.pinfn:S = GND
+Q35.pinfn:G = LED_EN_CTL
+R84.1 = LED_EN_CTL
+R84.2 = +3V3_MCU
+U24.pinfn:GPIO9 = LED_EN_CTL
+NET N_LEDKILL_GATE PINS>=3
+NET LED_EN_CTL PINS>=3
 
-# mcu -- RGB (amendment 5): SK6805-EC15 powered from LED_PWR, not +3V3_MCU
-U28.pinfn:DIN = RGB_DI
+# mcu -- RGB (amendment 5): SK6805-EC15 powered from LED_PWR, not +3V3_MCU.
+# DIN net amended from RGB_DI to RGB_DIN by review Fix 3 (330R series R92
+# inserted between GP14 and DIN, same net-rename-for-inserted-series-R
+# pattern as the USB_DBG_DP amendment above) -- assertion intent (U28
+# receives the RGB data line) is preserved.
+U28.pinfn:DIN = RGB_DIN
 U28.pinfn:VDD = LED_PWR
 
 # mcu -- POE_STATUS divider (amendment 2). POE_STS_RAW is attached on
@@ -374,3 +387,48 @@ J7.pinfn:Pin_4 = GND
 NET LED_PWR PINS>=2
 NET POE_STS_RAW PINS>=2
 NET +3V3_MCU PINS>=10
+
+# mcu -- Fix 1 (crystal series R on correct pin, review pass): XIN direct to
+# Y1.1 (+ load cap C73); 1k R76 between XOUT and Y1.3 (+ load cap C74) --
+# limits drive into the low-power crystal per RPi "Hardware design with
+# RP2040". Was backwards (R76 was on the XIN side) before this fix.
+U24.pinfn:XIN = XTAL_XIN
+U24.pinfn:XOUT = XTAL_XOUT
+Y1.1 = XTAL_XIN
+Y1.3 = N_XOUT_R
+R76.1 = XTAL_XOUT
+R76.2 = N_XOUT_R
+C73.1 = XTAL_XIN
+C74.1 = N_XOUT_R
+NET XTAL_XIN PINS>=3
+NET N_XOUT_R PINS>=3
+
+# mcu -- Fix 3 (RGB_DI series resistor, review pass): R92 (330R) between
+# GP14 and U28 DIN. GP14 side stays net RGB_DI; U28.DIN side is the new
+# RGB_DIN net (checked above via the amended U28.pinfn:DIN line).
+U24.pinfn:GPIO14 = RGB_DI
+R92.1 = RGB_DI
+R92.2 = RGB_DIN
+NET RGB_DI PINS>=2
+NET RGB_DIN PINS>=2
+
+# mcu -- Fix 4 (decoupling shortfall, review pass): 100nF at U25 flash VCC
+# (C78), U26 V+ (C79), U27 V+ (C80) -- none had a dedicated local cap
+# before. Plus C81 (100nF) as the 9th RP2040 +3V3_MCU-referenced
+# supply-pin decoupling cap (was 8: C65/C66/C68/C69/C70/C72/C75/C76).
+# Plus C82 (1uF) bulk cap specifically at U24's VREG_VIN pin.
+C78.1 = +3V3_MCU
+C78.2 = GND
+U25.pinfn:VCC = +3V3_MCU
+C79.1 = +3V3_MCU
+C79.2 = GND
+U26.pinfn:V+ = +3V3_MCU
+C80.1 = +3V3_MCU
+C80.2 = GND
+U27.pinfn:V+ = +3V3_MCU
+C81.1 = +3V3_MCU
+C81.2 = GND
+C82.1 = +3V3_MCU
+C82.2 = GND
+U24.pinfn:VREG_VIN = +3V3_MCU
+NET +3V3_MCU PINS>=19
