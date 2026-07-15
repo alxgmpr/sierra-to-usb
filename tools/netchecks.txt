@@ -252,3 +252,117 @@ U8.pinfn:S = MUX_USB2_SEL
 J3.pinfn:VBUS = VBUS_DBG
 NET USB_DBG_DP PINS>=2
 NET MUX_USB2_SEL PINS>=3
+
+# mcu (Task 9) -- brief Step 1, refdes/net-name adjustments disclosed (same
+# pattern as Task 4's U10.pinfn:VDD amendment): the brief's illustrative
+# refdes (U6/U7/Q6/SW1) predate the real 215-component project state:
+# RP2040=U24, flash=U25 (continuing numerically, task instructions).
+# U24.pinfn:USB_DP is NOT literally on net USB_DBG_DP -- the brief's own
+# Step-3 prose requires a 27.4R series resistor between the RP2040 pin and
+# the debug port net (R78/R79), so the RP2040-side node is a distinct net
+# (MCU_USB_DP/DM) by construction; the second line below asserts the
+# resistor's far side lands on the real debug-port net, preserving the
+# assertion's intent (RP2040 USB PHY reaches USB_DBG_DP/DM through the
+# mandated series resistor, not a like-for-like same-net check).
+# Q6/LED_EN is superseded outright by amendment 1 (LED_RET/LED_EN dead;
+# high-side LED_PWR + N_LEDKILL_GATE gate node instead) -- Q33 is the new
+# DMG3415U-7, gate net is N_LEDKILL_GATE, not LED_EN.
+U24.pinfn:USB_DP = MCU_USB_DP
+R78.2 = USB_DBG_DP
+U24.pinfn:GPIO4 = FCPO_CTL
+U24.pinfn:GPIO5 = PCIE_DIS_CTL
+U24.pinfn:GPIO26/ADC0 = VMON_12V
+U25.pinfn:DO/IO_{1} = QSPI_SD1
+SW1.1 = DIP0
+Q33.pinfn:G = N_LEDKILL_GATE
+NET RGB_DI PINS>=2
+NET I2C_SDA PINS>=6
+
+# mcu -- full GPIO map (spec Sec.7.2, binding interface)
+U24.pinfn:GPIO0 = I2C_SDA
+U24.pinfn:GPIO1 = I2C_SCL
+U24.pinfn:GPIO2 = USB2_MCU_DP
+U24.pinfn:GPIO3 = USB2_MCU_DM
+U24.pinfn:GPIO6 = WDIS_CTL
+U24.pinfn:GPIO7 = MRST_CTL
+U24.pinfn:GPIO8 = VBUSSNS_CTL
+U24.pinfn:GPIO9 = LED_EN_CTL
+U24.pinfn:GPIO10 = MUX_USB2_SEL
+U24.pinfn:GPIO11 = SIM_SEL
+U24.pinfn:GPIO12 = RTL_RST_N
+U24.pinfn:GPIO13 = UIM2_DET_CTL
+U24.pinfn:GPIO14 = RGB_DI
+U24.pinfn:GPIO15 = FAN_PWM
+U24.pinfn:GPIO16 = WWAN_LED_N
+U24.pinfn:GPIO17 = WAKE_N
+U24.pinfn:GPIO18 = PERST_N
+U24.pinfn:GPIO19 = CLKREQ_N
+U24.pinfn:GPIO20 = DIP0
+U24.pinfn:GPIO21 = DIP1
+U24.pinfn:GPIO22 = DIP2
+U24.pinfn:GPIO23 = DIP3
+U24.pinfn:GPIO27/ADC1 = VMON_3V3
+U24.pinfn:GPIO28/ADC2 = VMON_1V8
+U24.pinfn:USB_DM = MCU_USB_DM
+R79.2 = USB_DBG_DM
+
+# mcu -- I2C pull-up domain resolution (report has full citation/rationale):
+# pull-ups to +3V3_MCU (RP2040's OWN rail), not the always-on +3V3 that
+# feeds U13/U14 (INA226) -- if pulled to +3V3 instead, an unpowered RP2040
+# (VDD=0, GPIO NOT failsafe) would see 3.3V injected into its I2C pins.
+R80.1 = I2C_SDA
+R80.2 = +3V3_MCU
+R81.1 = I2C_SCL
+R81.2 = +3V3_MCU
+U26.pinfn:ADD0 = GND
+U27.pinfn:ADD0 = +3V3_MCU
+
+# mcu -- LED-kill high-side gate network (amendment 1; truth table in report)
+Q33.pinfn:S = +3V3
+Q33.pinfn:D = LED_PWR
+SW2.pinfn:B = N_LEDKILL_GATE
+SW2.pinfn:A = N_SW2_KILL
+R82.1 = N_LEDKILL_GATE
+R82.2 = GND
+R83.1 = N_SW2_KILL
+R83.2 = +3V3
+R84.1 = N_LEDKILL_GATE
+R84.2 = LED_EN_CTL
+
+# mcu -- RGB (amendment 5): SK6805-EC15 powered from LED_PWR, not +3V3_MCU
+U28.pinfn:DIN = RGB_DI
+U28.pinfn:VDD = LED_PWR
+
+# mcu -- POE_STATUS divider (amendment 2). GPIO binding is BLOCKED (pin
+# conflict: brief's GP0-29 map is fully populated) -- see task-9-report.md.
+# POE_STS_RAW is attached on sheets/power_input.kicad_sch (the ONE-line
+# edit permitted by the amendment) to the D16/R38/U23-collector node
+# (N_BTSTAT) already on that sheet.
+R85.1 = POE_STS_RAW
+R85.2 = POE_STATUS
+R86.1 = POE_STATUS
+R86.2 = GND
+
+# mcu -- fan driver (J17-equivalent = J6 here, real refdes continuing from
+# 215-component state; brief's illustrative J15-18 numbers predate it)
+Q34.pinfn:G = FAN_PWM
+Q34.pinfn:D = N_FAN_RTN
+D26.pinfn:A = N_FAN_RTN
+D26.pinfn:K = +12V
+J6.pinfn:Pin_1 = +12V
+J6.pinfn:Pin_2 = N_FAN_RTN
+
+# mcu -- DIP0-3 pull-ups + spare header + SWD + Qwiic
+R88.1 = DIP0
+R88.2 = +3V3_MCU
+SW1.8 = GND
+J4.pinfn:Pin_1 = MCU_SWCLK
+J4.pinfn:Pin_2 = MCU_SWDIO
+J5.pinfn:Pin_1 = GND
+J5.pinfn:Pin_2 = +3V3_MCU
+J5.pinfn:Pin_3 = I2C_SDA
+J5.pinfn:Pin_4 = I2C_SCL
+J7.pinfn:Pin_4 = +3V3_MCU
+NET LED_PWR PINS>=2
+NET POE_STS_RAW PINS>=2
+NET +3V3_MCU PINS>=10

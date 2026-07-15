@@ -235,3 +235,128 @@ of editing a nonexistent row.
 | 2026-07-14 | (Task 8) `endpoint_off_grid` ×22 | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category. Connectivity verified via `uv run tools/check_nets.py` (all pass) and a direct `kicad-cli sch export netlist --format kicadxml` pin-to-net dump of all 8 USB2 nets plus `MUX_USB2_SEL`/`VBUS_DBG` (table in `task-8-report.md`). |
 | 2026-07-14 | (Task 8) `lib_symbol_mismatch` ×1 — `D25`'s `TPD4E05U06DQA` cached copy differs from the stock `Power_Protection` library on disk | Same cause and resolution as the Task 7 `D23` row above (and every other row in this category): the stock symbol uses `extends` (`TPD4E05U06DQA`→`TPD4EUSB30`); flattened into a standalone cache entry. Electrically identical, differs only structurally — cosmetic. |
 | 2026-07-14 | (Task 8) `isolated_pin_label` ×2 — global labels `USB2_MCU_DP`/`USB2_MCU_DM` (`U8` pins 3/4, TS3USB221 port B) each connect to only one pin on this sheet | Documented forward reference: Task 9 (mcu sheet) wires the RP2040's own USB2 PHY onto these nets. Same pattern as every other forward-reference row in this file; clears when Task 9 lands. |
+
+## Task 9 (mcu: RP2040 control plane, W25Q128 QSPI flash, 12MHz crystal,
+RUN/BOOTSEL, USB debug PHY, SWD, I2C bus + 2x TMP112 + Qwiic, LED-kill
+high-side gate + SK6805-EC15 RGB, POE_STATUS divider, fan driver, DIP-4 +
+spare header)
+
+`$KCLI sch erc sierra-to-usb.kicad_sch` goes from Task-8's **0 errors / 512
+warnings** to **0 errors / 600 warnings** (+88). Breakdown: `endpoint_off_grid`
+359→440 (+81, this sheet's script-authored label-at-exact-pin-coordinate
+idiom, same as every other sheet), `footprint_link_issues` 127→131 (+4:
+`SW2`→`Button_Switch_THT:SW_SPDT_PCM12`, `SW1`→`Button_Switch_THT:SW_DIP_x04`,
+`U28`→`LED_SMD:LED_SK6805-EC15_1.5x1.5mm` (custom part, no stock footprint
+exists), `J5`→`Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm` — none
+of these four footprint libraries are registered in this machine's
+`fp-lib-table`; footprint/library binding is Task 14, same as every other
+row in this category), `isolated_pin_label` 18→18 (net 0, see breakdown
+below), `lib_symbol_mismatch` 6→6 (+0 — both this sheet's `extends`-based
+flattens, `Memory_Flash:W25Q128JVS`←`W25Q32JVSS` and
+`Sensor_Temperature:TMP112xxDRL`←`TMP102xxDRL`, happened to produce output
+byte-identical to kicad-cli's own `extends`-resolution, the same lucky case
+Task 6 documented for `2N7002`), `pin_to_pin` 2→4 (+2, see below), and one
+**new category**: `multiple_net_names` (+1, expected/benign — see below).
+
+**Two ERC *errors* surfaced during development and were fixed by design (not
+waived), both root-caused to this project's established "missing/mismatched
+`lib_symbols` cache entry" bug class (first documented in the Task 6 section
+above for `power:PWR_FLAG`, and again in Task 7 for `AP2112K-3.3`):**
+1. `label_dangling` ×2 on the new project-authored `sierra-to-usb:SK6805-EC15`
+   symbol's `DIN`/`VDD`-adjacent global labels (`RGB_DI`, `LED_PWR`) — the
+   generator's `register_verbatim()` helper harvested this part's block
+   straight from `lib/sierra-to-usb.kicad_sym` (the *master* symbol library,
+   which always stores bare symbol names) without renaming it to the
+   fully-qualified `sierra-to-usb:SK6805-EC15` the instance's `lib_id`
+   expects, unlike the *other* verbatim-harvested parts on this sheet
+   (`2N7002`, `DMG3415U`, `power:GND`, `power:PWR_FLAG`), which were all
+   harvested from a *sibling sheet's own cache* (`sheets/m2.kicad_sch` /
+   `sheets/usb2_debug.kicad_sch`) and were therefore already correctly
+   qualified. Fixed by making `register_verbatim()` always call the same
+   `rename_top()` helper `register_stock()` uses (idempotent for the
+   already-qualified cases) — confirmed by re-running ERC.
+2. `power_pin_not_driven` ×1 on `U28.VDD` (`power_in` type, net `LED_PWR`) —
+   `Q33`'s drain is a `passive`-typed FET pin (the `sierra-to-usb:DMG3415U`
+   symbol convention, same as every other DMG3415U/2N7002 use in this
+   project), which doesn't satisfy ERC's driver requirement for a
+   `power_in` pin the way an `output`/`power_out` pin does. Fixed the same
+   way as every other genuinely-driven-but-FET-sourced net in this project
+   (Tasks 4/5/6/7's `+12V_BUCK`/`+3V3`/`+3V3_MOD`/`I2C_SCL`/`VBUS_DATA`
+   rows): added a `power:PWR_FLAG` colocated with `Q33`'s drain pin.
+
+**A third issue was found and fixed during development, not an ERC
+violation but a `kicad-cli sch export netlist` "schematic has annotation
+errors" warning (the task's own "no annotation warnings" gate) that
+appeared *intermittently* (non-deterministically, roughly half of runs)
+whenever this sheet had ≥3 script-placed `power:GND`/`power:PWR_FLAG`
+symbols:** root cause was the generator's power-symbol reference-string
+scheme, `f"#PWR{uuid4_hex[:8]}"` (an 8-character *hex* suffix, so it can
+contain letters `a`-`f`). Every pre-existing `#PWR`/`#FLG` reference
+project-wide (checked directly: `grep -rhoE '#PWR[0-9]+'` across all
+sheets) is a **pure-decimal** suffix, e.g. `#PWR52643990` — apparently
+KiCad's annotation-consistency checker expects power-symbol pseudo-refs to
+parse as plain integers, and a hex suffix containing a letter silently
+corrupts its internal per-sheet reference-allocation bookkeeping once
+enough such refs exist on one sheet (empirically: 2 instances never
+tripped it, 3+ did, 100% reproducible once ≥3 letter-bearing refs were
+present, but genuinely non-deterministic run-to-run for exactly 1-2 —
+consistent with a hash-bucket/threshold effect rather than a parse
+failure). Fixed by rendering the same 8 hex nibbles as a decimal integer
+(`int(hexstr, 16)`) instead of leaving them as hex text — confirmed by
+regenerating the whole sheet fresh (new random UUIDs each time) and
+re-running `kicad-cli sch export netlist` three times in a row with zero
+warnings, then repeating that regenerate+test cycle twice more.
+
+**`isolated_pin_label` accounting (net 0, but real composition changed —
+verified directly against the ERC JSON dump's actual `isolated_pin_label`
+item list, not just the total count):**
+- **Resolved (−3):** `USB2_MCU_DP`, `USB2_MCU_DM` (Task 8's forward
+  references — `U24` GPIO2/GPIO3, the RP2040's own native PIO-USB pins, are
+  the real second touch) and `LED_PWR` (Task 6's forward reference —
+  `Q33`'s drain and `U28`'s VDD are both real second/third touches now).
+  `POE_STS_RAW` is **not** in this list either before or after this task
+  (it was never isolated to begin with: `R38.2`/`U23.4` on
+  `sheets/power_input.kicad_sch` are the coincident point the new global
+  label lands on, and `R85.1` on this sheet is a further touch) — see the
+  `multiple_net_names` row below for that mechanism.
+- **New forward references (+3):** `SIM_SEL`, `RTL_RST_N`, `UIM2_DET_CTL`
+  — the exact three the task brief names explicitly as expected forward
+  references, cleared when Tasks 10/11 land.
+- Net: −3 + 3 = 0, so the total didn't move, but three *specific* labels
+  cleared and three different ones took their place.
+
+**`pin_to_pin` (+2) — two more instances of the same informational
+"redundant forward-reference `PWR_FLAG`" pattern Task 7 already carried
+forward for `usb3_data`'s `U1` RXP/RXN vs `#FLG18`/`#FLG19`:** `U24`
+GPIO1 (net `I2C_SCL`) vs `#FLG015` (`sheets/power_rails.kicad_sch`, added
+Task 5 specifically because "I2C bus not yet mastered by anything, since
+the mcu sheet is a future task" — no longer true) and `U24` GPIO10 (net
+`MUX_USB2_SEL`) vs `#FLG024` (`sheets/usb2_debug.kicad_sch`, Task 8's
+forward-reference flag for the same reason). Both flags are now redundant
+— this sheet supplies a real `bidirectional`-type RP2040 GPIO driver on
+each net — but removing them means editing `power_rails.kicad_sch` /
+`usb2_debug.kicad_sch`, outside this task's declared file scope. Flagged
+as a carry-forward cleanup for whichever task next touches those two
+files, not fixed here (identical handling to Task 7's own carry-forward).
+
+**`multiple_net_names` ×1 (**new category**, informational, not an
+error) — `POE_STS_RAW` (this task's one-line addition to
+`sheets/power_input.kicad_sch`) and the pre-existing local label
+`N_BTSTAT` are both attached to the same point (`R38` pin 2 / `U23` pin 4,
+the D16/R38/opto-collector junction); kicad-cli reports `POE_STS_RAW` wins
+in the netlist.** This is the *intended* mechanism (amendment 2:
+"attach a global label `POE_STS_RAW` to the phototransistor-side node") —
+a global label deliberately coincident with an existing local label is
+this project's standard way to "export" an already-named local net under a
+new global name (same technique, without the warning, as every other
+sheet's global-label-at-a-pin idiom; the warning only fires here because
+there happens to already be a *local* label with different text at the
+exact same point). Not waived as a defect — documented as expected.
+
+| Date | Warning | Justification |
+| ---- | ------- | -------------- |
+| 2026-07-15 | (Task 9) `endpoint_off_grid` ×81 | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category. Connectivity verified via `uv run tools/check_nets.py` (all pass, including the full GPIO map) and a direct `kicad-cli sch export netlist --format kicadxml` pin-to-net dump (tables in `task-9-report.md`). |
+| 2026-07-15 | (Task 9) `footprint_link_issues` ×4 — `SW1`/`SW2` (`Button_Switch_THT:*`), `U28` (`LED_SMD:LED_SK6805-EC15_1.5x1.5mm`, custom part with no stock footprint), `J5` (`Connector_JST:*`) | Same as every other row in this category: footprint/library binding is Task 14. `Footprint` strings record the intended package for Task 14 to bind. |
+| 2026-07-15 | (Task 9) `isolated_pin_label` ×3 — global labels `SIM_SEL`, `RTL_RST_N`, `UIM2_DET_CTL` (each a single touch on the whole project: the RP2040 GPIO that produces it) | The exact three forward references the task brief itself names as expected until Tasks 10/11 ("isolated forward refs SIM_SEL/UIM2_DET_CTL/RTL_RST_N expected until Tasks 10/11"). `POE_STS_RAW` is NOT in this row — verified directly against the ERC JSON, it never appears in the `isolated_pin_label` item list (it has 3 real pins: the pre-existing `N_BTSTAT` coincident point on `sheets/power_input.kicad_sch` plus this sheet's `R85.1`). Clears once the matching sheet (Task 10 for `RTL_RST_N`, Task 11 for `SIM_SEL`/`UIM2_DET_CTL`) supplies a second touch. |
+| 2026-07-15 | (Task 9) `pin_to_pin` ×2 — `U24.GPIO1`/`I2C_SCL` vs `#FLG015` (`power_rails.kicad_sch`) and `U24.GPIO10`/`MUX_USB2_SEL` vs `#FLG024` (`usb2_debug.kicad_sch`), both now-redundant forward-reference `PWR_FLAG`s | Same pattern as Task 7's carried-forward `usb3_data` row: this sheet now supplies a real driver on each net, but removing the redundant flags means editing two files outside this task's declared scope (`sheets/mcu.kicad_sch` + `tools/netchecks.txt`). Flagged as a carry-forward cleanup for whichever task next touches `power_rails.kicad_sch`/`usb2_debug.kicad_sch`. |
+| 2026-07-15 | (Task 9) `multiple_net_names` ×1 — `POE_STS_RAW`/`N_BTSTAT` coincident on `sheets/power_input.kicad_sch` | Intended mechanism (amendment 2's global-label-export technique), not a defect — see the accounting section above. |

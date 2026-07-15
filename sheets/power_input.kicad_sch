@@ -10775,6 +10775,13 @@
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "c0e3f067-ec22-49d1-8a7c-b27f98e10e80")
 	)
+	(global_label "POE_STS_RAW"
+		(shape input)
+		(at 540.0 152.54 0)
+		(effects (font (size 1.016 1.016)) (justify left bottom))
+		(uuid "a1f9c3d8-6e52-4a0e-9c1f-7d2b5e8a4c61")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 540.0 152.54 0) (effects (font (size 1.27 1.27))))
+	)
 	(symbol
 		(lib_id "power:+12V")
 		(at 572.38 24.92 0)
