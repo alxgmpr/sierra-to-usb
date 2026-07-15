@@ -7822,8 +7822,8 @@
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 255.0 82.46 0) (effects (font (size 1.27 1.27))))
 	)
 	(text "U27 TMP112 (0x49, ADD0->+3V3_MCU) -- placed near U3/U10 (buck + PoE PD) for power-stage thermal sensing."
-		(at 225 73 0)
-		(effects (font (size 1.27 1.27)))
+		(at 3 239 0)
+		(effects (font (size 1.27 1.27)) (justify left))
 		(uuid "4e658e13-26aa-4b14-afe7-6bca5dc10af6")
 	)
 	(global_label "+3V3_MCU"
@@ -7924,8 +7924,8 @@
 		(uuid "b2c3d4e5-2222-4b3c-8d4e-5f6071829304")
 	)
 	(text "LED-kill gate logic (rail-to-rail rebuild, review-pass Fix 2): Q33 (DMG3415U-7, P-FET) gate node N_LEDKILL_GATE has a 100k pull-up (R82) to +3V3 (default-OFF contribution) and SW2's common leg. SW2 throw A -> N_SW2_KILL -> Q35 (2N7002) drain; Q35 source=GND; Q35 gate=LED_EN_CTL with a 10k pull-up (R84) to +3V3_MCU -- so blank-MCU/hi-Z GP9 = Q35 ON. R84 is 10k (NOT 100k): RP2040 pads reset with the internal pull-DOWN enabled (~50-80k), so a 100k pull-up would divide LED_EN_CTL to ~1.10-1.47V, inside the 2N7002's Vgs(th) band; 10k keeps the blank-MCU gate at 3.3*50/60=2.75V to 3.3*80/90=2.93V, above the 2.5V worst-case threshold. SW2 throw C = no-connect (OFF position).\nTruth table: SW2-ON + GP9 hi-Z/high -> Q35 ON -> N_SW2_KILL~0V -> gate~0V, Vgs=-3.3V -> LEDs ON (blank-MCU default). SW2-OFF -> gate=3.3V via R82 regardless of GP9/Q35 -> Q33 OFF (hardware wins). SW2-ON + GP9 driven LOW -> Q35 OFF -> SW2 branch open -> gate=3.3V via R82 -> Q33 OFF (firmware kill). All Q33 gate states are rail-to-rail (no resistive-divider margin) -- see task-9-report.md Fix-pass section for arithmetic.\nLED_EN_CTL polarity note: GP9 is now an ACTIVE-LOW kill line (driving LOW forces LEDs off through Q35); hi-Z/floating = LEDs on by default. This is the OPPOSITE polarity of the prior resistive-mixing design's GP9-HIGH-kills convention -- firmware must be updated."
-		(at 200 195 0)
-		(effects (font (size 1.27 1.27)))
+		(at 3 216 0)
+		(effects (font (size 1.27 1.27)) (justify left))
 		(uuid "b83b8bb3-a73b-4a35-8da4-aebf5997bbca")
 	)
 	(global_label "RGB_DIN"
@@ -7950,8 +7950,8 @@
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 263.0 142.54 0) (effects (font (size 1.27 1.27))))
 	)
 	(text "RGB_DI series R (review Fix 3): R92 (330R) inserted between GP14 and U28 DIN -- GP14 side stays net RGB_DI, U28.DIN side is net RGB_DIN. Firmware: idle DIN low when LED_PWR killed."
-		(at 250 148 0)
-		(effects (font (size 1.27 1.27)))
+		(at 3 233 0)
+		(effects (font (size 1.27 1.27)) (justify left))
 		(uuid "a6d4b3c9-5555-4e7f-9081-92a3b4c5d6e7")
 	)
 	(global_label "+3V3_MCU"
@@ -7962,8 +7962,8 @@
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 94.0 54.46 0) (effects (font (size 1.27 1.27))))
 	)
 	(text "Decoupling shortfall (review Fix 4): added C78 (100nF, at U25 flash VCC pin), C79 (100nF, at U26 V+ pin), C80 (100nF, at U27 V+ pin) -- none had a dedicated local bypass cap before this fix. Added C81 (100nF) as the 9th RP2040 supply-pin decoupling cap (U24 has 9 +3V3_MCU-referenced supply pins per the RPi \"Hardware design with RP2040\" guide -- IOVDD x6 + ADC_AVDD + VREG_VIN + USB_VDD; only 8 100nF caps existed: C65/C66/C68/C69/C70/C72/C75/C76). Added C82 (1uF) at U24's VREG_VIN pin specifically (bulk cap, in addition to the rail's 100nF coverage) per the RPi guide's VREG_VIN recommendation."
-		(at 60 195 0)
-		(effects (font (size 1.27 1.27)))
+		(at 3 208 0)
+		(effects (font (size 1.27 1.27)) (justify left))
 		(uuid "9a0e7701-4651-4a8c-bf2e-f3b7bc091cce")
 	)
 	(text "Task-14 note: SW2 silk must label ON/KILL positions (review Fix 5c) -- SW2 throw A = ON (LEDs enabled per the rail-to-rail kill network, Fix 2), throw C = KILL/unused-NC side. Silkscreen legend needed so the physical slide position is unambiguous to an assembler/end-user."
@@ -7990,8 +7990,8 @@
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 295.0 137.46 0) (effects (font (size 1.27 1.27))))
 	)
 	(text "RGB (amendment 5): powered from LED_PWR (killable 3.3V rail), not +3V3_MCU -- SK6805-EC15 VDD floor is 3.7V (below-datasheet-floor 3.3V op is sourcing.md-flagged standard practice).\nVIH arithmetic: VIH ~= 0.7*VDD_actual = 0.7*3.3V = 2.31V; RGB_DI driven from a 3.3V RP2040 GPIO satisfies VIH with 0.99V margin (43%)."
-		(at 265 155 0)
-		(effects (font (size 1.27 1.27)))
+		(at 3 226 0)
+		(effects (font (size 1.27 1.27)) (justify left))
 		(uuid "dc0fa36c-b579-4a6b-b7e7-ee5360e4c9e2")
 	)
 	(global_label "POE_STS_RAW"
@@ -8171,8 +8171,8 @@
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 424.92 152.54 0) (effects (font (size 1.27 1.27))))
 	)
 	(text "J_spare (J18): 1=GP24 2=GP25 3=+3V3_MCU 4=GND. (GP29 reassigned to POE_STATUS per controller resolution.)"
-		(at 415 140 0)
-		(effects (font (size 1.27 1.27)))
+		(at 3 245 0)
+		(effects (font (size 1.27 1.27)) (justify left))
 		(uuid "ef18133e-ce40-41c0-bcc2-e0f2792be525")
 	)
 	(sheet_instances

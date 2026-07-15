@@ -12522,7 +12522,7 @@
 	)
 	(text "Note (mcu Fix 5b, review pass): D16 glows faintly (~75uA through R38+R85+R86 whenever PoE is present) -- D16 is on +12V_POE, NOT on the killable LED_PWR rail, so it is unkillable by SW2/GP9. This is expected/accepted, not a defect."
 		(exclude_from_sim no)
-		(at 555 140 0)
+		(at 30 162 0)
 		(effects (font (size 1.27 1.27)) (justify left bottom))
 		(uuid "d740437a-6b27-47df-ac08-a2d0ae5d4c80")
 	)
@@ -12587,7 +12587,7 @@
 	)
 	(text "Task 13 audit fix (F3, minor): D30/R121 -- spec S10 PD-good indicator, missing since Task 4 dropped the LED. LED_PWR->R121(1k)->D30->CH224K_PG. CH224K_PG is open-drain, active-low (WCH CH224K datasheet: pulls to GND once PD negotiation succeeds; datasheet explicitly lists driving an indicator LED as a typical use). Checked R4 (10k pull-up, CH224K_PG to +3V3, from Task 4): it does NOT conflict with D30 -- it defines a clean idle-high (LED off) state when PG is unasserted and adds only ~0.33mA of extra sink current when PG pulls low (LED on); R4 is kept as-is, not replaced."
 		(exclude_from_sim no)
-		(at 105 5 0)
+		(at 30 168 0)
 		(effects (font (size 1.27 1.27)) (justify left bottom))
 		(uuid "2dbbc2c9-b07b-4394-bc61-9338411c0407")
 	)
