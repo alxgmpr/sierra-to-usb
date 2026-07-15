@@ -54,3 +54,7 @@ R35.1 = N_VB
 U23.2 = N_BT
 U10.pinfn:BT = N_BT
 U23.3 = GND
+
+# power_input — D3 clamp DC-restore diode orientation (task 4 fix)
+D3.1 = POE_RTN
+D3.2 = N_CLAMP_G
