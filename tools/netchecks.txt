@@ -4,4 +4,17 @@
 # Replaced with a trivially-true placeholder assertion that any design
 # (including this empty one) satisfies: a nonexistent net has 0 pins, and
 # 0 >= 0. Sheet tasks will append real per-sheet assertions as they land.
-NET GND PINS>=0
+#
+# Task 4 (power_input) creates real GND connections on this sheet, so the
+# vacuous placeholder above is superseded by a real assertion below.
+NET GND PINS>=4
+
+# power_input
+J2.pinfn:VBUS = VBUS_PD
+U2.pinfn:CFG1 = CH224K_CFG1
+D6.1 = VBUS_PD
+BR1.pinfn:+ = POE_VDD54
+U10.pinfn:VDD = POE_VDD54
+U19.pinfn:OUT = +12V
+NET +12V PINS>=3
+NET POE_RTN PINS>=4

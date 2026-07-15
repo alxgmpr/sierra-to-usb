@@ -27,6 +27,14 @@ def build_index(root: ET.Element):
             by_num[(ref, pin)] = name
             fn = node.get("pinfunction")
             if fn:
+                # kicad-cli's kicadxml exporter always suffixes pinfunction
+                # with "_<pin number>" (e.g. CFG1 on pad 9 -> "CFG1_9"), even
+                # for genuinely KiCad-GUI-authored schematics (verified
+                # against this project's original human-authored placeholder
+                # schematic, commit 0cea16b) -- strip that exact suffix so
+                # checks can match on the real pin function name.
+                if fn.endswith(f"_{pin}"):
+                    fn = fn[: -len(f"_{pin}")]
                 by_fn.setdefault((ref, fn.upper()), set()).add(name)
             net_pins[name] = net_pins.get(name, 0) + 1
     return by_num, by_fn, net_pins
