@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "TE Connectivity / Linx CONMHF4-SMD-G-T, MHF4-type SMD coax jack (male pin), 0-6 GHz, 50 Ohm, snap-on mating (LCSC C18221168, https://lcsc.com/datasheet/C18221168.pdf). Land pattern per Linx/TE 'Recommended PCB Footprint' Fig.2: body 2.0x2.0mm, 2x GND side pads, GND top tab, Signal bottom pad.")
+	(descr "TE Connectivity / Linx CONMHF4-SMD-G-T, MHF4-type SMD coax jack (male pin), 0-6 GHz, 50 Ohm, snap-on mating (LCSC C18221168, https://lcsc.com/datasheet/C18221168.pdf). Land pattern per Linx/TE 'Recommended PCB Footprint' Fig.2: body 2.0x2.0mm, 2x GND side pads, GND top tab, Signal bottom pad. APPROXIMATION -- verify against mfr drawing before fab lock: top tab width is a derived approximation reconciled from 3 overlapping datasheet dimensions, not a single directly-read value.")
 	(tags "MHF4 coaxial RF connector TE Linx CONMHF4 U.FL-like")
 	(property "Reference" "REF**"
 		(at 0 -2.3 0)

@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Bel Fuse 2250504-1 (Bel int. P/N 0826-1X1T-KH-F) 1x1 2.5GBASE-T 100W 4-pair PoE single-port MagJack ICM, THT tab-up, no LEDs. Pad map/pitch from TRP/Bel drawing C=2250504 Rev1 17APR2017 'SUGGESTED PCB FOOTPRINT COMPONENT SIDE'.")
+	(descr "Bel Fuse 2250504-1 (Bel int. P/N 0826-1X1T-KH-F) 1x1 2.5GBASE-T 100W 4-pair PoE single-port MagJack ICM, THT tab-up, no LEDs. Pad map/pitch from TRP/Bel drawing C=2250504 Rev1 17APR2017 'SUGGESTED PCB FOOTPRINT COMPONENT SIDE'. APPROXIMATION -- verify against mfr drawing before fab lock: secondary Y-offsets (VC row separation, shield-slot Y, mounting-peg row Y) are +/-0.5-1mm best-fit reconciliations of a dense GD&T dimension chain, not directly-read values.")
 	(tags "RJ45 Magjack 2.5GBASE-T PoE ICM Bel THT")
 	(property "Reference" "REF**"
 		(at 0 -15.1 0)

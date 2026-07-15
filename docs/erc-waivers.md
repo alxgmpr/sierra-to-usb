@@ -710,7 +710,7 @@ to resolve them. Task 14 closes all of them in one pass:
 1. Added `fp-lib-table` (project root) registering a new project footprint
    library `sierra-to-usb` → `lib/sierra-to-usb.pretty/`, mirroring the
    existing `sym-lib-table` pattern for the project symbol library.
-2. Authored 14 real custom footprints in `lib/sierra-to-usb.pretty/` for
+2. Authored 15 real custom footprints in `lib/sierra-to-usb.pretty/` for
    parts with no stock KiCad equivalent (full citations/pad tables in
    `task-14-report.md`): `Bel_2250504-1` (magjack), `MHF4_TE_CONMHF4-SMD-G-T`,
    `SMA_EdgeMount_BWSMA-KE-Z001`, `NanoSIM_JXTCONN_CSIM-H137-7P`,

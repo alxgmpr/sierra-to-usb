@@ -392,3 +392,16 @@ task's own shorthand, not a new judgment call.
    checked there via letter-style pin refs, e.g. `Q22.D = N_SEC_RTN`) and
    should be reviewed/verified as its own small task before Task 15 PCB
    layout, not rushed inside this one.
+
+   **CLOSED — resolved in commit "sch: Task 14 fixes — MPN/footprint
+   agreement, numeric Q pins, durable approximation flags"** (the Task-15
+   blocker declared above). All 7 refs (Q20, Q22, Q23, Q24, Q25, Q30, Q31)
+   now use project-local symbol variants (`sierra-to-usb:Q_NMOS_DGS_numeric`,
+   `Q_NPN_BCE_numeric`) with datasheet-verified numeric pin *numbers*
+   matching their real footprint pads, while keeping pin *names* (`D`/`G`/
+   `S`, `B`/`C`/`E`) unchanged so every `pinfn:`-style netcheck assertion
+   still resolves. `tools/check_footprints.py` was extended to assert
+   pad-NAME coverage (not just pad count) and passes clean for all 7.
+   Netlist membership verified byte-identical before/after via full
+   export diff. See `task-14-report.md` "Fix pass" section for the
+   per-part datasheet pin maps and verification evidence.

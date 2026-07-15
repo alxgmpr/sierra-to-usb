@@ -8,6 +8,14 @@ Checks (Task 14 gate, mirrors check_nets.py's role for connectivity):
      this project's lib/sierra-to-usb.pretty) and its pad count is >= the
      symbol's pin count (parsed from the real .kicad_sym / stock library
      pin list via kicad-cli's netlist export -- not guessed).
+  4. (Task 14 fix pass) Pad-NAME coverage: every symbol pin NUMBER (parsed
+     from the same netlist export) has a matching pad number in the
+     resolved footprint's real pad set. This is strictly stronger than #3's
+     count-only check -- it catches a symbol/footprint pair where the
+     counts happen to agree but KiCad's "Update PCB from Schematic" (which
+     binds pads to pins by exact pin-number-string equality) would still
+     fail to bind one or more pins, e.g. a letter-numbered symbol (D/G/S)
+     bound to a numerically-padded real-world footprint (1/2/3...).
 
 Usage: uv run tools/check_footprints.py [--sch sierra-to-usb.kicad_sch]
 Exit 0 = all assertions pass. Prints each failure.
@@ -57,6 +65,27 @@ def build_pin_counts(root: ET.Element):
     return counts
 
 
+def build_pin_numbers(root: ET.Element):
+    """(lib,part) -> list of (num, name) for every symbol pin, from <libparts>.
+
+    Used for the pad-NAME coverage check (Task 14 fix pass): pad-COUNT alone
+    (build_pin_counts above) cannot catch a symbol/footprint pair where the
+    counts happen to agree but the individual pin NUMBERS don't actually
+    exist on the footprint (e.g. letter-numbered symbol pins D/G/S bound to
+    a numerically-padded real-world footprint) -- that's exactly the defect
+    class the review flagged as the Task-15 blocker."""
+    out = {}
+    for lp in root.iter("libpart"):
+        lib, part = lp.get("lib"), lp.get("part")
+        pins = lp.find("pins")
+        plist = []
+        if pins is not None:
+            for p in pins.findall("pin"):
+                plist.append((p.get("num"), p.get("name")))
+        out[(lib, part)] = plist
+    return out
+
+
 def build_ref_libsource(root: ET.Element):
     """ref -> (lib, part)"""
     out = {}
@@ -71,10 +100,10 @@ def build_ref_libsource(root: ET.Element):
 PAD_RE = re.compile(r'\(pad\s+"([^"]*)"')
 
 
-def footprint_pad_count(lib: str, name: str):
-    """Return (pad_count, resolved_path) or (None, expected_path) if missing.
-    Pad count = number of DISTINCT non-empty pad numbers (paste-only/mechanical
-    relief pads use an empty pad number "" and carry no net -- excluded)."""
+def footprint_pad_set(lib: str, name: str):
+    """Return (set_of_distinct_pad_numbers, resolved_path) or (None, expected_path)
+    if the footprint file is missing. Excludes empty-numbered pads (paste-only/
+    mechanical relief pads carry no net)."""
     if lib == "sierra-to-usb":
         path = PROJECT_ROOT / "lib" / "sierra-to-usb.pretty" / f"{name}.kicad_mod"
     else:
@@ -83,7 +112,7 @@ def footprint_pad_count(lib: str, name: str):
         return None, path
     text = path.read_text()
     nums = {m.group(1) for m in PAD_RE.finditer(text) if m.group(1) != ""}
-    return len(nums), path
+    return nums, path
 
 
 def main():
@@ -97,6 +126,7 @@ def main():
     bom = export_bom(sch)
     netlist_root = export_netlist(sch)
     pin_counts = build_pin_counts(netlist_root)
+    pin_numbers = build_pin_numbers(netlist_root)
     ref_libsource = build_ref_libsource(netlist_root)
 
     failures = []
@@ -120,10 +150,11 @@ def main():
             continue
 
         lib, name = fp.split(":", 1)
-        pad_count, fp_path = footprint_pad_count(lib, name)
-        if pad_count is None:
+        pad_set, fp_path = footprint_pad_set(lib, name)
+        if pad_set is None:
             failures.append(f"{ref}: footprint file not found: {fp_path}")
             continue
+        pad_count = len(pad_set)
 
         libsrc = ref_libsource.get(ref)
         if libsrc is None:
@@ -139,6 +170,22 @@ def main():
                 f"{ref}: footprint '{fp}' has {pad_count} pads < symbol "
                 f"{libsrc} has {pin_count} pins"
             )
+
+        # Pad-NAME coverage (Task 14 fix pass): pad-COUNT agreement alone does
+        # not prove KiCad's "Update PCB from Schematic" can actually bind
+        # every symbol pin -- that matches footprint pads to symbol pins by
+        # EXACT pin-NUMBER-string equality, so a symbol with letter pin
+        # numbers (D/G/S) bound to a footprint with numeric pads (1/2/3...)
+        # can pass the count check above while every pin silently fails to
+        # bind. Assert every symbol pin NUMBER has a matching pad in the
+        # resolved footprint's real pad set.
+        for num, pname in pin_numbers.get(libsrc, []):
+            if num not in pad_set:
+                failures.append(
+                    f"{ref}: symbol pin {num} ('{pname}', {libsrc}) has no "
+                    f"matching pad in footprint '{fp}' (pads: "
+                    f"{','.join(sorted(pad_set, key=lambda s: (len(s), s)))})"
+                )
 
     print(f"{len(bom)} BOM rows checked")
     if failures:

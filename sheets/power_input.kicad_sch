@@ -2123,6 +2123,824 @@
 		)
 		(embedded_fonts no)
 	)
+(symbol "sierra-to-usb:Q_NMOS_TDSON_PQFN"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "Q"
+			(at 5.08 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_NMOS_TDSON_PQFN"
+			(at 5.08 -1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, numeric pin numbers matching real footprint pads (name D/G/S retained for pinfn netchecks) -- S=pad1, G=pad4, D=pad5 (merged drain tab) per Infineon BSC057N08NS3 G datasheet Rev.2.5 pin diagram (S1/S2/S3/G4/D5-D8) and onsemi/Fairchild FDMS86250 Rev.C4 pin diagram (identical S1/S2/S3/G4/D5-D8 Power-56 layout); used for Q20 (PQFN-8-EP_6x5mm_P1.27mm_Generic), Q22/Q23 (TDSON-8-1). Redundant same-net pads (S2/S3, D6-D8) are not individually bound -- physically merged/adjacent copper, standard for this package class."
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "NMOS N-MOS numeric-pins"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Q_NMOS_TDSON_PQFN_0_1"
+			(polyline
+				(pts
+					(xy 0.254 1.905) (xy 0.254 -1.905)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.254 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 2.286) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 0.508) (xy 0.762 -0.508)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.27) (xy 0.762 -2.286)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 1.651 0)
+				(radius 2.794)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 2.54) (xy 2.54 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.54 1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 2.54 -1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.921 0.381) (xy 3.683 0.381)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Q_NMOS_TDSON_PQFN_1_1"
+			(pin passive line
+				(at 2.54 5.08 270)
+				(length 2.54)
+				(name "D"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "G"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "sierra-to-usb:Q_NMOS_DPAK"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "Q"
+			(at 5.08 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_NMOS_DPAK"
+			(at 5.08 -1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, numeric pin numbers matching real footprint pads (name D/G/S retained for pinfn netchecks) -- G=pad1, D=pad2 (tab), S=pad3 per International Rectifier/Infineon IRLR7843PbF datasheet PD-95440B page 9 D-Pak (TO-252AA) lead-assignment table (1.GATE 2.DRAIN 3.SOURCE 4.DRAIN); used for Q30/Q31 (TO-252-2, 3-pad KiCad convention: pin1/pin2=tab/pin3)."
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "NMOS N-MOS numeric-pins"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Q_NMOS_DPAK_0_1"
+			(polyline
+				(pts
+					(xy 0.254 1.905) (xy 0.254 -1.905)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.254 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 2.286) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 0.508) (xy 0.762 -0.508)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.27) (xy 0.762 -2.286)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 1.651 0)
+				(radius 2.794)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 2.54) (xy 2.54 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.54 1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 2.54 -1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.921 0.381) (xy 3.683 0.381)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Q_NMOS_DPAK_1_1"
+			(pin passive line
+				(at 2.54 5.08 270)
+				(length 2.54)
+				(name "D"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "G"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "sierra-to-usb:Q_NPN_SOT89"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "Q"
+			(at 5.08 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_NPN_SOT89"
+			(at 5.08 -1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "NPN bipolar junction transistor, numeric pin numbers matching real footprint pads (name B/C/E retained for pinfn netchecks) -- B=pad1, C=pad2 (tab), E=pad3 per industry-standard SOT-89 3-pin numbering convention (tab=Collector confirmed directly by Diodes FCX493 datasheet DS33056 Rev.8-2 footnote 7, 'exposed collector pad'; B-pin1/E-pin3 outer-lead order per standard SOT-89 BJT numbering used across Rohm/Diodes/ON Semi SOT-89 lines, e.g. Rohm 2SA1661 '1.Base 2.Collector 3.Emitter') -- used for Q24/Q25 (SOT-89-3). FLAG: FCX493's own datasheet drawing labels leads by letter only (B/C/E), not by number; B-vs-E outer-pin order is the documented industry convention, not an FCX493-specific numbered table -- verify against physical part/reel marking before fab lock if tolerance to a B/E swap is zero."
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "BJT numeric-pins"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Q_NPN_SOT89_0_1"
+			(polyline
+				(pts
+					(xy -2.54 0) (xy 0.635 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.635 1.905) (xy 0.635 -1.905)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.635 0.635) (xy 2.54 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.635 -0.635) (xy 2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 1.27 0)
+				(radius 2.8194)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+		)
+		(symbol "Q_NPN_SOT89_1_1"
+			(pin input line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 5.08 270)
+				(length 2.54)
+				(name "C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "E"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 (symbol "Device:Q_PMOS"
 		(pin_numbers
 			(hide yes)
@@ -6659,7 +7477,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NMOS")
+		(lib_id "sierra-to-usb:Q_NMOS_TDSON_PQFN")
 		(at 350 60 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6676,13 +7494,13 @@
 		(property "MPN" "ON Semi FDMS86250" (at 350 60 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Distributor" "DigiKey" (at 350 60 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "EP-VIA" "yes" (at 350 60 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "D"
+		(pin "5"
 			(uuid "88991158-4552-4aa5-936e-c243c6cde851")
 		)
-		(pin "G"
+		(pin "4"
 			(uuid "43138e0a-d859-4322-be42-12d37fcdc56d")
 		)
-		(pin "S"
+		(pin "1"
 			(uuid "daf46eb5-524d-43ae-86cf-14b4eebc8cb1")
 		)
 		(instances
@@ -7048,7 +7866,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NMOS")
+		(lib_id "sierra-to-usb:Q_NMOS_TDSON_PQFN")
 		(at 450 120 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7065,13 +7883,13 @@
 		(property "MPN" "Infineon BSC057N08NS3G" (at 450 120 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Distributor" "DigiKey" (at 450 120 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "EP-VIA" "yes" (at 450 120 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "D"
+		(pin "5"
 			(uuid "ce13fec4-5f9d-4e7a-a223-44639495bba5")
 		)
-		(pin "G"
+		(pin "4"
 			(uuid "c101c269-ffcf-4537-81e6-79394ae9f574")
 		)
-		(pin "S"
+		(pin "1"
 			(uuid "5716689f-dab6-4ae9-8897-e3a162f14007")
 		)
 		(instances
@@ -7084,7 +7902,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NPN")
+		(lib_id "sierra-to-usb:Q_NPN_SOT89")
 		(at 440 105 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7100,13 +7918,13 @@
 		(property "Assembly" "HAND" (at 440 105 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "MPN" "Central Semi FCX493TA" (at 440 105 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Distributor" "LCSC" (at 440 105 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "B"
+		(pin "1"
 			(uuid "ef6123b0-070c-47fa-995a-b4ec7dd85cf7")
 		)
-		(pin "C"
+		(pin "2"
 			(uuid "2c8f15aa-7360-46ff-8c50-70e8aa36b65a")
 		)
-		(pin "E"
+		(pin "3"
 			(uuid "03b4d179-07c5-4373-933b-7a25ea92679a")
 		)
 		(instances
@@ -7407,7 +8225,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NMOS")
+		(lib_id "sierra-to-usb:Q_NMOS_TDSON_PQFN")
 		(at 480 100 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7424,13 +8242,13 @@
 		(property "MPN" "Infineon BSC057N08NS3G" (at 480 100 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Distributor" "DigiKey" (at 480 100 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "EP-VIA" "yes" (at 480 100 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "D"
+		(pin "5"
 			(uuid "35e50039-5d5b-4397-a06f-e6946b4dec9d")
 		)
-		(pin "G"
+		(pin "4"
 			(uuid "b6fa5506-eadf-4573-8d63-1b54b3e5d35f")
 		)
-		(pin "S"
+		(pin "1"
 			(uuid "6eaaeb41-fc1b-409f-8fe1-5384acaf47d6")
 		)
 		(instances
@@ -7443,7 +8261,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NPN")
+		(lib_id "sierra-to-usb:Q_NPN_SOT89")
 		(at 470 115 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7459,13 +8277,13 @@
 		(property "Assembly" "HAND" (at 470 115 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "MPN" "Central Semi FCX493TA" (at 470 115 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Distributor" "LCSC" (at 470 115 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "B"
+		(pin "1"
 			(uuid "b1ce7011-d11a-4567-9700-a186ef3f5b32")
 		)
-		(pin "C"
+		(pin "2"
 			(uuid "a9c6cfc2-475c-4c96-8181-99e2508af7d3")
 		)
-		(pin "E"
+		(pin "3"
 			(uuid "d20b0fe6-68d5-4937-9d77-49c33240fe3e")
 		)
 		(instances
@@ -8740,7 +9558,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NMOS")
+		(lib_id "sierra-to-usb:Q_NMOS_DPAK")
 		(at 600 30 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8756,13 +9574,13 @@
 		(property "Assembly" "HAND" (at 600 30 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "MPN" "Infineon IRLR7843TRPBF" (at 600 30 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Distributor" "DigiKey" (at 600 30 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "D"
+		(pin "2"
 			(uuid "4c0fac7a-7703-416d-bace-ed93b81691ee")
 		)
-		(pin "G"
+		(pin "1"
 			(uuid "1ef0c79b-9fb3-4702-b336-2fec07d2444c")
 		)
-		(pin "S"
+		(pin "3"
 			(uuid "ea3a551c-589b-43e6-83cb-ac178b6eee62")
 		)
 		(instances
@@ -8819,7 +9637,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NMOS")
+		(lib_id "sierra-to-usb:Q_NMOS_DPAK")
 		(at 600 60 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8835,13 +9653,13 @@
 		(property "Assembly" "HAND" (at 600 60 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "MPN" "Infineon IRLR7843TRPBF" (at 600 60 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Distributor" "DigiKey" (at 600 60 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "D"
+		(pin "2"
 			(uuid "8f363793-3b42-4f4d-9582-5563f50dd84e")
 		)
-		(pin "G"
+		(pin "1"
 			(uuid "f3f4c4ac-33c8-4387-9c82-2412f07ffe7d")
 		)
-		(pin "S"
+		(pin "3"
 			(uuid "1ddd73c8-8c26-4f5e-94dd-119c322b00a0")
 		)
 		(instances

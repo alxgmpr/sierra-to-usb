@@ -34,14 +34,18 @@ D7.2 = POE_VSS
 C9.2 = POE_VSS
 NET POE_VDD54_F PINS>=8
 # self-driven synchronous rectification (EVM Q6/Q8 + level shifts)
-Q22.D = N_SEC_RTN
-Q22.G = N_Q22_G
-Q22.S = GND
-Q23.D = N_SEC_SW
-Q23.G = N_Q23_G
-Q23.S = GND
-Q24.E = N_Q22_G
-Q25.E = N_Q23_G
+# Task-14-fix-pass: Q22/Q23/Q24/Q25 moved from letter pin NUMBERS to numeric
+# pin numbers matching their real footprint pads (see task-14-report.md Fix
+# pass); pin NAMES (D/G/S, B/C/E) are unchanged, so these checks now use
+# pinfn: (name-based) matching, which survives the renumbering by design.
+Q22.pinfn:D = N_SEC_RTN
+Q22.pinfn:G = N_Q22_G
+Q22.pinfn:S = GND
+Q23.pinfn:D = N_SEC_SW
+Q23.pinfn:G = N_Q23_G
+Q23.pinfn:S = GND
+Q24.pinfn:E = N_Q22_G
+Q25.pinfn:E = N_Q23_G
 T1.7 = N_SEC_SW
 T1.10 = N_SEC_RTN
 # opto/COMP feedback per EVM/datasheet (collector at COMP, pull-up to VB)
