@@ -333,15 +333,18 @@ R84.2 = LED_EN_CTL
 U28.pinfn:DIN = RGB_DI
 U28.pinfn:VDD = LED_PWR
 
-# mcu -- POE_STATUS divider (amendment 2). GPIO binding is BLOCKED (pin
-# conflict: brief's GP0-29 map is fully populated) -- see task-9-report.md.
-# POE_STS_RAW is attached on sheets/power_input.kicad_sch (the ONE-line
-# edit permitted by the amendment) to the D16/R38/U23-collector node
-# (N_BTSTAT) already on that sheet.
+# mcu -- POE_STATUS divider (amendment 2). POE_STS_RAW is attached on
+# sheets/power_input.kicad_sch (the ONE-line edit permitted by the
+# amendment) to the D16/R38/U23-collector node (N_BTSTAT) already on that
+# sheet. GPIO binding was initially BLOCKED (brief's GP0-29 map fully
+# populated); controller resolution assigned GP29/ADC3 (was a J18 spare)
+# -- the brief's illustrative "U6" refdes is U24 in the real project state.
 R85.1 = POE_STS_RAW
 R85.2 = POE_STATUS
 R86.1 = POE_STATUS
 R86.2 = GND
+U24.pinfn:GPIO29/ADC3 = POE_STATUS
+NET POE_STATUS PINS>=3
 
 # mcu -- fan driver (J17-equivalent = J6 here, real refdes continuing from
 # 215-component state; brief's illustrative J15-18 numbers predate it)
@@ -362,7 +365,12 @@ J5.pinfn:Pin_1 = GND
 J5.pinfn:Pin_2 = +3V3_MCU
 J5.pinfn:Pin_3 = I2C_SDA
 J5.pinfn:Pin_4 = I2C_SCL
-J7.pinfn:Pin_4 = +3V3_MCU
+# J7 (brief's J18): shrank 5->4 pins with the GP29->POE_STATUS resolution
+# (keeps GP24/GP25 only, then +3V3_MCU/GND)
+J7.pinfn:Pin_1 = MCU_GPIO24
+J7.pinfn:Pin_2 = MCU_GPIO25
+J7.pinfn:Pin_3 = +3V3_MCU
+J7.pinfn:Pin_4 = GND
 NET LED_PWR PINS>=2
 NET POE_STS_RAW PINS>=2
 NET +3V3_MCU PINS>=10
