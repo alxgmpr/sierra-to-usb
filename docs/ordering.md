@@ -48,6 +48,19 @@ using this exact stackup before finalizing gerbers.**
 | `DIFF_MDI_100` | RTL8125 Ethernet MDI | 0.19mm | 0.15mm | 100 Ω diff | ~100.1 Ω |
 | `RF_50` | ANT*/GNSS, CPWG (grounded coplanar waveguide) | 0.14mm | 0.30mm (ground gap) | 50 Ω single-ended | ~50.0 Ω |
 
+> **PRIORITY — `RF_50` re-derivation required with JLC's live impedance
+> calculator before ordering.** An independent closed-form recomputation of
+> the grounded-CPW model did **not** corroborate 50 Ω for W=0.14mm /
+> ground-gap=0.30mm on this stackup — treat the `RF_50` row above as
+> unverified. Expect the trace width and/or ground gap to change once
+> re-derived against JLCPCB's own calculator with this exact stackup. Do not
+> finalize gerbers on the current `RF_50` geometry: re-run the calculation,
+> update `DIFF_.../RF_50` net-class geometry in `sierra-to-usb.kicad_pro` and
+> the impedance rules in `sierra-to-usb.kicad_dru` if the numbers move, and
+> route the ANT*/GNSS RF traces last (or leave routing margin) so a
+> geometry change doesn't force a re-route of already-placed neighboring
+> copper.
+
 Copper-to-other-net clearance floor for all four classes: **0.30mm** (matches
 the RF_50 CPWG's own designed ground-fill gap; gives the diff-pair classes
 ~1.4x the reference-plane height as crosstalk isolation margin). These

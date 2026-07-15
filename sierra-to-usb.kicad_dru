@@ -102,15 +102,48 @@
 # N_DTHR, N_FRS, N_GAT2, N_GATE, N_GATE_Q, N_ISTP, N_LINEUV, N_PPD, N_REF,
 # N_SST, N_SW, N_VB, N_VBG, N_VCC.
 #
+# Rule shape (hardened, Task 15 fix pass -- see task-15-report.md "Fix pass"
+# for the empirical 6-case matrix this is derived from): `A.Reference` only
+# resolves for footprint children (pads). Tracks, vias, and zone fills have
+# no Reference, so the old condition `A.Reference != B.Reference` never
+# matched them and those pairs silently fell through to KiCad's netclass-level
+# default clearance instead of this named rule -- and, worse, that same
+# undefined-Reference gap meant the same-footprint exemption below NEVER
+# actually suppressed the barrier-part case either (it also failed to match,
+# so the netclass-level 2.5mm default fired anyway). Fixed by splitting into
+# an unconditional moat rule plus narrow, later-defined (higher-priority)
+# per-part exemptions keyed on courtyard membership instead of Reference.
+# KiCad 10 custom-rule priority is "last rule defined for a matching
+# condition wins" for a given constraint type, verified empirically by
+# swapping rule order in the synthetic test board (see task-15-report.md).
+(rule "POE_PRI_MOAT: primary-domain isolation >= 2.5mm"
+	(condition "A.NetClass == 'POE_PRI' && B.NetClass != 'POE_PRI'")
+	(constraint clearance (min 2.5mm))
+)
 # Exemption: T1 (transformer), U20/U23 (opto-isolators) and C19 (2kV Y-cap)
 # are the schematic's documented barrier-crossing parts (see the isolation
 # note on sheets/power_input.kicad_sch) -- their primary- and secondary-side
 # pins sit on the SAME footprint, closer together than 2.5mm by the nature of
 # an isolator package. That internal creepage/clearance is governed by the
 # part's own safety rating (transformer 1500Vrms, opto isolation rating, Y-cap
-# voltage rating), not by this board-level copper-spacing rule, so pad pairs
-# sharing a reference designator are excluded from the moat check.
-(rule "POE_PRI_MOAT: primary-domain isolation >= 2.5mm"
-	(condition "A.NetClass == 'POE_PRI' && B.NetClass != 'POE_PRI' && A.Reference != B.Reference")
-	(constraint clearance (min 2.5mm))
+# voltage rating), not by this board-level copper-spacing rule. Matched by
+# courtyard membership (works for pads AND any track/via routed inside the
+# barrier part's footprint) rather than Reference, and defined AFTER the
+# general moat rule above so it wins for these specific pairs. These MUST
+# stay below the general rule in file order -- see the priority note above.
+(rule "POE_PRI_MOAT: T1 barrier exemption"
+	(condition "A.insideCourtyard('T1') && B.insideCourtyard('T1')")
+	(constraint clearance (min 0.2mm))
+)
+(rule "POE_PRI_MOAT: U20 barrier exemption"
+	(condition "A.insideCourtyard('U20') && B.insideCourtyard('U20')")
+	(constraint clearance (min 0.2mm))
+)
+(rule "POE_PRI_MOAT: U23 barrier exemption"
+	(condition "A.insideCourtyard('U23') && B.insideCourtyard('U23')")
+	(constraint clearance (min 0.2mm))
+)
+(rule "POE_PRI_MOAT: C19 barrier exemption"
+	(condition "A.insideCourtyard('C19') && B.insideCourtyard('C19')")
+	(constraint clearance (min 0.2mm))
 )
