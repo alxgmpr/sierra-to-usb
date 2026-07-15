@@ -501,3 +501,60 @@ errors after.
 | ---- | ------- | -------------- |
 | 2026-07-15 | (Task 10 fix pass) `lib_symbol_mismatch` ×3 — `Q36`/`Q37`/`Q38` `Transistor_FET:BSS138` | The embedded BSS138 block is a field-updated clone of the project's harvested stock `Transistor_FET:2N7002` block (same G1/S2/D3 SOT-23 pinout and body; Value/Datasheet/Description updated to the LRC LBSS138LT1G sourcing facts) rather than a verbatim copy of the system-library BSS138, so ERC flags the difference against the system lib. Same benign category as the pre-existing TCMT1107/AP2112K/TPD4E05U06DQA rows (6 of them) — connectivity and pinfunction names (`G`/`S`/`D`) verified by `tools/check_nets.py` (`Q36.pinfn:S = PERST_N`, `Q36.pinfn:G = +1V8`, etc., all pass). |
 | 2026-07-15 | (Task 10 fix pass) `endpoint_off_grid` +30 net | Same waived idiom and verification as the Task 10 row above: `uv run tools/check_nets.py` all-pass (45 new fix-pass assertions incl. the eight MDI polarity pin-number locks + eight pinfn locks; zero pre-existing lines weakened) plus full netlist membership diff in `task-10-report.md` "Fix pass". |
+
+---
+
+## Task 11 — sim (dual SIM + eSIM slot-2 override mux)
+
+**0 errors / 707 warnings** to **0 errors / 756 warnings** (+49 net).
+Breakdown: `endpoint_off_grid` 552→603 (+51 — same script-authored
+label-at-exact-pin-coordinate idiom as every other sheet), `footprint_link_issues`
+131→134 (+3 — SIM1/SIM2 [`sierra-to-usb:NanoSIM_JXTCONN_CSIM-H137-7P`] and U30
+[`sierra-to-usb:VFDFPN8_MFF2`] reference footprints in a `sierra-to-usb`
+footprint library that isn't registered in `fp-lib-table` — genuine "footprint
+TBD" flag, matching this project's established Task-14-footprint-lock
+deferral for other hand-solder custom parts, not a wiring defect; D27/D28/U29
+use real stock footprints (`SOT-23-6`, `TSSOP-24_4.4x7.8mm_P0.65mm`) and
+don't trigger this), `lib_symbol_mismatch` 9→9 (+0, untouched pre-existing),
+`isolated_pin_label` 9→**0** (**−9, RESOLVED by construction, not waived** —
+these were exactly the `UIM1_VDD/RST/CLK/IO/DET`, `UIM2_VDD/RST/CLK/IO/DET`,
+`SIM_SEL`, `UIM2_DET_CTL` forward-reference global labels on `m2.kicad_sch`/
+`mcu.kicad_sch` with no matching endpoint while `sim.kicad_sch` was an empty
+placeholder — Task 10's waiver row for those sheets explicitly called these
+"the 9 SIM/UIM Task-11 forward references"; wiring the sim sheet gives every
+one of them a real endpoint, closing the loop), `multiple_net_names` 2→2
+(+0, untouched pre-existing), `pin_to_pin` 4→8 (+4 — two are pre-existing
+`m2.kicad_sch` `PWR_FLAG`s (`#FLG20`/`#FLG21`, already sitting on the
+`UIM1_RST`/`UIM1_CLK` forward-reference labels since before this task) that
+only *now* show as "Bidirectional connected to Power output" because SIM1's
+real device pins are finally on those nets; the other two are this task's
+own new `PWR_FLAG`s on `UIM2S_VDD` (near D28) and `UIM2E_VDD` (near U30) —
+same benign "PWR_FLAG formally conflicts with a bidirectional device pin on
+its own genuinely-driven net" category as every other `pin_to_pin`/
+`power_pin_not_driven` row in this document, e.g. the Ethernet `AVDD33_PLL`
+row above and the mcu-sheet `LED_PWR` row).
+
+**Two ERC *errors* surfaced during authoring and were fixed (not waived):**
+`power_pin_not_driven` on `D28` pin 5 (`VCC`/`UIM2S_VDD`) and `U30` pin 8
+(`VCC`/`UIM2E_VDD`) — both nets are driven only by "Bidirectional"-typed pins
+(TS3A27518E mux channels) and passive component pins from ERC's point of
+view, not a genuine `power_out` pin, exactly the same class TI's TS3USB221/
+HD3SS3220 SS nets and the Ethernet `AVDD33_PLL` island hit earlier in this
+project. Fixed the same way: one `PWR_FLAG` added on each net (at D28.VCC
+and U30.VCC respectively). Confirmed 0 errors after — see the `pin_to_pin`
+row above for the resulting (expected, benign) side-effect warnings.
+
+A transient `lib_symbol_issues` ×6 (`SIM1`/`SIM2`/`D27`/`D28`/`U29`/`U30` —
+"Symbol not found in symbol library 'sierra-to-usb'") appeared before the
+four new custom parts (`TS3A27518E`, `TPD4S009`, `ST4SIM-200M`,
+`JXTCONN_CSIM-H137-7P`) were added to `lib/sierra-to-usb.kicad_sym` (the
+project's master custom-symbol library, matching where `DMG3415U`,
+`WE750313355`, `USB_C_Receptacle_USB3.2_24P`, etc. already live) — resolved
+by construction once added, confirmed back to 0 instances in the final ERC
+run above, not carried as a waiver row.
+
+| Date | Warning | Justification |
+| ---- | ------- | -------------- |
+| 2026-07-15 | (Task 11) `endpoint_off_grid` +51 | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category project-wide. Connectivity verified via `uv run tools/check_nets.py` (all pass, 6 Step-1 + 46 supplementary assertions, tables in `task-11-report.md`) and a direct `kicad-cli sch export netlist --format kicadxml` pin-to-net dump for every UIM1_*/UIM2_*/UIM2S_*/UIM2E_*/SIM_SEL/UIM2_DET_CTL net. |
+| 2026-07-15 | (Task 11) `footprint_link_issues` +3 — SIM1, SIM2, U30 | Custom hand-solder parts (nano-SIM push-push socket, MFF2 eSIM) with no stock KiCad footprint and no footprint authored yet — `sierra-to-usb:NanoSIM_JXTCONN_CSIM-H137-7P` / `sierra-to-usb:VFDFPN8_MFF2` are placeholder footprint refs, real footprint authoring deferred to Task 14 (matches this project's established footprint-lock timing for every other custom/hand-solder part, e.g. the M.2 socket, USB-C receptacles). |
+| 2026-07-15 | (Task 11) `pin_to_pin` +4 — SIM1↔`#FLG20`/`#FLG21` (pre-existing m2 flags), U29↔new D28/U30 `PWR_FLAG`s | Same benign "`PWR_FLAG` (Power output) formally conflicts with a Bidirectional device pin on the same genuinely-driven net" category as every other `power_pin_not_driven`-fix row in this document. Connectivity (not the flag) verified via `uv run tools/check_nets.py`. |

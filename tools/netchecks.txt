@@ -556,3 +556,72 @@ J8.pinfn:SH = N_J8_SHIELD
 R107.1 = N_J8_SHIELD
 C109.1 = N_J8_SHIELD
 R105.1 = LED0
+
+# sim (Task 11: dual SIM + eSIM slot-2 override mux) -- Step 1 checks per
+# brief, refdes ADJUSTED to what's actually authored: brief's placeholder
+# U11/U12/D10/D11/Q8 collide with already-placed ethernet-sheet components
+# (325-component project state) -- renumbered to U29/U30/D27/D28/Q39, disclosed
+# in task-11-report.md. SIM1/SIM2 kept as literally given (fresh prefix, no
+# prior collision).
+SIM1.pinfn:VCC = UIM1_VDD
+U29.pinfn:COM1 = UIM2_VDD
+NET UIM2S_VDD PINS>=2
+NET UIM2E_VDD PINS>=2
+U30.pinfn:VCC = UIM2E_VDD
+NET SIM_SEL PINS>=3
+
+# sim -- supplementary checks (net-diff coverage beyond the brief's minimum
+# Step-1 set; full membership tables in task-11-report.md)
+SIM1.pinfn:RST = UIM1_RST
+SIM1.pinfn:CLK = UIM1_CLK
+SIM1.pinfn:IO = UIM1_IO
+SIM1.pinfn:CD2 = UIM1_DET
+SIM1.pinfn:CD1 = GND
+D27.pinfn:D1+ = UIM1_RST
+D27.pinfn:D1- = UIM1_CLK
+D27.pinfn:D2+ = UIM1_IO
+D27.pinfn:D2- = UIM1_DET
+D27.pinfn:VCC = UIM1_VDD
+SIM2.pinfn:VCC = UIM2S_VDD
+SIM2.pinfn:RST = UIM2S_RST
+SIM2.pinfn:CLK = UIM2S_CLK
+SIM2.pinfn:IO = UIM2S_IO
+SIM2.pinfn:CD2 = UIM2S_DET
+D28.pinfn:D1+ = UIM2S_RST
+D28.pinfn:D1- = UIM2S_CLK
+D28.pinfn:D2+ = UIM2S_IO
+D28.pinfn:D2- = UIM2S_DET
+D28.pinfn:VCC = UIM2S_VDD
+U29.pinfn:COM2 = UIM2_RST
+U29.pinfn:COM3 = UIM2_CLK
+U29.pinfn:COM4 = UIM2_IO
+U29.pinfn:COM5 = UIM2_DET
+U29.pinfn:NC1 = UIM2S_VDD
+U29.pinfn:NC2 = UIM2S_RST
+U29.pinfn:NC3 = UIM2S_CLK
+U29.pinfn:NC4 = UIM2S_IO
+U29.pinfn:NC5 = UIM2S_DET
+U29.pinfn:NO1 = UIM2E_VDD
+U29.pinfn:NO2 = UIM2E_RST
+U29.pinfn:NO3 = UIM2E_CLK
+U29.pinfn:NO4 = UIM2E_IO
+U29.pinfn:NO5 = UIM2E_DET
+U29.pinfn:IN1 = SIM_SEL
+U29.pinfn:IN2 = SIM_SEL
+U29.pinfn:EN = GND
+U29.pinfn:VCC = +3V3
+U29.pinfn:GND = GND
+U30.pinfn:GND = GND
+U30.pinfn:I/O = UIM2E_IO
+U30.pinfn:CLK = UIM2E_CLK
+U30.pinfn:RESET = UIM2E_RST
+Q39.pinfn:D = UIM2_DET
+Q39.pinfn:G = UIM2_DET_CTL
+Q39.pinfn:S = GND
+NET UIM1_DET PINS>=3
+NET UIM2S_DET PINS>=3
+NET UIM2E_DET PINS>=2
+NET UIM2_DET PINS>=3
+NET UIM2_DET_CTL PINS>=3
+NET UIM2S_VDD PINS>=4
+NET UIM2E_VDD PINS>=5
