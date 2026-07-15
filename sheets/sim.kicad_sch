@@ -276,7 +276,7 @@
 			(pin no_connect line
 				(at 7.62 -3.81 180)
 				(length 2.54)
-				(name "NC5" (effects (font (size 1.016 1.016))))
+				(name "NC" (effects (font (size 1.016 1.016))))
 				(number "5" (effects (font (size 1.016 1.016))))
 			)
 	)
@@ -1576,31 +1576,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 35 -5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "065fc5a9-3ab6-475c-9904-560ea0f91ef7")
-		(property "Reference" "R114" (at 37 -8 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "100k" (at 37 -2 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 35 -5 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Datasheet" "" (at 35 -5 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "1" (uuid "46e75def-0a9e-43f3-9d5d-146c375ce376"))
-		(pin "2" (uuid "40439bc8-6e83-4c5c-9320-df0856f4deb6"))
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541/a819ecdb-6e62-47c4-88b1-23278076a079"
-					(reference "R114")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "sierra-to-usb:JXTCONN_CSIM-H137-7P")
 		(at 20 140 0)
 		(unit 1)
@@ -2001,31 +1976,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 35 95 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "44a0c793-6667-4720-9788-758d95798cbe")
-		(property "Reference" "R115" (at 37 92 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "100k" (at 37 98 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 35 95 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Datasheet" "" (at 35 95 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "1" (uuid "26c99f78-0a45-4c0e-8524-d09d674e7b34"))
-		(pin "2" (uuid "e610ffbd-3349-4d0d-a9af-2de49302f92a"))
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541/a819ecdb-6e62-47c4-88b1-23278076a079"
-					(reference "R115")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "sierra-to-usb:TS3A27518E")
 		(at 120 90 0)
 		(unit 1)
@@ -2372,31 +2322,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 260 60 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5c55462c-a7c7-4e0f-aa15-5c35c71ee92a")
-		(property "Reference" "R118" (at 262 57 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "100k" (at 262 63 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 260 60 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Datasheet" "" (at 260 60 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "1" (uuid "03a98d0c-4f59-4bad-8fa3-bcbb0fc1b895"))
-		(pin "2" (uuid "0cb1a46f-5da1-4890-a15d-b919be8912ac"))
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541/a819ecdb-6e62-47c4-88b1-23278076a079"
-					(reference "R118")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_FET:2N7002")
 		(at 160 130 0)
 		(unit 1)
@@ -2605,21 +2530,7 @@
 		(uuid "53b88a96-8b72-4001-b627-f70a6b3208fd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 35.0 -1.54 0) (effects (font (size 1.27 1.27))))
 	)
-	(global_label "UIM1_DET"
-		(shape input)
-		(at 35.0 -7.54 0)
-		(effects (font (size 1.016 1.016)) (justify left bottom))
-		(uuid "7e3810ea-a9d8-4d8b-9ecc-c6b9a27e841d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 35.0 -7.54 0) (effects (font (size 1.27 1.27))))
-	)
-	(global_label "+3V3"
-		(shape input)
-		(at 35.0 -2.46 0)
-		(effects (font (size 1.016 1.016)) (justify left bottom))
-		(uuid "8448992e-431e-4201-9f4c-c73615cb974f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 35.0 -2.46 0) (effects (font (size 1.27 1.27))))
-	)
-	(text "SIM1 direct to module UIM1_* (CN1 pins 36/30/32/34/66 per m2 sheet). D27=TPD4S009 ESD (4ch: RST/CLK/IO/DET) + 22pF/line + 100nF VDD bypass + 100k DET pull-up to +3V3, per both vendors' SIM reference circuits."
+	(text "SIM1 direct to module UIM1_* (CN1 pins 36/30/32/34/66 per m2 sheet). D27=TPD4S009 ESD (4ch: RST/CLK/IO/DET) + 22pF/line + 100nF VDD bypass. NO board-side DET pull-up (fix pass, 2026-07-15): CN1.66/UIM1_DET is a module-internal-pull-up two-state pin per the Sierra PTS (grounded=absent, floating=present) -- an added 100k-to-+3V3 pull-up put an undocumented third voltage on a likely-1.8V-domain pin and was removed; floating is the correct 'present' presentation, matching SIM1.CD2's own NC-switch behavior."
 		(at 15 95 0)
 		(effects (font (size 1.27 1.27)))
 		(uuid "5af4d5db-521d-4af4-a925-7c0598c821bc")
@@ -2699,19 +2610,7 @@
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "01e5a06a-ee67-47ff-a9a8-c0618ce90eec")
 	)
-	(label "UIM2S_DET"
-		(at 35.0 92.46 0)
-		(effects (font (size 1.016 1.016)) (justify left bottom))
-		(uuid "d64d60e1-8b2b-430c-91dc-8aa58ffe7f6c")
-	)
-	(global_label "+3V3"
-		(shape input)
-		(at 35.0 97.54 0)
-		(effects (font (size 1.016 1.016)) (justify left bottom))
-		(uuid "3a298045-acb6-4f7a-ae36-7a7f34964774")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 35.0 97.54 0) (effects (font (size 1.27 1.27))))
-	)
-	(text "SIM2 = physical slot 2, wired to U29's NC side (UIM2S_* -- sheet-local nets, not module-facing directly). D28=TPD4S009 ESD + 22pF/line + 100nF VDD bypass + 100k DET pull-up, same treatment as SIM1 (exposed card-edge contacts -- ESD/EMI risk on both physical sockets)."
+	(text "SIM2 = physical slot 2, wired to U29's NC side (UIM2S_* -- sheet-local nets, not module-facing directly). D28=TPD4S009 ESD + 22pF/line + 100nF VDD bypass, same treatment as SIM1 (exposed card-edge contacts -- ESD/EMI risk on both physical sockets). NO board-side DET pull-up (fix pass, 2026-07-15) -- same PTS two-state rationale as UIM1_DET; SIM2.CD2 floats through the mux's NC5 channel onto UIM2S_DET/module UIM2_DET when this slot is selected."
 		(at 15 195 0)
 		(effects (font (size 1.27 1.27)))
 		(uuid "49c45038-8c73-44bb-8d1f-a70e46e16769")
@@ -2780,9 +2679,29 @@
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "3ea3158d-d857-4a31-97b6-0e2f9f78bed0")
 	)
-	(no_connect
-		(at 137.78 88.73)
-		(uuid "5de6c759-3b25-4032-a38a-520dbd3fe917")
+	(symbol
+		(lib_id "power:GND")
+		(at 137.78 88.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d1067740-1268-4461-8a9b-07b7f0835120")
+		(property "Reference" "#PWR5431781347" (at 137.78 90.73 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Value" "GND" (at 137.78 92.73 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "" (at 137.78 88.73 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 137.78 88.73 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "012d7605-fc4d-4f94-a9c3-ee7a097dfa8d"))
+		(instances
+			(project "sierra-to-usb"
+				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541/a819ecdb-6e62-47c4-88b1-23278076a079"
+					(reference "#PWR5431781347")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(label "UIM2E_VDD"
 		(at 137.78 91.27 0)
@@ -2809,9 +2728,29 @@
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "e31a2ce6-2372-4840-a28a-22e70de5e599")
 	)
-	(no_connect
-		(at 137.78 103.97)
-		(uuid "b9ab012a-6c7b-40ad-b578-9ce17f528109")
+	(symbol
+		(lib_id "power:GND")
+		(at 137.78 103.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "55704210-c115-47da-b8fb-917ca2e0bad1")
+		(property "Reference" "#PWR5425663846" (at 137.78 105.97 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Value" "GND" (at 137.78 107.97 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "" (at 137.78 103.97 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 137.78 103.97 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "4e549ee0-1cee-437e-a1a0-2ebd0ad5c3d3"))
+		(instances
+			(project "sierra-to-usb"
+				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541/a819ecdb-6e62-47c4-88b1-23278076a079"
+					(reference "#PWR5425663846")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(global_label "SIM_SEL"
 		(shape input)
@@ -2838,7 +2777,7 @@
 		(at 102.22 103.97)
 		(uuid "aa82ef20-3f63-41d3-8716-a7187308813f")
 	)
-	(text "U29 TS3A27518E truth table (Table 8-1, EN=L): IN=L -> NCx<->COMx ON / NOx<->COMx OFF; IN=H -> NOx<->COMx ON / NCx<->COMx OFF. IN1/IN2 tied together onto SIM_SEL so both 3-channel banks move as one 6-channel 2:1 mux. VCC=+3V3 (module drives UIM2_VDD up to 3.0V typ; TS3A27518E requires VCC > max analog signal, abs-max VCC=4.6V, rec. op. 1.65-3.6V -- +3V3 clears both). VIH min=1.2V (Sec.6.3) << RP2040 3.3V GPIO VOH, so SIM_SEL/EN drive cleanly from GP11 without level shifting.\nSEL POLARITY (disclosed correction vs brief): brief's Step-3 text assigned NO=physical/NC=eSIM with a '100k pulldown = physical slot' pull; per Table 8-1, IN=L(pulldown default) selects the NC side, not NO -- so NC/NO were SWAPPED here (NC=UIM2S_*/physical, NO=UIM2E_*/eSIM) to make the pulldown-default actually equal 'physical slot' as required, rather than flipping the pull direction. 100k pulldown (not pull-up) matches the project's established RP2040-reset-state fact (mcu.kicad_sch fix-pass note: pads reset with internal pull-DOWN ~50-80k) -- reinforcing, not fighting, that default avoids the resistive-divider indeterminate-logic-level bug already caught once on this project (LED_EN_CTL R84)."
+	(text "U29 TS3A27518E truth table (Table 8-1, EN=L): IN=L -> NCx<->COMx ON / NOx<->COMx OFF; IN=H -> NOx<->COMx ON / NCx<->COMx OFF. IN1/IN2 tied together onto SIM_SEL so both 3-channel banks move as one 6-channel 2:1 mux. VCC=+3V3 (module drives UIM2_VDD up to 3.0V typ; TS3A27518E requires VCC > max analog signal, abs-max VCC=4.6V, rec. op. 1.65-3.6V -- +3V3 clears both). VIH min=1.2V (Sec.6.3) << RP2040 3.3V GPIO VOH, so SIM_SEL/EN drive cleanly from GP11 without level shifting.\nSEL POLARITY (disclosed correction vs brief): brief's Step-3 text assigned NO=physical/NC=eSIM with a '100k pulldown = physical slot' pull; per Table 8-1, IN=L(pulldown default) selects the NC side, not NO -- so NC/NO were SWAPPED here (NC=UIM2S_*/physical, NO=UIM2E_*/eSIM) to make the pulldown-default actually equal 'physical slot' as required, rather than flipping the pull direction. 100k pulldown (not pull-up) matches the project's established RP2040-reset-state fact (mcu.kicad_sch fix-pass note: pads reset with internal pull-DOWN ~50-80k) -- reinforcing, not fighting, that default avoids the resistive-divider indeterminate-logic-level bug already caught once on this project (LED_EN_CTL R84).\nCH6 HYGIENE (fix pass, 2026-07-15): channel 6 (NC6 pin22, NO6 pin16, COM6 pin12) is unused by this design (only 5 of 6 channels are wired: VDD/RST/CLK/IO/DET). NC6 and NO6 -- the two switch-side pins that would otherwise float -- are tied to GND. COM6 is left NC-flagged (no_connect), not grounded: no local copy of the TS3A27518E datasheet's unused-channel note (if any) was available to check during this pass -- grounding NC6/NO6 while leaving the common pin open is the conservative default per TI's general floating-analog-switch-pin guidance (an ungrounded switch throw is higher-impedance/lower-risk than an ungrounded common), disclosed rather than silently assumed."
 		(at 90 40 0)
 		(effects (font (size 1.27 1.27)))
 		(uuid "f434cdc3-eafd-4650-b023-76522501cbae")
@@ -2898,19 +2837,7 @@
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "5e0d06c3-6337-48aa-8f66-3ae1058fea65")
 	)
-	(label "UIM2E_DET"
-		(at 260.0 57.46 0)
-		(effects (font (size 1.016 1.016)) (justify left bottom))
-		(uuid "63fe2647-d0d8-4402-93a7-16764cf56299")
-	)
-	(global_label "+3V3"
-		(shape input)
-		(at 260.0 62.54 0)
-		(effects (font (size 1.016 1.016)) (justify left bottom))
-		(uuid "8ce338a0-d994-4025-8250-c9d58e97eb6e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 260.0 62.54 0) (effects (font (size 1.27 1.27))))
-	)
-	(text "U30 ST4SIM-200M (MFF2/VFDFPN8) pin table verified against ST data brief DB4082 Rev5 Fig.12/Table 4 (fetched via web.archive.org -- live st.com/mouser.com fetches were blocked/timed out during authoring, flagged in task-11-report.md). Powered from UIM2E_VDD (module-switched, via mux NO1), matching the ISOLATION/DOMAIN note -- NOT board +3V3. Decoupling = 100nF+1uF on VCC (Fig.6, datasheet-mandated) -- adds the 1uF the brief's terser '100nF VDD bypass' guess omitted. R119=20k I/O pull-up to VCC (Fig.13 PCB integration rec., 'R1: 20k external pull-up recommended on I/O'). UIM2E_DET has NO physical connection to U30 (eSIM has no card-detect pin) -- it is purely the mux's NO5 channel, pulled to +3V3 via R118 so the module reads 'present' automatically whenever SIM_SEL routes to the eSIM branch (see Q39 note below for why this, not a transistor, is what actually satisfies 'assert present when eSIM active').\nNo ESD/22pF TVS on this branch: fully on-board, no exposed card-edge contacts (only the two physical nano-SIM sockets carry insertion/ESD/EMI risk) -- disclosed lighter treatment per the task brief's own invitation to make this call."
+	(text "U30 ST4SIM-200M (MFF2/VFDFPN8) pin table verified against ST data brief DB4082 Rev5 Fig.12/Table 4 (fetched via web.archive.org -- live st.com/mouser.com fetches were blocked/timed out during authoring, flagged in task-11-report.md). Powered from UIM2E_VDD (module-switched, via mux NO1), matching the ISOLATION/DOMAIN note -- NOT board +3V3. Decoupling = 100nF+1uF on VCC (Fig.6, datasheet-mandated) -- adds the 1uF the brief's terser '100nF VDD bypass' guess omitted. R119=20k I/O pull-up to VCC (Fig.13 PCB integration rec., 'R1: 20k external pull-up recommended on I/O'). UIM2E_DET has NO physical connection to U30 (eSIM has no card-detect pin) -- it is purely the mux's NO5 channel (net now a single-pin float by design, fix pass 2026-07-15: R118's 100k-to-+3V3 pull-up removed -- see Q39 note below and task-11-report.md 'Fix pass'), so the module reads 'present' (floating, per the Sierra PTS two-state DET convention) automatically whenever SIM_SEL routes to the eSIM branch.\nNo ESD/22pF TVS on this branch: fully on-board, no exposed card-edge contacts (only the two physical nano-SIM sockets carry insertion/ESD/EMI risk) -- disclosed lighter treatment per the task brief's own invitation to make this call."
 		(at 210 20 0)
 		(effects (font (size 1.27 1.27)))
 		(uuid "36d2eaf1-f85a-4714-b94d-f6748896246f")
@@ -2936,7 +2863,7 @@
 		(uuid "414648c4-4d8d-45ba-a805-bcbee967249d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 145.0 127.46 0) (effects (font (size 1.27 1.27))))
 	)
-	(text "Q39 (2N7002) + R115 (100k gate pull-down, reinforces RP2040's own internal pull-down default -- GP13/UIM2_DET_CTL blank-MCU default = OFF, no override) -- CORRECTED FUNCTION vs the brief's literal wording. Brief Step-3: 'Q8 2N7002 ... gate=UIM2_DET_CTL to assert present when eSIM active'. An N-channel FET can only pull its drain TOWARD GND -- i.e. it can only assert the verified 'grounded=absent' state (verification.md Item 7), never the 'floating/pulled-up=present' state, regardless of topology (mux-channel or wired-OR). Implementing the brief literally would silently invert the DET polarity Item 7 verified cross-vendor. What's actually built: Q39 drain sits on UIM2_DET (module-facing, post-mux, COM5) and gives firmware an active-high FORCE-ABSENT override, independent of which mux branch is selected (e.g. useful for a clean SIM hot-swap/provisioning sequence signaling 'treat as removed' before SIM_SEL switches). The 'present when eSIM selected' half of the requirement is satisfied by R118 alone (100k pull-up on UIM2E_DET, mux NO5) -- the mux's own routing IS the assertion mechanism when SIM_SEL selects the eSIM branch; no active drive is needed or physically possible in the 'present' direction from a single NFET. Full reasoning in task-11-report.md."
+	(text "Q39 (2N7002) + R119 (100k gate pull-down, reinforces RP2040's own internal pull-down default -- GP13/UIM2_DET_CTL blank-MCU default = OFF, no override) -- CORRECTED FUNCTION vs the brief's literal wording. Brief Step-3: 'Q8 2N7002 ... gate=UIM2_DET_CTL to assert present when eSIM active'. An N-channel FET can only pull its drain TOWARD GND -- i.e. it can only assert the verified 'grounded=absent' state (verification.md Item 7), never the 'floating/pulled-up=present' state, regardless of topology (mux-channel or wired-OR). Implementing the brief literally would silently invert the DET polarity Item 7 verified cross-vendor. What's actually built: Q39 drain sits on UIM2_DET (module-facing, post-mux, COM5) and gives firmware an active-high FORCE-ABSENT override, independent of which mux branch is selected (e.g. useful for a clean SIM hot-swap/provisioning sequence signaling 'treat as removed' before SIM_SEL switches). The 'present when eSIM selected' half of the requirement is satisfied by the mux's own routing alone (NO5=UIM2E_DET floats when SIM_SEL selects the eSIM branch, per the Sierra PTS two-state DET convention) -- fix pass 2026-07-15 removed R118 (the former 100k pull-up on UIM2E_DET), which put an undocumented 3.3V third state on this pin; a genuine float is the correct 'present' presentation, and no active drive is needed or physically possible in the 'present' direction from a single NFET regardless. Full reasoning in task-11-report.md 'Fix pass'."
 		(at 130 150 0)
 		(effects (font (size 1.27 1.27)))
 		(uuid "a72b448d-3f91-43fc-8faf-98e2be5d5c44")

@@ -558,3 +558,44 @@ run above, not carried as a waiver row.
 | 2026-07-15 | (Task 11) `endpoint_off_grid` +51 | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category project-wide. Connectivity verified via `uv run tools/check_nets.py` (all pass, 6 Step-1 + 46 supplementary assertions, tables in `task-11-report.md`) and a direct `kicad-cli sch export netlist --format kicadxml` pin-to-net dump for every UIM1_*/UIM2_*/UIM2S_*/UIM2E_*/SIM_SEL/UIM2_DET_CTL net. |
 | 2026-07-15 | (Task 11) `footprint_link_issues` +3 — SIM1, SIM2, U30 | Custom hand-solder parts (nano-SIM push-push socket, MFF2 eSIM) with no stock KiCad footprint and no footprint authored yet — `sierra-to-usb:NanoSIM_JXTCONN_CSIM-H137-7P` / `sierra-to-usb:VFDFPN8_MFF2` are placeholder footprint refs, real footprint authoring deferred to Task 14 (matches this project's established footprint-lock timing for every other custom/hand-solder part, e.g. the M.2 socket, USB-C receptacles). |
 | 2026-07-15 | (Task 11) `pin_to_pin` +4 — SIM1↔`#FLG20`/`#FLG21` (pre-existing m2 flags), U29↔new D28/U30 `PWR_FLAG`s | Same benign "`PWR_FLAG` (Power output) formally conflicts with a Bidirectional device pin on the same genuinely-driven net" category as every other `power_pin_not_driven`-fix row in this document. Connectivity (not the flag) verified via `uv run tools/check_nets.py`. |
+
+## Task 11 fix pass — sim DET pull-up removal + ch6 hygiene (2026-07-15)
+
+**0 errors / 756 warnings** to **0 errors / 758 warnings** (+2 net). R114/R115/R118
+(the 100k DET-to-`+3V3` pull-ups on `UIM1_DET`/`UIM2S_DET`/`UIM2E_DET`) were
+deleted per the Sierra PTS: CN1 pins 40/66 are two-state (grounded=absent,
+floating/module-internal-pull-up=present) on a likely-1.8V-domain pin, and a
+3.3V pull-up was an undocumented third voltage state, not a legitimate
+"present" presentation. Breakdown: `endpoint_off_grid` 603→602 (**−1** — three
+resistors' worth of pin/label coincidence points removed, one net fewer
+off-grid label than component pins removed since `UIM2E_DET`'s two coincident
+points collapse to one), `footprint_link_issues` 134→134 (+0, untouched),
+`lib_symbol_mismatch` 9→9 (+0, untouched), `multiple_net_names` 2→2 (+0,
+untouched), `isolated_pin_label` 0→**1** (**+1, expected, not a regression**
+— `UIM2E_DET` is now genuinely a single-pin net (`U29` NO5 only, no
+board-side pull-up), exactly the disclosed "floats = present when eSIM
+selected" design; this is the one case in this document where the category
+is the *intended* electrical state, not a forward-reference artifact —
+locked in `tools/netchecks.txt` as `NET UIM2E_DET PINS>=1` rather than
+waived away), `pin_to_pin` 8→**10** (**+2** — the two new `power:GND` ties on
+`U29` NC6/NO6 (ch6 hygiene, Fix 2 below) each register as "Bidirectional
+connected to Power output", same benign category as every other
+`pin_to_pin` row in this document).
+
+**Fix 1 (DET pull-up removal):** confirmed by direct `kicad-cli sch export
+netlist --format kicadxml` pin-to-net dump: `UIM1_DET` = {`C119.1`,
+`CN1.66`, `D27.D2-`, `SIM1.CD2`} (R114 gone), `UIM2S_DET` = {`C124.1`,
+`D28.D2-`, `SIM2.CD2`, `U29.NC5`} (R115 gone), `UIM2E_DET` = {`U29.NO5`}
+only (R118 gone), `UIM2_DET` = {`CN1.40`, `Q39.D`, `U29.COM5`} unchanged —
+Q39's force-absent override still sits on the module-facing (post-mux) side
+exactly as before. `tools/netchecks.txt`'s `NET UIM2E_DET PINS>=2` line is
+now `NET UIM2E_DET PINS>=1` (the only netcheck line that depended on a
+deleted resistor); `UIM1_DET`/`UIM2S_DET`'s existing `PINS>=3` locks still
+hold on the post-deletion 4- and 3-pin nets respectively, unweakened.
+
+**Fix 2 (ch6 hygiene):** `U29`'s unused channel 6 (NC6 pin22, NO6 pin16) —
+previously bare `no_connect` flags — now ties to `GND` via two new
+`power:GND` symbols. COM6 (pin12) stays NC-flagged: no local copy of the
+TS3A27518E datasheet's unused-channel note was available to check during
+this pass, so the conservative default (ground the switch throws, leave the
+common open) was used and is disclosed here rather than assumed silently.

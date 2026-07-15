@@ -620,8 +620,31 @@ Q39.pinfn:G = UIM2_DET_CTL
 Q39.pinfn:S = GND
 NET UIM1_DET PINS>=3
 NET UIM2S_DET PINS>=3
-NET UIM2E_DET PINS>=2
+# UIM2E_DET's PINS>=2 line moved below (fix pass) -- see comment there.
 NET UIM2_DET PINS>=3
 NET UIM2_DET_CTL PINS>=3
 NET UIM2S_VDD PINS>=4
 NET UIM2E_VDD PINS>=5
+
+# sim -- fix pass (2026-07-15, task-11-report.md "Fix pass"). R114/R115/R118
+# (100k DET pull-ups to +3V3) deleted per the Sierra PTS: CN1 pins 40/66 are
+# two-state (grounded=absent, floating/module-internal-pull-up=present) on a
+# likely-1.8V-domain pin -- a 3.3V pull-up was an undocumented third voltage
+# state, not the correct "present" presentation. UIM1_DET/UIM2S_DET keep
+# their PINS>=3 locks unweakened above (post-deletion real counts are 4 and 3
+# respectively -- still hold). UIM2E_DET is now genuinely a single-pin net
+# by design (U29.NO5 only, no board-side pull-up -- "floats = present when
+# eSIM selected"): the old PINS>=2 line is REPLACED (not just supplemented)
+# by this PINS>=1 lock so the check still exercises real connectivity
+# without asserting a pull-up that no longer exists.
+NET UIM2E_DET PINS>=1
+U29.pinfn:NO5 = UIM2E_DET
+Q39.pinfn:D = UIM2_DET
+
+# sim -- ch6 hygiene (fix pass, 2026-07-15): channel 6 unused by this design
+# (only 5 of 6 mux channels wired). NC6/NO6 (the switch-side pins) grounded;
+# COM6 stays NC-flagged -- no local TS3A27518E datasheet copy was available
+# to check its unused-channel note, so the conservative default (ground the
+# throws, leave the common open) was used, disclosed per erc-waivers.md.
+U29.pinfn:NC6 = GND
+U29.pinfn:NO6 = GND
