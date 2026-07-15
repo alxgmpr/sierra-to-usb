@@ -435,3 +435,66 @@ C82.1 = +3V3_MCU
 C82.2 = GND
 U24.pinfn:VREG_VIN = +3V3_MCU
 NET +3V3_MCU PINS>=19
+
+# ethernet -- Task 10 (RTL8125BG-CG + Bel 2250504-1 magjack). Step-1 checks
+# per the brief, ADJUSTED to this task's actually-authored symbols/design
+# (brief explicitly permits this: "adjust refdes/pinfn names to your
+# authored symbols truthfully, keep intent"). Two substantive deviations
+# from the brief's literal check text, both disclosed in task-10-report.md:
+#
+# 1. "NET PCIE_MTX_C_P PINS>=2" (module TX -> U9 RX "through caps") is
+#    REMOVED, not just renamed: per docs/verification.md Item 2 (Task 2's
+#    authoritative RC-mode finding, which this task's brief explicitly says
+#    to follow over its own illustrative check names on conflict), the
+#    module-TX-to-RTL8125-RX leg carries NO carrier caps at all -- the
+#    module's own internal 220nF caps are the only ones in that path (same
+#    M.2-spec rule already applied on the MTX/MRX leg elsewhere in this
+#    project). Replaced with a direct U9-pin check (no intermediate cap
+#    net exists on this leg).
+# 2. "U9.pinfn:PERST# = PERST_N" is adjusted for TWO reasons: (a) the real
+#    RTL8125BG-CG datasheet names this pin PERSTB, not PERST#; (b) fresh
+#    datasheet research (task-10-report.md) CONFIRMS PERSTB requires 3.3V
+#    logic (VIH min 2.0V, Realtek Rev1.1 changelog: "Removed 1.8V compatible
+#    input and output") -- CN1's PERST_N/CLKREQ_N/PEWAKE_N are only pulled
+#    to +1V8 on the m2 sheet, so U9.PERSTB is NOT directly on net PERST_N;
+#    it is level-shifted (Q36, non-inverting bidirectional OD translator)
+#    onto N_PERST_3V3. Checks below verify both halves of that chain.
+U9.pinfn:HSIP = PCIE_MTX_P
+U9.pinfn:HSIN = PCIE_MTX_N
+NET PCIE_MRX_C_P PINS>=2      # U9 TX (HSOP) through 220nF caps toward module RX
+NET PCIE_MRX_C_N PINS>=2
+NET PCIE_MRX_P PINS>=2
+NET PCIE_MRX_N PINS>=2
+U9.pinfn:PERSTB = N_PERST_3V3
+Q36.pinfn:S = PERST_N
+Q36.pinfn:G = +1V8
+NET MDI0_P PINS>=2
+J8.pinfn:VC12 = POE_VA+
+Y2.1 = N_XTAL2
+
+# ethernet -- supplementary checks (net-diff coverage beyond the brief's
+# minimum Step-1 set; full membership tables in task-10-report.md)
+U9.pinfn:MDIP1 = MDI1_P
+U9.pinfn:MDIN1 = MDI1_N
+U9.pinfn:MDIP2 = MDI2_P
+U9.pinfn:MDIN2 = MDI2_N
+U9.pinfn:MDIP3 = MDI3_P
+U9.pinfn:MDIN3 = MDI3_N
+J8.pinfn:VC36 = POE_VA-
+J8.pinfn:VC45 = POE_VB+
+J8.pinfn:VC78 = POE_VB-
+NET POE_VA+ PINS>=2
+NET POE_VA- PINS>=2
+NET POE_VB+ PINS>=2
+NET POE_VB- PINS>=2
+U9.pinfn:ISOLATEB = RTL_RST_N
+Q37.pinfn:S = CLKREQ_N
+U9.pinfn:CLKREQB = N_CLKREQ_3V3
+Q38.pinfn:S = PEWAKE_N
+U9.pinfn:LANWAKEB = N_PEWAKE_3V3
+U11.pinfn:DI = LED0
+U11.pinfn:CLK = LED1
+U11.pinfn:CS = RTL_EE_CS
+U9.pinfn:EEPROM_SEL = GND
+NET LED0 PINS>=2
+NET LED1 PINS>=2

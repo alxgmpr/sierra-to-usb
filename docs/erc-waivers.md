@@ -377,3 +377,93 @@ category, no error introduced.
 | Date | Warning | Justification |
 | ---- | ------- | -------------- |
 | 2026-07-15 | (Fix pass) `endpoint_off_grid` +11 — new/re-labelled pins and labels from Fix 1 (crystal net rename), Fix 2 (Q35 2N7002 + repurposed R82/R84 + new labels), Fix 3 (R92 + RGB_DIN split), Fix 4 (C78-C82 decoupling caps) | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category project-wide — these coordinates are computed pin-exact (`abs = symbol_at + local_pin_offset`, local-Y negated), not grid-snapped, matching this project's established convention. Connectivity verified via `uv run tools/check_nets.py` (all pass, new + all pre-existing lines, none weakened) and direct `kicad-cli sch export netlist --format kicadxml` pin-to-net dumps for every touched net (tables in `task-9-report.md`'s Fix pass section). A new `same_local_global_label` category (LED_EN_CTL/RGB_DI/RGB_DIN/+3V3_MCU local labels colliding with pre-existing global labels of the same name) surfaced transiently during development and was resolved by construction — converting the 5 offending `label`s to `global_label`s (matching the existing scope of those net names elsewhere on the sheet) rather than waived — confirmed back to 0 instances in the final ERC run above. |
+
+## Task 10 (ethernet: RTL8125BG-CG + Bel 2250504-1 magjack)
+
+`$KCLI sch erc sierra-to-usb.kicad_sch` goes from the mcu review-fix-pass's
+**0 errors / 611 warnings** to **0 errors / 674 warnings** (+63 net).
+Breakdown: `endpoint_off_grid` 451→522 (+71, same script-authored
+label/symbol-at-exact-pin-coordinate idiom as every other sheet),
+`footprint_link_issues` 131→131 (+0 — verified by diffing the actual ERC
+JSON item list, not just the count: zero items added or removed. Every new
+footprint — `Package_DFN_QFN:QFN-48-1EP_6x6mm_P0.4mm_EP4.3x4.3mm` (U9),
+`Package_SO:SOIC-8_3.9x4.9mm_P1.27mm` (U11), `Package_TO_SOT_SMD:SOT-23-5`
+(U12, Q36-38), `Resistor_SMD`/`Capacitor_SMD` (new R/C), `TestPoint` (TP11),
+empty string (J8, matching J2/J3's own stock-symbol convention) — resolves
+against libraries already registered on this machine; footprint/library
+binding itself is still Task 14), `isolated_pin_label` 18→9 (**net −9**,
+see accounting below), `lib_symbol_mismatch` 6→6 (+0 — the 4 new
+project-authored symbols are fully self-authored, not `extends`-flattened
+from a stock symbol, so they don't trigger this category), `pin_to_pin`
+4→4 (+0, unrelated pre-existing carry-forwards, untouched), `multiple_net_names`
+1→2 (+1, see below). No new category.
+
+**Two ERC *errors* + one silent design bug surfaced during development and
+were fixed (not waived):**
+1. Two structural authoring bugs (not ERC findings — `kicad-cli sch erc`
+   simply refused to load the file, "Failed to load schematic", no detail)
+   root-caused by bisection: (a) the generator's `LibSymbol` helper
+   qualified sub-unit symbol names (`sierra-to-usb:RTL8125BG_0_1`) the same
+   way as the top-level symbol name, when KiCad requires sub-units to use
+   the *bare* name (`RTL8125BG_0_1`) regardless of the top-level symbol's
+   qualification — fixed in the generator, confirmed by loading each of the
+   4 new symbols individually before and after. (b) `place_gnd()`'s
+   coordinate math added a `+2.54` offset on top of an already-offset
+   caller-computed coordinate (stock `power:GND`'s own pin is at local
+   `(0,0,270)`, i.e. zero offset from the symbol's own placement — unlike
+   `R_Small`/`C_Small` whose pins sit ±2.54 from placement) — this
+   double-offset left 14 `power:GND` symbols floating away from their
+   intended coincidence point, giving `pin_not_connected` errors.
+2. A silent (no ERC symptom until traced) coordinate collision: the EESK/
+   LED1 pull-up resistor (R96 at the time) was placed at the same point
+   (200, 62.54) already used for the EEPROM_SEL-to-GND tie, bridging the
+   entire +3V3 plane to the entire GND plane project-wide through the
+   sheet's local-label network (confirmed via a direct XML/text coordinate
+   audit — the `+3V3` net's pin dump included `U9` pins 40/49 (`GND`) and
+   `J8` pin `SH` before the fix). Surfaced as `pin_to_pin`
+   (`same_local_global_label` on `POE_VA-`) and `multiple_net_names`
+   (`+3V3`/`GND`) ERC *errors* at an intermediate stage; fixed by moving
+   R96/R97 to a non-colliding coordinate. A collision-detector was added to
+   the generator script itself (checks every emitted label/GND-symbol
+   coordinate for accidental same-point different-rail-name collisions)
+   and left in place for any future regeneration.
+3. `lib_symbol_issues` (`"Symbol 'X' not found in symbol library
+   'sierra-to-usb'"`) ×4, transient — the 4 new symbols were only in this
+   sheet's own embedded `lib_symbols` cache, not yet in
+   `lib/sierra-to-usb.kicad_sym` (the registered project library file).
+   Fixed by appending all 4 (bare/unqualified names, matching that file's
+   own established convention) — confirmed 0 instances after.
+4. `same_local_global_label` on `LED1` ×1, transient — the EESK/LED1
+   pull-up's net() call used a local `label` while every other `LED1`
+   touch used a `global_label`. Fixed by making all `LED1` touches
+   consistent (`global_label`) — confirmed 0 instances after.
+
+**`isolated_pin_label` accounting (net −9, verified against a direct ERC
+JSON item-list diff before/after, not just the count):**
+- **Resolved (9):** `POE_VA+`, `POE_VA-`, `POE_VB+`, `POE_VB-` (the exact
+  four BR1/BR2 forward references power_input.kicad_sch has carried since
+  Task 4 — `J8`'s VC12/VC36/VC45/VC78 pins are the real second touch),
+  `PCIE_MRX_P`, `PCIE_MRX_N` (m2's Task-6 forward reference — `U9`'s
+  HSOP/HSON reach these nets through the new 220nF caps C83/C84),
+  `PCIE_REFCLK_P`, `PCIE_REFCLK_N` (m2's Task-6 forward reference — `U9`
+  REFCLK_P/N pins), `RTL_RST_N` (mcu's Task-9 forward reference — `U9`
+  ISOLATEB pin).
+- **New forward references: none.** This sheet introduces no cross-sheet
+  net that isn't immediately given a second touch by this same task.
+- Remaining 9 (`UIM1_DET`, `UIM1_IO`, `UIM2_DET`, `UIM2_IO`, `UIM2_CLK`,
+  `UIM2_RST`, `UIM2_VDD`, `SIM_SEL`, `UIM2_DET_CTL`) are all untouched
+  SIM/UIM forward references, explicitly Task 11 territory — none of them
+  are this task's responsibility per the brief's declared interface.
+
+**`multiple_net_names` (+1) — informational, not a defect, same mechanism
+already established at Task 9 for `POE_STS_RAW`/`N_BTSTAT`:** `U9`'s
+`EEPROM_SEL` pin (net `N_EEPROM_SEL`) is deliberately made coincident with
+a `GND` point (selects 93C46 3-wire mode per the datasheet: "93C46: Power
+On Latch Value Low Voltage") — `GND` wins as the canonical netlist name.
+`tools/netchecks.txt`'s `U9.pinfn:EEPROM_SEL = GND` check (not
+`N_EEPROM_SEL`) reflects this directly.
+
+| Date | Warning | Justification |
+| ---- | ------- | -------------- |
+| 2026-07-15 | (Task 10) `endpoint_off_grid` ×71 | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category project-wide. Connectivity verified via `uv run tools/check_nets.py` (all pass, 36 new assertions + every pre-existing line, none weakened) and a direct `kicad-cli sch export netlist --format kicadxml` pin-to-net dump for every net this task touches (tables in `task-10-report.md`). |
+| 2026-07-15 | (Task 10) `multiple_net_names` ×1 — `+3V3`/... no — `N_EEPROM_SEL`/`GND` coincident at `U9` pin 32 | Intended mechanism (same coincident-label-as-tie-off technique Task 9 established for `POE_STS_RAW`/`N_BTSTAT`), not a defect — selects 93C46 3-wire EEPROM mode per the RTL8125BG-CG datasheet's own strap table. |
