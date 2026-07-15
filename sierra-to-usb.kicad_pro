@@ -282,10 +282,10 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.15,
+        "diff_pair_via_gap": 0.15,
+        "diff_pair_width": 0.24,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
@@ -293,7 +293,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.24,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -301,10 +301,10 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.15,
+        "diff_pair_via_gap": 0.15,
+        "diff_pair_width": 0.27,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
@@ -312,7 +312,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.27,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -320,10 +320,10 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.15,
+        "diff_pair_via_gap": 0.15,
+        "diff_pair_width": 0.19,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
@@ -331,7 +331,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.19,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -339,10 +339,10 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.3,
+        "diff_pair_via_gap": 0.3,
+        "diff_pair_width": 0.14,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
@@ -350,7 +350,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.14,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -358,7 +358,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 2.5,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -452,6 +452,102 @@
       {
         "netclass": "POWER",
         "pattern": "+1V8"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_AUX"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_BT"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_BTLED"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_CLSA"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_CLSB"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_COMP"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_CS"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_CS_SNS"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_DEN"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_DT"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_DTHR"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_FRS"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_GAT2"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_GATE"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_GATE_Q"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_ISTP"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_LINEUV"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_PPD"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_REF"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_SST"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_SW"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_VB"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_VBG"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "N_VCC"
       }
     ]
   },
