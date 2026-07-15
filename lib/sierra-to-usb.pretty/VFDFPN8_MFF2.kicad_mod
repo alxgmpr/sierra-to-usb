@@ -1,0 +1,198 @@
+(footprint "VFDFPN8_MFF2"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "ST4SIM-200M GSMA eSIM SoC, VFDFPN8 5x6mm wettable-flank DFN-8 (industry-standard MFF2 package). Body 6.00x5.00mm (E x D), pad pitch 1.27mm, 4 pads per long side. Dimensions per ConnectedYou 'MFF2 Packaging specifications v1.1' (25-Jan-2019), a GSMA/ETSI-TS-102-221-compliant industry-standard MFF2 mechanical drawing (fetched from content.connectedyou.io/Docs/CY%20SIM%20-%20MFF2%20Packaging%20v1.1.pdf) -- used as a dimensional fallback because ST's own DB4082 data brief (see Datasheet field) documents the pinout/electrical table but not a detailed mechanical dimension table. Pad electrical assignment (pin 1-8) taken from ST DB4082 Figure 12 / Table 4 physical package numbering, NOT the ETSI C1-C8 D16-micromodule contact numbering shown in the ConnectedYou drawing -- the two numbering schemes were cross-checked pin-by-pin (physical pin1=C5=GND, pin2=C6=SWIO/NC, pin3=C7=I/O, pin4=C8=NC, pin5=C4=NC, pin6=C3=CLK, pin7=C2=RESET, pin8=C1=VCC) and all 8 agree with ST's own Table 4 pin functions, confirming the geometric mapping used here. Pad land length extended from the raw 0.60mm metal contact (L) to 0.80mm outward toe extension, matching the same source's own 'Recommendation for PCB Footprint' section (0.8mm illustrated land length) for wettable-flank solder-fillet visibility. Center exposed thermal/die-attach pad present per the drawing (E2 min 3.30mm x D2 min 3.90mm) but carries no defined signal in either numbering scheme -- added as pad 9, unconnected (no matching schematic pin), not tied to GND.")
+	(tags "eSIM eUICC MFF2 VFDFPN8 DFN8 ST4SIM")
+	(property "Reference" "REF**"
+		(at 0 -3.5 0)
+		(layer "F.SilkS")
+		(uuid "AC436265-84CF-4347-9AE4-42C4CFF7B96E")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "VFDFPN8_MFF2"
+		(at 0 3.5 0)
+		(layer "F.Fab")
+		(uuid "7FC920F1-6E06-4D81-8F4F-61A490DBAAF6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.st.com/resource/en/data_brief/st4sim-200m.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "A4A66CE2-DEAB-4EC7-A257-88B5CBB65D96")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "ST4SIM-200M GSMA eSIM SoC, VFDFPN8 5x6mm wettable-flank (MFF2). Mechanical dims per ConnectedYou MFF2 Packaging spec v1.1 (industry-standard MFF2 drawing, ST DB4082 data brief lacks a detailed dimension table); pin map per ST DB4082 Figure 12/Table 4 physical pin 1-8 numbering (verified against ETSI C1-C8 contact map, see descr)."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "622D320E-05E5-49DF-8657-309120016163")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.0 -2.5)
+		(end 3.0 -2.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "DE3059B3-B8B0-4580-BFFF-5FDFAD4D3AD1")
+	)
+	(fp_line
+		(start -3.0 2.5)
+		(end 3.0 2.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6C1436DB-C35E-44AC-B468-8540B82CA2F4")
+	)
+	(fp_circle
+		(center 2.6 -2.75)
+		(end 2.75 -2.75)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "A1B292E0-32AF-468E-9C6E-EBE9E7AF6EAF")
+	)
+	(fp_rect
+		(start -3.0 -2.5)
+		(end 3.0 2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "A35D1791-8A1D-4C89-9537-240CBA208D95")
+	)
+	(fp_poly
+		(pts
+			(xy 2.2 -2.5) (xy 3.0 -2.5) (xy 3.0 -1.7)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "47AB88A7-D427-4F22-B1EB-70BFCAEE29B4")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "D0B7E7CE-C891-458C-AE0B-8F100412A249")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.09)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.25 -2.75)
+		(end 3.25 2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "B6C71165-5B36-45E3-8109-93CA96650A3F")
+	)
+	(pad "1" smd roundrect
+		(at 2.8 -1.905)
+		(size 0.8 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "F8B217FA-6CAB-438A-BCD2-1ACAB12FB04E")
+	)
+	(pad "2" smd roundrect
+		(at 2.8 -0.635)
+		(size 0.8 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "F4A56E0E-6648-4EC8-9F9D-CB656D62E786")
+	)
+	(pad "3" smd roundrect
+		(at 2.8 0.635)
+		(size 0.8 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "EBD4D584-A3FF-4689-9D32-3CCB5A7E22B2")
+	)
+	(pad "4" smd roundrect
+		(at 2.8 1.905)
+		(size 0.8 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "DF47B351-B59D-478F-B1AA-5D5BA81A9F40")
+	)
+	(pad "5" smd roundrect
+		(at -2.8 1.905)
+		(size 0.8 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "5F045994-1B39-44E4-A193-6EE9B2E7D784")
+	)
+	(pad "6" smd roundrect
+		(at -2.8 0.635)
+		(size 0.8 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "4F5554AA-C82B-4F06-A9FC-295A87AA3F46")
+	)
+	(pad "7" smd roundrect
+		(at -2.8 -0.635)
+		(size 0.8 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "723C17E2-2E17-4B54-9062-4CF40E3822CC")
+	)
+	(pad "8" smd roundrect
+		(at -2.8 -1.905)
+		(size 0.8 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "59BF7A09-6BF9-4B51-8EAB-743986D462A3")
+	)
+	(pad "9" smd roundrect
+		(at 0 0)
+		(size 3.3 3.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.05)
+		(uuid "FC67F7AF-0E93-4AEF-BBE1-FEB104F3ED24")
+	)
+	(embedded_fonts no)
+)

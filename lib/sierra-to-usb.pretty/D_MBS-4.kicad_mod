@@ -1,0 +1,186 @@
+(footprint "D_MBS-4"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "MB10S 0.8A SMD bridge rectifier, MBS 4-pin package (Diodes Inc DS39045 Rev.3-2, Package Outline + Suggested Pad Layout, https://www.diodes.com/assets/Datasheets/MB10S.pdf). Pin1=+, Pin2=~(AC), Pin3=-, Pin4=~(AC), matching sierra-to-usb:MB10S symbol.")
+	(tags "MBS bridge rectifier MB10S SMD PoE")
+	(property "Reference" "REF**"
+		(at 0 -5.6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "7eb65479-850c-4090-8a8b-614ef33715f8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "D_MBS-4"
+		(at 0 5.6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "6afc00c7-6b78-4cdf-bc17-0b651430a3eb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.diodes.com/assets/Datasheets/MB10S.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "470dc430-786d-4172-99bc-c280573f3f55")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "0.8A full-wave bridge rectifier, MBS 4-pin SMD (MB10S/MB6S/MB6F family package)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d52bdf3e-8867-4425-bbef-074bbb9e2623")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.475 -5.025)
+		(end 2.475 -5.025)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "282dac9f-6fa4-4b3a-9550-ba905f97f9ae")
+	)
+	(fp_line
+		(start -2.475 5.025)
+		(end 2.475 5.025)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f9060528-c60b-4e80-aa5e-9fbf069f58b7")
+	)
+	(fp_line
+		(start -2.6750000000000003 -5.025)
+		(end -2.6750000000000003 5.025)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3aa82f72-4d77-4609-8bb2-0e56873e0100")
+	)
+	(fp_poly
+		(pts
+			(xy 2.65 -5.025) (xy 2.25 -5.025) (xy 2.45 -5.425)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "101c59e3-da3d-45b4-aec5-9b771bb66364")
+	)
+	(fp_rect
+		(start -2.475 -2.05)
+		(end 2.475 2.05)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "f089c8d4-d97b-4c95-9943-4eb729db6026")
+	)
+	(fp_text user "+"
+		(at 1.75 -1.2 0)
+		(layer "F.Fab")
+		(uuid "8eb5480e-983b-4a2c-8038-a043b64d93db")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(fp_text user "-"
+		(at -1.75 -1.2 0)
+		(layer "F.Fab")
+		(uuid "a428554d-ceea-4022-ba6b-41bdaec6ae69")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "37f26537-4e28-4435-89cd-abac4178d8bf")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(fp_rect
+		(start -2.73 -5.08)
+		(end 2.73 5.08)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "dbcf2ca1-5b66-411b-a769-a51c91246180")
+	)
+	(pad "1" smd roundrect
+		(at 1.75 -3.75)
+		(size 1.0 2.15)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "e05b245a-ab31-4e9c-9337-cdd06f509ab4")
+	)
+	(pad "2" smd roundrect
+		(at 1.75 3.75)
+		(size 1.0 2.15)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "04ad96d4-6902-4c86-bd0d-5e79246938a5")
+	)
+	(pad "3" smd roundrect
+		(at -1.75 -3.75)
+		(size 1.0 2.15)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "0c55cec5-ae76-4379-adda-b709326e6f26")
+	)
+	(pad "4" smd roundrect
+		(at -1.75 3.75)
+		(size 1.0 2.15)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "90053257-a075-4fce-94e4-9f1c6839e374")
+	)
+	(embedded_fonts no)
+)

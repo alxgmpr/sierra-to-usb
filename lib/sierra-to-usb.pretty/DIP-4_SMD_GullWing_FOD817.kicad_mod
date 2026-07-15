@@ -1,0 +1,174 @@
+(footprint "DIP-4_SMD_GullWing_FOD817"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Generic commodity SMD gull-wing DIP-4 phototransistor optocoupler land pattern, used by onsemi FOD817DS (DigiKey Package/Case: '4-SMD, Gull Wing'; Supplier Device Package: '4-SMD'; LCSC/onsemi call the package family 'SMD-4P') and its near-identical commodity siblings (PC817X0NSZ0F, EL817S(TA), LTV-817S, etc. -- these SMD-gull-wing DIP-4 optocouplers share a de-facto standard body/lead form). Placeholder name 'Package_DIP:DIP-4_W7.62mm_SMDGullWing' does not exist in stock KiCad10 (Package_DIP.pretty only has DIP-4_W7.62mm THT and DIP-4_W7.62mm_SMDSocket_SmallPads; a broad case-insensitive search for *gull*/*gullwing* across the ENTIRE stock footprint tree returned zero hits). Dimensions used: body 6.5x4.0mm (commonly cited across FOD817/PC817/EL817 SMD-gull-wing datasheets), 2.54mm (0.1in) pin pitch along each row (pins 1-2 and 4-3), foot-tip-to-foot-tip row span ~9.8mm (typical formed gull-wing span for this commodity 300mil-body package family; onsemi's own FOD817DS numeric land-pattern table could not be retrieved in machine-readable form -- WebFetch of the onsemi/Mouser PDF returned only package-suffix text, not the dimension table). APPROXIMATION FLAGGED: exact body width/pad foot length may vary +/-0.3mm between onsemi's actual FOD817DS drawing and this generic commodity value; verify against onsemi's FOD817 datasheet package outline before fab if tolerance is critical.")
+	(tags "FOD817DS optocoupler DIP-4 SMD gull wing SOP-4")
+	(property "Reference" "REF**"
+		(at 0 -3.0 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "a9881436-51dd-4b67-8db4-bb4deb071587")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "DIP-4_SMD_GullWing_FOD817"
+		(at 0 3.0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b018f144-81e9-450f-bb8e-90113efd1777")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/fod817-d.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1c668029-7050-4db3-9314-d20feedfc31d")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Generic commodity SMD gull-wing DIP-4 phototransistor optocoupler land pattern, used by onsemi FOD817DS (DigiKey Package/Case: '4-SMD, Gull Wing'; Supplier Device Package: '4-SMD'; LCSC/onsemi call the package family 'SMD-4P') and its near-identical commodity siblings (PC817X0NSZ0F, EL817S(TA), LTV-817S, etc. -- these SMD-gull-wing DIP-4 optocouplers share a de-facto standard body/lead form). Placeholder name 'Package_DIP:DIP-4_W7.62mm_SMDGullWing' does not exist in stock KiCad10 (Package_DIP.pretty only has DIP-4_W7.62mm THT and DIP-4_W7.62mm_SMDSocket_SmallPads; a broad case-insensitive search for *gull*/*gullwing* across the ENTIRE stock footprint tree returned zero hits). Dimensions used: body 6.5x4.0mm (commonly cited across FOD817/PC817/EL817 SMD-gull-wing datasheets), 2.54mm (0.1in) pin pitch along each row (pins 1-2 and 4-3), foot-tip-to-foot-tip row span ~9.8mm (typical formed gull-wing span for this commodity 300mil-body package family; onsemi's own FOD817DS numeric land-pattern table could not be retrieved in machine-readable form -- WebFetch of the onsemi/Mouser PDF returned only package-suffix text, not the dimension table). APPROXIMATION FLAGGED: exact body width/pad foot length may vary +/-0.3mm between onsemi's actual FOD817DS drawing and this generic commodity value; verify against onsemi's FOD817 datasheet package outline before fab if tolerance is critical."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d8c5d2f7-f6f8-49f5-9335-928bd75cb8b0")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.25 -1.2)
+		(end -3.25 2.0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8be198ab-4a8e-4c31-bd9d-72f3a5890000")
+	)
+	(fp_line
+		(start -3.25 2.0)
+		(end 3.25 2.0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "93635c0d-8abd-4f82-b7ee-97515988d343")
+	)
+	(fp_line
+		(start 3.25 2.0)
+		(end 3.25 -2.0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6dea5c1b-0943-498a-a002-b88a4cd270ac")
+	)
+	(fp_line
+		(start 3.25 -2.0)
+		(end -2.45 -2.0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2dba219b-465a-4bf8-a6ff-45378d2f535e")
+	)
+	(fp_poly
+		(pts
+			(xy -3.4 -1.2) (xy -3.75 -1.2) (xy -3.4 -0.8500000000000001)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "192fd9a2-cb13-4773-8229-79b2ecef575b")
+	)
+	(fp_rect
+		(start -3.25 -2.0)
+		(end 3.25 2.0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "7a4f771e-8822-4cff-8ea0-269bb0dbd5f5")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "7b0290ac-158b-41da-8669-260253d36096")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(fp_rect
+		(start -5.75 -2.25)
+		(end 5.75 2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "db274965-0ef6-4b9d-baeb-097c3ebdeb53")
+	)
+	(pad "1" smd roundrect
+		(at -4.9 -1.27)
+		(size 1.2 0.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "df3d8f11-c332-4cf5-8382-0bdbfd60946f")
+	)
+	(pad "2" smd roundrect
+		(at -4.9 1.27)
+		(size 1.2 0.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "e54199d3-986d-412f-8091-d013ae050cc6")
+	)
+	(pad "3" smd roundrect
+		(at 4.9 1.27)
+		(size 1.2 0.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "6e270bb9-869f-400e-a4fc-41449a322979")
+	)
+	(pad "4" smd roundrect
+		(at 4.9 -1.27)
+		(size 1.2 0.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "e876e7dc-ce6a-4400-89b8-dbb586e4b135")
+	)
+	(embedded_fonts no)
+)

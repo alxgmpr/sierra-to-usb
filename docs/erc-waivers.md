@@ -698,3 +698,50 @@ of this fix pass hit that exact warning from a `#PWR` reference collision
 introduced while adding `D29`'s ground tie, root-caused and fixed by
 picking a refdes not already in use anywhere in the flat hierarchy, not just
 on the local sheet; see task-13-report.md Fix pass for the full story).
+
+## Task 14 — footprint_link_issues collapse (footprint + fp-lib-table binding)
+
+Every `footprint_link_issues` row logged above (Tasks 4–13, ~148 accumulated
+instances across all 9 sheets per the last full ERC run) was an intentional,
+disclosed deferral: symbols carried their *intended* footprint string early
+so downstream tasks had the real target, but no `fp-lib-table` existed yet
+to resolve them. Task 14 closes all of them in one pass:
+
+1. Added `fp-lib-table` (project root) registering a new project footprint
+   library `sierra-to-usb` → `lib/sierra-to-usb.pretty/`, mirroring the
+   existing `sym-lib-table` pattern for the project symbol library.
+2. Authored 14 real custom footprints in `lib/sierra-to-usb.pretty/` for
+   parts with no stock KiCad equivalent (full citations/pad tables in
+   `task-14-report.md`): `Bel_2250504-1` (magjack), `MHF4_TE_CONMHF4-SMD-G-T`,
+   `SMA_EdgeMount_BWSMA-KE-Z001`, `NanoSIM_JXTCONN_CSIM-H137-7P`,
+   `VFDFPN8_MFF2` (eSIM), `M.2_Key-B-SMD_Socket_LOTES_APCI0105-P001A`,
+   `D_MBS-4` (bridge rectifier), `L_Wurth_WE-HCI_74435571500`/
+   `_744325550` (PoE flyback inductors L1/L2), `TPS23730_RMTR`, `FDMC2523P`,
+   `DIP-4_SMD_GullWing_FOD817`, `LED_SK6805-EC15_1.5x1.5mm`,
+   `Transformer_SMT_WE750313355`, and `USB_C_Receptacle_HRO_TYPE-C-31-M-17_Full24P`
+   (see CRITICAL finding below).
+3. Rewrote every bare/stale `Footprint` string (115 old-style no-library-prefix
+   names + 3 empty + several wrong-library-prefix bugs found along the way,
+   e.g. `Diode_SMB:D_SMB`→`Diode_SMD:D_SMB`, `Button_Switch_THT:SW_SPDT_PCM12`
+   →`Button_Switch_SMD:SW_SPDT_PCM12`, `PG-TDSON-8`→`TDSON-8-1`) to real,
+   filesystem-verified `Library:Name` strings across all 363 BOM symbols.
+
+Result: `kicad-cli sch erc` → **0 errors**, `footprint_link_issues` **148→0**
+(fully collapsed, confirmed by re-running ERC after the fix pass — see
+`task-14-report.md` for the full before/after breakdown). Remaining warning
+categories (`endpoint_off_grid` 629, `pin_to_pin` 10, `lib_symbol_mismatch`
+10, `multiple_net_names` 2, `isolated_pin_label` 1) are all pre-existing,
+untouched by this task, and already carry their own waiver rows above.
+
+**CRITICAL finding, not silently fixed:** while binding J1's footprint, the
+stock `Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-17.kicad_mod` file
+that Task 7 assumed was J1's exact match (name-matched the MPN) turned out
+to expose only **6 real signal pads** (`A5/A9/A12/B5/B9/B12`) plus shield —
+nowhere near enough for J1's 24-pin full-featured USB3 SuperSpeed symbol
+(25 pins incl. shield: both SS differential pairs, CC1/CC2, SBU1/SBU2, D+/D-,
+GND/VBUS). `check_footprints.py` caught this via its pad-count-vs-pin-count
+assertion. Replaced with a project-authored `USB_C_Receptacle_HRO_TYPE-C-31-M-17_Full24P`
+footprint — see `task-14-report.md` for the pad table, dimension source, and
+confidence caveats. Flagged here per the Global Constraints disclosure rule:
+this was a real, silent-until-now defect from an earlier task, not introduced
+by Task 14.

@@ -30,7 +30,7 @@
 | 12 V→3.3 V buck | TI TPS565201DDCR | TSOT-23-6 | LCSC | C327676 | $ ($0.13@1) | 8,893. |
 | LDO 3.3 V ×2 | Diodes AP2112K-3.3TRG1 | SOT-25 | LCSC | C51118 | $ ($0.13@1) | 41,270. |
 | LDO 1.8 V | Diodes AP2112K-1.8TRG1 | SOT-25 | LCSC | C176944 | $ ($0.15@1) | 12,170. |
-| Current monitor ×2 | TI INA226AIDGSR | MSOP-10 | LCSC | C49851 | $$ ($0.60@1) | 42,750. |
+| Current monitor ×2 | TI INA226AIDGSR | VSSOP-10 (exposed pad — was mislabeled MSOP-10 through Task 13; corrected at Task 14 footprint lock, footprint bound as `Package_SO:HVSSOP-10-1EP_3x3mm_P0.5mm_EP1.83x1.89mm`) | LCSC | C49851 | $$ ($0.60@1) | 42,750. |
 | Temp sensor ×2 | TI TMP112AIDRLR | SOT-563 | LCSC | C28927 | $ ($0.23@1) | 26,572. |
 | RGB LED | OPSCO SK6805-EC15 | 1.5×1.5 SMD-4P | LCSC | C2890035 | $ ($0.09@1) | 80,300 — live page. ⚠️ Datasheet Vdd min is 3.7 V; 3.3 V operation is standard practice (Adafruit ships this chip as 3.3–5 V) but technically below datasheet floor — noted for design docs. |
 | USB3 ESD ×3 | TI TPD4EUSB30DQAR | DFN-2510-10 | LCSC | C558427 | $ ($0.05@1) | 11,595. |

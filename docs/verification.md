@@ -318,3 +318,67 @@ category-for-category; single-pin set still exactly {`UIM2E_DET`}).
 
 **Task 13 gate verdict: APPROVED** (Task-14 footprint scope updates to
 **151** symbols: 148 footprint_link_issues refs + J2/J3/J8 empty fields).
+
+## Task 14 — footprint assignment + assembly-split BOM fields (2026-07-15)
+
+All 363 BOM symbols now carry a real, filesystem-verified `Library:Footprint`
+string and `Assembly`/`MPN`/`Distributor`(+`LCSC` on JLC rows) properties.
+`fp-lib-table` added (project footprint library `sierra-to-usb` →
+`lib/sierra-to-usb.pretty/`), 15 custom footprints authored from real
+manufacturer drawings (see `task-14-report.md` for the full decision table
+with citations). `tools/check_footprints.py` added as a new project gate
+(Footprint/Assembly present, JLC⇒LCSC, footprint pad count ≥ symbol pin
+count via real netlist-derived pin lists) — passes clean after the fix
+described below. `uv run tools/check_nets.py` still all-pass (connectivity
+untouched). ERC: 0 errors, `footprint_link_issues` 148→0.
+
+Carry-forwards closed: D30's series resistor R121 1k→**560 Ω** (this file's
+own Task-13 observation above — 0.6 mA was dim for a blue LED); INA226
+U13/U14 footprint corrected MSOP-10→**VSSOP-10** (`HVSSOP-10-1EP`, exposed
+pad — `sourcing.md` text fixed too); R39/R44 INA226 shunts kept as 2-pin
+1206 (no stock 4-terminal Kelvin footprint fits without changing the
+2-pin `Device:R_Small` schematic symbol, which would touch connectivity —
+out of Task-14 scope) with a new `KELVIN-ROUTE` note property for Task 15;
+JP1-3 bound to `Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm`;
+SW2 got a `SilkNote`="ON/KILL" property for Task 15's silkscreen pass. 42
+leftover 0402 passives upgraded to 0603 per the hand-solder floor (full
+list in `task-14-report.md`).
+
+**Disclosed assembly-side flip:** U30 (eSIM, ST4SIM-200M) — the task's
+shorthand JLC list included it, but `docs/sourcing.md` flag #1 (pinned at
+Task 1, unchanged since) is unambiguous: no LCSC listing exists for this
+part, so it cannot be a JLC-assembled row (LCSC # is a hard requirement for
+Assembly=JLC). Reclassified HAND, sourced via DigiKey/Mouser/ST per the
+sourcing doc's own recommendation. This is sourcing.md overriding the
+task's own shorthand, not a new judgment call.
+
+**Two CRITICAL findings surfaced by this task's pin-count verification,
+neither fixed here (both would touch symbol/connectivity plumbing beyond
+footprint-assignment scope, and both are pre-existing from earlier tasks,
+not introduced now):**
+
+1. **J1's stock footprint was wrong.** `Connector_USB:USB_C_Receptacle_
+   HRO_TYPE-C-31-M-17.kicad_mod` (assumed correct at Task 7 by name match)
+   only exposes 6 real signal pads — nowhere near enough for J1's 24-pin
+   full-featured USB3 symbol. Replaced with a project-authored full-pinout
+   footprint this task (see `task-14-report.md`); flagged in
+   `docs/erc-waivers.md` under "Task 14" with full detail.
+2. **8 discrete FET/BJT references use the generic stock `Device:Q_NMOS`/
+   `Q_PMOS`/`Q_NPN` symbols, whose pin *numbers* are letters (`D`/`G`/`S` or
+   `B`/`C`/`E`), while every real-world footprint's pads are numbered `1`/
+   `2`/`3`...** — Q20, Q22, Q23, Q24, Q25, Q30, Q31 (Q21 was rescued this
+   task by giving its new custom `FDMC2523P` footprint lettered pad names
+   matching its symbol; U10's new custom footprint uses the project's own
+   numeric-pinned `TPS23730` symbol so it's unaffected). KiCad matches
+   footprint pads to symbol pins by exact number-string equality — for
+   these 7, "Update PCB from Schematic" will report unmatched pins and
+   leave those pads unrouted, regardless of which footprint is bound,
+   because it's a symbol-choice problem, not a footprint problem.
+   `tools/check_footprints.py`'s pad-COUNT check (as specified in this
+   task's contract) does not catch this — it's a pad-NUMBER-vs-pin-NUMBER
+   mismatch, a stricter check than "count". Not fixed here because the
+   safe fix (project-local numeric-pinned symbol variants for these 7
+   parts) requires touching `tools/netchecks.txt` (4 of these refs are
+   checked there via letter-style pin refs, e.g. `Q22.D = N_SEC_RTN`) and
+   should be reviewed/verified as its own small task before Task 15 PCB
+   layout, not rushed inside this one.

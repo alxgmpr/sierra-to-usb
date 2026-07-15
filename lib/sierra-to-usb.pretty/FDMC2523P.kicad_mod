@@ -1,0 +1,231 @@
+(footprint "FDMC2523P"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "onsemi/Fairchild FDMC2523P, single P-Channel QFET MOSFET (-150V/-3A, RDS(on)=1.5ohm typ), package = 'Power33-8' (onsemi's own naming, LCSC listing C890927), a.k.a. WDFN-8, body 3.3x3.3x0.75mm, 0.65mm pitch, 4+4 dual-row leadframe. Datasheet source: onsemi FDMC2523P-D (onsemi.com/pdf/datasheet/fdmc2523p-d.pdf), marking diagram gives lead sequence 'S G S S | D D D D' (pin1=S,2=G,3=S,4=S on one side; pin5-8=D on the other), i.e. 3 paralleled source pads + 1 gate pad + 4 paralleled drain pads for low RDS(on). Pad size/pitch/column-offset geometry adapted from the real stock KiCad footprint 'Package_SON.pretty/Fairchild_DualPower33-6_3x3mm.kicad_mod' (same Fairchild 'Power 33' 3x3mm leadframe family, same 0.65mm pitch, verified column x-offset -1.39/+1.39mm), scaled from 6 to 8 discrete pads since no stock 8-pin variant of this package exists. Pad numbers use S/G/D strings (not 1-8) to match this project's Device:Q_PMOS symbol pin numbering for Q21. Placeholder guess 'QFN-8_2x2mm' was wrong on both body size (2x2mm vs real 3.3x3.3mm) and implied single-pad-per-pin layout. APPROXIMATION FLAG: top/bottom physical ordering of the 4 pins per side (exact match to datasheet's physical marking orientation, vs. mirrored) is inferred from standard counterclockwise QFN/MLP numbering, not confirmed against a literal onsemi mechanical land-pattern drawing (unavailable in machine-readable form); pad-name (S/G/D) electrical correctness does not depend on this ordering.")
+	(tags "FDMC2523P PMOS Power33-8 WDFN QFET")
+	(property "Reference" "REF**"
+		(at 0 -2.3 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "4577a322-f0e9-42e2-a07b-a31aa5a2cb28")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "FDMC2523P"
+		(at 0 2.3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "fbb2496e-2588-4f6a-9dfb-a7e9a9569fe0")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/fdmc2523p-d.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "950e55cc-68d2-4eb5-b40c-83766dacf6ab")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "onsemi/Fairchild FDMC2523P, single P-Channel QFET MOSFET (-150V/-3A, RDS(on)=1.5ohm typ), package = 'Power33-8' (onsemi's own naming, LCSC listing C890927), a.k.a. WDFN-8, body 3.3x3.3x0.75mm, 0.65mm pitch, 4+4 dual-row leadframe. Datasheet source: onsemi FDMC2523P-D (onsemi.com/pdf/datasheet/fdmc2523p-d.pdf), marking diagram gives lead sequence 'S G S S | D D D D' (pin1=S,2=G,3=S,4=S on one side; pin5-8=D on the other), i.e. 3 paralleled source pads + 1 gate pad + 4 paralleled drain pads for low RDS(on). Pad size/pitch/column-offset geometry adapted from the real stock KiCad footprint 'Package_SON.pretty/Fairchild_DualPower33-6_3x3mm.kicad_mod' (same Fairchild 'Power 33' 3x3mm leadframe family, same 0.65mm pitch, verified column x-offset -1.39/+1.39mm), scaled from 6 to 8 discrete pads since no stock 8-pin variant of this package exists. Pad numbers use S/G/D strings (not 1-8) to match this project's Device:Q_PMOS symbol pin numbering for Q21. Placeholder guess 'QFN-8_2x2mm' was wrong on both body size (2x2mm vs real 3.3x3.3mm) and implied single-pad-per-pin layout. APPROXIMATION FLAG: top/bottom physical ordering of the 4 pins per side (exact match to datasheet's physical marking orientation, vs. mirrored) is inferred from standard counterclockwise QFN/MLP numbering, not confirmed against a literal onsemi mechanical land-pattern drawing (unavailable in machine-readable form); pad-name (S/G/D) electrical correctness does not depend on this ordering."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "538501b1-087f-4342-b97e-ec507fd28861")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.75 1.75)
+		(end -0.95 1.75)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "271f4b8c-3eda-4186-8833-84e89cd4cf8b")
+	)
+	(fp_line
+		(start 0.95 -1.75)
+		(end 1.75 -1.75)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "81947a5c-971b-4bbe-b2b5-b5d34493d4e0")
+	)
+	(fp_line
+		(start -1.15 1.65)
+		(end -1.65 1.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "15243e0d-c31c-42c6-b287-5658fd46b40e")
+	)
+	(fp_line
+		(start -1.65 1.65)
+		(end -1.65 1.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "75e47f80-0b84-4134-ab59-b932afb7e86d")
+	)
+	(fp_line
+		(start -1.65 1.15)
+		(end -1.15 1.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "098a05d5-9216-433f-9e0c-d65e3db1ba56")
+	)
+	(fp_line
+		(start -1.65 -1.65)
+		(end 1.65 -1.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dac8382a-892a-4e7f-9f4d-db060b3f0ca2")
+	)
+	(fp_line
+		(start 1.65 -1.65)
+		(end 1.65 1.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2b2d778c-9e67-4c8c-b10b-8b40564a7502")
+	)
+	(fp_line
+		(start 1.65 1.65)
+		(end -1.15 1.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4c1b3cba-0d38-4b60-b85e-11b94bdd8f4e")
+	)
+	(fp_poly
+		(pts
+			(xy -1.8499999999999999 1.3499999999999999) (xy -2.2 1.3499999999999999) (xy -1.8499999999999999 0.9999999999999999)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "307b47f6-8761-4044-b66a-5a8739d8e20e")
+	)
+	(fp_rect
+		(start -1.9 -1.9)
+		(end 1.9 1.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "ec99f738-03d3-4510-bee5-5670a6c5baa7")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "89d57168-e671-4add-aa1b-ce52213cf103")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+		)
+	)
+	(pad "S" smd roundrect
+		(at -1.4 0.975)
+		(size 0.55 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "4354abb9-a6d1-4727-8ab9-8bb1dd076cca")
+	)
+	(pad "G" smd roundrect
+		(at -1.4 0.325)
+		(size 0.55 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "9fd6ffb5-7273-4c73-bc18-13e394b1bdf7")
+	)
+	(pad "S" smd roundrect
+		(at -1.4 -0.325)
+		(size 0.55 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "066c94e2-8d82-49a4-9708-68569ea50ea2")
+	)
+	(pad "S" smd roundrect
+		(at -1.4 -0.975)
+		(size 0.55 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "162a1096-89af-4fb7-94ab-4d724aa53990")
+	)
+	(pad "D" smd roundrect
+		(at 1.4 -0.975)
+		(size 0.55 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "5201b0f9-3518-408e-9b59-04fd3b87dd3c")
+	)
+	(pad "D" smd roundrect
+		(at 1.4 -0.325)
+		(size 0.55 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "72d7f885-56d7-4032-bb30-fd57132781e7")
+	)
+	(pad "D" smd roundrect
+		(at 1.4 0.325)
+		(size 0.55 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "43efce8f-1e92-4e82-a4b8-d151370e4d9a")
+	)
+	(pad "D" smd roundrect
+		(at 1.4 0.975)
+		(size 0.55 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "1b119212-66e1-4e57-b43c-eaa901db0871")
+	)
+	(embedded_fonts no)
+)

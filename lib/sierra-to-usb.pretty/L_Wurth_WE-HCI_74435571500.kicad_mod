@@ -1,0 +1,222 @@
+(footprint "L_Wurth_WE-HCI_74435571500"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Wurth Elektronik 74435571500, WE-HCI SMT High Current shielded flat-wire power inductor, 15uH +/-20%, IR=14A / IRP=14.1A, RDC=9mOhm typ, size/type 1890 (18.2x18.3x8.9mm). Used as the PoE flyback transformer's primary-side (or output) power inductor. Body and recommended land pattern dimensions taken directly from the Wurth Elektronik datasheet (order code 74435571500), page 1 mechanical drawing.")
+	(tags "inductor L WE-HCI Wurth 74435571500 15uH PoE flyback")
+	(property "Reference" "REF**"
+		(at 0 -10.65 0)
+		(layer "F.SilkS")
+		(uuid "fe4c1b8e-bed0-49cd-9a81-a62b9cc29f47")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "L_Wurth_WE-HCI_74435571500"
+		(at 0 10.65 0)
+		(layer "F.Fab")
+		(uuid "0f7c40fd-b975-4635-a561-f0aede72f88b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.we-online.com/components/products/datasheet/74435571500.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ccbebbe6-0482-41e4-bf3a-7d03e8e01493")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "WE-HCI SMT High Current Power Inductor, 15uH +/-20%, 14A rated current, 9mOhm DCR. PoE flyback power inductor (L1). Wurth Elektronik order code 74435571500, size/type 1890. Body 18.2 x 18.3 x 8.9mm, land-pattern pads 6.0 x 6.0mm at 13.3mm pitch, per manufacturer datasheet page 1 (Dimensions / Recommended Land Pattern drawings), https://www.we-online.com/components/products/datasheet/74435571500.pdf."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c01d9f3e-f7bd-4716-91fc-75b7ef489f36")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -9.1 -9.15)
+		(end -9.1 9.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4caa2163-014d-4ebb-8cb6-b656c41ddf69")
+	)
+	(fp_line
+		(start 9.1 -9.15)
+		(end 9.1 9.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dd1bb0f6-b7d4-4334-b4d2-b914c74c247f")
+	)
+	(fp_line
+		(start -9.1 -9.15)
+		(end -3.0 -9.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "92bc12ab-6bd4-4f3b-8da9-dbdbcaa999ba")
+	)
+	(fp_line
+		(start 3.0 -9.15)
+		(end 9.1 -9.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c922201f-ffd6-4415-921d-fabf20f92bfb")
+	)
+	(fp_line
+		(start -9.1 9.15)
+		(end -3.0 9.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "488adb38-fdfb-4a4f-85e3-581273ffdaa6")
+	)
+	(fp_line
+		(start 3.0 9.15)
+		(end 9.1 9.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "25aba515-261b-4227-b880-e27fcdbb00c1")
+	)
+	(fp_line
+		(start -9.6 -10.15)
+		(end 9.6 -10.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "835a4db2-dd10-4169-9d3b-8200b2c513c0")
+	)
+	(fp_line
+		(start 9.6 -10.15)
+		(end 9.6 10.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f91091a0-0aa6-4a27-bff5-db563e6a6d6b")
+	)
+	(fp_line
+		(start 9.6 10.15)
+		(end -9.6 10.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "faea35cb-8ab8-419b-8cd0-a2476ba9c3dc")
+	)
+	(fp_line
+		(start -9.6 10.15)
+		(end -9.6 -10.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a5eb164d-56e6-4273-8be8-1b1925181ecf")
+	)
+	(fp_line
+		(start -9.1 -9.15)
+		(end 9.1 -9.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c65fda05-a9c6-498b-a4ee-f908a94fff9a")
+	)
+	(fp_line
+		(start 9.1 -9.15)
+		(end 9.1 9.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2a6fcce1-2645-4fff-8979-7b5d6ff2472a")
+	)
+	(fp_line
+		(start 9.1 9.15)
+		(end -9.1 9.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3c99fdad-950e-49b7-a0c8-52a68dada89d")
+	)
+	(fp_line
+		(start -9.1 9.15)
+		(end -9.1 -9.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f0c965db-1c7d-4d49-9d60-1655f4fe7ed6")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "4ef93530-d1b8-4abb-a5cf-73de2f19b19f")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.2)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 0 -6.65)
+		(size 6.0 6.0)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "267f717a-6f3c-43a0-9b3f-47f3d39bdc06")
+	)
+	(pad "2" smd rect
+		(at 0 6.65)
+		(size 6.0 6.0)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bce59756-0310-42b7-a755-0b659fd7640f")
+	)
+	(embedded_fonts no)
+)
