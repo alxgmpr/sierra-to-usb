@@ -634,7 +634,7 @@
 			)
 		)
 	)
-	(gr_text "EP-VIA: hand-solder thermal-via pads to add under these exposed-pad parts during layout:\n  U2 (CH224K), U10 (TPS23730RMTR), U13/U14 (INA226 x2),\n  Q20 (FDMS86250), Q22/Q23 (BSC057N08NS3 x2, sync-rect FETs)"
+	(gr_text "EP-VIA: hand-solder thermal-via pads to add under these exposed-pad parts during layout:\n  U2 (CH224K), U10 (TPS23730RMTR),\n  Q20 (FDMS86250), Q22/Q23 (BSC057N08NS3 x2, sync-rect FETs)\n  (U13/U14 INA226 corrected Task-15 import-fix: true VSSOP-10 DGS package\n  has no exposed pad -- MSOP-10_3x3mm_P0.5mm, EP-VIA removed)"
 		(at 5 20 0)
 		(layer "Cmts.User")
 		(uuid "7052f15a-82bc-4f9f-9171-7c2ae078a9ae")

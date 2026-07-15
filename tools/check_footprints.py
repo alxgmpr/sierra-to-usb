@@ -16,6 +16,17 @@ Checks (Task 14 gate, mirrors check_nets.py's role for connectivity):
      binds pads to pins by exact pin-number-string equality) would still
      fail to bind one or more pins, e.g. a letter-numbered symbol (D/G/S)
      bound to a numerically-padded real-world footprint (1/2/3...).
+  5. (Task 15 import-mismatch fix) REVERSE pad coverage: every footprint PAD
+     NUMBER must have a matching symbol pin, i.e. the mirror image of #4.
+     This is the direction #4 cannot catch -- a symbol with FEWER distinct
+     pin numbers than the footprint has pads (e.g. one symbol pin
+     representing 3 physically-separate-but-electrically-tied footprint
+     pads) leaves the extra pads with no home, and KiCad's "Update PCB from
+     Schematic" reports them as orphaned/unconnected pads on import even
+     though the symbol/footprint pair passes #3 and #4 cleanly. Any pad
+     legitimately left unmapped (true no-connect pins, mechanical/thermal
+     pads with no defined signal) must be listed in REVERSE_ALLOWLIST below
+     with a documented reason -- silent gaps are a failure.
 
 Usage: uv run tools/check_footprints.py [--sch sierra-to-usb.kicad_sch]
 Exit 0 = all assertions pass. Prints each failure.
@@ -97,6 +108,35 @@ def build_ref_libsource(root: ET.Element):
     return out
 
 
+# Task 15 reverse-check allowlist: (ref, pad_number) -> documented reason.
+# Every entry here is a footprint pad KiCad's "Update PCB from Schematic"
+# will legitimately leave unbound (no symbol pin claims it) -- verified
+# against the real manufacturer datasheet/mechanical drawing, not guessed.
+REVERSE_ALLOWLIST = {
+    ("U22", "1"): (
+        "TL431IDBVR, TI TL431/TL432 datasheet SLVS543S (rev. May 2024) "
+        "Sec.5 pin diagram + Table 5-1: DBV (SOT-23-5) package pin 1 is "
+        "NC (No internal connection) for the TL431x pinout -- there is no "
+        "electrode to bind."
+    ),
+    ("U22", "2"): (
+        "TL431IDBVR, same source: DBV package pin 2 is marked with a dagger "
+        "footnote 'Pin 2 is attached to Substrate and must be connected to "
+        "ANODE or left open.' Left open here (no netlist connection was "
+        "added -- see Task 15 import-mismatch report for the net-to-"
+        "electrode proof); a legitimate no-connect per TI's own datasheet, "
+        "not a binding defect."
+    ),
+    ("U30", "9"): (
+        "ST4SIM-200M (VFDFPN8_MFF2 custom footprint): pad 9 is the center "
+        "exposed thermal/die-attach pad. Per the footprint's own descr "
+        "field (sourced from ConnectedYou MFF2 Packaging spec v1.1 cross-"
+        "checked against ST DB4082 Fig.12/Table 4), this pad 'carries no "
+        "defined signal in either numbering scheme' -- mechanical/thermal "
+        "only, correctly left off the 8-pin symbol."
+    ),
+}
+
 PAD_RE = re.compile(r'\(pad\s+"([^"]*)"')
 
 
@@ -130,6 +170,7 @@ def main():
     ref_libsource = build_ref_libsource(netlist_root)
 
     failures = []
+    used_allowlist_keys = set()
 
     for row in bom:
         ref = row["Reference"]
@@ -186,6 +227,37 @@ def main():
                     f"matching pad in footprint '{fp}' (pads: "
                     f"{','.join(sorted(pad_set, key=lambda s: (len(s), s)))})"
                 )
+
+        # Reverse pad coverage (Task 15 import-mismatch fix, item 5): every
+        # footprint PAD must have a matching symbol pin, unless explicitly
+        # allowlisted above with a documented reason. This is what actually
+        # reproduces "Update PCB from Schematic"'s orphaned-pad warnings --
+        # #4 above only proves every symbol pin has a home, not the reverse.
+        pin_num_set = {num for num, _ in pin_numbers.get(libsrc, [])}
+        for pad_num in sorted(pad_set - pin_num_set, key=lambda s: (len(s), s)):
+            key = (ref, pad_num)
+            reason = REVERSE_ALLOWLIST.get(key)
+            if reason is None:
+                failures.append(
+                    f"{ref}: footprint '{fp}' pad {pad_num} has no matching "
+                    f"symbol pin ({libsrc} pins: "
+                    f"{','.join(sorted(pin_num_set, key=lambda s: (len(s), s)))}) "
+                    f"-- not in REVERSE_ALLOWLIST"
+                )
+            else:
+                used_allowlist_keys.add(key)
+
+    # Every allowlist entry must actually have been exercised by the current
+    # BOM/footprint state, otherwise it's a stale waiver silently masking a
+    # regression (e.g. a footprint swap that removes the pad it was excusing,
+    # or a ref that no longer exists).
+    for key in REVERSE_ALLOWLIST:
+        if key not in used_allowlist_keys:
+            failures.append(
+                f"REVERSE_ALLOWLIST entry {key} is stale -- no longer "
+                f"matches an actual unmapped pad; remove it or investigate "
+                f"why the pad it excused disappeared"
+            )
 
     print(f"{len(bom)} BOM rows checked")
     if failures:
