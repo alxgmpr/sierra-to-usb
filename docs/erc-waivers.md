@@ -718,8 +718,9 @@ to resolve them. Task 14 closes all of them in one pass:
    `D_MBS-4` (bridge rectifier), `L_Wurth_WE-HCI_74435571500`/
    `_744325550` (PoE flyback inductors L1/L2), `TPS23730_RMTR`, `FDMC2523P`,
    `DIP-4_SMD_GullWing_FOD817`, `LED_SK6805-EC15_1.5x1.5mm`,
-   `Transformer_SMT_WE750313355`, and `USB_C_Receptacle_HRO_TYPE-C-31-M-17_Full24P`
-   (see CRITICAL finding below).
+   `Transformer_SMT_WE750313355`, and `USB_C_Receptacle_HRO_TYPE-C-31-M-04`
+   (see CRITICAL finding below — J1's MPN itself was corrected, not just
+   its footprint).
 3. Rewrote every bare/stale `Footprint` string (115 old-style no-library-prefix
    names + 3 empty + several wrong-library-prefix bugs found along the way,
    e.g. `Diode_SMB:D_SMB`→`Diode_SMD:D_SMB`, `Button_Switch_THT:SW_SPDT_PCM12`
@@ -733,15 +734,30 @@ categories (`endpoint_off_grid` 629, `pin_to_pin` 10, `lib_symbol_mismatch`
 10, `multiple_net_names` 2, `isolated_pin_label` 1) are all pre-existing,
 untouched by this task, and already carry their own waiver rows above.
 
-**CRITICAL finding, not silently fixed:** while binding J1's footprint, the
-stock `Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-17.kicad_mod` file
-that Task 7 assumed was J1's exact match (name-matched the MPN) turned out
-to expose only **6 real signal pads** (`A5/A9/A12/B5/B9/B12`) plus shield —
-nowhere near enough for J1's 24-pin full-featured USB3 SuperSpeed symbol
-(25 pins incl. shield: both SS differential pairs, CC1/CC2, SBU1/SBU2, D+/D-,
-GND/VBUS). `check_footprints.py` caught this via its pad-count-vs-pin-count
-assertion. Replaced with a project-authored `USB_C_Receptacle_HRO_TYPE-C-31-M-17_Full24P`
-footprint — see `task-14-report.md` for the pad table, dimension source, and
-confidence caveats. Flagged here per the Global Constraints disclosure rule:
-this was a real, silent-until-now defect from an earlier task, not introduced
-by Task 14.
+**CRITICAL finding, fixed (MPN-level, not just footprint-level):** while
+binding J1's footprint, the stock `Connector_USB:USB_C_Receptacle_HRO_
+TYPE-C-31-M-17.kicad_mod` file that Task 7 assumed was J1's exact match
+(name-matched the MPN) turned out to expose only **6 real pads**
+(`A5/A9/A12/B5/B9/B12`, i.e. CC1/CC2/VBUS/GND) plus shield.
+`check_footprints.py` caught this via its pad-count-vs-pin-count assertion.
+Investigating further (fetching HRO's own manufacturer datasheet, not just
+trusting the KiCad footprint filename) found the mismatch is **not a
+footprint-binding bug — the MPN itself is wrong**: HRO TYPE-C-31-M-17
+(LCSC C283540) is titled "DETECTOR SWITCHS" in its own datasheet and is
+genuinely a 6-pin CC/VBUS/GND-only receptacle with no D+/D-, no SBU, and no
+SuperSpeed pairs — it physically cannot carry the USB3 data J1 is wired
+for, and never matched the 24-pin `USB_C_Receptacle_USB3.2_24P` symbol.
+**Re-pinned J1 to HRO TYPE-C-31-M-04 (LCSC C129018)**, the genuine
+24-pin/full-featured part in the same HRO family, whose datasheet pin table
+matches the project symbol pin-for-pin. Schematic Value/MPN/LCSC/Datasheet
+properties updated; footprint authored as `sierra-to-usb:
+USB_C_Receptacle_HRO_TYPE-C-31-M-04` (pad pitch/width from M-04's own
+datasheet; row separation/pad length/shield geometry approximated from
+generic USB-C 24-pin SMD convention — flagged for confirmation against a
+real drawing/physical part before fab). See `task-14-report.md` for the
+full pad table and `docs/sourcing.md`'s §2 J1 row for the sourcing-side
+correction. Flagged here per the Global Constraints disclosure rule: this
+was a real, silent-until-now MPN-selection defect from Task 7, not
+introduced by Task 14 — caught only because this task's pin-count
+verification forced a genuine datasheet check instead of trusting a
+name-matched stock footprint filename.

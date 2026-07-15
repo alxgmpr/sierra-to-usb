@@ -352,17 +352,27 @@ Assembly=JLC). Reclassified HAND, sourced via DigiKey/Mouser/ST per the
 sourcing doc's own recommendation. This is sourcing.md overriding the
 task's own shorthand, not a new judgment call.
 
-**Two CRITICAL findings surfaced by this task's pin-count verification,
-neither fixed here (both would touch symbol/connectivity plumbing beyond
-footprint-assignment scope, and both are pre-existing from earlier tasks,
-not introduced now):**
+**Two CRITICAL findings surfaced by this task's pin-count verification:**
 
-1. **J1's stock footprint was wrong.** `Connector_USB:USB_C_Receptacle_
-   HRO_TYPE-C-31-M-17.kicad_mod` (assumed correct at Task 7 by name match)
-   only exposes 6 real signal pads — nowhere near enough for J1's 24-pin
-   full-featured USB3 symbol. Replaced with a project-authored full-pinout
-   footprint this task (see `task-14-report.md`); flagged in
-   `docs/erc-waivers.md` under "Task 14" with full detail.
+1. **J1 was pinned to the wrong MPN entirely (fixed this task).** Task 7
+   assumed HRO TYPE-C-31-M-17 (LCSC C283540) was J1's 24-pin full-featured
+   USB3 part because its name matched a stock KiCad footprint filename.
+   That stock footprint only exposes 6 pads; chasing *why* (rather than
+   just authoring a 24-pad footprint to match the symbol) found HRO's own
+   datasheet titles TYPE-C-31-M-17 a "DETECTOR SWITCHS" — a genuine 6-pin
+   CC/VBUS/GND-only receptacle with no D+/D-, no SBU, no SuperSpeed pairs.
+   It could never have carried J1's USB3 data regardless of footprint.
+   **Corrected the MPN itself** to HRO TYPE-C-31-M-04 (LCSC C129018), the
+   real 24-pin part in the same family (pin table confirmed matching the
+   project's `USB_C_Receptacle_USB3.2_24P` symbol pin-for-pin against its
+   own datasheet) — updated `docs/sourcing.md`, J1's schematic Value/MPN/
+   LCSC/Datasheet fields, and authored a matching footprint
+   (`sierra-to-usb:USB_C_Receptacle_HRO_TYPE-C-31-M-04`, pad pitch/width
+   from M-04's datasheet, row spacing/shield geometry approximated from
+   generic USB-C convention — flag for confirmation before fab). Full
+   detail in `docs/erc-waivers.md` under "Task 14" and `task-14-report.md`.
+   This is a connector MPN/BOM correction (text + a new footprint file),
+   not a schematic connectivity change — `check_nets.py` unaffected.
 2. **8 discrete FET/BJT references use the generic stock `Device:Q_NMOS`/
    `Q_PMOS`/`Q_NPN` symbols, whose pin *numbers* are letters (`D`/`G`/`S` or
    `B`/`C`/`E`), while every real-world footprint's pads are numbered `1`/
