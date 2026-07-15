@@ -348,7 +348,7 @@ NET MUX_USB2_SEL PINS>=3
 - Consumes every `*_CTL`, sense, `MUX_USB2_SEL`, `SIM_SEL`, `RTL_RST_N`, `I2C_*`, `VMON_*`, `USB2_MCU_DP/DM`, `USB_DBG_DP/DM`, `LED_EN`.
 - Produces: the committed GPIO map below (firmware plan consumes it verbatim).
 
-**GPIO map (spec §7.2, 26/30):** GP0/1 I2C_SDA/SCL · GP2/3 PIO-USB `USB2_MCU_DP/DM` (adjacent, required by pico-pio-usb) · GP4 FCPO_CTL · GP5 PCIE_DIS_CTL · GP6 WDIS_CTL · GP7 MRST_CTL · GP8 VBUSSNS_CTL · GP9 LED_EN_CTL · GP10 MUX_USB2_SEL · GP11 SIM_SEL · GP12 RTL_RST_N · GP13 UIM2_DET_CTL · GP14 RGB_DI · GP15 FAN_PWM · GP16 WWAN_LED_N (in) · GP17 WAKE_N (in) · GP18 PERST_N (in) · GP19 CLKREQ_N (in) · GP20–23 DIP0–3 · GP24/25/spares → J18 · GP26 VMON_12V · GP27 VMON_3V3 · GP28 VMON_1V8 · GP29 spare-ADC→J18.
+**GPIO map (spec §7.2, 26/30):** GP0/1 I2C_SDA/SCL · GP2/3 PIO-USB `USB2_MCU_DP/DM` (adjacent, required by pico-pio-usb) · GP4 FCPO_CTL · GP5 PCIE_DIS_CTL · GP6 WDIS_CTL · GP7 MRST_CTL · GP8 VBUSSNS_CTL · GP9 LED_EN_CTL · GP10 MUX_USB2_SEL · GP11 SIM_SEL · GP12 RTL_RST_N · GP13 UIM2_DET_CTL · GP14 RGB_DI · GP15 FAN_PWM · GP16 WWAN_LED_N (in) · GP17 WAKE_N (in) · GP18 PERST_N (in) · GP19 CLKREQ_N (in) · GP20–23 DIP0–3 · GP24/25 spares → J18 · GP26 VMON_12V · GP27 VMON_3V3 · GP28 VMON_1V8 · GP29 POE_STATUS (ADC3, divided PoE status node — assigned 2026-07-15 after POE_STATUS re-plan).
 
 - [ ] **Step 1: Failing checks:**
 
