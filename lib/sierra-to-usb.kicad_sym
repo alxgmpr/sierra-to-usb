@@ -13,7 +13,7 @@
 		(property "Footprint" "Package_DFN_QFN:QFN-45-1EP_7x5mm_P0.4mm_EP3.6x3.4mm" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps23730.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Description" "IEEE802.3bt PoE PD interface plus active-clamp forward DC/DC controller, VQFN-45" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "ki_keywords" "PoE PD TPS23730 flyback forward" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "PoE PD TPS23730 forward" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(symbol "TPS23730_0_1"
 			(rectangle (start -18.32 62.96) (end 18.32 -57.879999999999974)
 				(stroke (width 0.254) (type default)) (fill (type background))
@@ -59,19 +59,19 @@
 			(pin power_in line
 				(at -20.32 30.48000000000001 0)
 				(length 5.08)
-				(name "RTN1" (effects (font (size 1.016 1.016))))
+				(name "RTN" (effects (font (size 1.016 1.016))))
 				(number "7" (effects (font (size 1.016 1.016))))
 			)
 			(pin power_in line
 				(at -20.32 25.400000000000013 0)
 				(length 5.08)
-				(name "RTN2" (effects (font (size 1.016 1.016))))
+				(name "RTN" (effects (font (size 1.016 1.016))))
 				(number "8" (effects (font (size 1.016 1.016))))
 			)
 			(pin power_in line
 				(at -20.32 20.320000000000014 0)
 				(length 5.08)
-				(name "RTN3" (effects (font (size 1.016 1.016))))
+				(name "RTN" (effects (font (size 1.016 1.016))))
 				(number "9" (effects (font (size 1.016 1.016))))
 			)
 			(pin passive line
@@ -179,13 +179,13 @@
 			(pin power_in line
 				(at 20.32 50.800000000000004 180)
 				(length 5.08)
-				(name "VSS1" (effects (font (size 1.016 1.016))))
+				(name "VSS" (effects (font (size 1.016 1.016))))
 				(number "27" (effects (font (size 1.016 1.016))))
 			)
 			(pin power_in line
 				(at 20.32 45.720000000000006 180)
 				(length 5.08)
-				(name "VSS2" (effects (font (size 1.016 1.016))))
+				(name "VSS" (effects (font (size 1.016 1.016))))
 				(number "28" (effects (font (size 1.016 1.016))))
 			)
 			(pin passive line
@@ -278,7 +278,7 @@
 				(name "GATE" (effects (font (size 1.016 1.016))))
 				(number "43" (effects (font (size 1.016 1.016))))
 			)
-			(pin passive line
+			(pin output line
 				(at 20.32 -35.55999999999998 180)
 				(length 5.08)
 				(name "CP" (effects (font (size 1.016 1.016))))
@@ -417,7 +417,7 @@
 		(property "Value" "750313355" (at 0 -17.5 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Transformer_SMT_XFRMR_29MM08_23MM1" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/750313355.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Description" "WE-PoE++ SMT PoE flyback/forward transformer, EFD20, N1:N2:N3=2:1:1" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "WE-PoE++ SMT PoE forward-converter transformer, EFD20, N1:N2:N3=2:1:1" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "ki_keywords" "transformer PoE TPS23730EVM-093" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(symbol "WE750313355_0_1"
 			(rectangle (start -10.7 17.240000000000002) (end 10.7 -17.240000000000002)
@@ -496,6 +496,82 @@
 				(length 3.81)
 				(name "N2.2" (effects (font (size 1.016 1.016))))
 				(number "12" (effects (font (size 1.016 1.016))))
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "SMAJ13A"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D" (at 0 -15 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "SMAJ13A" (at 0 -17.5 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "Diode_SMB:D_SMB" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/SMAJ.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "Unidirectional TVS 13V standoff, SMA. Pin 1 = cathode (protected rail), pin 2 = anode." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "TVS unidirectional" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(symbol "SMAJ13A_0_1"
+			(polyline
+				(pts (xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27))
+				(stroke (width 0.254) (type default)) (fill (type outline))
+			)
+			(polyline
+				(pts (xy -0.508 1.905) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -2.032 -1.905))
+				(stroke (width 0.254) (type default)) (fill (type none))
+			)
+		)
+		(symbol "SMAJ13A_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K" (effects (font (size 1.016 1.016))))
+				(number "1" (effects (font (size 1.016 1.016))))
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A" (effects (font (size 1.016 1.016))))
+				(number "2" (effects (font (size 1.016 1.016))))
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "SMAJ58A"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D" (at 0 -15 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "SMAJ58A" (at 0 -17.5 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "Diode_SMB:D_SMB" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/SMAJ.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "Unidirectional TVS 58V standoff, SMA. Pin 1 = cathode (protected rail), pin 2 = anode." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "TVS unidirectional PoE" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(symbol "SMAJ58A_0_1"
+			(polyline
+				(pts (xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27))
+				(stroke (width 0.254) (type default)) (fill (type outline))
+			)
+			(polyline
+				(pts (xy -0.508 1.905) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -2.032 -1.905))
+				(stroke (width 0.254) (type default)) (fill (type none))
+			)
+		)
+		(symbol "SMAJ58A_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K" (effects (font (size 1.016 1.016))))
+				(number "1" (effects (font (size 1.016 1.016))))
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A" (effects (font (size 1.016 1.016))))
+				(number "2" (effects (font (size 1.016 1.016))))
 			)
 		)
 		(embedded_fonts no)
