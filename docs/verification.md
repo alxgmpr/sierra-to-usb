@@ -188,3 +188,86 @@ This item concerns PCB stackup trace geometry (JLC7628 4-layer, 90 Ω USB/USB2, 
 - Item 4 (RM551E) is honestly reported BLOCKED after a real search effort (not rubber-stamped) — no hardware design doc is publicly available for this still-engineering-sample module.
 - Item 8 is explicitly scoped out as non-blocking for schematic capture rather than silently skipped.
 - The TPS23730EVM-093 schematic pages were viewed as rendered images to try to pin down the CLSA/CLSB resistor designators precisely; resolution was insufficient to read the tiny reference designators with certainty, so that specific sub-claim (which BOM line is CLSB) is reported as "inconclusive" rather than guessed.
+
+---
+
+# Task 13 audit — full-schematic spec-against-netlist walk
+
+**Audited 2026-07-15.** Method: single flat netlist export (`kicad-cli sch export
+netlist --format kicadxml`) as ground truth; every row below derived from that
+export (component/pin/net dumps), plus one full `kicad-cli sch erc` run and
+`uv run tools/check_nets.py`. Approved amendments (task briefs/reports 4–12)
+supersede spec text where they differ; only NEW drift is flagged. Full detail
+in `.superpowers/sdd/task-13-report.md`.
+
+## Check table
+
+| # | Check | Result | Evidence (from flat netlist) |
+|---|-------|--------|------------------------------|
+| 1a | §7.1 pin 6 FCPO_N: 100 k→3V3 default-ON, OD FET | **PASS** | `FCPO_N` = {CN1.6, Q1.D, R51.2(100k→`+3V3`), TP1}; Q1.G=`FCPO_CTL`+R52 100k→GND |
+| 1b | §7.1 pin 20 PCIE_DIS: 10 k→1V8 only, OD FET | **PASS** | `PCIE_DIS` = {CN1.20, Q2.D, R53.2(10k→`+1V8`), TP2}; no member can exceed 1.8 V (Q2 2N7002 OD to GND; TP passive) |
+| 1c | §7.1 pin 22 VBUS_SENSE: divider + 1V8 force path | **PASS** | `VBUS_SENSE` = {CN1.22, R59.2(33k 1%←`VBUS_DATA`), R60.1(18k 1%→GND) ⇒ 5 V×18/51≈1.76 V, R61.2(330Ω←Q32.D), TP5}; force = Q5 2N7002 (G=`VBUSSNS_CTL`/GP8) pulls Q32(DMG3415U, S=`+1V8`) gate low vs R68 100k→`+1V8` — per approved amendment; no 5 V path exists |
+| 1d | §7.1 pin 8 W_DISABLE1#: 10 k→1V8, OD FET | **PASS** | `W_DISABLE1_N` = {CN1.8, Q3.D, R55.2(10k→`+1V8`), TP3} |
+| 1e | §7.1 pin 67 RESET#: pull-up, OD FET | **PASS** | `MODEM_RESET_N` = {CN1.67, Q4.D, R57.2(10k→`+1V8`), TP4} |
+| 1f | §7.1 pin 10 WWAN_LED#: LED + sense | **PASS** | `WWAN_LED_N` = {CN1.10, D19.K, U24.GPIO16}; D19.A→R67 1k→`LED_PWR` (kill rail) |
+| 1g | §7.1 pin 23 WAKE#: pull-up + sense | **PASS** | `WAKE_N` = {CN1.23, R63.2(100k→`+1V8`), TP6, U24.GPIO17} (but see FINDING F2 on sense levels) |
+| 2a | §4 VCC = pins 2/4/70/72/74 only on `+3V3_MOD` | **PASS** | `+3V3_MOD` CN1 members exactly {2,4,70,72,74}; no other CN1 pin on any 3V3 rail |
+| 2b | §4 pins 24/38/68 via default-open jumpers only | **PASS** | CN1.24=`M2_VCC_JP1`={CN1.24,JP1.1}; CN1.38=`M2_VCC_JP2`={CN1.38,JP2.1}; CN1.68=`M2_VCC_JP3`={CN1.68,JP3.1}; JP1-3 pin B all →`+3V3_MOD` (jumper strictly in series, 2-pin nets) |
+| 2c | §4 bulk at M.2 VCC (amended 3×470 µF) | **PASS** | C44-C46 470uF + C47-C52 10uF ×6 + C53-C57 0.1uF ×5, all on `+3V3_MOD` |
+| 2d | Blank-MCU defaults (all strap/select pulls) | **PASS** | gate/select pulls: R52/R54/R56/R58/R62 100k→GND (all strap FETs off ⇒ pin6 high, pin20 high@1.8 V, pin8 high, pin67 high); R72 100k→GND on `MUX_USB2_SEL` (S=L⇒1D=data port, polarity verified Task 8); R116 100k→GND on `SIM_SEL` (IN=L⇒NC=physical slot 2); R119 100k→GND on `UIM2_DET_CTL` (Q39 off); R84 10k→`+3V3_MCU` on `LED_EN_CTL` ⇒ Q35 on ⇒ Q33 gate low ⇒ LEDs ON; R102 10k→GND on `RTL_RST_N` (RTL8125 isolated); R87 100k→GND on `FAN_PWM` (fan off) |
+| 3a | §3 USB3 chain J1→U1→CN1, caps on 35/37 leg only | **PASS** | J1 SS pairs→D20/D21(flow-through)→U1.14-21 (conn side); U1.9/10(RX)→C58/C59 220nF→`SS_MOD_TX_C_P/N`→D22→CN1.37/35; CN1.31/29→`SS_MOD_RX_P/N`→D22→U1.6/7(TX), **no caps** — matches approved role-corrected amendment |
+| 3b | §3 USB2 chain, default = data | **PASS** | J1.A6/B6+A7/B7→`USB2_CON_DP/DM`→D23→U8.1/2(1D); U8.8/7(D)→CN1.7/9; U8.3/4(2D)→U24.GPIO2/3 (PIO-USB); R72 default selects 1D |
+| 3c | §3 PCIe chain cap ownership | **PASS** | CN1.41/43(`PCIE_MTX_N/P`)→U9.42/41 HSIN/HSIP direct (no carrier caps — module-internal); U9.38/39 HSOP/HSON→C83/C84 220nF→CN1.49/47; REFCLK CN1.55/53→U9.44/45; PERST/CLKREQ/PEWAKE via Q36/Q37/Q38 BSS138 (G=`+1V8`) to `N_*_3V3` w/ R93-95→`+3V3_ETH` per approved amendment |
+| 3d | §3 PoE chain | **PASS** | J8 VC12/VC36/VC45/VC78→BR1/BR2→`POE_VDD54`/`POE_VSS` (D7 SMAJ58A); U10 TPS23730 (RCLSA=R7=32Ω, RCLSB=R8=32Ω→`POE_VSS`, Class 4 per amendment); `POE_VSS`≠`POE_RTN` split present; T1 750313355 primary `POE_VDD54_F`/`N_SW`, secondary→sync rect (Q22/Q23, S=GND ⇒ secondary GND = board GND)→L1→`+12V_POE`→U21 LM5050→`+12V`←U19 LM5050←`VBUS_PD`; D16 PoE LED on `+12V_POE` (unkillable, accepted) |
+| 3e | §3 SIM chain | **PASS** | UIM1: CN1.30/32/34/36/66→D27 TPD4S009+22pF→SIM1. UIM2: CN1.40-48→U29 TS3A27518E COM1-5; NC throws=`UIM2S_*`→D28+SIM2 (physical slot 2 = default); NO throws=`UIM2E_*`→U30 eSIM; `UIM2E_DET`={U29.NO5} float-only (present-by-float, no DET pull-ups anywhere: R114/R115/R118 absent); Q39.D on `UIM2_DET` = force-absent; U29 ch6 NC/NO grounded |
+| 3f | INA226 insertions (amendment) | **PASS** | U13: IN+=`+12V`, IN−/VBUS=`+12V_BUCK` across R39 2 mΩ; U14: IN+=`+3V3`, IN−/VBUS=`+3V3_MOD` across R44 2 mΩ; both on `I2C_SDA/SCL` w/ U24.GPIO0/1, R80/R81 pulls, U26/U27 TMP112, J5 Qwiic |
+| 4 | Cross-sheet net integrity (global labels) | **PASS** | all 85 distinct global labels have ≥2 members in the flat netlist; only single-pin net project-wide = `UIM2E_DET` (documented intended-float waiver, `NET UIM2E_DET PINS>=1` locked in netchecks); 92 `unconnected-*` stubs all NC-flagged (0 ERC pin_not_connected) |
+| 5 | ERC | **PASS** | 0 errors / 788 warnings; category breakdown 622 endpoint_off_grid + 144 footprint_link_issues + 9 lib_symbol_mismatch + 1 isolated_pin_label + 2 multiple_net_names + 10 pin_to_pin — matches `docs/erc-waivers.md` Task-12 accounting exactly, no stale waiver rows found |
+| 6 | `uv run tools/check_nets.py` | **PASS** | `all checks pass` (690-line accumulated file), exit 0 |
+| 7 | Refdes uniqueness + annotation | **PASS** | 357 unique refs, 0 duplicates in flat netlist; netlist export emits no annotation warnings (3 consecutive runs) |
+| 8 | BOM sanity | **PASS** (w/ Task-14 scope count) | every one of 357 symbols has a non-empty Value; footprint status for Task 14: 3 symbols with **empty** Footprint field (J2, J3, J8) + 144 symbols whose Footprint string doesn't resolve against a registered library (ERC footprint_link_issues item list) ⇒ **147 symbols** in Task 14 binding scope; remaining 210 resolve against stock libs |
+
+## FINDINGS (electrical — reported, deliberately NOT fixed here)
+
+- **F1 (CRITICAL — power): U3 TPS565201 can never be enabled as drawn.**
+  Datasheet (TI, `tps565201.pdf` §6.5 Electrical Characteristics): VENH (EN
+  high-level input voltage) **min 1.6 V**; REN (internal EN pull-down)
+  **120–400 kΩ**. As built (`BUCK_EN` = {R40.2, R41.1, U3.EN}; R40 = 1.00 MΩ
+  from `+12V`, R41 = 100 kΩ to GND): VEN(12 V) = 12 × (100k‖REN)/(1M + 100k‖REN)
+  = **0.66–0.90 V** — below VENH under all tolerances (worst case ≤ VENL 0.8 V,
+  i.e. guaranteed OFF). `+3V3` (hence `+3V3_MOD`, `+1V8`, module, everything)
+  never starts. Origin is the plan/Task-5 brief's own "1 MΩ + 100 k (starts
+  ≥~8 V)" arithmetic, which assumed neither the 1.6 V VENH nor the internal
+  REN; spec §4's "EN via 1 MΩ from the 12V node (starts ≥~8 V)" is equally
+  unachievable (even with R41 removed, worst-case REN=120k gives 1.29 V at
+  12 V). Needs a redesigned EN network (e.g. ~100k/39k ⇒ 2.7–3.1 V at 12 V,
+  start ≈6–7 V) chosen against the desired UVLO point.
+- **F2 (MEDIUM — sense levels): GP17/GP18/GP19 read 1.8 V-domain highs on a
+  3.3 V-IOVDD RP2040.** `WAKE_N`, `PERST_N`, `CLKREQ_N` are pulled to `+1V8`
+  (R63 100k, R64/R65 10k) and sensed directly by U24 GPIO17/18/19; RP2040
+  VIH = 0.65×IOVDD ≈ 2.1 V at 3.3 V, so a 1.8 V high is in the undefined
+  region. Task 10 confirmed this exact problem for the RTL8125 side and
+  level-shifted it (Q36-38) but the RP2040 side stayed on the 1.8 V nets.
+  Enabling RP2040 internal pull-ups (~50k to 3.3 V) rescues `WAKE_N` (100k
+  external ⇒ ~2.8 V) but not PERST/CLKREQ (10k external ⇒ ~2.0-2.1 V,
+  marginal at best, and back-biases the 1.8 V rail slightly). Options: sense
+  the existing 3.3 V-side nets `N_PERST_3V3`/`N_CLKREQ_3V3` instead (already
+  have R93/R94 pull-ups, though to `+3V3_ETH` which is down in Sierra
+  profile), add two more BSS138 stages, or document firmware/margin
+  acceptance. (GP16/`WWAN_LED_N` is NOT affected — no external pull; the
+  internal-pull-up mitigation note is already on-sheet per Task 9.)
+- **F3 (MINOR — functional gap vs spec §4/§10): no PD-good LED and no
+  12V-node LED exist anywhere.** Spec §10 lists four hardwired indicators;
+  only WWAN (D19) and PoE-active (D16) were captured. `CH224K_PG` is a
+  dead-end net = {U2.10, R4 10k→`+3V3`} — pulled up but read by nothing and
+  lighting nothing (the Task-4 brief itself specified only the pull-up).
+  Decide: add the two LEDs on `LED_PWR`, route PG to a spare GPIO (J7 has
+  GP24/GP25), or amend spec §10.
+
+## Spec text updates needed (approved amendments the spec doesn't reflect — no NEW drift)
+
+1. §4 "EN via 1 MΩ from the 12V node (starts ≥~8 V)" — arithmetically impossible against TPS565201 VENH/REN (see F1); rewrite once F1's fix is chosen.
+2. §6 "PERST# … RP2040 sense. CLKREQ#(52)/PEWAKE#(54): OD + pull-ups, RP2040 sense" — per the approved Task-9 GPIO map, PEWAKE# has **no** RP2040 GPIO (pull-up + BSS138 to U9 LANWAKEB only); only PERST (GP18) and CLKREQ (GP19) are sensed.
+3. §6 "module TX 41/43 → AC caps → RTL8125BG RX" — already flagged by Item 2 above; as-built (correctly) has no carrier caps on that leg; caps (C83/C84, 220 nF) sit on the RTL8125-TX→module-RX leg only.
+4. §5/§12/§7.2 residual refdes/net names (U6→U24 RP2040, U7→U25 flash, Q6 LED-kill→Q33/Q35, `LED_EN`→`LED_EN_CTL`, magjack J4→J8, RF J5-J14→J9-J18, TPS565201-era "580 kHz Eco" note vs §6's own +3V3_ETH correction) — all covered by approved amendments; a consolidation pass on the spec would help Task 14+.
+5. §10 hardwired-LED list — pending the F3 decision.
