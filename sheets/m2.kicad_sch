@@ -2848,6 +2848,321 @@
 			)
 			(embedded_fonts no)
 		)
+	(symbol "Transistor_FET:BSS138"
+				(pin_names
+					(offset 0)
+					(hide yes)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "Q"
+					(at 5.08 1.905 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify left)
+					)
+				)
+				(property "Value" "BSS138"
+					(at 5.08 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify left)
+					)
+				)
+				(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+					(at 5.08 -1.905 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(italic yes)
+						)
+						(justify left)
+					)
+				)
+				(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/4150e64aba6a4527a5b33f9c08ea7327.pdf?productCode=C8490"
+					(at 5.08 -3.81 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify left)
+					)
+				)
+				(property "Description" "BSS138 N-MOSFET SOT-23, Vgs(th) 0.5-1.5V max (verified LRC LBSS138LT1G datasheet) -- low-threshold level-shift FET, gate drivable from +1V8 rail. Sourced: LRC LBSS138LT1G, LCSC C8490 (98,000 stock, $0.0227@1, live-checked 2026-07-15)"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_keywords" "N-Channel MOSFET BSS138 level shift"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_fp_filters" "SOT?23*"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "BSS138_0_1"
+					(polyline
+						(pts
+							(xy 0.254 1.905) (xy 0.254 -1.905)
+						)
+						(stroke
+							(width 0.254)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy 0.254 0) (xy -2.54 0)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy 0.762 2.286) (xy 0.762 1.27)
+						)
+						(stroke
+							(width 0.254)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy 0.762 0.508) (xy 0.762 -0.508)
+						)
+						(stroke
+							(width 0.254)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy 0.762 -1.27) (xy 0.762 -2.286)
+						)
+						(stroke
+							(width 0.254)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type outline)
+						)
+					)
+					(circle
+						(center 1.651 0)
+						(radius 2.794)
+						(stroke
+							(width 0.254)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy 2.54 2.54) (xy 2.54 1.778)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(circle
+						(center 2.54 1.778)
+						(radius 0.254)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type outline)
+						)
+					)
+					(circle
+						(center 2.54 -1.778)
+						(radius 0.254)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type outline)
+						)
+					)
+					(polyline
+						(pts
+							(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy 2.921 0.381) (xy 3.683 0.381)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+				)
+				(symbol "BSS138_1_1"
+					(pin input line
+						(at -5.08 0 0)
+						(length 2.54)
+						(name "G"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 2.54 -5.08 90)
+						(length 2.54)
+						(name "S"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "2"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 2.54 5.08 270)
+						(length 2.54)
+						(name "D"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "3"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+	)
 		(symbol "sierra-to-usb:DMG3415U"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4443,6 +4758,57 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:BSS138")
+		(at 320 265 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d17273bd-1974-42ae-ad70-d7cd8477412e")
+		(property "Reference" "Q40" (at 317 262 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "BSS138" (at 317 268 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 320 265 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/4150e64aba6a4527a5b33f9c08ea7327.pdf?productCode=C8490" (at 320 265 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "abe1891c-7582-4b7c-9958-c15300ec157d"))
+		(pin "2" (uuid "ea6f63cc-22b8-4886-beb4-cf4d1b3ac876"))
+		(pin "3" (uuid "f1f74ff7-d276-47ac-8a7d-5152e94672f5"))
+		(instances
+			(project "sierra-to-usb"
+				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541/73117a4a-deaa-4ee3-9b76-9f9d022b6743"
+					(reference "Q40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 340 259.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4aa6761e-da18-47fe-a735-5237b4c4be65")
+		(property "Reference" "R122" (at 342 256.92 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "4.7k" (at 342 262.92 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 340 259.92 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "" (at 340 259.92 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(pin "1" (uuid "d7383002-90da-4588-9818-76cd58d4506a"))
+		(pin "2" (uuid "05eabfa0-3346-40be-8e93-36d1a4e698a0"))
+		(instances
+			(project "sierra-to-usb"
+				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541/73117a4a-deaa-4ee3-9b76-9f9d022b6743"
+					(reference "R122")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 275 85 0)
 		(unit 1)
@@ -5786,6 +6152,41 @@
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "836cfebd-144f-4a47-809f-039e87812af4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 230.0 274.0 0) (effects (font (size 1.27 1.27))))
+	)
+	(global_label "+1V8"
+		(shape input)
+		(at 314.92 265.0 0)
+		(effects (font (size 1.016 1.016)) (justify left bottom))
+		(uuid "8ea90106-c5e3-4b9d-baf0-46b4e1da4c79")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 314.92 265.0 0) (effects (font (size 1.27 1.27))))
+	)
+	(global_label "WAKE_N"
+		(shape input)
+		(at 322.54 270.08 0)
+		(effects (font (size 1.016 1.016)) (justify left bottom))
+		(uuid "f9f41cbc-03e4-4262-a578-39fe91e6f279")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 322.54 270.08 0) (effects (font (size 1.27 1.27))))
+	)
+	(global_label "WAKE_3V3"
+		(shape input)
+		(at 322.54 259.92 0)
+		(effects (font (size 1.016 1.016)) (justify left bottom))
+		(uuid "c2181771-e4a4-4884-a68c-ee5de54422a0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 322.54 259.92 0) (effects (font (size 1.27 1.27))))
+	)
+	(global_label "WAKE_3V3"
+		(shape input)
+		(at 340.0 257.38 0)
+		(effects (font (size 1.016 1.016)) (justify left bottom))
+		(uuid "d91227db-fb08-4168-bce4-d73c04770c5f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 340.0 257.38 0) (effects (font (size 1.27 1.27))))
+	)
+	(global_label "+3V3"
+		(shape input)
+		(at 340.0 262.46 0)
+		(effects (font (size 1.016 1.016)) (justify left bottom))
+		(uuid "732576d1-8f41-4891-bcb4-870432fcd1fe")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 340.0 262.46 0) (effects (font (size 1.27 1.27))))
 	)
 	(global_label "PERST_N"
 		(shape input)

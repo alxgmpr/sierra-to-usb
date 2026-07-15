@@ -4946,15 +4946,19 @@
 		(uuid "55f25b33-cb3e-4a72-b4b6-c2032b198b06")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 32.54 35.08 0) (effects (font (size 1.27 1.27))))
 	)
-	(label "N_PERST_3V3"
+	(global_label "N_PERST_3V3"
+		(shape input)
 		(at 32.54 24.92 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "a6b0d1f3-352b-4746-903d-7fa220486fc0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 32.54 24.92 0) (effects (font (size 1.27 1.27))))
 	)
-	(label "N_PERST_3V3"
+	(global_label "N_PERST_3V3"
+		(shape input)
 		(at 50 22.38 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "d311eeb3-03a5-4843-aa3a-9eb0076bc15b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 50 22.38 0) (effects (font (size 1.27 1.27))))
 	)
 	(global_label "+3V3_ETH"
 		(shape input)
@@ -4977,15 +4981,19 @@
 		(uuid "61fbaeed-879d-4878-ac20-775da26259ed")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 32.54 55.08 0) (effects (font (size 1.27 1.27))))
 	)
-	(label "N_CLKREQ_3V3"
+	(global_label "N_CLKREQ_3V3"
+		(shape input)
 		(at 32.54 44.92 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "cf38d566-c6f6-42a1-ae7b-4e840ad03c2b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 32.54 44.92 0) (effects (font (size 1.27 1.27))))
 	)
-	(label "N_CLKREQ_3V3"
+	(global_label "N_CLKREQ_3V3"
+		(shape input)
 		(at 50 42.38 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "54e51841-0f98-4a04-8cf2-8fc621ebff8d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 50 42.38 0) (effects (font (size 1.27 1.27))))
 	)
 	(global_label "+3V3_ETH"
 		(shape input)
@@ -5025,15 +5033,19 @@
 		(uuid "db888a03-6678-4974-abb6-2170bd03728a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 50 67.46 0) (effects (font (size 1.27 1.27))))
 	)
-	(label "N_PERST_3V3"
+	(global_label "N_PERST_3V3"
+		(shape input)
 		(at 124.92 131.27 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "a314f573-a061-44a3-9351-0d33787a87a2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 124.92 131.27 0) (effects (font (size 1.27 1.27))))
 	)
-	(label "N_CLKREQ_3V3"
+	(global_label "N_CLKREQ_3V3"
+		(shape input)
 		(at 124.92 133.81 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "86eef7a4-2953-421f-834f-13b29371f818")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 124.92 133.81 0) (effects (font (size 1.27 1.27))))
 	)
 	(label "N_PEWAKE_3V3"
 		(at 124.92 138.89 0)

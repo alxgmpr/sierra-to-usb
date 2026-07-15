@@ -294,9 +294,9 @@ U24.pinfn:GPIO13 = UIM2_DET_CTL
 U24.pinfn:GPIO14 = RGB_DI
 U24.pinfn:GPIO15 = FAN_PWM
 U24.pinfn:GPIO16 = WWAN_LED_N
-U24.pinfn:GPIO17 = WAKE_N
-U24.pinfn:GPIO18 = PERST_N
-U24.pinfn:GPIO19 = CLKREQ_N
+U24.pinfn:GPIO17 = WAKE_3V3
+U24.pinfn:GPIO18 = N_PERST_3V3
+U24.pinfn:GPIO19 = N_CLKREQ_3V3
 U24.pinfn:GPIO20 = DIP0
 U24.pinfn:GPIO21 = DIP1
 U24.pinfn:GPIO22 = DIP2
@@ -688,3 +688,35 @@ J15.2 = GND
 J16.2 = GND
 J17.2 = GND
 J18.2 = GND
+
+# Task 13 audit fix pass
+# F1 (power_rails): BUCK_EN divider re-derived against TPS565201 VENH/VENL/REN
+# datasheet corners -- see task-13-report.md Fix pass for the four-corner math.
+# Connectivity unchanged (R40/R41 topology same), only Values changed, so no
+# new NET/pinfn assertions needed here beyond the existing U3.pinfn:EN=BUCK_EN
+# line above.
+#
+# F2 (mcu retarget + m2 new shifter): GP18/GP19 moved from the 1.8V-domain
+# PERST_N/CLKREQ_N nets to the ethernet sheet's existing 3.3V-domain shifter
+# outputs (now promoted label->global_label so they're visible cross-sheet).
+# GP17 gets a brand-new BSS138 shifter (Q40/R122, m2 sheet, mirrors Task 10's
+# Q36-38 pattern) since WAKE_N (CN1.23) had none.
+NET N_PERST_3V3 PINS>=4
+NET N_CLKREQ_3V3 PINS>=4
+NET WAKE_3V3 PINS>=3
+Q40.pinfn:G = +1V8
+Q40.pinfn:S = WAKE_N
+Q40.pinfn:D = WAKE_3V3
+R122.1 = WAKE_3V3
+R122.2 = +3V3
+
+# F3 (power_input): spec S10 LEDs, missing since Task 4 dropped them.
+D29.pinfn:A = N_D29_A
+D29.pinfn:K = GND
+R120.1 = LED_PWR
+R120.2 = N_D29_A
+D30.pinfn:A = N_D30_A
+D30.pinfn:K = CH224K_PG
+R121.1 = LED_PWR
+R121.2 = N_D30_A
+NET LED_PWR PINS>=4

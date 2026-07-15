@@ -7198,21 +7198,21 @@
 		(uuid "14393871-9565-4f18-8a8c-0d8ed2a289fd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 175.4 102.54 0) (effects (font (size 1.27 1.27))))
 	)
-	(global_label "WAKE_N"
+	(global_label "WAKE_3V3"
 		(shape input)
 		(at 175.4 105.08 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "c52b4666-07da-4d48-81db-aab691bc70cf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 175.4 105.08 0) (effects (font (size 1.27 1.27))))
 	)
-	(global_label "PERST_N"
+	(global_label "N_PERST_3V3"
 		(shape input)
 		(at 175.4 107.62 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "324651b3-41d7-4167-ac34-97cab63e5a4e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 175.4 107.62 0) (effects (font (size 1.27 1.27))))
 	)
-	(global_label "CLKREQ_N"
+	(global_label "N_CLKREQ_3V3"
 		(shape input)
 		(at 175.4 110.16 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))

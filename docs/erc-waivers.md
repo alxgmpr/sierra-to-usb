@@ -641,3 +641,60 @@ erc` (0 errors). Same class of silent-connectivity risk task-11-report.md's
 "Bug found during development" section and this document's existing
 `endpoint_off_grid` rows both describe, caught here before commit rather
 than after.
+
+## Task 13 Fix pass (F1/F2/F3, 2026-07-15)
+
+**0 errors / 788 warnings** to **0 errors / 800 warnings** (+12, no new
+category). Six new placed parts (`Q40`/`R122` on m2; `D29`/`R120`/`D30`/`R121`
+on power_input) plus a `power:GND` tie for `D29`; `R40`/`R41` values changed
+only (no new pins); six `label`→`global_label` promotions on ethernet
+(`N_PERST_3V3`/`N_CLKREQ_3V3` x3 each, needed so mcu's retargeted GP18/GP19
+can reach them cross-sheet); three mcu `global_label` renames (text only,
+same coordinates). Breakdown: `endpoint_off_grid` 622→629 (**+7** — same
+script-authored, label/symbol-at-exact-pin-coordinate idiom as every other
+row in this category; new coincidence points for Q40/R122's 5 pins plus
+D29/R120/D30/R121's 4 net-label points, verified electrically correct via
+direct `kicad-cli sch export netlist` pin-to-net dump, not just ERC, table
+in task-13-report.md Fix pass), `footprint_link_issues` 144→148 (**+4** —
+one per new placed symbol without a resolved footprint yet: `Q40`
+(`Package_TO_SOT_SMD:SOT-23`, matches Q36-38's existing waived footprint
+string exactly), `D29`/`D30` (`LED_0603`, matches D16's existing waived
+footprint string), `R120`/`R121`/`R122` use `R_0603`/
+`Resistor_SMD:R_0603_1608Metric` which are already-registered stock
+footprints — so only 4 of the 6 new parts land in this category; same Task
+14 deferral as every earlier row), `lib_symbol_mismatch` 9→10 (**+1** — the
+`Transistor_FET:BSS138` copy newly embedded in m2's `lib_symbols` (for
+`Q40`) is a byte-for-byte copy of the one already embedded and waived on the
+ethernet sheet (Task 10, `Q36`-`38`); same stock-vs-cached structural diff,
+same resolution), `isolated_pin_label` 1→1 (+0, untouched — `UIM2E_DET`
+unaffected), `multiple_net_names` 2→2 (+0, untouched), `pin_to_pin` 10→10
+(+0, untouched).
+
+**F1 (power_rails):** `R40`/`R41` values only (`1.00M`/`100k` →
+`36.5k`/`9.31k`); topology, pin count, and net membership on `BUCK_EN`
+unchanged, so this fix contributes zero ERC delta on its own.
+
+**F2 (mcu/ethernet/m2):** confirmed via direct `kicad-cli sch export
+netlist --format kicadxml` pin-to-net dump: `N_PERST_3V3` = {`Q36.3`,
+`R93.1`, `U24.29`(`GPIO18`), `U9.36`(`PERSTB`)}, `N_CLKREQ_3V3` = {`Q37.3`,
+`R94.1`, `U24.30`(`GPIO19`), `U9.48`(`CLKREQB`)}, `WAKE_3V3` = {`Q40.3`,
+`R122.1`, `U24.28`(`GPIO17`)} — all three RP2040 GPIOs now land in the
+3.3V domain alongside the signals they're reading. `PERST_N`/`CLKREQ_N`/
+`WAKE_N` (1.8V side) unchanged: `CN1`/`R6x`/`TPx`/`Q3x`.S membership intact.
+
+**F3 (power_input):** confirmed via the same netlist dump: `D29.2`(`A`) =
+`N_D29_A` = `R120.2`, `R120.1` = `LED_PWR`, `D29.1`(`K`) = `GND`;
+`D30.2`(`A`) = `N_D30_A` = `R121.2`, `R121.1` = `LED_PWR`, `D30.1`(`K`) =
+`CH224K_PG` (now shared with `R4.2`'s existing 10k pull-up to `+3V3` — no
+conflict, see task-13-report.md Fix pass for the current-budget check).
+`LED_PWR` net grew from 4 to 6 members (`+2`, both new `R120.1`/`R121.1`
+taps), still comfortably above the `NET LED_PWR PINS>=4` lock in
+`tools/netchecks.txt`.
+
+Zero `pin_not_connected` ERC errors and zero unannotated references
+project-wide after this pass (`kicad-cli sch export netlist` ran clean with
+no "annotation errors" warning on the final iteration — an earlier iteration
+of this fix pass hit that exact warning from a `#PWR` reference collision
+introduced while adding `D29`'s ground tie, root-caused and fixed by
+picking a refdes not already in use anywhere in the flat hierarchy, not just
+on the local sheet; see task-13-report.md Fix pass for the full story).

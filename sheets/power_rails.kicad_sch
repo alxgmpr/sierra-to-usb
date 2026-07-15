@@ -1562,7 +1562,7 @@
 		(fields_autoplaced yes)
 		(uuid "8fe24f82-ca32-4991-8c8f-55a7644e0cef")
 		(property "Reference" "R40" (at 97 27 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "1.00M" (at 97 33 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "36.5k" (at 97 33 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "R_0603" (at 95 30 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "" (at 95 30 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(pin "1"
@@ -1591,7 +1591,7 @@
 		(fields_autoplaced yes)
 		(uuid "a55d5c8b-e74b-441d-8e30-fdbda5a8c50e")
 		(property "Reference" "R41" (at 97 42 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "100k" (at 97 48 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "9.31k" (at 97 48 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "R_0603" (at 95 45 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "" (at 95 45 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(pin "1"
@@ -3552,6 +3552,12 @@
 		(effects (font (size 1.27 1.27)) (justify left bottom))
 		(uuid "803ead0f-abce-49d8-a339-5b3185b11b4b")
 	)
+		(text "Task 13 audit fix (F1, CRITICAL): the original R40=1.00M/R41=100k BUCK_EN divider could never reach TPS565201's VENH (datasheet SLVSE71 Sept-2017 S6.5: VENH min=1.6V, VENL max=0.8V, REN(EN pin pulldown)=120-400k min/typ/max) -- worst case VEN(12V)=0.66-0.90V, always below VENL, buck permanently disabled. A plain 2-resistor divider CANNOT hold VEN below VENL at 5.5V (pre-negotiation VBUS margin) while also clearing VENH+10% at 11V (post-negotiation floor) simultaneously -- proven by exhaustive E96 search (0 solutions) and algebraically (required gain VENH/VENL=2.00x exactly equals the 11V/5.5V=2.00x Vin ratio, leaving zero margin for both corners at once). Resolution: EN is the hysteretic UVLO comparator TI's own datasheet graphs name it (S6.6 Fig.3/4 EN Pin UVLO Low/High Voltage) -- the 12V node ramps monotonically from 0V through both test points, so only VENH (the rising threshold) gates turn-on; VENL only matters for a falling edge, which never occurs during power-up. Redesigned R40=36.5k (+12V side, E96), R41=9.31k (GND side, E96) so REN barely perturbs the divider. Four corners (worst-case REN each way): VEN(11V,REN=120k)=2.105V (+31.6% over VENH) -- reliable start; VEN(5.5V,REN=400k)=1.097V (-31.4% under VENH; separately it is above the datasheet's VENL=0.8V but never having crossed VENH on the way up, so per UVLO-latch behavior the buck stays off) -- no false start pre-negotiation. Worst-case actual turn-on crossover (REN=120k, VEN=VENH exactly): Vin=8.36V, matching spec's ~7-8V target closely. Full arithmetic in task-13-report.md Fix pass."
+			(exclude_from_sim no)
+			(at 20 235 0)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+			(uuid "f1b2c3d4-5e6f-4789-a012-b3c4d5e6f7a8")
+		)
 	(sheet_instances
 		(path "/"
 			(page "3")
