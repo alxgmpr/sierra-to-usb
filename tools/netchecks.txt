@@ -319,7 +319,10 @@ U27.pinfn:ADD0 = +3V3_MCU
 
 # mcu -- LED-kill rail-to-rail gate network (review Fix 2, supersedes the
 # amendment-1 resistive-mixing design outright; R83 removed, R84 repurposed
-# 10k->100k, new Q35 2N7002 added; full truth table + arithmetic in
+# as Q35's gate pull-up (stays 10k -- NOT 100k: RP2040 pads reset with the
+# internal pull-down ~50-80k enabled, and 100k would divide the blank-MCU
+# gate into the 2N7002's Vgs(th) band; 10k gives 2.75-2.93V, re-review
+# regression fix), new Q35 2N7002 added; full truth table + arithmetic in
 # task-9-report.md "Fix pass" section). GP9/LED_EN_CTL polarity is now
 # ACTIVE-LOW kill (was active-HIGH before this fix).
 Q33.pinfn:S = +3V3

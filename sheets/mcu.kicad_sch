@@ -5861,7 +5861,7 @@
 		(fields_autoplaced yes)
 		(uuid "16606dd4-b37e-46e7-a2b8-3eac3b8f0230")
 		(property "Reference" "R84" (at 227 172 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "100k" (at 227 178 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "10.0k" (at 227 178 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 225 175 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "" (at 225 175 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(pin "1" (uuid "de4f7276-533e-409c-9af7-c757f983440a"))
@@ -7494,7 +7494,7 @@
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "b2c3d4e5-2222-4b3c-8d4e-5f6071829304")
 	)
-	(text "LED-kill gate logic (rail-to-rail rebuild, review-pass Fix 2): Q33 (DMG3415U-7, P-FET) gate node N_LEDKILL_GATE has a 100k pull-up (R82) to +3V3 (default-OFF contribution) and SW2's common leg. SW2 throw A -> N_SW2_KILL -> Q35 (2N7002) drain; Q35 source=GND; Q35 gate=LED_EN_CTL with a 100k pull-up (R84) to +3V3_MCU -- so blank-MCU/hi-Z GP9 = Q35 ON. SW2 throw C = no-connect (OFF position).\nTruth table: SW2-ON + GP9 hi-Z/high -> Q35 ON -> N_SW2_KILL~0V -> gate~0V, Vgs=-3.3V -> LEDs ON (blank-MCU default). SW2-OFF -> gate=3.3V via R82 regardless of GP9/Q35 -> Q33 OFF (hardware wins). SW2-ON + GP9 driven LOW -> Q35 OFF -> SW2 branch open -> gate=3.3V via R82 -> Q33 OFF (firmware kill). All three states are rail-to-rail (no resistive-divider margin) -- see task-9-report.md Fix-pass section for arithmetic.\nLED_EN_CTL polarity note: GP9 is now an ACTIVE-LOW kill line (driving LOW forces LEDs off through Q35); hi-Z/floating = LEDs on by default. This is the OPPOSITE polarity of the prior resistive-mixing design's GP9-HIGH-kills convention -- firmware must be updated."
+	(text "LED-kill gate logic (rail-to-rail rebuild, review-pass Fix 2): Q33 (DMG3415U-7, P-FET) gate node N_LEDKILL_GATE has a 100k pull-up (R82) to +3V3 (default-OFF contribution) and SW2's common leg. SW2 throw A -> N_SW2_KILL -> Q35 (2N7002) drain; Q35 source=GND; Q35 gate=LED_EN_CTL with a 10k pull-up (R84) to +3V3_MCU -- so blank-MCU/hi-Z GP9 = Q35 ON. R84 is 10k (NOT 100k): RP2040 pads reset with the internal pull-DOWN enabled (~50-80k), so a 100k pull-up would divide LED_EN_CTL to ~1.10-1.47V, inside the 2N7002's Vgs(th) band; 10k keeps the blank-MCU gate at 3.3*50/60=2.75V to 3.3*80/90=2.93V, above the 2.5V worst-case threshold. SW2 throw C = no-connect (OFF position).\nTruth table: SW2-ON + GP9 hi-Z/high -> Q35 ON -> N_SW2_KILL~0V -> gate~0V, Vgs=-3.3V -> LEDs ON (blank-MCU default). SW2-OFF -> gate=3.3V via R82 regardless of GP9/Q35 -> Q33 OFF (hardware wins). SW2-ON + GP9 driven LOW -> Q35 OFF -> SW2 branch open -> gate=3.3V via R82 -> Q33 OFF (firmware kill). All Q33 gate states are rail-to-rail (no resistive-divider margin) -- see task-9-report.md Fix-pass section for arithmetic.\nLED_EN_CTL polarity note: GP9 is now an ACTIVE-LOW kill line (driving LOW forces LEDs off through Q35); hi-Z/floating = LEDs on by default. This is the OPPOSITE polarity of the prior resistive-mixing design's GP9-HIGH-kills convention -- firmware must be updated."
 		(at 200 195 0)
 		(effects (font (size 1.27 1.27)))
 		(uuid "b83b8bb3-a73b-4a35-8da4-aebf5997bbca")
