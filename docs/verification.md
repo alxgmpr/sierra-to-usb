@@ -271,3 +271,50 @@ in `.superpowers/sdd/task-13-report.md`.
 3. §6 "module TX 41/43 → AC caps → RTL8125BG RX" — already flagged by Item 2 above; as-built (correctly) has no carrier caps on that leg; caps (C83/C84, 220 nF) sit on the RTL8125-TX→module-RX leg only.
 4. §5/§12/§7.2 residual refdes/net names (U6→U24 RP2040, U7→U25 flash, Q6 LED-kill→Q33/Q35, `LED_EN`→`LED_EN_CTL`, magjack J4→J8, RF J5-J14→J9-J18, TPS565201-era "580 kHz Eco" note vs §6's own +3V3_ETH correction) — all covered by approved amendments; a consolidation pass on the spec would help Task 14+.
 5. §10 hardwired-LED list — pending the F3 decision.
+
+## Task 13 fix-pass re-verification (2026-07-15, post-3b3ee19)
+
+Independent closure check from a fresh flat netlist export (membership diff
+old→new shows **only** the declared fix scope: R40/R41 value-only, GP17/18/19
+retargets, Q40/R122, D29/R120, D30/R121 — zero collateral changes; all 28
+audit rows above re-confirmed; 363 unique refs/0 dups; check_nets all-pass;
+ERC 0 errors / 800 warnings matching erc-waivers.md's fix-pass accounting
+category-for-category; single-pin set still exactly {`UIM2E_DET`}).
+
+- **F1 CLOSED (with one documented residual).** Four-corner arithmetic
+  independently recomputed and confirmed: ratio(REN=120k)=0.19141 ⇒
+  VEN(11 V)=2.105 V (+31.6% over VENH 1.6 V), crossover 8.36 V;
+  ratio(REN=400k)=0.19953 ⇒ VEN(5.5 V)=1.097 V, VEN(5 V)=0.998 V. The
+  2-resistor impossibility proof also checks out (required gain
+  1.76/0.72=2.44× vs divider cap 11/5.5=2.00×, further reduced by REN
+  loading). **Residual (accepted-risk wording correction):** the fix
+  report's claim that 1.097 V is "exactly the UVLO-latch stays-off region"
+  overstates the guarantee — 0.8–1.6 V is the *indeterminate* band; the
+  datasheet bounds a part's rising threshold only as ≤1.6 V (and ≥~VENL
+  0.8 V), so a worst-case part may enable at a node voltage as low as
+  ≈4.0 V, i.e. **"no false start on 5–5.5 V VBUS" is typical-expected but
+  not datasheet-guaranteed** (and provably cannot be with any 2-R divider
+  on this pin). Consequence if it happens: pre-contract boot attempt →
+  USB source current-limit/brownout loop — benign, no module-safety
+  interaction (strap domains unaffected). Guaranteeing it would need a
+  precision UVLO/comparator on EN; accepted as residual risk for this
+  personal-use board.
+- **F2 CLOSED.** `N_PERST_3V3`={Q36.D, R93.1, U24.GPIO18, U9.PERSTB},
+  `N_CLKREQ_3V3`={Q37.D, R94.1, U24.GPIO19, U9.CLKREQB}, `WAKE_3V3`=
+  {Q40.D, R122.1, U24.GPIO17}; Q40 mirrors Q36-38 exactly (G=`+1V8`,
+  S=`WAKE_N`, D=`WAKE_3V3`); R93/R94 4.7k→`+3V3_ETH` (rail is
+  always-on when +12V is up — U15 EN comes from the R112/R113 divider off
+  `+12V`, so the pull-ups are powered in every profile), R122 4.7k→`+3V3`.
+  1.8 V-side nets unchanged. All highs now ≥VIH.
+- **F3 CLOSED.** D29(green)/R120 1k: `LED_PWR`→R120→D29→GND ≈1.1 mA —
+  fine; indicates "12 V negotiated" transitively via the F1-gated `+3V3`,
+  killable per spec. D30(blue)/R121 1k: `LED_PWR`→R121→D30→`CH224K_PG`
+  (open-drain active-low, LED use per WCH datasheet). R4 10k pull-up
+  coexistence is sane: PG released ⇒ node 3.3 V ⇒ 0 V across D30 branch
+  (clean off); PG low ⇒ D30 current ≈(3.3−Vf_blue≈2.6−VOL)/1k ≈ **0.6 mA**
+  + R4's 0.33 mA ⇒ ~1 mA total PG sink, well within an OD pin.
+  *Observation (non-blocking):* 0.6 mA is dim for a blue LED — consider
+  470-680 Ω for R121 or a green part at Task-14 BOM lock.
+
+**Task 13 gate verdict: APPROVED** (Task-14 footprint scope updates to
+**151** symbols: 148 footprint_link_issues refs + J2/J3/J8 empty fields).
