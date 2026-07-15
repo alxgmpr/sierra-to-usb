@@ -69,7 +69,7 @@ missed it for `power:PWR_FLAG` specifically.
 
 | Date | Warning | Justification |
 | ---- | ------- | -------------- |
-| 2026-07-14 | (Task 6, m2) `isolated_pin_label` ×15 — global labels `PCIE_MRX_P/N`, `USB2_MOD_DP/DM`, `UIM1_DET`, `UIM1_IO`, `PCIE_REFCLK_P/N`, `UIM2_DET/IO/CLK/RST/VDD`, `WWAN_LED_N`, `LED_RET` each connect to only one pin on this sheet | **Row edited by Task 7 per its brief's explicit instruction** (was ×18, listed `SS_MOD_TX_C_P/N` and `VBUS_DATA` too — both now removed from this row, count reduced 18→15, since Task 7's `sheets/usb3_data.kicad_sch` supplies the second touch point for all three: `SS_MOD_TX_C_P/N` via C58/C59 + D22 + the module-side global labels, `VBUS_DATA` via J1/D24/U4/R69/U1.VDD5). Remaining 15 are still-open documented forward references: the matching consumer/producer lands on a future sheet (usb2_debug/Task 8, mcu/Task 9, ethernet/Task 10, sim/Task 11) per the plan's own sheet-dependency order. Clears once each producing/consuming sheet lands, same pattern as Task 4/5's forward-reference waivers. |
+| 2026-07-14 | (Task 6, m2) `isolated_pin_label` ×11 — global labels `PCIE_MRX_P/N`, `UIM1_DET`, `UIM1_IO`, `PCIE_REFCLK_P/N`, `UIM2_DET/IO/CLK/RST/VDD` each connect to only one pin on this sheet | **Row edited by Task 8 per its own housekeeping instruction** (was ×15 as edited by Task 7, listed `USB2_MOD_DP/DM` too — both now removed from this row, count reduced 15→13, since Task 8's `sheets/usb2_debug.kicad_sch` supplies the second touch point: `U8`'s common `D+`/`D-` pins (bidirectional, TS3USB221 pins 8/7) land on `USB2_MOD_DP`/`USB2_MOD_DM`, the same nets `CN1.7`/`CN1.9` already produce here). `WWAN_LED_N`/`LED_RET` were also still listed in this row's text despite being resolved by the Task 6 review fix pass (that section documented the resolution but, per the "no existing text silently rewritten" convention, left this row's enumeration stale at the time) — dropped now too, count 15→13→11 net of both corrections. Remaining 11 are still-open documented forward references: the matching consumer/producer lands on a future sheet (mcu/Task 9, ethernet/Task 10, sim/Task 11) per the plan's own sheet-dependency order. Clears once each producing/consuming sheet lands, same pattern as Task 4/5/7's forward-reference waivers. |
 | 2026-07-14 | (Task 6, m2) `footprint_link_issues` ×18 — `CN1` (`Connector_M.2`), `JP1-3` (`Jumper`), `TP1-9` (`TestPoint`), `D19` (`LED_SMD`), bulk caps (`CP_Elec_6.3x7.7`) point at libraries not yet in `fp-lib-table` | Same as the Task 4/5 rows above: footprint/library binding is Task 14. `Footprint` strings record the intended package (`Connector_M.2:M.2_Key-B-SMD` for CN1 per the LOTES APCI0105-P001A datasheet, `docs/sourcing.md` row 20) so Task 14 has the real target. |
 | 2026-07-14 | (Task 6, m2) `endpoint_off_grid` ×82 | Same cause as the Task 4/5 rows above — this sheet uses the identical script-authored, label-at-exact-pin-coordinate generator idiom. |
 
@@ -180,3 +180,58 @@ waived) — see below.
 | 2026-07-14 | (Task 7) `lib_symbol_mismatch` ×2 — `TPD4E05U06DQA` (`D23`) and a second `AP2112K-3.3` instance (`U4`) cached copies differ from the stock `Power_Protection`/`Regulator_Linear` libraries on disk | Same cause and resolution as every other row in this category: both stock symbols use `extends` (`TPD4E05U06DQA`→`TPD4EUSB30`, `AP2112K-3.3`→`AP2204K-1.5`); the generator flattens each into a standalone cache entry (own properties, base symbol's graphics/pins) so the schematic is self-contained. Electrically identical, differs only structurally — cosmetic. |
 | 2026-07-14 | (Task 7) `endpoint_off_grid` ×35 | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category. Connectivity verified via `uv run tools/check_nets.py` (all pass) and a `kicad-cli sch export netlist --format kicadxml` pin-to-net dump (SS-pair mapping table in `task-7-report.md`), not just ERC. |
 | 2026-07-14 | (Task 7) `pin_to_pin` ×2 (**new category**) — "Pins of type Bidirectional and Power output are connected": `U1` pins `RXP`/`RXN` (net `SS_MOD_RX_P`/`SS_MOD_RX_N`) tied to `#FLG19`, a `power:PWR_FLAG` on `sheets/m2.kicad_sch` | This `PWR_FLAG` was added in Task 6 specifically because `CN1.29`/`CN1.31` are `input`-typed pins with no visible driver *on the m2 sheet alone* (the module itself is invisible to ERC's connectivity model). Task 7 now supplies a real `bidirectional`-type driver on the same global net (`U1.RXP`/`RXN`, `D22`'s flow-through ESD pins) — the flag is now redundant (same situation Task 5 resolved by *removing* the equivalent redundant `+1V8`/`+3V3_MCU` flags), but removing it means editing `sheets/m2.kicad_sch`, which is outside this task's declared file scope (`sheets/usb3_data.kicad_sch` + `tools/netchecks.txt` only, per the brief). Flagged as a carry-forward cleanup for whichever task next touches `m2.kicad_sch`, not fixed here. Not an error — informational pin-type-mix warning only. |
+
+## Task 8 (usb2_debug: TS3USB221 USB2 mux + J3 debug port)
+
+`$KCLI sch erc sierra-to-usb.kicad_sch` goes from Task-7's **0 errors / 490
+warnings** to **0 errors / 512 warnings** (+22). Breakdown: `endpoint_off_grid`
+337→359 (+22, this sheet's script-authored label-at-exact-pin-coordinate
+idiom, same as every other sheet), `footprint_link_issues` 127→127 (+0 —
+`U8`→`Package_SON:Texas_S-PVSON-N10`, `D25`→`Package_SON:USON-10_2.5x1.0mm_P0.5mm`,
+`J3`→ empty `Footprint` field matching `J2`'s own stock-symbol convention,
+`R72-75`/`C63-64`→`Resistor_SMD`/`Capacitor_SMD`, `TP10`→`TestPoint:TestPoint_Pad_D1.5mm`
+all resolve against libraries already registered on this machine, same
+`Package_SON`/`Resistor_SMD`/`Capacitor_SMD` set Task 7 used plus `TestPoint`
+which m2's TP1-9 already proved resolves cleanly too), `isolated_pin_label`
+19→18 (net −1: see below), `lib_symbol_mismatch` 5→6 (+1 — `D25`'s
+`TPD4E05U06DQA` cached copy, same `extends`-flattening cosmetic cause as
+every other row in this category; reused Task 7's own already-flattened
+`D23` cache block verbatim), `pin_to_pin` 2→2 (+0, unrelated carry-forward
+from Task 7, untouched).
+
+**`isolated_pin_label` accounting (net −1, verified against a direct ERC
+JSON dump, not just the warning count):**
+- **Resolved (−3):** `VBUS_DBG` (closes a documentation gap — see below),
+  `USB2_MOD_DP`, `USB2_MOD_DM` (m2's row, edited above — `U8`'s common
+  `D+`/`D-` pins are a real second touch).
+- **New forward references (+2):** `USB2_MCU_DP`, `USB2_MCU_DM` — `U8`'s
+  port-B pins (2D+/2D-), consumed by the mcu sheet (Task 9, RP2040's own
+  USB2 PHY). Single touch on this sheet only, same documented-forward-
+  reference pattern as every other row in this file.
+- `MUX_USB2_SEL` and `USB_DBG_DP`/`USB_DBG_DM` are **not** isolated at all —
+  each has ≥3 real pins entirely within this sheet (`MUX_USB2_SEL`:
+  `U8.S`/`R72.1`/`TP10.1`; `USB_DBG_DP`/`DM`: `D25`+`J3`'s two non-coincident
+  D+/D- pin instances each) — no waiver needed for those.
+
+**`VBUS_DBG` — closing an undocumented gap, not removing a numbered row.**
+The task context flagged "a stale `VBUS_DBG` waiver row" to remove once J3's
+VBUS wiring resolves it. Audited this file plus `task-5-report.md`
+end-to-end: `VBUS_DBG` was a real, live `isolated_pin_label` warning since
+Task 5 (confirmed via ERC JSON — the live warning's `uuid` matches the
+`global_label "VBUS_DBG"` object on `sheets/power_rails.kicad_sch` at
+D17's anode exactly), but **no row in this file ever itemized it** — Task
+5's own waiver section covered only `endpoint_off_grid`/
+`footprint_link_issues`/`lib_symbol_mismatch` for that sheet and never
+called out `isolated_pin_label` (the net table in `task-5-report.md` did
+note `VBUS_DBG | not yet driven (usb2_debug sheet, future) | D17 anode`,
+but that's a report note, not a waiver-table row). This task's J3 VBUS
+wiring (4 coincident `VBUS` pins → `D25`'s... no, `J3`'s own `VBUS_DBG`
+global label, giving the net 5 total pins: `D17.2` + `J3` A4/A9/B4/B9)
+resolves the warning outright — closing the documentation gap here instead
+of editing a nonexistent row.
+
+| Date | Warning | Justification |
+| ---- | ------- | -------------- |
+| 2026-07-14 | (Task 8) `endpoint_off_grid` ×22 | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category. Connectivity verified via `uv run tools/check_nets.py` (all pass) and a direct `kicad-cli sch export netlist --format kicadxml` pin-to-net dump of all 8 USB2 nets plus `MUX_USB2_SEL`/`VBUS_DBG` (table in `task-8-report.md`). |
+| 2026-07-14 | (Task 8) `lib_symbol_mismatch` ×1 — `D25`'s `TPD4E05U06DQA` cached copy differs from the stock `Power_Protection` library on disk | Same cause and resolution as the Task 7 `D23` row above (and every other row in this category): the stock symbol uses `extends` (`TPD4E05U06DQA`→`TPD4EUSB30`); flattened into a standalone cache entry. Electrically identical, differs only structurally — cosmetic. |
+| 2026-07-14 | (Task 8) `isolated_pin_label` ×2 — global labels `USB2_MCU_DP`/`USB2_MCU_DM` (`U8` pins 3/4, TS3USB221 port B) each connect to only one pin on this sheet | Documented forward reference: Task 9 (mcu sheet) wires the RP2040's own USB2 PHY onto these nets. Same pattern as every other forward-reference row in this file; clears when Task 9 lands. |

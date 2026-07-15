@@ -203,8 +203,10 @@ NET SS_CON2_RXN PINS>=3
 # on the module side) -- so U1's RX inputs receive the module's TX output,
 # and U1's TX outputs drive the module's RX input. The 220nF caps (C58/C59)
 # are on the leg that ultimately reaches CN1 35/37 (SS_MOD_TX_C_P/N, module
-# RX input) regardless of which U1 pin number feeds it; CN1 29/31
-# (SS_MOD_RX_P/N, module TX output) stays cap-free.
+# TX output -- Task 8 housekeeping: this parenthetical was backwards, swapped
+# with the CN1 29/31 one below; SS_MOD_TX_* is what the module transmits)
+# regardless of which U1 pin number feeds it; CN1 29/31
+# (SS_MOD_RX_P/N, module RX input -- likewise corrected) stays cap-free.
 U1.pinfn:RXP = N_TXP_PRECAP
 C58.1 = N_TXP_PRECAP
 C58.2 = SS_MOD_TX_C_P
@@ -243,3 +245,10 @@ R71.2 = +3V3_MUX
 U1.pinfn:DIR = N_U1_DIR
 NET VBUS_DATA PINS>=8
 NET GND PINS>=8
+
+# usb2_debug (Task 8) -- brief Step 1 (verbatim)
+U8.pinfn:D+ = USB2_MOD_DP
+U8.pinfn:S = MUX_USB2_SEL
+J3.pinfn:VBUS = VBUS_DBG
+NET USB_DBG_DP PINS>=2
+NET MUX_USB2_SEL PINS>=3
