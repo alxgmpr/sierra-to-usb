@@ -498,3 +498,61 @@ U11.pinfn:CS = RTL_EE_CS
 U9.pinfn:EEPROM_SEL = GND
 NET LED0 PINS>=2
 NET LED1 PINS>=2
+
+# ethernet -- fix pass (2026-07-15 review rework, task-10-report.md "Fix
+# pass"). MDI polarity locked BOTH ways for all four pairs: by pin FUNCTION
+# (against wiring regressions) and by raw PIN NUMBER straight from Bel/TRP
+# drawing C=2250504 Rev1 page 2 (against symbol-authoring regressions --
+# Fix 2 was exactly that: Task 10's symbol had TRD1+/TRD1- swapped, so a
+# pinfn-only check would have passed on the broken sheet). Core supply =
+# branch B: RTL8125BGS-CG not orderable (no LCSC/authorized listing,
+# live-checked 2026-07-15) -> RTL8125BG-CG kept, U12 re-parted to
+# TLV62569DBVR sync buck (EN from POW_EXT_SWR per Realtek ref V122 p4).
+# Fix 4: dedicated +3V3_ETH forced-PWM 1.2MHz rail (TPS62933F, RT=GND)
+# per Realtek "3.3V from switching regulator must be PWM mode and
+# Freq>=1Mhz"; all U9 3.3V pins + 0.95V buck input moved onto it.
+J8.pinfn:TRD1+ = MDI0_P
+J8.pinfn:TRD1- = MDI0_N
+J8.pinfn:TRD2+ = MDI1_P
+J8.pinfn:TRD2- = MDI1_N
+J8.pinfn:TRD3+ = MDI2_P
+J8.pinfn:TRD3- = MDI2_N
+J8.pinfn:TRD4+ = MDI3_P
+J8.pinfn:TRD4- = MDI3_N
+J8.11 = MDI0_P
+J8.10 = MDI0_N
+J8.4 = MDI1_P
+J8.5 = MDI1_N
+J8.3 = MDI2_P
+J8.2 = MDI2_N
+J8.8 = MDI3_P
+J8.9 = MDI3_N
+U9.pinfn:POW_EXT_SWR = N_EXT095_EN
+U12.pinfn:EN = N_EXT095_EN
+U12.pinfn:VIN = +3V3_ETH
+U12.pinfn:SW = N_SW095
+L5.1 = N_SW095
+L5.2 = +0V95
+NET +0V95 PINS>=10
+U15.pinfn:VIN = +12V
+U15.pinfn:RT = GND
+U15.pinfn:SW = N_SW_ETH
+U15.pinfn:SS = N_ETH_SS
+L6.2 = +3V3_ETH
+NET +3V3_ETH PINS>=15
+U9.pinfn:AVDD33_PLL = N_AVDD33_PLL
+FB1.1 = +3V3_ETH
+FB1.2 = N_AVDD33_PLL
+U9.pinfn:GPI = N_GPI
+R104.2 = +3V3_ETH
+U9.pinfn:LED3 = LED3
+D10.pinfn:K = LED3
+R106.1 = LED_PWR
+R102.1 = RTL_RST_N
+U9.pinfn:CKXTAL2 = N_CKXTAL2
+R103.1 = N_CKXTAL2
+R103.2 = N_XTAL2
+J8.pinfn:SH = N_J8_SHIELD
+R107.1 = N_J8_SHIELD
+C109.1 = N_J8_SHIELD
+R105.1 = LED0

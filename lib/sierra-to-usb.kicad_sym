@@ -1323,7 +1323,7 @@
 		(property "Value" "RTL8125BG-CG" (at 0 -17.5 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_6x6mm_P0.4mm_EP4.3x4.3mm" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "https://file.elecfans.com/web2/M00/44/D8/poYBAGKHVriAHnfWADAT6T6hjVk715.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Description" "Realtek RTL8125BG-CG, 2.5GbE PCIe NIC, QFN-48-EP 6x6mm. Pin table (all 48 signal pins + EP) verified against RTL8125BG(S)-CG datasheet Rev 1.5 (leaked NDA doc, cross-checked pin-for-pin against Realtek's own published reference schematic V122 and 4 shipping Radxa boards -- see task-10-report.md Sources). PERSTB/CLKREQB/LANWAKEB are 3.3V-only (VIH min 2.0V per Table 29) -- NOT 1.8V tolerant (Realtek removed 1.8V I/O compat at Rev 1.1); level-shifted from the m2 sheet's +1V8 domain on this sheet (Q36-38)." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "Realtek RTL8125BG-CG, 2.5GbE PCIe NIC, QFN-48-EP 6x6mm. Pin table (all 48 signal pins + EP) verified against RTL8125BG(S)-CG datasheet Rev 1.5 (leaked NDA doc, cross-checked pin-for-pin against Realtek's own published reference schematic V122 and 4 shipping Radxa boards -- see task-10-report.md Sources). PERSTB/CLKREQB/LANWAKEB are 3.3V-only (VIH min 2.0V per Table 29) -- NOT 1.8V tolerant (Realtek removed 1.8V I/O compat at Rev 1.1); level-shifted from the m2 sheet's +1V8 domain on this sheet (Q36-38, BSS138). Fix pass 2026-07-15: pin 15 renamed AVDD33_PLL per reference V122 (bead-isolated PLL supply); BG (non-S) variant kept -- BGS not orderable (no LCSC/authorized listing) -- so 0.95V core comes from an external buck enabled by POW_EXT_SWR pin 6, per datasheet Table 5/Table 11 and reference page 4 'Power Module for External Core Power'. 3.3V domain fed by dedicated +3V3_ETH forced-PWM 1.2MHz buck per reference notice '3.3V from switching regulator must be PWM mode and Freq>=1Mhz'. Sourced: LCSC C3013605." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "ki_keywords" "RTL8125 2.5GbE PCIe NIC ethernet" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(symbol "RTL8125BG_0_1"
 			(rectangle (start -20 -20) (end 20 20)
@@ -1496,7 +1496,7 @@
 			(pin power_in line
 				(at -7.62 25.08 270)
 				(length 5.08)
-				(name "AVDD33" (effects (font (size 1.016 1.016))))
+				(name "AVDD33_PLL" (effects (font (size 1.016 1.016))))
 				(number "15" (effects (font (size 1.016 1.016))))
 			)
 			(pin power_in line
@@ -1638,7 +1638,7 @@
 		(property "Value" "2250504-1" (at 0 -17.5 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "https://www.belfuse.com/media/drawings/products/magjack%20ICMs/dr-mag-2250504.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Description" "Bel Fuse 2250504-1 (=Bel int. P/N 0826-1X1T-KH-F), 1x1 2.5GBASE-T 100W 4PPoE single-port MagJack ICM, THT tab-up, W/O LEDS. 16-pin + 4 shield legs (merged to 1 SH pin here) per Bel/TRP drawing C=2250504 Rev1 17APR2017. T1-T4/TRD+-/TRCT naming is Bel's own; MDI0-3 mapping to T1-T4 is a board-level assignment (Bel doc does not define it) -- see task-10-report.md. VC12/36/45/78 = PoE center taps, cable side, hot on all 4 pairs (4PPoE/Class8-style). NOTE: authoritative drawing shows NO LED pins for this exact P/N despite Bel's product-page metadata claiming LED:Yes -- see report." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "Bel Fuse 2250504-1 (=Bel int. P/N 0826-1X1T-KH-F), 1x1 2.5GBASE-T 100W 4PPoE single-port MagJack ICM, THT tab-up, W/O LEDS. 16-pin + 4 shield legs (merged to 1 SH pin here) per Bel/TRP drawing C=2250504 Rev1 17APR2017. Fix pass 2026-07-15: TRD1+/TRD1- pin assignment corrected to the drawing (TRD1+ = 11, TRD1- = 10; Task 10 had them swapped); all four pairs re-verified. Bob-Smith termination is INTERNAL to this ICM (drawing page 2: R1-R4 75 ohms + C2-C5 22nF/100V + C1 1000pF/2KV to SHIELD) -- do NOT duplicate externally. VC12/36/45/78 = PoE center taps, cable side. NOTE: authoritative drawing shows NO LED pins for this exact P/N despite Bel's product-page metadata claiming LED:Yes." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "ki_keywords" "magjack RJ45 2.5GBASE-T PoE ICM Bel" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(symbol "Bel2250504-1_0_1"
 			(rectangle (start -20 -22) (end 20 22)
@@ -1650,13 +1650,13 @@
 				(at -25.08 13.97 0)
 				(length 5.08)
 				(name "TRD1+" (effects (font (size 1.016 1.016))))
-				(number "10" (effects (font (size 1.016 1.016))))
+				(number "11" (effects (font (size 1.016 1.016))))
 			)
 			(pin passive line
 				(at -25.08 11.43 0)
 				(length 5.08)
 				(name "TRD1-" (effects (font (size 1.016 1.016))))
-				(number "11" (effects (font (size 1.016 1.016))))
+				(number "10" (effects (font (size 1.016 1.016))))
 			)
 			(pin passive line
 				(at -25.08 8.89 0)
@@ -1820,28 +1820,34 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "AP2112K-1.0"
+	(symbol "TLV62569"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U" (at 0 -15 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "AP2112K-1.0" (at 0 -17.5 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "TLV62569DBVR" (at 0 -17.5 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Description" "600mA LDO, EN pin, 0.95V-core-rail trim -- pin-compatible flatten of the stock AP2112K-1.8/-3.3 already used in this project (same VIN1/GND2/EN3/NC4/VOUT5 pinout); 1.0V not independently stock-checked like the other two SKUs in docs/sourcing.md, flagged for Task 14." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "ki_keywords" "linear regulator ldo fixed positive" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(symbol "AP2112K-1.0_0_1"
-			(rectangle (start -5.08 4.445) (end 5.08 -5.08)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/17b330e62cea45956cc310f229e6bb45.pdf?productCode=C141836" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "TI TLV62569 2A synchronous step-down converter, 2.5-5.5V in, 1.5MHz, DCS-Control (seamless PSM at light load), internal soft start 900us, SOT-23-5. Fix-1 branch-B replacement for the Task-10 AP2112K-1.0 LDO scope-addition: real >=1A sync buck for the RTL8125BG-CG external 0.95V core rail (BGS variant with internal SWR not orderable -- no LCSC/authorized-distributor listing, live-checked 2026-07-15). EN driven by RTL8125 POW_EXT_SWR pin 6 exactly as Realtek reference V122 page 4 'Power Module for External Core Power' sanctions; FB divider 59k/100k -> 0.954V (the same ratio the reference's own table gives for the RTL8125B-series 0.95V core). Sourced: LCSC C141836 (106,900 stock, $0.088@1, live-checked 2026-07-15)." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "buck converter step-down 0.95V core" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(symbol "TLV62569_0_1"
+			(rectangle (start -7.62 5.08) (end 7.62 -5.08)
 				(stroke (width 0.254) (type default)) (fill (type background))
 			)
 		)
-		(symbol "AP2112K-1.0_1_1"
+		(symbol "TLV62569_1_1"
 			(pin power_in line
-				(at -7.62 2.54 0)
+				(at -10.16 2.54 0)
 				(length 2.54)
 				(name "VIN" (effects (font (size 1.016 1.016))))
+				(number "4" (effects (font (size 1.016 1.016))))
+			)
+			(pin input line
+				(at -10.16 0 0)
+				(length 2.54)
+				(name "EN" (effects (font (size 1.016 1.016))))
 				(number "1" (effects (font (size 1.016 1.016))))
 			)
 			(pin power_in line
@@ -1850,24 +1856,86 @@
 				(name "GND" (effects (font (size 1.016 1.016))))
 				(number "2" (effects (font (size 1.016 1.016))))
 			)
-			(pin input line
-				(at -7.62 0 0)
+			(pin power_out line
+				(at 10.16 2.54 180)
 				(length 2.54)
-				(name "EN" (effects (font (size 1.016 1.016))))
+				(name "SW" (effects (font (size 1.016 1.016))))
 				(number "3" (effects (font (size 1.016 1.016))))
 			)
-			(pin no_connect line
-				(at 5.08 0 180)
+			(pin input line
+				(at 10.16 -2.54 180)
 				(length 2.54)
-				(hide yes)
-				(name "NC" (effects (font (size 1.016 1.016))))
-				(number "4" (effects (font (size 1.016 1.016))))
+				(name "FB" (effects (font (size 1.016 1.016))))
+				(number "5" (effects (font (size 1.016 1.016))))
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "TPS62933F"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U" (at 0 -15 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "TPS62933FDRLR" (at 0 -17.5 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-583-8" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/8822d9443d3405e5b17304ebbb56ac2c.pdf?productCode=C5219272" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "TI TPS62933F 3.8-30V in, 3A synchronous buck, FORCED-PWM (FCCM -- fixed switching frequency even at light load, per datasheet section 9.3.8), RT pin to GND selects 1.2MHz (min 1.0MHz per EC table) -- satisfies Realtek RTL8125B reference V122 notice: '3.3V from switching regulator must be PWM mode and Freq>=1Mhz' (main-rail TPS565201 is ~580kHz Eco pulse-skipping, non-compliant, hence this dedicated +3V3_ETH rail; Fix 4, decision trail in task-10-report.md Fix pass + docs/sourcing.md). SS pin: >=6.8nF required, 10nF -> ~1.45ms soft start. BST-SW 100nF. FB ref 0.8V, divider 31.6k/10k -> 3.328V. Candidates honestly rejected from live datasheets: TPS54308 (350kHz FCCM), SY8120B1 (500kHz), SY8120I (500kHz), SY8201 (500kHz), TPS562231 (850kHz Eco), TPS562242 (1.4MHz but Eco pulse-skip), LMR33620A/B (400kHz / auto-PFM), MT2494 (no LCSC listing), SCT2330 (400kHz PSM), RT6253B (forced PWM but 580kHz). Sourced: LCSC C5219272 (923-1,235 stock observed, $1.11@1, live-checked 2026-07-15)." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "buck converter step-down 3.3V forced PWM FCCM 1.2MHz" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(symbol "TPS62933F_0_1"
+			(rectangle (start -10.16 7.62) (end 10.16 -7.62)
+				(stroke (width 0.254) (type default)) (fill (type background))
+			)
+		)
+		(symbol "TPS62933F_1_1"
+			(pin power_in line
+				(at -12.7 5.08 0)
+				(length 2.54)
+				(name "VIN" (effects (font (size 1.016 1.016))))
+				(number "3" (effects (font (size 1.016 1.016))))
+			)
+			(pin input line
+				(at -12.7 2.54 0)
+				(length 2.54)
+				(name "EN" (effects (font (size 1.016 1.016))))
+				(number "2" (effects (font (size 1.016 1.016))))
+			)
+			(pin input line
+				(at -12.7 0 0)
+				(length 2.54)
+				(name "RT" (effects (font (size 1.016 1.016))))
+				(number "1" (effects (font (size 1.016 1.016))))
+			)
+			(pin input line
+				(at -12.7 -2.54 0)
+				(length 2.54)
+				(name "SS" (effects (font (size 1.016 1.016))))
+				(number "7" (effects (font (size 1.016 1.016))))
 			)
 			(pin power_out line
-				(at 7.62 2.54 180)
+				(at 12.7 5.08 180)
 				(length 2.54)
-				(name "VOUT" (effects (font (size 1.016 1.016))))
+				(name "SW" (effects (font (size 1.016 1.016))))
 				(number "5" (effects (font (size 1.016 1.016))))
+			)
+			(pin passive line
+				(at 12.7 2.54 180)
+				(length 2.54)
+				(name "BST" (effects (font (size 1.016 1.016))))
+				(number "6" (effects (font (size 1.016 1.016))))
+			)
+			(pin input line
+				(at 12.7 -2.54 180)
+				(length 2.54)
+				(name "FB" (effects (font (size 1.016 1.016))))
+				(number "8" (effects (font (size 1.016 1.016))))
+			)
+			(pin power_in line
+				(at 0 -10.16 90)
+				(length 2.54)
+				(name "GND" (effects (font (size 1.016 1.016))))
+				(number "4" (effects (font (size 1.016 1.016))))
 			)
 		)
 		(embedded_fonts no)

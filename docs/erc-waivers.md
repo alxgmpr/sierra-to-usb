@@ -466,4 +466,38 @@ On Latch Value Low Voltage") — `GND` wins as the canonical netlist name.
 | Date | Warning | Justification |
 | ---- | ------- | -------------- |
 | 2026-07-15 | (Task 10) `endpoint_off_grid` ×71 | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other row in this category project-wide. Connectivity verified via `uv run tools/check_nets.py` (all pass, 36 new assertions + every pre-existing line, none weakened) and a direct `kicad-cli sch export netlist --format kicadxml` pin-to-net dump for every net this task touches (tables in `task-10-report.md`). |
-| 2026-07-15 | (Task 10) `multiple_net_names` ×1 — `+3V3`/... no — `N_EEPROM_SEL`/`GND` coincident at `U9` pin 32 | Intended mechanism (same coincident-label-as-tie-off technique Task 9 established for `POE_STS_RAW`/`N_BTSTAT`), not a defect — selects 93C46 3-wire EEPROM mode per the RTL8125BG-CG datasheet's own strap table. |
+| 2026-07-15 | (Task 10) `multiple_net_names` ×1 — `N_EEPROM_SEL`/`GND` coincident at `U9` pin 32 *(row text cleaned by the Task 10 fix pass: the original row carried a mid-sentence self-correction artifact — "`+3V3`/... no —" — left over from drafting; the substance is unchanged)* | Intended mechanism (same coincident-label-as-tie-off technique Task 9 established for `POE_STS_RAW`/`N_BTSTAT`), not a defect — selects 93C46 3-wire EEPROM mode per the RTL8125BG-CG datasheet's own strap table. |
+
+## Task 10 fix pass (ethernet review rework, 2026-07-15)
+
+`$KCLI sch erc sierra-to-usb.kicad_sch` goes from Task 10's
+**0 errors / 674 warnings** to **0 errors / 707 warnings** (+33 net).
+Breakdown: `endpoint_off_grid` 522→552 (+30 — same script-authored
+label-at-exact-pin-coordinate idiom; net of −~20 removed with the external
+Bob-Smith network/TP11/LDO and +~50 added with the two buck converters,
+LED, bead, and new pull-up/-down/divider resistors), `lib_symbol_mismatch`
+6→9 (**+3, new waiver row below** — Q36-38 `Transistor_FET:BSS138`),
+`footprint_link_issues` 131→131 (+0 — verified zero items on the Ethernet
+sheet in the ERC JSON: every new footprint, incl. `SOT-583-8`,
+`LED_SMD:LED_0603_1608Metric`, `Inductor_SMD:L_1210_3225Metric`/`L_0603`,
+`C_0805`, resolves against registered libraries; TP11's TestPoint footprint
+left with it), `isolated_pin_label` 9→9 (+0 — same 9 SIM/UIM Task-11
+forward references; `RTL_RST_N` stays resolved and gains its Fix-3e 10k
+pull-down as a third touch), `multiple_net_names` 2→2 (+0 — the
+`N_EEPROM_SEL`/`GND` strap tie is kept; the Task-10 `N_J8_SHIELD`-hard-to-
+GND coincidence is *gone* — shield is now RC-tied (1M‖1nF) like J1/J2/J3 —
+but that coincidence never produced a warning row of its own),
+`pin_to_pin` 4→4 (+0, untouched pre-existing carry-forwards). No new
+category.
+
+**One ERC *error* surfaced during the fix pass and was fixed (not
+waived):** `power_pin_not_driven` on `U9` pin 15 (`AVDD33_PLL`) — the new
+ferrite bead (FB1, passive pins) isolates the PLL supply island from
+`+3V3_ETH`, so the island needs its own `PWR_FLAG` (same idiom as every
+L-C-filtered rail in KiCad). Flag added at the bead output; confirmed 0
+errors after.
+
+| Date | Warning | Justification |
+| ---- | ------- | -------------- |
+| 2026-07-15 | (Task 10 fix pass) `lib_symbol_mismatch` ×3 — `Q36`/`Q37`/`Q38` `Transistor_FET:BSS138` | The embedded BSS138 block is a field-updated clone of the project's harvested stock `Transistor_FET:2N7002` block (same G1/S2/D3 SOT-23 pinout and body; Value/Datasheet/Description updated to the LRC LBSS138LT1G sourcing facts) rather than a verbatim copy of the system-library BSS138, so ERC flags the difference against the system lib. Same benign category as the pre-existing TCMT1107/AP2112K/TPD4E05U06DQA rows (6 of them) — connectivity and pinfunction names (`G`/`S`/`D`) verified by `tools/check_nets.py` (`Q36.pinfn:S = PERST_N`, `Q36.pinfn:G = +1V8`, etc., all pass). |
+| 2026-07-15 | (Task 10 fix pass) `endpoint_off_grid` +30 net | Same waived idiom and verification as the Task 10 row above: `uv run tools/check_nets.py` all-pass (45 new fix-pass assertions incl. the eight MDI polarity pin-number locks + eight pinfn locks; zero pre-existing lines weakened) plus full netlist membership diff in `task-10-report.md` "Fix pass". |
