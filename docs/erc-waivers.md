@@ -599,3 +599,45 @@ previously bare `no_connect` flags — now ties to `GND` via two new
 TS3A27518E datasheet's unused-channel note was available to check during
 this pass, so the conservative default (ground the switch throws, leave the
 common open) was used and is disclosed here rather than assumed silently.
+
+## Task 12 — rf (5x MHF4 -> SMA breakouts, 2026-07-15)
+
+**0 errors / 758 warnings** to **0 errors / 788 warnings** (+30, no new
+category). Ten stock `Connector:Conn_Coaxial` instances placed (J9-J18: 5x
+MHF4 receptacle + 5x SMA edge jack, pin1=signal net-to-net per pair,
+pin2=shield to `GND`). Breakdown: `endpoint_off_grid` 602→622 (**+20** — this
+sheet uses the same script-authored, label/power-symbol-at-exact-pin-
+coordinate idiom as every other sheet; 4 off-grid endpoints per net row (2
+signal labels + 2 GND symbols) x 5 rows), `footprint_link_issues` 134→144
+(**+10** — one per placed `J9`-`J18` symbol; `Footprint` field records the
+intended package string per docs/sourcing.md (`MHF4_TE_CONMHF4-SMD-G-T` /
+`SMA_EdgeMount_BWSMA-KE-Z001`) since no exact-MPN stock footprint exists —
+Task 14 sources/authors the real footprints, same deferral pattern as every
+earlier sheet), `lib_symbol_mismatch` 9→9 (+0 — `Connector:Conn_Coaxial` is
+a plain standalone stock symbol, no `extends` inheritance to flatten, so it
+introduces no new mismatch; `power:GND` is likewise copied verbatim),
+`isolated_pin_label` 1→1 (+0, untouched), `multiple_net_names` 2→2 (+0,
+untouched), `pin_to_pin` 10→10 (+0, untouched).
+
+**Errors found and fixed during development (not waived):** an initial
+build placed each shield-pin (`Ext`, pin 2) `power:GND` tie using a naive
+"symbol position + pin's raw local (x,y)" formula, mirroring the formula
+already proven correct elsewhere in this project for `Device:C_Small`'s
+pins. That produced 20 `pin_not_connected` ERC *errors* (all `J9`-`J18` pin
+2 plus their intended `GND` ties) — confirmed via `kicad-cli sch export
+netlist` showing `unconnected-(J*-Ext-Pad2)` nets instead of merged `GND`
+membership. Root-caused with an isolated two-symbol test schematic
+(`Connector:Conn_Coaxial` + `power:GND` only, both sign conventions tried):
+`Connector:Conn_Coaxial`'s pin 2 (library-declared `(at 0 -5.08 90)`) needs
+its **y negated** to reach the real connection point (`symbol_y + 5.08`, not
+`symbol_y - 5.08`) — the opposite sign convention from `Device:C_Small`'s
+pins, which take their local y directly. The two stock symbols do not share
+a consistent library-Y sign convention; the safe practice going forward is
+to verify new symbol/pin combinations with an isolated connectivity test
+before trusting a transcribed offset, not to assume one part's convention
+generalizes to another. Fixed by negating pin 2's y-offset; re-verified via
+full netlist re-export (all 10 shield pins land on `GND`) and `kicad-cli sch
+erc` (0 errors). Same class of silent-connectivity risk task-11-report.md's
+"Bug found during development" section and this document's existing
+`endpoint_off_grid` rows both describe, caught here before commit rather
+than after.

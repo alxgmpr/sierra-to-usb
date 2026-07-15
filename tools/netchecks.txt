@@ -648,3 +648,43 @@ Q39.pinfn:D = UIM2_DET
 # throws, leave the common open) was used, disclosed per erc-waivers.md.
 U29.pinfn:NC6 = GND
 U29.pinfn:NO6 = GND
+
+# rf -- Task 12 Step 1 (RED). Brief's literal placeholder refdes (J5-J9 MHF4,
+# J10-J14 SMA, offset-5 pairing) collide with already-placed parts: J5=Qwiic
+# and J7=Spare (mcu.kicad_sch), J8=magjack (ethernet.kicad_sch). Corrected to
+# the next free J numbers, adjacent-pair scheme (see task-12-report.md for
+# the full remap table): J9/J10=ANT0 ... J17/J18=GNSS. First pair and last
+# pair asserted below, same shape as the brief's own check block.
+J9.1 = ANT0
+J10.1 = ANT0
+J17.1 = GNSS
+J18.1 = GNSS
+NET ANT3 PINS>=2
+
+# rf -- Step 3/4 (full wiring, appended after GREEN). Every net exactly
+# 2 signal pins (MHF4 pin1 <-> SMA pin1); every shield (pin2) on GND.
+J9.1 = ANT0
+J10.1 = ANT0
+J11.1 = ANT1
+J12.1 = ANT1
+J13.1 = ANT2
+J14.1 = ANT2
+J15.1 = ANT3
+J16.1 = ANT3
+J17.1 = GNSS
+J18.1 = GNSS
+NET ANT0 PINS>=2
+NET ANT1 PINS>=2
+NET ANT2 PINS>=2
+NET ANT3 PINS>=2
+NET GNSS PINS>=2
+J9.2 = GND
+J10.2 = GND
+J11.2 = GND
+J12.2 = GND
+J13.2 = GND
+J14.2 = GND
+J15.2 = GND
+J16.2 = GND
+J17.2 = GND
+J18.2 = GND
