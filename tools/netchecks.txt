@@ -142,3 +142,97 @@ R67.1 = LED_PWR
 R67.2 = N_LED_A
 D19.pinfn:A = N_LED_A
 D19.pinfn:K = WWAN_LED_N
+
+# usb3_data (Task 7) -- brief Step 1 (verbatim). THE verified-twice rule:
+# caps go ONLY between U1's module-side TX outputs and CN1 35/37
+# (SS_MOD_TX_C_P/N); module-TX path (CN1 29/31, SS_MOD_RX_P/N -> mux RX)
+# gets NO caps.
+NET SS_MOD_TX_C_P PINS>=2      # post-cap net exists (C->CN1.37)
+NET SS_MOD_RX_P PINS>=2        # module TX to mux -- NO caps: net goes straight D3->U1
+J1.pinfn:VBUS = VBUS_DATA
+U1.pinfn:VBUS_DET = HD_VBUSDET
+U4.pinfn:VOUT = +3V3_MUX
+
+# usb3_data -- Step 4 (full wiring, appended after GREEN). U1 straps.
+U1.pinfn:PORT = GND
+U1.pinfn:EN_MUX_N = GND
+U1.pinfn:VDD5 = VBUS_DATA
+U1.pinfn:VCC33 = +3V3_MUX
+U4.pinfn:VIN = VBUS_DATA
+U4.pinfn:GND = GND
+
+# usb3_data -- connector-side SS pairs (pair 1 = CC1 side, pair 2 = CC2
+# side), all 8 nets, mux <-> D20/D21 (TPD4EUSB30 flow-through) <-> J1.
+J1.pinfn:SSTXP1 = SS_CON1_TXP
+J1.pinfn:SSTXN1 = SS_CON1_TXN
+J1.pinfn:SSRXP1 = SS_CON1_RXP
+J1.pinfn:SSRXN1 = SS_CON1_RXN
+J1.pinfn:SSTXP2 = SS_CON2_TXP
+J1.pinfn:SSTXN2 = SS_CON2_TXN
+J1.pinfn:SSRXP2 = SS_CON2_RXP
+J1.pinfn:SSRXN2 = SS_CON2_RXN
+D20.1 = SS_CON1_TXP
+D20.2 = SS_CON1_TXN
+D20.4 = SS_CON1_RXP
+D20.5 = SS_CON1_RXN
+D21.1 = SS_CON2_TXP
+D21.2 = SS_CON2_TXN
+D21.4 = SS_CON2_RXP
+D21.5 = SS_CON2_RXN
+U1.pinfn:TX1P = SS_CON1_TXP
+U1.pinfn:TX1N = SS_CON1_TXN
+U1.pinfn:RX1P = SS_CON1_RXP
+U1.pinfn:RX1N = SS_CON1_RXN
+U1.pinfn:TX2P = SS_CON2_TXP
+U1.pinfn:TX2N = SS_CON2_TXN
+U1.pinfn:RX2P = SS_CON2_RXP
+U1.pinfn:RX2N = SS_CON2_RXN
+NET SS_CON1_TXP PINS>=3
+NET SS_CON1_TXN PINS>=3
+NET SS_CON1_RXP PINS>=3
+NET SS_CON1_RXN PINS>=3
+NET SS_CON2_TXP PINS>=3
+NET SS_CON2_TXN PINS>=3
+NET SS_CON2_RXP PINS>=3
+NET SS_CON2_RXN PINS>=3
+
+# usb3_data -- module-side SS nets: THE rule verified a 3rd time here.
+# TX path (U1 module-side TX outputs, pins 6/7) gets 220nF caps (C58/C59)
+# before D22 (module-side TPD4EUSB30) and the CN1 35/37 global labels.
+# RX path (U1 module-side RX inputs, pins 9/10) connects straight through
+# D22 to the CN1 29/31 global labels -- NO caps.
+U1.pinfn:TXP = N_TXP_PRECAP
+C58.1 = N_TXP_PRECAP
+C58.2 = SS_MOD_TX_C_P
+D22.1 = SS_MOD_TX_C_P
+U1.pinfn:TXN = N_TXN_PRECAP
+C59.1 = N_TXN_PRECAP
+C59.2 = SS_MOD_TX_C_N
+D22.2 = SS_MOD_TX_C_N
+D22.4 = SS_MOD_RX_P
+U1.pinfn:RXP = SS_MOD_RX_P
+D22.5 = SS_MOD_RX_N
+U1.pinfn:RXN = SS_MOD_RX_N
+NET SS_MOD_TX_C_N PINS>=2
+NET SS_MOD_RX_N PINS>=2
+
+# usb3_data -- CC/D+-/VBUS/shield
+J1.pinfn:CC1 = CC1_RAW
+J1.pinfn:CC2 = CC2_RAW
+U1.pinfn:CC1 = CC1_RAW
+U1.pinfn:CC2 = CC2_RAW
+D23.4 = CC1_RAW
+D23.5 = CC2_RAW
+J1.pinfn:D+ = USB2_CON_DP
+J1.pinfn:D- = USB2_CON_DM
+D23.1 = USB2_CON_DP
+D23.2 = USB2_CON_DM
+R69.1 = VBUS_DATA
+R69.2 = HD_VBUSDET
+D24.1 = VBUS_DATA
+D24.2 = GND
+R71.1 = N_U1_DIR
+R71.2 = VBUS_DATA
+U1.pinfn:DIR = N_U1_DIR
+NET VBUS_DATA PINS>=8
+NET GND PINS>=8
