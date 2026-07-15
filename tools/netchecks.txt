@@ -105,3 +105,40 @@ CN1.37 = SS_MOD_TX_C_P
 CN1.41 = PCIE_MTX_N
 CN1.55 = PCIE_REFCLK_P
 CN1.48 = UIM2_VDD
+
+# m2 — Task 6 review Fix pass, Fix 1 (VBUS_SENSE force path: NMOS
+# low-side inverter Q5 + new P-FET Q32/DMG3415U-7, replaces the old
+# source-follower topology that topped out below Sierra VIH). Q5 gate is
+# unchanged (still VBUSSNS_CTL, blank-MCU-safe via R62 pulldown); Q5
+# source now grounds directly (was floating into the sense node); Q5
+# drain drives the new P-FET's gate (N_Q6_G), which R68 (100k) also
+# pulls to +1V8 so the P-FET defaults off when Q5 is off. P-FET source
+# is on +1V8; P-FET drain (N_Q6_D) feeds R61 (330R, was 1k) into
+# VBUS_SENSE, so the forced ceiling is a 1.8V-rail divide-down, not a
+# Vgs(th)-limited source-follower output.
+Q5.pinfn:G = VBUSSNS_CTL
+Q5.pinfn:S = GND
+Q5.pinfn:D = N_Q6_G
+R62.1 = VBUSSNS_CTL
+R62.2 = GND
+Q32.pinfn:G = N_Q6_G
+Q32.pinfn:S = +1V8
+Q32.pinfn:D = N_Q6_D
+R68.1 = N_Q6_G
+R68.2 = +1V8
+R61.1 = N_Q6_D
+R61.2 = VBUS_SENSE
+NET VBUS_SENSE PINS>=5
+NET N_Q6_G PINS>=3
+NET N_Q6_D PINS>=2
+
+# m2 — Task 6 review Fix pass, Fix 3 (WWAN LED now sinks through the
+# module's own status pin instead of a dead-end LED_RET tap: LED_PWR is
+# a new, still-undriven-until-Task-9 global label on the high side;
+# D19's cathode moves onto WWAN_LED_N, the same net CN1.10 is already
+# pinned to above, so the RP2040 sense point and the LED cathode are
+# now electrically the same node the module actually drives).
+R67.1 = LED_PWR
+R67.2 = N_LED_A
+D19.pinfn:A = N_LED_A
+D19.pinfn:K = WWAN_LED_N

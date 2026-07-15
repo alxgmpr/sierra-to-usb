@@ -72,3 +72,67 @@ missed it for `power:PWR_FLAG` specifically.
 | 2026-07-14 | (Task 6, m2) `isolated_pin_label` ×18 — global labels `PCIE_MRX_P/N`, `SS_MOD_TX_C_P/N`, `USB2_MOD_DP/DM`, `UIM1_DET`, `UIM1_IO`, `PCIE_REFCLK_P/N`, `UIM2_DET/IO/CLK/RST/VDD`, `WWAN_LED_N`, `VBUS_DATA`, `LED_RET` each connect to only one pin on this sheet | Every one of these is a documented forward reference: the matching consumer lands on a future sheet (usb3_data/Task 7, usb2_debug/Task 8, mcu/Task 9, ethernet/Task 10, sim/Task 11) per the plan's own sheet-dependency order. `VBUS_DATA` is a forward reference in the *other* direction (produced by usb3_data/Task 7, consumed here). Clears once each producing/consuming sheet lands, same pattern as Task 4/5's forward-reference waivers. |
 | 2026-07-14 | (Task 6, m2) `footprint_link_issues` ×18 — `CN1` (`Connector_M.2`), `JP1-3` (`Jumper`), `TP1-9` (`TestPoint`), `D19` (`LED_SMD`), bulk caps (`CP_Elec_6.3x7.7`) point at libraries not yet in `fp-lib-table` | Same as the Task 4/5 rows above: footprint/library binding is Task 14. `Footprint` strings record the intended package (`Connector_M.2:M.2_Key-B-SMD` for CN1 per the LOTES APCI0105-P001A datasheet, `docs/sourcing.md` row 20) so Task 14 has the real target. |
 | 2026-07-14 | (Task 6, m2) `endpoint_off_grid` ×82 | Same cause as the Task 4/5 rows above — this sheet uses the identical script-authored, label-at-exact-pin-coordinate generator idiom. |
+
+## Task 6 review Fix pass (2026-07-14)
+
+Fixing the 5 findings from the Task 6 (m2) review (VBUS_SENSE P-FET force-path
+rebuild, R59/R60 1% tolerance, WWAN LED rewired through the module's status
+pin, C44-C57 footprint prefixes, task-6-report.md refdes table correction)
+changes `$KCLI sch erc sierra-to-usb.kicad_sch` from **0 errors / 464
+warnings** to **0 errors / 452 warnings** (`endpoint_off_grid` 299→302,
+`footprint_link_issues` 139→125, `isolated_pin_label` 23→22,
+`lib_symbol_mismatch` 3→3 — no new category). Net delta: 16 warnings resolved,
+4 new, both fully accounted for below.
+
+**Resolved (16):**
+- `footprint_link_issues` ×14 — C44-C57's `Footprint` fields were bare
+  names with no library prefix (`CP_Elec_6.3x7.7`, `C_0805_2012Metric`,
+  `C_0402_1005Metric` — not even a valid `Library:Footprint` lib_id, unlike
+  the rest of this sheet's parts). Fix 4 added the `Capacitor_SMD:` prefix
+  to all 14, verified against the real `.kicad_mod` files in KiCad 10's
+  stock `Capacitor_SMD.pretty`. `Capacitor_SMD` is a standard footprint
+  library already present in this machine's global `fp-lib-table` (unlike
+  `Connector_M.2`/`Jumper`/`TestPoint`/`LED_SMD`, which is why CN1/JP1-3/
+  TP1-9/D19 still show `footprint_link_issues` below — same as the
+  pre-existing Task 6 row, that part is genuinely Task 14 work), so this
+  resolves cleanly rather than needing a waiver.
+- `isolated_pin_label` ×2 — `WWAN_LED_N` and `LED_RET`. Fix 3 gives
+  `WWAN_LED_N` a second same-sheet touch point (D19's cathode, alongside
+  the pre-existing CN1.10), so it's no longer isolated on this sheet.
+  `LED_RET` is deleted outright (D19's cathode no longer references it) —
+  removed, not a forward reference anymore, so the old Task 6 waiver row's
+  mention of `LED_RET` is superseded by this section for that one label
+  (the row itself is left unedited per the "no existing assertion/waiver
+  text is silently rewritten" convention — this section is the correction).
+
+**New (4) — same categories/root causes as the existing Task 6 waiver rows
+above, not a new waiver category:**
+- `endpoint_off_grid` ×3 — `#PWR91` (new GND on Q5's source), `Q32` pin 1
+  (gate), `R68` pin 1. Same cause as the existing Task 6 `endpoint_off_grid`
+  row: this sheet places labels/power symbols at the exact absolute pin
+  coordinate of the component they connect to rather than snapping to the
+  editor grid. Verified electrically correct via `uv run
+  tools/check_nets.py` (all Fix 1 pin-function assertions pass) and the
+  `kicad-cli sch export netlist` pin-to-net dump.
+- `isolated_pin_label` ×1 — global label `LED_PWR` (R67's new supply-side
+  pin) connects to only one pin on this sheet. This is a deliberate,
+  documented forward reference: Task 9 (mcu) drives `LED_PWR` from `+3V3`
+  through the WWAN kill switch, per Fix 3. Same pattern as the pre-existing
+  Task 6 forward-reference waivers (`WWAN_LED_N` originally, `VBUS_DATA`,
+  etc.) — clears once Task 9 lands.
+
+No new `footprint_link_issues` or `lib_symbol_mismatch` from the new parts:
+`Q32` (`sierra-to-usb:DMG3415U`, footprint `Package_TO_SOT_SMD:SOT-23`) and
+`R68` (`Device:R_Small`, footprint `Resistor_SMD:R_0603_1608Metric`) both
+reuse footprint libraries already used elsewhere on this sheet (Q1-Q5,
+R59-R67) that resolve via the global `fp-lib-table` without a project-local
+entry. The new `sierra-to-usb:DMG3415U` project-library symbol's cached copy
+in `sheets/m2.kicad_sch`'s `lib_symbols` was built to be structurally
+identical to the `lib/sierra-to-usb.kicad_sym` master (same property
+node shapes, no stray `pin_names` override) specifically to avoid adding a
+5th `lib_symbol_mismatch` entry — confirmed 3→3, unchanged.
+
+| Date | Warning | Justification |
+| ---- | ------- | -------------- |
+| 2026-07-14 | (Fix pass) `endpoint_off_grid` ×3 — `#PWR91` Pin 1, `Q32` Pin 1 `[G]`, `R68` Pin 1 | Same script-authored, label/symbol-at-exact-pin-coordinate idiom as every other `endpoint_off_grid` row on this sheet. Connectivity verified via `check_nets.py` and a `kicad-cli sch export netlist` pin dump, not just ERC. |
+| 2026-07-14 | (Fix pass) `isolated_pin_label` ×1 — global label `LED_PWR` (R67 pin 2) connects to only one pin on this sheet | Documented forward reference: Task 9 (mcu) drives `LED_PWR` from `+3V3` through the WWAN kill switch (Fix 3). Same pattern as this sheet's other Task 6 forward-reference waivers; clears when Task 9 lands. |
