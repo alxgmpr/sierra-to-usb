@@ -5341,7 +5341,7 @@
 		(effects (font (size 1.016 1.016)) (justify left bottom))
 		(uuid "a5693d83-129e-406b-906b-93515aa90aca")
 	)
-	(global_label "LED_PWR"
+	(global_label "+3V3_ETH"
 		(shape input)
 		(at 200 97.46 0)
 		(effects (font (size 1.016 1.016)) (justify left bottom))
