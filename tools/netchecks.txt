@@ -77,3 +77,31 @@ U14.pinfn:IN+ = +3V3
 U14.pinfn:IN- = +3V3_MOD
 U17.pinfn:VOUT = +3V3_MCU
 NET VMON_12V PINS>=2
+
+# m2 — module-safety assertions (Global Constraints)
+CN1.2 = +3V3_MOD
+CN1.4 = +3V3_MOD
+CN1.70 = +3V3_MOD
+CN1.72 = +3V3_MOD
+CN1.74 = +3V3_MOD
+CN1.24 = M2_VCC_JP1     # jumpered, NOT +3V3_MOD directly
+CN1.38 = M2_VCC_JP2
+CN1.68 = M2_VCC_JP3
+CN1.6 = FCPO_N
+CN1.20 = PCIE_DIS
+CN1.22 = VBUS_SENSE
+CN1.8 = W_DISABLE1_N
+CN1.67 = MODEM_RESET_N
+CN1.10 = WWAN_LED_N
+CN1.23 = WAKE_N
+NET PCIE_DIS PINS>=3
+Q2.pinfn:D = PCIE_DIS
+
+# m2 — Step 4 (data-plane pin numbering per Global net table)
+CN1.29 = SS_MOD_RX_N
+CN1.31 = SS_MOD_RX_P
+CN1.35 = SS_MOD_TX_C_N
+CN1.37 = SS_MOD_TX_C_P
+CN1.41 = PCIE_MTX_N
+CN1.55 = PCIE_REFCLK_P
+CN1.48 = UIM2_VDD
