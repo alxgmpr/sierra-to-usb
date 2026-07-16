@@ -40,13 +40,6 @@ MODEL_ALLOWLIST = {
     "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm":
         "Copper-only solder-jumper feature -- no physical component body; "
         "KiCad's own SolderJumper footprints ship without models.",
-    "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12":
-        "KiCad 10 official footprint references "
-        "${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/...M-12.step which the "
-        "official 3dmodels package simply does not ship (KiCad's model "
-        "library lags its footprint library). Geometry unaffected; an "
-        "EasyEDA C165948 STEP was cross-checked against this footprint at "
-        "Task 14b (A-row pads agree within 0.11mm).",
     "Inductor_SMD:L_6.3x6.3_H3":
         "KiCad 10 official footprint; its referenced official model is not "
         "shipped in the 3dmodels package. Generic 6.3x6.3mm body.",
@@ -63,16 +56,15 @@ MODEL_ALLOWLIST = {
 
 # Footprints whose docs Source row is allowed to read 'approximation' -- the
 # durable re-flag demanded by Task 14b for anything still unobtainable.
-APPROX_REFLAGGED = {
-    "sierra-to-usb:NanoSIM_JXTCONN_CSIM-H137-7P":
-        "JXTCONN CSIM-H137-7P (LCSC C42420236): JLC stocks the part but the "
-        "EasyEDA API has no footprint/CAD data for it (verified again at "
-        "Task 14b: easyeda2kicad and the raw EasyEDA products API both "
-        "return 404 'Component not found'), and no JXTCONN drawing is "
-        "machine-retrievable. Pad grid remains the ATTEND 115U-A103 "
-        "cross-vendor commodity pattern -- needs physical-sample "
-        "confirmation before fab.",
-}
+#
+# Task 14c: the one entry this ever held (JXTCONN CSIM-H137-7P, no
+# retrievable EasyEDA CAD) is REMOVED -- the part was re-picked to XKB
+# XKNANO-113 (LCSC C381071), which DOES have full EasyEDA CAD (verified by
+# actually pulling it with easyeda2kicad --full; see
+# sierra-to-usb:NanoSIM_XKB_XKNANO-113's JLC-verified row in
+# footprint-verification.md). This dict is empty by design until/unless a
+# future part needs it again.
+APPROX_REFLAGGED = {}
 
 MODEL_RE = re.compile(r'\(model\s+"([^"]+)"')
 VAR_RE = re.compile(r"\$\{([A-Za-z0-9_]+)\}")

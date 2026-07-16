@@ -1,0 +1,379 @@
+(footprint "NanoSIM_XKB_XKNANO-113"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "XKB Industrial Precision XKNANO-113 nano-SIM push-push socket, LCSC C381071. Task 14c re-pick (replaces JXTCONN CSIM-H137-7P, LCSC C42420236, which had no retrievable EasyEDA CAD and an unconfirmed CD polarity). GEOMETRY from the LCSC/EasyEDA C381071 verified land pattern (easyeda2kicad --full): 7 small SMD contact pads (VCC/RST/CLK/CD/GND/VPP/IO, 0.6-0.8x1.3mm at y=-6.74) + 4 large SMD shell tabs (1.0x2.1mm at the four corners, all renumbered pad 8 to merge onto one symbol pin, matching this project's MHF4 GND-tab convention) + 2 unnamed 0.9mm NPTH mounting pegs (no signal, listed in check_footprints.py REVERSE_ALLOWLIST). CD polarity CONFIRMED from XKB's own drawing (Dwg No. XKNANO-113, LCSC datasheet mirror): CD switch to GND reads NORMAL=SHORT / CARD INSERTED=OPEN -- matches this project's \"grounded=absent\" DET convention (verification.md Item 7) exactly, closing the open CD-polarity order gate from docs/sourcing.md Sec.5 Note 3 with a documented answer.")
+	(tags "SIM nanoSIM UICC push-push connector XKB XKNANO-113")
+	(property "Reference" "REF**"
+		(at 0 -9.2 0)
+		(layer "F.SilkS")
+		(uuid "cb8e0d0d-7f6d-4f5a-a837-85ca746fa761")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "NanoSIM_XKB_XKNANO-113"
+		(at 0 9.2 0)
+		(layer "F.Fab")
+		(uuid "fa69f504-469e-4d79-b77d-cea2af51471f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/8cb6dfac65a63bd834a8c36b021c7efe.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ca85bc71-b151-4afd-b6af-e1ad93c8db2e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a0f24b4-f8b7-4883-97b1-c9eb94969aba")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C381071"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6520a27d-7530-4179-a09b-b925e422f03e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 6.58 -3.99)
+		(end 6.58 5.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7b35ee0d-1413-4f8c-a39a-fbf6bb291abc")
+	)
+	(fp_line
+		(start -6.5 8.08)
+		(end 6.58 8.08)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4ea66d80-78bf-42ff-b5ef-65ae48eef9cc")
+	)
+	(fp_line
+		(start -6.5 -3.99)
+		(end -6.5 5.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0841e7d0-b41c-42c3-bf2b-3bbc9658b53d")
+	)
+	(fp_line
+		(start 3.15 -6.78)
+		(end 6.58 -6.78)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a1343078-6409-4bea-b600-25e04a6d0367")
+	)
+	(fp_line
+		(start 6.58 -6.78)
+		(end 6.58 -6.53)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0763d535-257e-48d2-ac39-8d3f6b9f59f9")
+	)
+	(fp_line
+		(start -6.5 -6.78)
+		(end -6.5 -6.53)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a33e367a-c0c9-4658-bd43-74c2fd6c518f")
+	)
+	(fp_line
+		(start -6.5 -6.78)
+		(end -5.48 -6.78)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c7e6a084-ba35-4bd6-9a36-524367ec3296")
+	)
+	(fp_circle
+		(center 6.50 -7.04)
+		(end 6.55 -7.04)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "806cd214-44c2-4341-9209-427880fc7012")
+	)
+	(fp_line
+		(start 6.14 5.95)
+		(end 6.17 -6.13)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "29d5ef36-823c-46c6-9387-7997c2b23d12")
+	)
+	(fp_line
+		(start 6.17 -6.13)
+		(end 5.9 -6.13)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "141fe0a4-8bf2-4464-b6c1-f4ddb07237ea")
+	)
+	(fp_line
+		(start 5.9 -6.13)
+		(end 5.9 -6.21)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0da5d2b6-ceb2-4c0d-946e-ab86eaf95461")
+	)
+	(fp_line
+		(start 5.9 -6.21)
+		(end 4.3 -6.19)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "52b076a8-8dd2-45e0-835f-3bcef41c5dc0")
+	)
+	(fp_line
+		(start 4.3 -6.19)
+		(end 4.31 -6.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "291d656c-5978-4306-bbae-846fef09361c")
+	)
+	(fp_line
+		(start 4.31 -6.05)
+		(end 4.1 -6.06)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d51edc44-d1e4-40da-855c-4e71a7cedfd8")
+	)
+	(fp_line
+		(start 4.1 -6.06)
+		(end 4.1 -6.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "03943bd7-c5ea-47d5-a612-9a83f6eca5ea")
+	)
+	(fp_line
+		(start 4.1 -6.25)
+		(end -4.1 -6.24)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ddfcd6c2-2049-4865-a4c5-9cc0d2e88afc")
+	)
+	(fp_line
+		(start -4.1 -6.24)
+		(end -4.11 -6.04)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "542f51b8-7d57-4015-9a5c-c36d7fc7fbdf")
+	)
+	(fp_line
+		(start -4.11 -6.04)
+		(end -6.13 -6.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b261e63e-3bd4-4dc6-a1ec-5a039209d72c")
+	)
+	(fp_line
+		(start -6.13 -6.05)
+		(end -6.17 7.44)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5e14ae1e-5515-4b1f-bd03-fe8e7ad35e77")
+	)
+	(fp_line
+		(start -6.17 7.44)
+		(end 6.14 7.44)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7da7b103-4038-45d2-a6e0-ede5859f68e8")
+	)
+	(fp_line
+		(start 6.14 7.44)
+		(end 6.14 5.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ac84eea6-3781-4119-b9a9-8f08fffed822")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "5c302b04-e088-48e3-b081-4a8a911f21cc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 0.25 -6.74)
+		(size 0.8 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d6143336-9123-454d-9e74-f528ac87764c")
+	)
+	(pad "2" smd rect
+		(at -2.29 -6.74)
+		(size 0.8 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "08aa25ad-40d2-4266-9d75-5b5809bb8969")
+	)
+	(pad "3" smd rect
+		(at -4.83 -6.74)
+		(size 0.8 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7095ee6e-8154-4709-9766-59c47b8d2cc7")
+	)
+	(pad "4" smd rect
+		(at 2.47 -6.74)
+		(size 0.6 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ecb0c86a-bc79-4151-945a-ebe2ee81637c")
+	)
+	(pad "5" smd rect
+		(at 1.52 -6.74)
+		(size 0.6 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ffaa6a28-3679-4112-8009-6fccab541d0a")
+	)
+	(pad "6" smd rect
+		(at -1.02 -6.74)
+		(size 0.8 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7006cfb2-8b8f-4ac6-a7ff-47760bd59ace")
+	)
+	(pad "7" smd rect
+		(at -3.56 -6.74)
+		(size 0.8 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fa883700-566e-4fa8-8c40-b9eda79f3b41")
+	)
+	(pad "8" smd rect
+		(at 6.5 6.74)
+		(size 1.0 2.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9fe0a509-a037-41d3-9e20-ef4b59af00be")
+	)
+	(pad "8" smd rect
+		(at -6.5 6.74)
+		(size 1.0 2.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ed7c3b8c-828a-4086-be2d-18bf9c773101")
+	)
+	(pad "8" smd rect
+		(at 6.5 -5.26)
+		(size 1.0 2.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bc6aeab3-b1c2-4d2a-ae88-38226a982b42")
+	)
+	(pad "8" smd rect
+		(at -6.5 -5.26)
+		(size 1.0 2.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d709fb03-f733-4c50-8835-600b7e337ce3")
+	)
+	(pad "" thru_hole circle
+		(at 3.5 5.49)
+		(size 0.9 0.9)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(uuid "aa1315f4-051a-47e6-9e1e-23decc0e7b03")
+	)
+	(pad "" thru_hole circle
+		(at -5.0 5.49)
+		(size 0.9 0.9)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(uuid "7e36da22-d73f-4549-bba4-6133e5e6bd3a")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/lib/sierra-to-usb.3dshapes/NanoSIM_XKB_XKNANO-113.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

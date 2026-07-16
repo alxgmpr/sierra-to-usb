@@ -579,8 +579,6 @@ NET SIM_SEL PINS>=3
 SIM1.pinfn:RST = UIM1_RST
 SIM1.pinfn:CLK = UIM1_CLK
 SIM1.pinfn:IO = UIM1_IO
-SIM1.pinfn:CD2 = UIM1_DET
-SIM1.pinfn:CD1 = GND
 D27.pinfn:D1+ = UIM1_RST
 D27.pinfn:D1- = UIM1_CLK
 D27.pinfn:D2+ = UIM1_IO
@@ -590,7 +588,26 @@ SIM2.pinfn:VCC = UIM2S_VDD
 SIM2.pinfn:RST = UIM2S_RST
 SIM2.pinfn:CLK = UIM2S_CLK
 SIM2.pinfn:IO = UIM2S_IO
-SIM2.pinfn:CD2 = UIM2S_DET
+
+# sim -- Task 14c SIM socket re-pick (JXTCONN CSIM-H137-7P, no EasyEDA CAD +
+# unconfirmed CD polarity -> XKB XKNANO-113, LCSC C381071, full CAD pulled +
+# CD polarity confirmed NC/"grounded=absent" from XKB's own drawing, see
+# docs/sourcing.md Sec.5 Note 3). Pin NUMBERS changed (now match XKNANO-113's
+# real pad numbers 1/2/3/4/5/6/7/8, same as the footprint's real pads); pin
+# NAME "CD2" is RETIRED in favor of "CD" (old CD1, always wired to GND, is
+# now just the socket's own GND pin -- XKNANO-113's CD switch shares that
+# GND contact as its return path per its own datasheet's circuit diagram,
+# rather than using a second dedicated pad, so the two old checks
+# "SIM1.pinfn:CD2 = UIM1_DET" / "SIM1.pinfn:CD1 = GND" collapse into the two
+# lines below with the SAME net targets under the new real pin names). Net
+# membership is otherwise identical to the Task-11 baseline above (full
+# before/after tuple diff in task-14c-report.md).
+SIM1.pinfn:CD = UIM1_DET
+SIM1.pinfn:GND = GND
+SIM1.pinfn:SHELL = GND
+SIM2.pinfn:CD = UIM2S_DET
+SIM2.pinfn:GND = GND
+SIM2.pinfn:SHELL = GND
 D28.pinfn:D1+ = UIM2S_RST
 D28.pinfn:D1- = UIM2S_CLK
 D28.pinfn:D2+ = UIM2S_IO

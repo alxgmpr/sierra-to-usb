@@ -2220,66 +2220,72 @@
 				)
 		)
 		(embedded_fonts no)
-	)(symbol "JXTCONN_CSIM-H137-7P"
+	)(symbol "XKB_XKNANO-113"
 		(exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "SIM" (at -10.16 12.7 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "CSIM-H137-7P" (at -10.16 15.24 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "sierra-to-usb:NanoSIM_JXTCONN_CSIM-H137-7P" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C42420236.html" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Description" "JXTCONN CSIM-H137-7P-class nano-SIM push-push socket, 7 pads (5 ISO7816 SIM signal contacts VCC/RST/CLK/GND/IO + 2-pin mechanical card-detect switch CD1/CD2). NOT on stock KiCad libs -- authored Task 11. DISCLOSED ASSUMPTION: the manufacturer's own pin-numbered pinout diagram could not be retrieved (LCSC C42420236, JLCPCB, bsc-elec, gct.co fetches all failed/blocked during authoring -- see task-11-report.md) -- this pin assignment follows the standard commodity nano-SIM push-push convention (5 signal + 2-pin CD switch = 7 pads, matching the part's '7P' designation) and needs confirmation against the physical part/real datasheet before layout lock. CD1/CD2 assumed normally-closed/shorted when card ABSENT, matching this project's cross-vendor-verified 'grounded=absent' DET convention (verification.md Item 7)." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "ki_keywords" "SIM nanoSIM UICC push-push connector" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Value" "XKNANO-113" (at -10.16 15.24 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "sierra-to-usb:NanoSIM_XKB_XKNANO-113" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/8cb6dfac65a63bd834a8c36b021c7efe.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "XKB Industrial Precision XKNANO-113 nano-SIM push-push socket, 8 numbered connections (6 ISO7816 signal contacts VCC/RST/CLK/GND/VPP/IO + 1 mechanical card-detect pin CD + 1 shell/shield pin SHELL, merged from the real part's 4 physical shell tabs onto one footprint pad number). LCSC C381071. Task 14c RE-PICK (replaces JXTCONN CSIM-H137-7P, LCSC C42420236): that part had no retrievable EasyEDA CAD (confirmed again at Task 14b) and an unconfirmed CD switch polarity (docs/sourcing.md Sec.5 Note 3, open order gate). XKNANO-113 closes both: full EasyEDA CAD pulled via easyeda2kicad --full (symbol+footprint+3D model, task-14c-report.md), and XKB's own drawing (Dwg No. XKNANO-113, LCSC datasheet mirror) documents the CD circuit explicitly: 'CARD DETECT SWITCH(CD)---GND, NORMAL....SHORT, INSERTING CARD....OPEN' -- i.e. normally-closed/shorted to GND when the card is ABSENT, opening when a card is inserted. This MATCHES this project's cross-vendor 'grounded=absent' DET convention (verification.md Item 7) exactly -- no rewiring needed, same net assignments as before by function. Pin numbering follows XKNANO-113's real pad numbers pin-for-pin (1 VCC / 2 RST / 3 CLK / 4 CD / 5 GND / 6 VPP / 7 IO / 8 SHELL, per the manufacturer's own pin table + easyeda2kicad symbol pull); the old CD1/CD2 naming is retired since XKNANO-113's CD switch shares its return path with the socket's own GND contact (pad 5) rather than using a second dedicated pad -- old CD1 (always wired to GND) is now literally just the GND pin. VPP (pad 6) is unused by this design (ISO 7816 VPP is obsolete on modern SIM cards, matching the old part's omission of it) and is left NC. SHELL (pad 8) is grounded, standard practice for a card-edge connector's metal shield -- reuses the schematic slot the old symbol's CD1/GND pin already occupied, so no new GND wiring was needed for it either." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "SIM nanoSIM UICC push-push connector XKB XKNANO-113" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "ki_fp_filters" "*NanoSIM*" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(symbol "JXTCONN_CSIM-H137-7P_0_1"
-				(rectangle (start -10.16 10.16) (end 15.24 -10.16)
+		(symbol "XKB_XKNANO-113_0_1"
+				(rectangle (start -10.16 10.16) (end 15.24 -12.7)
 					(stroke (width 0.254) (type default)) (fill (type background)))
 				(rectangle (start -1.27 3.81) (end 3.81 5.08)
 					(stroke (width 0.254) (type default)) (fill (type outline)))
 				(rectangle (start -1.27 -1.27) (end 3.81 0)
 					(stroke (width 0.254) (type default)) (fill (type outline)))
 		)
-		(symbol "JXTCONN_CSIM-H137-7P_1_1"
-				(pin power_in line
+		(symbol "XKB_XKNANO-113_1_1"
+				(pin passive line
 					(at -12.7 7.62 0)
 					(length 2.54)
 					(name "VCC" (effects (font (size 1.016 1.016))))
 					(number "1" (effects (font (size 1.016 1.016))))
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at -12.7 5.08 0)
 					(length 2.54)
 					(name "RST" (effects (font (size 1.016 1.016))))
 					(number "2" (effects (font (size 1.016 1.016))))
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at -12.7 2.54 0)
 					(length 2.54)
 					(name "CLK" (effects (font (size 1.016 1.016))))
 					(number "3" (effects (font (size 1.016 1.016))))
 				)
-				(pin power_in line
+				(pin passive line
 					(at -12.7 0 0)
 					(length 2.54)
 					(name "GND" (effects (font (size 1.016 1.016))))
-					(number "4" (effects (font (size 1.016 1.016))))
+					(number "5" (effects (font (size 1.016 1.016))))
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at -12.7 -2.54 0)
 					(length 2.54)
 					(name "IO" (effects (font (size 1.016 1.016))))
-					(number "5" (effects (font (size 1.016 1.016))))
+					(number "7" (effects (font (size 1.016 1.016))))
 				)
 				(pin passive line
 					(at -12.7 -5.08 0)
 					(length 2.54)
-					(name "CD1" (effects (font (size 1.016 1.016))))
-					(number "6" (effects (font (size 1.016 1.016))))
+					(name "SHELL" (effects (font (size 1.016 1.016))))
+					(number "8" (effects (font (size 1.016 1.016))))
 				)
 				(pin passive line
 					(at -12.7 -7.62 0)
 					(length 2.54)
-					(name "CD2" (effects (font (size 1.016 1.016))))
-					(number "7" (effects (font (size 1.016 1.016))))
+					(name "CD" (effects (font (size 1.016 1.016))))
+					(number "4" (effects (font (size 1.016 1.016))))
+				)
+				(pin passive line
+					(at -12.7 -10.16 0)
+					(length 2.54)
+					(name "VPP" (effects (font (size 1.016 1.016))))
+					(number "6" (effects (font (size 1.016 1.016))))
 				)
 		)
 		(embedded_fonts no)
