@@ -74,6 +74,27 @@ target table); note the stackup name/dielectric figures above so their
 engineering team matches the same prepreg lot assumptions used in this
 derivation.
 
+## Trace current capacity (pre-defined width ladder)
+
+The pre-defined track widths in `sierra-to-usb.kicad_pro` carry these
+IPC-2221 external-layer ampacities (1oz outer copper, I = 0.048·ΔT^0.44·A^0.725
+— the conservative baseline; IPC-2152 with the In1/In2 planes as heat
+spreaders allows more, so treat these as safe floors):
+
+| Width | 10°C rise | 20°C rise | Intended use |
+|---|---|---|---|
+| 0.5mm | 1.45 A | 1.96 A | light power spurs |
+| 0.8mm | 2.03 A | 2.76 A | 3V3 branch feeds |
+| 1.0mm | 2.39 A | 3.24 A | 3V3 rails (≤2A) |
+| 1.5mm | 3.21 A | 4.35 A | 5V VBUS (3A) |
+| 2.0mm | 3.95 A | 5.36 A | 12V PoE-secondary trunk (~2A, 2x margin) |
+| 3.0mm | 5.30 A | 7.20 A | bulk — prefer pours |
+
+Vias (JLCPCB 18µm avg barrel plating, ΔT 10°C): 0.25 drill ≈ 1.3A,
+0.3 ≈ 1.5A, 0.4 ≈ 1.8A, 0.6 ≈ 2.4A each — use ≥2 of 0.8/0.4 per layer
+transition on any 3A path. Impedance trace widths are NOT sized for power;
+controlled-class nets carry signals only.
+
 ## PoE primary-domain isolation
 
 The PoE primary/hazardous-voltage domain (`POE_PRI` net class: POE_VA*,
