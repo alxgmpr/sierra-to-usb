@@ -127,6 +127,20 @@ REVERSE_ALLOWLIST = {
         "electrode proof); a legitimate no-connect per TI's own datasheet, "
         "not a binding defect."
     ),
+    ("CN1", "76"): (
+        "LOTES APCI0105-P001A M.2 socket (Task 14b JLC/EasyEDA-verified "
+        "geometry, LCSC C841658): pad 76 is one of the two 1.2x2.75mm "
+        "mechanical shell solder tabs at x=+/-10.35 present in the "
+        "LCSC/EasyEDA land pattern JLCPCB assembles against. The part has "
+        "67 signal pins (1-75 minus B-key 12-19); 76/77 are hold-down tabs "
+        "with no defined signal, so the Connector:Bus_M.2_Socket_B symbol "
+        "correctly has no pin for them."
+    ),
+    ("CN1", "77"): (
+        "Same as CN1 pad 76 -- the opposite-end mechanical shell solder "
+        "tab of the LOTES M.2 socket, no defined signal, not present on "
+        "the 67-pin symbol."
+    ),
     ("U30", "9"): (
         "ST4SIM-200M (VFDFPN8_MFF2 custom footprint): pad 9 is the center "
         "exposed thermal/die-attach pad. Per the footprint's own descr "

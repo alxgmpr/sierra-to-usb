@@ -3,221 +3,261 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "TE Connectivity / Linx CONMHF4-SMD-G-T, MHF4-type SMD coax jack (male pin), 0-6 GHz, 50 Ohm, snap-on mating (LCSC C18221168, https://lcsc.com/datasheet/C18221168.pdf). Land pattern per Linx/TE 'Recommended PCB Footprint' Fig.2: body 2.0x2.0mm, 2x GND side pads, GND top tab, Signal bottom pad. APPROXIMATION -- verify against mfr drawing before fab lock: top tab width is a derived approximation reconciled from 3 overlapping datasheet dimensions, not a single directly-read value.")
-	(tags "MHF4 coaxial RF connector TE Linx CONMHF4 U.FL-like")
+	(descr "TE/Linx CONMHF4-SMD-G-T MHF4-type SMD coax jack, 0-6GHz 50R (LCSC C18221168). GEOMETRY REPLACED Task 14b with the LCSC/EasyEDA C18221168 verified land pattern (easyeda2kicad --full): signal pad 0.6x0.55 at (0,+0.99), GND side pads 0.58x1.58 at x=+/-0.96, GND top tab 0.5x0.5 at (0,-0.99). Prior Task-14 approximation agreed within 0.08mm (side pads 0.50 wide at +/-1.00, signal 0.6x0.6) -- replaced to carry the JLC-exact pads and the 3D model. GND pads all numbered 2 to match Conn_Coaxial symbol.")
 	(property "Reference" "REF**"
-		(at 0 -2.3 0)
+		(at 0 -4.987 0)
 		(layer "F.SilkS")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a01")
+		(uuid "e501f0af-5ba8-44de-b1df-5657cca0093c")
 		(effects
 			(font
-				(size 0.5 0.5)
-				(thickness 0.08)
+				(size 1 1)
+				(thickness 0.15)
 			)
 		)
 	)
 	(property "Value" "MHF4_TE_CONMHF4-SMD-G-T"
-		(at 0 2.3 0)
+		(at 0 4.987 0)
 		(layer "F.Fab")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a02")
+		(uuid "45c80fdc-106e-425c-a374-b4f77f436376")
 		(effects
 			(font
-				(size 0.5 0.5)
-				(thickness 0.08)
-			)
-		)
-	)
-	(property "Datasheet" "https://lcsc.com/datasheet/C18221168.pdf"
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a03")
-		(effects
-			(font
-				(size 1.27 1.27)
+				(size 1 1)
 				(thickness 0.15)
 			)
 		)
 	)
-	(property "Description" "MHF4 SMD RF coax receptacle, TE/Linx CONMHF4-SMD-G-T, LCSC C18221168, used for antenna jumper J9/J11/J13/J15/J17"
+	(property "Datasheet" ""
 		(at 0 0 0)
-		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a04")
+		(uuid "94ee5f62-9993-489b-9df0-39590cd2c80d")
 		(effects
 			(font
 				(size 1.27 1.27)
-				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e89e8527-eb9d-4c00-a26f-fb81e7e9d274")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C18221168"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aec44c5a-d6bb-45d7-b994-7806f94a5f34")
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
 		)
 	)
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
-	(fp_rect
-		(start -1 -1)
-		(end 1 1)
+	(fp_line
+		(start -0.9 -0.95)
+		(end -0.42 -0.95)
 		(stroke
-			(width 0.1)
+			(width 0.13)
 			(type solid)
 		)
-		(fill no)
-		(layer "F.Fab")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a10")
+		(layer "F.SilkS")
+		(uuid "cd68db00-8635-4561-ab4b-2d39de35a494")
+	)
+	(fp_line
+		(start -0.9 -0.89)
+		(end -0.9 -0.95)
+		(stroke
+			(width 0.13)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f0252050-83e7-4b31-8c68-6a4742236576")
+	)
+	(fp_line
+		(start -0.9 -0.85)
+		(end -0.9 -0.89)
+		(stroke
+			(width 0.13)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "91c41824-56c7-42bf-af26-580ccefe32fd")
+	)
+	(fp_line
+		(start -0.9 1.01)
+		(end -0.9 0.97)
+		(stroke
+			(width 0.13)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f4ec5c29-a735-4eab-809c-5830df05394f")
+	)
+	(fp_line
+		(start -0.47 1.01)
+		(end -0.9 1.01)
+		(stroke
+			(width 0.13)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ec153255-0a57-4fd7-a568-ebca2cc309b5")
+	)
+	(fp_line
+		(start 0.42 -0.95)
+		(end 0.9 -0.95)
+		(stroke
+			(width 0.13)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6eeb8f44-4619-4a16-9f69-e7b864a5ffc9")
+	)
+	(fp_line
+		(start 0.9 -0.95)
+		(end 0.9 -0.94)
+		(stroke
+			(width 0.13)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e5d0dc50-6b8b-49a4-b1cf-6bd994386ea2")
+	)
+	(fp_line
+		(start 0.9 0.96)
+		(end 0.9 1.01)
+		(stroke
+			(width 0.13)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1eacaa10-68c9-4942-b7c2-f19f0ddf328d")
+	)
+	(fp_line
+		(start 0.9 1.01)
+		(end 0.47 1.01)
+		(stroke
+			(width 0.13)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7c777df3-5fbc-4221-a89d-fdf5acb4de03")
 	)
 	(fp_circle
-		(center 0 0)
-		(end 0.75 0)
+		(center -0.03 1.57)
+		(end 0.07 1.57)
 		(stroke
-			(width 0.1)
+			(width 0.2)
 			(type solid)
 		)
 		(fill no)
-		(layer "F.Fab")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a11")
+		(layer "F.SilkS")
+		(uuid "917ff99a-c3af-4911-80d2-77fe8019bdba")
 	)
 	(fp_circle
-		(center 0 0)
-		(end 0.15 0)
+		(center 1 1.01)
+		(end 1.03 1.01)
 		(stroke
-			(width 0.1)
+			(width 0.06)
 			(type solid)
 		)
 		(fill no)
-		(layer "F.Fab")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a12")
+		(layer "F.SilkS")
+		(uuid "9d2dac9f-7d9c-477b-b818-380c10d2b86c")
 	)
 	(fp_line
-		(start -1.4 -1.4)
-		(end -1.1 -1.4)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a20")
-	)
-	(fp_line
-		(start -1.4 -1.4)
-		(end -1.4 -1.1)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a21")
-	)
-	(fp_line
-		(start 1.4 -1.4)
-		(end 1.1 -1.4)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a22")
-	)
-	(fp_line
-		(start 1.4 -1.4)
-		(end 1.4 -1.1)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a23")
-	)
-	(fp_line
-		(start -1.4 1.4)
-		(end -1.1 1.4)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a24")
-	)
-	(fp_line
-		(start -1.4 1.4)
-		(end -1.4 1.1)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a25")
-	)
-	(fp_line
-		(start 1.4 1.4)
-		(end 1.1 1.4)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a26")
-	)
-	(fp_line
-		(start 1.4 1.4)
-		(end 1.4 1.1)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a27")
-	)
-	(fp_poly
-		(pts
-			(xy -1.5 -1.5) (xy 1.5 -1.5) (xy 1.5 1.5) (xy -1.5 1.5)
-		)
+		(start -0.9 -0.84)
+		(end 0.9 -0.84)
 		(stroke
 			(width 0.05)
-			(type default)
+			(type solid)
 		)
-		(fill no)
 		(layer "F.CrtYd")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a30")
+		(uuid "c020995f-ab3c-4884-b6d8-bd0bedfc3b2a")
+	)
+	(fp_line
+		(start -0.9 0.86)
+		(end -0.9 -0.84)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8e0b0b05-a4b0-449a-ac8c-e3ffbcf8055f")
+	)
+	(fp_line
+		(start 0.9 -0.84)
+		(end 0.9 0.86)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "09e41583-6bb5-4926-b5c9-22208cec3a61")
+	)
+	(fp_line
+		(start 0.9 0.86)
+		(end -0.9 0.86)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3a7524dc-0f0e-42d4-8a09-3a0b935761d2")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0 90)
+		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a40")
+		(uuid "3e2269de-2588-4020-ab0c-00bf55d66298")
 		(effects
 			(font
-				(size 0.5 0.5)
-				(thickness 0.08)
+				(size 1 1)
+				(thickness 0.15)
 			)
 		)
 	)
-	(pad "1" smd roundrect
-		(at 0 0.95)
-		(size 0.6 0.6)
+	(pad "1" smd rect
+		(at 0 0.99)
+		(size 0.6 0.55)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a50")
+		(uuid "cea474fc-2e59-49e0-837f-22bfd6c4ea38")
 	)
-	(pad "2" smd roundrect
-		(at -1 0)
-		(size 0.5 1.58)
+	(pad "2" smd rect
+		(at 0.96 0.01)
+		(size 0.58 1.58)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a51")
+		(uuid "0a24f4a8-f826-4f0d-a7dc-87d4031cedc2")
 	)
-	(pad "2" smd roundrect
-		(at 1 0)
-		(size 0.5 1.58)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a52")
-	)
-	(pad "2" smd roundrect
-		(at 0 -1)
+	(pad "2" smd rect
+		(at 0 -0.99)
 		(size 0.5 0.5)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
-		(uuid "f2f9a3b0-1a1e-4a9a-9a1b-0c1d2e3f4a53")
+		(uuid "b8314969-752c-48c6-a3fc-8b79439e3665")
+	)
+	(pad "2" smd rect
+		(at -0.96 0.01)
+		(size 0.58 1.58)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "17ce159c-2141-48a4-aeaa-25fbe155a2dc")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/lib/sierra-to-usb.3dshapes/MHF4_TE_CONMHF4-SMD-G-T.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
