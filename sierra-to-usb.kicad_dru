@@ -36,6 +36,10 @@
 # JLCPCB fabs controlled-impedance boards to +/-10% against test coupons.
 #
 #   DIFF_USB_90  (USB2 D+/D-, USB3 SS_*):  W=0.2474mm gap=0.15mm -> 90 ohm diff
+#     (USB_DBG_DP/DM deliberately EXCLUDED 2026-07-16: J3 debug is RP2040
+#      native Full-Speed only — R78/R79 27.4R straight to pins 46/47, no HS
+#      mux path — so it routes as Default class; the 90-ohm width/clearance
+#      floors made the 0.5mm-pitch D25/A-row escapes unroutable for nothing)
 #   DIFF_PCIE_85 (M.2 PCIe lanes/REFCLK):  W=0.2835mm gap=0.15mm -> 85 ohm diff
 #   DIFF_MDI_100 (RTL8125 Ethernet MDI):   W=0.1826mm gap=0.15mm -> 100 ohm diff
 #   RF_50 (CPWG, ANT*/GNSS):               W=0.3345mm ground-gap=0.30mm -> 50 ohm
