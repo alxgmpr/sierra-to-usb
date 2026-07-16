@@ -4,7 +4,7 @@ Closes out `docs/superpowers/specs/2026-07-14-universal-m2-carrier-design.md` §
 Status legend: **VERIFIED** (checked against primary source, matches spec), **VERIFIED w/ CORRECTION** (checked, spec text needs a fix), **RESOLVED** (decision already made, confirmed consistent), **BLOCKED** (source unavailable, residual risk noted), **DEFERRED** (not a schematic-capture blocker, revisit later).
 
 Primary sources used:
-- **EM92XX PTS r7.2**, Doc 41114313, "Product Technical Specification EM929X," June 2026 — `docs/datasheets/41114313 EM92 Product Technical Specification r7.2.pdf`. **AUTHORITATIVE for EM9293/EM929X**, supersedes the "Rev 1" cited in the spec — r7.2 is newer.
+- **EM92XX PTS r7.2**, Doc 41114313, "Product Technical Specification EM929X," June 2026 — official download: [AirPrime EM92xx Product Technical Specification (source.sierrawireless.com)](https://source.sierrawireless.com/resources/airprime/minicard/airprime_em92xx_product_technical_specification/). **AUTHORITATIVE for EM9293/EM929X**, supersedes the "Rev 1" cited in the spec — r7.2 is newer. (The PDF is kept as a local working copy under `docs/datasheets/`, which is git-ignored — vendor documents are not redistributed in this repo; fetch from the link above.)
 - **RM520N Series Hardware Design V1.3** (Quectel) — text at `~/.claude/projects/.../tool-results/rm520n.txt`.
 - **EM919x/EM7690 PTS Rev 8** (Semtech/Sierra) — text at `~/.claude/projects/.../tool-results/em919x.txt`.
 - **TI TPS23730 datasheet** SLVSER6B (May 2020, rev. Nov 2020) — fetched, extracted locally.
