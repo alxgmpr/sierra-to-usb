@@ -183,9 +183,6 @@ def main():
                 f"re-flagged in APPROX_REFLAGGED with a documented reason"
             )
 
-    for fp in MODEL_ALLOWLIST:
-        if fp in fps and fp not in used_model_allow:
-            pass  # handled above (stale check)
     for fp, _ in APPROX_REFLAGGED.items():
         if fp in fps and docs_sources.get(fp) != "approximation":
             failures.append(
