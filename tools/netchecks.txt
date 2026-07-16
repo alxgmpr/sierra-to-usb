@@ -741,3 +741,12 @@ D30.pinfn:K = CH224K_PG
 R121.1 = LED_PWR
 R121.2 = N_D30_A
 NET LED_PWR PINS>=4
+# 14c: 24P consolidation — ALL VBUS pins must be on the rail (PD current sharing)
+J2.A4 = VBUS_PD
+J2.A9 = VBUS_PD
+J2.B4 = VBUS_PD
+J2.B9 = VBUS_PD
+J3.A4 = VBUS_DBG
+J3.A9 = VBUS_DBG
+J3.B4 = VBUS_DBG
+J3.B9 = VBUS_DBG
