@@ -33,35 +33,36 @@ prompts for the controlled-impedance layer stack).
 
 ## Controlled-impedance trace geometries
 
-All four classes route on L1 (top), referenced to the In1 GND pour
+All controlled classes route on L1 (top), referenced to the In1 GND pour
 immediately below through the 0.2104mm / Er 4.4 prepreg (dielectric 1).
-Geometry computed with the IPC-2141 edge-coupled-microstrip closed form
-(diff-pair classes) and a grounded-CPW quasi-static model (RF_50 CPWG),
-assuming 0.05mm finished outer copper (1oz foil + plating). **These are
-calculated values — re-verify against JLCPCB's live impedance calculator
-using this exact stackup before finalizing gerbers.**
 
-| Net class | Application | Trace width | Gap | Target Z | Computed Z |
-|---|---|---|---|---|---|
-| `DIFF_USB_90` | USB2 D+/D-, USB3 SuperSpeed pairs | 0.24mm | 0.15mm | 90 Ω diff | ~90.2 Ω |
-| `DIFF_PCIE_85` | M.2 PCIe lanes, REFCLK | 0.27mm | 0.15mm | 85 Ω diff | ~85.0 Ω |
-| `DIFF_MDI_100` | RTL8125 Ethernet MDI | 0.19mm | 0.15mm | 100 Ω diff | ~100.1 Ω |
-| `RF_50` | ANT*/GNSS, CPWG (grounded coplanar waveguide) | 0.14mm | 0.30mm (ground gap) | 50 Ω single-ended | ~50.0 Ω |
+**Geometry source (2026-07-16): JLCPCB's live impedance calculator**
+([jlcpcb.com/pcb-impedance-calculator](https://jlcpcb.com/pcb-impedance-calculator)),
+inputs: 4 layers / 1.6mm / inner 0.5oz / outer 1oz, results read from the
+**JLC04161H-7628 (Standard, finished thickness 1.59mm ±10%)** stackup tab —
+the same 7628/RC49% 0.2104mm prepreg + 1.065mm core stackup as this board.
+These values replace the original Task-15 closed-form numbers and are the
+figures JLCPCB's coupon-controlled impedance process will hold (±10%).
 
-> **PRIORITY — `RF_50` re-derivation required with JLC's live impedance
-> calculator before ordering.** An independent closed-form recomputation of
-> the grounded-CPW model did **not** corroborate 50 Ω for W=0.14mm /
-> ground-gap=0.30mm on this stackup — treat the `RF_50` row above as
-> unverified. Expect the trace width and/or ground gap to change once
-> re-derived against JLCPCB's own calculator with this exact stackup. Do not
-> finalize gerbers on the current `RF_50` geometry: re-run the calculation,
-> update `DIFF_.../RF_50` net-class geometry in `sierra-to-usb.kicad_pro` and
-> the impedance rules in `sierra-to-usb.kicad_dru` if the numbers move, and
-> route the ANT*/GNSS RF traces last (or leave routing margin) so a
-> geometry change doesn't force a re-route of already-placed neighboring
-> copper.
+| Net class | Application | Trace width | Gap | Target Z |
+|---|---|---|---|---|
+| `DIFF_USB_90` | USB2 D+/D-, USB3 SuperSpeed pairs | 0.2474mm | 0.15mm | 90 Ω diff |
+| `DIFF_PCIE_85` | M.2 PCIe lanes, REFCLK | 0.2835mm | 0.15mm | 85 Ω diff |
+| `DIFF_MDI_100` | RTL8125 Ethernet MDI | 0.1826mm | 0.15mm | 100 Ω diff |
+| `RF_50` | ANT*/GNSS, CPWG (grounded coplanar waveguide) | 0.3345mm | 0.30mm (ground gap) | 50 Ω single-ended |
+| `Default` | all uncontrolled signals (user-requested 50 Ω) | 0.3586mm | — | 50 Ω single-ended |
 
-Copper-to-other-net clearance floor for all four classes: **0.30mm** (matches
+> **RESOLVED (2026-07-16) — `RF_50` re-derivation order gate CLOSED.** The
+> JLCPCB calculator confirms the closed-form suspicion: for ground-gap
+> 0.30mm on this stackup, 50 Ω needs **W=0.3345mm**, not the 0.14mm the
+> quasi-static CPW model produced (which would have run ~70+ Ω). Net-class
+> geometry in `sierra-to-usb.kicad_pro`, the DRC rules in
+> `sierra-to-usb.kicad_dru`, and the board fab-note text were all updated
+> to the calculator values. `Default`-class traces additionally carry a
+> relaxed DRC minimum (0.09mm fab floor) so fine-pitch neck-downs stay
+> legal; the four controlled classes remain hard-constrained.
+
+Copper-to-other-net clearance floor for the four controlled classes: **0.30mm** (matches
 the RF_50 CPWG's own designed ground-fill gap; gives the diff-pair classes
 ~1.4x the reference-plane height as crosstalk isolation margin). These
 numbers are entered as KiCad net-class defaults (`sierra-to-usb.kicad_pro`)

@@ -107,6 +107,7 @@
 			(dielectric_constraints yes)
 		)
 		(pad_to_mask_clearance 0)
+		(solder_mask_min_width 0.1)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting
 			(front yes)
@@ -26801,7 +26802,7 @@
 				)
 			)
 		)
-		(pad "" thru_hole circle
+		(pad "" np_thru_hole circle
 			(at -3.67 -2.54 180)
 			(size 0.8 0.8)
 			(drill 0.8)
@@ -26809,7 +26810,7 @@
 			(remove_unused_layers no)
 			(uuid "418c825b-c402-44e5-930a-c3b75e9e8bf9")
 		)
-		(pad "" thru_hole circle
+		(pad "" np_thru_hole circle
 			(at 3.68 -2.54 180)
 			(size 0.8 0.8)
 			(drill 0.8)
@@ -30603,7 +30604,7 @@
 				)
 			)
 		)
-		(pad "" thru_hole circle
+		(pad "" np_thru_hole circle
 			(at -10 1.5)
 			(size 1.1 1.1)
 			(drill 1.1)
@@ -30611,7 +30612,7 @@
 			(remove_unused_layers no)
 			(uuid "536424cc-f26e-4836-b44b-b3240703a56a")
 		)
-		(pad "" thru_hole circle
+		(pad "" np_thru_hole circle
 			(at 10 1.5)
 			(size 1.6 1.6)
 			(drill 1.6)
@@ -48258,7 +48259,7 @@
 		)
 		(pad "1" thru_hole roundrect
 			(at 5.08 -7.945 180)
-			(size 1.7 1.7)
+			(size 1.55 1.55)
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
@@ -48391,7 +48392,7 @@
 		)
 		(pad "13" thru_hole circle
 			(at 5.588 -0.84 180)
-			(size 1.5 1.5)
+			(size 1.35 1.35)
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
@@ -48402,7 +48403,7 @@
 		)
 		(pad "14" thru_hole circle
 			(at -5.588 -0.84 180)
-			(size 1.5 1.5)
+			(size 1.35 1.35)
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
@@ -48413,7 +48414,7 @@
 		)
 		(pad "15" thru_hole circle
 			(at 5.588 0.703 180)
-			(size 1.5 1.5)
+			(size 1.35 1.35)
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
@@ -48424,7 +48425,7 @@
 		)
 		(pad "16" thru_hole circle
 			(at -5.588 0.703 180)
-			(size 1.5 1.5)
+			(size 1.35 1.35)
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
@@ -48446,7 +48447,7 @@
 		)
 		(pad "SH" thru_hole oval
 			(at -7.166 -6.189 180)
-			(size 2.4 4.6)
+			(size 2.3 4.6)
 			(drill oval 2 4.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
@@ -48457,7 +48458,7 @@
 		)
 		(pad "SH" thru_hole oval
 			(at 7.166 -6.189 180)
-			(size 2.4 4.6)
+			(size 2.3 4.6)
 			(drill oval 2 4.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
@@ -78779,7 +78780,7 @@
 			)
 		)
 	)
-	(gr_text "IMPEDANCE GEOMETRIES (L1 top, referenced to In1 GND, H=0.2104mm Er=4.4; computed via\nIPC-2141 edge-coupled microstrip / grounded-CPW closed form, T=0.05mm finished outer Cu;\nverify against JLCPCB's live impedance calculator before ordering):\n  DIFF_USB_90  (USB2 SS/D+-):  W=0.24mm  gap=0.15mm  -> Zdiff ~90.2 ohm\n  DIFF_PCIE_85 (M.2 PCIe/REFCLK): W=0.27mm gap=0.15mm -> Zdiff ~85.0 ohm\n  DIFF_MDI_100 (Ethernet MDI): W=0.19mm  gap=0.15mm  -> Zdiff ~100.1 ohm\n  RF_50 (CPWG, ANT/GNSS):      W=0.14mm  ground-gap=0.30mm -> Z0 ~50.0 ohm\nCopper-to-other-net clearance floor for all 4 classes: 0.30mm (see .kicad_dru).\nAlso entered in docs/ordering.md for the JLC order form."
+	(gr_text "IMPEDANCE GEOMETRIES (L1 top, referenced to In1 GND through 0.2104mm/Er4.4 prepreg).\nSOURCE: JLCPCB live impedance calculator, stackup JLC04161H-7628 (Standard, finished 1.59mm+/-10%),\n4L/1.6mm, outer 1oz / inner 0.5oz, verified 2026-07-16 (replaces Task-15 closed-form values;\nRF_50 closed form was wrong 2.4x -- see .kicad_dru header):\n  DIFF_USB_90  (USB2 SS/D+-):  W=0.2474mm  gap=0.15mm  -> Zdiff 90 ohm\n  DIFF_PCIE_85 (M.2 PCIe/REFCLK): W=0.2835mm gap=0.15mm -> Zdiff 85 ohm\n  DIFF_MDI_100 (Ethernet MDI): W=0.1826mm  gap=0.15mm  -> Zdiff 100 ohm\n  RF_50 (CPWG, ANT/GNSS):      W=0.3345mm  ground-gap=0.30mm -> Z0 50 ohm\n  Default (normal signals):    W=0.3586mm microstrip -> Z0 50 ohm (user-requested)\nCopper-to-other-net clearance floor for the 4 controlled classes: 0.30mm (see .kicad_dru).\nAlso entered in docs/ordering.md for the JLC order form (select JLC04161H-7628 + impedance control)."
 		(at -22.87868 70.12132 0)
 		(layer "Cmts.User")
 		(uuid "8d6b7b5e-f4a7-4b53-b5ec-85268c84d47a")
