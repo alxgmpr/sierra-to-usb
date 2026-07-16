@@ -516,7 +516,42 @@
         "bus_width": 12,
         "clearance": 0.3,
         "diff_pair_gap": 0.15,
-        "diff_pair_via_gap": 0.15,
+        "diff_pair_width": 0.1826,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "DIFF_MDI_100",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.1826,
+        "tuning_profile": "100D",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.15,
+        "diff_pair_width": 0.2835,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "DIFF_PCIE_85",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2835,
+        "tuning_profile": "85D",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.15,
         "diff_pair_width": 0.2474,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -533,66 +568,8 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.3,
-        "diff_pair_gap": 0.15,
-        "diff_pair_via_gap": 0.15,
-        "diff_pair_width": 0.2835,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "DIFF_PCIE_85",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2835,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.3,
-        "diff_pair_gap": 0.15,
-        "diff_pair_via_gap": 0.15,
-        "diff_pair_width": 0.1826,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "DIFF_MDI_100",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.1826,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.3,
-        "diff_pair_gap": 0.3,
-        "diff_pair_via_gap": 0.3,
-        "diff_pair_width": 0.3345,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "RF_50",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 3,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.3345,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
         "clearance": 2.5,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -611,7 +588,6 @@
         "bus_width": 12,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -622,6 +598,24 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.3,
+        "diff_pair_width": 0.3345,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "RF_50",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3345,
+        "tuning_profile": "50CPWG",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -1043,6 +1037,132 @@
         "profile_name": "90D",
         "target_impedance": 90.0,
         "type": 1,
+        "via_overrides": [],
+        "via_prop_delay": 0
+      },
+      {
+        "enable_time_domain_tuning": true,
+        "layer_entries": [
+          {
+            "bottom_reference_layer": "In1.Cu",
+            "delay": 5868300,
+            "diff_pair_gap": 150000,
+            "signal_layer": "F.Cu",
+            "top_reference_layer": "UNDEFINED",
+            "width": 283500
+          },
+          {
+            "bottom_reference_layer": "In2.Cu",
+            "delay": 7035400,
+            "diff_pair_gap": 203566,
+            "signal_layer": "In1.Cu",
+            "top_reference_layer": "F.Cu",
+            "width": 306040
+          },
+          {
+            "bottom_reference_layer": "B.Cu",
+            "delay": 7035400,
+            "diff_pair_gap": 203566,
+            "signal_layer": "In2.Cu",
+            "top_reference_layer": "In1.Cu",
+            "width": 306040
+          },
+          {
+            "bottom_reference_layer": "UNDEFINED",
+            "delay": 5868300,
+            "diff_pair_gap": 150000,
+            "signal_layer": "B.Cu",
+            "top_reference_layer": "In2.Cu",
+            "width": 283500
+          }
+        ],
+        "profile_name": "85D",
+        "target_impedance": 85.0,
+        "type": 1,
+        "via_overrides": [],
+        "via_prop_delay": 0
+      },
+      {
+        "enable_time_domain_tuning": true,
+        "layer_entries": [
+          {
+            "bottom_reference_layer": "In1.Cu",
+            "delay": 5868300,
+            "diff_pair_gap": 150000,
+            "signal_layer": "F.Cu",
+            "top_reference_layer": "UNDEFINED",
+            "width": 182600
+          },
+          {
+            "bottom_reference_layer": "In2.Cu",
+            "delay": 7035400,
+            "diff_pair_gap": 203566,
+            "signal_layer": "In1.Cu",
+            "top_reference_layer": "F.Cu",
+            "width": 306040
+          },
+          {
+            "bottom_reference_layer": "B.Cu",
+            "delay": 7035400,
+            "diff_pair_gap": 203566,
+            "signal_layer": "In2.Cu",
+            "top_reference_layer": "In1.Cu",
+            "width": 306040
+          },
+          {
+            "bottom_reference_layer": "UNDEFINED",
+            "delay": 5868300,
+            "diff_pair_gap": 150000,
+            "signal_layer": "B.Cu",
+            "top_reference_layer": "In2.Cu",
+            "width": 182600
+          }
+        ],
+        "profile_name": "100D",
+        "target_impedance": 100.0,
+        "type": 1,
+        "via_overrides": [],
+        "via_prop_delay": 0
+      },
+      {
+        "enable_time_domain_tuning": true,
+        "layer_entries": [
+          {
+            "bottom_reference_layer": "In1.Cu",
+            "delay": 5899200,
+            "diff_pair_gap": 0,
+            "signal_layer": "F.Cu",
+            "top_reference_layer": "UNDEFINED",
+            "width": 334500
+          },
+          {
+            "bottom_reference_layer": "In2.Cu",
+            "delay": 7035400,
+            "diff_pair_gap": 0,
+            "signal_layer": "In1.Cu",
+            "top_reference_layer": "F.Cu",
+            "width": 306040
+          },
+          {
+            "bottom_reference_layer": "B.Cu",
+            "delay": 7035400,
+            "diff_pair_gap": 0,
+            "signal_layer": "In2.Cu",
+            "top_reference_layer": "In1.Cu",
+            "width": 306040
+          },
+          {
+            "bottom_reference_layer": "UNDEFINED",
+            "delay": 5899200,
+            "diff_pair_gap": 0,
+            "signal_layer": "B.Cu",
+            "top_reference_layer": "In2.Cu",
+            "width": 334500
+          }
+        ],
+        "profile_name": "50CPWG",
+        "target_impedance": 50.0,
+        "type": 0,
         "via_overrides": [],
         "via_prop_delay": 0
       }

@@ -350,14 +350,14 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "d709fb03-f733-4c50-8835-600b7e337ce3")
 	)
-	(pad "" thru_hole circle
+	(pad "" np_thru_hole circle
 		(at 3.5 5.49)
 		(size 0.9 0.9)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(uuid "aa1315f4-051a-47e6-9e1e-23decc0e7b03")
 	)
-	(pad "" thru_hole circle
+	(pad "" np_thru_hole circle
 		(at -5.0 5.49)
 		(size 0.9 0.9)
 		(drill 0.9)
