@@ -309,7 +309,7 @@
 	)
 	(text "Task 12 -- 5x MHF4 (SMT receptacle) -> SMA (edge jack) RF antenna breakouts. Pure passive: signal\ncenter pin (pin 1) net-to-net per pair, shield/ground pin (pin 2) tied to GND at both ends. Nets\nANT0/ANT1/ANT2/ANT3/GNSS, netclass RF_50 (patterns \"ANT*\"/\"GNSS\", declared project-file Task 3,\nunmodified here -- verified names match). Refdes remap (brief's placeholder J5-J9 MHF4 / J10-J14\nSMA, offset-5 pairing, predates the current project state): J5=Qwiic and J7=Spare (mcu.kicad_sch),\nJ8=magjack (ethernet.kicad_sch) already claimed those numbers. Continuing numerically from J8 with\nadjacent (N/N+1) MHF4/SMA pairs instead: J9/J10=ANT0, J11/J12=ANT1, J13/J14=ANT2, J15/J16=ANT3,\nJ17/J18=GNSS -- see task-12-report.md for the full table. Symbol choice: stock\nConnector:Conn_Coaxial (pin 1=In/signal, pin 2=Ext/shield) used for BOTH connector classes rather\nthan authoring custom MHF4/SMA symbols. No exact-MPN stock footprint exists for the sourced parts\n(TE CONMHF4-SMD-G-T / BAT Wireless BWSMA-KE-Z001, per docs/sourcing.md), so pin numbering was\nverified against the closest same-manufacturer-class stock footprints instead:\nU.FL_Hirose_U.FL-R-SMT-1_Vertical.kicad_mod (MHF4/U.FL-class SMD receptacle: pad 1=signal, pad 2\nx2=shield tabs) and SMA_BAT_Wireless_BWSMA-KWE-Z001.kicad_mod (same BAT Wireless SMA-edge family,\ndiffers only in mount-style suffix KWE vs KE: pad 1=roundrect/signal, pad 2 x4=shield tabs). Both\nmatch Conn_Coaxial's pin1=signal/pin2=shield numbering exactly; real footprints for these exact\nMPNs are authored/linked at Task 14, not this task."
 		(exclude_from_sim no)
-		(at 92 12 0)
+		(at 91.44 13.97 0)
 		(effects
 			(font
 				(size 1.27 1.27)

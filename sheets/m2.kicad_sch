@@ -3822,7 +3822,7 @@
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "ddf92cb8-249e-4655-8cdb-3f640a7a858e")
 	)
@@ -4555,7 +4555,7 @@
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "725fa190-dea9-43ce-a87a-1d0c602ae350")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -4765,7 +4765,7 @@
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "8844aabc-addb-4b42-9474-736c46a88671")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -4828,7 +4828,7 @@
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "8ea90106-c5e3-4b9d-baf0-46b4e1da4c79")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -5122,7 +5122,7 @@
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "b0d7048d-0e96-4257-bb25-400c38e11f3a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -5311,7 +5311,7 @@
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "c8ea4441-1294-40a8-a768-9285c450537e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -5647,7 +5647,7 @@
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "fcffe10d-8736-4bef-9d74-9a23eda64857")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -5847,7 +5847,7 @@
 		(fields_autoplaced yes)
 		(uuid "0b57fd53-bae7-44f1-9ade-522312481790")
 		(property "Reference" "#FLG21"
-			(at 277 146 0)
+			(at 266.70 146.05 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6655,7 +6655,7 @@
 		(fields_autoplaced yes)
 		(uuid "2e3647cc-b0c0-4e32-9487-ed4e33153acf")
 		(property "Reference" "#FLG18"
-			(at 277 119 0)
+			(at 266.70 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7615,7 +7615,7 @@
 		(fields_autoplaced yes)
 		(uuid "40f8313f-c827-47bf-a965-8a97256eaed0")
 		(property "Reference" "#FLG17"
-			(at 277 110 0)
+			(at 266.70 110.49 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8119,7 +8119,7 @@
 		(fields_autoplaced yes)
 		(uuid "483eaa36-04f4-4313-8818-67724ee2589f")
 		(property "Reference" "#FLG16"
-			(at 277 101 0)
+			(at 266.70 101.60 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10519,7 +10519,7 @@
 		(fields_autoplaced yes)
 		(uuid "882e8bf8-10f9-4ac3-ac5a-7dc18075e3ac")
 		(property "Reference" "#PWR66"
-			(at 142 196.26 0)
+			(at 142.24 200.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10721,7 +10721,7 @@
 		(fields_autoplaced yes)
 		(uuid "8a232058-8482-4fe3-ae91-7a9485b15324")
 		(property "Reference" "#FLG22"
-			(at 277 155 0)
+			(at 266.70 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11367,7 +11367,7 @@
 		(fields_autoplaced yes)
 		(uuid "92859cc4-92c4-42cd-b328-98e2f6fc15e9")
 		(property "Reference" "#FLG19"
-			(at 277 128 0)
+			(at 266.70 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11745,7 +11745,7 @@
 		(fields_autoplaced yes)
 		(uuid "9ee1c439-6072-45cc-a599-db6e07a2e1f6")
 		(property "Reference" "Q32"
-			(at 252 227 0)
+			(at 259.08 226.06 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11755,7 +11755,7 @@
 			)
 		)
 		(property "Value" "DMG3415U-7"
-			(at 252 231 0)
+			(at 250.19 238.76 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12289,7 +12289,7 @@
 		(fields_autoplaced yes)
 		(uuid "ae6ec65c-1d32-48fd-8faf-aef81a44742c")
 		(property "Reference" "#FLG20"
-			(at 277 137 0)
+			(at 266.70 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13077,7 +13077,7 @@
 		(fields_autoplaced yes)
 		(uuid "d17273bd-1974-42ae-ad70-d7cd8477412e")
 		(property "Reference" "Q40"
-			(at 317 262 0)
+			(at 328.93 262.89 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13087,7 +13087,7 @@
 			)
 		)
 		(property "Value" "BSS138"
-			(at 317 268 0)
+			(at 328.93 266.70 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

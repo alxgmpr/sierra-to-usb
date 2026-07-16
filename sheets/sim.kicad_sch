@@ -2633,12 +2633,12 @@
 	)
 	(global_label "UIM2_DET_CTL"
 		(shape input)
-		(at 154.92 130 0)
+		(at 154.92 130 180)
 		(effects
 			(font
 				(size 1.016 1.016)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "0a6d6e21-4ef6-45d7-8974-f1913f812cec")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -3141,7 +3141,7 @@
 		(fields_autoplaced yes)
 		(uuid "09d065ee-c0ae-4a3e-9f89-bd4ffe276409")
 		(property "Reference" "SIM2"
-			(at 22 137 0)
+			(at 22.86 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3151,7 +3151,7 @@
 			)
 		)
 		(property "Value" "CSIM-H137-7P"
-			(at 22 143 0)
+			(at 22.86 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5296,23 +5296,25 @@
 		(fields_autoplaced yes)
 		(uuid "9eebce3f-c07f-4e2a-98f4-cdd07c5e7bab")
 		(property "Reference" "Q39"
-			(at 162 127 0)
+			(at 165.1 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "2N7002"
-			(at 162 133 0)
+			(at 165.1 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
@@ -6148,7 +6150,7 @@
 		(fields_autoplaced yes)
 		(uuid "b619af79-f421-4378-b6f7-3664d83e4ebf")
 		(property "Reference" "C118"
-			(at 47 10 0)
+			(at 46.99 12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6159,7 +6161,7 @@
 			)
 		)
 		(property "Value" "22pF"
-			(at 54 10 0)
+			(at 54.61 12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6262,7 +6264,7 @@
 		(fields_autoplaced yes)
 		(uuid "bd051bca-47a6-40f7-bead-c4b26c6a60ff")
 		(property "Reference" "SIM1"
-			(at 22 37 0)
+			(at 22.86 26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6272,7 +6274,7 @@
 			)
 		)
 		(property "Value" "CSIM-H137-7P"
-			(at 22 43 0)
+			(at 22.86 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

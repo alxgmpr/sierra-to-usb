@@ -7748,7 +7748,7 @@
 			)
 		)
 		(property "Value" "BOOTSEL"
-			(at 62 58 0)
+			(at 60 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10071,23 +10071,25 @@
 		(fields_autoplaced yes)
 		(uuid "4b9a3aa8-6627-4cbe-86e8-c8561aa1a001")
 		(property "Reference" "Y1"
-			(at 57 97 0)
+			(at 49.53 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Value" "12MHz"
-			(at 57 103 0)
+			(at 49.53 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
@@ -10442,7 +10444,7 @@
 		(fields_autoplaced yes)
 		(uuid "61ca36d9-536f-4f24-8af6-fdddf554480f")
 		(property "Reference" "U28"
-			(at 282 137 0)
+			(at 280 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10452,7 +10454,7 @@
 			)
 		)
 		(property "Value" "SK6805-EC15"
-			(at 282 143 0)
+			(at 280 151.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13911,7 +13913,7 @@
 		(fields_autoplaced yes)
 		(uuid "c3b9a01b-57da-43f5-ac15-77f0a314327b")
 		(property "Reference" "Q35"
-			(at 252 177 0)
+			(at 256.54 176.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13921,7 +13923,7 @@
 			)
 		)
 		(property "Value" "2N7002"
-			(at 252 183 0)
+			(at 256.54 182.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14047,7 +14049,7 @@
 			)
 		)
 		(property "Value" "Spare"
-			(at 432 153 0)
+			(at 432 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14155,7 +14157,7 @@
 		(fields_autoplaced yes)
 		(uuid "c4fd6421-171f-4e89-b633-66e7a8ea1f07")
 		(property "Reference" "Q33"
-			(at 242 137 0)
+			(at 246.38 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14165,7 +14167,7 @@
 			)
 		)
 		(property "Value" "DMG3415U-7"
-			(at 242 143 0)
+			(at 246.38 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16460,7 +16462,7 @@
 		(fields_autoplaced yes)
 		(uuid "f5b8984b-c39e-49d0-bfcf-eb386f916ca2")
 		(property "Reference" "Q34"
-			(at 362 87 0)
+			(at 367.03 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16470,7 +16472,7 @@
 			)
 		)
 		(property "Value" "2N7002"
-			(at 362 93 0)
+			(at 367.03 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16708,7 +16710,7 @@
 			)
 		)
 		(property "Value" "RUN"
-			(at 62 121 0)
+			(at 62 122.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
