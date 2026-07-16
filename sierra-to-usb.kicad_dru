@@ -118,16 +118,20 @@
 # rule-area zone (a placeholder for that area also exists in the PCB, see the
 # "POE_PRI_MOAT" rule-area zone and its adjacent Cmts.User text note).
 #
-# POE_PRI net class ("POE_*" wildcard, sierra-to-usb.kicad_pro) already
-# covers POE_VA+/-, POE_VB+/-, POE_VDD54, POE_VDD54_F, POE_VSS, POE_RTN.
-# The flyback/PD-controller primary-side control nets (TPS23730 U10, primary
-# FET Q20, T1 primary pins 1-5) do NOT carry a POE_ prefix, so they were
-# traced net-by-net from the exported netlist (every net touching U10, Q20,
-# BR1, BR2, D7, T1 pins 1-5, U20 pins 3-4, U23 pins 1-2) and added to the
-# POE_PRI net class explicitly in sierra-to-usb.kicad_pro's netclass_patterns:
-# N_AUX, N_BT, N_BTLED, N_CLSA, N_CLSB, N_COMP, N_CS, N_CS_SNS, N_DEN, N_DT,
-# N_DTHR, N_FRS, N_GAT2, N_GATE, N_GATE_Q, N_ISTP, N_LINEUV, N_PPD, N_REF,
-# N_SST, N_SW, N_VB, N_VBG, N_VCC.
+# POE_PRI membership (REWRITTEN 2026-07-16 — the Task-15 patterns were
+# dead on arrival): KiCad netclass patterns match the FULL hierarchical
+# net name, so "POE_*" never matched "/Power Input/POE_VDD54" and bare
+# "N_AUX" never matched "/Power Input/N_AUX" — only the 4 global magjack
+# tap nets were ever in the class, and the moat protected nothing else.
+# The class is now populated with EXACT hierarchical names derived by a
+# connectivity walk (BFS from the PoE input nets across every component,
+# stopping at the barrier parts' secondary pins): 36 primary nets incl.
+# 4 the Task-15 manual trace missed (N_CLAMP_D/G, N_AUX_R, N_R43C44),
+# plus U10's unconnected-pad nets. POE_STS_RAW (secondary side of opto
+# U23, despite the POE_ name) is deliberately NOT in the class. This
+# membership is machine-verified by tools/check_netclasses.py (runs in
+# the pre-commit hook): it re-derives the domain from the netlist and
+# fails the commit on any drift, rename, or barrier breach.
 #
 # Rule shape (hardened, Task 15 fix pass -- see task-15-report.md "Fix pass"
 # for the empirical 6-case matrix this is derived from): `A.Reference` only

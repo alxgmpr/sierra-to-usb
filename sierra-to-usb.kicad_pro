@@ -717,10 +717,6 @@
         "pattern": "GNSS"
       },
       {
-        "netclass": "POE_PRI",
-        "pattern": "POE_*"
-      },
-      {
         "netclass": "POWER",
         "pattern": "+12V*"
       },
@@ -738,99 +734,179 @@
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_AUX"
+        "pattern": "POE_VA+"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_BT"
+        "pattern": "POE_VA-"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_BTLED"
+        "pattern": "POE_VB+"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_CLSA"
+        "pattern": "POE_VB-"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_CLSB"
+        "pattern": "/Power Input/N_AUX"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_COMP"
+        "pattern": "/Power Input/N_AUX_R"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_CS"
+        "pattern": "/Power Input/N_BT"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_CS_SNS"
+        "pattern": "/Power Input/N_BTLED"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_DEN"
+        "pattern": "/Power Input/N_CLAMP_D"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_DT"
+        "pattern": "/Power Input/N_CLAMP_G"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_DTHR"
+        "pattern": "/Power Input/N_CLSA"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_FRS"
+        "pattern": "/Power Input/N_CLSB"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_GAT2"
+        "pattern": "/Power Input/N_COMP"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_GATE"
+        "pattern": "/Power Input/N_CS"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_GATE_Q"
+        "pattern": "/Power Input/N_CS_SNS"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_ISTP"
+        "pattern": "/Power Input/N_DEN"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_LINEUV"
+        "pattern": "/Power Input/N_DT"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_PPD"
+        "pattern": "/Power Input/N_DTHR"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_REF"
+        "pattern": "/Power Input/N_FRS"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_SST"
+        "pattern": "/Power Input/N_GAT2"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_SW"
+        "pattern": "/Power Input/N_GATE"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_VB"
+        "pattern": "/Power Input/N_GATE_Q"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_VBG"
+        "pattern": "/Power Input/N_ISTP"
       },
       {
         "netclass": "POE_PRI",
-        "pattern": "N_VCC"
+        "pattern": "/Power Input/N_LINEUV"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/N_PPD"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/N_R43C44"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/N_REF"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/N_SST"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/N_SW"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/N_VB"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/N_VBG"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/N_VCC"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/POE_RTN"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/POE_VDD54"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/POE_VDD54_F"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "/Power Input/POE_VSS"
+      },
+      {
+        "netclass": "POE_PRI",
+        "pattern": "unconnected-(U10-*"
+      },
+      {
+        "netclass": "DIFF_USB_90",
+        "pattern": "*/SS_*"
+      },
+      {
+        "netclass": "DIFF_PCIE_85",
+        "pattern": "*/PCIE_M*"
+      },
+      {
+        "netclass": "DIFF_PCIE_85",
+        "pattern": "*/PCIE_REFCLK*"
+      },
+      {
+        "netclass": "DIFF_MDI_100",
+        "pattern": "*/MDI*"
+      },
+      {
+        "netclass": "RF_50",
+        "pattern": "*/ANT*"
+      },
+      {
+        "netclass": "RF_50",
+        "pattern": "*/GNSS"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "*/+12V*"
       }
     ]
   },
