@@ -761,3 +761,6 @@ was a real, silent-until-now MPN-selection defect from Task 7, not
 introduced by Task 14 — caught only because this task's pin-count
 verification forced a genuine datasheet check instead of trusting a
 name-matched stock footprint filename.
+
+
+**2026-07-15 GUI-resave note:** KiCad GUI resave normalized coordinates; ERC warning total now 595 (was 652). Category re-count deferred to next waiver-touching task.
