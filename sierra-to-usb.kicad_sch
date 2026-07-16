@@ -6,8 +6,8 @@
 	(paper "A0")
 	(lib_symbols)
 	(sheet
-		(at 100.0 80.0)
-		(size 80.0 50.0)
+		(at 420 190)
+		(size 80 50)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -18,221 +18,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "f5a12b4b-c279-4b26-9f14-8d152bf2e4b9")
-		(property "Sheetname" "Power Input"
-			(at 100.0 79.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/power_input.kicad_sch"
-			(at 100.0 130.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 260.0 80.0)
-		(size 80.0 50.0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "e434f254-ecc4-4948-a6da-b21ef9d0f547")
-		(property "Sheetname" "Power Rails"
-			(at 260.0 79.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/power_rails.kicad_sch"
-			(at 260.0 130.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 420.0 80.0)
-		(size 80.0 50.0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "73117a4a-deaa-4ee3-9b76-9f9d022b6743")
-		(property "Sheetname" "M.2"
-			(at 420.0 79.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/m2.kicad_sch"
-			(at 420.0 130.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 100.0 190.0)
-		(size 80.0 50.0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "c58b9910-d755-41c0-8ab8-83b9c45fd631")
-		(property "Sheetname" "USB3 Data"
-			(at 100.0 189.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/usb3_data.kicad_sch"
-			(at 100.0 240.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "5")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 260.0 190.0)
-		(size 80.0 50.0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "61357e5a-1387-4a79-b320-e8993d638810")
-		(property "Sheetname" "USB2 Debug"
-			(at 260.0 189.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/usb2_debug.kicad_sch"
-			(at 260.0 240.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "6")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 420.0 190.0)
-		(size 80.0 50.0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "07b65dee-eb78-4957-840b-2ea5a6e59dea")
 		(property "Sheetname" "MCU"
-			(at 420.0 189.29 0)
+			(at 420 189.29 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -241,7 +33,9 @@
 			)
 		)
 		(property "Sheetfile" "sheets/mcu.kicad_sch"
-			(at 420.0 240.58 0)
+			(at 420 240.58 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -258,8 +52,8 @@
 		)
 	)
 	(sheet
-		(at 100.0 300.0)
-		(size 80.0 50.0)
+		(at 100 300)
+		(size 80 50)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -270,11 +64,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "546d2886-c4fd-4053-b308-c06c3745561e")
 		(property "Sheetname" "Ethernet"
-			(at 100.0 299.29 0)
+			(at 100 299.29 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -283,7 +79,9 @@
 			)
 		)
 		(property "Sheetfile" "sheets/ethernet.kicad_sch"
-			(at 100.0 350.58 0)
+			(at 100 350.58 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -300,8 +98,8 @@
 		)
 	)
 	(sheet
-		(at 260.0 300.0)
-		(size 80.0 50.0)
+		(at 260 190)
+		(size 80 50)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -312,11 +110,105 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
+		)
+		(uuid "61357e5a-1387-4a79-b320-e8993d638810")
+		(property "Sheetname" "USB2 Debug"
+			(at 260 189.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sheets/usb2_debug.kicad_sch"
+			(at 260 240.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "sierra-to-usb"
+				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 420 80)
+		(size 80 50)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "73117a4a-deaa-4ee3-9b76-9f9d022b6743")
+		(property "Sheetname" "M.2"
+			(at 420 79.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sheets/m2.kicad_sch"
+			(at 420 130.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "sierra-to-usb"
+				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 260 300)
+		(size 80 50)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
 		)
 		(uuid "a819ecdb-6e62-47c4-88b1-23278076a079")
 		(property "Sheetname" "SIM"
-			(at 260.0 299.29 0)
+			(at 260 299.29 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -325,7 +217,9 @@
 			)
 		)
 		(property "Sheetfile" "sheets/sim.kicad_sch"
-			(at 260.0 350.58 0)
+			(at 260 350.58 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -342,8 +236,8 @@
 		)
 	)
 	(sheet
-		(at 420.0 300.0)
-		(size 80.0 50.0)
+		(at 420 300)
+		(size 80 50)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -354,11 +248,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "c0101b48-b720-4ad6-8a6c-65b6e69d4f97")
 		(property "Sheetname" "RF"
-			(at 420.0 299.29 0)
+			(at 420 299.29 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -367,7 +263,9 @@
 			)
 		)
 		(property "Sheetfile" "sheets/rf.kicad_sch"
-			(at 420.0 350.58 0)
+			(at 420 350.58 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -379,6 +277,144 @@
 			(project "sierra-to-usb"
 				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
 					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100 190)
+		(size 80 50)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c58b9910-d755-41c0-8ab8-83b9c45fd631")
+		(property "Sheetname" "USB3 Data"
+			(at 100 189.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sheets/usb3_data.kicad_sch"
+			(at 100 240.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "sierra-to-usb"
+				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 260 80)
+		(size 80 50)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e434f254-ecc4-4948-a6da-b21ef9d0f547")
+		(property "Sheetname" "Power Rails"
+			(at 260 79.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sheets/power_rails.kicad_sch"
+			(at 260 130.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "sierra-to-usb"
+				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100 80)
+		(size 80 50)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f5a12b4b-c279-4b26-9f14-8d152bf2e4b9")
+		(property "Sheetname" "Power Input"
+			(at 100 79.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sheets/power_input.kicad_sch"
+			(at 100 130.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "sierra-to-usb"
+				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+					(page "2")
 				)
 			)
 		)
