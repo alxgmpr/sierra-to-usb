@@ -11044,7 +11044,7 @@
 	(footprint "Diode_SMD:D_SMB"
 		(layer "F.Cu")
 		(uuid "1abaaf1c-f11c-4440-9d12-24918c2fe102")
-		(at 169 31.5)
+		(at 131.0 63.0)
 		(descr "Diode SMB (DO-214AA)")
 		(tags "Diode SMB (DO-214AA)")
 		(property "Reference" "D7"
@@ -16768,7 +16768,7 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "2b324eea-590d-4a39-b111-960ff92b962e")
-		(at 209.585 21.755)
+		(at 144.0 46.0)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R19"
@@ -73389,7 +73389,7 @@
 	(footprint "Resistor_SMD:R_1206_3216Metric"
 		(layer "F.Cu")
 		(uuid "c2da2d19-d624-4a0e-b0a5-91a08fa99c91")
-		(at 228.725 63.095)
+		(at 150.0 50.0)
 		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R20"
@@ -76715,7 +76715,7 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "cd241651-3886-438f-885c-48ee8089404b")
-		(at 217.225 67.905)
+		(at 129.0 47.0)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C8"
@@ -87919,7 +87919,7 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric"
 		(layer "F.Cu")
 		(uuid "f1a740d4-6a24-4229-bdab-be027b9fcb4d")
-		(at 238.075 76.875)
+		(at 132.0 48.5)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C9"
@@ -95916,7 +95916,7 @@
 	(footprint "sierra-to-usb:TPS23730_RMTR"
 		(layer "B.Cu")
 		(uuid "a34e9c41-ba75-4bfe-8a36-e089bc0b807a")
-		(at 225.1 -11.15 180)
+		(at 137.0 43.0 180)
 		(descr "TI TPS23730RMTR, VQFN-45 RMT package (7.0x5.0mm, 0.4mm pitch, DUAL exposed pad). GEOMETRY REPLACED Task 14b: land pattern taken from the LCSC/EasyEDA footprint for TPS23731RMTR C3189532 (identical TI RMT0045A package) and cross-verified dimension-by-dimension against TI's own RMT0045A package outline / example board layout in the TPS23730 datasheet (SLVSF66, pkg drawing 4225180/A): pin distribution left 1-13 / bottom 14-22 (9 pads, x=-1.8..+1.4) / right 23-35 / top 36-45 (10 pads, x=+1.8..-1.8), columns at x=+/-2.4, 0.4mm pitch with 0.8mm double-gaps between pins 9/10 (left, y=+0.6/+1.4) and 29/30 (right, y=+0.2/-0.6), pads 0.2x0.6mm, PAD_G/PAD_S dual EPs: pad 46 = 3.7x2.1 at y=-1.4, pad 47 = 2.9x2.15 at y=+1.37 -- all eight checked values match the TI drawing exactly. Prior Task-14 approximation had the per-side pin distribution wrong (10/12/10/13 vs real 13/9/13/10) and guessed EP geometry. 3D model: TPS23731 EasyEDA body (same RMT package).")
 		(property "Reference" "U10"
 			(at 0 7.4 0)
