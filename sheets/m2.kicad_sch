@@ -3817,7 +3817,7 @@
 		(uuid "ddf00db1-597d-48d5-9bc1-d40558b37bb8")
 	)
 	(label "N_Q6_G"
-		(at 244.92 229 0)
+		(at 244.92 229 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4550,7 +4550,7 @@
 	)
 	(global_label "PCIE_DIS_CTL"
 		(shape input)
-		(at 224.92 112 0)
+		(at 224.92 112 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4760,7 +4760,7 @@
 	)
 	(global_label "VBUSSNS_CTL"
 		(shape input)
-		(at 224.92 238 0)
+		(at 224.92 238 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4823,7 +4823,7 @@
 	)
 	(global_label "+1V8"
 		(shape input)
-		(at 314.92 265 0)
+		(at 314.92 265 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -5117,7 +5117,7 @@
 	)
 	(global_label "WDIS_CTL"
 		(shape input)
-		(at 224.92 148 0)
+		(at 224.92 148 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -5306,7 +5306,7 @@
 	)
 	(global_label "FCPO_CTL"
 		(shape input)
-		(at 224.92 76 0)
+		(at 224.92 76 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -5642,7 +5642,7 @@
 	)
 	(global_label "MRST_CTL"
 		(shape input)
-		(at 224.92 184 0)
+		(at 224.92 184 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -5847,7 +5847,7 @@
 		(fields_autoplaced yes)
 		(uuid "0b57fd53-bae7-44f1-9ade-522312481790")
 		(property "Reference" "#FLG21"
-			(at 266.70 146.05 0)
+			(at 266.7 146.05 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6655,7 +6655,7 @@
 		(fields_autoplaced yes)
 		(uuid "2e3647cc-b0c0-4e32-9487-ed4e33153acf")
 		(property "Reference" "#FLG18"
-			(at 266.70 119.38 0)
+			(at 266.7 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7615,7 +7615,7 @@
 		(fields_autoplaced yes)
 		(uuid "40f8313f-c827-47bf-a965-8a97256eaed0")
 		(property "Reference" "#FLG17"
-			(at 266.70 110.49 0)
+			(at 266.7 110.49 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8119,7 +8119,7 @@
 		(fields_autoplaced yes)
 		(uuid "483eaa36-04f4-4313-8818-67724ee2589f")
 		(property "Reference" "#FLG16"
-			(at 266.70 101.60 0)
+			(at 266.7 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10721,7 +10721,7 @@
 		(fields_autoplaced yes)
 		(uuid "8a232058-8482-4fe3-ae91-7a9485b15324")
 		(property "Reference" "#FLG22"
-			(at 266.70 154.94 0)
+			(at 266.7 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11367,7 +11367,7 @@
 		(fields_autoplaced yes)
 		(uuid "92859cc4-92c4-42cd-b328-98e2f6fc15e9")
 		(property "Reference" "#FLG19"
-			(at 266.70 128.27 0)
+			(at 266.7 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12289,7 +12289,7 @@
 		(fields_autoplaced yes)
 		(uuid "ae6ec65c-1d32-48fd-8faf-aef81a44742c")
 		(property "Reference" "#FLG20"
-			(at 266.70 137.16 0)
+			(at 266.7 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13087,7 +13087,7 @@
 			)
 		)
 		(property "Value" "BSS138"
-			(at 328.93 266.70 0)
+			(at 328.93 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

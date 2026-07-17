@@ -5,543 +5,6 @@
 	(uuid "3e0c7cfa-22dc-42f9-983c-d7c5bcba2665")
 	(paper "A2")
 	(lib_symbols
-		(symbol "sierra-to-usb:USB_C_Receptacle_USB3.2_24P"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at -15 33 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TYPE-C-31-M-17"
-				(at -15 35.5 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-17"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "USB Type-C receptacle, 24-pin full-featured (both SS pair rows + CC/D+-/SBU), HRO TYPE-C-31-M-17 class. Standard USB-C pinout (pin-for-pin per USB Type-C spec Table 1-1, cross-checked against the stock KiCad USB_C_Receptacle_USB2.0_16P symbol for the shared 16 non-SS pins). Not on stock KiCad libs (no USB_C_Receptacle_USB3.2 symbol shipped in this KiCad 10 install) -- authored Task 7."
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "USB Type-C receptacle USB3 SuperSpeed connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "USB_C_Receptacle_USB3.2_24P_0_1"
-				(rectangle
-					(start -10 -15)
-					(end 10 29)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "USB_C_Receptacle_USB3.2_24P_1_1"
-				(pin passive line
-					(at -15 25.4 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15 25.4 180)
-					(length 5.08)
-					(name "SSTXP1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15 20.32 180)
-					(length 5.08)
-					(name "SSTXN1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -15 20.32 0)
-					(length 5.08)
-					(name "VBUS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15 15.24 0)
-					(length 5.08)
-					(name "CC1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15 5.08 0)
-					(length 5.08)
-					(name "D+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15 0 0)
-					(length 5.08)
-					(name "D-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15 -5.08 0)
-					(length 5.08)
-					(name "SBU1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -15 20.32 0)
-					(length 5.08)
-					(name "VBUS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15 -10.16 180)
-					(length 5.08)
-					(name "SSRXN2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15 -5.08 180)
-					(length 5.08)
-					(name "SSRXP2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -15 25.4 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -15 25.4 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15 5.08 180)
-					(length 5.08)
-					(name "SSTXP2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15 0 180)
-					(length 5.08)
-					(name "SSTXN2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -15 20.32 0)
-					(length 5.08)
-					(name "VBUS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15 10.16 0)
-					(length 5.08)
-					(name "CC2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15 5.08 0)
-					(length 5.08)
-					(name "D+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15 0 0)
-					(length 5.08)
-					(name "D-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15 -10.16 0)
-					(length 5.08)
-					(name "SBU2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -15 20.32 0)
-					(length 5.08)
-					(name "VBUS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15 10.16 180)
-					(length 5.08)
-					(name "SSRXN1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15 15.24 180)
-					(length 5.08)
-					(name "SSRXP1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -15 25.4 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -20 270)
-					(length 5.08)
-					(name "SHIELD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "SH"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -6642,6 +6105,543 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "sierra-to-usb:USB_C_Receptacle_USB3.2_24P"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at -15 33 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TYPE-C-31-M-17"
+				(at -15 35.5 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-17"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "USB Type-C receptacle, 24-pin full-featured (both SS pair rows + CC/D+-/SBU), HRO TYPE-C-31-M-17 class. Standard USB-C pinout (pin-for-pin per USB Type-C spec Table 1-1, cross-checked against the stock KiCad USB_C_Receptacle_USB2.0_16P symbol for the shared 16 non-SS pins). Not on stock KiCad libs (no USB_C_Receptacle_USB3.2 symbol shipped in this KiCad 10 install) -- authored Task 7."
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "USB Type-C receptacle USB3 SuperSpeed connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "USB_C_Receptacle_USB3.2_24P_0_1"
+				(rectangle
+					(start -10 -15)
+					(end 10 29)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "USB_C_Receptacle_USB3.2_24P_1_1"
+				(pin passive line
+					(at -15 25.4 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15 25.4 180)
+					(length 5.08)
+					(name "SSTXP1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15 20.32 180)
+					(length 5.08)
+					(name "SSTXN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15 20.32 0)
+					(length 5.08)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15 15.24 0)
+					(length 5.08)
+					(name "CC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15 5.08 0)
+					(length 5.08)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15 0 0)
+					(length 5.08)
+					(name "D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15 -5.08 0)
+					(length 5.08)
+					(name "SBU1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15 20.32 0)
+					(length 5.08)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15 -10.16 180)
+					(length 5.08)
+					(name "SSRXN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15 -5.08 180)
+					(length 5.08)
+					(name "SSRXP2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15 25.4 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15 25.4 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15 5.08 180)
+					(length 5.08)
+					(name "SSTXP2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15 0 180)
+					(length 5.08)
+					(name "SSTXN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15 20.32 0)
+					(length 5.08)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15 10.16 0)
+					(length 5.08)
+					(name "CC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15 5.08 0)
+					(length 5.08)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15 0 0)
+					(length 5.08)
+					(name "D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15 -10.16 0)
+					(length 5.08)
+					(name "SBU2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15 20.32 0)
+					(length 5.08)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15 10.16 180)
+					(length 5.08)
+					(name "SSRXN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15 15.24 180)
+					(length 5.08)
+					(name "SSRXP1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15 25.4 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -20 270)
+					(length 5.08)
+					(name "SHIELD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "SH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "sierra-to-usb:WE750313355"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -7002,44 +7002,16 @@
 		(uuid "e22da71c-34d2-40c0-8e2f-49572cc5467a")
 	)
 	(no_connect
-		(at 35 14.6)
-		(uuid "7b9bc2f2-309a-41f7-8dcc-2102e44035e5")
-	)
-	(no_connect
-		(at 35 19.68)
-		(uuid "0b863185-5ef1-4412-a564-ba1582f37d92")
-	)
-	(no_connect
-		(at 35 24.76)
-		(uuid "61b63266-7906-47f8-9860-03b392449758")
-	)
-	(no_connect
-		(at 35 29.84)
-		(uuid "4c9e481e-7c49-48a9-916c-fda7a7a1a44e")
-	)
-	(no_connect
-		(at 35 34.92)
-		(uuid "2967bfa5-5fb3-49c6-b155-82b461f4f4f9")
-	)
-	(no_connect
-		(at 35 40)
-		(uuid "f7a58e91-7444-4205-9ef6-422aec07c378")
-	)
-	(no_connect
-		(at 35 45.08)
-		(uuid "b0515102-8be0-4e32-9073-a964eb7e6b04")
-	)
-	(no_connect
-		(at 35 50.16)
-		(uuid "9200b029-8970-4a0f-82e3-6c6b29dcb329")
-	)
-	(no_connect
 		(at 74.84 47.54)
 		(uuid "08b1f4a9-c86f-454f-aa11-be28122bfdd8")
 	)
 	(no_connect
 		(at 249.68 84.76)
 		(uuid "08e4a153-186e-4fbc-b055-08721badea7c")
+	)
+	(no_connect
+		(at 35 19.68)
+		(uuid "0b863185-5ef1-4412-a564-ba1582f37d92")
 	)
 	(no_connect
 		(at 290.32 94.92)
@@ -7054,6 +7026,10 @@
 		(uuid "28822b79-6b1c-4443-b5db-cfde2b9700ce")
 	)
 	(no_connect
+		(at 35 34.92)
+		(uuid "2967bfa5-5fb3-49c6-b155-82b461f4f4f9")
+	)
+	(no_connect
 		(at 249.68 145.72)
 		(uuid "2a51c911-6faf-48d0-a934-d211a4dad6a0")
 	)
@@ -7066,8 +7042,16 @@
 		(uuid "434c5a89-d31b-4e90-833d-202cbf10fc6c")
 	)
 	(no_connect
+		(at 35 29.84)
+		(uuid "4c9e481e-7c49-48a9-916c-fda7a7a1a44e")
+	)
+	(no_connect
 		(at 290.32 44.12)
 		(uuid "5294d84d-39d2-4497-94ed-ce87a2ac240d")
+	)
+	(no_connect
+		(at 35 24.76)
+		(uuid "61b63266-7906-47f8-9860-03b392449758")
 	)
 	(no_connect
 		(at 249.68 125.4)
@@ -7098,6 +7082,10 @@
 		(uuid "7419721c-d749-4952-80ff-e6871f6ab1a3")
 	)
 	(no_connect
+		(at 35 14.6)
+		(uuid "7b9bc2f2-309a-41f7-8dcc-2102e44035e5")
+	)
+	(no_connect
 		(at 74.84 50.08)
 		(uuid "80b4bc1f-3554-4936-bfed-738873125a4b")
 	)
@@ -7106,8 +7094,16 @@
 		(uuid "8b9ec2e2-64e2-479f-9174-74c0c57aebbe")
 	)
 	(no_connect
+		(at 35 50.16)
+		(uuid "9200b029-8970-4a0f-82e3-6c6b29dcb329")
+	)
+	(no_connect
 		(at 249.68 110.16)
 		(uuid "9393f6a3-8e69-4c31-ae7b-b54b987bc06c")
+	)
+	(no_connect
+		(at 35 45.08)
+		(uuid "b0515102-8be0-4e32-9073-a964eb7e6b04")
 	)
 	(no_connect
 		(at 290.32 135.56)
@@ -7124,6 +7120,10 @@
 	(no_connect
 		(at 95.16 47.54)
 		(uuid "d9bb63b6-d594-4182-9585-071df0ec871e")
+	)
+	(no_connect
+		(at 35 40)
+		(uuid "f7a58e91-7444-4205-9ef6-422aec07c378")
 	)
 	(label "N_VCC"
 		(at 448 43.46 0)
@@ -9607,6 +9607,7 @@
 		(uuid "172bab65-52c1-4665-9752-8b33b8190677")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 51.19 60 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9628,6 +9629,7 @@
 		(uuid "23501266-de5a-4421-964f-76eb20bc6db4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 157.62 62.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9649,6 +9651,7 @@
 		(uuid "2675cd8c-099f-4ce2-93b0-4ee5bc980b84")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 587.62 35.08 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9670,6 +9673,7 @@
 		(uuid "268aad26-5f66-4639-9855-fd8df1363afa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 111.19 20 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9691,6 +9695,7 @@
 		(uuid "44df7e00-4739-4341-87d6-63aa1ed74f22")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 157.62 32.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9712,6 +9717,7 @@
 		(uuid "50a06327-c946-4d49-bb3e-1f40e575375a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 100 22.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9733,6 +9739,7 @@
 		(uuid "53596bf8-5106-4c85-b8a9-d7506f1cf56e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 5 19.68 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9754,6 +9761,7 @@
 		(uuid "5ed6df8a-dadb-49a4-8826-e9125b539d9f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 142.38 27.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9775,6 +9783,7 @@
 		(uuid "8541c188-6039-4393-96d0-2bbb4dc49323")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 142.38 57.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9796,6 +9805,7 @@
 		(uuid "9863976d-d21d-4d27-a8a7-904324d3021e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 115 24.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9817,6 +9827,7 @@
 		(uuid "a1b95b87-2b76-45ca-b7e9-a7e649483400")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 602.54 35.08 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9838,6 +9849,7 @@
 		(uuid "a1f9c3d8-6e52-4a0e-9c1f-7d2b5e8a4c61")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 540 152.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9859,6 +9871,7 @@
 		(uuid "a927d428-c544-4124-a45b-91113b9456f4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 65 62.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9880,6 +9893,7 @@
 		(uuid "a92aa0b2-7b5c-4699-bafa-d1c4a279d8ef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 5 19.68 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9901,6 +9915,7 @@
 		(uuid "b29c2551-d61b-4ef8-86e9-8c2c488c98b6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 100 17.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9922,6 +9937,7 @@
 		(uuid "bc096bcb-331a-48b1-af05-1e08096d8bf1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 565 147.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9943,6 +9959,7 @@
 		(uuid "bc726662-ee46-40a5-bdaa-c94e1a742253")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 95.16 39.92 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9964,6 +9981,7 @@
 		(uuid "c1776dbe-068a-456e-b649-4cc1cec04c2f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 65 22.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9985,6 +10003,7 @@
 		(uuid "cb9299e4-6495-4d54-ac8d-d3ccdedade48")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 30 190 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10006,6 +10025,7 @@
 		(uuid "d27b2b5f-b52d-45bf-a6dd-d29404817d43")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 5 19.68 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10027,6 +10047,7 @@
 		(uuid "d4d9d7ec-730f-4e8a-9d1f-8b7ff855e560")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 5 19.68 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
