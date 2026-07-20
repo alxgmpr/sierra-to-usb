@@ -64,3 +64,16 @@ code changes — just this note).
 
 KiCad GUI must be closed (or all sheets saved/clean) before file edits —
 stale GUI saves have clobbered sheets 3× on this project.
+
+## Implementation notes (2026-07-19, commit 99961b3)
+
+- Executed AFTER finishing the user's in-progress USB-C symbol-swap rework
+  (separate commit) — the working tree was red at plan Task 1 and the user
+  chose completion over revert.
+- R121 was flipped during the user's session, so its rail-side pin is `.2`
+  (as this spec's table says); netchecks asserts `R121.1 = N_D30_A`,
+  `R121.2 = +3V3`.
+- Surgery swept three items beyond the spec's list, all LED-kill/DIP
+  domain: PWR_FLAG `#FLG1774907555` (was on LED_PWR), SW2's throw-C
+  no_connect, and 3 straggler `+3V3_MCU` labels on R89/R90/R91 free pins.
+- Stale sheet text notes referencing LED_PWR/SW1 were deleted or reworded.
