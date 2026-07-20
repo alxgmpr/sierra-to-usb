@@ -7490,7 +7490,7 @@
 		)
 		(uuid "0802ea02-d804-4bd1-b1a1-3c349070b200")
 	)
-	(text "Task 13 audit fix (F3, minor): D30/R121 -- spec S10 PD-good indicator, missing since Task 4 dropped the LED. LED_PWR->R121(1k)->D30->CH224K_PG. CH224K_PG is open-drain, active-low (WCH CH224K datasheet: pulls to GND once PD negotiation succeeds; datasheet explicitly lists driving an indicator LED as a typical use). Checked R4 (10k pull-up, CH224K_PG to +3V3, from Task 4): it does NOT conflict with D30 -- it defines a clean idle-high (LED off) state when PG is unasserted and adds only ~0.33mA of extra sink current when PG pulls low (LED on); R4 is kept as-is, not replaced."
+	(text "Task 13 audit fix (F3, minor): D30/R121 -- spec S10 PD-good indicator, missing since Task 4 dropped the LED. +3V3->R121(1k)->D30->CH224K_PG (kill gate removed 2026-07-19; was LED_PWR). CH224K_PG is open-drain, active-low (WCH CH224K datasheet: pulls to GND once PD negotiation succeeds; datasheet explicitly lists driving an indicator LED as a typical use). Checked R4 (10k pull-up, CH224K_PG to +3V3, from Task 4): it does NOT conflict with D30 -- it defines a clean idle-high (LED off) state when PG is unasserted and adds only ~0.33mA of extra sink current when PG pulls low (LED on); R4 is kept as-is, not replaced."
 		(exclude_from_sim no)
 		(at 30.48 167.64 0)
 		(effects
@@ -7501,7 +7501,7 @@
 		)
 		(uuid "2dbbc2c9-b07b-4394-bc61-9338411c0407")
 	)
-	(text "Task 13 audit fix (F3, minor): D29/R120 -- spec S10 12V-node/power indicator, missing since Task 4 dropped the LED (drift, never amended). LED_PWR->R120(1k)->D29->GND. LED_PWR is only alive when +3V3 is up, which -- per the F1 fix pass (R40/R41 BUCK_EN divider corrected) -- only happens once the +12V node has been negotiated (buck now reliably starts ~8V+, never at 5V pre-negotiation). So D29 correctly indicates negotiated-12V-present, not raw VBUS. It is killable via the LED_PWR switch/GPIO like the other LED_PWR-domain indicators (RGB, WWAN)."
+	(text "Task 13 audit fix (F3, minor): D29/R120 -- spec S10 12V-node/power indicator, missing since Task 4 dropped the LED (drift, never amended). +3V3->R120(1k)->D29->GND (kill gate removed 2026-07-19; was LED_PWR). +3V3 is only alive once the +12V node has been negotiated -- per the F1 fix pass (R40/R41 BUCK_EN divider corrected), the buck reliably starts ~8V+, never at 5V pre-negotiation. So D29 correctly indicates negotiated-12V-present, not raw VBUS."
 		(exclude_from_sim no)
 		(at 554.99 160.02 0)
 		(effects
@@ -7533,7 +7533,7 @@
 		)
 		(uuid "8c28153a-3171-4ca9-8caa-01e9d506d817")
 	)
-	(text "Note (mcu Fix 5b, review pass): D16 glows faintly (~75uA through R38+R85+R86 whenever PoE is present) -- D16 is on +12V_POE, NOT on the killable LED_PWR rail, so it is unkillable by SW2/GP9. This is expected/accepted, not a defect."
+	(text "Note (mcu Fix 5b, review pass): D16 glows faintly (~75uA through R38+R85+R86 whenever PoE is present) -- D16 is on +12V_POE. (Historical note: the LED_PWR kill gate was removed 2026-07-19; all indicator LEDs are now always-on.)"
 		(exclude_from_sim no)
 		(at 30.48 162.56 0)
 		(effects
@@ -10755,7 +10755,7 @@
 		)
 		(uuid "8541c188-6039-4393-96d0-2bbb4dc49323")
 	)
-	(global_label "LED_PWR"
+	(global_label "+3V3"
 		(shape input)
 		(at 102.87 113.03 0)
 		(fields_autoplaced yes)
@@ -10827,7 +10827,7 @@
 			)
 		)
 	)
-	(global_label "LED_PWR"
+	(global_label "+3V3"
 		(shape input)
 		(at 565.15 147.32 0)
 		(fields_autoplaced yes)
