@@ -4,7 +4,43 @@
 	(generator_version "10.0")
 	(uuid "f141b3c0-0a69-4819-acb0-dc32f46a3541")
 	(paper "A0")
+	(title_block
+		(title "M.2 5G Modem Carrier")
+		(date "2026-07-19")
+		(rev "A")
+		(company "Alex Gompper")
+	)
 	(lib_symbols)
+	(text_box "The purpose of this board is to serve as an m.2 carrier and USB device similar to the rework.network 5G2PHY. However, this board has some features that allow it to be used with other types of modems such as both Sierra Wireless and Quectel Modems. It operates with modems in USB mode and provides a USB 3.0 interface that can be connected to. The USB interface can also issue AT commands. However, additionally, there is a microcontroller on board that provides fine grain control over things like AT commands, LEDs, and the values of pull-ups necessary to operate different types of modems in their USB mode. The board can be powered with spec compliant PoE or with an additional USB-C PD port (PD is not accepted over the USB 3.0 host port). "
+		(exclude_from_sim no)
+		(at 168.91 29.21 0)
+		(size 104.775 22.225)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "df01aa24-d91c-459d-a2c5-e854814bbde2")
+	)
+	(polyline
+		(pts
+			(xy 188.595 105.41) (xy 254 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fd7798c-06ad-4db1-8b25-52d6245c6fb5")
+	)
 	(sheet
 		(at 420 190)
 		(size 80 50)
@@ -390,7 +426,7 @@
 		)
 		(uuid "f5a12b4b-c279-4b26-9f14-8d152bf2e4b9")
 		(property "Sheetname" "Power Input"
-			(at 100 79.29 0)
+			(at 100 79.2884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -401,7 +437,7 @@
 			)
 		)
 		(property "Sheetfile" "sheets/power_input.kicad_sch"
-			(at 100 130.58 0)
+			(at 100 130.5846 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

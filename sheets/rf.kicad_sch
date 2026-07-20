@@ -3,7 +3,13 @@
 	(generator "eeschema")
 	(generator_version "10.0")
 	(uuid "91579019-9122-45bd-b4c0-4d5d24b28ce4")
-	(paper "A4")
+	(paper "A0")
+	(title_block
+		(title "M.2 5G Modem Carrier")
+		(date "2026-07-19")
+		(rev "A")
+		(company "Alex Gompper")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_Coaxial"
 			(pin_names
@@ -538,6 +544,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C18221168"
+			(at 20 30 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7b317b9c-41bc-4999-8fe3-03374571e68d")
 		)
@@ -729,6 +746,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 20 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C18221168"
 			(at 20 90 0)
 			(hide yes)
 			(show_name no)
@@ -1265,6 +1293,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C18221168"
+			(at 20 50 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "62e85adf-7042-4003-899d-e61d45cb2ffa")
 		)
@@ -1379,6 +1418,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 20 70 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C18221168"
 			(at 20 70 0)
 			(hide yes)
 			(show_name no)
@@ -2213,6 +2263,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 20 110 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C18221168"
 			(at 20 110 0)
 			(hide yes)
 			(show_name no)

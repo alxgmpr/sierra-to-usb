@@ -167,14 +167,16 @@ U4.pinfn:GND = GND
 
 # usb3_data -- connector-side SS pairs (pair 1 = CC1 side, pair 2 = CC2
 # side), all 8 nets, mux <-> D20/D21 (TPD4EUSB30 flow-through) <-> J1.
-J1.pinfn:SSTXP1 = SS_CON1_TXP
-J1.pinfn:SSTXN1 = SS_CON1_TXN
-J1.pinfn:SSRXP1 = SS_CON1_RXP
-J1.pinfn:SSRXN1 = SS_CON1_RXN
-J1.pinfn:SSTXP2 = SS_CON2_TXP
-J1.pinfn:SSTXN2 = SS_CON2_TXN
-J1.pinfn:SSRXP2 = SS_CON2_RXP
-J1.pinfn:SSRXN2 = SS_CON2_RXN
+# J1 swapped to Connector:USB_C_Receptacle (user rework 2026-07-19): SS pin
+# functions renamed (SSTXP1 -> TX1+ etc.), so assert by pad number instead.
+J1.A2 = SS_CON1_TXP
+J1.A3 = SS_CON1_TXN
+J1.B11 = SS_CON1_RXP
+J1.B10 = SS_CON1_RXN
+J1.B2 = SS_CON2_TXP
+J1.B3 = SS_CON2_TXN
+J1.A11 = SS_CON2_RXP
+J1.A10 = SS_CON2_RXN
 D20.1 = SS_CON1_TXP
 D20.2 = SS_CON1_TXN
 D20.4 = SS_CON1_RXP
@@ -738,9 +740,18 @@ R120.1 = LED_PWR
 R120.2 = N_D29_A
 D30.pinfn:A = N_D30_A
 D30.pinfn:K = CH224K_PG
-R121.1 = LED_PWR
-R121.2 = N_D30_A
+R121.1 = N_D30_A
+R121.2 = LED_PWR
 NET LED_PWR PINS>=4
+
+# power_input -- J2 PD data lines (user rework 2026-07-19): CH224K DP/DM
+# BC1.2/PD comms reach J2 D+/D- through series R98/R83.
+J2.A6 = PD_DP+
+J2.B6 = PD_DP+
+J2.A7 = PD_DM-
+J2.B7 = PD_DM-
+R98.1 = PD_DP+
+R83.2 = PD_DM-
 # 14c: 24P consolidation — ALL VBUS pins must be on the rail (PD current sharing)
 J2.A4 = VBUS_PD
 J2.A9 = VBUS_PD

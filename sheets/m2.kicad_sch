@@ -3,7 +3,13 @@
 	(generator "eeschema")
 	(generator_version "10.0")
 	(uuid "aa224970-9aed-428a-b82e-7b4912753914")
-	(paper "A2")
+	(paper "A0")
+	(title_block
+		(title "M.2 5G Modem Carrier")
+		(date "2026-07-19")
+		(rev "A")
+		(company "Alex Gompper")
+	)
 	(lib_symbols
 		(symbol "Connector:Bus_M.2_Socket_B"
 			(exclude_from_sim no)
@@ -3888,6 +3894,7 @@
 		(uuid "0008712a-1fbd-4999-9cd0-625340994839")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 244.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3909,6 +3916,7 @@
 		(uuid "00ed1859-f569-41bb-aa5d-ce7fe94554bf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 235.08 58 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3930,6 +3938,7 @@
 		(uuid "04512d07-18fa-4c7d-a536-9b27e8b20cce")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 139 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3951,6 +3960,7 @@
 		(uuid "0f02b08e-483a-443b-934c-fc6377fde75a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 190.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3972,6 +3982,7 @@
 		(uuid "11e95286-7892-4e00-a5ad-3d0e4cb3aa7a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 119.52 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3993,6 +4004,7 @@
 		(uuid "1b71c290-4df0-416c-865d-d5f0a2e937b2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 121 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4014,6 +4026,7 @@
 		(uuid "223889b9-eb01-4c80-a945-723322119c2c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 139.84 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4035,6 +4048,7 @@
 		(uuid "243349dc-eee0-4fca-a593-ac30ba635342")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 155.08 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4056,6 +4070,7 @@
 		(uuid "29086465-4988-404f-a953-f3b062663b50")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 271.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4077,6 +4092,7 @@
 		(uuid "2a3ca983-8441-4438-9e4b-b9aa0a079dee")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 58 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4098,6 +4114,7 @@
 		(uuid "2ee42bfc-c81c-4b6e-a87b-7a29fb2c9b8c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 208.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4119,6 +4136,7 @@
 		(uuid "2fa46216-b40d-44ea-98c2-028ef172a2da")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 150 101.74 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4140,6 +4158,7 @@
 		(uuid "2fedb468-95f8-4abb-9e6a-42e744436ac9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 280.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4161,6 +4180,7 @@
 		(uuid "312ba71f-bb7f-40db-92f9-bcf04e8b08d9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 190.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4182,6 +4202,7 @@
 		(uuid "33846348-9c39-4052-aeb7-e637a263cea5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 82.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4203,6 +4224,7 @@
 		(uuid "3a5489a1-8d0c-4888-b7e2-9cb5a3394862")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 235.08 40 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4224,6 +4246,7 @@
 		(uuid "3bf215df-0fa8-44e7-8f43-d35d1f75afe3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 235.08 49 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4245,6 +4268,7 @@
 		(uuid "3cfde854-ffcd-4668-9f94-559e83f19434")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 100.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4266,6 +4290,7 @@
 		(uuid "3f96f7d6-f107-4b1c-8754-d5ff4131ce73")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 136.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4287,6 +4312,7 @@
 		(uuid "41fb9250-cb87-4ed8-8fab-2634a1b8bd23")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 69.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4308,6 +4334,7 @@
 		(uuid "4349c2e3-6815-424e-90b2-e2095740dd7e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 103 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4329,6 +4356,7 @@
 		(uuid "4364aa95-8b4a-447e-be70-76832ac7c37c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 142.38 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4350,6 +4378,7 @@
 		(uuid "4a35dc3b-c8f8-4dce-baf6-6350161e7602")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 267.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4371,6 +4400,7 @@
 		(uuid "5096edef-6dca-41b0-bf35-63ecb7563004")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 51.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4392,6 +4422,7 @@
 		(uuid "53ba70ac-6fe4-4f1a-94d3-e8cd8954befa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 217.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4413,6 +4444,7 @@
 		(uuid "573e74f6-0276-46b4-9144-1f72441391ef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 122.06 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4434,6 +4466,7 @@
 		(uuid "59f805b7-ff59-448a-8efd-53aa91f68292")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 154.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4455,6 +4488,7 @@
 		(uuid "61ec0ada-11c0-4e90-baf0-5c3e8a08f651")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 235.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4476,6 +4510,7 @@
 		(uuid "64e8289c-49b5-41e8-a687-3e811b0c2766")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 162.7 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4497,6 +4532,7 @@
 		(uuid "6ac0b86c-cb24-4fc1-ac29-b11094e82682")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 109.36 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4518,6 +4554,7 @@
 		(uuid "6be3b9ae-a9e6-4963-b4d2-0f9e45adadc5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 148 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4539,6 +4576,7 @@
 		(uuid "6fb91d39-2073-4db9-ae39-7f9493ffa9e7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 130 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4560,6 +4598,7 @@
 		(uuid "725fa190-dea9-43ce-a87a-1d0c602ae350")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 224.92 112 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4581,6 +4620,7 @@
 		(uuid "732576d1-8f41-4891-bcb4-870432fcd1fe")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 340 262.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4602,6 +4642,7 @@
 		(uuid "7604b1c0-2adc-4d32-9908-073276ae64db")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 181.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4623,6 +4664,7 @@
 		(uuid "79941a8e-4d64-44b2-b629-0986bc632cb6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 124.6 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4644,6 +4686,7 @@
 		(uuid "7c7d2e59-4618-4e8a-91b1-0ab40359d61d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 175.4 137.3 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4665,6 +4708,7 @@
 		(uuid "7fba3d1a-17c7-4992-975b-142c3cef0836")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 129.68 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4686,6 +4730,7 @@
 		(uuid "836cfebd-144f-4a47-809f-039e87812af4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 274 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4707,6 +4752,7 @@
 		(uuid "84afe198-0b22-4689-be3e-1f068a101427")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 82.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4728,6 +4774,7 @@
 		(uuid "8570fa96-edd9-45ac-9723-07961a2c7dc0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 175.4 139.84 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4749,6 +4796,7 @@
 		(uuid "87c66263-10e8-4dce-939f-2341afdf084d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 185.56 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4770,6 +4818,7 @@
 		(uuid "8844aabc-addb-4b42-9474-736c46a88671")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 224.92 238 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4791,6 +4840,7 @@
 		(uuid "8b210300-0e6e-4fec-9cc8-175fe91626fb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 175.4 142.38 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4812,6 +4862,7 @@
 		(uuid "8bc98691-e223-4a16-a617-41c818cebdd7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 112 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4833,6 +4884,7 @@
 		(uuid "8ea90106-c5e3-4b9d-baf0-46b4e1da4c79")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 314.92 265 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4854,6 +4906,7 @@
 		(uuid "8f0a64fc-643b-4182-9ad1-04f8833f709a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 262.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4875,6 +4928,7 @@
 		(uuid "90abff58-af96-464c-93f6-ec70778c36a9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 76 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4896,6 +4950,7 @@
 		(uuid "932a8b3d-38ff-4fd9-a138-a47fc2e83f12")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 64.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4917,6 +4972,7 @@
 		(uuid "956a523c-d9bc-4a83-a8a0-014382cce858")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 116.98 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4938,6 +4994,7 @@
 		(uuid "958599ef-7a9a-4ff4-971e-a56336a7d145")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 188.1 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4959,6 +5016,7 @@
 		(uuid "968af906-b81a-4ed7-98b9-d03d9c87938f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 226.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4980,6 +5038,7 @@
 		(uuid "989c99cd-3461-4105-92f4-2d60a3fc1fcb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 157 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5001,6 +5060,7 @@
 		(uuid "9dc17e77-f194-433c-8388-dd673b272651")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 134.76 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5022,6 +5082,7 @@
 		(uuid "9dec1c70-4587-45ee-aa48-92b8a854a8a8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 111.9 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5043,6 +5104,7 @@
 		(uuid "9f82798e-5856-4fe5-a580-2f69dc9e7d1e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 244.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5064,6 +5126,7 @@
 		(uuid "a3ab4219-c032-4212-89bc-f9e837f46367")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 271.19 94 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5085,6 +5148,7 @@
 		(uuid "a960575b-bc5f-4102-b415-af51c53ee384")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 46.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5106,6 +5170,7 @@
 		(uuid "b0c5616c-536d-40ab-8dc7-9f469657eb3e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 208.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5127,6 +5192,7 @@
 		(uuid "b0d7048d-0e96-4257-bb25-400c38e11f3a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 224.92 148 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5148,6 +5214,7 @@
 		(uuid "b0e3bbd3-7863-4e07-8eba-3203ad8edc8f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 64.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5169,6 +5236,7 @@
 		(uuid "b38c2371-fa8a-41ff-a0bb-5b8da95a4e44")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 167.78 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5190,6 +5258,7 @@
 		(uuid "b4064ca1-67ce-4a1f-a2a4-920a9c0ab3c7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 253.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5211,6 +5280,7 @@
 		(uuid "b95236a2-faaa-4f59-936e-4810b1151461")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 250 217.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5232,6 +5302,7 @@
 		(uuid "c211aeef-c461-4d7e-b1eb-d8a0511d7aca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 127.14 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5253,6 +5324,7 @@
 		(uuid "c2181771-e4a4-4884-a68c-ee5de54422a0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 322.54 259.92 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5274,6 +5346,7 @@
 		(uuid "c2f2d51c-4779-475f-b077-422a674adf50")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 262.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5295,6 +5368,7 @@
 		(uuid "c34f905c-240c-4d20-948c-736a6d47641e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 285.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5316,6 +5390,7 @@
 		(uuid "c8ea4441-1294-40a8-a768-9285c450537e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 224.92 76 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5337,6 +5412,7 @@
 		(uuid "cbca26ee-5d7f-49ad-8084-12e32dc63831")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 160.16 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5358,6 +5434,7 @@
 		(uuid "d455476b-5278-4ffe-a692-46b3950af652")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 118.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5379,6 +5456,7 @@
 		(uuid "d6543cdd-678f-4391-af54-218b67db9a31")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 132.22 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5400,6 +5478,7 @@
 		(uuid "d73a95ea-b4f8-4703-ad4f-fc513467d8fc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 175.4 160.16 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5421,6 +5500,7 @@
 		(uuid "d91227db-fb08-4168-bce4-d73c04770c5f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 340 257.38 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5442,6 +5522,7 @@
 		(uuid "db4e77cb-7369-48d4-83bd-42c2a3fcf784")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 175.4 144.92 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5463,6 +5544,7 @@
 		(uuid "deed4d35-e76c-421c-b02c-d32072764c4b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 165.24 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5484,6 +5566,7 @@
 		(uuid "e00527e3-8790-4091-9179-f4eb58a85971")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 40 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5505,6 +5588,7 @@
 		(uuid "e1a3703d-a9b6-446d-98a3-a143c8840f8f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 172.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5526,6 +5610,7 @@
 		(uuid "e62398ad-fd72-4c0c-a0ce-00b8a2649224")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 172.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5547,6 +5632,7 @@
 		(uuid "eac829a2-49dc-4d7d-8e6d-acabc6925e09")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 163.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5568,6 +5654,7 @@
 		(uuid "ead57cbb-e82d-4f4f-b618-96e6aedd0ea5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 230 280.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5589,6 +5676,7 @@
 		(uuid "ee3cc336-7222-4b42-96e1-b99c7856eb62")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275 199.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5610,6 +5698,7 @@
 		(uuid "f4350b80-9e73-4171-a24c-e0944f1b9614")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 252.54 234.08 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5631,6 +5720,7 @@
 		(uuid "f9f41cbc-03e4-4262-a578-39fe91e6f279")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 322.54 270.08 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5652,6 +5742,7 @@
 		(uuid "fcffe10d-8736-4bef-9d74-9a23eda64857")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 224.92 184 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5673,6 +5764,7 @@
 		(uuid "fd5b2d18-a5c1-4bd6-b74b-0dce4281b7ef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.6 106.82 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5694,6 +5786,7 @@
 		(uuid "fd881243-a6e9-4f46-a82a-b6d318d0eb36")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 175.4 147.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5715,6 +5808,7 @@
 		(uuid "fd9eaa70-9c67-4de6-92c1-b40a9960e23e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 175.4 165.24 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6120,6 +6214,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 230 148 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "package/gullwing"
 			(at 230 148 0)
 			(hide yes)
 			(show_name no)
@@ -6627,6 +6732,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 230 85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "92886ed1-0cfb-4c98-b727-e3d835b65301")
 		)
@@ -6969,6 +7085,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "capacitor/SMD/elec_round_polarized"
+			(at 275 184 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b60115cd-4606-4017-9549-2a1c4d3eb511")
 		)
@@ -7073,6 +7200,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 275 247 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 275 247 0)
 			(hide yes)
 			(show_name no)
@@ -7383,6 +7521,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 230 103 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "115924a2-00af-4b04-bfa0-af1fc7fdae21")
 		)
@@ -7498,6 +7647,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 230 112 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "package/gullwing"
 			(at 230 112 0)
 			(hide yes)
 			(show_name no)
@@ -7776,6 +7936,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 150 150 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C841658"
 			(at 150 150 0)
 			(hide yes)
 			(show_name no)
@@ -8281,6 +8452,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 340 259.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d7383002-90da-4588-9818-76cd58d4506a")
 		)
@@ -8385,6 +8567,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 230 220 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 230 220 0)
 			(hide yes)
 			(show_name no)
@@ -8509,6 +8702,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 230 247 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ebbe1f66-2ba1-40bd-93b5-d5a2f497e3d6")
 		)
@@ -8613,6 +8817,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 230 283 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 230 283 0)
 			(hide yes)
 			(show_name no)
@@ -8737,6 +8952,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 230 175 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "961f5f84-47d0-4016-8b30-c5563814130f")
 		)
@@ -8841,6 +9067,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 275 49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 275 49 0)
 			(hide yes)
 			(show_name no)
@@ -8965,6 +9202,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 230 139 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "53014a60-bf6c-445e-ae56-6353b42c774a")
 		)
@@ -9069,6 +9317,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 275 67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 275 67 0)
 			(hide yes)
 			(show_name no)
@@ -9379,6 +9638,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "capacitor/SMD/elec_round_polarized"
+			(at 275 166 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e13f9f85-98e0-494e-9a0a-b8ab645224b2")
 		)
@@ -9483,6 +9753,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 230 121 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 230 121 0)
 			(hide yes)
 			(show_name no)
@@ -9759,6 +10040,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275 229 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "32c24261-dee7-4c92-929e-6494ec47d311")
 		)
@@ -9873,6 +10165,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275 238 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9f08e09e-6c2f-43fd-b2f5-009b393a5ce0")
 		)
@@ -9977,6 +10280,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 275 193 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 275 193 0)
 			(hide yes)
 			(show_name no)
@@ -10112,6 +10426,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "package/gullwing"
+			(at 230 238 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "97d22b95-2b49-4c57-b0fd-0d661f8f94f9")
 		)
@@ -10219,6 +10544,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 230 193 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 230 193 0)
 			(hide yes)
 			(show_name no)
@@ -10693,6 +11029,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 230 211 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fa957ae9-2784-4101-b794-2274af99d533")
 		)
@@ -10959,6 +11306,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 230 157 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "392f7789-4840-4b3e-be1c-f3280248f6ac")
 		)
@@ -11063,6 +11421,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 275 265 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 275 265 0)
 			(hide yes)
 			(show_name no)
@@ -11339,6 +11708,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275 256 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "377395f9-6114-4b5d-b643-4b4fd4943577")
 		)
@@ -11519,6 +11899,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 230 229 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 230 229 0)
 			(hide yes)
 			(show_name no)
@@ -11840,6 +12231,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "package/gullwing"
+			(at 250 229 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "66a9c611-d8f8-4acd-9ac5-f060cc4dfac6")
 		)
@@ -12033,6 +12435,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "capacitor/SMD/elec_round_polarized"
+			(at 275 175 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "31e370b6-f84b-4377-8cc4-17c5e5bb0959")
 		)
@@ -12147,6 +12560,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 250 215 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2fc47b64-ce1d-4a37-99fc-f2230eda5724")
 		)
@@ -12251,6 +12675,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 275 85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 275 85 0)
 			(hide yes)
 			(show_name no)
@@ -12747,6 +13182,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275 274 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6dfb58d5-8977-4e83-a615-066ba0e2e331")
 		)
@@ -12851,6 +13297,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 275 211 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 275 211 0)
 			(hide yes)
 			(show_name no)
@@ -13172,6 +13629,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "package/gullwing"
+			(at 320 265 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "abe1891c-7582-4b7c-9958-c15300ec157d")
 		)
@@ -13279,6 +13747,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 230 265 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 230 265 0)
 			(hide yes)
 			(show_name no)
@@ -13414,6 +13893,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "package/gullwing"
+			(at 230 76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e20917b4-5d61-4dd2-b67b-14c6cc22266d")
 		)
@@ -13531,6 +14021,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 230 67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f7469e7d-85eb-4ac8-ab0b-39b6499cabd7")
 		)
@@ -13635,6 +14136,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 275 283 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 275 283 0)
 			(hide yes)
 			(show_name no)
@@ -13835,6 +14347,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275 220 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "19d4f8fe-6142-4ba8-b8c1-48efd0b315a2")
 		)
@@ -13939,6 +14462,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 275 202 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 275 202 0)
 			(hide yes)
 			(show_name no)
@@ -14435,6 +14969,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275 94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e418cf26-461e-40fa-ac70-5ce7c3c5a306")
 		)
@@ -14626,6 +15171,17 @@
 			)
 		)
 		(property "Distributor" "LCSC"
+			(at 230 184 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "package/gullwing"
 			(at 230 184 0)
 			(hide yes)
 			(show_name no)
