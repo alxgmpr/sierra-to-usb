@@ -43,3 +43,81 @@
 	(condition "A.insideCourtyard('C19') && B.insideCourtyard('C19')")
 	(constraint clearance (min 0.2mm))
 )
+
+# ===========================================================================
+# HIGH-SPEED PAIR MATCHING (added 2026-08-08)
+# ===========================================================================
+# The second thing plain netclasses cannot express. A netclass carries a
+# diff-pair WIDTH and GAP but no length/skew target, so before this section
+# nothing checked intra-pair matching — and Board Setup already had
+# skew_out_of_range / length_out_of_range / diff_pair_uncoupled_length_too_long
+# set to severity=error with no rule to give them a value, meaning those three
+# checks could never fire. These rules supply the values.
+#
+# They are also the LENGTH TUNER's targets: the interactive diff-pair skew
+# tuner reads its target from the resolved skew constraint, so tuning a pair
+# in the GUI now converges on the number below instead of a manual guess.
+#
+# --- SYNTAX TRAP (verified empirically 2026-08-08, KiCad 10.0.5) ---
+# The per-pair modifier MUST be parenthesised: `(within_diff_pairs)`.
+#   (constraint skew (max 0.15mm) (within_diff_pairs))  -> per-pair. CORRECT.
+#   (constraint skew (max 0.15mm) within_diff_pairs)    -> rule SILENTLY DROPPED.
+#   (constraint skew (max 0.15mm))                      -> compares every net in
+#       the matched set against ONE arbitrary reference net (observed: all USB
+#       and MDI nets measured against MDI1_P). Not intra-pair. Do not use.
+# Worse, `kicad-cli pcb drc` reports NO error for a malformed or unknown
+# constraint — it just does nothing. Any edit to this section must be
+# re-verified by tripwire: set the max to 0mm, re-run DRC, confirm the rule
+# fires on routed pairs, then restore the real value.
+#
+# --- Where the numbers come from ---
+# USB (SS + USB2) 0.15mm and PCIe/REFCLK 0.10mm are the plan's Task 18
+# targets (docs/superpowers/plans/2026-07-14-universal-m2-carrier-hardware.md).
+# MDI 0.15mm and all three uncoupled-length values are engineering defaults
+# chosen here, NOT cited requirements — retune if a vendor layout guide says
+# otherwise.
+#
+# --- Scope caveat ---
+# These key off NetClass, so they only cover nets the netclass patterns match.
+# J1/J2/J3's SS pads are currently bound to `unconnected-*` nets on the board
+# (stale pre-F8 state) and therefore resolve to Default — they pick up no skew
+# target until Update PCB from Schematic is re-run. Same for the two nets the
+# board is missing outright, SS_CON2_RXP and SS_CON2_TXP.
+
+(rule "USB 90R: intra-pair skew"
+	(constraint skew (max 0.15mm) (within_diff_pairs))
+	(condition "A.NetClass == 'DIFF_USB_90'")
+)
+(rule "USB 90R: max uncoupled length"
+	(constraint diff_pair_uncoupled (max 2.5mm))
+	(condition "A.NetClass == 'DIFF_USB_90'")
+)
+
+(rule "PCIe 85R: intra-pair skew"
+	(constraint skew (max 0.1mm) (within_diff_pairs))
+	(condition "A.NetClass == 'DIFF_PCIE_85'")
+)
+(rule "PCIe 85R: max uncoupled length"
+	(constraint diff_pair_uncoupled (max 2.5mm))
+	(condition "A.NetClass == 'DIFF_PCIE_85'")
+)
+
+(rule "MDI 100R: intra-pair skew"
+	(constraint skew (max 0.15mm) (within_diff_pairs))
+	(condition "A.NetClass == 'DIFF_MDI_100'")
+)
+(rule "MDI 100R: max uncoupled length"
+	(constraint diff_pair_uncoupled (max 5mm))
+	(condition "A.NetClass == 'DIFF_MDI_100'")
+)
+
+# --- Absolute length budgets: deliberately NOT set ---
+# No routed-length budget has been derived for this board (no insertion-loss
+# or timing budget exists in the docs), so inventing a max here would be a
+# made-up number that either fires spuriously or never fires. The syntax is
+# below, verified working — uncomment and fill in once a real budget exists.
+#
+# (rule "USB 90R: max routed length"
+# 	(constraint length (max 150mm))
+# 	(condition "A.NetClass == 'DIFF_USB_90'")
+# )
