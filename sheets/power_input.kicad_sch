@@ -8559,6 +8559,16 @@
 		)
 		(uuid "2138e88b-6686-482d-8a9c-468d66061438")
 	)
+	(label "POE_VDD54"
+		(at 177.8 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "23501266-de5a-4421-964f-76eb20bc6db4")
+	)
 	(label "N_VB"
 		(at 330.2 110.49 0)
 		(effects
@@ -8799,6 +8809,16 @@
 		)
 		(uuid "40ea3041-6297-4a42-a311-9ca50bacdc2a")
 	)
+	(label "POE_VDD54"
+		(at 193.04 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "44df7e00-4739-4341-87d6-63aa1ed74f22")
+	)
 	(label "N_SEC_CLP"
 		(at 477.52 57.15 0)
 		(effects
@@ -8868,17 +8888,6 @@
 			(justify left bottom)
 		)
 		(uuid "4c3341c1-f95a-48f3-8383-bf1d7eeb77c8")
-	)
-	(global_label "POE_VA-"
-		(shape input)
-		(at 185.42 123.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "51495809-a6f7-4578-95a9-e62428490225")
 	)
 	(label "POE_RTN"
 		(at 429.26 45.72 0)
@@ -9050,6 +9059,16 @@
 		)
 		(uuid "5d9ecdc1-64dd-45cb-8c1c-3e41146158df")
 	)
+	(label "POE_VSS"
+		(at 177.8 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5ed6df8a-dadb-49a4-8826-e9125b539d9f")
+	)
 	(label "N_CLAMP_G"
 		(at 330.2 17.78 0)
 		(effects
@@ -9189,17 +9208,6 @@
 			(justify left bottom)
 		)
 		(uuid "6bd064bf-9416-4475-aabf-27c0a0b19909")
-	)
-	(global_label "POE_VB+"
-		(shape input)
-		(at 170.18 59.69 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6cdd7b1b-5739-43cd-975e-9a23bd88c0a7")
 	)
 	(label "N_TLK"
 		(at 527.05 90.17 0)
@@ -9500,6 +9508,16 @@
 			(justify right bottom)
 		)
 		(uuid "85315c86-1c71-4c72-99ee-1ff4eb8ac522")
+	)
+	(label "POE_VSS"
+		(at 162.56 67.31 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8541c188-6039-4393-96d0-2bbb4dc49323")
 	)
 	(label "N_LINEUV"
 		(at 299.72 135.89 0)
@@ -9921,17 +9939,6 @@
 		)
 		(uuid "b21296f1-2405-4670-b3ac-92be84dfa46c")
 	)
-	(global_label "POE_VB-"
-		(shape input)
-		(at 170.18 77.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b2608567-c9cd-4854-bc19-36527ea502c9")
-	)
 	(label "POE_RTN"
 		(at 350.52 87.63 0)
 		(effects
@@ -9941,17 +9948,6 @@
 			(justify left bottom)
 		)
 		(uuid "b3c29a8c-9391-4803-8883-23adda483e36")
-	)
-	(global_label "POE_VA+"
-		(shape input)
-		(at 185.42 107.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b4306996-8cd0-4695-98c1-0e58e661eeeb")
 	)
 	(label "N_Q22_RCD"
 		(at 457.2 140.97 0)
@@ -10643,16 +10639,6 @@
 		)
 		(uuid "ff92d9e8-b03d-4d87-a0a1-100270e9ea27")
 	)
-	(label "POE_VDD54"
-		(at 177.8 67.31 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "23501266-de5a-4421-964f-76eb20bc6db4")
-	)
 	(global_label "VBUS_PD"
 		(shape input)
 		(at 588.01 35.56 0)
@@ -10676,16 +10662,6 @@
 				(justify left)
 			)
 		)
-	)
-	(label "POE_VDD54"
-		(at 193.04 115.57 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "44df7e00-4739-4341-87d6-63aa1ed74f22")
 	)
 	(global_label "+3V3"
 		(shape input)
@@ -10711,15 +10687,27 @@
 			)
 		)
 	)
-	(label "POE_VSS"
-		(at 177.8 115.57 180)
+	(global_label "POE_VA-"
+		(shape input)
+		(at 185.42 123.19 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left)
 		)
-		(uuid "5ed6df8a-dadb-49a4-8826-e9125b539d9f")
+		(uuid "51495809-a6f7-4578-95a9-e62428490225")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 185.42 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(global_label "VBUS_PD"
 		(shape input)
@@ -10745,15 +10733,27 @@
 			)
 		)
 	)
-	(label "POE_VSS"
-		(at 162.56 67.31 180)
+	(global_label "POE_VB+"
+		(shape input)
+		(at 170.18 59.69 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify right)
 		)
-		(uuid "8541c188-6039-4393-96d0-2bbb4dc49323")
+		(uuid "6cdd7b1b-5739-43cd-975e-9a23bd88c0a7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170.18 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(global_label "+3V3"
 		(shape input)
@@ -10824,6 +10824,50 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "POE_VB-"
+		(shape input)
+		(at 170.18 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b2608567-c9cd-4854-bc19-36527ea502c9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170.18 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_VA+"
+		(shape input)
+		(at 185.42 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b4306996-8cd0-4695-98c1-0e58e661eeeb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 185.42 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 	)

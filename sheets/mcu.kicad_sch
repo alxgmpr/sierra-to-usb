@@ -5208,6 +5208,26 @@
 		(uuid "4f7be76e-6bf4-4c00-917a-c10f7b4b221f")
 	)
 	(no_connect
+		(at 175.26 85.09)
+		(uuid "5c0ffee0-0004-4a04-8a04-000000000001")
+	)
+	(no_connect
+		(at 175.26 115.57)
+		(uuid "5c0ffee0-0004-4a04-8a04-000000000002")
+	)
+	(no_connect
+		(at 175.26 118.11)
+		(uuid "5c0ffee0-0004-4a04-8a04-000000000003")
+	)
+	(no_connect
+		(at 175.26 120.65)
+		(uuid "5c0ffee0-0004-4a04-8a04-000000000004")
+	)
+	(no_connect
+		(at 175.26 113.03)
+		(uuid "5c0ffee0-0004-4a04-8a04-000000000005")
+	)
+	(no_connect
 		(at 302.26 140.97)
 		(uuid "81c1f9aa-ee43-46ec-a549-e0c5782d6d43")
 	)
@@ -5385,6 +5405,16 @@
 		)
 		(uuid "5733d072-1e70-4ea7-bc31-87b3a0519f0d")
 	)
+	(label "MCU_USB_DM"
+		(at 100.33 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5c0ffee0-0003-4a03-8a03-000000000001")
+	)
 	(label "MCU_SWCLK"
 		(at 90.17 130.81 0)
 		(effects
@@ -5474,17 +5504,6 @@
 			(justify left bottom)
 		)
 		(uuid "7da44d18-b5c9-4657-9833-77f843150068")
-	)
-	(global_label "USB_DBG_DP"
-		(shape input)
-		(at 100.33 88.9 0)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "7f36dc9f-75cf-4b78-a509-ba98ffec41a7")
 	)
 	(label "DVDD_1V1"
 		(at 165.1 35.56 0)
@@ -5984,10 +6003,6 @@
 			)
 		)
 	)
-	(no_connect
-		(at 175.26 118.11)
-		(uuid "5c0ffee0-0004-4a04-8a04-000000000003")
-	)
 	(global_label "N_PERST_3V3"
 		(shape input)
 		(at 175.26 107.95 0)
@@ -6083,16 +6098,6 @@
 				(justify left)
 			)
 		)
-	)
-	(label "MCU_USB_DM"
-		(at 100.33 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5c0ffee0-0003-4a03-8a03-000000000001")
 	)
 	(global_label "USB_DBG_DM"
 		(shape input)
@@ -6190,10 +6195,6 @@
 			)
 		)
 	)
-	(no_connect
-		(at 175.26 85.09)
-		(uuid "5c0ffee0-0004-4a04-8a04-000000000001")
-	)
 	(global_label "+3V3_MCU"
 		(shape input)
 		(at 154.94 35.56 0)
@@ -6265,10 +6266,6 @@
 				(justify left)
 			)
 		)
-	)
-	(no_connect
-		(at 175.26 120.65)
-		(uuid "5c0ffee0-0004-4a04-8a04-000000000004")
 	)
 	(global_label "VBUSSNS_CTL"
 		(shape input)
@@ -6363,6 +6360,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "USB_DBG_DP"
+		(shape input)
+		(at 100.33 88.9 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f36dc9f-75cf-4b78-a509-ba98ffec41a7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 100.33 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 	)
@@ -6558,10 +6577,6 @@
 			)
 		)
 	)
-	(no_connect
-		(at 175.26 115.57)
-		(uuid "5c0ffee0-0004-4a04-8a04-000000000002")
-	)
 	(global_label "+3V3_MCU"
 		(shape input)
 		(at 147.32 35.56 0)
@@ -6681,10 +6696,6 @@
 				(justify left)
 			)
 		)
-	)
-	(no_connect
-		(at 175.26 113.03)
-		(uuid "5c0ffee0-0004-4a04-8a04-000000000005")
 	)
 	(global_label "+3V3_MCU"
 		(shape input)
