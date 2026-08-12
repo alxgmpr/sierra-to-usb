@@ -255,7 +255,7 @@
           "max_amplitude": 1.0,
           "min_amplitude": 0.2,
           "single_sided": false,
-          "spacing": 0.6
+          "spacing": 1.0
         },
         "single_track_defaults": {
           "corner_radius_percentage": 80,
@@ -263,7 +263,7 @@
           "max_amplitude": 1.0,
           "min_amplitude": 0.2,
           "single_sided": false,
-          "spacing": 0.6
+          "spacing": 1.0
         }
       },
       "via_dimensions": [
@@ -920,6 +920,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
