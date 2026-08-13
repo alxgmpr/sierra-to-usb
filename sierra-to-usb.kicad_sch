@@ -1,464 +1,423 @@
 (kicad_sch
-	(version 20260306)
-	(generator "eeschema")
-	(generator_version "10.0")
-	(uuid "f141b3c0-0a69-4819-acb0-dc32f46a3541")
-	(paper "A0")
-	(title_block
-		(title "M.2 5G Modem Carrier")
-		(date "2026-07-19")
-		(rev "A")
-		(company "Alex Gompper")
-	)
-	(lib_symbols)
-	(text_box "The purpose of this board is to serve as an m.2 carrier and USB device similar to the rework.network 5G2PHY. However, this board has some features that allow it to be used with other types of modems such as both Sierra Wireless and Quectel Modems. It operates with modems in USB mode and provides a USB 3.0 interface that can be connected to. The USB interface can also issue AT commands. However, additionally, there is a microcontroller on board that provides fine grain control over things like AT commands, LEDs, and the values of pull-ups necessary to operate different types of modems in their USB mode. The board can be powered with spec compliant PoE or with an additional USB-C PD port (PD is not accepted over the USB 3.0 host port). "
-		(exclude_from_sim no)
-		(at 168.91 29.21 0)
-		(size 104.775 22.225)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "df01aa24-d91c-459d-a2c5-e854814bbde2")
-	)
-	(polyline
-		(pts
-			(xy 188.595 105.41) (xy 254 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2fd7798c-06ad-4db1-8b25-52d6245c6fb5")
-	)
-	(sheet
-		(at 420 190)
-		(size 80 50)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "07b65dee-eb78-4957-840b-2ea5a6e59dea")
-		(property "Sheetname" "MCU"
-			(at 420 189.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/mcu.kicad_sch"
-			(at 420 240.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "7")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 100 300)
-		(size 80 50)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "546d2886-c4fd-4053-b308-c06c3745561e")
-		(property "Sheetname" "Ethernet"
-			(at 100 299.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/ethernet.kicad_sch"
-			(at 100 350.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "8")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 260 190)
-		(size 80 50)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "61357e5a-1387-4a79-b320-e8993d638810")
-		(property "Sheetname" "USB2 Debug"
-			(at 260 189.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/usb2_debug.kicad_sch"
-			(at 260 240.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "6")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 420 80)
-		(size 80 50)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "73117a4a-deaa-4ee3-9b76-9f9d022b6743")
-		(property "Sheetname" "M.2"
-			(at 420 79.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/m2.kicad_sch"
-			(at 420 130.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 260 300)
-		(size 80 50)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "a819ecdb-6e62-47c4-88b1-23278076a079")
-		(property "Sheetname" "SIM"
-			(at 260 299.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/sim.kicad_sch"
-			(at 260 350.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "9")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 420 300)
-		(size 80 50)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "c0101b48-b720-4ad6-8a6c-65b6e69d4f97")
-		(property "Sheetname" "RF"
-			(at 420 299.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/rf.kicad_sch"
-			(at 420 350.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "10")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 100 190)
-		(size 80 50)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "c58b9910-d755-41c0-8ab8-83b9c45fd631")
-		(property "Sheetname" "USB3 Data"
-			(at 100 189.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/usb3_data.kicad_sch"
-			(at 100 240.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "5")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 260 80)
-		(size 80 50)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "e434f254-ecc4-4948-a6da-b21ef9d0f547")
-		(property "Sheetname" "Power Rails"
-			(at 260 79.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/power_rails.kicad_sch"
-			(at 260 130.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 100 80)
-		(size 80 50)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "f5a12b4b-c279-4b26-9f14-8d152bf2e4b9")
-		(property "Sheetname" "Power Input"
-			(at 100 79.2884 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sheets/power_input.kicad_sch"
-			(at 100 130.5846 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "sierra-to-usb"
-				(path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet_instances
-		(path "/"
-			(page "1")
-		)
-	)
-	(embedded_fonts no)
+  (version 20260306)
+  (generator "eeschema")
+  (generator_version "10.0")
+  (uuid "f141b3c0-0a69-4819-acb0-dc32f46a3541")
+  (paper "A0")
+  (title_block
+    (title "M.2 5G Modem Carrier")
+    (date "2026-07-19")
+    (rev "A")
+    (company "Alex Gompper"))
+
+  (lib_symbols)
+
+  (text "Power"
+    (at 63.5 63.5 0)
+    (effects
+      (font
+        (size 3.81 3.81)
+        (bold yes))
+      (justify left bottom))
+    (uuid "75d0b890-aa92-4a55-9c91-e05bb7509887"))
+
+  (text "Signal path - edge I/O to module"
+    (at 63.5 203.2 0)
+    (effects
+      (font
+        (size 3.81 3.81)
+        (bold yes))
+      (justify left bottom))
+    (uuid "be2370bc-b00e-4a1e-80da-2d9a7dcc8ecc"))
+
+  (text "Control plane"
+    (at 635 406.4 0)
+    (effects
+      (font
+        (size 3.81 3.81)
+        (bold yes))
+      (justify left bottom))
+    (uuid "a0d7eb4d-a794-4720-8922-e3ade0b5c9f2"))
+
+  (text "USB3 SS  -->  CN1 29/31 (module TX), 35/37 (module RX)"
+    (at 190.5 245.1 0)
+    (effects
+      (font
+        (size 2.54 2.54))
+      (justify left bottom))
+    (uuid "12ecd3fe-29d5-44a7-9891-ed0200654fbf"))
+
+  (text "USB2 D+/-  -->  CN1 7/9   (mux A = data port, B = RP2040 PIO-USB host)"
+    (at 190.5 346.7 0)
+    (effects
+      (font
+        (size 2.54 2.54))
+      (justify left bottom))
+    (uuid "a692cbe9-3a98-4dca-9086-9a94a340f1ee"))
+
+  (text "PCIe x1  <-->  CN1 41/43 (mod TX), 47/49 (mod RX), 53/55 REFCLK"
+    (at 190.5 448.3 0)
+    (effects
+      (font
+        (size 2.54 2.54))
+      (justify left bottom))
+    (uuid "23ca596f-59fa-4e0d-8adb-5f2f84880b0c"))
+
+  (text "UIM1  -->  CN1 30-36      UIM2 (mux: nano-SIM 2 / eSIM)  -->  CN1 40-48"
+    (at 190.5 549.9 0)
+    (effects
+      (font
+        (size 2.54 2.54))
+      (justify left bottom))
+    (uuid "06603ad7-8fb6-420a-8033-640df46265fe"))
+
+  (text "+12 V"
+    (at 215.9 101.6 0)
+    (effects
+      (font
+        (size 2.54 2.54))
+      (justify left bottom))
+    (uuid "85d35346-4954-4dda-a34c-f926b742cefa"))
+
+  (text "ANT0-3, GNSS  -->  MHF4 jumpers"
+    (at 546.1 245.1 0)
+    (effects
+      (font
+        (size 2.54 2.54))
+      (justify left bottom))
+    (uuid "36bade86-d11b-4c94-8b68-099cee835977"))
+
+  (text "drives: straps CN1 6/8/20/22/67  |  USB2 mux select  |  SIM select  |  RTL8125 reset  |  I2C telemetry"
+    (at 635 497.8 0)
+    (effects
+      (font
+        (size 2.032 2.032))
+      (justify left bottom))
+    (uuid "63a5a62d-ee99-428d-8c4b-44aed7e1e1fb"))
+
+  (text "rails out: +3V3 -> +3V3_MOD (M.2 VCC)  |  +1V8 (straps)  |  +3V3_ETH -> +0V95 (RTL core)  |  +3V3_MCU  |  +3V3_MUX"
+    (at 279.4 152.4 0)
+    (effects
+      (font
+        (size 2.032 2.032))
+      (justify left bottom))
+    (uuid "cd78a694-a8fe-483f-a568-86447009b582"))
+
+  (text "All inter-sheet connectivity is by global label - these blocks show topology, not sheet pins. Power rails reach every sheet the same way."
+    (at 63.5 647.7 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+        (italic yes))
+      (justify left bottom))
+    (uuid "1539f512-74dd-43e4-9ba4-b4496d14428a"))
+
+  (sheet
+    (at 635 419.1)
+    (size 114.3 63.5)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "07b65dee-eb78-4957-840b-2ea5a6e59dea")
+    (property "Sheetname" "MCU"
+      (at 420 189.29 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sheets/mcu.kicad_sch"
+      (at 420 240.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "sierra-to-usb"
+        (path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+          (page "7")))))
+
+  (sheet
+    (at 63.5 419.1)
+    (size 114.3 63.5)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "546d2886-c4fd-4053-b308-c06c3745561e")
+    (property "Sheetname" "Ethernet"
+      (at 100 299.29 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sheets/ethernet.kicad_sch"
+      (at 100 350.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "sierra-to-usb"
+        (path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+          (page "8")))))
+
+  (sheet
+    (at 63.5 317.5)
+    (size 114.3 63.5)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "61357e5a-1387-4a79-b320-e8993d638810")
+    (property "Sheetname" "USB2 Debug"
+      (at 260 189.29 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sheets/usb2_debug.kicad_sch"
+      (at 260 240.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "sierra-to-usb"
+        (path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+          (page "6")))))
+
+  (sheet
+    (at 406.4 215.9)
+    (size 127 400.05)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "73117a4a-deaa-4ee3-9b76-9f9d022b6743")
+    (property "Sheetname" "M.2"
+      (at 420 79.29 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sheets/m2.kicad_sch"
+      (at 420 130.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "sierra-to-usb"
+        (path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+          (page "4")))))
+
+  (sheet
+    (at 63.5 520.7)
+    (size 114.3 63.5)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "a819ecdb-6e62-47c4-88b1-23278076a079")
+    (property "Sheetname" "SIM"
+      (at 260 299.29 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sheets/sim.kicad_sch"
+      (at 260 350.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "sierra-to-usb"
+        (path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+          (page "9")))))
+
+  (sheet
+    (at 635 215.9)
+    (size 114.3 63.5)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "c0101b48-b720-4ad6-8a6c-65b6e69d4f97")
+    (property "Sheetname" "RF"
+      (at 420 299.29 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sheets/rf.kicad_sch"
+      (at 420 350.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "sierra-to-usb"
+        (path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+          (page "10")))))
+
+  (sheet
+    (at 63.5 215.9)
+    (size 114.3 63.5)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "c58b9910-d755-41c0-8ab8-83b9c45fd631")
+    (property "Sheetname" "USB3 Data"
+      (at 100 189.29 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sheets/usb3_data.kicad_sch"
+      (at 100 240.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "sierra-to-usb"
+        (path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+          (page "5")))))
+
+  (sheet
+    (at 279.4 76.2)
+    (size 114.3 63.5)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "e434f254-ecc4-4948-a6da-b21ef9d0f547")
+    (property "Sheetname" "Power Rails"
+      (at 260 79.29 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sheets/power_rails.kicad_sch"
+      (at 260 130.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "sierra-to-usb"
+        (path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+          (page "3")))))
+
+  (sheet
+    (at 63.5 76.2)
+    (size 114.3 63.5)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "f5a12b4b-c279-4b26-9f14-8d152bf2e4b9")
+    (property "Sheetname" "Power Input"
+      (at 100 79.2884 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sheets/power_input.kicad_sch"
+      (at 100 130.5846 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "sierra-to-usb"
+        (path "/f141b3c0-0a69-4819-acb0-dc32f46a3541"
+          (page "2")))))
+
+  (text_box "The purpose of this board is to serve as an m.2 carrier and USB device similar to the rework.network 5G2PHY. However, this board has some features that allow it to be used with other types of modems such as both Sierra Wireless and Quectel Modems. It operates with modems in USB mode and provides a USB 3.0 interface that can be connected to. The USB interface can also issue AT commands. However, additionally, there is a microcontroller on board that provides fine grain control over things like AT commands, LEDs, and the values of pull-ups necessary to operate different types of modems in their USB mode. The board can be powered with spec compliant PoE or with an additional USB-C PD port (PD is not accepted over the USB 3.0 host port). "
+    (exclude_from_sim no)
+    (at 168.91 29.21 0)
+    (size 104.775 22.225)
+    (margins 0.9525 0.9525 0.9525 0.9525)
+    (stroke
+      (width 0)
+      (type solid))
+    (fill
+      (type none))
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid "df01aa24-d91c-459d-a2c5-e854814bbde2"))
+
+  (polyline
+    (pts
+      (xy 188.595 105.41)
+      (xy 254 105.41))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2fd7798c-06ad-4db1-8b25-52d6245c6fb5"))
+  (embedded_fonts no)
+
+  (sheet_instances
+    (path "/"
+      (page "1")))
 )
