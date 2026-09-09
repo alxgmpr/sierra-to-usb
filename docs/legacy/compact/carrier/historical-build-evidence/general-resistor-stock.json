@@ -1,0 +1,1325 @@
+{
+  "checked_utc": "2026-09-06T22:43:11.940043+00:00",
+  "results": [
+    {
+      "query": "RC0603FR-07100RL",
+      "products": [
+        {
+          "mpn": "RC0603FR-07100RL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 100 OHM 1% 1/10W 0603",
+            "DetailedDescription": "100 Ohms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "100 Ohms",
+              "ValueText": "100 Ohms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-100HRTR-ND",
+              "stock": 1080000
+            },
+            {
+              "number": "311-100HRCT-ND",
+              "stock": 1081095
+            },
+            {
+              "number": "311-100HRDKR-ND",
+              "stock": 1081095
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-07100KL",
+      "products": [
+        {
+          "mpn": "RC0603FR-07100KL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 100K OHM 1% 1/10W 0603",
+            "DetailedDescription": "100 kOhms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "100 kOhms",
+              "ValueText": "100 kOhms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-100KHRTR-ND",
+              "stock": 2220767
+            },
+            {
+              "number": "311-100KHRCT-ND",
+              "stock": 2220767
+            },
+            {
+              "number": "311-100KHRDKR-ND",
+              "stock": 2220767
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-0710KL",
+      "products": [
+        {
+          "mpn": "RC0603FR-0710KL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 10K OHM 1% 1/10W 0603",
+            "DetailedDescription": "10 kOhms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "10 kOhms",
+              "ValueText": "10 kOhms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-10.0KHRTR-ND",
+              "stock": 2910000
+            },
+            {
+              "number": "311-10.0KHRCT-ND",
+              "stock": 2912992
+            },
+            {
+              "number": "311-10.0KHRDKR-ND",
+              "stock": 2912992
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-0715KL",
+      "products": [
+        {
+          "mpn": "RC0603FR-0715KL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 15K OHM 1% 1/10W 0603",
+            "DetailedDescription": "15 kOhms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "15 kOhms",
+              "ValueText": "15 kOhms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-15.0KHRTR-ND",
+              "stock": 4000
+            },
+            {
+              "number": "311-15.0KHRCT-ND",
+              "stock": 4106
+            },
+            {
+              "number": "311-15.0KHRDKR-ND",
+              "stock": 4106
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-071ML",
+      "products": [
+        {
+          "mpn": "RC0603FR-071ML",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 1M OHM 1% 1/10W 0603",
+            "DetailedDescription": "1 MOhms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "1 MOhms",
+              "ValueText": "1 MOhms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-1.00MHRTR-ND",
+              "stock": 435000
+            },
+            {
+              "number": "311-1.00MHRCT-ND",
+              "stock": 442408
+            },
+            {
+              "number": "311-1.00MHRDKR-ND",
+              "stock": 442408
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-071KL",
+      "products": [
+        {
+          "mpn": "RC0603FR-071KL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 1K OHM 1% 1/10W 0603",
+            "DetailedDescription": "1 kOhms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "1 kOhms",
+              "ValueText": "1 kOhms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-1.00KHRTR-ND",
+              "stock": 4065000
+            },
+            {
+              "number": "311-1.00KHRCT-ND",
+              "stock": 4068534
+            },
+            {
+              "number": "311-1.00KHRDKR-ND",
+              "stock": 4068534
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-07200KL",
+      "products": [
+        {
+          "mpn": "RC0603FR-07200KL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 200K OHM 1% 1/10W 0603",
+            "DetailedDescription": "200 kOhms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "200 kOhms",
+              "ValueText": "200 kOhms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-200KHRTR-ND",
+              "stock": 0
+            },
+            {
+              "number": "311-200KHRCT-ND",
+              "stock": 0
+            },
+            {
+              "number": "311-200KHRDKR-ND",
+              "stock": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-0722RL",
+      "products": [
+        {
+          "mpn": "RC0603FR-0722RL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 22 OHM 1% 1/10W 0603",
+            "DetailedDescription": "22 Ohms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "22 Ohms",
+              "ValueText": "22 Ohms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-22.0HRTR-ND",
+              "stock": 0
+            },
+            {
+              "number": "311-22.0HRCT-ND",
+              "stock": 0
+            },
+            {
+              "number": "311-22.0HRDKR-ND",
+              "stock": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-07330RL",
+      "products": [
+        {
+          "mpn": "RC0603FR-07330RL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 330 OHM 1% 1/10W 0603",
+            "DetailedDescription": "330 Ohms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "330 Ohms",
+              "ValueText": "330 Ohms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-330HRTR-ND",
+              "stock": 460000
+            },
+            {
+              "number": "311-330HRCT-ND",
+              "stock": 462464
+            },
+            {
+              "number": "311-330HRDKR-ND",
+              "stock": 462464
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-074K7L",
+      "products": [
+        {
+          "mpn": "RC0603FR-074K7L",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 4.7K OHM 1% 1/10W 0603",
+            "DetailedDescription": "4.7 kOhms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "4.7 kOhms",
+              "ValueText": "4.7 kOhms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-4.70KHRTR-ND",
+              "stock": 1475000
+            },
+            {
+              "number": "311-4.70KHRCT-ND",
+              "stock": 1476290
+            },
+            {
+              "number": "311-4.70KHRDKR-ND",
+              "stock": 1476290
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC0603FR-07681KL",
+      "products": [
+        {
+          "mpn": "RC0603FR-07681KL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 681K OHM 1% 1/10W 0603",
+            "DetailedDescription": "681 kOhms \u00b11% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "681 kOhms",
+              "ValueText": "681 kOhms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "14064",
+              "ValueText": "0.1W, 1/10W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "39246",
+              "ValueText": "0603 (1608 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "39245",
+              "ValueText": "0603"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "7802",
+              "ValueText": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5314",
+              "ValueText": "0.022\" (0.55mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-681KHRTR-ND",
+              "stock": 0
+            },
+            {
+              "number": "311-681KHRCT-ND",
+              "stock": 511
+            },
+            {
+              "number": "311-681KHRDKR-ND",
+              "stock": 511
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

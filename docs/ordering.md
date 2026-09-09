@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Ordering / fab notes (draft)
 
 Draft notes for the JLCPCB order form and fab-side settings. Expand as later

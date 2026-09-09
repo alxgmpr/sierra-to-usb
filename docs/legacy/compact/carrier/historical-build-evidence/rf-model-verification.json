@@ -1,0 +1,54 @@
+{
+  "SMA_count": 5,
+  "SMA_assignments": [
+    {
+      "reference": "J602",
+      "model": "${KIPRJMOD}/models/SMA_Amphenol_132289_EdgeMount.step",
+      "offset_mm": [
+        -2.54,
+        0,
+        0
+      ]
+    },
+    {
+      "reference": "J604",
+      "model": "${KIPRJMOD}/models/SMA_Amphenol_132289_EdgeMount.step",
+      "offset_mm": [
+        -2.54,
+        0,
+        0
+      ]
+    },
+    {
+      "reference": "J606",
+      "model": "${KIPRJMOD}/models/SMA_Amphenol_132289_EdgeMount.step",
+      "offset_mm": [
+        -2.54,
+        0,
+        0
+      ]
+    },
+    {
+      "reference": "J608",
+      "model": "${KIPRJMOD}/models/SMA_Amphenol_132289_EdgeMount.step",
+      "offset_mm": [
+        -2.54,
+        0,
+        0
+      ]
+    },
+    {
+      "reference": "J610",
+      "model": "${KIPRJMOD}/models/SMA_Amphenol_132289_EdgeMount.step",
+      "offset_mm": [
+        -2.54,
+        0,
+        0
+      ]
+    }
+  ],
+  "TPS259470LRPWR_model": "TI_RPW0010A.wrl",
+  "source_and_alignment": "models/README.md",
+  "SMA_sha256": "eab4ddd93a669662d28c0d8dcbc380584abc16b56d4afc77c31e75b579c82044",
+  "visual_review": "Five SMA forks aligned with launch lands; eFuse body present within U301 footprint; RF1-RF4 and GPS labeled."
+}

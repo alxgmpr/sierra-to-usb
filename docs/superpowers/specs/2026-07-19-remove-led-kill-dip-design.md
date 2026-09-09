@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../../../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Remove LED-kill gate and DIP switches — design
 
 **Date:** 2026-07-19 · **Status:** approved scope (full removal, freed pins = NC)

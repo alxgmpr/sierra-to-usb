@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Full adapter: JLCPCB manufacturability screen
 Date: 2026-09-09. Architecture assessment only; no schematic changes, orders, inventory reservations, PCB escape study, or assembly quote.
 

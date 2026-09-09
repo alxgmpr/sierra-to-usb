@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Compact USB carrier tasks
 
 Updated2026-09-06. The requested schematic and unrouted-placement endpoint is complete. Authoritative current status: [carrier review](../compact/carrier/REVIEW.md) and [handoff index](../compact/carrier/HANDOFF.md). The root project and its pre-existing modifications remain preserved.

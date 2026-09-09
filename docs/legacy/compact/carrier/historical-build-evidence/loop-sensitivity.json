@@ -1,0 +1,3718 @@
+{
+  "scope": "Exploratory averaged small-signal model; NOT an ADI model or bench validation.\nUses datasheet typical gm/ITH gain; parameter sweeps are engineering sensitivities.\nNo switching ripple, slope compensation, pulse skipping, clamps or diode handoff.\n",
+  "source": "LTC3310S RevF p3 typical gm400uS / ITH gain18A/V, p18 compensation guidance",
+  "assumptions": [
+    "gm and ITH gain +/-25% are sensitivity ranges, NOT guaranteed bounds.",
+    "200kHz inner current-loop pole is an assumed approximation, NOT a documented IC pole.",
+    "Current-source load has no resistive damping; 3A ideal step is an engineering stimulus, NOT a modem burst specification.",
+    "No current-limit handoff, source impedance, transport delay, buck saturation or switch-level behavior is represented."
+  ],
+  "summary": [
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "stable_in_all_model_cases": true,
+      "minimum_phase_margin_deg": 73.94823915088689,
+      "maximum_step_3A_droop_V": 0.1914392701431265,
+      "maximum_step_3A_rebound_V": -0.003036584884080649
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "stable_in_all_model_cases": true,
+      "minimum_phase_margin_deg": 88.26867286925831,
+      "maximum_step_3A_droop_V": 0.06734754786243753,
+      "maximum_step_3A_rebound_V": -0.0009624841912664415
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "stable_in_all_model_cases": true,
+      "minimum_phase_margin_deg": 84.65235952632845,
+      "maximum_step_3A_droop_V": 0.04688381260896765,
+      "maximum_step_3A_rebound_V": -0.0007046992730300695
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "stable_in_all_model_cases": true,
+      "minimum_phase_margin_deg": 79.58507398706942,
+      "maximum_step_3A_droop_V": 0.03950133000639651,
+      "maximum_step_3A_rebound_V": -0.0005825906705714222
+    }
+  ],
+  "cases": [
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4212.3544216087275
+      ],
+      "phase_margin_deg": [
+        86.84513585578816
+      ],
+      "step_3A_peak_droop_V": 0.1914392701431265,
+      "step_3A_peak_rebound_V": -0.0075
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5604.665654645795
+      ],
+      "phase_margin_deg": [
+        88.38877096659908
+      ],
+      "step_3A_peak_droop_V": 0.14732247734644152,
+      "step_3A_peak_rebound_V": -0.007045335175339723
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7007.596932108098
+      ],
+      "phase_margin_deg": [
+        89.49232114133916
+      ],
+      "step_3A_peak_droop_V": 0.11991656095071815,
+      "step_3A_peak_rebound_V": -0.005728549939983013
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5604.665654645795
+      ],
+      "phase_margin_deg": [
+        88.38877096659908
+      ],
+      "step_3A_peak_droop_V": 0.1473224773464415,
+      "step_3A_peak_rebound_V": -0.007045335175339722
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7474.372103705012
+      ],
+      "phase_margin_deg": [
+        89.80480319661726
+      ],
+      "step_3A_peak_droop_V": 0.11294106778178993,
+      "step_3A_peak_rebound_V": -0.0053916332933194935
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        9345.318748842978
+      ],
+      "phase_margin_deg": [
+        90.88801111291959
+      ],
+      "step_3A_peak_droop_V": 0.09168532337633195,
+      "step_3A_peak_rebound_V": -0.004363050570869954
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7007.596932108098
+      ],
+      "phase_margin_deg": [
+        89.49232114133916
+      ],
+      "step_3A_peak_droop_V": 0.11991656095071801,
+      "step_3A_peak_rebound_V": -0.005728549939983022
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        9345.318748842978
+      ],
+      "phase_margin_deg": [
+        90.88801111291959
+      ],
+      "step_3A_peak_droop_V": 0.09168532337633195,
+      "step_3A_peak_rebound_V": -0.004363050570869954
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        11711.53236020331
+      ],
+      "phase_margin_deg": [
+        92.01635135017051
+      ],
+      "step_3A_peak_droop_V": 0.07429161852200089,
+      "step_3A_peak_rebound_V": -0.003521492999546256
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4212.3544216087275
+      ],
+      "phase_margin_deg": [
+        88.77480067882213
+      ],
+      "step_3A_peak_droop_V": 0.1904449799744033,
+      "step_3A_peak_rebound_V": -0.009123162977415555
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5617.588330838718
+      ],
+      "phase_margin_deg": [
+        90.95982554857768
+      ],
+      "step_3A_peak_droop_V": 0.14648498496395895,
+      "step_3A_peak_rebound_V": -0.007045113711417335
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7039.949015228976
+      ],
+      "phase_margin_deg": [
+        92.70663026942935
+      ],
+      "step_3A_peak_droop_V": 0.11918845143518221,
+      "step_3A_peak_rebound_V": -0.0057284246402059934
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5617.588330838718
+      ],
+      "phase_margin_deg": [
+        90.95982554857768
+      ],
+      "step_3A_peak_droop_V": 0.14648498496395895,
+      "step_3A_peak_rebound_V": -0.007045113711417335
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7508.879155111962
+      ],
+      "phase_margin_deg": [
+        93.23394665445531
+      ],
+      "step_3A_peak_droop_V": 0.11224250433781,
+      "step_3A_peak_rebound_V": -0.005391526628864712
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        9431.807296066921
+      ],
+      "phase_margin_deg": [
+        95.17876492127421
+      ],
+      "step_3A_peak_droop_V": 0.0910824328673455,
+      "step_3A_peak_rebound_V": -0.004362988728469117
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7039.949015228976
+      ],
+      "phase_margin_deg": [
+        92.70663026942935
+      ],
+      "step_3A_peak_droop_V": 0.1191884514351822,
+      "step_3A_peak_rebound_V": -0.005728424640205993
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        9431.807296066921
+      ],
+      "phase_margin_deg": [
+        95.17876492127421
+      ],
+      "step_3A_peak_droop_V": 0.09108243286734552,
+      "step_3A_peak_rebound_V": -0.004362988728469112
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        11847.172798030557
+      ],
+      "phase_margin_deg": [
+        97.38995512081738
+      ],
+      "step_3A_peak_droop_V": 0.07377409301050736,
+      "step_3A_peak_rebound_V": -0.003521456557185431
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1960.913749449147
+      ],
+      "phase_margin_deg": [
+        82.14403222473908
+      ],
+      "step_3A_peak_droop_V": 0.17392144937165893,
+      "step_3A_peak_rebound_V": -0.0075
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2597.0654615443414
+      ],
+      "phase_margin_deg": [
+        84.99377127504548
+      ],
+      "step_3A_peak_droop_V": 0.13541619062802912,
+      "step_3A_peak_rebound_V": -0.006265779692806761
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        3239.6798926853494
+      ],
+      "phase_margin_deg": [
+        86.95192288584656
+      ],
+      "step_3A_peak_droop_V": 0.11114858897916016,
+      "step_3A_peak_rebound_V": -0.005262373865629784
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2597.0654615443414
+      ],
+      "phase_margin_deg": [
+        84.99377127504548
+      ],
+      "step_3A_peak_droop_V": 0.13541619062802912,
+      "step_3A_peak_rebound_V": -0.006265779692806761
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        3455.4745727273075
+      ],
+      "phase_margin_deg": [
+        87.48999309626207
+      ],
+      "step_3A_peak_droop_V": 0.1049229797773951,
+      "step_3A_peak_rebound_V": -0.004988568600673147
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4320.431316852876
+      ],
+      "phase_margin_deg": [
+        89.2928194642347
+      ],
+      "step_3A_peak_droop_V": 0.08581667437092928,
+      "step_3A_peak_rebound_V": -0.004117143464194931
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        3239.6798926853494
+      ],
+      "phase_margin_deg": [
+        86.95192288584656
+      ],
+      "step_3A_peak_droop_V": 0.11114858897916016,
+      "step_3A_peak_rebound_V": -0.005262373865629784
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4320.431316852876
+      ],
+      "phase_margin_deg": [
+        89.2928194642347
+      ],
+      "step_3A_peak_droop_V": 0.08581667437092928,
+      "step_3A_peak_rebound_V": -0.004117143464194931
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5401.899614879949
+      ],
+      "phase_margin_deg": [
+        91.06971160264685
+      ],
+      "step_3A_peak_droop_V": 0.07001261259622363,
+      "step_3A_peak_rebound_V": -0.003369821141220398
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1965.4350277889844
+      ],
+      "phase_margin_deg": [
+        84.10331617749257
+      ],
+      "step_3A_peak_droop_V": 0.1724725453557905,
+      "step_3A_peak_rebound_V": -0.007555481637774931
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2609.0553745624934
+      ],
+      "phase_margin_deg": [
+        87.59334220494316
+      ],
+      "step_3A_peak_droop_V": 0.13417304790040968,
+      "step_3A_peak_rebound_V": -0.0062640170230014
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        3254.6365738684467
+      ],
+      "phase_margin_deg": [
+        90.19599531254262
+      ],
+      "step_3A_peak_droop_V": 0.11005319369639094,
+      "step_3A_peak_rebound_V": -0.005261435638146534
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2609.0553745624934
+      ],
+      "phase_margin_deg": [
+        87.59334220494316
+      ],
+      "step_3A_peak_droop_V": 0.13417304790040968,
+      "step_3A_peak_rebound_V": -0.006264017023001386
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        3471.42751660836
+      ],
+      "phase_margin_deg": [
+        90.94969808558258
+      ],
+      "step_3A_peak_droop_V": 0.103868534117554,
+      "step_3A_peak_rebound_V": -0.004987786681348483
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4350.385127515574
+      ],
+      "phase_margin_deg": [
+        93.61892411068459
+      ],
+      "step_3A_peak_droop_V": 0.0848959985409347,
+      "step_3A_peak_rebound_V": -0.004116722444305111
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        3254.6365738684467
+      ],
+      "phase_margin_deg": [
+        90.19599531254262
+      ],
+      "step_3A_peak_droop_V": 0.11005319369639094,
+      "step_3A_peak_rebound_V": -0.005261435638146534
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4350.385127515574
+      ],
+      "phase_margin_deg": [
+        93.61892411068459
+      ],
+      "step_3A_peak_droop_V": 0.0848959985409347,
+      "step_3A_peak_rebound_V": -0.004116722444305094
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5477.062660823193
+      ],
+      "phase_margin_deg": [
+        96.48804870820857
+      ],
+      "step_3A_peak_droop_V": 0.06921429397782713,
+      "step_3A_peak_rebound_V": -0.0033695896458140135
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1014.8486544845106
+      ],
+      "phase_margin_deg": [
+        73.94823915088689
+      ],
+      "step_3A_peak_droop_V": 0.15447589537575476,
+      "step_3A_peak_rebound_V": -0.0032198557052655194
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1328.693116060694
+      ],
+      "phase_margin_deg": [
+        78.5479295720026
+      ],
+      "step_3A_peak_droop_V": 0.12175814646434614,
+      "step_3A_peak_rebound_V": -0.0041426353294901465
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1646.0510065231206
+      ],
+      "phase_margin_deg": [
+        81.72195437481882
+      ],
+      "step_3A_peak_droop_V": 0.10084034069279317,
+      "step_3A_peak_rebound_V": -0.0040872235388448724
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1328.693116060694
+      ],
+      "phase_margin_deg": [
+        78.5479295720026
+      ],
+      "step_3A_peak_droop_V": 0.12175814646434613,
+      "step_3A_peak_rebound_V": -0.004142635329490146
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1751.655470467283
+      ],
+      "phase_margin_deg": [
+        82.58421071210813
+      ],
+      "step_3A_peak_droop_V": 0.09543110701508559,
+      "step_3A_peak_rebound_V": -0.003995124001077222
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2175.0412282977118
+      ],
+      "phase_margin_deg": [
+        85.41152497609774
+      ],
+      "step_3A_peak_droop_V": 0.07870575354866328,
+      "step_3A_peak_rebound_V": -0.0035508468483806833
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1646.0510065231206
+      ],
+      "phase_margin_deg": [
+        81.72195437481882
+      ],
+      "step_3A_peak_droop_V": 0.10084034069279317,
+      "step_3A_peak_rebound_V": -0.0040872235388448724
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2175.0412282977118
+      ],
+      "phase_margin_deg": [
+        85.41152497609772
+      ],
+      "step_3A_peak_droop_V": 0.07870575354866327,
+      "step_3A_peak_rebound_V": -0.0035508468483806824
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2713.2305432484477
+      ],
+      "phase_margin_deg": [
+        88.07228771205668
+      ],
+      "step_3A_peak_droop_V": 0.06471198390504598,
+      "step_3A_peak_rebound_V": -0.003037951234165694
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1017.188590772388
+      ],
+      "phase_margin_deg": [
+        75.9912054590318
+      ],
+      "step_3A_peak_droop_V": 0.15256489635506643,
+      "step_3A_peak_rebound_V": -0.003366369997312181
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1331.75668344484
+      ],
+      "phase_margin_deg": [
+        81.22315088354982
+      ],
+      "step_3A_peak_droop_V": 0.12008917476802589,
+      "step_3A_peak_rebound_V": -0.004160600949345197
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1653.650356129009
+      ],
+      "phase_margin_deg": [
+        85.03817651498329
+      ],
+      "step_3A_peak_droop_V": 0.09935057644624254,
+      "step_3A_peak_rebound_V": -0.0040862023830888425
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1331.75668344484
+      ],
+      "phase_margin_deg": [
+        81.22315088354982
+      ],
+      "step_3A_peak_droop_V": 0.12008917476802589,
+      "step_3A_peak_rebound_V": -0.004160600949345197
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1759.742365865054
+      ],
+      "phase_margin_deg": [
+        86.11561878690125
+      ],
+      "step_3A_peak_droop_V": 0.09399156198345451,
+      "step_3A_peak_rebound_V": -0.003992929763276323
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2195.1706814542395
+      ],
+      "phase_margin_deg": [
+        89.81012923908712
+      ],
+      "step_3A_peak_droop_V": 0.0774337035299306,
+      "step_3A_peak_rebound_V": -0.003548518700065966
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        1653.650356129009
+      ],
+      "phase_margin_deg": [
+        85.03817651498329
+      ],
+      "step_3A_peak_droop_V": 0.09935057644624254,
+      "step_3A_peak_rebound_V": -0.0040862023830888425
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2195.1706814542395
+      ],
+      "phase_margin_deg": [
+        89.81012923908712
+      ],
+      "step_3A_peak_droop_V": 0.0774337035299306,
+      "step_3A_peak_rebound_V": -0.003548518700065966
+    },
+    {
+      "rc_ohm": 22000,
+      "cc_F": 2.2e-08,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        2750.982942684943
+      ],
+      "phase_margin_deg": [
+        93.56839391319443
+      ],
+      "step_3A_peak_droop_V": 0.06359695032604817,
+      "step_3A_peak_rebound_V": -0.003036584884080649
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        12960.522922317547
+      ],
+      "phase_margin_deg": [
+        89.28987701224865
+      ],
+      "step_3A_peak_droop_V": 0.06734754786243753,
+      "step_3A_peak_rebound_V": -0.0027324555833348786
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        17323.98222854667
+      ],
+      "phase_margin_deg": [
+        89.93040358830024
+      ],
+      "step_3A_peak_droop_V": 0.05121343305639735,
+      "step_3A_peak_rebound_V": -0.0020681050703544633
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        21710.375422168465
+      ],
+      "phase_margin_deg": [
+        90.41074317209727
+      ],
+      "step_3A_peak_droop_V": 0.041344338830478826,
+      "step_3A_peak_rebound_V": -0.0016633534684967507
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        17323.98222854667
+      ],
+      "phase_margin_deg": [
+        89.93040358830025
+      ],
+      "step_3A_peak_droop_V": 0.05121343305639735,
+      "step_3A_peak_rebound_V": -0.0020681050703544633
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        23156.500864498597
+      ],
+      "phase_margin_deg": [
+        90.54966122620642
+      ],
+      "step_3A_peak_droop_V": 0.03885283263499097,
+      "step_3A_peak_rebound_V": -0.001561457889585721
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        29086.585267052644
+      ],
+      "phase_margin_deg": [
+        91.03538267429526
+      ],
+      "step_3A_peak_droop_V": 0.031315238321582596,
+      "step_3A_peak_rebound_V": -0.001254091991541033
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        21710.375422168465
+      ],
+      "phase_margin_deg": [
+        90.41074317209727
+      ],
+      "step_3A_peak_droop_V": 0.041344338830478826,
+      "step_3A_peak_rebound_V": -0.0016633534684967507
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        29086.585267052644
+      ],
+      "phase_margin_deg": [
+        91.03538267429526
+      ],
+      "step_3A_peak_droop_V": 0.031315238321582596,
+      "step_3A_peak_rebound_V": -0.001254091991541033
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        36535.28861929975
+      ],
+      "phase_margin_deg": [
+        91.53116563535703
+      ],
+      "step_3A_peak_droop_V": 0.025212789463277308,
+      "step_3A_peak_rebound_V": -0.0010064021358678304
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        13171.156945944387
+      ],
+      "phase_margin_deg": [
+        95.19746865706442
+      ],
+      "step_3A_peak_droop_V": 0.06681616779271712,
+      "step_3A_peak_rebound_V": -0.0027323943693752647
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        17850.497726083067
+      ],
+      "phase_margin_deg": [
+        97.77275872756401
+      ],
+      "step_3A_peak_droop_V": 0.050773623320919434,
+      "step_3A_peak_rebound_V": -0.002068072340702858
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        22733.763320074195
+      ],
+      "phase_margin_deg": [
+        100.15341678539511
+      ],
+      "step_3A_peak_droop_V": 0.04096599835619698,
+      "step_3A_peak_rebound_V": -0.0016633331538861412
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        17850.497726083067
+      ],
+      "phase_margin_deg": [
+        97.77275872756401
+      ],
+      "step_3A_peak_droop_V": 0.050773623320919434,
+      "step_3A_peak_rebound_V": -0.002068072340702858
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        24416.169741582104
+      ],
+      "phase_margin_deg": [
+        100.91531159013142
+      ],
+      "step_3A_peak_droop_V": 0.03849094757113253,
+      "step_3A_peak_rebound_V": -0.001561440171729509
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        31600.935537775313
+      ],
+      "phase_margin_deg": [
+        103.81882595818655
+      ],
+      "step_3A_peak_droop_V": 0.031005945914432106,
+      "step_3A_peak_rebound_V": -0.0012540809114522022
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        22733.763320074195
+      ],
+      "phase_margin_deg": [
+        100.15341678539511
+      ],
+      "step_3A_peak_droop_V": 0.040965998356196964,
+      "step_3A_peak_rebound_V": -0.0016633331538861333
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        31600.935537775313
+      ],
+      "phase_margin_deg": [
+        103.81882595818655
+      ],
+      "step_3A_peak_droop_V": 0.031005945914432106,
+      "step_3A_peak_rebound_V": -0.0012540809114522022
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        41852.783306099045
+      ],
+      "phase_margin_deg": [
+        107.08195010301341
+      ],
+      "step_3A_peak_droop_V": 0.02494969415097576,
+      "step_3A_peak_rebound_V": -0.001006395175171833
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        6005.5904346772095
+      ],
+      "phase_margin_deg": [
+        90.28634538689424
+      ],
+      "step_3A_peak_droop_V": 0.06348945562496401,
+      "step_3A_peak_rebound_V": -0.002608348769259459
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        8027.511126354584
+      ],
+      "phase_margin_deg": [
+        92.29344994779424
+      ],
+      "step_3A_peak_droop_V": 0.04864171895141062,
+      "step_3A_peak_rebound_V": -0.002000489435832046
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10083.254297582384
+      ],
+      "phase_margin_deg": [
+        93.97078478191438
+      ],
+      "step_3A_peak_droop_V": 0.03946790505162573,
+      "step_3A_peak_rebound_V": -0.0016208826483876345
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        8027.511126354584
+      ],
+      "phase_margin_deg": [
+        92.29344994779424
+      ],
+      "step_3A_peak_droop_V": 0.04864171895141062,
+      "step_3A_peak_rebound_V": -0.0020004894358320526
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10754.89862881441
+      ],
+      "phase_margin_deg": [
+        94.48802794625973
+      ],
+      "step_3A_peak_droop_V": 0.03713974135425948,
+      "step_3A_peak_rebound_V": -0.0015243026571475269
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        13571.458571808253
+      ],
+      "phase_margin_deg": [
+        96.42815994643883
+      ],
+      "step_3A_peak_droop_V": 0.030063939967791935,
+      "step_3A_peak_rebound_V": -0.0012306384180243513
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10083.254297582384
+      ],
+      "phase_margin_deg": [
+        93.97078478191438
+      ],
+      "step_3A_peak_droop_V": 0.03946790505162573,
+      "step_3A_peak_rebound_V": -0.0016208826483876345
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        13571.458571808253
+      ],
+      "phase_margin_deg": [
+        96.42815994643883
+      ],
+      "step_3A_peak_droop_V": 0.030063939967791935,
+      "step_3A_peak_rebound_V": -0.0012306384180243513
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        17204.700999784705
+      ],
+      "phase_margin_deg": [
+        98.67018956546049
+      ],
+      "step_3A_peak_droop_V": 0.024296594851253635,
+      "step_3A_peak_rebound_V": -0.0009915548291625164
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        6103.193107431461
+      ],
+      "phase_margin_deg": [
+        96.29035303375078
+      ],
+      "step_3A_peak_droop_V": 0.06270139075620848,
+      "step_3A_peak_rebound_V": -0.002607994306713602
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        8271.485575122311
+      ],
+      "phase_margin_deg": [
+        100.3262004921341
+      ],
+      "step_3A_peak_droop_V": 0.0479908914253502,
+      "step_3A_peak_rebound_V": -0.002000310436215477
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10558.56069919877
+      ],
+      "phase_margin_deg": [
+        104.0603856139439
+      ],
+      "step_3A_peak_droop_V": 0.03891149156907668,
+      "step_3A_peak_rebound_V": -0.0016207753645113374
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        8271.485575122311
+      ],
+      "phase_margin_deg": [
+        100.3262004921341
+      ],
+      "step_3A_peak_droop_V": 0.0479908914253502,
+      "step_3A_peak_rebound_V": -0.002000310436215477
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        11366.090827862374
+      ],
+      "phase_margin_deg": [
+        105.2702863071928
+      ],
+      "step_3A_peak_droop_V": 0.03660870670365882,
+      "step_3A_peak_rebound_V": -0.0015242099094509298
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        14846.850207033684
+      ],
+      "phase_margin_deg": [
+        110.01898693997994
+      ],
+      "step_3A_peak_droop_V": 0.02961447382002596,
+      "step_3A_peak_rebound_V": -0.0012305819457406218
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10558.56069919877
+      ],
+      "phase_margin_deg": [
+        104.0603856139439
+      ],
+      "step_3A_peak_droop_V": 0.038911491569076674,
+      "step_3A_peak_rebound_V": -0.0016207753645113374
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        14846.850207033684
+      ],
+      "phase_margin_deg": [
+        110.01898693997994
+      ],
+      "step_3A_peak_droop_V": 0.029614473820025952,
+      "step_3A_peak_rebound_V": -0.0012305819457406244
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        19982.974400924428
+      ],
+      "phase_margin_deg": [
+        115.85030271748863
+      ],
+      "step_3A_peak_droop_V": 0.023919399825243104,
+      "step_3A_peak_rebound_V": -0.0009915201112488956
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        3016.44839025189
+      ],
+      "phase_margin_deg": [
+        88.26867286925831
+      ],
+      "step_3A_peak_droop_V": 0.05873643597433984,
+      "step_3A_peak_rebound_V": -0.002341270810219601
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4022.730184034414
+      ],
+      "phase_margin_deg": [
+        91.46709618854928
+      ],
+      "step_3A_peak_droop_V": 0.045401314984282265,
+      "step_3A_peak_rebound_V": -0.0018609395513823719
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5052.900055536803
+      ],
+      "phase_margin_deg": [
+        94.0370871156052
+      ],
+      "step_3A_peak_droop_V": 0.03706791508225166,
+      "step_3A_peak_rebound_V": -0.0015352435499449086
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4022.730184034414
+      ],
+      "phase_margin_deg": [
+        91.46709618854928
+      ],
+      "step_3A_peak_droop_V": 0.04540131498428227,
+      "step_3A_peak_rebound_V": -0.0018609395513823719
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5401.899614879949
+      ],
+      "phase_margin_deg": [
+        94.814554292939
+      ],
+      "step_3A_peak_droop_V": 0.03494011803259116,
+      "step_3A_peak_rebound_V": -0.0014498018561772512
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        6816.582783587971
+      ],
+      "phase_margin_deg": [
+        97.68738771573373
+      ],
+      "step_3A_peak_droop_V": 0.02843816608691088,
+      "step_3A_peak_rebound_V": -0.0011843770223205021
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5052.900055536803
+      ],
+      "phase_margin_deg": [
+        94.0370871156052
+      ],
+      "step_3A_peak_droop_V": 0.03706791508225165,
+      "step_3A_peak_rebound_V": -0.0015352435499449086
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        6816.582783587971
+      ],
+      "phase_margin_deg": [
+        97.68738771573373
+      ],
+      "step_3A_peak_droop_V": 0.02843816608691088,
+      "step_3A_peak_rebound_V": -0.0011843770223205021
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        8641.463849400021
+      ],
+      "phase_margin_deg": [
+        100.96310120309839
+      ],
+      "step_3A_peak_droop_V": 0.023095628516153675,
+      "step_3A_peak_rebound_V": -0.0009626382398402384
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        3065.471617579191
+      ],
+      "phase_margin_deg": [
+        94.37484781663147
+      ],
+      "step_3A_peak_droop_V": 0.05765182342225977,
+      "step_3A_peak_rebound_V": -0.0023392454071046575
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4144.990167700952
+      ],
+      "phase_margin_deg": [
+        99.64663970217028
+      ],
+      "step_3A_peak_droop_V": 0.044498488236885125,
+      "step_3A_peak_rebound_V": -0.0018600048551386788
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5303.284293343072
+      ],
+      "phase_margin_deg": [
+        104.34659981206815
+      ],
+      "step_3A_peak_droop_V": 0.036292765666093324,
+      "step_3A_peak_rebound_V": -0.0015347160804073216
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4144.990167700952
+      ],
+      "phase_margin_deg": [
+        99.64663970217028
+      ],
+      "step_3A_peak_droop_V": 0.044498488236885125,
+      "step_3A_peak_rebound_V": -0.0018600048551386788
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5708.885205223796
+      ],
+      "phase_margin_deg": [
+        105.84906031045483
+      ],
+      "step_3A_peak_droop_V": 0.03419971371741729,
+      "step_3A_peak_rebound_V": -0.0014493528931641356
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7457.178090054822
+      ],
+      "phase_margin_deg": [
+        111.71367334348089
+      ],
+      "step_3A_peak_droop_V": 0.02781029553480411,
+      "step_3A_peak_rebound_V": -0.0011841163991496515
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5303.284293343072
+      ],
+      "phase_margin_deg": [
+        104.34659981206815
+      ],
+      "step_3A_peak_droop_V": 0.036292765666093324,
+      "step_3A_peak_rebound_V": -0.0015347160804073216
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7457.178090054822
+      ],
+      "phase_margin_deg": [
+        111.71367334348089
+      ],
+      "step_3A_peak_droop_V": 0.027810295534804116,
+      "step_3A_peak_rebound_V": -0.0011841163991496567
+    },
+    {
+      "rc_ohm": 68000,
+      "cc_F": 6.8e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10083.254297582384
+      ],
+      "phase_margin_deg": [
+        118.99148758127693
+      ],
+      "step_3A_peak_droop_V": 0.022568653975244584,
+      "step_3A_peak_rebound_V": -0.0009624841912664415
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        18952.02109453707
+      ],
+      "phase_margin_deg": [
+        86.95135307055055
+      ],
+      "step_3A_peak_droop_V": 0.04688381260896765,
+      "step_3A_peak_rebound_V": -0.0019836515297928085
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        25158.23306107905
+      ],
+      "phase_margin_deg": [
+        86.57407463071891
+      ],
+      "step_3A_peak_droop_V": 0.03555921166646846,
+      "step_3A_peak_rebound_V": -0.0014961876541819555
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        31383.35286127249
+      ],
+      "phase_margin_deg": [
+        86.12840372337538
+      ],
+      "step_3A_peak_droop_V": 0.028661418953401872,
+      "step_3A_peak_rebound_V": -0.0012009641564569703
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        25158.23306107905
+      ],
+      "phase_margin_deg": [
+        86.57407463071891
+      ],
+      "step_3A_peak_droop_V": 0.03555921166646846,
+      "step_3A_peak_rebound_V": -0.0014961876541819555
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        33396.79117062706
+      ],
+      "phase_margin_deg": [
+        85.97524239455595
+      ],
+      "step_3A_peak_droop_V": 0.026924150729693258,
+      "step_3A_peak_rebound_V": -0.0011268401870911152
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        41564.61333720856
+      ],
+      "phase_margin_deg": [
+        85.36714323671168
+      ],
+      "step_3A_peak_droop_V": 0.021679925319895897,
+      "step_3A_peak_rebound_V": -0.0009037106864092301
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        31383.35286127249
+      ],
+      "phase_margin_deg": [
+        86.12840372337538
+      ],
+      "step_3A_peak_droop_V": 0.02866141895340188,
+      "step_3A_peak_rebound_V": -0.0012009641564569651
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        41564.61333720856
+      ],
+      "phase_margin_deg": [
+        85.36714323671168
+      ],
+      "step_3A_peak_droop_V": 0.021679925319895904,
+      "step_3A_peak_rebound_V": -0.0009037106864092301
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        51492.30683327426
+      ],
+      "phase_margin_deg": [
+        84.65235952632845
+      ],
+      "step_3A_peak_droop_V": 0.017451257709618077,
+      "step_3A_peak_rebound_V": -0.0007243938691315639
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        19618.1717229217
+      ],
+      "phase_margin_deg": [
+        95.39082375101715
+      ],
+      "step_3A_peak_droop_V": 0.04643840493747477,
+      "step_3A_peak_rebound_V": -0.001983629784543235
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        26772.291012909798
+      ],
+      "phase_margin_deg": [
+        97.52494476387614
+      ],
+      "step_3A_peak_droop_V": 0.03518100944982343,
+      "step_3A_peak_rebound_V": -0.0014961758867778887
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        34411.7961439262
+      ],
+      "phase_margin_deg": [
+        99.3177381987137
+      ],
+      "step_3A_peak_droop_V": 0.028326767975304607,
+      "step_3A_peak_rebound_V": -0.0012009567996747504
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        26772.291012909798
+      ],
+      "phase_margin_deg": [
+        97.52494476387614
+      ],
+      "step_3A_peak_droop_V": 0.03518100944982344,
+      "step_3A_peak_rebound_V": -0.0014961758867778861
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        37129.05901671169
+      ],
+      "phase_margin_deg": [
+        99.83632563305085
+      ],
+      "step_3A_peak_droop_V": 0.026600639043361702,
+      "step_3A_peak_rebound_V": -0.0011268337590855226
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        48835.73714959281
+      ],
+      "phase_margin_deg": [
+        101.47006145946418
+      ],
+      "step_3A_peak_droop_V": 0.02138998216986379,
+      "step_3A_peak_rebound_V": -0.0009037066446736693
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        34411.7961439262
+      ],
+      "phase_margin_deg": [
+        99.3177381987137
+      ],
+      "step_3A_peak_droop_V": 0.028326767975304597,
+      "step_3A_peak_rebound_V": -0.0012009567996747504
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        48835.73714959281
+      ],
+      "phase_margin_deg": [
+        101.47006145946416
+      ],
+      "step_3A_peak_droop_V": 0.021389982169863785,
+      "step_3A_peak_rebound_V": -0.0009037066446736693
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        65277.41570061887
+      ],
+      "phase_margin_deg": [
+        102.42496427897368
+      ],
+      "step_3A_peak_droop_V": 0.01718515023109219,
+      "step_3A_peak_rebound_V": -0.0007243913189656521
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        8842.790130744319
+      ],
+      "phase_margin_deg": [
+        91.5126426196001
+      ],
+      "step_3A_peak_droop_V": 0.04459305643539933,
+      "step_3A_peak_rebound_V": -0.0019288473076349158
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        11847.172798030557
+      ],
+      "phase_margin_deg": [
+        93.27572799426692
+      ],
+      "step_3A_peak_droop_V": 0.03401340227995991,
+      "step_3A_peak_rebound_V": -0.0014660027273566364
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        14949.784314168815
+      ],
+      "phase_margin_deg": [
+        94.79431501886789
+      ],
+      "step_3A_peak_droop_V": 0.027514026114760136,
+      "step_3A_peak_rebound_V": -0.0011818849513475483
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        11847.172798030557
+      ],
+      "phase_margin_deg": [
+        93.27572799426692
+      ],
+      "step_3A_peak_droop_V": 0.03401340227995991,
+      "step_3A_peak_rebound_V": -0.0014660027273566364
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        15982.35334988581
+      ],
+      "phase_margin_deg": [
+        95.2662669575433
+      ],
+      "step_3A_peak_droop_V": 0.02586951457375828,
+      "step_3A_peak_rebound_V": -0.0011101231514138183
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        20261.021260374026
+      ],
+      "phase_margin_deg": [
+        97.03002623839424
+      ],
+      "step_3A_peak_droop_V": 0.020884976869334226,
+      "step_3A_peak_rebound_V": -0.0008931101090615453
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        14949.784314168815
+      ],
+      "phase_margin_deg": [
+        94.79431501886789
+      ],
+      "step_3A_peak_droop_V": 0.027514026114760125,
+      "step_3A_peak_rebound_V": -0.0011818849513475483
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        20261.021260374026
+      ],
+      "phase_margin_deg": [
+        97.03002623839424
+      ],
+      "step_3A_peak_droop_V": 0.020884976869334226,
+      "step_3A_peak_rebound_V": -0.0008931101090615453
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        25922.849384424408
+      ],
+      "phase_margin_deg": [
+        99.00534903541228
+      ],
+      "step_3A_peak_droop_V": 0.016838021308312055,
+      "step_3A_peak_rebound_V": -0.0007176590797899748
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        9153.60817874484
+      ],
+      "phase_margin_deg": [
+        100.30438168367773
+      ],
+      "step_3A_peak_droop_V": 0.04397064857832623,
+      "step_3A_peak_rebound_V": -0.0019287294195746802
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        12665.44706439847
+      ],
+      "phase_margin_deg": [
+        105.00638523781755
+      ],
+      "step_3A_peak_droop_V": 0.03350411502931563,
+      "step_3A_peak_rebound_V": -0.0014659416394366314
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        16658.823576451225
+      ],
+      "phase_margin_deg": [
+        109.44028360022133
+      ],
+      "step_3A_peak_droop_V": 0.027081870481314337,
+      "step_3A_peak_rebound_V": -0.0011818477666767566
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        12665.44706439847
+      ],
+      "phase_margin_deg": [
+        105.00638523781758
+      ],
+      "step_3A_peak_droop_V": 0.03350411502931563,
+      "step_3A_peak_rebound_V": -0.0014659416394366314
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        18140.603471223352
+      ],
+      "phase_margin_deg": [
+        110.86848414444243
+      ],
+      "step_3A_peak_droop_V": 0.02545806419038011,
+      "step_3A_peak_rebound_V": -0.0011100908802006426
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        25100.359169243766
+      ],
+      "phase_margin_deg": [
+        116.25325503252594
+      ],
+      "step_3A_peak_droop_V": 0.020539660954144907,
+      "step_3A_peak_rebound_V": -0.0008930902298403725
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        16658.823576451225
+      ],
+      "phase_margin_deg": [
+        109.44028360022135
+      ],
+      "step_3A_peak_droop_V": 0.027081870481314333,
+      "step_3A_peak_rebound_V": -0.0011818477666767566
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        25100.359169243766
+      ],
+      "phase_margin_deg": [
+        116.25325503252594
+      ],
+      "step_3A_peak_droop_V": 0.020539660954144907,
+      "step_3A_peak_rebound_V": -0.0008930902298403725
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        37819.47912070098
+      ],
+      "phase_margin_deg": [
+        121.48447758547152
+      ],
+      "step_3A_peak_droop_V": 0.01655115796049984,
+      "step_3A_peak_rebound_V": -0.0007176467440158799
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4441.498358129824
+      ],
+      "phase_margin_deg": [
+        91.86784353304071
+      ],
+      "step_3A_peak_droop_V": 0.04173533554985765,
+      "step_3A_peak_rebound_V": -0.0018170320025462485
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5964.239999365115
+      ],
+      "phase_margin_deg": [
+        95.04173509610213
+      ],
+      "step_3A_peak_droop_V": 0.032071633008955006,
+      "step_3A_peak_rebound_V": -0.0014059682792193586
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7526.192375894876
+      ],
+      "phase_margin_deg": [
+        97.78267700929794
+      ],
+      "step_3A_peak_droop_V": 0.026076316116423963,
+      "step_3A_peak_rebound_V": -0.001144488924660202
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5964.239999365115
+      ],
+      "phase_margin_deg": [
+        95.04173509610213
+      ],
+      "step_3A_peak_droop_V": 0.032071633008955006,
+      "step_3A_peak_rebound_V": -0.0014059682792193586
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        8064.571863398926
+      ],
+      "phase_margin_deg": [
+        98.64167314397919
+      ],
+      "step_3A_peak_droop_V": 0.024551549761520852,
+      "step_3A_peak_rebound_V": -0.0010774740504360045
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10294.435111976743
+      ],
+      "phase_margin_deg": [
+        101.91096020986126
+      ],
+      "step_3A_peak_droop_V": 0.019908801619971397,
+      "step_3A_peak_rebound_V": -0.000872624079396906
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7526.192375894876
+      ],
+      "phase_margin_deg": [
+        97.78267700929794
+      ],
+      "step_3A_peak_droop_V": 0.02607631611642396,
+      "step_3A_peak_rebound_V": -0.001144488924660206
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10294.435111976743
+      ],
+      "phase_margin_deg": [
+        101.91096020986126
+      ],
+      "step_3A_peak_droop_V": 0.019908801619971397,
+      "step_3A_peak_rebound_V": -0.000872624079396906
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        13293.052652247003
+      ],
+      "phase_margin_deg": [
+        105.76112373523807
+      ],
+      "step_3A_peak_droop_V": 0.016114349559086163,
+      "step_3A_peak_rebound_V": -0.0007047509107799281
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        4608.214716616711
+      ],
+      "phase_margin_deg": [
+        100.87099392279316
+      ],
+      "step_3A_peak_droop_V": 0.04088284203779191,
+      "step_3A_peak_rebound_V": -0.001816429451708997
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        6376.185042551618
+      ],
+      "phase_margin_deg": [
+        107.1866227459993
+      ],
+      "step_3A_peak_droop_V": 0.03137428106489999,
+      "step_3A_peak_rebound_V": -0.0014056780537002973
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        8425.295019319414
+      ],
+      "phase_margin_deg": [
+        113.20732440402259
+      ],
+      "step_3A_peak_droop_V": 0.025486263567566343,
+      "step_3A_peak_rebound_V": -0.0011443203440008858
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        6376.185042551618
+      ],
+      "phase_margin_deg": [
+        107.18662274599932
+      ],
+      "step_3A_peak_droop_V": 0.03137428106489999,
+      "step_3A_peak_rebound_V": -0.0014056780537002947
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        9195.867785786138
+      ],
+      "phase_margin_deg": [
+        115.1954861323449
+      ],
+      "step_3A_peak_droop_V": 0.023990365531729813,
+      "step_3A_peak_rebound_V": -0.0010773294990924637
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        12990.405996765927
+      ],
+      "phase_margin_deg": [
+        123.17033639814
+      ],
+      "step_3A_peak_droop_V": 0.019440345107010835,
+      "step_3A_peak_rebound_V": -0.0008725382744479227
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        8425.295019319414
+      ],
+      "phase_margin_deg": [
+        113.20732440402259
+      ],
+      "step_3A_peak_droop_V": 0.025486263567566343,
+      "step_3A_peak_rebound_V": -0.0011443203440008858
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        12990.405996765927
+      ],
+      "phase_margin_deg": [
+        123.17033639814
+      ],
+      "step_3A_peak_droop_V": 0.019440345107010835,
+      "step_3A_peak_rebound_V": -0.0008725382744479227
+    },
+    {
+      "rc_ohm": 100000,
+      "cc_F": 4.7e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        21216.089219995996
+      ],
+      "phase_margin_deg": [
+        132.95382053240695
+      ],
+      "step_3A_peak_droop_V": 0.015727756208336427,
+      "step_3A_peak_rebound_V": -0.0007046992730300695
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        22473.480325745917
+      ],
+      "phase_margin_deg": [
+        84.46003911214194
+      ],
+      "step_3A_peak_droop_V": 0.03950133000639651,
+      "step_3A_peak_rebound_V": -0.0016363290981332647
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        29627.454434130996
+      ],
+      "phase_margin_deg": [
+        83.34216292241767
+      ],
+      "step_3A_peak_droop_V": 0.029956289356187892,
+      "step_3A_peak_rebound_V": -0.0012330879885535666
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        36619.528025097454
+      ],
+      "phase_margin_deg": [
+        82.29036581611889
+      ],
+      "step_3A_peak_droop_V": 0.024165563885201167,
+      "step_3A_peak_rebound_V": -0.000989250363090635
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        29627.454434130996
+      ],
+      "phase_margin_deg": [
+        83.34216292241767
+      ],
+      "step_3A_peak_droop_V": 0.029956289356187892,
+      "step_3A_peak_rebound_V": -0.0012330879885535666
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        38968.89971021135
+      ],
+      "phase_margin_deg": [
+        81.96286236952885
+      ],
+      "step_3A_peak_droop_V": 0.022712481854896258,
+      "step_3A_peak_rebound_V": -0.0009280711865104611
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        47833.91717301145
+      ],
+      "phase_margin_deg": [
+        80.78149512722707
+      ],
+      "step_3A_peak_droop_V": 0.018361032661814936,
+      "step_3A_peak_rebound_V": -0.0007440095537432742
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        36619.528025097454
+      ],
+      "phase_margin_deg": [
+        82.29036581611885
+      ],
+      "step_3A_peak_droop_V": 0.024165563885201167,
+      "step_3A_peak_rebound_V": -0.000989250363090635
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        47833.91717301145
+      ],
+      "phase_margin_deg": [
+        80.78149512722707
+      ],
+      "step_3A_peak_droop_V": 0.018361032661814936,
+      "step_3A_peak_rebound_V": -0.0007440095537432742
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        58580.564277665304
+      ],
+      "phase_margin_deg": [
+        79.58507398706942
+      ],
+      "step_3A_peak_droop_V": 0.014930366841629622,
+      "step_3A_peak_rebound_V": -0.0005961970788991421
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        23532.839610970736
+      ],
+      "phase_margin_deg": [
+        94.2409683849068
+      ],
+      "step_3A_peak_droop_V": 0.03906145956624543,
+      "step_3A_peak_rebound_V": -0.0016363133810576302
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        32188.559403770127
+      ],
+      "phase_margin_deg": [
+        95.72479854246576
+      ],
+      "step_3A_peak_droop_V": 0.029560771560862904,
+      "step_3A_peak_rebound_V": -0.0012330794205929925
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        41373.60317184179
+      ],
+      "phase_margin_deg": [
+        96.77737447807367
+      ],
+      "step_3A_peak_droop_V": 0.02378487603095861,
+      "step_3A_peak_rebound_V": -0.0009892449824469244
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        32188.559403770127
+      ],
+      "phase_margin_deg": [
+        95.72479854246575
+      ],
+      "step_3A_peak_droop_V": 0.029560771560862897,
+      "step_3A_peak_rebound_V": -0.0012330794205929925
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        44537.90103823276
+      ],
+      "phase_margin_deg": [
+        97.0324542880154
+      ],
+      "step_3A_peak_droop_V": 0.022331334274084146,
+      "step_3A_peak_rebound_V": -0.0009280664798298338
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        58043.38749479709
+      ],
+      "phase_margin_deg": [
+        97.58818199993834
+      ],
+      "step_3A_peak_droop_V": 0.01794653855108884,
+      "step_3A_peak_rebound_V": -0.0007440065841803284
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        41373.60317184179
+      ],
+      "phase_margin_deg": [
+        96.77737447807365
+      ],
+      "step_3A_peak_droop_V": 0.02378487603095861,
+      "step_3A_peak_rebound_V": -0.0009892449824469244
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        58043.38749479709
+      ],
+      "phase_margin_deg": [
+        97.58818199993834
+      ],
+      "step_3A_peak_droop_V": 0.01794653855108884,
+      "step_3A_peak_rebound_V": -0.0007440065841803284
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.00050688,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        75993.44893091891
+      ],
+      "phase_margin_deg": [
+        97.37939850013746
+      ],
+      "step_3A_peak_droop_V": 0.015,
+      "step_3A_peak_rebound_V": -0.0005961952000414451
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10607.306572668202
+      ],
+      "phase_margin_deg": [
+        91.45879343166997
+      ],
+      "step_3A_peak_droop_V": 0.03765200981695571,
+      "step_3A_peak_rebound_V": -0.0015986869416870918
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        14243.959367999156
+      ],
+      "phase_margin_deg": [
+        92.96902265229015
+      ],
+      "step_3A_peak_droop_V": 0.028671425731774752,
+      "step_3A_peak_rebound_V": -0.0012122786979302685
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        17974.256302463236
+      ],
+      "phase_margin_deg": [
+        94.24733813934341
+      ],
+      "step_3A_peak_droop_V": 0.023166366658899352,
+      "step_3A_peak_rebound_V": -0.0009760688088173678
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        14243.959367999156
+      ],
+      "phase_margin_deg": [
+        92.96902265229015
+      ],
+      "step_3A_peak_droop_V": 0.02867142573177476,
+      "step_3A_peak_rebound_V": -0.0012122786979302685
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        19260.02876389809
+      ],
+      "phase_margin_deg": [
+        94.6376230280863
+      ],
+      "step_3A_peak_droop_V": 0.021775222345869927,
+      "step_3A_peak_rebound_V": -0.0009165154504603193
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        24472.466098025787
+      ],
+      "phase_margin_deg": [
+        96.05302218728093
+      ],
+      "step_3A_peak_droop_V": 0.01756246191298822,
+      "step_3A_peak_rebound_V": -0.0007366702086874571
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        17974.256302463236
+      ],
+      "phase_margin_deg": [
+        94.24733813934341
+      ],
+      "step_3A_peak_droop_V": 0.02316636665889934,
+      "step_3A_peak_rebound_V": -0.0009760688088173717
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        24472.466098025787
+      ],
+      "phase_margin_deg": [
+        96.05302218728093
+      ],
+      "step_3A_peak_droop_V": 0.01756246191298822,
+      "step_3A_peak_rebound_V": -0.0007366702086874571
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        31311.15873044811
+      ],
+      "phase_margin_deg": [
+        97.52115893759536
+      ],
+      "step_3A_peak_droop_V": 0.01414725910162463,
+      "step_3A_peak_rebound_V": -0.0005915283740373163
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        11184.32354243665
+      ],
+      "phase_margin_deg": [
+        101.92237950724386
+      ],
+      "step_3A_peak_droop_V": 0.037087739693173374,
+      "step_3A_peak_rebound_V": -0.00159860428179416
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        15690.584707948545
+      ],
+      "phase_margin_deg": [
+        106.81216680856129
+      ],
+      "step_3A_peak_droop_V": 0.028210447332787884,
+      "step_3A_peak_rebound_V": -0.0012122352213477768
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        21118.590689756576
+      ],
+      "phase_margin_deg": [
+        111.25564043749922
+      ],
+      "step_3A_peak_droop_V": 0.022775877616350255,
+      "step_3A_peak_rebound_V": -0.0009760420971969795
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        15690.584707948545
+      ],
+      "phase_margin_deg": [
+        106.81216680856129
+      ],
+      "step_3A_peak_droop_V": 0.028210447332787884,
+      "step_3A_peak_rebound_V": -0.0012122352213477768
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        23156.500864498597
+      ],
+      "phase_margin_deg": [
+        112.61140329540306
+      ],
+      "step_3A_peak_droop_V": 0.021403395671461725,
+      "step_3A_peak_rebound_V": -0.0009164922134871131
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        33473.79414364518
+      ],
+      "phase_margin_deg": [
+        117.00850812791197
+      ],
+      "step_3A_peak_droop_V": 0.017251046564869473,
+      "step_3A_peak_rebound_V": -0.0007366557909757945
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        21118.590689756576
+      ],
+      "phase_margin_deg": [
+        111.25564043749922
+      ],
+      "step_3A_peak_droop_V": 0.022775877616350255,
+      "step_3A_peak_rebound_V": -0.0009760420971969795
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        33473.79414364518
+      ],
+      "phase_margin_deg": [
+        117.00850812791197
+      ],
+      "step_3A_peak_droop_V": 0.017251046564869473,
+      "step_3A_peak_rebound_V": -0.0007366557909757945
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0011,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        51968.8550314586
+      ],
+      "phase_margin_deg": [
+        118.70909449108319
+      ],
+      "step_3A_peak_droop_V": 0.015000000000000003,
+      "step_3A_peak_rebound_V": -0.0005915193744242498
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5340.052282917078
+      ],
+      "phase_margin_deg": [
+        93.24350299359095
+      ],
+      "step_3A_peak_droop_V": 0.03538593355351742,
+      "step_3A_peak_rebound_V": -0.0015231854944389067
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7203.96367533635
+      ],
+      "phase_margin_deg": [
+        96.45493591740892
+      ],
+      "step_3A_peak_droop_V": 0.027128965623794885,
+      "step_3A_peak_rebound_V": -0.0011713894792964937
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        9132.55125760282
+      ],
+      "phase_margin_deg": [
+        99.28967728166555
+      ],
+      "step_3A_peak_droop_V": 0.022021537756460048,
+      "step_3A_peak_rebound_V": -0.0009504735284280984
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7203.96367533635
+      ],
+      "phase_margin_deg": [
+        96.45493591740892
+      ],
+      "step_3A_peak_droop_V": 0.027128965623794885,
+      "step_3A_peak_rebound_V": -0.0011713894792964937
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        9808.40341037743
+      ],
+      "phase_margin_deg": [
+        100.18503969999709
+      ],
+      "step_3A_peak_droop_V": 0.02072456654158096,
+      "step_3A_peak_rebound_V": -0.0008941424907577987
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        12607.243007053152
+      ],
+      "phase_margin_deg": [
+        103.60116974056061
+      ],
+      "step_3A_peak_droop_V": 0.01678123631434498,
+      "step_3A_peak_rebound_V": -0.0007225827714153494
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        9132.55125760282
+      ],
+      "phase_margin_deg": [
+        99.28967728166555
+      ],
+      "step_3A_peak_droop_V": 0.022021537756460048,
+      "step_3A_peak_rebound_V": -0.0009504735284280984
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        12607.243007053152
+      ],
+      "phase_margin_deg": [
+        103.60116974056061
+      ],
+      "step_3A_peak_droop_V": 0.01678123631434498,
+      "step_3A_peak_rebound_V": -0.0007225827714153494
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.0025,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        16544.12218044924
+      ],
+      "phase_margin_deg": [
+        107.58570286395516
+      ],
+      "step_3A_peak_droop_V": 0.013565181379068175,
+      "step_3A_peak_rebound_V": -0.0005826276793624656
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        5643.523139358519
+      ],
+      "phase_margin_deg": [
+        104.07158407408393
+      ],
+      "step_3A_peak_droop_V": 0.0346235430525621,
+      "step_3A_peak_rebound_V": -0.0015227832406727784
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7972.239112194117
+      ],
+      "phase_margin_deg": [
+        111.09810791551133
+      ],
+      "step_3A_peak_droop_V": 0.02651029035407853,
+      "step_3A_peak_rebound_V": -0.00117119078845292
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 0.75,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10879.45954142032
+      ],
+      "phase_margin_deg": [
+        117.90836782019619
+      ],
+      "step_3A_peak_droop_V": 0.021501487303424563,
+      "step_3A_peak_rebound_V": -0.0009503561768055696
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        7972.239112194117
+      ],
+      "phase_margin_deg": [
+        111.09810791551133
+      ],
+      "step_3A_peak_droop_V": 0.02651029035407853,
+      "step_3A_peak_rebound_V": -0.00117119078845292
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        12067.472651886637
+      ],
+      "phase_margin_deg": [
+        120.1571576250314
+      ],
+      "step_3A_peak_droop_V": 0.02023099907013462,
+      "step_3A_peak_rebound_V": -0.0008940414279331689
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        18691.937958655635
+      ],
+      "phase_margin_deg": [
+        128.82514873601946
+      ],
+      "step_3A_peak_droop_V": 0.016372321063529666,
+      "step_3A_peak_rebound_V": -0.0007225219662331866
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 0.75,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        10879.45954142032
+      ],
+      "phase_margin_deg": [
+        117.90836782019616
+      ],
+      "step_3A_peak_droop_V": 0.021501487303424563,
+      "step_3A_peak_rebound_V": -0.0009503561768055722
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        18691.937958655635
+      ],
+      "phase_margin_deg": [
+        128.82514873601946
+      ],
+      "step_3A_peak_droop_V": 0.016372321063529663,
+      "step_3A_peak_rebound_V": -0.0007225219662331866
+    },
+    {
+      "rc_ohm": 120000,
+      "cc_F": 3.9e-09,
+      "cout_F": 0.0022,
+      "esr_ohm": 0.005,
+      "gm_scale": 1.25,
+      "ith_gain_scale": 1.25,
+      "stable_in_model": true,
+      "crossover_Hz": [
+        37300.47332822907
+      ],
+      "phase_margin_deg": [
+        134.45921270962754
+      ],
+      "step_3A_peak_droop_V": 0.015000000000000003,
+      "step_3A_peak_rebound_V": -0.0005825906705714222
+    }
+  ]
+}

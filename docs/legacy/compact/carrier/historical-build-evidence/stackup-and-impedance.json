@@ -1,0 +1,43 @@
+{
+  "status": "Custom stack request; not a published/accepted fabrication stack. Widths are provisional.",
+  "fabricator_candidate": "PCBWay advanced/custom fabrication; no contact, quote or order",
+  "capability_source": "https://www.pcbway.com/advanced-pcb-capabilities.html",
+  "fabricator_gate": "Published board thickness tolerance is\u00b17% for1.0..2.5mm, which does NOT satisfy1.50\u00b10.05. A special accepted stack or revised assembly is required. Do not use the stock service unchanged.",
+  "finished_mm": 1.5,
+  "required_finished_tolerance_mm": 0.05,
+  "SMA_maximum_mm": 1.57,
+  "layers_mm": {
+    "F.Mask": 0.015,
+    "F.Cu": 0.035,
+    "prepreg1": 0.18,
+    "In1.Cu": 0.018,
+    "core": 1.004,
+    "In2.Cu": 0.018,
+    "prepreg2": 0.18,
+    "B.Cu": 0.035,
+    "B.Mask": 0.015
+  },
+  "laminate_request": "FR408HR, construction/Dk must be confirmed by fabricator",
+  "assumed_Dk": 3.61,
+  "outer_reference_height_mm": 0.18,
+  "outer_copper_mm": 0.035,
+  "model": "IPC-style closed-form microstrip approximation; no mask/roughness/etch/launch modeling",
+  "RF50_width_mm": 0.327492988358416,
+  "USB90_width_mm": 0.26327897074307727,
+  "USB_gap_mm": 0.15,
+  "USB_h_sensitivity": [
+    {
+      "h_mm": 0.16,
+      "Zdiff_ohm": 84.99320118482991
+    },
+    {
+      "h_mm": 0.18,
+      "Zdiff_ohm": 90.0
+    },
+    {
+      "h_mm": 0.2,
+      "Zdiff_ohm": 94.20932390125795
+    }
+  ],
+  "note": "Use vendor field solver and controlled-impedance coupon. Do not treat arithmetic as routed SI validation."
+}

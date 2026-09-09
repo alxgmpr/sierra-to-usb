@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../../../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Schematic Audit — EM9293 carrier (Netlist export 2026-07-10)
 
 > **STATUS (re-review of export "(2)", 55 components, 2026-07-11):**

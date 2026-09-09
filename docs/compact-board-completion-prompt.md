@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Prompt: finish the compact carrier through placement, leave routing to me
 
 Continue my compact USB-C M.2 cellular modem carrier in `/Users/alex/sierra-to-usb`. Execute the stages below, not just a plan. My endpoint is a complete, reviewed schematic and an unrouted PCB with deliberate component placement, mechanical definition and routing rules. **I will route the board. Do not add signal/power tracks, routing vias or autorouting.** Mounting holes and component pads are allowed. Document suggested thermal/stitching vias for me to implement.

@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../../../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 ---
 name: em9293-bringup
 description: "Sierra/Semtech EM9293 5G M.2 module bring-up — defaults to PCIe, needs pin-20/22 mod for USB; NOT compatible with the Quectel 5G2PHY"

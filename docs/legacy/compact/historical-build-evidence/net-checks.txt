@@ -1,0 +1,36 @@
+PASS USB_VBUS: 5 pins
+PASS USB_3A_OK: 4 pins
+PASS BUF_GND: 52 pins
+PASS USB_PROTECTED: 6 pins
+PASS USB_OV_SENSE: 3 pins
+PASS INPUT_SLEW: 2 pins
+PASS INPUT_ILM: 2 pins
+PASS INPUT_FAULT_N: 2 pins
+PASS INPUT_VALID: 3 pins
+PASS USB_SENSED: 3 pins
+PASS CHG_PROG: 3 pins
+PASS BUF_UV_SENSE: 3 pins
+PASS CELL_MAXV: 2 pins
+PASS VCAP_STORE: 12 pins
+PASS SC_MID: 6 pins
+PASS CHG_FB: 3 pins
+PASS CAP_READY: 3 pins
+PASS BUF_UV_N: 2 pins
+PASS CHG_SW1: 3 pins
+PASS CHG_SW2: 3 pins
+PASS MODEM_SW: 2 pins
+PASS MODEM_FB: 4 pins
+PASS MODEM_PG: 2 pins
+PASS MODEM_ENABLE: 3 pins
+PASS AUX_3V3: 14 pins
+PASS MODEM_FSET: 2 pins
+PASS MODEM_SS: 2 pins
+PASS MODEM_VCC: 10 pins
+PASS BANK_SENSE: 3 pins
+PASS LATCH_CLEAR_N: 4 pins
+PASS START_CLK: 2 pins
+PASS START_RC: 4 pins
+PASS START_SW: 2 pins
+PASS all modem-regulator input energy passes through storage node; no USB bypass
+PASS capacitor polarity and balancing midpoint
+PASS SN74LVC1G74 DCU non-inverted Q is pin 5, per datasheet pin-function table

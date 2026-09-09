@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../../../../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # EM9293 Forced-USB Test Carrier — Design Spec
 
 **Date:** 2026-07-10

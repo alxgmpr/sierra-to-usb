@@ -1,0 +1,493 @@
+{
+  "status": "Dimensioned envelopes; details/cavities omitted as individually stated. Not manufacturer CAD.",
+  "models": {
+    "JS102011SAQN_envelope": {
+      "boxes": [
+        [
+          -4.5,
+          -1.8,
+          0,
+          4.5,
+          1.8,
+          3.5
+        ],
+        [
+          -1.775,
+          1.8,
+          1.5,
+          1.775,
+          3.8,
+          3.0
+        ]
+      ],
+      "source": "C&K JS2016-06-29 pI-52; nominal body and swept2mm actuator travel; terminals/pegs omitted",
+      "color": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "SOT523_envelope": {
+      "boxes": [
+        [
+          -0.875,
+          -0.85,
+          0,
+          0.875,
+          0.85,
+          0.9
+        ]
+      ],
+      "source": "Diodes DMG1012T SOT523 maximum lead/body envelope; A1+A2 height; lead detail omitted",
+      "color": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    "RSE10_envelope": {
+      "boxes": [
+        [
+          -0.775,
+          -1.025,
+          0,
+          0.775,
+          1.025,
+          0.6
+        ]
+      ],
+      "source": "TI RSE0010A maximum dimensions; lead detail omitted",
+      "color": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    "LTC3310S_envelope": {
+      "boxes": [
+        [
+          -1.5,
+          -1.5,
+          0,
+          1.5,
+          1.5,
+          1.03
+        ]
+      ],
+      "source": "ADI05-08-1548RevD",
+      "color": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    "XEL4030_envelope": {
+      "boxes": [
+        [
+          -2.15,
+          -2.15,
+          0,
+          2.15,
+          2.15,
+          3.1
+        ]
+      ],
+      "source": "Coilcraft1321-3,2026-02-19",
+      "color": [
+        0.22,
+        0.22,
+        0.22
+      ]
+    },
+    "CSM2512_envelope": {
+      "boxes": [
+        [
+          -3.302,
+          -1.715,
+          0,
+          3.302,
+          1.715,
+          0.889
+        ]
+      ],
+      "source": "VPG4138-ENRev2025-07-08; H0.635 plus0.254 tolerance; solder height additional",
+      "color": [
+        0.65,
+        0.65,
+        0.6
+      ]
+    },
+    "T530_D_envelope": {
+      "boxes": [
+        [
+          -3.8,
+          -2.3,
+          0,
+          3.8,
+          2.3,
+          3.1
+        ]
+      ],
+      "source": "KEMETT2076T52X-530caseD; maximum body7.6x4.6x3.1",
+      "color": [
+        0.2,
+        0.16,
+        0.1
+      ]
+    },
+    "MHF4_envelope": {
+      "boxes": [
+        [
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          0.7
+        ]
+      ],
+      "source": "IPEX20449Rev22 unmated envelope; tool/mated envelope separate",
+      "color": [
+        0.75,
+        0.65,
+        0.2
+      ]
+    },
+    "SMF_envelope": {
+      "boxes": [
+        [
+          -1.55,
+          -1,
+          0,
+          1.55,
+          1,
+          1.1
+        ]
+      ],
+      "source": "LittelfuseSMFRev2023-11-02",
+      "color": [
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    "MDT420_envelope": {
+      "boxes": [
+        [
+          -11,
+          -5.7,
+          0,
+          11,
+          1.5,
+          4.2
+        ]
+      ],
+      "source": "AmphenolCMDT420RevA, housing envelope; mating cavity not modeled",
+      "color": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "transparency": 0.45
+    },
+    "N2520_envelope": {
+      "boxes": [
+        [
+          -4.93,
+          -5.565,
+          0,
+          27.79,
+          3.0249999999999995,
+          9.91
+        ]
+      ],
+      "source": "3M78-5100-0770-7RevU; connector cavities omitted",
+      "color": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "transparency": 0.3
+    },
+    "Module_EM9190_max_envelope": {
+      "boxes": [
+        [
+          -15.225,
+          -26.15,
+          2.49,
+          15.225,
+          26.15,
+          3.37
+        ],
+        [
+          -14,
+          -21,
+          3.37,
+          14,
+          23,
+          4.87
+        ]
+      ],
+      "source": "Sierra41113174Rev8; board maximum outline and upper component-height envelope. Shield XY is an envelope, not an exact shield drawing.",
+      "color": [
+        0.7,
+        0.72,
+        0.75
+      ],
+      "transparency": 0.25
+    },
+    "SMA132289_clearance_envelope": {
+      "boxes": [
+        [
+          -4.75,
+          -5.1,
+          -7.5,
+          12.7,
+          5.1,
+          7.5
+        ]
+      ],
+      "source": "Amphenol132289RevB:4.75mm rear,12.7mm front,10.2mm washer. Engineering vertical reservation\u00b17.5mm exceeds nominal washer radius plus1.73mm slot; not a panel-axis model.",
+      "color": [
+        0.8,
+        0.65,
+        0.2
+      ],
+      "transparency": 0.45
+    },
+    "Module_support": {
+      "boxes": [],
+      "cylinders": [
+        [
+          0,
+          0,
+          0,
+          2.5,
+          2.49
+        ]
+      ],
+      "source": "CustomHN01; bore omitted in clearance model",
+      "color": [
+        0.7,
+        0.6,
+        0.25
+      ]
+    },
+    "TI_RPW0010A": {
+      "boxes": [
+        [
+          -1,
+          -1,
+          0.1,
+          1,
+          1,
+          1.0
+        ],
+        [
+          -1,
+          -0.85,
+          0,
+          -0.6,
+          -0.55,
+          0.1
+        ],
+        [
+          -1,
+          -0.35,
+          0,
+          -0.6,
+          -0.09999999999999998,
+          0.1
+        ],
+        [
+          -1,
+          0.1,
+          0,
+          -0.6,
+          0.35,
+          0.1
+        ],
+        [
+          -1,
+          0.5499999999999999,
+          0,
+          -0.6,
+          0.8499999999999999,
+          0.1
+        ],
+        [
+          -0.85,
+          -1,
+          0,
+          -0.6,
+          -0.55,
+          0.1
+        ],
+        [
+          -0.85,
+          0.55,
+          0,
+          -0.6,
+          1.0,
+          0.1
+        ],
+        [
+          0.6,
+          -0.85,
+          0,
+          1.0,
+          -0.55,
+          0.1
+        ],
+        [
+          0.6,
+          -0.35,
+          0,
+          1.0,
+          -0.09999999999999998,
+          0.1
+        ],
+        [
+          0.6,
+          0.1,
+          0,
+          1.0,
+          0.35,
+          0.1
+        ],
+        [
+          0.6,
+          0.5499999999999999,
+          0,
+          1.0,
+          0.8499999999999999,
+          0.1
+        ],
+        [
+          0.6,
+          -1,
+          0,
+          0.85,
+          -0.55,
+          0.1
+        ],
+        [
+          0.6,
+          0.55,
+          0,
+          0.85,
+          1.0,
+          0.1
+        ],
+        [
+          -0.4,
+          -1,
+          0,
+          -0.10000000000000003,
+          1,
+          0.1
+        ],
+        [
+          0.1,
+          -1,
+          0,
+          0.4,
+          1,
+          0.1
+        ]
+      ],
+      "cylinders": [
+        [
+          -0.7,
+          -0.7,
+          0.999,
+          0.1,
+          0.001
+        ]
+      ],
+      "source": "TI TPS25947 Rev C, RPW0010A drawing4225183/A 08/2019: nominal2x2mm,1mm max height,10 contacts. Reconstructed package model; corner lead radii and mold draft omitted. Pin1 dot is illustrative.",
+      "color": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "box_colors": [
+        [
+          0.12,
+          0.12,
+          0.12
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ],
+        [
+          0.7,
+          0.7,
+          0.72
+        ]
+      ]
+    }
+  }
+}

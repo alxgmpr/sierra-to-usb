@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Compact buffered power — P0 engineering review
 
 2026-09-04. **Candidate captured, not electrically qualified or ready for fabrication.** Root KiCad files remain reference material. The original capacitor-only sheet is preserved in `compact/reference/energy-storage-initial.kicad_sch`.

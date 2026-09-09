@@ -1,0 +1,319 @@
+{
+  "status": "Itemized conditional bound; allowances require hot hardware verification",
+  "auxiliary_rail_analysis_max_V": 3.4,
+  "resistor_min_factor": 0.98,
+  "resistor_loads": [
+    {
+      "ref": "R201",
+      "nets": [
+        "AUX_3V3",
+        "PROFILE_A"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R202",
+      "nets": [
+        "AUX_3V3",
+        "PROFILE_B"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R203",
+      "nets": [
+        "AUX_3V3",
+        "PROFILE_ABSENT"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R204",
+      "nets": [
+        "GND",
+        "PROFILE_OK"
+      ],
+      "ohm": 100000.0,
+      "upper_current_A": 3.4693877551020405e-05
+    },
+    {
+      "ref": "R102",
+      "nets": [
+        "AUX_3V3",
+        "CC_3A_N"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R103",
+      "nets": [
+        "AUX_3V3",
+        "CC_SINK_N"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R104",
+      "nets": [
+        "AUX_3V3",
+        "CC_NO_DEBUG"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R105",
+      "nets": [
+        "AUX_3V3",
+        "USB_ORIENTATION"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R306",
+      "nets": [
+        "AUX_3V3",
+        "INPUT_FAULT_N"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R404",
+      "nets": [
+        "AUX_3V3",
+        "BUCK_PG"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R405",
+      "nets": [
+        "BUCK_ENABLE",
+        "GND"
+      ],
+      "ohm": 100000.0,
+      "upper_current_A": 3.4693877551020405e-05
+    },
+    {
+      "ref": "R106",
+      "nets": [
+        "AUX_3V3",
+        "USB_MUX_OFF"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R107",
+      "nets": [
+        "AUX_3V3",
+        "CC_SCL"
+      ],
+      "ohm": 4700.0,
+      "upper_current_A": 0.0007381676074685194
+    },
+    {
+      "ref": "R108",
+      "nets": [
+        "AUX_3V3",
+        "CC_SDA"
+      ],
+      "ohm": 4700.0,
+      "upper_current_A": 0.0007381676074685194
+    },
+    {
+      "ref": "R501",
+      "nets": [
+        "GND",
+        "POWER_REQUEST"
+      ],
+      "ohm": 100000.0,
+      "upper_current_A": 3.4693877551020405e-05
+    },
+    {
+      "ref": "R502",
+      "nets": [
+        "GND",
+        "RUN_REQUEST"
+      ],
+      "ohm": 100000.0,
+      "upper_current_A": 3.4693877551020405e-05
+    },
+    {
+      "ref": "R503",
+      "nets": [
+        "AUX_3V3",
+        "DRIVE_ALLOWED"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R505",
+      "nets": [
+        "AUX_3V3",
+        "RUN_ALLOWED"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    },
+    {
+      "ref": "R508",
+      "nets": [
+        "AUX_3V3",
+        "RESET_DIV"
+      ],
+      "ohm": 1000000.0,
+      "upper_current_A": 3.4693877551020407e-06
+    },
+    {
+      "ref": "R510",
+      "nets": [
+        "AUX_3V3",
+        "RESET_BUTTON_N"
+      ],
+      "ohm": 100000.0,
+      "upper_current_A": 3.4693877551020405e-05
+    },
+    {
+      "ref": "R511",
+      "nets": [
+        "GND",
+        "RESET_PULSE"
+      ],
+      "ohm": 100000.0,
+      "upper_current_A": 3.4693877551020405e-05
+    },
+    {
+      "ref": "R512",
+      "nets": [
+        "AUX_3V3",
+        "CC_ATTACH_N"
+      ],
+      "ohm": 10000.0,
+      "upper_current_A": 0.00034693877551020405
+    }
+  ],
+  "IC_loads": [
+    {
+      "name": "U101 STUSB4500L",
+      "current_A": 0.0005,
+      "basis": "allowance",
+      "condition": "210uA maximum at25C VDD5V; VSYS/hot-current allowance must be measured"
+    },
+    {
+      "name": "U104 HD3SS3212",
+      "current_A": 0.0008,
+      "basis": "published maximum",
+      "condition": "VCC3.3V active"
+    },
+    {
+      "name": "U105 TS3USB221A",
+      "current_A": 3e-05,
+      "basis": "published maximum",
+      "condition": "full-rail control inputs"
+    },
+    {
+      "name": "U303 INA190A1",
+      "current_A": 0.0001,
+      "basis": "allowance",
+      "condition": "90uA full-temperature limit specified atVS1.8V;100uA supply-voltage allowance"
+    },
+    {
+      "name": "U402 REF3312",
+      "current_A": 2.1443144949829535e-05,
+      "basis": "published limit plus load",
+      "condition": "8.5uA through125C; current-set divider load included"
+    },
+    {
+      "name": "U403 TLV333",
+      "current_A": 0.000528,
+      "basis": "published limit plus allowance",
+      "condition": "28uA IQ full temperature plus500uA output-drive allocation"
+    },
+    {
+      "name": "U503/U506 TPS3890",
+      "current_A": 1.3e-05,
+      "basis": "published maximum",
+      "condition": "conservative5.5V/full-temperature IDD; SENSE current below counted on modem rail"
+    },
+    {
+      "name": "U508 LTC6993",
+      "current_A": 0.00025,
+      "basis": "allowance",
+      "condition": "175uA maximum idle atRSET50k/NDIV>=512/5.5V; extra active/load margin"
+    },
+    {
+      "name": "9 SN74LVC gates",
+      "current_A": 9e-05,
+      "basis": "family limit",
+      "condition": "10uA/gate with full-rail static inputs; exact02/04/86 tables still to cross-check"
+    },
+    {
+      "name": "U302 TPS7A2033 ground current",
+      "current_A": 0.0001,
+      "basis": "allowance",
+      "condition": "15uA no-load maximum; loaded ground current not maximum-specified"
+    },
+    {
+      "name": "Other leakage and switching average",
+      "current_A": 0.001,
+      "basis": "allowance",
+      "condition": "ESD, FET, capacitor leakage and low-rate control transitions; excludes RF signal power"
+    }
+  ],
+  "auxiliary_total_input_current_A": 0.009630615094580746,
+  "carrier_output_loads_W": {
+    "R410 bleeder": 0.034886781481683365,
+    "Polymer leakage": 0.0018716655265635755,
+    "U504 control LDO plus straps/FCPO": 0.0037136220765150306,
+    "U503/U506 SENSE input": 5.401632111294589e-05,
+    "Feedback divider": 0.00017147161067978357
+  },
+  "rows": [
+    {
+      "vbus_V": 4,
+      "auxiliary_input_W": 0.038522460378322985,
+      "carrier_output_load_W": 0.040697557016554704,
+      "total_W": 0.07922001739487769,
+      "within_0_12W_allocation": true
+    },
+    {
+      "vbus_V": 4.25,
+      "auxiliary_input_W": 0.04093011415196817,
+      "carrier_output_load_W": 0.040697557016554704,
+      "total_W": 0.08162767116852288,
+      "within_0_12W_allocation": true
+    },
+    {
+      "vbus_V": 4.5,
+      "auxiliary_input_W": 0.043337767925613356,
+      "carrier_output_load_W": 0.040697557016554704,
+      "total_W": 0.08403532494216806,
+      "within_0_12W_allocation": true
+    },
+    {
+      "vbus_V": 4.75,
+      "auxiliary_input_W": 0.04574542169925855,
+      "carrier_output_load_W": 0.040697557016554704,
+      "total_W": 0.08644297871581325,
+      "within_0_12W_allocation": true
+    },
+    {
+      "vbus_V": 5,
+      "auxiliary_input_W": 0.048153075472903734,
+      "carrier_output_load_W": 0.040697557016554704,
+      "total_W": 0.08885063248945843,
+      "within_0_12W_allocation": true
+    }
+  ],
+  "exclusions": "Modem operating current is the separate3A load; no MCU,fan,LED bank or external load is authorized by this budget. Dynamic input-current peak is not bounded here."
+}

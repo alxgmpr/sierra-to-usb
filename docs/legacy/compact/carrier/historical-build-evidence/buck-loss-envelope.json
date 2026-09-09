@@ -1,0 +1,76 @@
+{
+  "status": "Conditional constituent loss envelope, not simulation or measured efficiency",
+  "source_switch_RDS": "LTC3310S RevF p4:16mOhm top and4.5mOhm bottom, typical only at25C.",
+  "switch_resistance_multiplier": 2,
+  "multiplier_status": "Engineering allowance, not a guaranteed hot/process maximum.",
+  "inductor_source": "Coilcraft XEL4030-471 drawing:4.6mOhm maxDCR25C,20% inductance tolerance; copper TC used to125C.",
+  "remaining_loss_rule": "Combined measured core, switching, gate-drive and IC operating losses must fit residual; no assumed edge time or fabricated vendor efficiency.",
+  "thermal_rule": "Measure die viaSSTT and surrounding component/socket temperatures on routed hardware. Datasheet42C/W requires its test-board copper; it is not a verified board thermal model.",
+  "rows": [
+    {
+      "vbus_V": 4.0,
+      "buck_input_V": 3.8296004370890144,
+      "load_with_carrier_reserve_A": 3.02,
+      "duty_estimate": 0.9102190949571961,
+      "inductor_ripple_A": 0.4800442350572559,
+      "inductor_peak_A": 3.260022117528628,
+      "switch_conduction_allocation_W": 0.27359439006536324,
+      "winding_loss_W": 0.058564751556996864,
+      "remaining_for_core_switching_gate_drive_and_IC_W": 0.21784085837763995,
+      "dropout_margin_at_100_percent_V": 0.33758881152989595,
+      "passes_allocation_arithmetic": true
+    },
+    {
+      "vbus_V": 4.25,
+      "buck_input_V": 4.079600437089015,
+      "load_with_carrier_reserve_A": 3.02,
+      "duty_estimate": 0.853474255890043,
+      "inductor_ripple_A": 0.765378218893628,
+      "inductor_peak_A": 3.402689109446814,
+      "switch_conduction_allocation_W": 0.26251383765757125,
+      "winding_loss_W": 0.05875450859539195,
+      "remaining_for_core_switching_gate_drive_and_IC_W": 0.22873165374703686,
+      "dropout_margin_at_100_percent_V": 0.5875888115298964,
+      "passes_allocation_arithmetic": true
+    },
+    {
+      "vbus_V": 4.5,
+      "buck_input_V": 4.329600437089015,
+      "load_with_carrier_reserve_A": 3.02,
+      "duty_estimate": 0.8033893896459839,
+      "inductor_ripple_A": 1.0172234025308047,
+      "inductor_peak_A": 3.5286117012654024,
+      "switch_conduction_allocation_W": 0.2529793358019393,
+      "winding_loss_W": 0.058994234876926316,
+      "remaining_for_core_switching_gate_drive_and_IC_W": 0.2380264293211344,
+      "dropout_margin_at_100_percent_V": 0.8375888115298964,
+      "passes_allocation_arithmetic": true
+    },
+    {
+      "vbus_V": 4.75,
+      "buck_input_V": 4.579600437089015,
+      "load_with_carrier_reserve_A": 3.02,
+      "duty_estimate": 0.7588569964282842,
+      "inductor_ripple_A": 1.2411487035002335,
+      "inductor_peak_A": 3.640574351750117,
+      "switch_conduction_allocation_W": 0.2446643102001547,
+      "winding_loss_W": 0.059264273801474567,
+      "remaining_for_core_switching_gate_drive_and_IC_W": 0.24607141599837082,
+      "dropout_margin_at_100_percent_V": 1.0875888115298964,
+      "passes_allocation_arithmetic": true
+    },
+    {
+      "vbus_V": 5.0,
+      "buck_input_V": 4.829600437089015,
+      "load_with_carrier_reserve_A": 3.02,
+      "duty_estimate": 0.719002237600394,
+      "inductor_ripple_A": 1.4415531331919271,
+      "inductor_peak_A": 3.7407765665959634,
+      "switch_conduction_allocation_W": 0.23733045079232581,
+      "winding_loss_W": 0.05955135676813486,
+      "remaining_for_core_switching_gate_drive_and_IC_W": 0.25311819243953937,
+      "dropout_margin_at_100_percent_V": 1.3375888115298964,
+      "passes_allocation_arithmetic": true
+    }
+  ]
+}

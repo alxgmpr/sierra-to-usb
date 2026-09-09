@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Datasheet Verification — Spec §13 Closeout
 
 Closes out `docs/superpowers/specs/2026-07-14-universal-m2-carrier-design.md` §13 items 1–8.

@@ -1,0 +1,768 @@
+{
+  "checked_utc": "2026-09-06T22:46:55.605223+00:00",
+  "results": [
+    {
+      "query": "SMF6.0A",
+      "products": [
+        {
+          "mpn": "SMF6.0A",
+          "datasheet": "https://www.littelfuse.com/assetdocs/tvs-diodes-smf-datasheet?assetguid=7eb8a5b6-bdd0-4561-8f19-0c3cc6f9b2af",
+          "description": {
+            "ProductDescription": "TVS DIODE 6VWM 10.3VC SOD123F",
+            "DetailedDescription": "10.3V Clamp 19.4A Ipp Tvs Diode Surface Mount SOD-123F"
+          },
+          "parameters": [
+            {
+              "ParameterId": 183,
+              "ParameterText": "Type",
+              "ParameterType": "String",
+              "ValueId": "423536",
+              "ValueText": "Zener"
+            },
+            {
+              "ParameterId": 1729,
+              "ParameterText": "Unidirectional Channels",
+              "ParameterType": "Double",
+              "ValueId": "1",
+              "ValueText": "1"
+            },
+            {
+              "ParameterId": 761,
+              "ParameterText": "Voltage - Reverse Standoff (Typ)",
+              "ParameterType": "String",
+              "ValueId": "267452",
+              "ValueText": "6V"
+            },
+            {
+              "ParameterId": 1731,
+              "ParameterText": "Voltage - Breakdown (Min)",
+              "ParameterType": "String",
+              "ValueId": "253536",
+              "ValueText": "6.67V"
+            },
+            {
+              "ParameterId": 1732,
+              "ParameterText": "Voltage - Clamping (Max) @ Ipp",
+              "ParameterType": "String",
+              "ValueId": "65462",
+              "ValueText": "10.3V"
+            },
+            {
+              "ParameterId": 714,
+              "ParameterText": "Current - Peak Pulse (10/1000\u00b5s)",
+              "ParameterType": "String",
+              "ValueId": "117257",
+              "ValueText": "19.4A"
+            },
+            {
+              "ParameterId": 1733,
+              "ParameterText": "Power - Peak Pulse",
+              "ParameterType": "String",
+              "ValueId": "140906",
+              "ValueText": "200W"
+            },
+            {
+              "ParameterId": 1734,
+              "ParameterText": "Power Line Protection",
+              "ParameterType": "String",
+              "ValueId": "380240",
+              "ValueText": "No"
+            },
+            {
+              "ParameterId": 405,
+              "ParameterText": "Applications",
+              "ParameterType": "String",
+              "ValueId": "350483",
+              "ValueText": "General Purpose"
+            },
+            {
+              "ParameterId": 566,
+              "ParameterText": "Capacitance @ Frequency",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242933",
+              "ValueText": "-55\u00b0C ~ 150\u00b0C (TJ)"
+            },
+            {
+              "ParameterId": 69,
+              "ParameterText": "Mounting Type",
+              "ParameterType": "String",
+              "ValueId": "409393",
+              "ValueText": "Surface Mount"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "404832",
+              "ValueText": "SOD-123F"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "404832",
+              "ValueText": "SOD-123F"
+            }
+          ],
+          "variants": [
+            {
+              "number": "F5749TR-ND",
+              "stock": 18000
+            },
+            {
+              "number": "F5749CT-ND",
+              "stock": 18893
+            },
+            {
+              "number": "F5749DKR-ND",
+              "stock": 18893
+            }
+          ]
+        },
+        {
+          "mpn": "SMF6.0A",
+          "datasheet": "https://diotec.com/request/datasheet/smf50a.pdf",
+          "description": {
+            "ProductDescription": "TVS DIODE 6VWM 10.3VC SOD123FL",
+            "DetailedDescription": "10.3V Clamp 19.42A Ipp Tvs Diode Surface Mount SOD-123FL"
+          },
+          "parameters": [
+            {
+              "ParameterId": 183,
+              "ParameterText": "Type",
+              "ParameterType": "String",
+              "ValueId": "423536",
+              "ValueText": "Zener"
+            },
+            {
+              "ParameterId": 1729,
+              "ParameterText": "Unidirectional Channels",
+              "ParameterType": "Double",
+              "ValueId": "1",
+              "ValueText": "1"
+            },
+            {
+              "ParameterId": 761,
+              "ParameterText": "Voltage - Reverse Standoff (Typ)",
+              "ParameterType": "String",
+              "ValueId": "267452",
+              "ValueText": "6V"
+            },
+            {
+              "ParameterId": 1731,
+              "ParameterText": "Voltage - Breakdown (Min)",
+              "ParameterType": "String",
+              "ValueId": "253727",
+              "ValueText": "6.6V"
+            },
+            {
+              "ParameterId": 1732,
+              "ParameterText": "Voltage - Clamping (Max) @ Ipp",
+              "ParameterType": "String",
+              "ValueId": "65462",
+              "ValueText": "10.3V"
+            },
+            {
+              "ParameterId": 714,
+              "ParameterText": "Current - Peak Pulse (10/1000\u00b5s)",
+              "ParameterType": "String",
+              "ValueId": "117215",
+              "ValueText": "19.42A"
+            },
+            {
+              "ParameterId": 1733,
+              "ParameterText": "Power - Peak Pulse",
+              "ParameterType": "String",
+              "ValueId": "140906",
+              "ValueText": "200W"
+            },
+            {
+              "ParameterId": 1734,
+              "ParameterText": "Power Line Protection",
+              "ParameterType": "String",
+              "ValueId": "380240",
+              "ValueText": "No"
+            },
+            {
+              "ParameterId": 405,
+              "ParameterText": "Applications",
+              "ParameterType": "String",
+              "ValueId": "350483",
+              "ValueText": "General Purpose"
+            },
+            {
+              "ParameterId": 566,
+              "ParameterText": "Capacitance @ Frequency",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "236099",
+              "ValueText": "-50\u00b0C ~ 150\u00b0C (TJ)"
+            },
+            {
+              "ParameterId": 1977,
+              "ParameterText": "Grade",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            },
+            {
+              "ParameterId": 2700,
+              "ParameterText": "Qualification",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            },
+            {
+              "ParameterId": 69,
+              "ParameterText": "Mounting Type",
+              "ParameterType": "String",
+              "ValueId": "409393",
+              "ValueText": "Surface Mount"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "404832",
+              "ValueText": "SOD-123F"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "404834",
+              "ValueText": "SOD-123FL"
+            }
+          ],
+          "variants": [
+            {
+              "number": "4878-SMF6.0ATR-ND",
+              "stock": 0
+            },
+            {
+              "number": "4878-SMF6.0ACT-ND",
+              "stock": 1294
+            },
+            {
+              "number": "4878-SMF6.0ADKR-ND",
+              "stock": 1294
+            }
+          ]
+        },
+        {
+          "mpn": "SMF6.0A",
+          "datasheet": "https://services.ts.com.tw/storage/resources/datasheet/SMF5.0A%20SERIES_D2103.pdf",
+          "description": {
+            "ProductDescription": "TVS DIODE 6VWM 10.3VC SOD123W",
+            "DetailedDescription": "10.3V Clamp 19.4A Ipp Tvs Diode Surface Mount SOD-123W"
+          },
+          "parameters": [
+            {
+              "ParameterId": 183,
+              "ParameterText": "Type",
+              "ParameterType": "String",
+              "ValueId": "423536",
+              "ValueText": "Zener"
+            },
+            {
+              "ParameterId": 1729,
+              "ParameterText": "Unidirectional Channels",
+              "ParameterType": "Double",
+              "ValueId": "1",
+              "ValueText": "1"
+            },
+            {
+              "ParameterId": 761,
+              "ParameterText": "Voltage - Reverse Standoff (Typ)",
+              "ParameterType": "String",
+              "ValueId": "267452",
+              "ValueText": "6V"
+            },
+            {
+              "ParameterId": 1731,
+              "ParameterText": "Voltage - Breakdown (Min)",
+              "ParameterType": "String",
+              "ValueId": "253536",
+              "ValueText": "6.67V"
+            },
+            {
+              "ParameterId": 1732,
+              "ParameterText": "Voltage - Clamping (Max) @ Ipp",
+              "ParameterType": "String",
+              "ValueId": "65462",
+              "ValueText": "10.3V"
+            },
+            {
+              "ParameterId": 714,
+              "ParameterText": "Current - Peak Pulse (10/1000\u00b5s)",
+              "ParameterType": "String",
+              "ValueId": "117257",
+              "ValueText": "19.4A"
+            },
+            {
+              "ParameterId": 1733,
+              "ParameterText": "Power - Peak Pulse",
+              "ParameterType": "String",
+              "ValueId": "140906",
+              "ValueText": "200W"
+            },
+            {
+              "ParameterId": 1734,
+              "ParameterText": "Power Line Protection",
+              "ParameterType": "String",
+              "ValueId": "380240",
+              "ValueText": "No"
+            },
+            {
+              "ParameterId": 405,
+              "ParameterText": "Applications",
+              "ParameterType": "String",
+              "ValueId": "350483",
+              "ValueText": "General Purpose"
+            },
+            {
+              "ParameterId": 566,
+              "ParameterText": "Capacitance @ Frequency",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242943",
+              "ValueText": "-55\u00b0C ~ 175\u00b0C (TJ)"
+            },
+            {
+              "ParameterId": 69,
+              "ParameterText": "Mounting Type",
+              "ParameterType": "String",
+              "ValueId": "409393",
+              "ValueText": "Surface Mount"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "404844",
+              "ValueText": "SOD-123W"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "404844",
+              "ValueText": "SOD-123W"
+            }
+          ],
+          "variants": [
+            {
+              "number": "1801-SMF6.0ATR-ND",
+              "stock": 0
+            },
+            {
+              "number": "1801-SMF6.0ACT-ND",
+              "stock": 8209
+            },
+            {
+              "number": "1801-SMF6.0ADKR-ND",
+              "stock": 8209
+            }
+          ]
+        },
+        {
+          "mpn": "SMF60A",
+          "datasheet": "https://www.littelfuse.com/assetdocs/tvs-diodes-smf-datasheet?assetguid=7eb8a5b6-bdd0-4561-8f19-0c3cc6f9b2af",
+          "description": {
+            "ProductDescription": "TVS DIODE 60VWM 96.8VC SOD123F",
+            "DetailedDescription": "96.8V Clamp 1.8A Ipp Tvs Diode Surface Mount SOD-123F"
+          },
+          "parameters": [
+            {
+              "ParameterId": 183,
+              "ParameterText": "Type",
+              "ParameterType": "String",
+              "ValueId": "423536",
+              "ValueText": "Zener"
+            },
+            {
+              "ParameterId": 1729,
+              "ParameterText": "Unidirectional Channels",
+              "ParameterType": "Double",
+              "ValueId": "1",
+              "ValueText": "1"
+            },
+            {
+              "ParameterId": 761,
+              "ParameterText": "Voltage - Reverse Standoff (Typ)",
+              "ParameterType": "String",
+              "ValueId": "257642",
+              "ValueText": "60V"
+            },
+            {
+              "ParameterId": 1731,
+              "ParameterText": "Voltage - Breakdown (Min)",
+              "ParameterType": "String",
+              "ValueId": "263330",
+              "ValueText": "66.7V"
+            },
+            {
+              "ParameterId": 1732,
+              "ParameterText": "Voltage - Clamping (Max) @ Ipp",
+              "ParameterType": "String",
+              "ValueId": "302892",
+              "ValueText": "96.8V"
+            },
+            {
+              "ParameterId": 714,
+              "ParameterText": "Current - Peak Pulse (10/1000\u00b5s)",
+              "ParameterType": "String",
+              "ValueId": "60917",
+              "ValueText": "1.8A"
+            },
+            {
+              "ParameterId": 1733,
+              "ParameterText": "Power - Peak Pulse",
+              "ParameterType": "String",
+              "ValueId": "140906",
+              "ValueText": "200W"
+            },
+            {
+              "ParameterId": 1734,
+              "ParameterText": "Power Line Protection",
+              "ParameterType": "String",
+              "ValueId": "380240",
+              "ValueText": "No"
+            },
+            {
+              "ParameterId": 405,
+              "ParameterText": "Applications",
+              "ParameterType": "String",
+              "ValueId": "350483",
+              "ValueText": "General Purpose"
+            },
+            {
+              "ParameterId": 566,
+              "ParameterText": "Capacitance @ Frequency",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "262183",
+              "ValueText": "-65\u00b0C ~ 150\u00b0C (TJ)"
+            },
+            {
+              "ParameterId": 69,
+              "ParameterText": "Mounting Type",
+              "ParameterType": "String",
+              "ValueId": "409393",
+              "ValueText": "Surface Mount"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "404832",
+              "ValueText": "SOD-123F"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "404832",
+              "ValueText": "SOD-123F"
+            }
+          ],
+          "variants": [
+            {
+              "number": "18-SMF60ATR-ND",
+              "stock": 54000
+            },
+            {
+              "number": "18-SMF60ACT-ND",
+              "stock": 56903
+            },
+            {
+              "number": "18-SMF60ADKR-ND",
+              "stock": 56903
+            }
+          ]
+        },
+        {
+          "mpn": "SZSMF6.0AT1G",
+          "datasheet": "https://www.littelfuse.com/assetdocs/tvs-diode-szsmfxxa-datasheet?assetguid=a498ad51-5741-4d08-847f-04a4ab6f77a6",
+          "description": {
+            "ProductDescription": "TVS DIODE 6VWM 10.3VC SOD123FL",
+            "DetailedDescription": "10.3V Clamp 19.4A Ipp Tvs Diode Surface Mount SOD-123FL"
+          },
+          "parameters": [
+            {
+              "ParameterId": 183,
+              "ParameterText": "Type",
+              "ParameterType": "String",
+              "ValueId": "423536",
+              "ValueText": "Zener"
+            },
+            {
+              "ParameterId": 1729,
+              "ParameterText": "Unidirectional Channels",
+              "ParameterType": "Double",
+              "ValueId": "1",
+              "ValueText": "1"
+            },
+            {
+              "ParameterId": 761,
+              "ParameterText": "Voltage - Reverse Standoff (Typ)",
+              "ParameterType": "String",
+              "ValueId": "267452",
+              "ValueText": "6V"
+            },
+            {
+              "ParameterId": 1731,
+              "ParameterText": "Voltage - Breakdown (Min)",
+              "ParameterType": "String",
+              "ValueId": "253536",
+              "ValueText": "6.67V"
+            },
+            {
+              "ParameterId": 1732,
+              "ParameterText": "Voltage - Clamping (Max) @ Ipp",
+              "ParameterType": "String",
+              "ValueId": "65462",
+              "ValueText": "10.3V"
+            },
+            {
+              "ParameterId": 714,
+              "ParameterText": "Current - Peak Pulse (10/1000\u00b5s)",
+              "ParameterType": "String",
+              "ValueId": "117257",
+              "ValueText": "19.4A"
+            },
+            {
+              "ParameterId": 1733,
+              "ParameterText": "Power - Peak Pulse",
+              "ParameterType": "String",
+              "ValueId": "140906",
+              "ValueText": "200W"
+            },
+            {
+              "ParameterId": 1734,
+              "ParameterText": "Power Line Protection",
+              "ParameterType": "String",
+              "ValueId": "380240",
+              "ValueText": "No"
+            },
+            {
+              "ParameterId": 405,
+              "ParameterText": "Applications",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            },
+            {
+              "ParameterId": 566,
+              "ParameterText": "Capacitance @ Frequency",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242933",
+              "ValueText": "-55\u00b0C ~ 150\u00b0C (TJ)"
+            },
+            {
+              "ParameterId": 1977,
+              "ParameterText": "Grade",
+              "ParameterType": "String",
+              "ValueId": "316912",
+              "ValueText": "Automotive"
+            },
+            {
+              "ParameterId": 2700,
+              "ParameterText": "Qualification",
+              "ParameterType": "String",
+              "ValueId": "312104",
+              "ValueText": "AEC-Q101"
+            },
+            {
+              "ParameterId": 69,
+              "ParameterText": "Mounting Type",
+              "ParameterType": "String",
+              "ValueId": "409393",
+              "ValueText": "Surface Mount"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "404832",
+              "ValueText": "SOD-123F"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "404834",
+              "ValueText": "SOD-123FL"
+            }
+          ],
+          "variants": [
+            {
+              "number": "F11656TR-ND",
+              "stock": 12000
+            },
+            {
+              "number": "F11656CT-ND",
+              "stock": 13203
+            },
+            {
+              "number": "F11656DKR-ND",
+              "stock": 13203
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "RC1206FR-07330RL",
+      "products": [
+        {
+          "mpn": "RC1206FR-07330RL",
+          "datasheet": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+          "description": {
+            "ProductDescription": "RES 330 OHM 1% 1/4W 1206",
+            "DetailedDescription": "330 Ohms \u00b11% 0.25W, 1/4W Chip Resistor 1206 (3216 Metric) Moisture Resistant Thick Film"
+          },
+          "parameters": [
+            {
+              "ParameterId": 2085,
+              "ParameterText": "Resistance",
+              "ParameterType": "UnitOfMeasure",
+              "ValueId": "330 Ohms",
+              "ValueText": "330 Ohms"
+            },
+            {
+              "ParameterId": 3,
+              "ParameterText": "Tolerance",
+              "ParameterType": "String",
+              "ValueId": "1131",
+              "ValueText": "\u00b11%"
+            },
+            {
+              "ParameterId": 2,
+              "ParameterText": "Power (Watts)",
+              "ParameterType": "String",
+              "ValueId": "16543",
+              "ValueText": "0.25W, 1/4W"
+            },
+            {
+              "ParameterId": 174,
+              "ParameterText": "Composition",
+              "ParameterType": "String",
+              "ValueId": "411742",
+              "ValueText": "Thick Film"
+            },
+            {
+              "ParameterId": 5,
+              "ParameterText": "Features",
+              "ParameterType": "String",
+              "ValueId": "376928",
+              "ValueText": "Moisture Resistant"
+            },
+            {
+              "ParameterId": 17,
+              "ParameterText": "Temperature Coefficient",
+              "ParameterType": "String",
+              "ValueId": "1378",
+              "ValueText": "\u00b1100ppm/\u00b0C"
+            },
+            {
+              "ParameterId": 252,
+              "ParameterText": "Operating Temperature",
+              "ParameterType": "String",
+              "ValueId": "242934",
+              "ValueText": "-55\u00b0C ~ 155\u00b0C"
+            },
+            {
+              "ParameterId": 16,
+              "ParameterText": "Package / Case",
+              "ParameterType": "String",
+              "ValueId": "83711",
+              "ValueText": "1206 (3216 Metric)"
+            },
+            {
+              "ParameterId": 1291,
+              "ParameterText": "Supplier Device Package",
+              "ParameterType": "String",
+              "ValueId": "83708",
+              "ValueText": "1206"
+            },
+            {
+              "ParameterId": 46,
+              "ParameterText": "Size / Dimension",
+              "ParameterType": "String",
+              "ValueId": "10682",
+              "ValueText": "0.122\" L x 0.063\" W (3.10mm x 1.60mm)"
+            },
+            {
+              "ParameterId": 1500,
+              "ParameterText": "Height - Seated (Max)",
+              "ParameterType": "String",
+              "ValueId": "5511",
+              "ValueText": "0.026\" (0.65mm)"
+            },
+            {
+              "ParameterId": 1127,
+              "ParameterText": "Number of Terminations",
+              "ParameterType": "Double",
+              "ValueId": "2",
+              "ValueText": "2"
+            },
+            {
+              "ParameterId": 1531,
+              "ParameterText": "Failure Rate",
+              "ParameterType": "String",
+              "ValueId": "1",
+              "ValueText": "-"
+            }
+          ],
+          "variants": [
+            {
+              "number": "311-330FRTR-ND",
+              "stock": 150000
+            },
+            {
+              "number": "311-330FRCT-ND",
+              "stock": 153219
+            },
+            {
+              "number": "311-330FRDKR-ND",
+              "stock": 153219
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

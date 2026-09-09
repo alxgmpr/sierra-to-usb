@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Footprint verification matrix (Task 14b)
 
 Gate: `uv run tools/check_3d.py` — every footprint in use must (a) carry a `(model …)`

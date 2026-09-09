@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../../../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # EM9293 Carrier — Netlist (pin → net-label map)
 
 **How to use in EasyEDA:** place each component, then drop a **net label** (not a wire) on each pin with the exact net name below. Same net name = connected across the whole schematic. Passives (§ Bridges) sit *between* two nets — place them and label each end. Pin names match the EasyEDA/LCSC symbol; where a datasheet pin number is known it's shown as `(n)`.

@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Sourcing — pinned gate parts (Task 1)
 
 **Date checked:** 2026-07-14. All stock/price figures are snapshots (LCSC live pages / jlcsearch API mirror / DigiKey product pages fetched that day) — **re-verify at order time**, especially anything flagged low-stock. LCSC "C" numbers below were read from real LCSC listings, not inferred. Price class: `$` <0.50, `$$` 0.50–2, `$$$` 2–10 per unit at qty 1.

@@ -1,0 +1,129 @@
+{
+  "status": "CONDITIONAL analytical envelope; loss, component and loop gates OPEN",
+  "input_limit_min_A": 2.837864316945384,
+  "input_limit_max_A": 2.932827151169588,
+  "upstream_current_reserve_A": 0.01,
+  "total_max_steady_current_A": 2.942827151169588,
+  "rail_min_V": 3.2844523447305387,
+  "rail_max_V": 3.3760200695591185,
+  "allocated_carrier_drop_V": 0.08,
+  "allocated_negative_ripple_V": 0.05,
+  "maximum_negative_steady_ripple_for_supervisor_V": 0.02,
+  "module_min_after_allocations_V": 3.154452344730539,
+  "connector_drop_basis": {
+    "contact_initial_max_ohm": 0.055,
+    "contact_endurance_change_ohm": 0.02,
+    "Quectel_supply_contacts": 5,
+    "ground_contacts_excluding_solder_tabs": 11,
+    "at_3A_V": 0.06545454545454545,
+    "pcb_supply_plus_return_allowance_V": 0.01,
+    "note": "Equalized distribution required; check individual pin current and socket temperature. 80mV allocation includes both contact paths and PCB."
+  },
+  "component_temperature_span_from_25C_C": 100,
+  "rows": [
+    {
+      "vbus_V": 4.0,
+      "regulated_load_W": 10.128060208677356,
+      "path_loss_W": 0.48357083920817595,
+      "auxiliary_allocation_W": 0.12,
+      "buck_loss_allocation_W": 0.55,
+      "margin_W": 0.06982621989600446,
+      "dropout_headroom_V": 0.45358036752989594
+    },
+    {
+      "vbus_V": 4.25,
+      "regulated_load_W": 10.128060208677356,
+      "path_loss_W": 0.48357083920817595,
+      "auxiliary_allocation_W": 0.12,
+      "buck_loss_allocation_W": 0.55,
+      "margin_W": 0.7792922991323508,
+      "dropout_headroom_V": 0.7035803675298964
+    },
+    {
+      "vbus_V": 4.5,
+      "regulated_load_W": 10.128060208677356,
+      "path_loss_W": 0.48357083920817595,
+      "auxiliary_allocation_W": 0.12,
+      "buck_loss_allocation_W": 0.55,
+      "margin_W": 1.488758378368697,
+      "dropout_headroom_V": 0.9535803675298964
+    },
+    {
+      "vbus_V": 4.75,
+      "regulated_load_W": 10.128060208677356,
+      "path_loss_W": 0.48357083920817595,
+      "auxiliary_allocation_W": 0.12,
+      "buck_loss_allocation_W": 0.55,
+      "margin_W": 2.1982244576050416,
+      "dropout_headroom_V": 1.2035803675298964
+    },
+    {
+      "vbus_V": 5.0,
+      "regulated_load_W": 10.128060208677356,
+      "path_loss_W": 0.48357083920817595,
+      "auxiliary_allocation_W": 0.12,
+      "buck_loss_allocation_W": 0.55,
+      "margin_W": 2.907690536841388,
+      "dropout_headroom_V": 1.4535803675298964
+    }
+  ],
+  "startup": {
+    "LTC3310S_CSS_nominal_F": 1e-06,
+    "CSS_effective_factor_min": 0.65,
+    "CSS_effective_factor_max": 1.3,
+    "charge_current_min_A": 7e-06,
+    "charge_current_max_A": 1.3e-05,
+    "soft_start_min_s": 0.024750000000000005,
+    "soft_start_max_s": 0.09378571428571428,
+    "total_output_capacitance_design_ceiling_F": 0.0022,
+    "maximum_capacitor_charge_current_A": 0.30009067284969937,
+    "module_load_rule": "Hold FCPO low and USB isolated until rail stable and >100ms startup guard elapsed"
+  },
+  "storage": {
+    "MPN": "T530D227M006ATE005",
+    "count": 4,
+    "polymer_capacitance_nominal_F": 0.00088,
+    "polymer_capacitance_initial_min_F": 0.000704,
+    "polymer_capacitance_after_endurance_min_F": 0.0005632,
+    "temperature_capacitance_factor_allocation": 0.9,
+    "polymer_capacitance_analysis_min_F": 0.00050688,
+    "bank_ESR_initial_max_ohm": 0.00125,
+    "bank_ESR_after_endurance_max_ohm": 0.0025,
+    "temperature_ESR_factor_allocation": 2.0,
+    "bank_ESR_analysis_max_ohm": 0.005,
+    "temperature_factors_status": "Engineering allowances; confirm with manufacturer curves and measurements. Endurance limits are conditional qualification tests.",
+    "step_stress_A": 3,
+    "charge_deficit_for_50mV_after_ESR_C": 1.77408e-05,
+    "full_3A_deficit_time_for_50mV_s": 5.9136000000000004e-06,
+    "note": "Time is a ZERO incremental-converter-current envelope, not a modem burst duration. Integrate actual load minus converter current.",
+    "ripple_current_initial_limit_each_45C_A": 7.1,
+    "ripple_current_limit_each_105_to_125C_A": 1.775,
+    "maximum_operating_voltage_at_125C_V": 4.2,
+    "maximum_output_capacitor_plus_module_budget_F": 0.0022,
+    "maximum_polymer_bank_with_initial_and_endurance_positive_tolerance_F": 0.0011616000000000003,
+    "bleeder_ohm": 330,
+    "bleeder_max_power_W": 0.034886781481683365,
+    "discharge_2p2mF_to_0p1V_s": 2.5805491698970564,
+    "discharge_rule": "POWER off / detach, verify TP505 <0.1V before changing modules or profile. 10s nominal service wait is not a substitute for measurement."
+  },
+  "recharge": {
+    "rail_recharge_after_50mV_drop_J": 8.492825264290597e-05,
+    "lowest_line_conditional_surplus_W": 0.06982621989600446,
+    "minimum_recharge_time_after_50mV_at_full_DC_load_s": 0.00121628025646231,
+    "repeated_event_rule": "Average deficit energy per period must remain below the available surplus; capacitance cannot cover sustained overload. Duration/frequency must come from measured module activity."
+  },
+  "loop_model": {
+    "file": "loop-sensitivity.json",
+    "selected_R403_ohm": 100000,
+    "selected_C408_F": 4.7e-09,
+    "scope": "Exploratory averaged small-signal model; typical IC gains and assumed inner pole; no nonlinear current-limit handoff or switching model."
+  },
+  "unverified": [
+    "The 0.55W buck loss allocation must be demonstrated at 4V and hot corners; typical RDS is not a guaranteed maximum.",
+    "0.12W auxiliary allocation includes the34.9mW bleeder; itemized bound is in auxiliary-budget.json and retains explicitly identified unverified hot-current allowances.",
+    "Exact capacitor C/ESR/bias/temperature, total module capacitance and shunt package qualification.",
+    "Both loops, anti-windup recovery, startup, saturation and current-limit overshoot require simulation and bench verification.",
+    "Reference long-term allowance is an assumption; lifetime specifications are conditional tests, not arbitrary field-life guarantees.",
+    "No instantaneous 3A ceiling is claimed; switching current and loop delay require USB-source transient validation."
+  ]
+}

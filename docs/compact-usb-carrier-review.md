@@ -1,3 +1,5 @@
+> Historical evidence from superseded designs. See the [current full adapter](../full-adapter/README.md). Circuit status and artifact paths below refer to the historical checkpoint, not the replacement.
+
 # Compact EM9190 / Quectel USB carrier
 
 2026-09-04. Initial architecture and reuse review; not a released schematic or fabrication design.

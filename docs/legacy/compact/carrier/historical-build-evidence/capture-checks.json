@@ -1,0 +1,408 @@
+{
+  "scope": "Exported module, USB, profile, protection and RF connectivity assertions. Power/controls regression checks are separate; this does not prove analog behavior, physical interlock, mechanical fit or fabrication readiness.",
+  "checks": [
+    {
+      "passed": true,
+      "check": "Common VCC contact 2"
+    },
+    {
+      "passed": true,
+      "check": "Common VCC contact 4"
+    },
+    {
+      "passed": true,
+      "check": "Common VCC contact 70"
+    },
+    {
+      "passed": true,
+      "check": "Common VCC contact 72"
+    },
+    {
+      "passed": true,
+      "check": "Common VCC contact 74"
+    },
+    {
+      "passed": true,
+      "check": "Vendor-dependent contact 24 reaches profile isolation"
+    },
+    {
+      "passed": true,
+      "check": "No fixed drive on isolated contact 24"
+    },
+    {
+      "passed": true,
+      "check": "Vendor-dependent contact 38 reaches profile isolation"
+    },
+    {
+      "passed": true,
+      "check": "No fixed drive on isolated contact 38"
+    },
+    {
+      "passed": true,
+      "check": "Vendor-dependent contact 68 reaches profile isolation"
+    },
+    {
+      "passed": true,
+      "check": "No fixed drive on isolated contact 68"
+    },
+    {
+      "passed": true,
+      "check": "Vendor-dependent contact 20 reaches profile isolation"
+    },
+    {
+      "passed": true,
+      "check": "No fixed drive on isolated contact 20"
+    },
+    {
+      "passed": true,
+      "check": "Vendor-dependent contact 22 reaches profile isolation"
+    },
+    {
+      "passed": true,
+      "check": "No fixed drive on isolated contact 22"
+    },
+    {
+      "passed": true,
+      "check": "Vendor-dependent contact 28 reaches profile isolation"
+    },
+    {
+      "passed": true,
+      "check": "No fixed drive on isolated contact 28"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 1 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 10 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 21 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 23 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 25 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 26 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 40 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 41 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 42 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 43 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 44 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 46 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 47 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 48 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 49 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 50 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 52 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 53 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 54 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 55 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 56 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 58 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 59 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 60 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 61 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 62 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 63 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 64 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 65 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 69 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "Unused module contact 75 not externally connected"
+    },
+    {
+      "passed": true,
+      "check": "USB2 receptacle join A6/B6"
+    },
+    {
+      "passed": true,
+      "check": "USB2 receptacle join A7/B7"
+    },
+    {
+      "passed": true,
+      "check": "SIM voltage supplied by module pin36"
+    },
+    {
+      "passed": true,
+      "check": "Normally closed SIM detect reaches pin66"
+    },
+    {
+      "passed": true,
+      "check": "CC dead-battery termination A5"
+    },
+    {
+      "passed": true,
+      "check": "CC dead-battery termination B5"
+    },
+    {
+      "passed": true,
+      "check": "STUSB4500L VSYS receives auxiliary 3.3 V"
+    },
+    {
+      "passed": true,
+      "check": "Module SS mapping 31"
+    },
+    {
+      "passed": true,
+      "check": "Module SS mapping 29"
+    },
+    {
+      "passed": true,
+      "check": "Module SS mapping 37"
+    },
+    {
+      "passed": true,
+      "check": "Module SS mapping 35"
+    },
+    {
+      "passed": true,
+      "check": "Orientation path A2"
+    },
+    {
+      "passed": true,
+      "check": "Orientation path A3"
+    },
+    {
+      "passed": true,
+      "check": "Orientation path B11"
+    },
+    {
+      "passed": true,
+      "check": "Orientation path B10"
+    },
+    {
+      "passed": true,
+      "check": "Orientation path B2"
+    },
+    {
+      "passed": true,
+      "check": "Orientation path B3"
+    },
+    {
+      "passed": true,
+      "check": "Orientation path A11"
+    },
+    {
+      "passed": true,
+      "check": "Orientation path A10"
+    },
+    {
+      "passed": true,
+      "check": "Profile truth table A=0, B=0, absent=0"
+    },
+    {
+      "passed": true,
+      "check": "Profile truth table A=0, B=0, absent=1"
+    },
+    {
+      "passed": true,
+      "check": "Profile truth table A=0, B=1, absent=0"
+    },
+    {
+      "passed": true,
+      "check": "Profile truth table A=0, B=1, absent=1"
+    },
+    {
+      "passed": true,
+      "check": "Profile truth table A=1, B=0, absent=0"
+    },
+    {
+      "passed": true,
+      "check": "Profile truth table A=1, B=0, absent=1"
+    },
+    {
+      "passed": true,
+      "check": "Profile truth table A=1, B=1, absent=0"
+    },
+    {
+      "passed": true,
+      "check": "Profile truth table A=1, B=1, absent=1"
+    },
+    {
+      "passed": true,
+      "check": "RF1 is an isolated two-connector passive path"
+    },
+    {
+      "passed": true,
+      "check": "RF1 shields both return to ground"
+    },
+    {
+      "passed": true,
+      "check": "RF2 is an isolated two-connector passive path"
+    },
+    {
+      "passed": true,
+      "check": "RF2 shields both return to ground"
+    },
+    {
+      "passed": true,
+      "check": "RF3 is an isolated two-connector passive path"
+    },
+    {
+      "passed": true,
+      "check": "RF3 shields both return to ground"
+    },
+    {
+      "passed": true,
+      "check": "RF4 is an isolated two-connector passive path"
+    },
+    {
+      "passed": true,
+      "check": "RF4 shields both return to ground"
+    },
+    {
+      "passed": true,
+      "check": "RF5 is an isolated two-connector passive path"
+    },
+    {
+      "passed": true,
+      "check": "RF5 shields both return to ground"
+    },
+    {
+      "passed": true,
+      "check": "Input TVS cathode at VBUS, anode at ground"
+    },
+    {
+      "passed": true,
+      "check": "TPS25947 dVdt capacitor includes TI recommended series resistor"
+    },
+    {
+      "passed": true,
+      "check": "Buck feedback uses complete precision series top leg"
+    }
+  ],
+  "profile_truth_table": [
+    {
+      "A": 0,
+      "B": 0,
+      "absent": 0,
+      "PROFILE_OK": 0
+    },
+    {
+      "A": 0,
+      "B": 0,
+      "absent": 1,
+      "PROFILE_OK": 0
+    },
+    {
+      "A": 0,
+      "B": 1,
+      "absent": 0,
+      "PROFILE_OK": 1
+    },
+    {
+      "A": 0,
+      "B": 1,
+      "absent": 1,
+      "PROFILE_OK": 0
+    },
+    {
+      "A": 1,
+      "B": 0,
+      "absent": 0,
+      "PROFILE_OK": 1
+    },
+    {
+      "A": 1,
+      "B": 0,
+      "absent": 1,
+      "PROFILE_OK": 0
+    },
+    {
+      "A": 1,
+      "B": 1,
+      "absent": 0,
+      "PROFILE_OK": 0
+    },
+    {
+      "A": 1,
+      "B": 1,
+      "absent": 1,
+      "PROFILE_OK": 0
+    }
+  ],
+  "complete_carrier": false
+}
