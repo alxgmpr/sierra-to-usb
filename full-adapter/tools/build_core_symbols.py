@@ -81,7 +81,7 @@ def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, uni
                     x -= 2.54
                 hidden = ' (hide yes)' if p['type'] == 'no_connect' else ''
                 x, y = round(x, 6), round(y, 6)
-                output.append(f'(pin {p["type"]} line (at {x} {y} {angle}) (length {length}){hidden} (name {Q(display_name(p["name"]))} {effects()}) (number {Q(p["ball"])} {effects()})')
+                output.append(f'(pin {p["type"]} line (at {x} {y} {angle}) (length {length}){hidden} (name {Q(p.get("display_name", display_name(p["name"])))} {effects()}) (number {Q(p["ball"])} {effects()})')
                 for alt in p.get('alternates', []):
                     if alt != p['name']:
                         output.append(f'(alternate {Q(display_name(alt))} {p["type"]} line)')
@@ -189,9 +189,21 @@ def cpu_regulator():
                        footprint_filter='RK860*WLCSP20*P0.4mm*')
 
 
+def pmic():
+    source = json.loads((ROOT / 'research/pmic-pins.json').read_text())
+    units = OrderedDict()
+    for pin in source['pins']:
+        units.setdefault(pin['unit_title'], []).append(pin)
+    return make_symbol(source['mpn'], source['footprint'], source['source']['url'],
+                       source['manufacturer'], source['lcsc'],
+                       'RK3568 PMIC, exact -5 startup sequence, QFN68 plus exposed ground',
+                       units, keywords='PMIC regulator RK3568 RTC',
+                       footprint_filter='RK809*QFN*68*P0.35mm*')
+
+
 def main():
     syms, manifest = [], {}
-    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator)]:
+    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic)]:
         symbol, units = fn()
         syms.append(symbol)
         manifest[name] = units

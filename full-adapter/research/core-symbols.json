@@ -10396,5 +10396,926 @@
         }
       ]
     }
+  ],
+  "RK809-5": [
+    {
+      "unit": 1,
+      "title": "BUCK1 \u2014 LOGIC",
+      "width": 30.48,
+      "height": 15.24,
+      "pins": [
+        {
+          "ball": "11",
+          "name": "VCC1",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "BUCK1 \u2014 LOGIC",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "13",
+          "name": "FB1",
+          "type": "input",
+          "side": "L",
+          "unit_title": "BUCK1 \u2014 LOGIC",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "12",
+          "name": "SW1",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "BUCK1 \u2014 LOGIC",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "title": "BUCK2 \u2014 GPU",
+      "width": 30.48,
+      "height": 15.24,
+      "pins": [
+        {
+          "ball": "10",
+          "name": "VCC2",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "BUCK2 \u2014 GPU",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "8",
+          "name": "FB2",
+          "type": "input",
+          "side": "L",
+          "unit_title": "BUCK2 \u2014 GPU",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "9",
+          "name": "SW2",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "BUCK2 \u2014 GPU",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "title": "BUCK3 \u2014 DDR",
+      "width": 30.48,
+      "height": 15.24,
+      "pins": [
+        {
+          "ball": "24",
+          "name": "VCC3",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "BUCK3 \u2014 DDR",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "26",
+          "name": "VBUCK3",
+          "type": "input",
+          "side": "L",
+          "unit_title": "BUCK3 \u2014 DDR",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "27",
+          "name": "FB3",
+          "type": "input",
+          "side": "L",
+          "unit_title": "BUCK3 \u2014 DDR",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "25",
+          "name": "SW3",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "BUCK3 \u2014 DDR",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "title": "BUCK4 \u2014 NPU",
+      "width": 30.48,
+      "height": 15.24,
+      "pins": [
+        {
+          "ball": "66",
+          "name": "VCC4",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "BUCK4 \u2014 NPU",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "64",
+          "name": "FB4",
+          "type": "input",
+          "side": "L",
+          "unit_title": "BUCK4 \u2014 NPU",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "65",
+          "name": "SW4",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "BUCK4 \u2014 NPU",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "title": "BUCK5 and switch 1",
+      "width": 30.48,
+      "height": 15.24,
+      "pins": [
+        {
+          "ball": "54",
+          "name": "VCC9",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "BUCK5 and switch 1",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "59",
+          "name": "FB5",
+          "type": "input",
+          "side": "L",
+          "unit_title": "BUCK5 and switch 1",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "53",
+          "name": "SW5",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "BUCK5 and switch 1",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "55",
+          "name": "SWOUT1",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "BUCK5 and switch 1",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "title": "LDO1 / LDO2 / LDO3",
+      "width": 30.48,
+      "height": 15.24,
+      "pins": [
+        {
+          "ball": "22",
+          "name": "VCC5",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "LDO1 / LDO2 / LDO3",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "23",
+          "name": "LDO1",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "LDO1 / LDO2 / LDO3",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "21",
+          "name": "LDO2",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "LDO1 / LDO2 / LDO3",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "20",
+          "name": "LDO3",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "LDO1 / LDO2 / LDO3",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "title": "LDO4 / LDO5 / LDO6",
+      "width": 30.48,
+      "height": 15.24,
+      "pins": [
+        {
+          "ball": "30",
+          "name": "VCC6",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "LDO4 / LDO5 / LDO6",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "28",
+          "name": "LDO4",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "LDO4 / LDO5 / LDO6",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "29",
+          "name": "LDO5",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "LDO4 / LDO5 / LDO6",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "31",
+          "name": "LDO6",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "LDO4 / LDO5 / LDO6",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "title": "LDO7 / LDO8 / LDO9",
+      "width": 30.48,
+      "height": 15.24,
+      "pins": [
+        {
+          "ball": "4",
+          "name": "VCC7",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "LDO7 / LDO8 / LDO9",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "LDO7",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "LDO7 / LDO8 / LDO9",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "LDO8",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "LDO7 / LDO8 / LDO9",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "LDO9",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "LDO7 / LDO8 / LDO9",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "title": "Switch 2",
+      "width": 30.48,
+      "height": 15.24,
+      "pins": [
+        {
+          "ball": "57",
+          "name": "VCC8",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "Switch 2",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "58",
+          "name": "SWOUT2",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "Switch 2",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "title": "System control and RTC",
+      "width": 30.48,
+      "height": 35.56,
+      "pins": [
+        {
+          "ball": "45",
+          "name": "VCC_RTC",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "1",
+          "name": "SCL",
+          "type": "input",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "2",
+          "name": "SDA",
+          "type": "bidirectional",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "49",
+          "name": "SLEEP",
+          "type": "input",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "52",
+          "name": "PWRON",
+          "type": "input",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "display_name": "~{PWRON}",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "61",
+          "name": "VDC",
+          "type": "input",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "50",
+          "name": "XIN",
+          "type": "input",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "56",
+          "name": "BATDIV",
+          "type": "input",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "62",
+          "name": "SNSP",
+          "type": "input",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "63",
+          "name": "SNSN",
+          "type": "input",
+          "side": "L",
+          "unit_title": "System control and RTC",
+          "at": [
+            -17.78,
+            -10.16,
+            0
+          ]
+        },
+        {
+          "ball": "51",
+          "name": "XOUT",
+          "type": "output",
+          "side": "R",
+          "unit_title": "System control and RTC",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "7",
+          "name": "INT",
+          "type": "open_collector",
+          "side": "R",
+          "unit_title": "System control and RTC",
+          "display_name": "~{INT}",
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "67",
+          "name": "RESETB",
+          "type": "open_collector",
+          "side": "R",
+          "unit_title": "System control and RTC",
+          "display_name": "~{RESET}",
+          "at": [
+            17.78,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "68",
+          "name": "CLK32K",
+          "type": "open_collector",
+          "side": "R",
+          "unit_title": "System control and RTC",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "60",
+          "name": "EXT_EN",
+          "type": "output",
+          "side": "R",
+          "unit_title": "System control and RTC",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "46",
+          "name": "VREF",
+          "type": "output",
+          "side": "R",
+          "unit_title": "System control and RTC",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "47",
+          "name": "GNDREF",
+          "type": "power_in",
+          "side": "R",
+          "unit_title": "System control and RTC",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "69",
+          "name": "GND",
+          "type": "power_in",
+          "side": "R",
+          "unit_title": "System control and RTC",
+          "at": [
+            17.78,
+            -5.08,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "title": "Audio interface \u2014 unused",
+      "width": 35.56,
+      "height": 35.56,
+      "pins": [
+        {
+          "ball": "14",
+          "name": "LRCLK",
+          "type": "bidirectional",
+          "side": "L",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            -20.32,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "15",
+          "name": "BCLK",
+          "type": "bidirectional",
+          "side": "L",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            -20.32,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "16",
+          "name": "MCLK",
+          "type": "input",
+          "side": "L",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            -20.32,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "17",
+          "name": "SDI",
+          "type": "input",
+          "side": "L",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            -20.32,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "19",
+          "name": "PDMCLK",
+          "type": "input",
+          "side": "L",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            -20.32,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "33",
+          "name": "VCC_SPK_HP",
+          "type": "power_in",
+          "side": "L",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            -20.32,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "40",
+          "name": "HP_SNS",
+          "type": "input",
+          "side": "L",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            -20.32,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "42",
+          "name": "MIC1N",
+          "type": "input",
+          "side": "L",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            -20.32,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "43",
+          "name": "MIC1P",
+          "type": "input",
+          "side": "L",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            -20.32,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "18",
+          "name": "SDO/PDMDATA",
+          "type": "output",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "44",
+          "name": "VCC_1P8A",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "48",
+          "name": "VCC_1P8D",
+          "type": "power_out",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "32",
+          "name": "SPKP_OUT",
+          "type": "output",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "34",
+          "name": "SPKN_OUT",
+          "type": "output",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "35",
+          "name": "VCC_CPVSS",
+          "type": "output",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "36",
+          "name": "CPN",
+          "type": "output",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "37",
+          "name": "CPP",
+          "type": "output",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            -5.08,
+            180
+          ]
+        },
+        {
+          "ball": "38",
+          "name": "VCC_CPVDD",
+          "type": "output",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "39",
+          "name": "HPL_OUT",
+          "type": "output",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            -10.16,
+            180
+          ]
+        },
+        {
+          "ball": "41",
+          "name": "HPR_OUT",
+          "type": "output",
+          "side": "R",
+          "unit_title": "Audio interface \u2014 unused",
+          "at": [
+            20.32,
+            -12.7,
+            180
+          ]
+        }
+      ]
+    }
   ]
 }
