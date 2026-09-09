@@ -1,7 +1,10 @@
 {
-  "status": "PMIC_UNUSED_AUDIO_CHECKPOINT_NOT_RELEASE",
+  "status": "PMIC_CONTROL_CAPTURE_CHECKPOINT_NOT_RELEASE",
+  "pmic_physical_pins_present": 69,
   "grounded_audio_pins": 6,
-  "unused_open_pins": 11,
+  "unused_audio_open_pins": 11,
   "internal_supply_bypass_caps": 2,
-  "control_and_RTC_integrated": false
+  "control_and_RTC_integrated": true,
+  "processor_control_connections_integrated": false,
+  "oscillator_and_startup_physically_qualified": false
 }

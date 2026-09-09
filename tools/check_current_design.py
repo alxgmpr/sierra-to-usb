@@ -119,7 +119,7 @@ def check():
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
-        print("Core power checkpoint: 30 supply balls, 208 ground balls and 21 capacitors checked; regulators unfinished.")
+        print("Core power checkpoint: 30 supply balls, 208 ground balls and 21 capacitors checked; upstream supplies unfinished.")
         spec = importlib.util.spec_from_file_location(
             "staged_pmic_library_checks", stage / "full-adapter/tools/check_pmic_library.py")
         module = importlib.util.module_from_spec(spec)
@@ -155,7 +155,7 @@ def check():
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
-        print("PMIC unused audio checkpoint: grounded/open pins and internal bypass checked; control and RTC unfinished.")
+        print("PMIC control checkpoint: all 69 pins, RTC and control passives checked; processor connections and startup recovery unfinished.")
 
 
 if __name__ == "__main__":

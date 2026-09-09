@@ -26,7 +26,8 @@ def check(root=ROOT):
                'VCC1V8_IMAGE':('6','C411')}
         for rail,(pin,cap) in rails.items():
             expected={('U5',pin),(cap,'1')}
-            if rail=='VCC3V3_PMU':expected.add(('R300','1'))
+            if rail=='VCC3V3_PMU':expected|={('R300','1'),('R494','1'),('R495','1')}
+            if rail=='VCC1V8_PMU':expected|={('R492','1'),('R493','1')}
             assert nets[rail]==expected,(rail,nets[rail]^expected)
         assert nets['VCC3V3_SYS']=={('U5','22'),('U5','30'),('U5','4'),
                                     ('C400','1'),('C404','1'),('C408','1'),
@@ -34,7 +35,7 @@ def check(root=ROOT):
                                     ('U5','11'),('U5','10'),('U5','66'),
                                     ('C430','1'),('C431','1'),('C440','1'),('C441','1'),('C450','1'),('C451','1'),
                                     ('U5','54'),('U5','57'),('C460','1'),('C461','1'),('C466','1'),
-                                    ('U5','33'),('C482','1')}
+                                    ('U5','33'),('C482','1'),('U5','45'),('C483','1'),('R496','1')}
         for n in range(400,412):
             ref=f'C{n}';part=parts[ref]
             assert (ref,'2') in nets['GND']
@@ -46,7 +47,7 @@ def check(root=ROOT):
         assert (fields['MPN'],fields['LCSC'])==('RK809-5','C2939628')
     return {'status':'PMIC_LDO_CAPTURE_CHECKPOINT_NOT_RELEASE','ldo_outputs':9,
             'input_groups':3,'bypass_capacitors':12,'cpu_enable_source':'U5 LDO6 pin 31',
-            'remaining_pmic_units_integrated':False}
+            'processor_loads_integrated':False}
 
 
 if __name__=='__main__':

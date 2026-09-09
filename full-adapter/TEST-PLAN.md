@@ -56,6 +56,26 @@ unprogrammed flash must leave the modem profile invalid and modem power off.
 
 ## Production fixture and release records
 
+### RK809 control measurements
+
+- Verify I2C0 is pulled to 1.8 V and PMUIO2 is configured to that same domain;
+  INT and reset use the 3.3 V PMU domain. Check low levels and edge times at
+  both RK809 and RK860 during simultaneous activity.
+- Measure VCC3V3_SYS, VDC, PMIC outputs and SYS_RESET_L together. Verify the
+  VDC trigger follows valid PMIC input power and the specified qualification
+  interval. Before release, finish the upstream power-good/restart circuit;
+  an RC cold-start delay alone does not establish brownout recovery.
+- Sweep power interruptions and supply ramps through the final supported
+  ranges, including interruptions too short to discharge C487. Require an
+  automatic valid restart or the deliberately specified latched-off state;
+  no partially powered processor or modem state is acceptable.
+- Measure RTC startup margin and crystal drive with a suitable low-loading
+  method, keeping normal drive within Epson's 0.01–0.5 uW operating range.
+  Verify 32.768 kHz tuning over temperature, including actual stray loading;
+  22 pF capacitors alone do not establish the 12.5 pF crystal load.
+
+### Fixture records
+
 The fixture should contact ground, input and isolated rails, PMIC outputs,
 modem supply/control signals, supervisor SWD and Linux console/recovery without
 bridging the PoE isolation barrier. Use an M.2 fixture to verify profile pin

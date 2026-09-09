@@ -55,7 +55,7 @@ def check(root=ROOT):
     assert set(source['unused_audio_ground'])=={14,15,16,17,19,40}
     assert set(source['unused_audio_open'])=={18,36,37,38,35,39,41,34,32,43,42}
     return {'status':'PMIC_LIBRARY_CHECKPOINT_NOT_RELEASE','numbered_pins':68,'exposed_pad_number':'69',
-            'units':11,'thermal_vias':16,'power_circuit_integrated':False}
+            'units':11,'thermal_vias':16,'scope':'library_only'}
 
 
 if __name__=='__main__':

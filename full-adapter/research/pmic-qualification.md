@@ -123,3 +123,39 @@ stray loading for nominal tuning. Footprint verification, oscillator margin,
 drive level and actual control capture remain next work. Auto-start VDC must
 be delayed relative to the shared 3.3 V supply; do not assume the reference's
 independent battery/VBUS timing applies to this board.
+
+## Control and RTC capture
+
+All 69 RK809 physical pins are now present in the exported netlist. SCL/SDA
+use 22 ohm series resistors and 2.2 kohm pull-ups to VCC1V8_PMU. The future
+processor PMUIO2 domain must therefore be powered/configured for 1.8 V.
+RK860's SDA/SCL input-high threshold is 1.26 V (RK860 V1.7), compatible with
+this bus. INT and RESET have separate 10 kohm pull-ups to VCC3V3_PMU; the
+processor connections must use the corresponding 3.3 V PMU domain. RESET
+retains 100 nF. PWRON retains 100 nF and its internal pull-up, ready for the
+physical button/supervisor connection. SLEEP shares the existing CPU VSEL
+net and its 100 kohm reset pull-down. Unused CLK32K/EXT_EN are explicitly open;
+BATDIV/SNSP/SNSN and both ground pins are grounded. VREF is bypassed with 1 uF.
+
+Y490 is FC-135R 32.7680KA-A3, C6554955, with two 22 pF C0G capacitors.
+Its native 3215 land pattern matches the manufacturer's 1.0 x 1.8 mm pads at
+2.5 mm center spacing. The local footprint adds the central 1.5 x 1.8 mm
+keepout on every copper layer. The vendored STEP is 3.2 x 1.5 x 0.93 mm, a
+clearance envelope 0.03 mm taller than the manufacturer's maximum, not a
+manufacturer model. KLC exceptions are the retained rectangular manufacturer
+lands and the project-relative STEP path. `rtc-footprint-source.json` records
+the source hashes; the footprint plot and schematic were visually reviewed.
+
+R496/R497/C487 form a 100k / 56k / 1 uF VDC network: 1.1846 V and 35.9 ms
+nominal time constant. Its nominal 0.55 V crossing follows an ideal input step
+by about 22.4 ms. The RK809 then qualifies VDC for 100 ms before starting its
+sequence (datasheet section 4.1.2). The upstream 3.3 V rise must be <=10 ms,
+subject to a completed tolerance/actual-capacitance timing budget.
+
+**Open integration requirement:** RC delay alone does not prove recovery from
+brief brownouts while VDC retains charge. Select/integrate upstream power-good
+or reset behavior that forces VDC below its trigger threshold while the PMIC
+supplies are invalid, or implement an equivalent verified PWRON restart path.
+Do not waive this as a prototype-only issue. Cold/hot oscillator margin, drive
+level, tuning, reset timing and the final startup circuit still require physical
+qualification after that circuit is complete.

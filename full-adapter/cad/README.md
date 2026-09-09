@@ -58,17 +58,23 @@ and complete current/drop budgets remain outstanding. The control page now
 terminates unused audio pins exactly as specified, retaining both internal
 1.8 V bypass capacitors and a 3.3 V speaker-supply input bypass.
 
-The current ERC result has fourteen **unresolved integration findings**, with no
-ERC exclusions: unplaced U1/U5 units, input pins, bidirectional pins and power
+All 69 U5 pins are now present. The control unit has 1.8 V I2C pull-ups,
+22 ohm series resistors, separate 3.3 V interrupt/reset pull-ups, mandatory
+reset bypass, grounded unused fuel-gauge inputs, and a 32.768 kHz crystal.
+The VDC divider/RC is a cold-start timing provision; reliable brownout recovery
+still requires integration with the selected upstream supply's power-good/reset
+behavior. The processor-side control pins remain unplaced.
+
+The current ERC result has seven **unresolved integration findings**, with no
+ERC exclusions: unplaced U1 units, input pins, bidirectional pins and power
 pins; three undriven rails (GND, VCC5V_SYS and
-VCC3V3_SYS); isolated CPU regulator SDA/SCL labels; and undriven SCL. The remaining PMIC units,
-upstream supplies and other processor units are not yet captured. These are
+VCC3V3_SYS). The upstream supplies and other processor units are not yet captured. These are
 open work, not manufacturing exceptions. There are no
 additional ERC findings in this checkpoint.
 
 The schematic PDF was rendered and visually iterated to fix rotated passive
 fields, supply-reference overlap, power-label collisions and page-boundary
-placement. The checked working render is `../build/pmic-power-review.pdf`; it is
+placement. The checked working render is `../build/pmic-control-review.pdf`; it is
 not a released schematic or fabrication deliverable.
 
 ## Library review

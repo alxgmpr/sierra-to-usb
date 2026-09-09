@@ -1,0 +1,20 @@
+{
+  "native_footprint": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Crystal.pretty/Crystal_SMD_3215-2Pin_3.2x1.5mm.kicad_mod",
+  "native_sha256": "75b26d09b915972459551bb719397c3b03ad8252006bf74eb7e4977b5ba417e1",
+  "datasheet_sha256": "652af64060da002ba500f286101b654011385f1a8d47649768d4490cb3d2ad90",
+  "datasheet_page": 4,
+  "pad_size_mm": [
+    1,
+    1.8
+  ],
+  "pad_centers_x_mm": [
+    -1.25,
+    1.25
+  ],
+  "center_keepout_mm": [
+    1.5,
+    1.8
+  ],
+  "keepout_layers": "all copper layers",
+  "pin_polarity": "passive nonpolar crystal; native left/right numbering retained"
+}
