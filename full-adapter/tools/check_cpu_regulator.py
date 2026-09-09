@@ -95,10 +95,10 @@ def check(root=ROOT):
         assert nets['VCC5V_SYS'] == {('U4',p) for p in ['D1','D2','E1','E2']} | {(f'C{i}','1') for i in range(300,304)}
         assert attached(('U4','D3')) == {('U4',p) for p in ['D3','D4','E3','E4']} | {('L300','1')}
         assert attached(('U4','A2')) == {('U4','A2'),('R300','2'),('C304','1')}
-        assert nets['VCC3V3_PMU'] == {('R300','1'),('U5','31'),('C407','1'),('R494','1'),('R495','1'),('U1','Y20'),('C510','1')}
-        assert nets['PMIC_SLEEP_H'] == {('U4','A1'),('R302','1'),('U5','49')}
-        assert nets['I2C0_SCL_PMIC'] == {('U4','A3'),('R490','1'),('R492','2')}
-        assert nets['I2C0_SDA_PMIC'] == {('U4','B1'),('R491','1'),('R493','2')}
+        assert nets['VCC3V3_PMU'] == {('R300','1'),('U5','31'),('C407','1'),('R494','1'),('R495','1'),('U1','Y20'),('C510','1'),('R560','1'),('R562','1')}
+        assert nets['PMIC_SLEEP_H'] == {('U4','A1'),('R302','1'),('U5','49'),('U1','AG28')}
+        assert nets['I2C0_SCL_PMIC'] == {('U4','A3'),('R490','1'),('R492','2'),('U1','AF24')}
+        assert nets['I2C0_SDA_PMIC'] == {('U4','B1'),('R491','1'),('R493','2'),('U1','AB21')}
         assert nets['VDD_CPU_COM'] == {('U1','M15'),('U4','A4'),('R301','2'),('C305','2')}
         assert {('L300','2'),('R301','1'),('C305','1')} <= nets['VDD_CPU']
         assert nets['VDD_CPU'].isdisjoint(nets['VDD_CPU_COM'])

@@ -107,5 +107,5 @@ def pmic_control():
     s.wire((236.22,233.68),(279.4,233.68));s.wire((279.4,233.68),c['1'])
     s.wire(c['2'],(279.4,256.54));s.power('GND',(279.4,256.54))
     s.text('VDC: 1.185V, tau 35.9ms nominal. Require 3.3V supply rise <=10ms.\nVerify the VDC edge occurs after VCC_RTC/VCC9 are valid, including brownout recovery.\nPWRON uses its internal pull-up; reset retains the required 100nF capacitor.',15.24,248.92,1.0)
-    s.text('I2C0 / PMUIO2: 1.8V. INT/reset: 3.3V PMU domain. Processor connections remain in progress.\nRTC 22pF loads assume about 1.5pF stray; verify startup margin, drive level and frequency.',15.24,276.86,1.0)
+    s.text('I2C0 / PMUIO2: 1.8V. INT/reset: 3.3V PMU domain. See processor-control for host connections.\nRTC 22pF loads assume about 1.5pF stray; verify startup margin, drive level and frequency.',15.24,276.86,1.0)
     return s

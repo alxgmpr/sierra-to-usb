@@ -26,7 +26,9 @@ captures BUCK5 and the two switched 3.3 V supplies. The ninth currently
 contains PMIC control, reset, RTC, auto-start RC and unused-audio terminations.
 Four further pages capture processor PMU/PLL, peripheral IO and USB/combo-PHY
 supplies, plus explicit unused display/camera/PCIe3 terminations. All processor
-power-input balls are now present; signal and boot-control capture remains open.
+power-input balls are now present. A further processor-control page connects the
+PMIC bus, reset, interrupt and sleep signals and defines the hardware boot straps.
+Clock, external console and remaining signal capture remain open.
 Other subsystems and the integrated PCB remain unfinished. See [the capture checkpoint](cad/README.md)
 for its exported-net checks and six unresolved integration ERC findings. The
 [processor escape coupon](studies/README.md) contains real routing and its own

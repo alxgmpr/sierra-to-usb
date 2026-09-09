@@ -35,8 +35,8 @@ def check(root=ROOT):
         assert attached('U5','46')=={('U5','46'),('C484','1')}
         assert attached('U5','61')=={('U5','61'),('R496','2'),('R497','1'),('C487','1')}
         assert nets['PMIC_PWRON_L']=={('U5','52'),('C485','1')}
-        assert nets['SYS_RESET_L']=={('U5','67'),('R494','2'),('C486','1')}
-        assert nets['PMIC_INT_L']=={('U5','7'),('R495','2')}
+        assert nets['SYS_RESET_L']=={('U5','67'),('R494','2'),('C486','1'),('U1','AH27'),('R561','2'),('C560','1')}
+        assert nets['PMIC_INT_L']=={('U5','7'),('R495','2'),('U1','AA22')}
         assert {('U5','45'),('C483','1'),('R496','1')} <= nets['VCC3V3_SYS']
         assert ('R497','2') in nets['GND']
         for ref in ['C483','C484','C485','C486','C487','C488','C489']:assert (ref,'2') in nets['GND']
@@ -76,7 +76,7 @@ def check(root=ROOT):
     assert all(str(nodes(keepout,t)[0][1])=='not_allowed' for t in ['tracks','vias','pads','copperpour'])
     return {'status':'PMIC_CONTROL_CAPTURE_CHECKPOINT_NOT_RELEASE','pmic_physical_pins_present':69,
             'grounded_audio_pins':6,'unused_audio_open_pins':11,'internal_supply_bypass_caps':2,
-            'control_and_RTC_integrated':True,'processor_control_connections_integrated':False,
+            'control_and_RTC_integrated':True,'processor_control_connections_integrated':True,
             'oscillator_and_startup_physically_qualified':False}
 
 

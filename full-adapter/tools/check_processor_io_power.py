@@ -37,7 +37,7 @@ def check(root=ROOT):
         assert (fields['MPN'],fields['LCSC']) == ('CL05A105KA5NQNC','C52923')
         assert nets['VCC_SDIO'].isdisjoint(nets['VCC3V3_SD']), 'SD IO must change voltage independently of card power'
     return {'status':'PROCESSOR_IO_SUPPLY_CAPTURE_CHECKPOINT_NOT_RELEASE','supply_balls':11,
-            'local_bypass_capacitors':12,'storage_IO_V':1.8,'hardware_storage_voltage_strap_integrated':False,
+            'local_bypass_capacitors':12,'storage_IO_V':1.8,'hardware_storage_voltage_strap_integrated':True,
             'IO_load_budget_closed':False,'system_routed':False}
 
 

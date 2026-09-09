@@ -520,5 +520,5 @@
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 279.4 261.62 0) (effects (font (size 1.27 1.27))) (hide yes))
 (pin "1" (uuid "ae07f1be-1d8c-5730-8e06-53fc28965b50"))(instances (project "full-adapter" (path "/fda20879-fa66-56c0-be14-de2506349b46/996d3e9a-d50f-5f72-b9ba-9b7221288ad0" (reference "#PWRpmiccontrol023") (unit 1)))))
 (text "VDC: 1.185V, tau 35.9ms nominal. Require 3.3V supply rise <=10ms.\nVerify the VDC edge occurs after VCC_RTC/VCC9 are valid, including brownout recovery.\nPWRON uses its internal pull-up; reset retains the required 100nF capacitor." (at 15.24 248.92 0) (effects (font (size 1.0 1.0)) (justify left top)) (uuid "28385798-02cd-5b1a-af71-a358eb3ef706"))
-(text "I2C0 / PMUIO2: 1.8V. INT/reset: 3.3V PMU domain. Processor connections remain in progress.\nRTC 22pF loads assume about 1.5pF stray; verify startup margin, drive level and frequency." (at 15.24 276.86 0) (effects (font (size 1.0 1.0)) (justify left top)) (uuid "7e7d2a79-4fa8-50b5-bd74-6b9f3f7b4f21"))
+(text "I2C0 / PMUIO2: 1.8V. INT/reset: 3.3V PMU domain. See processor-control for host connections.\nRTC 22pF loads assume about 1.5pF stray; verify startup margin, drive level and frequency." (at 15.24 276.86 0) (effects (font (size 1.0 1.0)) (justify left top)) (uuid "e0c45340-beec-5f27-825c-59113cf4a9b1"))
 )

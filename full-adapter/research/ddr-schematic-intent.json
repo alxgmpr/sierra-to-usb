@@ -919,5 +919,67 @@
   "processor-pmu": {},
   "processor-io-power": {},
   "processor-phy-power": {},
-  "processor-unused": {}
+  "processor-unused": {},
+  "processor-control": {
+    "SYS_RESET_L": [
+      [
+        "U1",
+        "AH27"
+      ]
+    ],
+    "SD_CARD_DET_L": [
+      [
+        "U1",
+        "Y22"
+      ]
+    ],
+    "PMIC_INT_L": [
+      [
+        "U1",
+        "AA22"
+      ]
+    ],
+    "FLASH_VOL_SEL": [
+      [
+        "U1",
+        "AG25"
+      ]
+    ],
+    "SOC_TSHUT_L": [
+      [
+        "U1",
+        "AG26"
+      ]
+    ],
+    "PMIC_SLEEP_H": [
+      [
+        "U1",
+        "AG28"
+      ]
+    ],
+    "I2C0_SDA_PMIC": [
+      [
+        "U1",
+        "AB21"
+      ]
+    ],
+    "SOC_UART2_RX_1V8": [
+      [
+        "U1",
+        "AC20"
+      ]
+    ],
+    "I2C0_SCL_PMIC": [
+      [
+        "U1",
+        "AF24"
+      ]
+    ],
+    "SOC_UART2_TX_1V8": [
+      [
+        "U1",
+        "AH24"
+      ]
+    ]
+  }
 }

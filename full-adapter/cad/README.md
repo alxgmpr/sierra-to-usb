@@ -64,12 +64,17 @@ All 69 U5 pins are now present. The control unit has 1.8 V I2C pull-ups,
 reset bypass, grounded unused fuel-gauge inputs, and a 32.768 kHz crystal.
 The VDC divider/RC is a cold-start timing provision; reliable brownout recovery
 still requires integration with the selected upstream supply's power-good/reset
-behavior. The processor-side control pins remain unplaced.
+behavior. The processor control page now connects reset, interrupt, sleep and
+I2C0 to their physical U1 pins. It adds a 10k pull-up for the 1.8 V storage
+voltage strap, the card-detect/JTAG pull-up, the reference zero-ohm TSHUT/reset
+link, and a local 100 nF reset capacitor at U1. UART2 has 1.8 V RX/TX and ground
+probe pads TP560–TP562, represented as board copper and excluded from assembly BOM;
+its external level conversion and connector remain unfinished.
 
 All processor power-input balls are now captured. The PMU/PLL sheet adds
 twelve capacitors at seven supply balls; the IO/ADC/OTP page adds twelve at
 eleven balls. PMUIO1 uses fixed 3.3 V; PMUIO2 uses 1.8 V with the existing PMIC
-I2C pull-ups. VCCIO2 uses 1.8 V and still needs its physical HIGH boot strap.
+I2C pull-ups. VCCIO2 uses 1.8 V with a physical HIGH boot strap.
 VCCIO3 uses the independently programmable SD-IO LDO, separate from SD card
 3.3 V power. VCCIO1/4/5/6/7 use the switched 3.3 V system rail.
 
@@ -93,7 +98,7 @@ additional ERC findings in this checkpoint.
 
 The schematic PDF was rendered and visually iterated to fix rotated passive
 fields, supply-reference overlap, power-label collisions and page-boundary
-placement. The checked working render is `../build/processor-supplies-review.pdf`; it is
+placement. The checked working render is `../build/processor-control-review.pdf`; it is
 not a released schematic or fabrication deliverable.
 
 ## Library review
@@ -148,6 +153,7 @@ Run from the repository root with `full-adapter/.venv/bin/python`:
 14. `full-adapter/tools/check_processor_io_power.py`
 15. `full-adapter/tools/check_processor_phy_power.py`
 16. `full-adapter/research/processor-supply-budget.py`
+17. `full-adapter/tools/check_processor_control.py`
 
 The pre-commit checks validate the staged snapshot and reject unregistered CAD.
 Their DDR checkpoint success does not authorize fabrication or imply that the

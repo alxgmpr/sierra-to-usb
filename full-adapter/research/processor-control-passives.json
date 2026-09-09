@@ -1,0 +1,69 @@
+{
+  "zero_ohm": {
+    "results": [
+      {
+        "lcsc": "C17168",
+        "model": "0402WGF0000TCE",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0402",
+        "stock": 12629815,
+        "price": 0.0028,
+        "price_10": null,
+        "library_type": "basic",
+        "preferred": true,
+        "category": "Resistors",
+        "subcategory": "Chip Resistor - Surface Mount",
+        "subcategory_id": 2980,
+        "mounting_type": "smd",
+        "description": "-55℃~+155℃ 0Ω 50V 62.5mW Thick Film Resistor ±1% ±800ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+        "specs": {
+          "Resistance": "0Ω",
+          "Operating Temperature": "-55℃~+155℃",
+          "Power(Watts)": "62.5mW",
+          "Type": "Thick Film Resistor",
+          "Voltage-Supply(Max)": "50V",
+          "Tolerance": "±1%",
+          "Temperature Coefficient": "±800ppm/℃"
+        }
+      }
+    ],
+    "total": 1,
+    "page_info": {
+      "limit": 1,
+      "offset": 0,
+      "returned": 1
+    },
+    "filters_applied": {
+      "query": "0402WGF0000TCE",
+      "subcategory_id": null,
+      "subcategory_name": null,
+      "subcategory_resolved": null,
+      "category_id": null,
+      "category_name": null,
+      "category_resolved": null,
+      "spec_filters": [],
+      "library_type": null,
+      "prefer_no_fee": true,
+      "min_stock": 10,
+      "package": null,
+      "packages": null,
+      "manufacturer": null,
+      "match_all_terms": true
+    },
+    "library_type_counts": {
+      "basic": 1,
+      "preferred": 0,
+      "extended": 0
+    },
+    "no_fee_available": true,
+    "parsed": {
+      "original_query": "0402WGF0000TCE",
+      "detected": {},
+      "subcategory": null,
+      "package": null,
+      "mounting_type": null,
+      "spec_filters": [],
+      "remaining_text": "0402WGF0000TCE"
+    }
+  }
+}
