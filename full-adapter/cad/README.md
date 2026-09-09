@@ -2,7 +2,8 @@
 
 Open `full-adapter.kicad_pro`. The root hierarchy currently contains the DDR
 signal and power pages, processor core power and ground, the CPU regulator,
-the nine PMIC LDO outputs, all five PMIC bucks, both supply switches and unused audio.
+the nine PMIC LDO outputs, all five PMIC bucks, both supply switches and unused audio,
+processor PMU/PLL, IO and USB/combo-PHY supplies, and unused PHY terminations.
 The integrated PCB and remaining functional pages
 are still being implemented.
 
@@ -65,16 +66,34 @@ The VDC divider/RC is a cold-start timing provision; reliable brownout recovery
 still requires integration with the selected upstream supply's power-good/reset
 behavior. The processor-side control pins remain unplaced.
 
-The current ERC result has seven **unresolved integration findings**, with no
-ERC exclusions: unplaced U1 units, input pins, bidirectional pins and power
-pins; three undriven rails (GND, VCC5V_SYS and
+All processor power-input balls are now captured. The PMU/PLL sheet adds
+twelve capacitors at seven supply balls; the IO/ADC/OTP page adds twelve at
+eleven balls. PMUIO1 uses fixed 3.3 V; PMUIO2 uses 1.8 V with the existing PMIC
+I2C pull-ups. VCCIO2 uses 1.8 V and still needs its physical HIGH boot strap.
+VCCIO3 uses the independently programmable SD-IO LDO, separate from SD card
+3.3 V power. VCCIO1/4/5/6/7 use the switched 3.3 V system rail.
+
+The PHY supply page adds fourteen capacitors and two Murata BLM18PG121SN1D
+filters. The 0.9/1.8 V USB2 analog supplies are filtered; the shared USB3/PCIe2
+combo-PHY supplies use their reference bypass network. The unused-domain page
+grounds fourteen display/camera/PCIe3 supply balls and explicitly disconnects
+63 signal balls. These supplies are additional intentional ground connections,
+not additional VSS/AVSS pins. Their controller/PHY nodes must be disabled in DTS.
+
+`processor-supply-budget.json` records the documented analog-domain peak sums
+and 0.76425 W nominal LDO dissipation before IO loads and other PMIC losses.
+This is a partial budget, not thermal closure or a basis for selecting PoE class.
+
+The current ERC result has six **unresolved integration findings**, with no
+ERC exclusions: unplaced U1 units, input pins and bidirectional pins;
+three undriven rails (GND, VCC5V_SYS and
 VCC3V3_SYS). The upstream supplies and other processor units are not yet captured. These are
 open work, not manufacturing exceptions. There are no
 additional ERC findings in this checkpoint.
 
 The schematic PDF was rendered and visually iterated to fix rotated passive
 fields, supply-reference overlap, power-label collisions and page-boundary
-placement. The checked working render is `../build/pmic-control-review.pdf`; it is
+placement. The checked working render is `../build/processor-supplies-review.pdf`; it is
 not a released schematic or fabrication deliverable.
 
 ## Library review
@@ -102,6 +121,13 @@ No actual component pin is hidden except the five NC balls on each Hynix
 package. All populated balls remain explicit; alternate command functions use
 KiCad alternates. Unused processor interfaces remain visible in separate units.
 
+The former unplaced 41-pin supply unit was split into four readable units without
+renumbering existing signal, core or ground units. The complete 636-ball source
+map remains intact. The new ferrite footprint vendors the native 0603 body,
+courtyard and STEP model, using Murata's 0.65 × 0.7 mm rectangular reflow lands
+with 0.7 mm gap on 35 um outer copper. Remaining KLC F6.3/F9.3 notices are the
+manufacturer's rectangular pads and the intentional project-relative model path.
+
 ## Reproduction
 
 Run from the repository root with `full-adapter/.venv/bin/python`:
@@ -118,6 +144,10 @@ Run from the repository root with `full-adapter/.venv/bin/python`:
 10. `full-adapter/tools/check_pmic_core.py`
 11. `full-adapter/tools/check_pmic_aux.py`
 12. `full-adapter/tools/check_pmic_control.py`
+13. `full-adapter/tools/check_processor_pmu.py`
+14. `full-adapter/tools/check_processor_io_power.py`
+15. `full-adapter/tools/check_processor_phy_power.py`
+16. `full-adapter/research/processor-supply-budget.py`
 
 The pre-commit checks validate the staged snapshot and reject unregistered CAD.
 Their DDR checkpoint success does not authorize fabrication or imply that the

@@ -113,8 +113,9 @@ def check(root, output=None):
         erc_data=json.loads(erc.read_text())
         counts=Counter(v['type'] for s in erc_data['sheets'] for v in s['violations'])
         # CPU and DDR are driven through L300/L420 (documented power flags).
-        # Remaining core, GND and upstream rails await capture; I2C awaits host.
-        expected={'missing_power_pin':1,'missing_input_pin':1,'missing_bidi_pin':1,'missing_unit':1,'power_pin_not_driven':3}
+        # All processor supply balls are present. Upstream rails and remaining
+        # functional units await capture; I2C still awaits its processor host.
+        expected={'missing_input_pin':1,'missing_bidi_pin':1,'missing_unit':1,'power_pin_not_driven':3}
         assert counts==expected,counts
         summary={'status':'DDR_CAPTURE_CHECKPOINT_NOT_RELEASE','library_pins_checked':732,'dq_nets':32,'dqs_pairs':4,'dm_nets':4,'shared_ca_nets':len(ca),'clock_rc':'2 x 49.9R 1%, common 100pF C0G to ground','erc_open_integration_findings':dict(counts),'system_routed':False}
         if output:

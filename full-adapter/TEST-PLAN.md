@@ -74,6 +74,23 @@ unprogrammed flash must leave the modem profile invalid and modem power off.
   Verify 32.768 kHz tuning over temperature, including actual stray loading;
   22 pF capacitors alone do not establish the 12.5 pF crystal load.
 
+### Processor analog and IO supply measurements
+
+- Check all processor supply balls against the selected IO voltage map before
+  programming. Confirm FLASH_VOL_SEL is physically HIGH for 1.8 V VCCIO2;
+  SD-IO voltage must track its regulator while SD card power stays at 3.3 V.
+- Measure PLL and combo-PHY 0.9 V ripple below 20 mV and 1.8 V ripple below
+  50 mV at the device bypass pads. USB2-PHY limits are 25 mV, 50 mV and
+  200 mV at 0.9 V, 1.8 V and 3.3 V respectively. Measure hot DC drop and
+  transient response across both USB filter beads; their room-temperature
+  DCR and nominal capacitance do not establish a hot operating guarantee.
+- Bound PMUIO and peripheral IO loads, including pull-ups and exposed pins.
+  Include those loads, PMIC self-consumption and buck losses in the thermal
+  calculation; the current 0.76425 W analog-LDO subtotal is incomplete.
+- Verify the 14 unused display/camera/PCIe3 supply balls remain at GND and
+  the corresponding DTS nodes are disabled. Boot and recovery must work with
+  those PHYs unpowered. Check active USB3/PCIe2 operation simultaneously.
+
 ### Fixture records
 
 The fixture should contact ground, input and isolated rails, PMIC outputs,

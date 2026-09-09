@@ -19,8 +19,12 @@ def check(root=ROOT):
               for n in tree.findall('.//nets/net')}
         parts={p.get('ref'):p for p in tree.findall('.//components/comp')}
         assert next(n for n in nets.values() if ('U5','53') in n)=={('U5','53'),('L460','1')}
-        assert nets['VCC1V8_SYS']=={('U5','59'),('L460','2'),('C462','1'),('C463','1'),('C464','1')}
-        assert nets['VCC3V3_S0']=={('U5','55'),('C465','1')}
+        assert nets['VCC1V8_SYS']=={('U5','59'),('L460','2'),('C462','1'),('C463','1'),('C464','1'),
+                                   ('U1','H18'),('U1','H20'),('C521','1'),('C522','1')}
+        assert nets['VCC3V3_S0']=={('U5','55'),('C465','1'),('U1','H17'),('U1','J21'),('U1','R9'),
+                                  ('U1','U9'),('U1','V10'),('U1','V11'),('U1','V12'),
+                                  ('C520','1'),('C524','1'),('C526','1'),('C527','1'),('C528','1'),('C529','1'),('C530','1'),('C531','1'),
+                                  ('U1','M23'),('U1','P10'),('C540','1'),('C542','1')}
         assert nets['VCC3V3_SD']=={('U5','58'),('C467','1')}
         assert {('U5','54'),('U5','57'),('C460','1'),('C461','1'),('C466','1')} <= nets['VCC3V3_SYS']
         for i in range(460,468):
@@ -33,7 +37,8 @@ def check(root=ROOT):
         assert (p.findtext('value'),fields['MPN'],fields['LCSC'])==('0.47uH','SPM5030T-R47M','C501964')
     return {'status':'PMIC_AUX_CAPTURE_CHECKPOINT_NOT_RELEASE','buck5_startup_V':1.8,
             'switch1_input_V':3.3,'switch2_input_V':3.3,'local_capacitors':8,
-            'peripheral_loads_integrated':False,'upstream_power_integrated':False}
+            'processor_IO_and_OTP_supplies_integrated':True,
+            'remaining_peripheral_loads_integrated':False,'upstream_power_integrated':False}
 
 
 if __name__=='__main__':

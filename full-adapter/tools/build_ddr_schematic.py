@@ -162,12 +162,16 @@ def main():
     from build_pmic_core import pmic_core
     from build_pmic_aux import pmic_aux
     from build_pmic_control import pmic_control
-    pages=[signals(),power_page(),core_power(),cpu_power(),pmic_ldo(),pmic_ddr(),pmic_core(),pmic_aux(),pmic_control()]
+    from build_processor_pmu import processor_pmu
+    from build_processor_io_power import processor_io_power
+    from build_processor_phy_power import processor_phy_power
+    from build_processor_unused import processor_unused
+    pages=[signals(),power_page(),core_power(),cpu_power(),pmic_ldo(),pmic_ddr(),pmic_core(),pmic_aux(),pmic_control(),processor_pmu(),processor_io_power(),processor_phy_power(),processor_unused()]
     root=Sheet('full-adapter','Integrated Linux USB3 modem / 2.5GbE development board',root=True)
     root.text('CURRENT DESIGN — IN PROGRESS',20.32,20.32,2.54)
-    root.text('RK3568B2 + 1 GiB DDR3 + PCIe RTL8125BG-CG\nUSB3 M.2 modem; isolated PoE and USB-C auxiliary power\n\nDDR capture is present. Remaining subsystem capture and PCB routing\nare active work. This project is not a manufacturing release.',20.32,33.02,1.8)
+    root.text('RK3568B2 + 1 GiB DDR3 + PCIe RTL8125BG-CG\nUSB3 M.2 modem; isolated PoE and USB-C auxiliary power\n\nDDR, PMIC and processor supply capture is present. Remaining subsystems\nand PCB routing are active work. This project is not a manufacturing release.',20.32,33.02,1.8)
     for i,s in enumerate(pages):
-        x,y=25.4+(i%2)*195.58,88.9+(i//2)*33.02
+        x,y=25.4+(i%3)*130.81,88.9+(i//3)*38.1
         root.items.append(f'(sheet (at {x} {y}) (size 111.76 20.32) (fields_autoplaced yes) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid {Q(uid("sheet-block/"+s.name))}) (property "Sheetname" {Q(s.title)} (at {x} {y-1.27} 0) {effects(justify="left bottom")}) (property "Sheetfile" {Q(s.name+".kicad_sch")} (at {x} {y+21.59} 0) {effects(justify="left top")}))')
         s.save()
     root.save('A3')

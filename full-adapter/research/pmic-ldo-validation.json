@@ -4,5 +4,6 @@
   "input_groups": 3,
   "bypass_capacitors": 12,
   "cpu_enable_source": "U5 LDO6 pin 31",
-  "processor_loads_integrated": false
+  "processor_supply_loads_integrated": true,
+  "IO_load_and_thermal_budget_closed": false
 }

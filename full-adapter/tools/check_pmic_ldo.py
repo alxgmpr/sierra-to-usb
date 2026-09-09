@@ -28,6 +28,17 @@ def check(root=ROOT):
             expected={('U5',pin),(cap,'1')}
             if rail=='VCC3V3_PMU':expected|={('R300','1'),('R494','1'),('R495','1')}
             if rail=='VCC1V8_PMU':expected|={('R492','1'),('R493','1')}
+            processor_loads = {
+                'VDD0V9_PMU': {('U1','V21'),('U1','V19'),('C500','1'),('C501','1'),('C508','1'),('C509','1')},
+                'VCC1V8_PMU': {('U1','Y21'),('U1','W19'),('C502','1'),('C503','1'),('C511','1')},
+                'VDD0V9_ANLG': {('U1','P11'),('C504','1'),('C505','1'),('U1','R20'),('U1','R21'),
+                                ('C546','1'),('C547','1'),('C549','1'),('FB550','1'),('C550','1')},
+                'VCC1V8_ANLG': {('U1','N10'),('C506','1'),('C507','1'),('U1','H22'),('C523','1'),
+                                ('U1','R22'),('C548','1'),('FB551','1'),('C552','1')},
+                'VCC3V3_PMU': {('U1','Y20'),('C510','1')},
+                'VCC_SDIO': {('U1','L22'),('C525','1')},
+            }
+            expected |= processor_loads.get(rail, set())
             assert nets[rail]==expected,(rail,nets[rail]^expected)
         assert nets['VCC3V3_SYS']=={('U5','22'),('U5','30'),('U5','4'),
                                     ('C400','1'),('C404','1'),('C408','1'),
@@ -47,7 +58,7 @@ def check(root=ROOT):
         assert (fields['MPN'],fields['LCSC'])==('RK809-5','C2939628')
     return {'status':'PMIC_LDO_CAPTURE_CHECKPOINT_NOT_RELEASE','ldo_outputs':9,
             'input_groups':3,'bypass_capacitors':12,'cpu_enable_source':'U5 LDO6 pin 31',
-            'processor_loads_integrated':False}
+            'processor_supply_loads_integrated':True,'IO_load_and_thermal_budget_closed':False}
 
 
 if __name__=='__main__':

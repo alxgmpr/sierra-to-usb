@@ -2,9 +2,11 @@
 
 ## Delivery status
 
-The requested integrated board has **not been implemented**. There is no new
-schematic, PCB, routed layout, released BOM or fabrication/assembly package.
-The following is preserved engineering research, not a design release.
+The requested integrated board remains **incomplete**. The current hierarchy
+captures DDR, core/PMIC regulators, PMIC controls and all processor supply balls.
+Remaining functional circuits, the integrated PCB, routing and release outputs
+are unfinished. See [the current capture and checks](cad/README.md); the older
+screening findings below remain historical except where superseded there.
 
 Implementation has resumed. The [processor escape study](studies/README.md)
 cross-checks all 636 balls and routes 114 selected signals outside the package
@@ -174,10 +176,9 @@ metadata are preserved in git. Relevant sources include:
 - [Bourns PLN transformer data sheet](https://bourns.com/docs/product-datasheets/pln.pdf)
 - [JLC PCB capabilities](https://jlcpcb.com/capabilities/pcb-capabilities/)
 
-KiCad CLI 10.99.0 is available, but ERC, schematic/PCB parity, DRC, targeted
-connectivity, route completion, layer rendering and 3D inspection are **NOT RUN:
-no new CAD exists**. There are no electrical exceptions or unrouted-net waivers.
-The retirement checks only establish that the obsolete tracked CAD was removed;
-they are intentionally not substitutes for design checks. Fabrication files,
-placement files and a schematic PDF are withheld because their source design
-does not exist.
+KiCad CLI 10.99.0 exports the current schematic and runs its targeted connectivity
+checks and ERC. Six integration ERC findings remain open; none is waived. The
+escape coupon has separate geometric DRC evidence. Full-system schematic/PCB
+parity, DRC, complete routing, layer and mechanical review have not passed because
+the integrated PCB is unfinished. The working schematic PDF is a review artifact;
+there is no released fabrication or assembly package.

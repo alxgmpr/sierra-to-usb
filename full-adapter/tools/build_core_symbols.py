@@ -47,7 +47,7 @@ def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, uni
             sides[pin.get('side', 'L' if pin['type'] == 'input' else 'R')].append(pin)
         def pin_gap(pin):
             # Native stacks print their numbers on separate lines above the pin.
-            return 2.54 * math.ceil((len(pin.get('physical_pins', [pin['ball']])) + 1) / 2)
+            return pin.get('pitch_mm', 2.54 * math.ceil((len(pin.get('physical_pins', [pin['ball']])) + 1) / 2))
         n = max(sum(pin_gap(p) for p in sides['L']) / 2.54,
                 sum(pin_gap(p) for p in sides['R']) / 2.54, 1)
         width = max(30.48, 2.54 * (max(len(sides['T']), len(sides['B'])) + 2))
@@ -165,6 +165,26 @@ def processor():
                 if pin['name'] == 'VDD_CPU_COM':
                     # HW Guide §2.2.2.4: remote sense tap, not an external supply feed.
                     pin['type'] = 'passive'
+    # Split only the formerly unplaced supply unit. Preserve every existing
+    # signal/core/ground unit number so previous capture remains stable.
+    supply_pins = {p['ball']: p for p in units['Analog and IO supplies']}
+    supply_groups = OrderedDict([
+        ('PMU and PLL supplies', 'V21 Y21 P11 N10 V19 Y20 W19'),
+        ('Peripheral IO supplies', 'H17 H18 H20 H22 J21 L22 R9 U9 V10 V11 V12'),
+        ('USB and combo PHY supplies', 'M23 P9 P10 P22 P23 R8 R20 R21 R22'),
+        ('Unused display and PCIe3 supplies', 'M20 M22 U20 U21 U22 V17 V18 W14 W15 W16 W18 Y14 Y15 Y17'),
+    ])
+    assert set(supply_pins) == {b for balls in supply_groups.values() for b in balls.split()}
+    first, *remaining = supply_groups
+    units = OrderedDict((first if title == 'Analog and IO supplies' else title,
+                         [dict(supply_pins[b], side='R', pitch_mm=27.94)
+                          for b in supply_groups[first].split()] if title == 'Analog and IO supplies' else pins)
+                        for title, pins in units.items())
+    for title in remaining:
+        units[title] = [supply_pins[b] for b in supply_groups[title].split()]
+        if title in {'Peripheral IO supplies', 'USB and combo PHY supplies'}:
+            units[title] = [dict(p, side='R', pitch_mm=17.78) for p in units[title]]
+    assert sum(map(len, units.values())) == 636
     return make_symbol('RK3568B2', 'full-adapter:RK3568B2_FCCSP636_19x19mm_P0.65mm',
                        'https://rockchip.fr/RK3568B2%20datasheet%20V2.3.pdf?download=1',
                        'Rockchip', 'C3345225', 'Quad Cortex-A55 Linux processor; exact B2 FCCSP636 pin population', units)
@@ -215,7 +235,7 @@ def main():
     for rail in ('VCC_DDR', 'VDD_CPU', 'VDD_LOGIC', 'VDD_GPU', 'VDD_NPU', 'VCC5V_SYS', 'VCC3V3_PMU',
                  'VCC3V3_SYS', 'VDD0V9_IMAGE', 'VDD0V9_ANLG', 'VDD0V9_PMU', 'VCC3V3_CODEC',
                  'VCC_SDIO', 'VCC1V8_ANLG', 'VCC1V8_PMU', 'VCC1V8_IMAGE',
-                 'VCC1V8_SYS', 'VCC3V3_S0', 'VCC3V3_SD'):
+                 'VCC1V8_SYS', 'VCC3V3_S0', 'VCC3V3_SD', 'VDD0V9_USB', 'VCC1V8_USB'):
         power = copy.deepcopy(vdd)
         def rename(node):
             for i, v in enumerate(node):

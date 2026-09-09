@@ -24,8 +24,11 @@ A sixth page captures the DDR buck with hardware 1.5008 V selection.
 A seventh captures the LOGIC/GPU/NPU bucks and Kelvin feedback ties; an eighth
 captures BUCK5 and the two switched 3.3 V supplies. The ninth currently
 contains PMIC control, reset, RTC, auto-start RC and unused-audio terminations.
+Four further pages capture processor PMU/PLL, peripheral IO and USB/combo-PHY
+supplies, plus explicit unused display/camera/PCIe3 terminations. All processor
+power-input balls are now present; signal and boot-control capture remains open.
 Other subsystems and the integrated PCB remain unfinished. See [the capture checkpoint](cad/README.md)
-for its exported-net checks and seven unresolved integration ERC findings. The
+for its exported-net checks and six unresolved integration ERC findings. The
 [processor escape coupon](studies/README.md) contains real routing and its own
 DRC evidence; it is not a system design or release. Full-system ERC, schematic/PCB
 parity, DRC, Gerber inspection and 3D clearance verification have **not passed**.

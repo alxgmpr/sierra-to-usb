@@ -53,10 +53,14 @@ def check(root=ROOT):
         ground_balls = {p['ball'] for p in source['pins'] if p['pin_type'] in {'G', 'AG'}}
         assert len(ground_balls) == 208
         actual = {pin for ref,pin in nets['GND'] if ref == 'U1'}
-        assert actual == ground_balls, actual ^ ground_balls
+        # Hardware Guide 2.2.2.11–15: unused display/PCIe3 PHY supplies are
+        # intentionally grounded. These are not additional VSS/AVSS balls.
+        unused_supplies = set('M20 M22 U20 U21 U22 V17 V18 W14 W15 W16 W18 Y14 Y15 Y17'.split())
+        assert actual == ground_balls | unused_supplies, actual ^ (ground_balls | unused_supplies)
         assert 'AB24' not in actual, 'TVSS is a temperature reference input, not ground'
     return {'status': 'CORE_POWER_CAPTURE_CHECKPOINT_NOT_RELEASE', 'core_supply_balls': 30,
-            'ground_balls': 208, 'bypass_capacitors': 21, 'remote_sense_ball': 'M15',
+            'ground_balls': 208, 'grounded_unused_supply_balls':14,
+            'bypass_capacitors': 21, 'remote_sense_ball': 'M15',
             'regulators_integrated': True, 'upstream_power_integrated': False, 'system_routed': False}
 
 

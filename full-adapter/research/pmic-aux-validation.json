@@ -4,6 +4,7 @@
   "switch1_input_V": 3.3,
   "switch2_input_V": 3.3,
   "local_capacitors": 8,
-  "peripheral_loads_integrated": false,
+  "processor_IO_and_OTP_supplies_integrated": true,
+  "remaining_peripheral_loads_integrated": false,
   "upstream_power_integrated": false
 }

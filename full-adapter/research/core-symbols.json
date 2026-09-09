@@ -4361,500 +4361,99 @@
     },
     {
       "unit": 14,
-      "title": "Analog and IO supplies",
-      "width": 45.72,
-      "height": 111.76,
+      "title": "PMU and PLL supplies",
+      "width": 30.48,
+      "height": 203.2,
       "pins": [
-        {
-          "ball": "H17",
-          "name": "VCCIO1",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            50.8,
-            0
-          ]
-        },
-        {
-          "ball": "H18",
-          "name": "VCCIO2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            48.26,
-            0
-          ]
-        },
-        {
-          "ball": "H20",
-          "name": "OTP_VCC18",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            45.72,
-            0
-          ]
-        },
-        {
-          "ball": "H22",
-          "name": "SARADC_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            43.18,
-            0
-          ]
-        },
-        {
-          "ball": "J21",
-          "name": "VCCIO4",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            40.64,
-            0
-          ]
-        },
-        {
-          "ball": "L22",
-          "name": "VCCIO3",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            38.1,
-            0
-          ]
-        },
-        {
-          "ball": "M20",
-          "name": "EDP_TX_AVDD_0V9",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            35.56,
-            0
-          ]
-        },
-        {
-          "ball": "M22",
-          "name": "EDP_TX_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            33.02,
-            0
-          ]
-        },
-        {
-          "ball": "M23",
-          "name": "USB3_AVDD_3V3",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            30.48,
-            0
-          ]
-        },
-        {
-          "ball": "N10",
-          "name": "SYSPLL_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            27.94,
-            0
-          ]
-        },
-        {
-          "ball": "P9",
-          "name": "USB2_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            25.4,
-            0
-          ]
-        },
-        {
-          "ball": "P10",
-          "name": "USB2_AVDD_3V3",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            22.86,
-            0
-          ]
-        },
-        {
-          "ball": "P11",
-          "name": "SYSPLL_AVDD_0V9",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            20.32,
-            0
-          ]
-        },
-        {
-          "ball": "P22",
-          "name": "USB3_AVDD_0V9",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            17.78,
-            0
-          ]
-        },
-        {
-          "ball": "P23",
-          "name": "USB3_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            15.24,
-            0
-          ]
-        },
-        {
-          "ball": "R8",
-          "name": "USB2_AVDD_0V9",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            12.7,
-            0
-          ]
-        },
-        {
-          "ball": "R9",
-          "name": "VCCIO6_1",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            10.16,
-            0
-          ]
-        },
-        {
-          "ball": "R20",
-          "name": "MULTI_PHY_AVDD_0V9_1",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            7.62,
-            0
-          ]
-        },
-        {
-          "ball": "R21",
-          "name": "MULTI_PHY_AVDD_0V9_2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            5.08,
-            0
-          ]
-        },
-        {
-          "ball": "R22",
-          "name": "MULTI_PHY_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            2.54,
-            0
-          ]
-        },
-        {
-          "ball": "U9",
-          "name": "VCCIO6_2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            0.0,
-            0
-          ]
-        },
-        {
-          "ball": "U20",
-          "name": "PCIE30_AVDD_0V9_2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -2.54,
-            0
-          ]
-        },
-        {
-          "ball": "U21",
-          "name": "PCIE30_AVDD_0V9_1",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -5.08,
-            0
-          ]
-        },
-        {
-          "ball": "U22",
-          "name": "PCIE30_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -7.62,
-            0
-          ]
-        },
-        {
-          "ball": "V10",
-          "name": "VCCIO5_1",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -10.16,
-            0
-          ]
-        },
-        {
-          "ball": "V11",
-          "name": "VCCIO5_2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -12.7,
-            0
-          ]
-        },
-        {
-          "ball": "V12",
-          "name": "VCCIO7",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -15.24,
-            0
-          ]
-        },
-        {
-          "ball": "V17",
-          "name": "HDMI_TX_AVDD_0V9_1",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -17.78,
-            0
-          ]
-        },
-        {
-          "ball": "V18",
-          "name": "HDMI_TX_AVDD_0V9_2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -20.32,
-            0
-          ]
-        },
-        {
-          "ball": "V19",
-          "name": "PMU_VDD_LOGIC_0V9",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -22.86,
-            0
-          ]
-        },
         {
           "ball": "V21",
           "name": "PMUPLL_AVDD_0V9",
           "type": "power_in",
-          "side": "L",
+          "side": "R",
           "alternates": [],
+          "pitch_mm": 27.94,
           "at": [
-            -25.4,
-            -25.4,
-            0
-          ]
-        },
-        {
-          "ball": "W14",
-          "name": "MIPI_CSI_RX_AVDD_0V9",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -27.94,
-            0
-          ]
-        },
-        {
-          "ball": "W15",
-          "name": "MIPI_DSI_TX1/LVDS_TX1_AVDD_0V9",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -30.48,
-            0
-          ]
-        },
-        {
-          "ball": "W16",
-          "name": "MIPI_DSI_TX0/LVDS_TX0_AVDD_0V9",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -33.02,
-            0
-          ]
-        },
-        {
-          "ball": "W18",
-          "name": "HDMI_TX_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -35.56,
-            0
-          ]
-        },
-        {
-          "ball": "W19",
-          "name": "PMUIO2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -38.1,
-            0
-          ]
-        },
-        {
-          "ball": "Y14",
-          "name": "MIPI_CSI_RX_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -40.64,
-            0
-          ]
-        },
-        {
-          "ball": "Y15",
-          "name": "MIPI_DSI_TX1/LVDS_TX1_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -43.18,
-            0
-          ]
-        },
-        {
-          "ball": "Y17",
-          "name": "MIPI_DSI_TX0/LVDS_TX0_AVDD_1V8",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -45.72,
-            0
-          ]
-        },
-        {
-          "ball": "Y20",
-          "name": "PMUIO1",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -25.4,
-            -48.26,
-            0
+            17.78,
+            71.12,
+            180
           ]
         },
         {
           "ball": "Y21",
           "name": "PMUPLL_AVDD_1V8",
           "type": "power_in",
-          "side": "L",
+          "side": "R",
           "alternates": [],
+          "pitch_mm": 27.94,
           "at": [
-            -25.4,
-            -50.8,
-            0
+            17.78,
+            43.18,
+            180
+          ]
+        },
+        {
+          "ball": "P11",
+          "name": "SYSPLL_AVDD_0V9",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 27.94,
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "N10",
+          "name": "SYSPLL_AVDD_1V8",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 27.94,
+          "at": [
+            17.78,
+            -12.7,
+            180
+          ]
+        },
+        {
+          "ball": "V19",
+          "name": "PMU_VDD_LOGIC_0V9",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 27.94,
+          "at": [
+            17.78,
+            -40.64,
+            180
+          ]
+        },
+        {
+          "ball": "Y20",
+          "name": "PMUIO1",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 27.94,
+          "at": [
+            17.78,
+            -68.58,
+            180
+          ]
+        },
+        {
+          "ball": "W19",
+          "name": "PMUIO2",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 27.94,
+          "at": [
+            17.78,
+            -96.52,
+            180
           ]
         }
       ]
@@ -10245,6 +9844,458 @@
             17.78,
             -10.16,
             180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 40,
+      "title": "Peripheral IO supplies",
+      "width": 30.48,
+      "height": 203.2,
+      "pins": [
+        {
+          "ball": "H17",
+          "name": "VCCIO1",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            81.28,
+            180
+          ]
+        },
+        {
+          "ball": "H18",
+          "name": "VCCIO2",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            63.5,
+            180
+          ]
+        },
+        {
+          "ball": "H20",
+          "name": "OTP_VCC18",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            45.72,
+            180
+          ]
+        },
+        {
+          "ball": "H22",
+          "name": "SARADC_AVDD_1V8",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            27.94,
+            180
+          ]
+        },
+        {
+          "ball": "J21",
+          "name": "VCCIO4",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "L22",
+          "name": "VCCIO3",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "R9",
+          "name": "VCCIO6_1",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            -25.4,
+            180
+          ]
+        },
+        {
+          "ball": "U9",
+          "name": "VCCIO6_2",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            -43.18,
+            180
+          ]
+        },
+        {
+          "ball": "V10",
+          "name": "VCCIO5_1",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            -60.96,
+            180
+          ]
+        },
+        {
+          "ball": "V11",
+          "name": "VCCIO5_2",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            -78.74,
+            180
+          ]
+        },
+        {
+          "ball": "V12",
+          "name": "VCCIO7",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            17.78,
+            -96.52,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 41,
+      "title": "USB and combo PHY supplies",
+      "width": 35.56,
+      "height": 167.64000000000001,
+      "pins": [
+        {
+          "ball": "M23",
+          "name": "USB3_AVDD_3V3",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            20.32,
+            63.5,
+            180
+          ]
+        },
+        {
+          "ball": "P9",
+          "name": "USB2_AVDD_1V8",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            20.32,
+            45.72,
+            180
+          ]
+        },
+        {
+          "ball": "P10",
+          "name": "USB2_AVDD_3V3",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            20.32,
+            27.94,
+            180
+          ]
+        },
+        {
+          "ball": "P22",
+          "name": "USB3_AVDD_0V9",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            20.32,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "P23",
+          "name": "USB3_AVDD_1V8",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            20.32,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "R8",
+          "name": "USB2_AVDD_0V9",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            20.32,
+            -25.4,
+            180
+          ]
+        },
+        {
+          "ball": "R20",
+          "name": "MULTI_PHY_AVDD_0V9_1",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            20.32,
+            -43.18,
+            180
+          ]
+        },
+        {
+          "ball": "R21",
+          "name": "MULTI_PHY_AVDD_0V9_2",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            20.32,
+            -60.96,
+            180
+          ]
+        },
+        {
+          "ball": "R22",
+          "name": "MULTI_PHY_AVDD_1V8",
+          "type": "power_in",
+          "side": "R",
+          "alternates": [],
+          "pitch_mm": 17.78,
+          "at": [
+            20.32,
+            -78.74,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 42,
+      "title": "Unused display and PCIe3 supplies",
+      "width": 45.72,
+      "height": 45.72,
+      "pins": [
+        {
+          "ball": "M20",
+          "name": "EDP_TX_AVDD_0V9",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            17.78,
+            0
+          ]
+        },
+        {
+          "ball": "M22",
+          "name": "EDP_TX_AVDD_1V8",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "U20",
+          "name": "PCIE30_AVDD_0V9_2",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "U21",
+          "name": "PCIE30_AVDD_0V9_1",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "U22",
+          "name": "PCIE30_AVDD_1V8",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "V17",
+          "name": "HDMI_TX_AVDD_0V9_1",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "V18",
+          "name": "HDMI_TX_AVDD_0V9_2",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "W14",
+          "name": "MIPI_CSI_RX_AVDD_0V9",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "W15",
+          "name": "MIPI_DSI_TX1/LVDS_TX1_AVDD_0V9",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "W16",
+          "name": "MIPI_DSI_TX0/LVDS_TX0_AVDD_0V9",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "W18",
+          "name": "HDMI_TX_AVDD_1V8",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "Y14",
+          "name": "MIPI_CSI_RX_AVDD_1V8",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            -10.16,
+            0
+          ]
+        },
+        {
+          "ball": "Y15",
+          "name": "MIPI_DSI_TX1/LVDS_TX1_AVDD_1V8",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "Y17",
+          "name": "MIPI_DSI_TX0/LVDS_TX0_AVDD_1V8",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -25.4,
+            -15.24,
+            0
           ]
         }
       ]

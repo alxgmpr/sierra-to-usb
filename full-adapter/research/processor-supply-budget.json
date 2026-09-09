@@ -1,0 +1,92 @@
+{
+  "status": "PARTIAL_PROCESSOR_ANALOG_BUDGET_NOT_SYSTEM_QUALIFICATION",
+  "source": {
+    "document": "Rockchip RK3568 Hardware Design Guide EN V1.2, 2022-01-26",
+    "sections": [
+      "2.2.2.2",
+      "2.2.2.3",
+      "2.2.2.9",
+      "2.2.2.10",
+      "2.2.2.16",
+      "2.2.2.17"
+    ],
+    "sha256": "fb92891976c69aef48189d09f86016c5146978cce82b68a184771ce678fe0fe1"
+  },
+  "rail_peaks": {
+    "VDD0V9_PMU": {
+      "V": 0.9,
+      "rating_mA": 100,
+      "loads_mA": {
+        "PMUPLL": 10,
+        "PMU_logic": 50
+      },
+      "documented_peak_sum_mA": 60,
+      "nominal_input_V": 3.3,
+      "nominal_LDO_dissipation_W": 0.144
+    },
+    "VDD0V9_ANLG": {
+      "V": 0.9,
+      "rating_mA": 400,
+      "loads_mA": {
+        "SYSPLL": 30,
+        "USB3_HS_PHY": 5,
+        "USB2_HS_PHY": 5,
+        "MULTI_PHY_shared": 150
+      },
+      "documented_peak_sum_mA": 190,
+      "nominal_input_V": 3.3,
+      "nominal_LDO_dissipation_W": 0.456
+    },
+    "VCC1V8_ANLG": {
+      "V": 1.8,
+      "rating_mA": 400,
+      "loads_mA": {
+        "SYSPLL": 18,
+        "USB3_HS_PHY": 30,
+        "USB2_HS_PHY": 30,
+        "MULTI_PHY_shared": 21,
+        "SARADC": 1.5
+      },
+      "documented_peak_sum_mA": 100.5,
+      "nominal_input_V": 3.3,
+      "nominal_LDO_dissipation_W": 0.15075
+    },
+    "VCC1V8_PMU": {
+      "V": 1.8,
+      "rating_mA": 400,
+      "loads_mA": {
+        "PMUPLL": 9
+      },
+      "additional_IO_load_unbounded": true,
+      "documented_peak_sum_mA": 9,
+      "nominal_input_V": 3.3,
+      "nominal_LDO_dissipation_W": 0.0135
+    }
+  },
+  "nominal_LDO_dissipation_sum_W": 0.76425,
+  "other_known_processor_domain_peaks": {
+    "VCC3V3_S0_USB_PHY_mA": 20,
+    "VCC1V8_SYS_OTP_mA": 59
+  },
+  "reference_reconciliation": "HW Guide recommends more than 200mA capacity for PLL supplies generally. The Rockchip tablet RK809-5 power diagram explicitly uses its 100mA low-noise LDO3 for PMUPLL 0.9V plus PMU logic. This capture follows that exact PMIC reference with a documented 60mA peak sum, not the generic capacity recommendation. PSRR/ripple and hot transient behavior require physical verification.",
+  "usb_filter": {
+    "part": "BLM18PG121SN1D",
+    "initial_DCR_max_ohm": 0.05,
+    "after_tests_DCR_max_ohm": 0.1,
+    "rating_A_at_85C": 2,
+    "rating_A_at_125C": 1,
+    "load_mA_0v9": 10,
+    "load_mA_1v8": 60,
+    "after_tests_drop_mV_0v9": 1,
+    "after_tests_drop_mV_1v8": 6,
+    "note": "After-test DCR is specified at standard measurement conditions; it is not a guaranteed hot operating resistance. Hot voltage drop, filter resonance and ripple remain physical checks."
+  },
+  "unclosed": [
+    "IO domain currents including PMUIO0/1/2, pull-ups and external loads",
+    "IO3 regulator dropout/current during SD operation",
+    "Complete PMIC self-consumption and simultaneous buck/LDO dissipation",
+    "Power trace drops, effective capacitance and hot load transients",
+    "PMIC cooling and maximum ambient",
+    "System power budget, conversion losses and PoE class"
+  ]
+}

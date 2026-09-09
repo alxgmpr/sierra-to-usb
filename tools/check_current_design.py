@@ -33,7 +33,7 @@ def check():
     allowed = {coupon + ".kicad_pcb", coupon + ".kicad_pro"}
     ddr_cad = {"full-adapter/cad/" + p for p in
                ("full-adapter.kicad_sch", "full-adapter.kicad_pro",
-                "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch", "pmic-ddr.kicad_sch", "pmic-core.kicad_sch", "pmic-aux.kicad_sch", "pmic-control.kicad_sch")}
+                "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch", "pmic-ddr.kicad_sch", "pmic-core.kicad_sch", "pmic-aux.kicad_sch", "pmic-control.kicad_sch", "processor-pmu.kicad_sch", "processor-io-power.kicad_sch", "processor-phy-power.kicad_sch", "processor-unused.kicad_sch")}
     allowed |= ddr_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
     assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"
@@ -156,6 +156,24 @@ def check():
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
         print("PMIC control checkpoint: all 69 pins, RTC and control passives checked; processor connections and startup recovery unfinished.")
+        spec = importlib.util.spec_from_file_location(
+            "staged_processor_pmu_checks", stage / "full-adapter/tools/check_processor_pmu.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("Processor PMU checkpoint: seven supply balls and twelve local bypass capacitors checked; remaining supplies unfinished.")
+        spec = importlib.util.spec_from_file_location(
+            "staged_processor_io_power_checks", stage / "full-adapter/tools/check_processor_io_power.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("Processor IO checkpoint: eleven supply balls and twelve capacitors checked; boot strap and peripheral loads unfinished.")
+        spec = importlib.util.spec_from_file_location(
+            "staged_processor_phy_power_checks", stage / "full-adapter/tools/check_processor_phy_power.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("Processor PHY checkpoint: active rails, filter paths and unused-domain isolation checked; all power-input balls present.")
 
 
 if __name__ == "__main__":
