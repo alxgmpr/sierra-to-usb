@@ -4927,7 +4927,7 @@
           ],
           "at": [
             17.78,
-            -0.0,
+            0.0,
             180
           ]
         },
@@ -7534,7 +7534,7 @@
           "alternates": [],
           "at": [
             -25.4,
-            -0.0,
+            0.0,
             0
           ]
         },
@@ -7606,7 +7606,7 @@
           "alternates": [],
           "at": [
             25.4,
-            -0.0,
+            0.0,
             180
           ]
         },
@@ -10241,6 +10241,153 @@
           "alternates": [
             "LVDS_TX0_D0P"
           ],
+          "at": [
+            17.78,
+            -10.16,
+            180
+          ]
+        }
+      ]
+    }
+  ],
+  "RK860-0": [
+    {
+      "unit": 1,
+      "title": "CPU voltage regulator",
+      "width": 30.48,
+      "height": 30.48,
+      "pins": [
+        {
+          "ball": "[D1,D2,E1,E2]",
+          "physical_pins": [
+            "D1",
+            "D2",
+            "E1",
+            "E2"
+          ],
+          "name": "VIN",
+          "type": "power_in",
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "A2",
+          "physical_pins": [
+            "A2"
+          ],
+          "name": "EN",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "A1",
+          "physical_pins": [
+            "A1"
+          ],
+          "name": "VSEL",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            -0.0,
+            0
+          ]
+        },
+        {
+          "ball": "A3",
+          "physical_pins": [
+            "A3"
+          ],
+          "name": "SCL",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "B1",
+          "physical_pins": [
+            "B1"
+          ],
+          "name": "SDA",
+          "type": "bidirectional",
+          "side": "L",
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "[D3,D4,E3,E4]",
+          "physical_pins": [
+            "D3",
+            "D4",
+            "E3",
+            "E4"
+          ],
+          "name": "LX",
+          "type": "power_out",
+          "side": "R",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "A4",
+          "physical_pins": [
+            "A4"
+          ],
+          "name": "VOUT",
+          "type": "input",
+          "side": "R",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "[B2,B3,C1,C2,C3,C4]",
+          "physical_pins": [
+            "B2",
+            "B3",
+            "C1",
+            "C2",
+            "C3",
+            "C4"
+          ],
+          "name": "GND",
+          "type": "power_in",
+          "side": "R",
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "B4",
+          "physical_pins": [
+            "B4"
+          ],
+          "name": "AGND",
+          "type": "power_in",
+          "side": "R",
           "at": [
             17.78,
             -10.16,

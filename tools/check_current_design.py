@@ -108,6 +108,12 @@ def check():
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
+        spec = importlib.util.spec_from_file_location(
+            "staged_cpu_regulator_checks", stage / "full-adapter/tools/check_cpu_regulator.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("RK860 library checkpoint: 20 balls, native stack export and lands checked; power circuit unfinished.")
 
 
 if __name__ == "__main__":

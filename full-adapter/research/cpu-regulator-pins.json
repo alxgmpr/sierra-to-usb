@@ -1,0 +1,183 @@
+{
+  "manufacturer": "Rockchip",
+  "mpn": "RK860-0",
+  "lcsc": "C19188628",
+  "source": {
+    "url": "https://rockchip.fr/RK860%20datasheet%20V1.7.pdf",
+    "sha256": "bc78a031027d04dde8c96f585ddb2769a6b1d357d916cb543edeb48487e4efb3",
+    "pin_pages": [
+      8,
+      9
+    ],
+    "package_page": 18
+  },
+  "footprint": "full-adapter:RK860_WLCSP20_1.625x2.025mm_P0.4mm",
+  "package": {
+    "rows": 5,
+    "columns": 4,
+    "pitch_mm": 0.4,
+    "maximum_body_mm": [
+      1.65,
+      2.05,
+      0.63
+    ],
+    "land_diameter_mm": 0.15,
+    "land_basis": "Rev 1.7 page 18 explicitly recommends 0.15 mm phi-b in PCB layout. Assembly process qualification remains required."
+  },
+  "variant": {
+    "i2c_address_7bit": "0x40",
+    "device_id": 8,
+    "reset_voltage_V": 1.0,
+    "minimum_voltage_V": 0.7125,
+    "step_V": 0.0125,
+    "maximum_voltage_V": 1.5,
+    "linux_compatible": "rockchip,rk8600"
+  },
+  "electrical_type_notes": {
+    "VOUT": "Sense input per functional description and application circuits; table I/O column incorrectly says Output.",
+    "SDA": "Bidirectional open-drain I2C; requires an external pull-up to the host IO supply.",
+    "LX": "Four switching-output balls must all connect to the inductor input, not directly to the CPU rail."
+  },
+  "pins": [
+    {
+      "ball": "A1",
+      "name": "VSEL",
+      "type": "input",
+      "x_mm": -0.6,
+      "y_mm": -0.8
+    },
+    {
+      "ball": "A2",
+      "name": "EN",
+      "type": "input",
+      "x_mm": -0.2,
+      "y_mm": -0.8
+    },
+    {
+      "ball": "A3",
+      "name": "SCL",
+      "type": "input",
+      "x_mm": 0.2,
+      "y_mm": -0.8
+    },
+    {
+      "ball": "A4",
+      "name": "VOUT",
+      "type": "input",
+      "x_mm": 0.6,
+      "y_mm": -0.8
+    },
+    {
+      "ball": "B1",
+      "name": "SDA",
+      "type": "bidirectional",
+      "x_mm": -0.6,
+      "y_mm": -0.4
+    },
+    {
+      "ball": "B2",
+      "name": "GND",
+      "type": "power_in",
+      "x_mm": -0.2,
+      "y_mm": -0.4
+    },
+    {
+      "ball": "B3",
+      "name": "GND",
+      "type": "power_in",
+      "x_mm": 0.2,
+      "y_mm": -0.4
+    },
+    {
+      "ball": "B4",
+      "name": "AGND",
+      "type": "power_in",
+      "x_mm": 0.6,
+      "y_mm": -0.4
+    },
+    {
+      "ball": "C1",
+      "name": "GND",
+      "type": "power_in",
+      "x_mm": -0.6,
+      "y_mm": 0.0
+    },
+    {
+      "ball": "C2",
+      "name": "GND",
+      "type": "power_in",
+      "x_mm": -0.2,
+      "y_mm": 0.0
+    },
+    {
+      "ball": "C3",
+      "name": "GND",
+      "type": "power_in",
+      "x_mm": 0.2,
+      "y_mm": 0.0
+    },
+    {
+      "ball": "C4",
+      "name": "GND",
+      "type": "power_in",
+      "x_mm": 0.6,
+      "y_mm": 0.0
+    },
+    {
+      "ball": "D1",
+      "name": "VIN",
+      "type": "power_in",
+      "x_mm": -0.6,
+      "y_mm": 0.4
+    },
+    {
+      "ball": "D2",
+      "name": "VIN",
+      "type": "power_in",
+      "x_mm": -0.2,
+      "y_mm": 0.4
+    },
+    {
+      "ball": "D3",
+      "name": "LX",
+      "type": "power_out",
+      "x_mm": 0.2,
+      "y_mm": 0.4
+    },
+    {
+      "ball": "D4",
+      "name": "LX",
+      "type": "power_out",
+      "x_mm": 0.6,
+      "y_mm": 0.4
+    },
+    {
+      "ball": "E1",
+      "name": "VIN",
+      "type": "power_in",
+      "x_mm": -0.6,
+      "y_mm": 0.8
+    },
+    {
+      "ball": "E2",
+      "name": "VIN",
+      "type": "power_in",
+      "x_mm": -0.2,
+      "y_mm": 0.8
+    },
+    {
+      "ball": "E3",
+      "name": "LX",
+      "type": "power_out",
+      "x_mm": 0.2,
+      "y_mm": 0.8
+    },
+    {
+      "ball": "E4",
+      "name": "LX",
+      "type": "power_out",
+      "x_mm": 0.6,
+      "y_mm": 0.8
+    }
+  ]
+}

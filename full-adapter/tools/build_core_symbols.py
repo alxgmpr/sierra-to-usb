@@ -1,6 +1,6 @@
 """Build auditable multi-unit symbols from reviewed manufacturer pin maps.
 
-No pin is omitted, duplicated, stacked, or silently remapped. Unused processor
+No pin is omitted, duplicated, or silently remapped. Unused processor
 interfaces remain visible in separate units so their treatment is reviewable.
 """
 from collections import Counter, OrderedDict
@@ -32,11 +32,11 @@ def natural(value):
     return [int(s) if s.isdigit() else s for s in re.split(r'(\d+)', value)]
 
 
-def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, units):
+def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, units, keywords='processor DDR3 memory', footprint_filter=None):
     props = [('Reference', 'U'), ('Value', name), ('Footprint', footprint),
              ('Datasheet', datasheet), ('Description', description),
              ('Manufacturer', manufacturer), ('MPN', name), ('LCSC', lcsc),
-             ('ki_keywords', 'processor DDR3 memory'), ('ki_fp_filters', 'FBGA*7.5x13mm*P0.8mm*' if name.startswith('H5') else 'RK3568B2*19x19mm*P0.65mm*')]
+             ('ki_keywords', keywords), ('ki_fp_filters', footprint_filter or ('FBGA*7.5x13mm*P0.8mm*' if name.startswith('H5') else 'RK3568B2*19x19mm*P0.65mm*'))]
     output = [f'(symbol {Q(name)} (pin_names (offset 0.508)) (in_bom yes) (on_board yes)']
     for i, (k, v) in enumerate(props):
         output.append(f'(property {Q(k)} {Q(v)} (at 0 {80-i*2.54} 0) {effects()}' + (' (hide yes)' if i > 1 else '') + ')')
@@ -45,7 +45,11 @@ def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, uni
         sides = {s: [] for s in 'LRTB'}
         for pin in pins:
             sides[pin.get('side', 'L' if pin['type'] == 'input' else 'R')].append(pin)
-        n = max(len(sides['L']), len(sides['R']), 1)
+        def pin_gap(pin):
+            # Native stacks print their numbers on separate lines above the pin.
+            return 2.54 * math.ceil((len(pin.get('physical_pins', [pin['ball']])) + 1) / 2)
+        n = max(sum(pin_gap(p) for p in sides['L']) / 2.54,
+                sum(pin_gap(p) for p in sides['R']) / 2.54, 1)
         width = max(30.48, 2.54 * (max(len(sides['T']), len(sides['B'])) + 2))
         # Long power-domain names need room; keep units within an A3 page.
         width = max(width, 2.54 * (max((len(p['name']) for p in pins), default=10) // 2 + 2))
@@ -61,10 +65,12 @@ def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, uni
         output.append(f'(text {Q(title)} (at 0 {title_y} 0) {effects()})')
         ps = []
         for side, group in sides.items():
+            cursor_y = (-2.54 if sides['T'] or sides['B'] else top - 2.54)
             for index, p in enumerate(group):
                 if side in 'LR':
                     x = -width/2 - 2.54 if side == 'L' else width/2 + 2.54
-                    y = (-5.08 if sides['T'] or sides['B'] else top - 5.08) - index * 2.54
+                    cursor_y -= pin_gap(p)
+                    y = cursor_y
                     angle = 0 if side == 'L' else 180
                 else:
                     x = (index - len(group)//2) * 2.54
@@ -157,13 +163,32 @@ def processor():
                        'Rockchip', 'C3345225', 'Quad Cortex-A55 Linux processor; exact B2 FCCSP636 pin population', units)
 
 
+def cpu_regulator():
+    source = json.loads((ROOT / 'research/cpu-regulator-pins.json').read_text())
+    groups = OrderedDict()
+    for pin in source['pins']:
+        groups.setdefault(pin['name'], []).append(pin)
+    pins = []
+    for name in ['VIN', 'EN', 'VSEL', 'SCL', 'SDA', 'LX', 'VOUT', 'GND', 'AGND']:
+        group = groups[name]
+        numbers = [p['ball'] for p in group]
+        pins.append({'ball': numbers[0] if len(numbers) == 1 else '[' + ','.join(numbers) + ']',
+                     'physical_pins': numbers, 'name': name, 'type': group[0]['type'],
+                     'side': 'R' if name in {'LX', 'VOUT', 'GND', 'AGND'} else 'L'})
+    return make_symbol(source['mpn'], source['footprint'], source['source']['url'],
+                       source['manufacturer'], source['lcsc'],
+                       '6A I2C buck regulator, 0x40, 1.0V startup, WLCSP20',
+                       {'CPU voltage regulator': pins}, keywords='buck regulator I2C CPU power',
+                       footprint_filter='RK860*WLCSP20*P0.4mm*')
+
+
 def main():
     syms, manifest = [], {}
-    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor)]:
+    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator)]:
         symbol, units = fn()
         syms.append(symbol)
         manifest[name] = units
-        all_pins = [p['ball'] for u in units for p in u['pins']]
+        all_pins = [number for u in units for p in u['pins'] for number in p.get('physical_pins', [p['ball']])]
         assert len(all_pins) == len(set(all_pins))
         print(name, len(all_pins), 'pins in', len(units), 'units')
     std = sx.loads(Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/power.kicad_sym').read_text())

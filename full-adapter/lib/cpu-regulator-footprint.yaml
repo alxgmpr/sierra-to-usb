@@ -1,0 +1,17 @@
+default_parameters:
+  package_type: BGA
+RK860_WLCSP20_1.625x2.025mm_P0.4mm:
+  size_source: https://rockchip.fr/RK860%20datasheet%20V1.7.pdf
+  description: Rockchip RK860 WLCSP20, Rev 1.7 page 18; 0.15mm manufacturer-recommended lands. Maximum body envelope covers package codes H and D.
+  body_size_x: 1.65
+  body_size_y: 2.05
+  body_pcb_gap: 0.198
+  overall_height: 0.63
+  ball_diameter: 0.265
+  pitch: 0.4
+  layout_x: 4
+  layout_y: 5
+  pad_diameter: 0.15
+  mask_margin: 0.05
+  row_names: [A, B, C, D, E]
+  name_equal_to_key: true

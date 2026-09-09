@@ -1,0 +1,142 @@
+{
+  "checked_utc": {
+    "current_time": "2026-09-09 19:35:09 UTC"
+  },
+  "queries": [
+    {
+      "results": [
+        {
+          "lcsc": "C9900009180",
+          "model": "TCS4525",
+          "manufacturer": "JLCPCB Assembly",
+          "package": "CSP20_1R96X1R56X0R66",
+          "stock": 0,
+          "price": 0.0007,
+          "price_10": 0.0003,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Others",
+          "subcategory": "SMT",
+          "subcategory_id": 2248,
+          "mounting_type": "smd",
+          "specs": {}
+        },
+        {
+          "lcsc": "C9900035513",
+          "model": "TCS4525WT",
+          "manufacturer": "JLCPCB Assembly",
+          "package": "BGA20",
+          "stock": 0,
+          "price": 0.0396,
+          "price_10": 0.0204,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Others",
+          "subcategory": "New Arrivals",
+          "subcategory_id": 3286,
+          "mounting_type": "smd",
+          "specs": {}
+        },
+        {
+          "lcsc": "C9900052617",
+          "model": "TCS4525_WT",
+          "manufacturer": "JLCPCB Assembly",
+          "package": "WCSP-20",
+          "stock": 0,
+          "price": 0.0396,
+          "price_10": 0.0204,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Others",
+          "subcategory": "New Arrivals",
+          "subcategory_id": 3286,
+          "mounting_type": "smd",
+          "specs": {}
+        }
+      ],
+      "page": 1,
+      "per_page": 3,
+      "total": 6,
+      "total_pages": 2,
+      "has_more": true
+    },
+    {
+      "results": [
+        {
+          "lcsc": "C19188628",
+          "model": "RK860-0",
+          "manufacturer": "Rockchip",
+          "package": "CSP-20(1.6x2)",
+          "stock": 5250,
+          "price": 0.9145,
+          "price_10": 0.7387,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Power Management (PMIC)",
+          "subcategory": "DC-DC Converters",
+          "subcategory_id": 3005,
+          "mounting_type": "smd",
+          "specs": {
+            "Operating Temperature": "-40℃~+125℃@(TJ)",
+            "Function": "Step-down type",
+            "Synchronous Rectifier": "Yes",
+            "Frequency - Switching": "2.4MHz",
+            "Output Type": "Adjustable",
+            "Voltage - Supply": "2.7V~5.5V",
+            "Output Current": "6A",
+            "Quiescent Current": "70uA",
+            "Features": "Overcurrent Protection、Light load efficient mode、Output discharge、Operating status indication、Cycle-by-cycle current limiting、Hiccup current limiting",
+            "Switch tube (built-in/external)": "Built-in",
+            "Topology": "Buck",
+            "Output Voltage": "712.5mV~1.5V",
+            "Number of Outputs": "1"
+          }
+        }
+      ],
+      "page": 1,
+      "per_page": 3,
+      "total": 1,
+      "total_pages": 1,
+      "has_more": false
+    },
+    {
+      "results": [
+        {
+          "lcsc": "C19188628",
+          "model": "RK860-0",
+          "manufacturer": "Rockchip",
+          "package": "CSP-20(1.6x2)",
+          "stock": 5250,
+          "price": 0.9145,
+          "price_10": 0.7387,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Power Management (PMIC)",
+          "subcategory": "DC-DC Converters",
+          "subcategory_id": 3005,
+          "mounting_type": "smd",
+          "specs": {
+            "Operating Temperature": "-40℃~+125℃@(TJ)",
+            "Function": "Step-down type",
+            "Synchronous Rectifier": "Yes",
+            "Frequency - Switching": "2.4MHz",
+            "Output Type": "Adjustable",
+            "Voltage - Supply": "2.7V~5.5V",
+            "Output Current": "6A",
+            "Quiescent Current": "70uA",
+            "Features": "Overcurrent Protection、Light load efficient mode、Output discharge、Operating status indication、Cycle-by-cycle current limiting、Hiccup current limiting",
+            "Switch tube (built-in/external)": "Built-in",
+            "Topology": "Buck",
+            "Output Voltage": "712.5mV~1.5V",
+            "Number of Outputs": "1"
+          }
+        }
+      ],
+      "page": 1,
+      "per_page": 3,
+      "total": 1,
+      "total_pages": 1,
+      "has_more": false
+    }
+  ]
+}
