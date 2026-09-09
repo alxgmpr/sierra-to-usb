@@ -1,9 +1,9 @@
 # CPU power qualification — integration in progress
 
-RK860-0, LCSC C19188628, is the selected regulator candidate. The current library
-checkpoint verifies its 20 physical balls, native KiCad pin-stack expansion,
-0.4 mm pitch, and manufacturer drawing. This is not a completed power circuit
-or assembly approval.
+RK860-0, LCSC C19188628, is captured on the CPU regulator page. Checks verify its
+20 physical balls, native KiCad pin-stack expansion, 0.4 mm pitch, enable,
+switching and remote feedback connections. Upstream rails and PMIC control are
+still being integrated. This is not an assembly approval.
 
 ## Source and variant
 
@@ -50,6 +50,30 @@ interpolations are retained in `core-22uf-qualification.json`. The planned
 5 V input bank therefore uses four capacitors; two would fall below the
 regulator's 20 uF input recommendation even before tolerance. Combined
 temperature/bias and aging qualification remains open.
+
+The captured local output bank uses four 22 uF parts (88 uF nominal), within
+RK860's recommended local range. The processor adds 70.8 uF nominal. U4 EN
+uses the reference 51 kohm pull-up to VCC3V3_PMU with a populated 100 nF delay
+capacitor. VSEL has a 100 kohm pull-down. The PMIC/processor control page will
+provide PMIC_SLEEP_H and I2C pull-ups; the regulator cannot be configured by
+firmware until those connections are complete.
+
+L300 is TDK SPM5030T-R35M, C695608, 0.35 uH ±20%. The current manufacturer
+catalog (2026-04-23) and part page specify maximum DCR 4.29 milliohms,
+14.9 A typical saturation current at 20% inductance loss, and 16.6 A typical
+40 C-rise current. These typical ratings are not guaranteed fault-current
+bounds. The .35 uH value is within RK860's .22–.47 uH recommended range.
+
+`lib/cpu-inductor.yaml` and `.csv` drive the official `inductor/SMD` generator.
+Pads are 1.5 x 2.2 mm with a 2.7 mm inner gap, as specified by TDK. The model
+and courtyard use the maximum 5.5 x 5.3 x 3.0 mm body envelope. STEP dimensions
+were checked with CadQuery. The generated footprint was visually reviewed;
+its only KLC finding is the intentional project-relative model path. The
+manufacturer PDF text was accessible through the web tool, while direct
+downloads and PDF screenshots failed; a local source-drawing image remains
+to be retained for the final library review.
+
+Manufacturer source: https://product.tdk.com/en/search/inductor/inductor/smd/info?part_no=SPM5030T-R35M
 
 ## Current and temperature
 

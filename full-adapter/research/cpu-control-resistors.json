@@ -1,0 +1,326 @@
+[
+  {
+    "query": "51k 1% 0402 resistor",
+    "result": {
+      "results": [
+        {
+          "lcsc": "C25794",
+          "model": "0402WGF5102TCE",
+          "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+          "package": "0402",
+          "stock": 2360304,
+          "price": 0.0019,
+          "price_10": null,
+          "library_type": "basic",
+          "preferred": true,
+          "category": "Resistors",
+          "subcategory": "Chip Resistor - Surface Mount",
+          "subcategory_id": 2980,
+          "mounting_type": "smd",
+          "description": "-55℃~+155℃ 50V 51kΩ 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+          "specs": {
+            "Resistance": "51kΩ",
+            "Operating Temperature": "-55℃~+155℃",
+            "Power(Watts)": "62.5mW",
+            "Type": "Thick Film Resistor",
+            "Voltage-Supply(Max)": "50V",
+            "Tolerance": "±1%",
+            "Temperature Coefficient": "±100ppm/℃"
+          }
+        }
+      ],
+      "total": 47,
+      "page_info": {
+        "limit": 1,
+        "offset": 0,
+        "returned": 1
+      },
+      "filters_applied": {
+        "query": null,
+        "subcategory_id": 2980,
+        "subcategory_name": "chip resistor - surface mount",
+        "subcategory_resolved": "Chip Resistor - Surface Mount",
+        "category_id": null,
+        "category_name": null,
+        "category_resolved": null,
+        "spec_filters": [
+          {
+            "name": "Resistance",
+            "op": "=",
+            "value": "51kOhm"
+          },
+          {
+            "name": "Tolerance",
+            "op": "=",
+            "value": "1%"
+          }
+        ],
+        "library_type": null,
+        "prefer_no_fee": true,
+        "min_stock": 10,
+        "package": "0402",
+        "packages": null,
+        "manufacturer": null,
+        "match_all_terms": true
+      },
+      "library_type_counts": {
+        "basic": 1,
+        "preferred": 0,
+        "extended": 46
+      },
+      "no_fee_available": true,
+      "parsed": {
+        "original_query": "51k 1% 0402 resistor",
+        "detected": {
+          "package": "0402",
+          "component_type": "resistor",
+          "subcategory": "chip resistor - surface mount",
+          "values": [
+            {
+              "raw": "51k",
+              "type": "resistance",
+              "normalized": "51kOhm"
+            },
+            {
+              "raw": "1%",
+              "type": "tolerance",
+              "normalized": "1%"
+            }
+          ]
+        },
+        "subcategory": "chip resistor - surface mount",
+        "package": "0402",
+        "mounting_type": null,
+        "spec_filters": [
+          {
+            "name": "Resistance",
+            "op": "=",
+            "value": "51kOhm"
+          },
+          {
+            "name": "Tolerance",
+            "op": "=",
+            "value": "1%"
+          }
+        ],
+        "remaining_text": ""
+      }
+    }
+  },
+  {
+    "query": "100R 1% 0402 resistor",
+    "result": {
+      "results": [
+        {
+          "lcsc": "C25076",
+          "model": "0402WGF1000TCE",
+          "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+          "package": "0402",
+          "stock": 3694952,
+          "price": 0.0037,
+          "price_10": null,
+          "library_type": "basic",
+          "preferred": true,
+          "category": "Resistors",
+          "subcategory": "Chip Resistor - Surface Mount",
+          "subcategory_id": 2980,
+          "mounting_type": "smd",
+          "description": "-55℃~+155℃ 100Ω 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+          "specs": {
+            "Resistance": "100Ω",
+            "Operating Temperature": "-55℃~+155℃",
+            "Power(Watts)": "62.5mW",
+            "Type": "Thick Film Resistor",
+            "Voltage-Supply(Max)": "50V",
+            "Tolerance": "±1%",
+            "Temperature Coefficient": "±100ppm/℃"
+          }
+        }
+      ],
+      "total": 55,
+      "page_info": {
+        "limit": 1,
+        "offset": 0,
+        "returned": 1
+      },
+      "filters_applied": {
+        "query": null,
+        "subcategory_id": 2980,
+        "subcategory_name": "chip resistor - surface mount",
+        "subcategory_resolved": "Chip Resistor - Surface Mount",
+        "category_id": null,
+        "category_name": null,
+        "category_resolved": null,
+        "spec_filters": [
+          {
+            "name": "Resistance",
+            "op": "=",
+            "value": "100Ohm"
+          },
+          {
+            "name": "Tolerance",
+            "op": "=",
+            "value": "1%"
+          }
+        ],
+        "library_type": null,
+        "prefer_no_fee": true,
+        "min_stock": 10,
+        "package": "0402",
+        "packages": null,
+        "manufacturer": null,
+        "match_all_terms": true
+      },
+      "library_type_counts": {
+        "basic": 1,
+        "preferred": 0,
+        "extended": 54
+      },
+      "no_fee_available": true,
+      "parsed": {
+        "original_query": "100R 1% 0402 resistor",
+        "detected": {
+          "package": "0402",
+          "component_type": "resistor",
+          "subcategory": "chip resistor - surface mount",
+          "values": [
+            {
+              "raw": "100R",
+              "type": "resistance",
+              "normalized": "100Ohm"
+            },
+            {
+              "raw": "1%",
+              "type": "tolerance",
+              "normalized": "1%"
+            }
+          ]
+        },
+        "subcategory": "chip resistor - surface mount",
+        "package": "0402",
+        "mounting_type": null,
+        "spec_filters": [
+          {
+            "name": "Resistance",
+            "op": "=",
+            "value": "100Ohm"
+          },
+          {
+            "name": "Tolerance",
+            "op": "=",
+            "value": "1%"
+          }
+        ],
+        "remaining_text": ""
+      }
+    }
+  },
+  {
+    "query": "100k 1% 0402 resistor",
+    "result": {
+      "results": [
+        {
+          "lcsc": "C25741",
+          "model": "0402WGF1003TCE",
+          "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+          "package": "0402",
+          "stock": 12384463,
+          "price": 0.0028,
+          "price_10": null,
+          "library_type": "basic",
+          "preferred": true,
+          "category": "Resistors",
+          "subcategory": "Chip Resistor - Surface Mount",
+          "subcategory_id": 2980,
+          "mounting_type": "smd",
+          "description": "-55℃~+155℃ 100kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+          "specs": {
+            "Resistance": "100kΩ",
+            "Operating Temperature": "-55℃~+155℃",
+            "Power(Watts)": "62.5mW",
+            "Type": "Thick Film Resistor",
+            "Voltage-Supply(Max)": "50V",
+            "Tolerance": "±1%",
+            "Temperature Coefficient": "±100ppm/℃"
+          }
+        }
+      ],
+      "total": 47,
+      "page_info": {
+        "limit": 1,
+        "offset": 0,
+        "returned": 1
+      },
+      "filters_applied": {
+        "query": null,
+        "subcategory_id": 2980,
+        "subcategory_name": "chip resistor - surface mount",
+        "subcategory_resolved": "Chip Resistor - Surface Mount",
+        "category_id": null,
+        "category_name": null,
+        "category_resolved": null,
+        "spec_filters": [
+          {
+            "name": "Resistance",
+            "op": "=",
+            "value": "100kOhm"
+          },
+          {
+            "name": "Tolerance",
+            "op": "=",
+            "value": "1%"
+          }
+        ],
+        "library_type": null,
+        "prefer_no_fee": true,
+        "min_stock": 10,
+        "package": "0402",
+        "packages": null,
+        "manufacturer": null,
+        "match_all_terms": true
+      },
+      "library_type_counts": {
+        "basic": 1,
+        "preferred": 0,
+        "extended": 46
+      },
+      "no_fee_available": true,
+      "parsed": {
+        "original_query": "100k 1% 0402 resistor",
+        "detected": {
+          "package": "0402",
+          "component_type": "resistor",
+          "subcategory": "chip resistor - surface mount",
+          "values": [
+            {
+              "raw": "100k",
+              "type": "resistance",
+              "normalized": "100kOhm"
+            },
+            {
+              "raw": "1%",
+              "type": "tolerance",
+              "normalized": "1%"
+            }
+          ]
+        },
+        "subcategory": "chip resistor - surface mount",
+        "package": "0402",
+        "mounting_type": null,
+        "spec_filters": [
+          {
+            "name": "Resistance",
+            "op": "=",
+            "value": "100kOhm"
+          },
+          {
+            "name": "Tolerance",
+            "op": "=",
+            "value": "1%"
+          }
+        ],
+        "remaining_text": ""
+      }
+    }
+  }
+]

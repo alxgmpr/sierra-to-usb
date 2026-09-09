@@ -41,8 +41,11 @@ def check(root=ROOT):
                 if value == '22uF':
                     assert (fields['MPN'], fields['LCSC']) == ('CL21A226MAYNNNE', 'C602037'), ref
                 assert 'Capacitor_SMD:C_' in parts[ref].findtext('footprint'), ref
+            if rail == 'VDD_CPU':
+                expected |= {('L300','2'),('R301','1'),('C305','1')}
+                expected |= {(f'C{i}','1') for i in range(306,310)}
             assert nets[rail] == expected, (rail, nets[rail] ^ expected)
-        assert nets['VDD_CPU_COM'] == {('U1', 'M15')}
+        assert nets['VDD_CPU_COM'] == {('U1','M15'),('U4','A4'),('R301','2'),('C305','2')}
         ground_balls = {p['ball'] for p in source['pins'] if p['pin_type'] in {'G', 'AG'}}
         assert len(ground_balls) == 208
         actual = {pin for ref,pin in nets['GND'] if ref == 'U1'}

@@ -1,7 +1,8 @@
 # Current capture checkpoint — not for fabrication
 
 Open `full-adapter.kicad_pro`. The root hierarchy currently contains the DDR
-signal and power pages plus processor core power and ground. The integrated PCB and remaining functional pages
+signal and power pages, processor core power and ground, and the CPU regulator.
+The integrated PCB and remaining functional pages
 are still being implemented.
 
 U1 is the exact RK3568B2; U2/U3 are H5TQ4G63EFR-RDC, each 4 Gb x16, giving
@@ -24,17 +25,25 @@ ground-pin list. Ball M15 is a passive remote sense tap on VDD_CPU_COM, not an
 additional external power feed. TVSS at AB24 remains a temperature reference
 input and is not connected to ground.
 
-The current ERC result has eleven **unresolved integration findings**, with no
+U4 is RK860-0 with L300 SPM5030T-R35M. The CPU page includes four 22 uF input
+capacitors, four 22 uF local output capacitors, a 51 kohm / 100 nF hardware
+enable delay, a 100 kohm VSEL pull-down and the reference 100 ohm / 1 uF remote
+sense network. `check_cpu_regulator.py` checks all 20 balls, native stack
+expansion, switching-node isolation, feedback, defaults and exact passives.
+The VDD_CPU power flag represents the verified U4 → L300 → CPU supply path;
+KiCad does not propagate a power-output type through the passive inductor.
+
+The current ERC result has fourteen **unresolved integration findings**, with no
 ERC exclusions: unplaced U1 units, input pins, bidirectional pins and power
-pins; six undriven rails (VCC_DDR, GND, and the four core rails); and the isolated
-VDD_CPU_COM label awaiting the regulator feedback circuit. The PMIC, CPU
-regulator circuit and other processor units are not yet captured. These are
+pins; seven undriven rails (VCC_DDR, GND, LOGIC/GPU/NPU, VCC5V_SYS and
+VCC3V3_PMU); isolated CPU regulator SDA/SCL labels; and undriven SCL. The PMIC,
+upstream supplies and other processor units are not yet captured. These are
 open work, not manufacturing exceptions. There are no
 additional ERC findings in this checkpoint.
 
 The schematic PDF was rendered and visually iterated to fix rotated passive
 fields, supply-reference overlap, power-label collisions and page-boundary
-placement. The checked working render is `../build/core-power-review.pdf`; it is
+placement. The checked working render is `../build/cpu-power-review.pdf`; it is
 not a released schematic or fabrication deliverable.
 
 ## Library review

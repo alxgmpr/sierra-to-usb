@@ -81,10 +81,46 @@ def check(root=ROOT):
                 assert pin.attrib['ref'] == 'U1'
                 actual[pin.attrib['pin']] = net.attrib['name'].split('/')[-1]
         assert actual == physical, (actual, physical)
-    return {'status': 'CPU_REGULATOR_LIBRARY_CHECKPOINT_NOT_RELEASE', 'physical_pins': 20,
+    with tempfile.TemporaryDirectory(prefix='cpu-circuit-check-') as directory:
+        xml = Path(directory) / 'nets.xml'
+        subprocess.run([CLI,'sch','export','netlist','--format','kicadxml','-o',str(xml),
+                        str(root/'cad/full-adapter.kicad_sch')],check=True,capture_output=True)
+        tree = ET.parse(xml)
+        nets = {n.get('name'):{(p.get('ref'),p.get('pin')) for p in n.findall('node')}
+                for n in tree.findall('.//nets/net')}
+        def attached(pin):
+            matches=[net for net in nets.values() if pin in net]
+            assert len(matches)==1, pin
+            return matches[0]
+        assert nets['VCC5V_SYS'] == {('U4',p) for p in ['D1','D2','E1','E2']} | {(f'C{i}','1') for i in range(300,304)}
+        assert attached(('U4','D3')) == {('U4',p) for p in ['D3','D4','E3','E4']} | {('L300','1')}
+        assert attached(('U4','A2')) == {('U4','A2'),('R300','2'),('C304','1')}
+        assert nets['VCC3V3_PMU'] == {('R300','1')}
+        assert nets['PMIC_SLEEP_H'] == {('U4','A1'),('R302','1')}
+        assert nets['I2C0_SCL_PMIC'] == {('U4','A3')}
+        assert nets['I2C0_SDA_PMIC'] == {('U4','B1')}
+        assert nets['VDD_CPU_COM'] == {('U1','M15'),('U4','A4'),('R301','2'),('C305','2')}
+        assert {('L300','2'),('R301','1'),('C305','1')} <= nets['VDD_CPU']
+        assert nets['VDD_CPU'].isdisjoint(nets['VDD_CPU_COM'])
+        for pin in ['B2','B3','C1','C2','C3','C4','B4']:assert ('U4',pin) in nets['GND']
+        for i in [300,301,302,303,304,306,307,308,309]:assert (f'C{i}','2') in nets['GND']
+        assert ('R302','2') in nets['GND']
+        parts={p.get('ref'):p for p in tree.findall('.//components/comp')}
+        for ref,value in {'L300':'0.35uH','R300':'51kR 1%','R301':'100R 1%','R302':'100kR 1%','C304':'100nF','C305':'1uF',**{f'C{i}':'22uF' for i in [300,301,302,303,306,307,308,309]}}.items():
+            assert parts[ref].findtext('value')==value,ref
+            fields={f.get('name'):f.text for f in parts[ref].findall('fields/field')}
+            if value=='22uF':assert (fields['MPN'],fields['LCSC'])==('CL21A226MAYNNNE','C602037')
+            if ref=='L300':assert (fields['MPN'],fields['LCSC'])==('SPM5030T-R35M','C695608')
+        inductor=sx.loads((root/'lib/full-adapter.pretty/L_TDK_SPM5030.kicad_mod').read_text())
+        pads=children(inductor,'pad');assert len(pads)==2
+        for p in pads:
+            assert one(p,'at')[1:3]==([-2.1,0] if p[1]=='1' else [2.1,0])
+            assert one(p,'size')[1:]==[1.5,2.2]
+    return {'status': 'CPU_REGULATOR_CAPTURE_CHECKPOINT_NOT_RELEASE', 'physical_pins': 20,
             'native_stack_export_verified': True, 'land_diameter_mm': .15,
             'footprint_sha256': hashlib.sha256(fp_path.read_bytes()).hexdigest(),
-            'power_circuit_integrated': False, 'assembly_process_qualified': False}
+            'power_circuit_integrated': True, 'upstream_rails_integrated': False,
+            'assembly_process_qualified': False}
 
 
 if __name__ == '__main__':

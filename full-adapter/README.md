@@ -18,8 +18,9 @@ The current hierarchy starts at [cad/full-adapter.kicad_sch](cad/full-adapter.ki
 Its two DDR pages capture the selected 1 GiB subsystem, including voltage
 references, calibration, clock termination and local bypass. A third page
 captures the four processor core supply groups, bypass and all 208 ground balls.
+A fourth page captures the RK860-0 CPU regulator, defaults and remote sense.
 Other subsystems and the integrated PCB remain unfinished. See [the capture checkpoint](cad/README.md)
-for its exported-net checks and eleven unresolved integration ERC findings. The
+for its exported-net checks and fourteen unresolved integration ERC findings. The
 [processor escape coupon](studies/README.md) contains real routing and its own
 DRC evidence; it is not a system design or release. Full-system ERC, schematic/PCB
 parity, DRC, Gerber inspection and 3D clearance verification have **not passed**.
