@@ -1,7 +1,8 @@
 # Current capture checkpoint — not for fabrication
 
 Open `full-adapter.kicad_pro`. The root hierarchy currently contains the DDR
-signal and power pages, processor core power and ground, and the CPU regulator.
+signal and power pages, processor core power and ground, the CPU regulator,
+and the nine PMIC LDO outputs.
 The integrated PCB and remaining functional pages
 are still being implemented.
 
@@ -33,17 +34,23 @@ expansion, switching-node isolation, feedback, defaults and exact passives.
 The VDD_CPU power flag represents the verified U4 → L300 → CPU supply path;
 KiCad does not propagate a power-output type through the passive inductor.
 
-The current ERC result has fourteen **unresolved integration findings**, with no
-ERC exclusions: unplaced U1 units, input pins, bidirectional pins and power
+U5 is the exact RK809-5. Its three LDO groups have twelve local 1 uF bypass
+capacitors and the startup voltages/sequencing from datasheet Table 4-4.
+LDO6 now supplies the CPU regulator enable resistor. LDO5/6 are limited to
+200 mA with less than 0.4 V headroom, as specified on datasheet pages 22–23.
+`check_pmic_ldo.py` verifies all physical input/output pins and capacitor nets.
+
+The current ERC result has eighteen **unresolved integration findings**, with no
+ERC exclusions: unplaced U1/U5 units, input pins, bidirectional pins and power
 pins; seven undriven rails (VCC_DDR, GND, LOGIC/GPU/NPU, VCC5V_SYS and
-VCC3V3_PMU); isolated CPU regulator SDA/SCL labels; and undriven SCL. The PMIC,
+VCC3V3_SYS); isolated CPU regulator SDA/SCL labels; and undriven SCL. The remaining PMIC units,
 upstream supplies and other processor units are not yet captured. These are
 open work, not manufacturing exceptions. There are no
 additional ERC findings in this checkpoint.
 
 The schematic PDF was rendered and visually iterated to fix rotated passive
 fields, supply-reference overlap, power-label collisions and page-boundary
-placement. The checked working render is `../build/cpu-power-review.pdf`; it is
+placement. The checked working render is `../build/pmic-ldo-review.pdf`; it is
 not a released schematic or fabrication deliverable.
 
 ## Library review
@@ -81,6 +88,8 @@ Run from the repository root with `full-adapter/.venv/bin/python`:
 4. `full-adapter/tools/check_ddr.py full-adapter full-adapter/research/ddr-validation.json`
 5. `full-adapter/tools/check_core_power.py`
 6. `full-adapter/tools/check_cpu_regulator.py`
+7. `full-adapter/tools/check_pmic_library.py`
+8. `full-adapter/tools/check_pmic_ldo.py`
 
 The pre-commit checks validate the staged snapshot and reject unregistered CAD.
 Their DDR checkpoint success does not authorize fabrication or imply that the

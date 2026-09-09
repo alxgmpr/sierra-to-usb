@@ -41,6 +41,19 @@ model path. Official KLC findings retained as local-library exceptions are:
 - EP paste is in separate windows; bottom thermal copper is mask-covered.
 - The STEP path is project-relative.
 
-The PMIC circuit, sequencing connections and regulator passives are the next
-capture work. This library checkpoint does not establish full-system power
-integrity or authorize fabrication.
+The LDO groups are captured in `cad/pmic-ldo.kicad_sch`. AN_RK809 V1.1 section
+6.5 calls for one 1 uF capacitor at each input group and each output; C400–C411
+implement that arrangement with 25 V X5R CL05A105KA5NQNC, C52923. Datasheet
+Table 4-4 supplies the exact -5 startup values shown on the schematic. LDO1,
+LDO4 and LDO9 remain disabled/reserved. LDO6 feeds the existing CPU enable RC.
+
+The shared inputs use VCC3V3_SYS. LDO5 and LDO6 therefore have less than 0.4 V
+headroom at their 3.3 V setting, which reduces the permitted load to **200 mA**
+each (datasheet pages 22–23). Their voltage loss and actual PMU/SDIO loads must
+be included in the completed rail budget. The 0.9 V and 1.8 V groups retain
+ample headroom; their thermal dissipation still belongs in the PMIC budget.
+
+`check_pmic_ldo.py` checks the fresh exported physical-pin/output mapping,
+all twelve capacitor returns and the CPU enable source. The remaining buck,
+RTC/control, audio-unused and switch units are still being captured. This
+checkpoint does not establish full-system power integrity or authorize fabrication.

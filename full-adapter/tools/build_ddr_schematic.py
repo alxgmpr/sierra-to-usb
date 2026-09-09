@@ -157,12 +157,13 @@ def power_page():
 def main():
     from build_core_power import core_power
     from build_cpu_power import cpu_power
-    pages=[signals(),power_page(),core_power(),cpu_power()]
+    from build_pmic_ldo import pmic_ldo
+    pages=[signals(),power_page(),core_power(),cpu_power(),pmic_ldo()]
     root=Sheet('full-adapter','Integrated Linux USB3 modem / 2.5GbE development board',root=True)
     root.text('CURRENT DESIGN — IN PROGRESS',20.32,20.32,2.54)
     root.text('RK3568B2 + 1 GiB DDR3 + PCIe RTL8125BG-CG\nUSB3 M.2 modem; isolated PoE and USB-C auxiliary power\n\nDDR capture is present. Remaining subsystem capture and PCB routing\nare active work. This project is not a manufacturing release.',20.32,33.02,1.8)
     for i,s in enumerate(pages):
-        x,y=25.4+(i%2)*134.62,88.9+(i//2)*50.8
+        x,y=25.4+(i%2)*134.62,88.9+(i//2)*33.02
         root.items.append(f'(sheet (at {x} {y}) (size 111.76 20.32) (fields_autoplaced yes) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid {Q(uid("sheet-block/"+s.name))}) (property "Sheetname" {Q(s.title)} (at {x} {y-1.27} 0) {effects(justify="left bottom")}) (property "Sheetfile" {Q(s.name+".kicad_sch")} (at {x} {y+21.59} 0) {effects(justify="left top")}))')
         s.save()
     root.save('A4')
