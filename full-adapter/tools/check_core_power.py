@@ -38,6 +38,8 @@ def check(root=ROOT):
                 assert parts[ref].findtext('value') == value, ref
                 fields = {f.get('name'): f.text for f in parts[ref].findall('fields/field')}
                 assert fields['MPN'] and fields['LCSC'], ref
+                if value == '22uF':
+                    assert (fields['MPN'], fields['LCSC']) == ('CL21A226MAYNNNE', 'C602037'), ref
                 assert 'Capacitor_SMD:C_' in parts[ref].findtext('footprint'), ref
             assert nets[rail] == expected, (rail, nets[rail] ^ expected)
         assert nets['VDD_CPU_COM'] == {('U1', 'M15')}

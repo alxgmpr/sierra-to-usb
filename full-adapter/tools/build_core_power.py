@@ -10,7 +10,7 @@ def core_power():
     search = json.loads((ROOT / 'research/cpu-passives-search-2.json').read_text())
     parts = {'100nF': ddr[6]['results'][0], '4.7uF': ddr[7]['results'][0],
              '1uF': extra['one_uF']['results'][0], '10uF': extra['ten_uF']['results'][0],
-             '22uF': search[3]['result']['results'][0]}
+             '22uF': next(p for p in search[3]['result']['results'] if p['model'] == 'CL21A226MAYNNNE')}
     s = Sheet('core-power', 'Processor core supplies and all ground balls')
     s.box('Core rails — remote sense is a separate net', 10.16, 15.24, 396.24, 132.08)
     s.place('full-adapter:RK3568B2', 'U1', 73.66, 88.9, unit=17)

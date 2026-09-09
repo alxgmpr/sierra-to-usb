@@ -43,6 +43,14 @@ DC-bias curves, aging/tolerance bounds and the finished transient response still
 need qualification. Do not interpret the reference nominal total as a measured
 effective capacitance guarantee.
 
+The captured 22 uF part is now Samsung CL21A226MAYNNNE (C602037), a current
+production replacement for NRND CL21A226MAQNNNE. Samsung's embedded 25 C curve
+gives approximately 21.0 uF at 1.15 V and 9.2 uF at 5.25 V. The curve and
+interpolations are retained in `core-22uf-qualification.json`. The planned
+5 V input bank therefore uses four capacitors; two would fall below the
+regulator's 20 uF input recommendation even before tolerance. Combined
+temperature/bias and aging qualification remains open.
+
 ## Current and temperature
 
 Rockchip's pinned RK356X Power Consumption Test Report gives CPU 3 A, GPU 1.2 A,
