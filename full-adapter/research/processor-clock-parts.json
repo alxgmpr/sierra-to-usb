@@ -1,0 +1,311 @@
+{
+  "crystal": {
+    "lcsc": "C362340",
+    "model": "TXM24M0004322FBCDO00T",
+    "manufacturer": "Yajingxin",
+    "package": "SMD3225-4P",
+    "stock": 114204,
+    "price": 0.0747,
+    "price_10": 0.0589,
+    "library_type": "extended",
+    "preferred": false,
+    "category": "Crystals, Oscillators, Resonators",
+    "subcategory": "Crystals",
+    "subcategory_id": 3043,
+    "mounting_type": "smd",
+    "specs": {
+      "Load Capacitance": "12pF",
+      "Operating Temperature": "-40℃~+85℃",
+      "Type": "SMD crystal oscillator",
+      "Normal temperature Frequency Tolerance": "±10ppm",
+      "Equivalent Series Resistance(ESR)": "30Ω",
+      "Frequency Stability": "±20ppm",
+      "Frequency": "24MHz"
+    },
+    "description": "-40℃~+85℃ 12pF 24MHz 30Ω Crystal Oscillator ±10ppm ±20ppm SMD3225-4P Crystals ROHS",
+    "min_order": 1,
+    "reel_qty": 3000,
+    "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1912111437_Yajingxin-TXM24M0004322FBCDO00T_C362340.pdf",
+    "lcsc_url": "https://www.lcsc.com/product-detail/crystals_yajingxin-txm24m0004322fbcdo00t_C362340.html",
+    "prices": [
+      {
+        "qty": "1+",
+        "price": 0.0747
+      },
+      {
+        "qty": "100+",
+        "price": 0.0589
+      },
+      {
+        "qty": "300+",
+        "price": 0.051
+      },
+      {
+        "qty": "3000+",
+        "price": 0.0411
+      },
+      {
+        "qty": "6000+",
+        "price": 0.0363
+      },
+      {
+        "qty": "9000+",
+        "price": 0.0341
+      }
+    ],
+    "attributes": [
+      {
+        "name": "Load Capacitance",
+        "value": "12pF"
+      },
+      {
+        "name": "Operating Temperature",
+        "value": "-40℃~+85℃"
+      },
+      {
+        "name": "Type",
+        "value": "SMD crystal oscillator"
+      },
+      {
+        "name": "Normal temperature Frequency Tolerance",
+        "value": "±10ppm"
+      },
+      {
+        "name": "Equivalent Series Resistance(ESR)",
+        "value": "30Ω"
+      },
+      {
+        "name": "Frequency Stability",
+        "value": "±20ppm"
+      },
+      {
+        "name": "Frequency",
+        "value": "24MHz"
+      }
+    ],
+    "has_easyeda_footprint": true,
+    "easyeda_symbol_uuid": "497c6603b9e84ab790d1fc9056c3381f",
+    "easyeda_footprint_uuid": "9e297fbdb6c24ee39419d7ac96617dbf"
+  },
+  "load_capacitor": {
+    "lcsc": "C1554",
+    "model": "0402CG200J500NT",
+    "manufacturer": "FH (Guangdong Fenghua Advanced Tech)",
+    "package": "0402",
+    "stock": 960270,
+    "price": 0.0081,
+    "price_10": 0.0066,
+    "library_type": "basic",
+    "preferred": false,
+    "category": "Capacitors",
+    "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+    "subcategory_id": 2929,
+    "mounting_type": "smd",
+    "specs": {
+      "Voltage Rating": "50V",
+      "Tolerance": "±5%",
+      "Capacitance": "20pF",
+      "Temperature Coefficient": "C0G"
+    },
+    "description": "20pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+    "min_order": 1,
+    "reel_qty": 10000,
+    "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG200J500NT_C1554.pdf",
+    "lcsc_url": "https://www.lcsc.com/product-detail/multilayer-ceramic-capacitors-mlcc-smd-smt_fh-guangdong-fenghua-advanced-tech-0402cg200j500nt_C1554.html",
+    "prices": [
+      {
+        "qty": "1+",
+        "price": 0.0081
+      },
+      {
+        "qty": "1000+",
+        "price": 0.0066
+      },
+      {
+        "qty": "3000+",
+        "price": 0.0059
+      },
+      {
+        "qty": "10000+",
+        "price": 0.0051
+      },
+      {
+        "qty": "50000+",
+        "price": 0.0047
+      },
+      {
+        "qty": "100000+",
+        "price": 0.0045
+      }
+    ],
+    "attributes": [
+      {
+        "name": "Voltage Rating",
+        "value": "50V"
+      },
+      {
+        "name": "Tolerance",
+        "value": "±5%"
+      },
+      {
+        "name": "Capacitance",
+        "value": "20pF"
+      },
+      {
+        "name": "Temperature Coefficient",
+        "value": "C0G"
+      }
+    ],
+    "has_easyeda_footprint": true,
+    "easyeda_symbol_uuid": "5edd20bae2552aeb029cc1ac2c539e85",
+    "easyeda_footprint_uuid": "0821ed6ea50c44f4909e4be7610e4198"
+  },
+  "feedback_resistor": {
+    "lcsc": "C26083",
+    "model": "0402WGF1004TCE",
+    "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+    "package": "0402",
+    "stock": 2976332,
+    "price": 0.0026,
+    "price_10": 0.0021,
+    "library_type": "basic",
+    "preferred": false,
+    "category": "Resistors",
+    "subcategory": "Chip Resistor - Surface Mount",
+    "subcategory_id": 2980,
+    "mounting_type": "smd",
+    "specs": {
+      "Resistance": "1MΩ",
+      "Operating Temperature": "-55℃~+155℃",
+      "Power(Watts)": "62.5mW",
+      "Type": "Thick Film Resistor",
+      "Voltage-Supply(Max)": "50V",
+      "Tolerance": "±1%",
+      "Temperature Coefficient": "±100ppm/℃"
+    },
+    "description": "-55℃~+155℃ 1MΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+    "min_order": 1,
+    "reel_qty": 10000,
+    "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010030_UNI-ROYAL-Uniroyal-Elec-0402WGF1004TCE_C26083.pdf",
+    "lcsc_url": "https://www.lcsc.com/product-detail/chip-resistor-surface-mount_uni-royal-uniroyal-elec-0402wgf1004tce_C26083.html",
+    "prices": [
+      {
+        "qty": "1+",
+        "price": 0.0026
+      },
+      {
+        "qty": "1000+",
+        "price": 0.0021
+      },
+      {
+        "qty": "3000+",
+        "price": 0.0018
+      },
+      {
+        "qty": "10000+",
+        "price": 0.0016
+      },
+      {
+        "qty": "50000+",
+        "price": 0.0013
+      },
+      {
+        "qty": "50200+",
+        "price": 0.0013
+      }
+    ],
+    "attributes": [
+      {
+        "name": "Resistance",
+        "value": "1MΩ"
+      },
+      {
+        "name": "Operating Temperature",
+        "value": "-55℃~+155℃"
+      },
+      {
+        "name": "Power(Watts)",
+        "value": "62.5mW"
+      },
+      {
+        "name": "Type",
+        "value": "Thick Film Resistor"
+      },
+      {
+        "name": "Voltage-Supply(Max)",
+        "value": "50V"
+      },
+      {
+        "name": "Tolerance",
+        "value": "±1%"
+      },
+      {
+        "name": "Temperature Coefficient",
+        "value": "±100ppm/℃"
+      }
+    ],
+    "has_easyeda_footprint": true,
+    "easyeda_symbol_uuid": "538b355396cb566a4d06e5955eb44692",
+    "easyeda_footprint_uuid": "fafd024f554e426eb74cf4a204aa88b0"
+  },
+  "live_crystal_stock": {
+    "results": [
+      {
+        "lcsc": "C362340",
+        "model": "TXM24M0004322FBCDO00T",
+        "manufacturer": "Yajingxin",
+        "package": "SMD3225-4P",
+        "stock": 114204,
+        "price": 0.0747,
+        "price_10": 0.0589,
+        "library_type": "extended",
+        "preferred": false,
+        "category": "Crystals, Oscillators, Resonators",
+        "subcategory": "Crystals",
+        "subcategory_id": 3043,
+        "mounting_type": "smd",
+        "specs": {
+          "Load Capacitance": "12pF",
+          "Operating Temperature": "-40℃~+85℃",
+          "Type": "SMD crystal oscillator",
+          "Normal temperature Frequency Tolerance": "±10ppm",
+          "Equivalent Series Resistance(ESR)": "30Ω",
+          "Frequency Stability": "±20ppm",
+          "Frequency": "24MHz"
+        }
+      }
+    ],
+    "page": 1,
+    "per_page": 3,
+    "total": 1,
+    "total_pages": 1,
+    "has_more": false
+  },
+  "date": "2026-09-09",
+  "manufacturer_pdf": "reference/yjx-txm24m0004322fbcd.pdf",
+  "qualification": {
+    "frequency_MHz": 24,
+    "load_pF": 12,
+    "ESR_max_ohm": 30,
+    "initial_tolerance_ppm": 10,
+    "temperature_stability_ppm": 20,
+    "temperature_C": [
+      -40,
+      85
+    ],
+    "aging_ppm_per_year": 5,
+    "drive_level_uW": 100,
+    "drive_note": "Datasheet lists 100uW without a distinct nominal/maximum qualifier; treat 100uW as a conservative ceiling pending bench measurement.",
+    "load_capacitors_pF": [
+      20,
+      20
+    ],
+    "assumed_stray_pF": 2,
+    "nominal_effective_load_pF": 12,
+    "bench_required": [
+      "Measure frequency and tune load capacitors after routing; 2pF combined stray is an estimate.",
+      "Measure startup margin and crystal drive across supply/temperature, retain Rockchip 22ohm output resistor and 1Mohm feedback resistor.",
+      "Confirm PVTM low-frequency clock firmware configuration with external CLK32K_IN unused."
+    ]
+  }
+}

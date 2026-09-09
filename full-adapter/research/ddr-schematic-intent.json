@@ -981,5 +981,19 @@
         "AH24"
       ]
     ]
+  },
+  "processor-clock": {
+    "SOC_XIN24M": [
+      [
+        "U1",
+        "AF28"
+      ]
+    ],
+    "SOC_XOUT24M": [
+      [
+        "U1",
+        "AF27"
+      ]
+    ]
   }
 }

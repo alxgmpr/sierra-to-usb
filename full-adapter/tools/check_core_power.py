@@ -56,10 +56,11 @@ def check(root=ROOT):
         # Hardware Guide 2.2.2.11–15: unused display/PCIe3 PHY supplies are
         # intentionally grounded. These are not additional VSS/AVSS balls.
         unused_supplies = set('M20 M22 U20 U21 U22 V17 V18 W14 W15 W16 W18 Y14 Y15 Y17'.split())
-        assert actual == ground_balls | unused_supplies, actual ^ (ground_balls | unused_supplies)
-        assert 'AB24' not in actual, 'TVSS is a temperature reference input, not ground'
+        # Tablet reference p13 explicitly grounds the TVSS analog reference input.
+        references = {'AB24'}
+        assert actual == ground_balls | unused_supplies | references, actual ^ (ground_balls | unused_supplies | references)
     return {'status': 'CORE_POWER_CAPTURE_CHECKPOINT_NOT_RELEASE', 'core_supply_balls': 30,
-            'ground_balls': 208, 'grounded_unused_supply_balls':14,
+            'ground_balls': 208, 'grounded_unused_supply_balls':14, 'grounded_temperature_reference_inputs':1,
             'bypass_capacitors': 21, 'remote_sense_ball': 'M15',
             'regulators_integrated': True, 'upstream_power_integrated': False, 'system_routed': False}
 

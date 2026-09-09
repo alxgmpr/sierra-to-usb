@@ -61,5 +61,5 @@ def core_power():
         for a,b in zip(ps,ps[1:]):s.wire((a[0],by),(b[0],by))
         for pin in ps[1:-1]:s.junction((pin[0],by))
         s.power('GND',(ps[-1][0],by))
-    s.text('Rockchip tablet reference, p11: keep distributed bypass placement. CPU regulator and PMIC capture remain in progress.\n208 VSS/AVSS balls connect to secondary GND; do not confuse TVSS (temperature reference input) with a ground ball.',15.24,281.94,1.0)
+    s.text('Rockchip tablet reference, p11: keep distributed bypass placement. CPU regulator and PMIC capture remain in progress.\n208 VSS/AVSS balls connect to secondary GND; TVSS is an analog input grounded separately on the clock page per tablet reference p13.',15.24,281.94,1.0)
     return s

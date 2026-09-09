@@ -91,6 +91,19 @@ unprogrammed flash must leave the modem profile invalid and modem power off.
   the corresponding DTS nodes are disabled. Boot and recovery must work with
   those PHYs unpowered. Check active USB3/PCIe2 operation simultaneously.
 
+### Processor oscillator
+
+- Measure Y570 frequency after assembly and tune C570/C571 from their initial
+  20 pF values. The 2 pF combined parasitic assumption must be checked against
+  the final layout. Use a low-capacitance probe or buffered clock observation;
+  a conventional passive probe can stop or detune the oscillator.
+- Check cold/hot startup at minimum and maximum allowed oscillator supply,
+  including repeated power cycling. Measure crystal drive and keep it at or
+  below the conservative 100 µW limit; retain Rockchip's 22 Ω series resistor
+  and 1 MΩ feedback unless a documented characterization justifies a change.
+- Verify grounding of case pads 2/4 and U1 AB24 TVSS. Verify firmware uses the
+  internal PVTM low-speed clock with external CLK32K_IN disconnected.
+
 ### Fixture records
 
 The fixture should contact ground, input and isolated rails, PMIC outputs,

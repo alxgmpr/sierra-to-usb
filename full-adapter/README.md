@@ -28,7 +28,8 @@ Four further pages capture processor PMU/PLL, peripheral IO and USB/combo-PHY
 supplies, plus explicit unused display/camera/PCIe3 terminations. All processor
 power-input balls are now present. A further processor-control page connects the
 PMIC bus, reset, interrupt and sleep signals and defines the hardware boot straps.
-Clock, external console and remaining signal capture remain open.
+The processor-clock page adds the 24 MHz crystal network and grounded TVSS
+reference. External console and remaining signal capture remain open.
 Other subsystems and the integrated PCB remain unfinished. See [the capture checkpoint](cad/README.md)
 for its exported-net checks and six unresolved integration ERC findings. The
 [processor escape coupon](studies/README.md) contains real routing and its own

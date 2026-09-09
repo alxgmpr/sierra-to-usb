@@ -1,0 +1,13 @@
+{
+  "status": "PROCESSOR_CLOCK_CAPTURE_CHECKPOINT_NOT_RELEASE",
+  "crystal_frequency_MHz": 24,
+  "crystal_ESR_max_ohm": 30,
+  "load_caps_pF": [
+    20,
+    20
+  ],
+  "assumed_combined_stray_pF": 2,
+  "grounded_TVSS_ball": "AB24",
+  "frequency_startup_drive_verified_on_hardware": false,
+  "system_routed": false
+}

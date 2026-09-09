@@ -182,3 +182,36 @@ escape coupon has separate geometric DRC evidence. Full-system schematic/PCB
 parity, DRC, complete routing, layer and mechanical review have not passed because
 the integrated PCB is unfinished. The working schematic PDF is a review artifact;
 there is no released fabrication or assembly package.
+
+
+### Processor 24 MHz clock capture
+
+Y570 is Yajingxin TXM24M0004322FBCDO00T (C362340), a 24 MHz fundamental
+crystal with 12 pF load, 30 Ω maximum ESR, ±10 ppm initial tolerance and
+±20 ppm temperature stability over −40 to +85 °C. The exact-MPN manufacturer
+sheet is archived at `reference/yjx-txm24m0004322fbcd.pdf`; live JLC stock was
+114,204 on 2026-09-09, with a one-piece component price of $0.0747 before fees.
+`research/processor-clock-parts.json` records the source and stock response.
+
+R570 is 1 MΩ across processor XIN/XOUT, and R571 is 22 Ω in series with XOUT,
+as required by the Rockchip hardware guide. C570/C571 are 20 pF C0G, ±5%,
+50 V (0402CG200J500NT, C1554). Their nominal 12 pF effective load assumes
+2 pF combined stray capacitance; that is a layout estimate, not a measurement.
+The manufacturer lists 100 µW drive without a separate nominal/maximum label;
+use it as a conservative ceiling and measure drive and startup margin. The
+initial frequency tolerance meets Rockchip's room-temperature ±20 ppm criterion;
+temperature and aging errors are additional, not included in that initial limit.
+
+Native KiCad 3225 four-pad lands match the exact manufacturer's drawing:
+1.4 × 1.2 mm, centers x=±1.1 mm and y=±0.85 mm. Pads 1/3 are the resonator;
+2/4 are grounded case connections. The vendored generic model has nominal XY
+and is scaled vertically from 0.64 to 0.8 mm, the specified maximum height.
+Allow ±0.1 mm body XY tolerances during mechanical review. KLC F9.3 differences
+are the deliberate local model path and this documented scale.
+
+The tablet reference explicitly grounds U1 AB24 TVSS. It is still classified
+as an analog input, not a VSS ball; the ground-net check now separately counts
+208 ground balls, 14 intentionally grounded unused supply balls and this one
+reference input. Four spare PMU GPIOs remain disconnected. Internal PVTM clock
+selection is required with external CLK32K_IN unused. Full-board routing and
+physical oscillator qualification remain unfinished.

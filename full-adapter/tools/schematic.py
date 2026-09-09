@@ -55,7 +55,7 @@ class Sheet:
                 extra = 20.32 if any(one(p,'at')[3] == 270 for p in pins) else 7.62
                 px, py, justify = x, y-height-extra+i*2.54, ''
             else:
-                px, py, justify = (x, y-6.35+i*2.54, '') if angle in (90,270) or name == 'Device:Crystal' else (x+2.54, y-1.27+i*2.54, 'left')
+                px, py, justify = (x, y-6.35+i*2.54, '') if angle in (90,270) or name in {'Device:Crystal','Device:Crystal_GND24'} else (x+2.54, y-1.27+i*2.54, 'left')
             if name.startswith('power:') or nodes(symbol, 'power'):
                 px, py, justify = x, y+(5.08 if value == 'GND' else -5.08), ''
             hidden = i > 1 or key == 'Reference' and (name.startswith('power:') or nodes(symbol, 'power'))

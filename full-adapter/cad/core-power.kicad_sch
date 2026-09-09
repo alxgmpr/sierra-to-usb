@@ -1444,5 +1444,5 @@
 (property "Datasheet" "" (at 388.62 251.46 0) (effects (font (size 1.27 1.27))) (hide yes))
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 388.62 251.46 0) (effects (font (size 1.27 1.27))) (hide yes))
 (pin "1" (uuid "113270b7-ba05-5358-8898-c1f40b431fb1"))(instances (project "full-adapter" (path "/fda20879-fa66-56c0-be14-de2506349b46/2cb54c12-b544-5fde-96a4-0c9983539cc3" (reference "#PWRcorepower020") (unit 1)))))
-(text "Rockchip tablet reference, p11: keep distributed bypass placement. CPU regulator and PMIC capture remain in progress.\n208 VSS/AVSS balls connect to secondary GND; do not confuse TVSS (temperature reference input) with a ground ball." (at 15.24 281.94 0) (effects (font (size 1.0 1.0)) (justify left top)) (uuid "7006339c-7c3d-5c84-8590-fb040c13138a"))
+(text "Rockchip tablet reference, p11: keep distributed bypass placement. CPU regulator and PMIC capture remain in progress.\n208 VSS/AVSS balls connect to secondary GND; TVSS is an analog input grounded separately on the clock page per tablet reference p13." (at 15.24 281.94 0) (effects (font (size 1.0 1.0)) (justify left top)) (uuid "9806941b-0390-5042-b562-28f7edc8deee"))
 )
