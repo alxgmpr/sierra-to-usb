@@ -1,0 +1,10 @@
+Reference,Quantity,Manufacturer,MPN or drawing,Description,Qualification
+HN01,1,Custom,mechanical-review.md HN01,Brass support OD5 bore2.2 height2.49+/-0.02mm,Machine and first-article fit inspect
+HN04,1,ISO,ISO7045 M2x8,Pan-head module screw,Check actual engagement and support fit
+HN05,1,ISO,ISO4032 M2,Module retaining nut,Use compatible thread
+HN06,1,ISO,ISO7089 M2,OD5 module washer,Inspect clearance to module keepout
+RFH1-RFH5,5,Taoglas,CAB.01072,100mm MHF4L-to-MHF4L 1.13mm coax harness,Fifth harness only for dedicated GNSS; fit bend radius and RF loss qualification required
+P_SIERRA,1,3M,89120-0101HA,Fixed coded Sierra IDC profile assembly,Wire per profile-assembly.md and continuity inspect before fitting
+P_QUECTEL,1,3M,89120-0101HA,Fixed coded Quectel IDC profile assembly,Wire per profile-assembly.md and continuity inspect before fitting
+P_RELIEF,2,3M,3448-89120,Profile ribbon strain relief,One per profile assembly
+P_RIBBON,2,3M,3365/20,20-way28AWG ribbon cut per profile assembly drawing,Insulate every unused end and each splice

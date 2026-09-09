@@ -1,0 +1,11 @@
+(version 1)
+# Amphenol132289 drawing: centre launch land meets the board edge.
+(rule "SMA edge-launch lands"
+ (condition "A.memberOfFootprint('carrier:SMA_Amphenol_132289_Manufacturer')")
+ (constraint edge_clearance (min 0mm))
+ (severity ignore))
+# The LTC manufacturer land pattern has 0.176mm nearest pad clearance.
+# Keep normal power-net clearance elsewhere.
+(rule "LTC3310S internal package lands"
+ (condition "A.memberOfFootprint('U401') && B.memberOfFootprint('U401')")
+ (constraint clearance (min 0.15mm)))

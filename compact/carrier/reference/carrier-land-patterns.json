@@ -1,0 +1,698 @@
+{
+  "LTC_LQFN18_3x3_05-08-1548": {
+    "source": "https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-lqfn/05081548_C_LQFN18.pdf",
+    "drawing_revision": "05-08-1548 Rev D, July 2021 (URL retains C)",
+    "review": "Manufacturer drawing visually inspected in browser 2026-09-06. Top-view pin numbering mirrored from package bottom view.",
+    "paste": "Four 0.70 x 0.62 mm apertures, 67.6% EP area; engineering stencil choice, assembly qualification pending.",
+    "body_mm": [
+      3,
+      3,
+      1.03
+    ],
+    "pads": [
+      {
+        "number": 1,
+        "center": [
+          -1.4,
+          -1.0
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 14,
+        "center": [
+          1.4,
+          -1.0
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 2,
+        "center": [
+          -1.4,
+          -0.5
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 13,
+        "center": [
+          1.4,
+          -0.5
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 3,
+        "center": [
+          -1.4,
+          0.0
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 12,
+        "center": [
+          1.4,
+          0.0
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 4,
+        "center": [
+          -1.4,
+          0.5
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 11,
+        "center": [
+          1.4,
+          0.5
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 5,
+        "center": [
+          -1.4,
+          1.0
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 10,
+        "center": [
+          1.4,
+          1.0
+        ],
+        "size": [
+          0.7,
+          0.25
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 6,
+        "center": [
+          -0.75,
+          1.4
+        ],
+        "size": [
+          0.25,
+          0.7
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 18,
+        "center": [
+          -0.75,
+          -1.4
+        ],
+        "size": [
+          0.25,
+          0.7
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 7,
+        "center": [
+          -0.25,
+          1.4
+        ],
+        "size": [
+          0.25,
+          0.7
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 17,
+        "center": [
+          -0.25,
+          -1.4
+        ],
+        "size": [
+          0.25,
+          0.7
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 8,
+        "center": [
+          0.25,
+          1.4
+        ],
+        "size": [
+          0.25,
+          0.7
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 16,
+        "center": [
+          0.25,
+          -1.4
+        ],
+        "size": [
+          0.25,
+          0.7
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 9,
+        "center": [
+          0.75,
+          1.4
+        ],
+        "size": [
+          0.25,
+          0.7
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 15,
+        "center": [
+          0.75,
+          -1.4
+        ],
+        "size": [
+          0.25,
+          0.7
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Paste",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": 19,
+        "center": [
+          0,
+          0
+        ],
+        "size": [
+          1.7,
+          1.51
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Mask"
+        ]
+      },
+      {
+        "number": "",
+        "center": [
+          -0.43,
+          -0.38
+        ],
+        "size": [
+          0.7,
+          0.62
+        ],
+        "layers": [
+          "F.Paste"
+        ]
+      },
+      {
+        "number": "",
+        "center": [
+          -0.43,
+          0.38
+        ],
+        "size": [
+          0.7,
+          0.62
+        ],
+        "layers": [
+          "F.Paste"
+        ]
+      },
+      {
+        "number": "",
+        "center": [
+          0.43,
+          -0.38
+        ],
+        "size": [
+          0.7,
+          0.62
+        ],
+        "layers": [
+          "F.Paste"
+        ]
+      },
+      {
+        "number": "",
+        "center": [
+          0.43,
+          0.38
+        ],
+        "size": [
+          0.7,
+          0.62
+        ],
+        "layers": [
+          "F.Paste"
+        ]
+      }
+    ],
+    "thermal_vias": 0
+  },
+  "L_Coilcraft_XEL4030": {
+    "source": "https://www.coilcraft.com/getmedia/8245f050-f190-4295-8c41-7c03d662ee3d/xel4030.pdf",
+    "revision": "Document 1321-3 revised 2026-02-19",
+    "review": "Manufacturer drawing visually inspected in browser. Recommended pad dimensions also independently match installed XAL4030 footprint geometry. No XAL 3D model reused.",
+    "body_max_mm": [
+      4.3,
+      4.3,
+      3.1
+    ],
+    "pad_pitch_mm": 2.37,
+    "pad_size_mm": [
+      0.98,
+      3.4
+    ]
+  },
+  "VPG_CSM2512_Kelvin": {
+    "source": "https://vpgfoilresistors.com/products/current-sense-resistors/csm2512/datasheet",
+    "revision": "4138-EN Rev 8-July-2025, page2",
+    "review": "Package and land-pattern drawings visually inspected in browser; diagonally opposed sense pads. White dot identifies top side, not an electrical polarity.",
+    "manufacturer_land_dimensions_mm": {
+      "a": 1.65,
+      "b": 3.68,
+      "c": 1.14,
+      "d": 0.53,
+      "e": 1.39,
+      "l": 4.06
+    },
+    "adaptation": "Sense pad length enlarged to1.65mm, matching current pad inner/outer boundaries; retain0.53mm lateral gap. Assembly qualification pending.",
+    "pin_mapping": {
+      "1": "I1 force+",
+      "2": "I2 force-",
+      "3": "E1 sense+",
+      "4": "E2 sense-"
+    },
+    "pads": [
+      [
+        1,
+        -2.855,
+        -0.835,
+        1.65,
+        2.01
+      ],
+      [
+        2,
+        2.855,
+        0.835,
+        1.65,
+        2.01
+      ],
+      [
+        3,
+        -2.855,
+        1.27,
+        1.65,
+        1.14
+      ],
+      [
+        4,
+        2.855,
+        -1.27,
+        1.65,
+        1.14
+      ]
+    ],
+    "body_nominal_mm": [
+      6.35,
+      3.175,
+      0.635
+    ],
+    "body_tolerance_mm": 0.254
+  },
+  "KEMET_D_7343_Median": {
+    "source": "https://content.kemet.com/datasheets/kem_t2076_t52x-530.pdf",
+    "revision": "T2076_T52X-530 2026-08-20, Table2 p37",
+    "pad_size_mm": [
+      2.37,
+      2.43
+    ],
+    "pad_center_x_mm": [
+      -3.12,
+      3.12
+    ],
+    "gap_mm": 3.87,
+    "courtyard_mm": [
+      9.12,
+      5.1
+    ],
+    "pin_mapping": {
+      "1": "anode",
+      "2": "cathode"
+    },
+    "comparison": "Installed standard Kemet-D footprint uses same pad centres but2.07x2.59 pads; this custom footprint adopts current manufacturer median dimensions."
+  },
+  "SMA_Amphenol_132289_Manufacturer": {
+    "source": "https://www.amphenolrf.com/en-us/assets/file/4065786470/",
+    "revision": "132289 Rev B 2011-11-30",
+    "review": "Manufacturer drawing visually inspected in browser 2026-09-06.",
+    "origin": "PCB edge at x=0, RF centreline y=0; connector projects +X",
+    "signal_pad_mm": [
+      5.2,
+      1.5
+    ],
+    "ground_pad_mm": [
+      4.9,
+      1.6
+    ],
+    "ground_centres_y_mm": [
+      -4.25,
+      4.25
+    ],
+    "ground_setback_from_edge_mm": 0.3,
+    "maximum_finished_board_thickness_mm": 1.57,
+    "body_width_mm": 9.52,
+    "body_front_projection_mm": 12.7,
+    "panel_hole_mm": 6.6,
+    "maximum_panel_thickness_mm": 3.5,
+    "comparison": "Installed standard footprint has5.08x1.5 ground pads; this footprint follows current available manufacturer drawing instead.",
+    "model": "KiCad exact 132289 STEP; x offset -2.54 mm aligns native board-edge plane to our origin. Slot spans z=-1.73..0 mm."
+  },
+  "M2_B_Amphenol_MDT420_1A": {
+    "source": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/cmdt420x0x411.pdf",
+    "local_source": "compact/reference/amphenol-mdt420.pdf",
+    "revision": "CMDT420X0X411 Rev A 2022-11-08",
+    "review": "Manufacturer PDF page2 visually inspected, including enlarged land-pattern dimensions.",
+    "origin": "midpoint of locating holes; card extends +Y",
+    "signal_pad_mm": [
+      0.3,
+      1.55
+    ],
+    "odd_row_y_mm": -5.275,
+    "even_row_y_mm": 2.275,
+    "hole_x_mm": [
+      -10,
+      10
+    ],
+    "hole_diameter_mm": [
+      1.1,
+      1.6
+    ],
+    "shell_pad_mm": [
+      1.2,
+      2.75
+    ],
+    "shell_pad_centres_mm": [
+      [
+        -10.35,
+        -4.5
+      ],
+      [
+        10.35,
+        -4.5
+      ]
+    ],
+    "pin_mapping": "Standard B-key1..11,20..75; mechanical solder tabs assigned76/77 GND by carrier convention.",
+    "electrical": "SMDT005 section5.4:1A per power contact continuous at25C still air,30C max rise; hot assembly qualification remains required.",
+    "availability": "No exact DigiKey keyword result2026-09-06; sourcing gate remains open."
+  },
+  "IPEX_MHF4_20449_001E_03": {
+    "source": "https://www.i-pex.com/sites/default/files/downloads/pdf/2D_MHF_4_RECEPTACLE_1_20449C22.pdf",
+    "revision": "20449 Rev22 2025-09-17 p4",
+    "review": "Manufacturer copper, stencil and exclusion drawings visually inspected at enlarged resolution.",
+    "pin_mapping": {
+      "1": "centre contact",
+      "2": "all three ground contacts"
+    },
+    "signal_pad_mm": [
+      0.6,
+      0.7
+    ],
+    "left_ground_polygon_mm": [
+      [
+        -1.25,
+        -0.79
+      ],
+      [
+        -0.67,
+        -0.79
+      ],
+      [
+        -0.67,
+        -0.27
+      ],
+      [
+        -0.75,
+        -0.19
+      ],
+      [
+        -0.75,
+        0.19
+      ],
+      [
+        -0.67,
+        0.27
+      ],
+      [
+        -0.67,
+        0.79
+      ],
+      [
+        -1.25,
+        0.79
+      ]
+    ],
+    "right_ground": "mirror X",
+    "front_copper_and_resist_exclusion_polygon_mm": [
+      [
+        -0.67,
+        -0.79
+      ],
+      [
+        -0.25,
+        -0.79
+      ],
+      [
+        -0.25,
+        -0.5
+      ],
+      [
+        0.25,
+        -0.5
+      ],
+      [
+        0.25,
+        -0.79
+      ],
+      [
+        0.67,
+        -0.79
+      ],
+      [
+        0.67,
+        -0.27
+      ],
+      [
+        0.75,
+        -0.19
+      ],
+      [
+        0.75,
+        0.19
+      ],
+      [
+        0.67,
+        0.27
+      ],
+      [
+        0.67,
+        0.79
+      ],
+      [
+        0.3,
+        0.79
+      ],
+      [
+        0.3,
+        0.55
+      ],
+      [
+        -0.3,
+        0.55
+      ],
+      [
+        -0.3,
+        0.79
+      ],
+      [
+        -0.67,
+        0.79
+      ],
+      [
+        -0.67,
+        0.27
+      ],
+      [
+        -0.75,
+        0.19
+      ],
+      [
+        -0.75,
+        -0.19
+      ],
+      [
+        -0.67,
+        -0.27
+      ]
+    ],
+    "stencil_mm": 0.12,
+    "maximum_unmated_height_mm": 0.7,
+    "mated_height_1_13mm_MHF4L_mm": 1.4,
+    "assembly_clearance": "Reserve diameter7.6mm around carrier receptacle for service access; conservative envelope from manufacturer locked-harness jig drawing, not a claim this cable has a lock.",
+    "thermal_vias": 0
+  },
+  "IDC_3M_N2520_6002_RB": {
+    "source": "https://multimedia.3m.com/mws/media/330367O/3m-four-wall-header-2500-series-ts-0770.pdf",
+    "revision": "78-5100-0770-7 Rev U 2026-03-04 sheet2",
+    "body_mm": [
+      32.72,
+      8.59,
+      9.91
+    ],
+    "hole_finished_mm": 0.89,
+    "land_diameter_mm": 1.7,
+    "review": "Component-side manufacturer drawing visually reviewed; pin1 beside notch side, odd row y0, even row y-2.54. Pad annulus is engineering choice. No optional peg fitted.",
+    "mating_socket": "89120-0101HA",
+    "availability": "DigiKey exact header19891 and socket2279 at2026-09-06; snapshot is not procurement."
+  },
+  "Littelfuse_SMF_SOD123FL": {
+    "source": "https://www.littelfuse.com/assetdocs/tvs-diodes-smf-datasheet?assetguid=7eb8a5b6-bdd0-4561-8f19-0c3cc6f9b2af",
+    "revision": "SMF200W revised2023-11-02 p5",
+    "review": "Manufacturer recommended mounting pad drawing visually inspected at120% browser zoom. Standard KiCad SOD123F1.1mm pads replaced by manufacturer1.3x1.4mm pads.",
+    "pad_size_mm": [
+      1.3,
+      1.4
+    ],
+    "pad_gap_mm": 1.6,
+    "body_max_mm": [
+      3.1,
+      2,
+      1.1
+    ],
+    "terminal_span_max_mm": 3.9,
+    "polarity": "1 cathode stripe,2 anode"
+  }
+}

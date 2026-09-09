@@ -4,3 +4,18 @@ _autosave*
 fp-info-cache
 .superpowers/
 docs/datasheets/*.pdf
+.env
+.env.*
+!.env.example
+tmp/
+
+# Local state and reproducible output
+.DS_Store
+**/__pycache__/
+**/.venv/
+**/.pytest_cache/
+*.pyc
+*.kicad_prl
+compact/build/
+compact/carrier/build/
+compact/work/

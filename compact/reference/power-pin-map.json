@@ -1,0 +1,323 @@
+{
+  "TPS259470LRPWR": {
+    "pins": {
+      "5": {
+        "name": "IN",
+        "type": "power_in"
+      },
+      "6": {
+        "name": "OUT",
+        "type": "power_out"
+      },
+      "1": {
+        "name": "EN/UVLO",
+        "type": "input"
+      },
+      "2": {
+        "name": "OVLO",
+        "type": "input"
+      },
+      "7": {
+        "name": "dVdt",
+        "type": "output"
+      },
+      "9": {
+        "name": "ILM",
+        "type": "passive"
+      },
+      "10": {
+        "name": "ITIMER",
+        "type": "passive"
+      },
+      "4": {
+        "name": "~{FLT}",
+        "type": "open_collector"
+      },
+      "3": {
+        "name": "AUXOFF",
+        "type": "open_collector"
+      },
+      "8": {
+        "name": "GND",
+        "type": "power_in"
+      }
+    },
+    "footprint": "compact-usb:TI_RPW0010A",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+    "height": 15.24
+  },
+  "LTC3128IFE": {
+    "pins": {
+      "11": {
+        "name": "VIN",
+        "type": "power_in"
+      },
+      "5": {
+        "name": "RSENP",
+        "type": "passive"
+      },
+      "6": {
+        "name": "RSENS",
+        "type": "passive"
+      },
+      "7": {
+        "name": "RUN",
+        "type": "input"
+      },
+      "8": {
+        "name": "PROG",
+        "type": "passive"
+      },
+      "14": {
+        "name": "PFI",
+        "type": "input"
+      },
+      "15": {
+        "name": "MAXV",
+        "type": "passive"
+      },
+      "1": {
+        "name": "SW1",
+        "type": "passive"
+      },
+      "4": {
+        "name": "SW1",
+        "type": "passive"
+      },
+      "23": {
+        "name": "SW2",
+        "type": "passive"
+      },
+      "24": {
+        "name": "SW2",
+        "type": "passive"
+      },
+      "20": {
+        "name": "VOUTP",
+        "type": "power_out"
+      },
+      "21": {
+        "name": "VOUTP",
+        "type": "passive"
+      },
+      "19": {
+        "name": "VOUTS",
+        "type": "input"
+      },
+      "18": {
+        "name": "MID",
+        "type": "passive"
+      },
+      "16": {
+        "name": "FB",
+        "type": "input"
+      },
+      "17": {
+        "name": "PGOOD",
+        "type": "open_collector"
+      },
+      "13": {
+        "name": "PFO",
+        "type": "open_collector"
+      },
+      "2": {
+        "name": "GND",
+        "type": "power_in"
+      },
+      "3": {
+        "name": "GND",
+        "type": "passive"
+      },
+      "12": {
+        "name": "GND",
+        "type": "passive"
+      },
+      "25": {
+        "name": "EP_GND",
+        "type": "passive"
+      },
+      "9": {
+        "name": "NC_GND",
+        "type": "passive"
+      },
+      "10": {
+        "name": "NC_GND",
+        "type": "passive"
+      },
+      "22": {
+        "name": "NC_GND",
+        "type": "passive"
+      }
+    },
+    "footprint": "compact-usb:LTC_FE24_AA",
+    "datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/3128f.pdf",
+    "height": 20.32
+  },
+  "TPS62816QWRWYRQ1": {
+    "pins": {
+      "2": {
+        "name": "VIN",
+        "type": "power_in"
+      },
+      "3": {
+        "name": "SW",
+        "type": "power_out"
+      },
+      "5": {
+        "name": "FB",
+        "type": "input"
+      },
+      "9": {
+        "name": "PG",
+        "type": "open_collector"
+      },
+      "8": {
+        "name": "EN",
+        "type": "input"
+      },
+      "1": {
+        "name": "MODE/SYNC",
+        "type": "input"
+      },
+      "7": {
+        "name": "COMP/FSET",
+        "type": "input"
+      },
+      "6": {
+        "name": "SS/TR",
+        "type": "passive"
+      },
+      "4": {
+        "name": "GND",
+        "type": "power_in"
+      }
+    },
+    "footprint": "compact-usb:TI_RWY0009A",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tps62816-q1.pdf",
+    "height": 12.7
+  },
+  "TPS3808G01DBVR": {
+    "pins": {
+      "6": {
+        "name": "VDD",
+        "type": "power_in"
+      },
+      "5": {
+        "name": "SENSE",
+        "type": "input"
+      },
+      "3": {
+        "name": "~{MR}",
+        "type": "input"
+      },
+      "4": {
+        "name": "CT",
+        "type": "passive"
+      },
+      "1": {
+        "name": "~{RESET}",
+        "type": "open_collector"
+      },
+      "2": {
+        "name": "GND",
+        "type": "power_in"
+      }
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+    "height": 10.16
+  },
+  "TPS7A2033PDBVR": {
+    "pins": {
+      "1": {
+        "name": "IN",
+        "type": "power_in"
+      },
+      "3": {
+        "name": "EN",
+        "type": "input"
+      },
+      "5": {
+        "name": "OUT",
+        "type": "power_out"
+      },
+      "4": {
+        "name": "NC",
+        "type": "no_connect"
+      },
+      "2": {
+        "name": "GND",
+        "type": "power_in"
+      }
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tps7a20.pdf",
+    "height": 10.16
+  },
+  "SN74LVC1G74DCUR": {
+    "pins": {
+      "8": {
+        "name": "VCC",
+        "type": "power_in"
+      },
+      "2": {
+        "name": "D",
+        "type": "input"
+      },
+      "1": {
+        "name": "CLK",
+        "type": "input"
+      },
+      "6": {
+        "name": "~{CLR}",
+        "type": "input"
+      },
+      "7": {
+        "name": "~{PRE}",
+        "type": "input"
+      },
+      "5": {
+        "name": "Q",
+        "type": "output"
+      },
+      "3": {
+        "name": "~{Q}",
+        "type": "output"
+      },
+      "4": {
+        "name": "GND",
+        "type": "power_in"
+      }
+    },
+    "footprint": "Package_SO:VSSOP-8_2.3x2mm_P0.5mm",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf",
+    "height": 12.7
+  },
+  "SN74LVC1G17DBVR": {
+    "pins": {
+      "5": {
+        "name": "VCC",
+        "type": "power_in"
+      },
+      "2": {
+        "name": "A",
+        "type": "input"
+      },
+      "4": {
+        "name": "Y",
+        "type": "output"
+      },
+      "1": {
+        "name": "NC",
+        "type": "no_connect"
+      },
+      "3": {
+        "name": "GND",
+        "type": "power_in"
+      }
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+    "height": 10.16
+  }
+}

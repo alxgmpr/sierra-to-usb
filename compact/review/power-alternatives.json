@@ -1,0 +1,180 @@
+{
+  "classification": "Screening only. Efficiencies and hot path resistance are assumptions. No selected or qualified replacement circuit.",
+  "modem_voltage_V": 3.3941176470588235,
+  "three_amp_capability_W": 10.18235294117647,
+  "existing_two_stage_required_board_V": 4.952617860506551,
+  "rows": [
+    {
+      "topology": "existing_two_stage",
+      "vbus_at_board_V": 5,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.8280000000000001,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 10.284772035220124,
+      "demand_W": 10.18235294117647,
+      "margin_W": 0.10241909404365401
+    },
+    {
+      "topology": "direct_buck_same_current_floor",
+      "vbus_at_board_V": 5,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.92,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 11.427524483577916,
+      "demand_W": 10.18235294117647,
+      "margin_W": 1.2451715424014456
+    },
+    {
+      "topology": "direct_buck_95pct_sensitivity",
+      "vbus_at_board_V": 5,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.95,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 11.800161151520673,
+      "demand_W": 10.18235294117647,
+      "margin_W": 1.6178082103442026
+    },
+    {
+      "topology": "existing_two_stage",
+      "vbus_at_board_V": 4.75,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.8280000000000001,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 9.744383319458274,
+      "demand_W": 10.18235294117647,
+      "margin_W": -0.43796962171819587
+    },
+    {
+      "topology": "direct_buck_same_current_floor",
+      "vbus_at_board_V": 4.75,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.92,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 10.82709257717586,
+      "demand_W": 10.18235294117647,
+      "margin_W": 0.6447396359993895
+    },
+    {
+      "topology": "direct_buck_95pct_sensitivity",
+      "vbus_at_board_V": 4.75,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.95,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 11.180149943822897,
+      "demand_W": 10.18235294117647,
+      "margin_W": 0.9977970026464273
+    },
+    {
+      "topology": "existing_two_stage",
+      "vbus_at_board_V": 4.5,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.8280000000000001,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 9.203994603696422,
+      "demand_W": 10.18235294117647,
+      "margin_W": -0.9783583374800475
+    },
+    {
+      "topology": "direct_buck_same_current_floor",
+      "vbus_at_board_V": 4.5,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.92,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 10.226660670773803,
+      "demand_W": 10.18235294117647,
+      "margin_W": 0.044307729597333534
+    },
+    {
+      "topology": "direct_buck_95pct_sensitivity",
+      "vbus_at_board_V": 4.5,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.95,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 10.560138736125122,
+      "demand_W": 10.18235294117647,
+      "margin_W": 0.37778579494865205
+    },
+    {
+      "topology": "existing_two_stage",
+      "vbus_at_board_V": 4.25,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.8280000000000001,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 8.663605887934574,
+      "demand_W": 10.18235294117647,
+      "margin_W": -1.5187470532418956
+    },
+    {
+      "topology": "direct_buck_same_current_floor",
+      "vbus_at_board_V": 4.25,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.92,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 9.626228764371747,
+      "demand_W": 10.18235294117647,
+      "margin_W": -0.5561241768047225
+    },
+    {
+      "topology": "direct_buck_95pct_sensitivity",
+      "vbus_at_board_V": 4.25,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.95,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 9.940127528427348,
+      "demand_W": 10.18235294117647,
+      "margin_W": -0.24222541274912146
+    },
+    {
+      "topology": "existing_two_stage",
+      "vbus_at_board_V": 4.0,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.8280000000000001,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 8.123217172172723,
+      "demand_W": 10.18235294117647,
+      "margin_W": -2.0591357690037473
+    },
+    {
+      "topology": "direct_buck_same_current_floor",
+      "vbus_at_board_V": 4.0,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.92,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 9.025796857969691,
+      "demand_W": 10.18235294117647,
+      "margin_W": -1.1565560832067785
+    },
+    {
+      "topology": "direct_buck_95pct_sensitivity",
+      "vbus_at_board_V": 4.0,
+      "input_A": 2.6105735060958946,
+      "path_ohm": 0.056,
+      "efficiency_assumed": 0.95,
+      "auxiliary_input_W": 0.25,
+      "modem_W": 9.320116320729573,
+      "demand_W": 10.18235294117647,
+      "margin_W": -0.8622366204468968
+    }
+  ],
+  "duration_policy": "No module pulse duration inferred. Require 3A continuous capability for the replacement, so 3A burst duration is not a storage-sizing assumption. Sub-100us transients still require loop/local-capacitor qualification.",
+  "capacitor_conflict": {
+    "quectel_recommended_nominal_uF": 440,
+    "at_plus20pct_uF": 528,
+    "tps62816_max_total_uF": 470,
+    "excess_before_MLCC_and_modem_uF": 58
+  }
+}
