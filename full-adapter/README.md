@@ -14,8 +14,10 @@ memory support, qualified power and Ethernet magnetics, and BGA escape analysis.
 See [qualification findings and outstanding work](QUALIFICATION.md), the
 [proposed bring-up and manufacturing test plan](TEST-PLAN.md), and
 [machine-readable screening results](research/engineering-screen.json).
-There is no new schematic or routed board: ERC, schematic/PCB parity, DRC,
-Gerber inspection and 3D clearance verification have **not been run**.
+There is no integrated schematic or routed board yet. A new
+[processor escape coupon](studies/README.md) contains real routing and its own
+DRC evidence; it is not a system design or release. System ERC, schematic/PCB
+parity, DRC, Gerber inspection and 3D clearance verification have **not been run**.
 
 Reproduce the preliminary arithmetic with
 `python3 full-adapter/research/engineering_screen.py` from the repository root.

@@ -1,0 +1,105 @@
+"""Fail-closed CAD checkpoint checks. Coupon checks never authorize release."""
+from collections import Counter
+from pathlib import Path
+import importlib.util
+import json
+import subprocess
+import sys
+import tempfile
+
+ROOT = Path(__file__).resolve().parents[1]
+PYTHON = ROOT / "full-adapter/.venv/bin/python"
+if Path(sys.executable).parent != PYTHON.parent:
+    if not PYTHON.is_file():
+        raise SystemExit("Install full-adapter CAD validation dependencies first")
+    result = subprocess.run([str(PYTHON), __file__, *sys.argv[1:]])
+    raise SystemExit(result.returncode)
+
+import sexpdata as sx
+
+
+def children(node, tag):
+    return [v for v in node if isinstance(v, list) and str(v[0]) == tag]
+
+
+def one(node, tag):
+    return children(node, tag)[0]
+
+
+def check():
+    tracked = subprocess.check_output(["git", "ls-files", "--cached"], cwd=ROOT, text=True).splitlines()
+    cad = {p for p in tracked if p.endswith((".kicad_pcb", ".kicad_sch", ".kicad_pro"))}
+    coupon = "full-adapter/studies/processor-escape"
+    allowed = {coupon + ".kicad_pcb", coupon + ".kicad_pro"}
+    assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
+    assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"
+    # Validate the staged snapshot, not a possibly newer/older file on disk.
+    with tempfile.TemporaryDirectory(prefix="full-adapter-check-") as tmp:
+        stage = Path(tmp)
+        for path in tracked:
+            if path.startswith("full-adapter/"):
+                dest = stage / path
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes(subprocess.check_output(["git", "show", ":" + path], cwd=ROOT))
+        board_path = stage / (coupon + ".kicad_pcb")
+        board = sx.loads(board_path.read_text())
+        source = json.loads((stage / "full-adapter/research/processor-pins.json").read_text())
+        pins = {p["ball"]: p for p in source["pins"]}
+        assert len(pins) == 636
+        fp = children(board, "footprint")
+        assert len(fp) == 1 and one(fp[0], "property")[2] == "U1"
+        pads = children(fp[0], "pad")
+        assert len(pads) == 636 and {p[1] for p in pads} == set(pins)
+        for pad in pads:
+            assert one(pad, "at")[1:3] == pins[pad[1]]["xy_mm"]
+        # Physical signal anchors from the manufacturer pin tables, independent
+        # of the escape generator's selection logic.
+        anchors = {"G1": "DDR3_DQS0P", "G2": "DDR3_DQS0N", "A9": "DDR3_DQ17",
+                   "D8": "DDR3_CS0n", "B4": "DDR3_CLKP", "A4": "DDR3_CLKN",
+                   "U27": "USB3_HOST1_SSRXN", "U28": "USB3_HOST1_SSRXP",
+                   "V27": "USB3_HOST1_SSTXN", "V28": "USB3_HOST1_SSTXP",
+                   "P24": "USB3_HOST1_DP", "P25": "USB3_HOST1_DM",
+                   "W27": "PCIE20_TXP", "W28": "PCIE20_TXN",
+                   "Y27": "PCIE20_RXP", "Y28": "PCIE20_RXN"}
+        pad_nets = {p[1]: one(p, "net")[1] for p in pads if children(p, "net")}
+        assert all(pad_nets[ball] == net for ball, net in anchors.items())
+        report = json.loads((stage / "full-adapter/studies/processor-escape.json").read_text())
+        assert report["status"] == "GEOMETRIC_ESCAPE_STUDY_NOT_RELEASE"
+        assert report["selected_signals"] == report["escaped_signals"] == 114
+        assert not report["failures"]
+        segments = children(board, "segment")
+        assert len(segments) == 228
+        origin = one(fp[0], "at")[1:3]
+        for route in report["routes"]:
+            assert pad_nets[route["ball"]] == route["net"]
+            start = [a + b for a, b in zip(origin, pins[route["ball"]]["xy_mm"])]
+            assert all(abs(a - b) < 1e-6 for a, b in zip(start, route["path"][0]))
+            assert max(abs(c - 20) for c in route["path"][-1]) >= 13
+            actual = [s for s in segments if one(s, "net")[1] == route["net"]]
+            assert len(actual) == 2
+            for s, (a, b) in zip(actual, zip(route["path"], route["path"][1:])):
+                assert one(s, "start")[1:3] == a and one(s, "end")[1:3] == b
+                assert one(s, "layer")[1] == route["layer"]
+                assert one(s, "width")[1] == .09
+        project = json.loads((stage / (coupon + ".kicad_pro")).read_text())
+        rules = project["board"]["design_settings"]["rules"]
+        assert rules["min_hole_clearance"] >= .2 and rules["min_clearance"] >= .1
+        drc_path = stage / "drc.json"
+        subprocess.run(["/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli", "pcb", "drc",
+                        str(board_path), "--format", "json", "-o", str(drc_path)], check=True,
+                       stdout=subprocess.DEVNULL)
+        drc = json.loads(drc_path.read_text())
+        kinds = Counter(v["type"] for v in drc["violations"])
+        assert not [v for v in drc["violations"] if v["type"] not in
+                    {"via_dangling", "track_dangling", "lib_footprint_issues", "lib_footprint_mismatch"}], kinds
+        assert kinds["track_dangling"] == 114 and kinds["via_dangling"] == 199, kinds
+        assert len(drc["unconnected_items"]) == 251
+        assert all("full-adapter" in v["description"] for v in drc["violations"]
+                   if v["type"] == "lib_footprint_issues"), "Unexpected library fault"
+        print("Coupon checkpoint: 636 pad positions, 114 escape paths, critical USB/PCIe/DDR anchors checked.")
+        print("Fresh DRC: no geometry faults. UNFINISHED: 251 unconnected items, 199 dangling vias,")
+        print("114 dangling ends. System ERC/parity/DRC and release remain NOT PASSED.")
+
+
+if __name__ == "__main__":
+    check()

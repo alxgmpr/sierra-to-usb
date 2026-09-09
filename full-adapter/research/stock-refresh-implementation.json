@@ -1,0 +1,315 @@
+{
+  "queried_at_utc": {
+    "current_time": "2026-09-09 18:51:44 UTC"
+  },
+  "queries": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "query": "RK3568B2",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"results\":[{\"lcsc\":\"C3345225\",\"model\":\"RK3568B2\",\"manufacturer\":\"Rockchip\",\"package\":\"FCCSP-636L\",\"stock\":111,\"price\":18.8219,\"price_10\":17.5365,\"library_type\":\"extended\",\"preferred\":false,\"category\":\"Embedded Processors & Controllers\",\"subcategory\":\"Microcontrollers (MCU/MPU/SOC)\",\"subcategory_id\":2584,\"mounting_type\":\"smd\",\"specs\":{}},{\"lcsc\":\"C9900136656\",\"model\":\"LGA-RK3568B2\",\"manufacturer\":\"JLCPCB Assembly\",\"package\":\"LGA-447_40X40\",\"stock\":0,\"price\":0.0396,\"price_10\":0.0204,\"library_type\":\"extended\",\"preferred\":false,\"category\":\"Others\",\"subcategory\":\"New Arrivals\",\"subcategory_id\":3286,\"mounting_type\":\"smd\",\"specs\":{}}],\"page\":1,\"per_page\":5,\"total\":2,\"total_pages\":1,\"has_more\":false}"
+            }
+          ],
+          "structuredContent": {
+            "results": [
+              {
+                "lcsc": "C3345225",
+                "model": "RK3568B2",
+                "manufacturer": "Rockchip",
+                "package": "FCCSP-636L",
+                "stock": 111,
+                "price": 18.8219,
+                "price_10": 17.5365,
+                "library_type": "extended",
+                "preferred": false,
+                "category": "Embedded Processors & Controllers",
+                "subcategory": "Microcontrollers (MCU/MPU/SOC)",
+                "subcategory_id": 2584,
+                "mounting_type": "smd",
+                "specs": {}
+              },
+              {
+                "lcsc": "C9900136656",
+                "model": "LGA-RK3568B2",
+                "manufacturer": "JLCPCB Assembly",
+                "package": "LGA-447_40X40",
+                "stock": 0,
+                "price": 0.0396,
+                "price_10": 0.0204,
+                "library_type": "extended",
+                "preferred": false,
+                "category": "Others",
+                "subcategory": "New Arrivals",
+                "subcategory_id": 3286,
+                "mounting_type": "smd",
+                "specs": {}
+              }
+            ],
+            "page": 1,
+            "per_page": 5,
+            "total": 2,
+            "total_pages": 1,
+            "has_more": false
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "query": "RK809-5",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"results\":[{\"lcsc\":\"C2939628\",\"model\":\"RK809-5\",\"manufacturer\":\"Rockchip\",\"package\":\"QFN-68-EP(7x7)\",\"stock\":2333,\"price\":2.4602,\"price_10\":2.1103,\"library_type\":\"extended\",\"preferred\":false,\"category\":\"Power Management (PMIC)\",\"subcategory\":\"Power Management - Specialized\",\"subcategory_id\":3006,\"mounting_type\":\"smd\",\"specs\":{\"Operating Temperature\":\"-40℃~+125℃\",\"Output Current\":\"2.5A\",\"Input Voltage\":\"2.7V~5.5V\",\"Features\":\"Dynamic voltage scaling、Power-on timing control\",\"Output Voltage\":\"0.5V~3.4V、0.5V~2.4V、0.6V~3.4V、1.5V~3.6V\",\"Interface\":\"I2C\"}},{\"lcsc\":\"C20417421\",\"model\":\"RK809-5A\",\"manufacturer\":\"Rockchip\",\"package\":\"QFN-68(7x7)\",\"stock\":727,\"price\":2.2486,\"price_10\":1.8956,\"library_type\":\"extended\",\"preferred\":false,\"category\":\"Power Management (PMIC)\",\"subcategory\":\"Power Management - Specialized\",\"subcategory_id\":3006,\"mounting_type\":\"smd\",\"specs\":{\"Operating Temperature\":\"-40℃~+125℃\",\"Output Current\":\"0.1A、0.4A、1.5A、2.5A\",\"Input Voltage\":\"2.7V~5.5V\",\"Features\":\"Dynamic voltage scaling、Power-on timing control\",\"Output Voltage\":\"0.5V~3.4V、0.5V~2.4V、0.6V~3.4V、1.5V~3.6V\",\"Interface\":\"I2C\"}},{\"lcsc\":\"C9900298663\",\"model\":\"RK809-5A\",\"manufacturer\":\"JLCPCB Assembly\",\"package\":\"QFN-68(7x7)\",\"stock\":0,\"price\":0.0396,\"price_10\":0.0204,\"library_type\":\"extended\",\"preferred\":false,\"category\":\"Others\",\"subcategory\":\"SMT\",\"subcategory_id\":2248,\"mounting_type\":\"smd\",\"specs\":{}}],\"page\":1,\"per_page\":5,\"total\":3,\"total_pages\":1,\"has_more\":false}"
+            }
+          ],
+          "structuredContent": {
+            "results": [
+              {
+                "lcsc": "C2939628",
+                "model": "RK809-5",
+                "manufacturer": "Rockchip",
+                "package": "QFN-68-EP(7x7)",
+                "stock": 2333,
+                "price": 2.4602,
+                "price_10": 2.1103,
+                "library_type": "extended",
+                "preferred": false,
+                "category": "Power Management (PMIC)",
+                "subcategory": "Power Management - Specialized",
+                "subcategory_id": 3006,
+                "mounting_type": "smd",
+                "specs": {
+                  "Operating Temperature": "-40℃~+125℃",
+                  "Output Current": "2.5A",
+                  "Input Voltage": "2.7V~5.5V",
+                  "Features": "Dynamic voltage scaling、Power-on timing control",
+                  "Output Voltage": "0.5V~3.4V、0.5V~2.4V、0.6V~3.4V、1.5V~3.6V",
+                  "Interface": "I2C"
+                }
+              },
+              {
+                "lcsc": "C20417421",
+                "model": "RK809-5A",
+                "manufacturer": "Rockchip",
+                "package": "QFN-68(7x7)",
+                "stock": 727,
+                "price": 2.2486,
+                "price_10": 1.8956,
+                "library_type": "extended",
+                "preferred": false,
+                "category": "Power Management (PMIC)",
+                "subcategory": "Power Management - Specialized",
+                "subcategory_id": 3006,
+                "mounting_type": "smd",
+                "specs": {
+                  "Operating Temperature": "-40℃~+125℃",
+                  "Output Current": "0.1A、0.4A、1.5A、2.5A",
+                  "Input Voltage": "2.7V~5.5V",
+                  "Features": "Dynamic voltage scaling、Power-on timing control",
+                  "Output Voltage": "0.5V~3.4V、0.5V~2.4V、0.6V~3.4V、1.5V~3.6V",
+                  "Interface": "I2C"
+                }
+              },
+              {
+                "lcsc": "C9900298663",
+                "model": "RK809-5A",
+                "manufacturer": "JLCPCB Assembly",
+                "package": "QFN-68(7x7)",
+                "stock": 0,
+                "price": 0.0396,
+                "price_10": 0.0204,
+                "library_type": "extended",
+                "preferred": false,
+                "category": "Others",
+                "subcategory": "SMT",
+                "subcategory_id": 2248,
+                "mounting_type": "smd",
+                "specs": {}
+              }
+            ],
+            "page": 1,
+            "per_page": 5,
+            "total": 3,
+            "total_pages": 1,
+            "has_more": false
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "query": "H5TQ4G63EFR-RDC",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"results\":[{\"lcsc\":\"C3151835\",\"model\":\"MKR3256M1688MBD-107\",\"manufacturer\":\"MK\",\"package\":\"FBGA-96\",\"stock\":0,\"price\":4.0205,\"price_10\":3.4543,\"library_type\":\"extended\",\"preferred\":false,\"category\":\"Memory\",\"subcategory\":\"DDR SDRAM\",\"subcategory_id\":3167,\"mounting_type\":\"smd\",\"specs\":{\"Operating Temperature\":\"0℃~+95℃\",\"Clock Frequency\":\"933MHz\",\"Memory Size\":\"4Gbit\",\"Voltage - Supply\":\"1.35V\",\"Features\":\"Auto precharge function、Dynamic on-chip termination、ZQ calibration function、Asynchronous reset function、Write leveling function、Auto self-refresh、Output enable\",\"Current - Supply\":\"84mA\",\"Refresh Current\":\"12mA\",\"Memory Format\":\"DDR3L SDRAM\"}},{\"lcsc\":\"C2803259\",\"model\":\"H5TQ4G63EFR-RDC\",\"manufacturer\":\"SK HYNIX\",\"package\":\"FBGA-96\",\"stock\":3177,\"price\":16.5554,\"price_10\":15.8248,\"library_type\":\"extended\",\"preferred\":false,\"category\":\"Memory\",\"subcategory\":\"DDR SDRAM\",\"subcategory_id\":3167,\"mounting_type\":\"smd\",\"specs\":{\"Clock Frequency\":\"1.066GHz\",\"Operating Temperature\":\"0℃~+95℃\",\"Memory Size\":\"4Gbit\",\"Voltage - Supply\":\"1.425V~1.575V\",\"Features\":\"Auto precharge function、Data mask function、Dynamic on-chip termination、ZQ calibration function、Asynchronous reset function、Write leveling function、Auto self-refresh\",\"Refresh Current\":\"-\",\"Current - Supply\":\"-\",\"Memory Format\":\"DDR3 SDRAM\"}}],\"page\":1,\"per_page\":5,\"total\":2,\"total_pages\":1,\"has_more\":false}"
+            }
+          ],
+          "structuredContent": {
+            "results": [
+              {
+                "lcsc": "C3151835",
+                "model": "MKR3256M1688MBD-107",
+                "manufacturer": "MK",
+                "package": "FBGA-96",
+                "stock": 0,
+                "price": 4.0205,
+                "price_10": 3.4543,
+                "library_type": "extended",
+                "preferred": false,
+                "category": "Memory",
+                "subcategory": "DDR SDRAM",
+                "subcategory_id": 3167,
+                "mounting_type": "smd",
+                "specs": {
+                  "Operating Temperature": "0℃~+95℃",
+                  "Clock Frequency": "933MHz",
+                  "Memory Size": "4Gbit",
+                  "Voltage - Supply": "1.35V",
+                  "Features": "Auto precharge function、Dynamic on-chip termination、ZQ calibration function、Asynchronous reset function、Write leveling function、Auto self-refresh、Output enable",
+                  "Current - Supply": "84mA",
+                  "Refresh Current": "12mA",
+                  "Memory Format": "DDR3L SDRAM"
+                }
+              },
+              {
+                "lcsc": "C2803259",
+                "model": "H5TQ4G63EFR-RDC",
+                "manufacturer": "SK HYNIX",
+                "package": "FBGA-96",
+                "stock": 3177,
+                "price": 16.5554,
+                "price_10": 15.8248,
+                "library_type": "extended",
+                "preferred": false,
+                "category": "Memory",
+                "subcategory": "DDR SDRAM",
+                "subcategory_id": 3167,
+                "mounting_type": "smd",
+                "specs": {
+                  "Clock Frequency": "1.066GHz",
+                  "Operating Temperature": "0℃~+95℃",
+                  "Memory Size": "4Gbit",
+                  "Voltage - Supply": "1.425V~1.575V",
+                  "Features": "Auto precharge function、Data mask function、Dynamic on-chip termination、ZQ calibration function、Asynchronous reset function、Write leveling function、Auto self-refresh",
+                  "Refresh Current": "-",
+                  "Current - Supply": "-",
+                  "Memory Format": "DDR3 SDRAM"
+                }
+              }
+            ],
+            "page": 1,
+            "per_page": 5,
+            "total": 2,
+            "total_pages": 1,
+            "has_more": false
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "query": "RTL8125BG-CG",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"results\":[{\"lcsc\":\"C3013605\",\"model\":\"RTL8125BG-CG\",\"manufacturer\":\"Realtek Semicon\",\"package\":\"QFN-48-EP(6x6)\",\"stock\":2136,\"price\":4.4533,\"price_10\":3.8025,\"library_type\":\"extended\",\"preferred\":false,\"category\":\"Interface\",\"subcategory\":\"Ethernet Transceivers\",\"subcategory_id\":3072,\"mounting_type\":\"smd\",\"specs\":{\"Operating Temperature\":\"0℃~+70℃\",\"Type\":\"-\",\"Voltage - Supply\":\"950mV、3.3V\",\"Number of ports\":\"-\",\"MAC Interface\":\"-\"}}],\"page\":1,\"per_page\":5,\"total\":1,\"total_pages\":1,\"has_more\":false}"
+            }
+          ],
+          "structuredContent": {
+            "results": [
+              {
+                "lcsc": "C3013605",
+                "model": "RTL8125BG-CG",
+                "manufacturer": "Realtek Semicon",
+                "package": "QFN-48-EP(6x6)",
+                "stock": 2136,
+                "price": 4.4533,
+                "price_10": 3.8025,
+                "library_type": "extended",
+                "preferred": false,
+                "category": "Interface",
+                "subcategory": "Ethernet Transceivers",
+                "subcategory_id": 3072,
+                "mounting_type": "smd",
+                "specs": {
+                  "Operating Temperature": "0℃~+70℃",
+                  "Type": "-",
+                  "Voltage - Supply": "950mV、3.3V",
+                  "Number of ports": "-",
+                  "MAC Interface": "-"
+                }
+              }
+            ],
+            "page": 1,
+            "per_page": 5,
+            "total": 1,
+            "total_pages": 1,
+            "has_more": false
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "query": "750317065",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"results\":[],\"page\":1,\"per_page\":5,\"total\":0,\"total_pages\":0,\"has_more\":false}"
+            }
+          ],
+          "structuredContent": {
+            "results": [],
+            "page": 1,
+            "per_page": 5,
+            "total": 0,
+            "total_pages": 0,
+            "has_more": false
+          },
+          "isError": false
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "query": "V24C13SWU",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"results\":[],\"page\":1,\"per_page\":5,\"total\":0,\"total_pages\":0,\"has_more\":false}"
+            }
+          ],
+          "structuredContent": {
+            "results": [],
+            "page": 1,
+            "per_page": 5,
+            "total": 0,
+            "total_pages": 0,
+            "has_more": false
+          },
+          "isError": false
+        }
+      }
+    }
+  ]
+}

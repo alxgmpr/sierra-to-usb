@@ -6,15 +6,13 @@ The requested integrated board has **not been implemented**. There is no new
 schematic, PCB, routed layout, released BOM or fabrication/assembly package.
 The following is preserved engineering research, not a design release.
 
-The implementation limit in this attempt is the absence of a completed,
-independently checked 636-ball processor escape, DDR topology, power tree and
-bootable subsystem. A routing engine, KiCad installation or reference schematic
-alone does not establish those capabilities. I have not demonstrated that I can
-produce and verify that layout here. This is a limitation of this implementation
-attempt, not evidence that this board is impossible or that manufacturer
-documentation does not exist. The remaining qualification work below is also
-unfinished work; unsuccessful individual downloads are not proof of unavailable
-documentation.
+Implementation has resumed. The [processor escape study](studies/README.md)
+cross-checks all 636 balls and routes 114 selected signals outside the package
+using three signal layers with no copper/drill-clearance violations in its first
+KiCad check. It does not yet include matched pairs, an impedance-qualified
+stackup, power planes, DDR devices or a bootable subsystem. These remain active
+engineering work, not a demonstrated external blocker. Historical results below
+are superseded only where newer evidence is explicitly linked.
 
 ## Candidate architecture, not frozen
 
