@@ -29,7 +29,8 @@ def check(root=ROOT):
             if rail=='VCC3V3_PMU':expected.add(('R300','1'))
             assert nets[rail]==expected,(rail,nets[rail]^expected)
         assert nets['VCC3V3_SYS']=={('U5','22'),('U5','30'),('U5','4'),
-                                    ('C400','1'),('C404','1'),('C408','1')}
+                                    ('C400','1'),('C404','1'),('C408','1'),
+                                    ('U5','24'),('C420','1'),('C421','1')}
         for n in range(400,412):
             ref=f'C{n}';part=parts[ref]
             assert (ref,'2') in nets['GND']

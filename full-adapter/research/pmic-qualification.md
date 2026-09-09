@@ -57,3 +57,35 @@ ample headroom; their thermal dissipation still belongs in the PMIC budget.
 all twelve capacitor returns and the CPU enable source. The remaining buck,
 RTC/control, audio-unused and switch units are still being captured. This
 checkpoint does not establish full-system power integrity or authorize fabrication.
+
+## DDR buck capture
+
+BUCK3 is captured in `cad/pmic-ddr.kicad_sch`: pin 24 receives VCC3V3_SYS;
+pin 25 drives L420; pin 26 senses the resulting VCC_DDR output; pin 27 receives
+the hardware divider. The 0.47 uH SPM5030T-R47M (C501964, 257 units indexed)
+uses the existing officially generated SPM5030 footprint. TDK's exact part
+page specifies 5.94 mOhm maximum DCR, 11 A typical 20%-drop saturation current,
+14 A typical 40 C-rise current, and the same 1.5 / 2.7 / 2.2 mm land dimensions.
+See [TDK's exact part page](https://product.tdk.com/en/search/inductor/inductor/smd/info?part_no=SPM5030T-R47M).
+Those typical current ratings are not guaranteed fault-current limits. RK809
+BUCK3 remains a 1.5 A output. Stock and manufacturer facts are retained in
+`pmic-buck-passives.json`; the smaller SPM4030 candidate was not selected.
+
+R420 is 87.6 kohm RT0402BRD0787K6L (C852937); R421 is 100 kohm
+RT0402BRD07100KL (C852472), both 0.1% / 25 ppm/C. The resulting nominal output
+is 1.5008 V. With the PMIC's 0.784–0.816 V feedback limits, initial resistor
+tolerance and opposing temperature coefficients over -40 to +85 C, the
+calculated static range is 1.46719–1.53458 V. This leaves approximately
+42.2 / 40.4 mV below/above for dynamic error and aging within the Hynix
+1.425–1.575 V limits. Ripple, transients and aging are not yet qualified.
+The reference design's 110k / 120k, 1% divider would exceed the upper DDR3
+limit at a worst-case static corner; it is deliberately not copied.
+
+C420/C421 provide 44 uF nominal local input bypass; C422–C424 provide 66 uF
+nominal local output bypass, in addition to the DDR-side bank. All are the
+already recorded Samsung 25 V X5R 22 uF part. The typical DC-bias data supports
+the choice, but combined temperature/bias/aging remains a prototype check.
+The VCC_DDR flag represents the actual SW3 -> L420 -> output path, as KiCad
+does not propagate a power-output type through the passive inductor. It is
+not an ERC exclusion. `check_pmic_ddr.py` verifies that path and the independent
+divider nodes from a fresh exported netlist.

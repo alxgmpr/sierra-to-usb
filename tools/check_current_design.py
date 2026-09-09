@@ -33,7 +33,7 @@ def check():
     allowed = {coupon + ".kicad_pcb", coupon + ".kicad_pro"}
     ddr_cad = {"full-adapter/cad/" + p for p in
                ("full-adapter.kicad_sch", "full-adapter.kicad_pro",
-                "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch")}
+                "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch", "pmic-ddr.kicad_sch")}
     allowed |= ddr_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
     assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"
@@ -132,6 +132,12 @@ def check():
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
         print("PMIC LDO checkpoint: nine outputs, twelve capacitors and CPU enable source checked; PMIC integration unfinished.")
+        spec = importlib.util.spec_from_file_location(
+            "staged_pmic_ddr_checks", stage / "full-adapter/tools/check_pmic_ddr.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("PMIC DDR checkpoint: switching path, hardware divider and local bypass checked; upstream power unfinished.")
 
 
 if __name__ == "__main__":

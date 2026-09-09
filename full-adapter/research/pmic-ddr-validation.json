@@ -1,0 +1,21 @@
+{
+  "status": "PMIC_DDR_CAPTURE_CHECKPOINT_NOT_RELEASE",
+  "nominal_V": 1.5008,
+  "static_V_with_initial_tolerance_and_TCR": [
+    1.4671878239620992,
+    1.5345786609850858
+  ],
+  "temperature_range_C": [
+    -40,
+    85
+  ],
+  "remaining_low_high_margin_V": [
+    0.04218782396209919,
+    0.04042133901491418
+  ],
+  "ripple_transient_aging_qualified": false,
+  "local_input_caps": 2,
+  "local_output_caps": 3,
+  "pmic_buck3_max_output_A": 1.5,
+  "upstream_power_integrated": false
+}
