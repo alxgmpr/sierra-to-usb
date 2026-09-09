@@ -4,6 +4,7 @@
   "ground_balls": 208,
   "bypass_capacitors": 21,
   "remote_sense_ball": "M15",
-  "regulators_integrated": false,
+  "regulators_integrated": true,
+  "upstream_power_integrated": false,
   "system_routed": false
 }

@@ -61,8 +61,9 @@ class Sheet:
             hidden = i > 1 or key == 'Reference' and (name.startswith('power:') or nodes(symbol, 'power'))
             pp.append(f'(property {Q(key)} {Q(val)} (at {px} {py} {angle if not custom else 0}) {effects(justify=justify)}' + (' (hide yes)' if hidden else '') + ')')
         sid = uid(self.name + '/' + ref + '/' + str(unit))
-        bom = 'no' if ref.startswith('#') else 'yes'
-        self.items.append(f'(symbol (lib_id {Q(name)}) (at {x} {y} {angle}) (unit {unit}) (in_bom {bom}) (on_board {bom}) (dnp {"yes" if dnp else "no"}) (uuid {Q(sid)}) ' + '\n'.join(pp) + '\n' +
+        bom = 'no' if ref.startswith('#') or name == 'Device:NetTie_2' else 'yes'
+        on_board = 'no' if ref.startswith('#') else 'yes'
+        self.items.append(f'(symbol (lib_id {Q(name)}) (at {x} {y} {angle}) (unit {unit}) (in_bom {bom}) (on_board {on_board}) (dnp {"yes" if dnp else "no"}) (uuid {Q(sid)}) ' + '\n'.join(pp) + '\n' +
             '\n'.join(f'(pin {Q(one(p,"number")[1])} (uuid {Q(uid(sid+one(p,"number")[1]))}))' for p in pins) +
             f'(instances (project "full-adapter" (path {Q(self.path)} (reference {Q(ref)}) (unit {unit})))))')
         result = {}

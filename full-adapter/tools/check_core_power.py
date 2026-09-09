@@ -44,6 +44,10 @@ def check(root=ROOT):
             if rail == 'VDD_CPU':
                 expected |= {('L300','2'),('R301','1'),('C305','1')}
                 expected |= {(f'C{i}','1') for i in range(306,310)}
+            else:
+                i={'VDD_LOGIC':0,'VDD_GPU':1,'VDD_NPU':2}[rail]
+                expected |= {(f'L{430+i}','2'),(f'R{430+i}','1'),(f'NT{430+i}','1')}
+                expected |= {(f'C{n}','1') for n in range(432+i*10,436+i*10)}
             assert nets[rail] == expected, (rail, nets[rail] ^ expected)
         assert nets['VDD_CPU_COM'] == {('U1','M15'),('U4','A4'),('R301','2'),('C305','2')}
         ground_balls = {p['ball'] for p in source['pins'] if p['pin_type'] in {'G', 'AG'}}
@@ -53,7 +57,7 @@ def check(root=ROOT):
         assert 'AB24' not in actual, 'TVSS is a temperature reference input, not ground'
     return {'status': 'CORE_POWER_CAPTURE_CHECKPOINT_NOT_RELEASE', 'core_supply_balls': 30,
             'ground_balls': 208, 'bypass_capacitors': 21, 'remote_sense_ball': 'M15',
-            'regulators_integrated': False, 'system_routed': False}
+            'regulators_integrated': True, 'upstream_power_integrated': False, 'system_routed': False}
 
 
 if __name__ == '__main__':

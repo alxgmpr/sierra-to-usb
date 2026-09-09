@@ -101,6 +101,10 @@ def check(root, output=None):
         for ref,val in {'R101':'49.9R 1%','R102':'49.9R 1%','R103':'120R 1%','R104':'1kR 1%','R105':'1kR 1%','R106':'240R 1%','R107':'240R 1%','C101':'100pF C0G'}.items():
             assert components[ref].findtext('value')==val
         for ref,c in components.items():
+            if ref in {'NT430','NT431','NT432'}:
+                assert c.find('libsource').get('part')=='NetTie_2'
+                assert c.find("property[@name='exclude_from_bom']") is not None
+                continue
             fields={f.get('name'):f.text for f in c.findall('fields/field')}
             assert fields.get('MPN') and fields.get('LCSC'),ref
         # No waived integration findings: these are the exact open work at this
@@ -110,7 +114,7 @@ def check(root, output=None):
         counts=Counter(v['type'] for s in erc_data['sheets'] for v in s['violations'])
         # CPU and DDR are driven through L300/L420 (documented power flags).
         # Remaining core, GND and upstream rails await capture; I2C awaits host.
-        expected={'missing_power_pin':2,'missing_input_pin':2,'missing_bidi_pin':2,'missing_unit':2,'power_pin_not_driven':6,'isolated_pin_label':2,'pin_not_driven':1}
+        expected={'missing_power_pin':2,'missing_input_pin':2,'missing_bidi_pin':2,'missing_unit':2,'power_pin_not_driven':3,'isolated_pin_label':2,'pin_not_driven':1}
         assert counts==expected,counts
         summary={'status':'DDR_CAPTURE_CHECKPOINT_NOT_RELEASE','library_pins_checked':732,'dq_nets':32,'dqs_pairs':4,'dm_nets':4,'shared_ca_nets':len(ca),'clock_rc':'2 x 49.9R 1%, common 100pF C0G to ground','erc_open_integration_findings':dict(counts),'system_routed':False}
         if output:

@@ -1,0 +1,459 @@
+　
+Features
+● Package size:                    3.2 x 1.5 mm, t = 0.9 mm Max.
+● Nominal frequency range:  32.768 kHz
+● Frequency tolerance:          ±20 x 10-6 (+25 °C ± 5 °C)
+● Operating temperature:      -40 °C to +85 °C
+                                               (-40 °C to +105 °C) Please contact Epson
+● ESR:                                  50 kΩ Max.
+Applications
+●  Wearable products
+● Low power MCUs for sub-clock
+● Wireless modules for sub-clock
+Description
+Outline Drawing and Terminal Assignment
+Unit: mm
+Pin
+Connection
+#1
+X'tal
+#2
+X'tal
+3.2 x 1.5 mm size 32.768 kHz Crystal Unit: FC-135R
+Low ESR (50 kΩ Max.)
+#1 
+#2 
+Internal 
+Connection 
+The FC-135R is a low ESR (50 kΩ Max.) version of Epson's widely adopted FC-135, 32.768 kHz 
+crystal unit.
+Ideal for MCU sub-clocks and modules from consumer devices to industrial equipment applications.
+For extended temperature range applications up to +105 °C, please contact Epson.
+Epson is a leading supplier of kHz-band crystal units and offers a lineup of oscillators with built-in 
+oscillator circuit ICs and real-time clock modules with built-in real-time clock ICs, in addition to crystal 
+units. 
+FC-135R
+(3.2 x 1.5 mm, t = 0.9 mm Max.)
+0.9 Max. 
+0.65 
+1.7 
+#1 
+#2 
+0.1 
+1.3 
+3.2±0.1 
+1.5±0.1 
+ 
+0.35 
+Page 1 / 8
+Document No FC-135R_E_Ver2.0
+
+[ 1 ] Product Number / Product Name
+(1-1) Product Number 
+　　　　X1A000141xxxx00　　(Please contact Epson for details)
+(1-2) Product Name (Standard Form)
+　　　FC-135R 　32.768000kHz 　12.5 　+20.0-20.0
+　　 　 ①　　　　　②　　　　　 ③　　　　④
+           ①Model　②Frequency　③Load capacitance (pF)   ④Frequency tolerance (x10-6 , +25 °C)
+[ 2 ] Absolute Maximum Ratings
+Min.
+Typ.
+Max.
+Storage temperature range
+T_stg
+-55
+-
++125
+°C
+Maximum level of drive
+GL
+-
+0.5
+1.0
+μW
+Not destroyed
+[ 3 ] Operating Conditions
+Min.
+Typ.
+Max.
+-40
+-
++85
+-40
+-
++105
+Please contact Epson
+0.01
+0.1
+0.5
+0.01
+0.5
+1.0
+Please contact Epson
+[ 4 ] Static Characteristics
+Item
+Symbol
+Unit
+Condition / Remarks
+Nominal frequency range
+f_nom
+kHz
+Frequency tolerance
+f_tol
+x10-6
+T_use = +25 °C ± 3 °C
+DL = 0.1 μW
+Does not include
+frequency aging
+Turnover temperature
+Ti
+°C
+Parabolic coefficient
+B
+x10-6 / °C2
+Motional resistance (ESR)
+R1
+kΩ
+Measuring instrument:
+Saunders: 140-B CI meter
+DL = 0.5 μW
+Motional capacitance
+C1
+fF
+Shunt capacitance
+C0
+pF
+Load capacitance
+CL
+pF
+Please specify
+Isolation resistance
+IR
+MΩ
+Frequency aging
+f_age
+x10-6
+T_use = +25 °C, DL = 0.1 μW
+First year
+μW
+1.0 Typ.
+7, 9, 12.5
+500 Min.
+±3 Max
+3.4 Typ.
+32.768
+±20
+50 Max.
++25 ± 5
+-0.04 Max.
+Specifications
+Item
+Symbol
+Rating value
+Unit
+Note
+Operating temperature range
+Level of drive
+T_use
+DL
+°C
+Item
+Symbol
+Rating value
+Unit
+Note
+Page 2 / 8
+Document No FC-135R_E_Ver2.0
+
+[ 5 ] Frequency versus Temperature Characteristics 
+          Simulation data
+[ 6 ] Marking Description
+internal ID
+Frequency symbol
+A: 32.768 kHz
+Year of manufacture
+(Last digit of the year)
+A 0 2 0 L
+Weekly code
+-300
+-250
+-200
+-150
+-100
+-50
+0
+50
+-40 -30 -20 -10
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+Frequency (Δf) [x10-6]
+Temperature [°C]
+FC-135R Frequency versus temperature
+Characteristics simulation data
+Ti = 20 [°C]
+Ti = 25 [°C]
+Ti = 30 [°C]
+B = -0.04 x 10-6 / °C2
+Δf = B(Ti - Arbitrary Temperature)2
+Page 3 / 8
+Document No FC-135R_E_Ver2.0
+
+[ 7 ] Outline Drawing and Recommended Footprint
+Unit: mm
+Pin
+Connection
+#1
+X'tal
+#2
+X'tal
+ Reference weight Typ.: 11 mg
+　　　Terminal coating: Au plating
+[ 8 ] Moisture Sensitivity Level
+Parameter
+MSL
+LEVEL1
+IPC/JEDEC J-STD-020D.1
+Specification
+Conditions
+#1 
+#2 
+Internal 
+Connection 
+Do not design any circuit   
+patterns in the shaded area. 
+0.9 Max. 
+0.65 
+1.7 
+#1 
+#2 
+0.1 
+1.3 
+3.2±0.1 
+1.5±0.1 
+ 
+0.35 
+1.0
+1.8
+2.5
+Page 4 / 8
+Document No FC-135R_E_Ver2.0
+
+[ 9 ] Reflow Profile (IPC/JEDEC J-STD-020D.1)
+ Temperature [ C ]  
+60 
+300 
+250 
+200 
+150 
+100 
+50 
+0 
+ Time [ s ]  
+120 
+180 
+240 
+300 
+360 
+420 
+480 
+540 
+600 
+660 
+720 
+780 
+ Ts min   ; +150 C 
+ Ts max  ; +200 C 
+ TL      
+; +217 C 
+         
+ +255 C 
+ tp ; at least 30 s 
+TP      
+; +260 C  OVER 
+ Time +25 C to Peak 
+Ramp-up rate 
++3 °C/s Max. 
+tL 
+60 s  to  150 s 
+ts 
+60 s  to  120 s 
+Ramp-down rate 
+-6 °C/s Max. 
+Page 5 / 8
+Document No FC-135R_E_Ver2.0
+
+[ 10 ] Packing Information
+　　(1) Packing Quantity
+       The last two digits of the Product Number (X1A000141xxxx00) are a code that defines the packing quantity
+       The standard is "00" for a 3 000 pcs/Reel.
+   　(2) Taping Specification
+         Compliant to EIA-481, IEC 60286 and JIS C0806 
+            (2-1) Tape Dimensions   
+                   Carrier Tape Material  : PS (Polystyrene)
+                   Top Tape Material       : PET (Polyethylene Terephthalate) +PE (Polyethylene)
+             (2-2) Reel Dimensions
+                   Center Material   : PS (Polystyrene)
+                   Reel Material      : PS (Polystyrene)
+User direction of feed
+               10P：40±0.1 
+Φ1.0 -0 
+4.0±0.1 
+Φ1.5 -0 
++0.1 
+1.9±0.1 
+2.0±0.05 4.0±0.1 
+3.6±0.1 
+1.0±0.1 
+12.1±0.2 
+5.5±0.05 
+1.75±0.1 
+0.3±0.05 
++0.2 
+2 -0  
+Φ180      
+Φ160 
+Φ76 
++0 
+-3.0 
+Φ 3 
+Φ21±0.8 
+15.4±1  
+13±0.3 
+Φ60  
+Φ13±0.2 
++0.3 
+Epson
+Page 6 / 8
+Document No FC-135R_E_Ver2.0
+
+[ 11 ] Handling Precautions
+Please review the "Handling Precautions" on our website for proper handling and 
+behavior to ensure the performance of your equipment/product. 
+(https://www5.epsondevice.com/en/information/#precaution) In addition to the "Handling 
+Precautions" on the website, please also pay attention to the following to avoid 
+deterioration of product performance.
+1. Max three (3) times reflow is allowed.
+In case of rework by soldering iron, its condition should be +350 ºC max. + within 5 sec.
+2. Applying excessive shock or vibration to the crystal unit may causes deterioration damage.
+The product may be damaged depends on the condition such as shock in assembly machine.
+Please check if your condition is safe in advance.
+And in case of assembly condition change, please check it again in advance.
+3.  Shortest line pattern on PCB is recommended.
+Too long line on PCB may causes abnormal oscillation.
+4. Failures covered by free warranty period are limited to the cases where the product is used under the usage and
+environment described in the specifications. In addition, products that have been opened 
+(including partially opened, modified, or intended to be opened) are not covered. In order to ensure frequency 
+accuracy and prevent moisture condensation due to sudden temperature changes, 
+it is recommended to store and use in normal room temperature and humidity.
+If the product is stored for a long period (one year or more), please check solderability of the terminals before use.
+5.  Ultrasonic cleaning may cause resonant damage of the crystal unit depend on its condition.
+Since we are unable to specify the conditions (type of cleaning unit, power, time, condition inside the bath, etc.)
+at your company, we cannot guarantee the performance of the product when it is cleaned by ultrasonic cleaner.
+6.  Condensation on oscillator circuit board may causes frequency shift or oscillation stop.
+Please use the product under the condition there is no condensation.
+7.  If excessive drive level is applied to the crystal unit, it may cause performance deterioration and
+damages. Please design appropriate drive level on the circuit.
+8.  Characteristics differences between our measurement and your company’s measurement may occur depending on
+measurement method and conditions. Please check it thoroughly before use.
+9. Do not place signal lines, power lines, or GND lines in mounting area of the product, its inner layer, or its back side.
+In order to avoid malfunction due to induction of other signal lines, please do not place signal 
+lines near the product. It may affect product characteristics.
+10.If there is no margin in negative resistance of the oscillator circuit, the crystal unit may not oscillate or may take a 
+long time to oscillate. Therefore, negative resistance in the oscillator circuit should be at least five times of the 
+crystal unit’s equivalent series resistance. Please follow this circuit design rule.
+11.Aging specifications are estimated value of frequency shift from reliability test results. It does not mean to guarantee
+product lifecycle.
+12.If customer wants to use our product contrary to this caution and advice, please use it at your own risk.
+1) Insert a pure resistance " r " in series with the crystal oscillator.
+2) Adjust " r " to find the maximum " r " value that starts oscillation
+3) Look at the value of "r " in the oscillation state of 2). 
+Negative resistance of the circuit |-R| =
+r + crystal unit series resistance value R1
+Guideline for negative resistance |-R|:
+|-R| > R1 Max. x 5
+Rf
+r
+RD
+CG
+X'tal
+CD
+<How to check the negative resistance>
+Page 7 / 8
+Document No FC-135R_E_Ver2.0
+
+PROMOTION OF ENVIRONMENTAL MANAGEMENT SYSTEM
+CONFORMING TO INTERNATIONAL STANDARDS
+At Seiko Epson, all environmental initiatives operate under the
+Plan-Do-Check-Action (PDCA) cycle designed to achieve continuous
+improvements. The environmental management system (EMS)
+operates under the ISO 14001 environmental management standard. 
+All of our major manufacturing and non-manufacturing sites, in
+Japan and overseas, completed the acquisition of ISO 14001 certification. 
+WORKING FOR HIGH QUALITY
+In order provide high quality and reliable products and services
+than meet customer needs, Seiko Epson made early efforts towards
+obtaining ISO9000 series certification and has acquired ISO9001 for
+all business establishments in Japan and abroad. We have also
+acquired IATF 16949 certification that is requested strongly by major
+manufacturers as standard.
+■ Explanation of marks used in this datasheet
+●Complies with EU RoHS directive.
+*About the products without the Pb-free mark.
+Contains Pb in products exempted by EU RoHS directive
+(Contains Pb in sealing glass, high melting temperature type solder or other)
+ISO 14000 is an international standard for environmental 
+management that was established by the International Standards 
+Organization in 1996 against the background of growing concern 
+regarding global warming, destruction of the ozone layer, and global 
+deforestation.
+IATF 16949 is the international standard that added the sector-
+specific supplemental requirements for automotive industry based on 
+ISO9001. 
+NOTICE：PLEASE READ CAREFULLY BELOW BEFORE THE USE OF THIS DOCUMENT 
+――――――――――――――――――――――――――――――――――――――――――――――――――――
+1. The content of this document is subject to change without notice. Before purchasing or using Epson products, please contact with sales 
+representative of Seiko Epson Corporation (“Epson”) for the latest information and be always sure to check the latest information published
+on Epson’s official web sites and resources. 
+2. This document may not be copied, reproduced, or used for any other purposes, in whole or in part, without Epson’s prior consent.
+3. Information provided in this document including, but not limited to application circuits, programs and usage, is for reference purpose only.
+Epson makes no guarantees against any infringements or damages to any third parties’ intellectual property rights or any other rights
+resulting from the information. This document does not grant you any licenses, any intellectual property rights or any other rights with respect
+to Epson products owned by Epson or any third parties.
+4. Epson has prepared this document carefully to be accurate and dependable, but Epson does not guarantee that the information is always
+accurate and complete. Epson assumes no responsibility for any damages you incurred due to any misinformation in this document.
+5. Epson products listed in this document and our associated technologies shall not be used in any equipment or systems that laws and
+regulations in Japan or any other countries prohibit to manufacture, use or sell.  Furthermore, Epson products and our associated
+technologies shall not be used for the purposes of military weapons development (e.g. mass destruction weapons), military use, or any other
+military applications.  If exporting Epson products or our associated technologies, please be sure to comply with the Foreign Exchange and 
+Foreign Trade Control Act in Japan, Export Administration Regulations in the U.S.A (EAR) and other export-related laws and regulations in
+Japan and any other countries and to follow their required procedures.  
+6. Epson assumes no responsibility for any damages (whether direct or indirect) caused by or in relation with your non-compliance with the
+terms and conditions in this document or for any damages (whether direct or indirect) incurred by any third party that you give, transfer or
+assign Epson products.
+7. For more details or other concerns about this document, please contact our sales representative.
+8. Company names and product names listed in this document are trademarks or registered trademarks of their respective companies.
+●Disclaimer
+1. Epson products are designed for use in general electronic equipment applications that do not require extremely high reliability or safety.
+2. Epson does not represent or warrant that its products will not cause a failure for any particular application, except for cases where the 
+failure is a direct result caused by defects in materials and workmanship of this product.
+If a product fails due to defects in materials and workmanship, to the maximum extent permitted by law, we will, at our sole discretion, 
+refund  or replace the affected product.
+3. When products for used directly or indirectly in certain devices or applications (ex. Nuclear power, aerospace, infrastructure facilities, 
+medical equipment, etc.) which are connected to or affect safety of human life or property, Customer is solely responsible for determining 
+if the products and respective specifications are suitable for the intended use in particular customer applications.
+Customer shall implement necessary and proper safety design and measures (including redundant design, malfunction prevention
+design, etc.) to ensure reliability and safety before using the products in/with customer’s Equipment.
+4. No dismantling, analysis, reverse engineering, modification, alteration, adaptation, reproduction, etc., of Epson products is allowed.
+Furthermore, any defects caused by this are not covered by the warranty.
+©Seiko Epson Corporation 2025
+Page 8 / 8
+Document No FC-135R_E_Ver2.0

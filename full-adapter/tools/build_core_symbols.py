@@ -214,7 +214,8 @@ def main():
     vdd = next(v for v in std if isinstance(v, list) and str(v[0]) == 'symbol' and v[1] == 'VDD')
     for rail in ('VCC_DDR', 'VDD_CPU', 'VDD_LOGIC', 'VDD_GPU', 'VDD_NPU', 'VCC5V_SYS', 'VCC3V3_PMU',
                  'VCC3V3_SYS', 'VDD0V9_IMAGE', 'VDD0V9_ANLG', 'VDD0V9_PMU', 'VCC3V3_CODEC',
-                 'VCC_SDIO', 'VCC1V8_ANLG', 'VCC1V8_PMU', 'VCC1V8_IMAGE'):
+                 'VCC_SDIO', 'VCC1V8_ANLG', 'VCC1V8_PMU', 'VCC1V8_IMAGE',
+                 'VCC1V8_SYS', 'VCC3V3_S0', 'VCC3V3_SD'):
         power = copy.deepcopy(vdd)
         def rename(node):
             for i, v in enumerate(node):

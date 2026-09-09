@@ -89,3 +89,37 @@ The VCC_DDR flag represents the actual SW3 -> L420 -> output path, as KiCad
 does not propagate a power-output type through the passive inductor. It is
 not an ERC exclusion. `check_pmic_ddr.py` verifies that path and the independent
 divider nodes from a fresh exported netlist.
+
+## Remaining power outputs and unused audio
+
+`pmic-core.kicad_sch` captures BUCK1/2/4 with SPM5030T-R47M inductors,
+two 22 uF local inputs and three 22 uF plus 100 nF local outputs each.
+The 100 ohm resistors between output banks and feedback retain the topology
+shown on the tablet reference page 22. NT430–NT432 are native KiCad copper-only
+ties intended for U1 supply pads. They keep the dedicated feedback traces
+separate in CAD until the physical load-side joining point. They must not
+be placed at the PMIC, and are excluded from the assembly BOM. Actual placement,
+transient/stability checks and PMIC thermal dissipation remain unfinished.
+
+`pmic-aux.kicad_sch` captures the 1.8 V BUCK5 with the same inductor and
+two input / three output 22 uF capacitors. FB5 senses its output bank directly.
+SWOUT1 and SWOUT2 carry the 3.3 V inputs, not the BUCK5 output. They provide
+VCC3V3_S0 and VCC3V3_SD respectively, with local 1 uF bypass; SD I/O remains
+on the independently programmable LDO5 VCC_SDIO rail. Their final loads must
+respect the switch current ratings, resistance/voltage drop and sequencing.
+
+`pmic-control.kicad_sch` currently captures the unused codec. The six specified
+pins are grounded and eleven specified pins are explicitly left open. C480/C481
+are 1 uF on the internal 1.8 V outputs, with no external source connected.
+Pin 33 receives 3.3 V with C482 10 uF bypass; its permitted input range is
+2.7–5.5 V (datasheet page 25). System-control unit 10 is still absent.
+
+The RTC candidates are recorded in `pmic-control-passives.json`. Epson's
+FC-135R manufacturer drawing, `reference/fc-135r-en.pdf` page 4, was obtained
+and visually reviewed: 3.2 x 1.5 x 0.9 mm, two 1.0 x 1.8 mm lands at 2.5 mm
+center spacing and no circuit patterns under the shaded center. The candidate
+is the 12.5 pF / 20 ppm variant; 22 pF capacitors require approximately 1.5 pF
+stray loading for nominal tuning. Footprint verification, oscillator margin,
+drive level and actual control capture remain next work. Auto-start VDC must
+be delayed relative to the shared 3.3 V supply; do not assume the reference's
+independent battery/VBUS timing applies to this board.

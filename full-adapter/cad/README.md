@@ -2,7 +2,7 @@
 
 Open `full-adapter.kicad_pro`. The root hierarchy currently contains the DDR
 signal and power pages, processor core power and ground, the CPU regulator,
-the nine PMIC LDO outputs, and the DDR regulator.
+the nine PMIC LDO outputs, all five PMIC bucks, both supply switches and unused audio.
 The integrated PCB and remaining functional pages
 are still being implemented.
 
@@ -46,9 +46,21 @@ before firmware runs. `check_pmic_ddr.py` verifies switching-node isolation,
 the separate FB3 divider, VBUCK3 sense and resistor tolerance arithmetic.
 The VCC_DDR flag represents this physical buck/inductor path.
 
-The current ERC result has seventeen **unresolved integration findings**, with no
+BUCK1/2/4 now supply LOGIC/GPU/NPU. NT430–NT432 are copper net ties to be placed
+at the processor supply pads, with dedicated feedback nets and local 100 ohm
+resistors following the reference topology. They are excluded from the assembly
+BOM. Each buck has two 22 uF input capacitors and three 22 uF plus 100 nF at
+its output. The corresponding physical sense routing is still unfinished.
+
+BUCK5 provides VCC1V8_SYS, separate from the 3.3 V inputs/output switches.
+SWOUT1 provides VCC3V3_S0; SWOUT2 provides VCC3V3_SD. Their peripheral loads
+and complete current/drop budgets remain outstanding. The control page now
+terminates unused audio pins exactly as specified, retaining both internal
+1.8 V bypass capacitors and a 3.3 V speaker-supply input bypass.
+
+The current ERC result has fourteen **unresolved integration findings**, with no
 ERC exclusions: unplaced U1/U5 units, input pins, bidirectional pins and power
-pins; six undriven rails (GND, LOGIC/GPU/NPU, VCC5V_SYS and
+pins; three undriven rails (GND, VCC5V_SYS and
 VCC3V3_SYS); isolated CPU regulator SDA/SCL labels; and undriven SCL. The remaining PMIC units,
 upstream supplies and other processor units are not yet captured. These are
 open work, not manufacturing exceptions. There are no
@@ -56,7 +68,7 @@ additional ERC findings in this checkpoint.
 
 The schematic PDF was rendered and visually iterated to fix rotated passive
 fields, supply-reference overlap, power-label collisions and page-boundary
-placement. The checked working render is `../build/pmic-ddr-review.pdf`; it is
+placement. The checked working render is `../build/pmic-power-review.pdf`; it is
 not a released schematic or fabrication deliverable.
 
 ## Library review
@@ -97,6 +109,9 @@ Run from the repository root with `full-adapter/.venv/bin/python`:
 7. `full-adapter/tools/check_pmic_library.py`
 8. `full-adapter/tools/check_pmic_ldo.py`
 9. `full-adapter/tools/check_pmic_ddr.py`
+10. `full-adapter/tools/check_pmic_core.py`
+11. `full-adapter/tools/check_pmic_aux.py`
+12. `full-adapter/tools/check_pmic_control.py`
 
 The pre-commit checks validate the staged snapshot and reject unregistered CAD.
 Their DDR checkpoint success does not authorize fabrication or imply that the

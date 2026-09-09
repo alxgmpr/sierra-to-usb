@@ -1,0 +1,589 @@
+{
+  "checked_date": "2026-09-09",
+  "crystal": {
+    "lcsc": "C6554955",
+    "model": "FC-135R 32.7680KA-A3",
+    "manufacturer": "Seiko Epson",
+    "package": "SMD3215-2P",
+    "stock": 12035,
+    "price": 0.2397,
+    "price_10": 0.1914,
+    "library_type": "extended",
+    "preferred": false,
+    "category": "Crystals, Oscillators, Resonators",
+    "subcategory": "Crystals",
+    "subcategory_id": 3043,
+    "mounting_type": "smd",
+    "specs": {
+      "Load Capacitance": "12.5pF",
+      "Operating Temperature": "-40\u2103~+85\u2103",
+      "Normal temperature Frequency Tolerance": "\u00b120ppm",
+      "Equivalent Series Resistance(ESR)": "50k\u03a9",
+      "Frequency": "32.768kHz"
+    },
+    "description": "-40\u2103~+85\u2103 12.5pF 32.768kHz 50k\u03a9 \u00b120ppm SMD3215-2P Crystals ROHS",
+    "min_order": 1,
+    "reel_qty": 3000,
+    "datasheet": null,
+    "lcsc_url": null,
+    "prices": [
+      {
+        "qty": "1+",
+        "price": 0.2397
+      },
+      {
+        "qty": "50+",
+        "price": 0.1914
+      },
+      {
+        "qty": "150+",
+        "price": 0.1707
+      },
+      {
+        "qty": "500+",
+        "price": 0.1449
+      },
+      {
+        "qty": "3000+",
+        "price": 0.1333
+      },
+      {
+        "qty": "6000+",
+        "price": 0.1265
+      }
+    ],
+    "attributes": [
+      {
+        "name": "Load Capacitance",
+        "value": "12.5pF"
+      },
+      {
+        "name": "Operating Temperature",
+        "value": "-40\u2103~+85\u2103"
+      },
+      {
+        "name": "Normal temperature Frequency Tolerance",
+        "value": "\u00b120ppm"
+      },
+      {
+        "name": "Equivalent Series Resistance(ESR)",
+        "value": "50k\u03a9"
+      },
+      {
+        "name": "Frequency",
+        "value": "32.768kHz"
+      }
+    ],
+    "has_easyeda_footprint": null,
+    "easyeda_symbol_uuid": null,
+    "easyeda_footprint_uuid": null
+  },
+  "resistor_22": {
+    "results": [
+      {
+        "lcsc": "C25092",
+        "model": "0402WGF220JTCE",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0402",
+        "stock": 6967714,
+        "price": 0.0033,
+        "price_10": null,
+        "library_type": "basic",
+        "preferred": true,
+        "category": "Resistors",
+        "subcategory": "Chip Resistor - Surface Mount",
+        "subcategory_id": 2980,
+        "mounting_type": "smd",
+        "description": "-55\u2103~+155\u2103 22\u03a9 50V 62.5mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0402 Chip Resistor - Surface Mount ROHS",
+        "specs": {
+          "Resistance": "22\u03a9",
+          "Operating Temperature": "-55\u2103~+155\u2103",
+          "Power(Watts)": "62.5mW",
+          "Type": "Thick Film Resistor",
+          "Voltage-Supply(Max)": "50V",
+          "Tolerance": "\u00b11%",
+          "Temperature Coefficient": "\u00b1100ppm/\u2103"
+        }
+      }
+    ],
+    "total": 250,
+    "page_info": {
+      "limit": 1,
+      "offset": 0,
+      "returned": 1
+    },
+    "filters_applied": {
+      "query": "22",
+      "subcategory_id": 2980,
+      "subcategory_name": "chip resistor - surface mount",
+      "subcategory_resolved": "Chip Resistor - Surface Mount",
+      "category_id": null,
+      "category_name": null,
+      "category_resolved": null,
+      "spec_filters": [
+        {
+          "name": "Tolerance",
+          "op": "=",
+          "value": "1%"
+        }
+      ],
+      "library_type": null,
+      "prefer_no_fee": true,
+      "min_stock": 10,
+      "package": "0402",
+      "packages": null,
+      "manufacturer": null,
+      "match_all_terms": true
+    },
+    "library_type_counts": {
+      "basic": 3,
+      "preferred": 1,
+      "extended": 246
+    },
+    "no_fee_available": true,
+    "parsed": {
+      "original_query": "22 resistor 0402 1%",
+      "detected": {
+        "package": "0402",
+        "component_type": "resistor",
+        "subcategory": "chip resistor - surface mount",
+        "values": [
+          {
+            "raw": "1%",
+            "type": "tolerance",
+            "normalized": "1%"
+          }
+        ]
+      },
+      "subcategory": "chip resistor - surface mount",
+      "package": "0402",
+      "mounting_type": null,
+      "spec_filters": [
+        {
+          "name": "Tolerance",
+          "op": "=",
+          "value": "1%"
+        }
+      ],
+      "remaining_text": "22"
+    }
+  },
+  "pullup_2k2": {
+    "results": [
+      {
+        "lcsc": "C25879",
+        "model": "0402WGF2201TCE",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0402",
+        "stock": 1546140,
+        "price": 0.004,
+        "price_10": null,
+        "library_type": "basic",
+        "preferred": true,
+        "category": "Resistors",
+        "subcategory": "Chip Resistor - Surface Mount",
+        "subcategory_id": 2980,
+        "mounting_type": "smd",
+        "description": "-55\u2103~+155\u2103 2.2k\u03a9 50V 62.5mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0402 Chip Resistor - Surface Mount ROHS",
+        "specs": {
+          "Resistance": "2.2k\u03a9",
+          "Operating Temperature": "-55\u2103~+155\u2103",
+          "Power(Watts)": "62.5mW",
+          "Type": "Thick Film Resistor",
+          "Voltage-Supply(Max)": "50V",
+          "Tolerance": "\u00b11%",
+          "Temperature Coefficient": "\u00b1100ppm/\u2103"
+        }
+      }
+    ],
+    "total": 58,
+    "page_info": {
+      "limit": 1,
+      "offset": 0,
+      "returned": 1
+    },
+    "filters_applied": {
+      "query": null,
+      "subcategory_id": 2980,
+      "subcategory_name": "chip resistor - surface mount",
+      "subcategory_resolved": "Chip Resistor - Surface Mount",
+      "category_id": null,
+      "category_name": null,
+      "category_resolved": null,
+      "spec_filters": [
+        {
+          "name": "Resistance",
+          "op": "=",
+          "value": "2.2kOhm"
+        },
+        {
+          "name": "Tolerance",
+          "op": "=",
+          "value": "1%"
+        }
+      ],
+      "library_type": null,
+      "prefer_no_fee": true,
+      "min_stock": 10,
+      "package": "0402",
+      "packages": null,
+      "manufacturer": null,
+      "match_all_terms": true
+    },
+    "library_type_counts": {
+      "basic": 1,
+      "preferred": 0,
+      "extended": 57
+    },
+    "no_fee_available": true,
+    "parsed": {
+      "original_query": "2.2k resistor 0402 1%",
+      "detected": {
+        "package": "0402",
+        "component_type": "resistor",
+        "subcategory": "chip resistor - surface mount",
+        "values": [
+          {
+            "raw": "2.2k",
+            "type": "resistance",
+            "normalized": "2.2kOhm"
+          },
+          {
+            "raw": "1%",
+            "type": "tolerance",
+            "normalized": "1%"
+          }
+        ]
+      },
+      "subcategory": "chip resistor - surface mount",
+      "package": "0402",
+      "mounting_type": null,
+      "spec_filters": [
+        {
+          "name": "Resistance",
+          "op": "=",
+          "value": "2.2kOhm"
+        },
+        {
+          "name": "Tolerance",
+          "op": "=",
+          "value": "1%"
+        }
+      ],
+      "remaining_text": ""
+    }
+  },
+  "pullup_10k": {
+    "results": [
+      {
+        "lcsc": "C25744",
+        "model": "0402WGF1002TCE",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0402",
+        "stock": 29051281,
+        "price": 0.0031,
+        "price_10": null,
+        "library_type": "basic",
+        "preferred": true,
+        "category": "Resistors",
+        "subcategory": "Chip Resistor - Surface Mount",
+        "subcategory_id": 2980,
+        "mounting_type": "smd",
+        "description": "-55\u2103~+155\u2103 10k\u03a9 50V 62.5mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0402 Chip Resistor - Surface Mount ROHS",
+        "specs": {
+          "Resistance": "10k\u03a9",
+          "Operating Temperature": "-55\u2103~+155\u2103",
+          "Power(Watts)": "62.5mW",
+          "Type": "Thick Film Resistor",
+          "Voltage-Supply(Max)": "50V",
+          "Tolerance": "\u00b11%",
+          "Temperature Coefficient": "\u00b1100ppm/\u2103"
+        }
+      }
+    ],
+    "total": 64,
+    "page_info": {
+      "limit": 1,
+      "offset": 0,
+      "returned": 1
+    },
+    "filters_applied": {
+      "query": null,
+      "subcategory_id": 2980,
+      "subcategory_name": "chip resistor - surface mount",
+      "subcategory_resolved": "Chip Resistor - Surface Mount",
+      "category_id": null,
+      "category_name": null,
+      "category_resolved": null,
+      "spec_filters": [
+        {
+          "name": "Resistance",
+          "op": "=",
+          "value": "10kOhm"
+        },
+        {
+          "name": "Tolerance",
+          "op": "=",
+          "value": "1%"
+        }
+      ],
+      "library_type": null,
+      "prefer_no_fee": true,
+      "min_stock": 10,
+      "package": "0402",
+      "packages": null,
+      "manufacturer": null,
+      "match_all_terms": true
+    },
+    "library_type_counts": {
+      "basic": 1,
+      "preferred": 0,
+      "extended": 63
+    },
+    "no_fee_available": true,
+    "parsed": {
+      "original_query": "10k resistor 0402 1%",
+      "detected": {
+        "package": "0402",
+        "component_type": "resistor",
+        "subcategory": "chip resistor - surface mount",
+        "values": [
+          {
+            "raw": "10k",
+            "type": "resistance",
+            "normalized": "10kOhm"
+          },
+          {
+            "raw": "1%",
+            "type": "tolerance",
+            "normalized": "1%"
+          }
+        ]
+      },
+      "subcategory": "chip resistor - surface mount",
+      "package": "0402",
+      "mounting_type": null,
+      "spec_filters": [
+        {
+          "name": "Resistance",
+          "op": "=",
+          "value": "10kOhm"
+        },
+        {
+          "name": "Tolerance",
+          "op": "=",
+          "value": "1%"
+        }
+      ],
+      "remaining_text": ""
+    }
+  },
+  "divider_56k": {
+    "results": [
+      {
+        "lcsc": "C25796",
+        "model": "0402WGF5602TCE",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0402",
+        "stock": 285007,
+        "price": 0.0035,
+        "price_10": null,
+        "library_type": "preferred",
+        "preferred": true,
+        "category": "Resistors",
+        "subcategory": "Chip Resistor - Surface Mount",
+        "subcategory_id": 2980,
+        "mounting_type": "smd",
+        "description": "-55\u2103~+155\u2103 50V 56k\u03a9 62.5mW Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0402 Chip Resistor - Surface Mount ROHS",
+        "specs": {
+          "Resistance": "56k\u03a9",
+          "Operating Temperature": "-55\u2103~+155\u2103",
+          "Power(Watts)": "62.5mW",
+          "Type": "Thick Film Resistor",
+          "Voltage-Supply(Max)": "50V",
+          "Tolerance": "\u00b11%",
+          "Temperature Coefficient": "\u00b1100ppm/\u2103"
+        }
+      }
+    ],
+    "total": 47,
+    "page_info": {
+      "limit": 1,
+      "offset": 0,
+      "returned": 1
+    },
+    "filters_applied": {
+      "query": null,
+      "subcategory_id": 2980,
+      "subcategory_name": "chip resistor - surface mount",
+      "subcategory_resolved": "Chip Resistor - Surface Mount",
+      "category_id": null,
+      "category_name": null,
+      "category_resolved": null,
+      "spec_filters": [
+        {
+          "name": "Resistance",
+          "op": "=",
+          "value": "56kOhm"
+        },
+        {
+          "name": "Tolerance",
+          "op": "=",
+          "value": "1%"
+        }
+      ],
+      "library_type": null,
+      "prefer_no_fee": true,
+      "min_stock": 10,
+      "package": "0402",
+      "packages": null,
+      "manufacturer": null,
+      "match_all_terms": true
+    },
+    "library_type_counts": {
+      "basic": 0,
+      "preferred": 1,
+      "extended": 46
+    },
+    "no_fee_available": true,
+    "parsed": {
+      "original_query": "56k resistor 0402 1%",
+      "detected": {
+        "package": "0402",
+        "component_type": "resistor",
+        "subcategory": "chip resistor - surface mount",
+        "values": [
+          {
+            "raw": "56k",
+            "type": "resistance",
+            "normalized": "56kOhm"
+          },
+          {
+            "raw": "1%",
+            "type": "tolerance",
+            "normalized": "1%"
+          }
+        ]
+      },
+      "subcategory": "chip resistor - surface mount",
+      "package": "0402",
+      "mounting_type": null,
+      "spec_filters": [
+        {
+          "name": "Resistance",
+          "op": "=",
+          "value": "56kOhm"
+        },
+        {
+          "name": "Tolerance",
+          "op": "=",
+          "value": "1%"
+        }
+      ],
+      "remaining_text": ""
+    }
+  },
+  "load_capacitor": {
+    "results": [
+      {
+        "lcsc": "C1555",
+        "model": "0402CG220J500NT",
+        "manufacturer": "FH (Guangdong Fenghua Advanced Tech)",
+        "package": "0402",
+        "stock": 2166801,
+        "price": 0.0053,
+        "price_10": null,
+        "library_type": "basic",
+        "preferred": true,
+        "category": "Capacitors",
+        "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+        "subcategory_id": 2929,
+        "mounting_type": "smd",
+        "description": "22pF 50V C0G \u00b15% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+        "specs": {
+          "Voltage Rating": "50V",
+          "Tolerance": "\u00b15%",
+          "Capacitance": "22pF",
+          "Temperature Coefficient": "C0G"
+        }
+      }
+    ],
+    "total": 43,
+    "page_info": {
+      "limit": 1,
+      "offset": 0,
+      "returned": 1
+    },
+    "filters_applied": {
+      "query": null,
+      "subcategory_id": 2929,
+      "subcategory_name": "multilayer ceramic capacitors mlcc - smd/smt",
+      "subcategory_resolved": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+      "category_id": null,
+      "category_name": null,
+      "category_resolved": null,
+      "spec_filters": [
+        {
+          "name": "Capacitance",
+          "op": "=",
+          "value": "22pF"
+        },
+        {
+          "name": "Temperature Coefficient",
+          "op": "=",
+          "value": "C0G"
+        }
+      ],
+      "library_type": null,
+      "prefer_no_fee": true,
+      "min_stock": 10,
+      "package": "0402",
+      "packages": null,
+      "manufacturer": null,
+      "match_all_terms": true
+    },
+    "library_type_counts": {
+      "basic": 1,
+      "preferred": 0,
+      "extended": 42
+    },
+    "no_fee_available": true,
+    "parsed": {
+      "original_query": "22pF C0G capacitor 0402",
+      "detected": {
+        "package": "0402",
+        "component_type": "capacitor",
+        "subcategory": "multilayer ceramic capacitors mlcc - smd/smt",
+        "values": [
+          {
+            "raw": "22pF",
+            "type": "capacitance",
+            "normalized": "22pF"
+          }
+        ],
+        "semantic": [
+          "c0g"
+        ]
+      },
+      "subcategory": "multilayer ceramic capacitors mlcc - smd/smt",
+      "package": "0402",
+      "mounting_type": null,
+      "spec_filters": [
+        {
+          "name": "Capacitance",
+          "op": "=",
+          "value": "22pF"
+        },
+        {
+          "name": "Temperature Coefficient",
+          "op": "=",
+          "value": "C0G"
+        }
+      ],
+      "remaining_text": ""
+    }
+  },
+  "manufacturer_pdf_url": "https://download.epsondevice.com/td/pdf/app/FC-135R_en.pdf",
+  "status": "CONTROL_PASSIVES_CANDIDATES_NOT_YET_CAPTURED",
+  "manufacturer_pdf_sha256": "652af64060da002ba500f286101b654011385f1a8d47649768d4490cb3d2ad90"
+}

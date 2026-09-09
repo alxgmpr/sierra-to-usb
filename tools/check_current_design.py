@@ -33,7 +33,7 @@ def check():
     allowed = {coupon + ".kicad_pcb", coupon + ".kicad_pro"}
     ddr_cad = {"full-adapter/cad/" + p for p in
                ("full-adapter.kicad_sch", "full-adapter.kicad_pro",
-                "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch", "pmic-ddr.kicad_sch")}
+                "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch", "pmic-ddr.kicad_sch", "pmic-core.kicad_sch", "pmic-aux.kicad_sch", "pmic-control.kicad_sch")}
     allowed |= ddr_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
     assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"
@@ -138,6 +138,24 @@ def check():
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
         print("PMIC DDR checkpoint: switching path, hardware divider and local bypass checked; upstream power unfinished.")
+        spec = importlib.util.spec_from_file_location(
+            "staged_pmic_core_checks", stage / "full-adapter/tools/check_pmic_core.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("PMIC core checkpoint: three switching paths and Kelvin feedback nets checked; physical placement unfinished.")
+        spec = importlib.util.spec_from_file_location(
+            "staged_pmic_aux_checks", stage / "full-adapter/tools/check_pmic_aux.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("PMIC auxiliary checkpoint: 1.8V buck and independent 3.3V switches checked; peripheral loads unfinished.")
+        spec = importlib.util.spec_from_file_location(
+            "staged_pmic_control_checks", stage / "full-adapter/tools/check_pmic_control.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("PMIC unused audio checkpoint: grounded/open pins and internal bypass checked; control and RTC unfinished.")
 
 
 if __name__ == "__main__":

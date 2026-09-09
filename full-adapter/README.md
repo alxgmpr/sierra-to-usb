@@ -21,8 +21,11 @@ captures the four processor core supply groups, bypass and all 208 ground balls.
 A fourth page captures the RK860-0 CPU regulator, defaults and remote sense.
 A fifth page captures the nine RK809-5 LDO outputs and their local bypass.
 A sixth page captures the DDR buck with hardware 1.5008 V selection.
+A seventh captures the LOGIC/GPU/NPU bucks and Kelvin feedback ties; an eighth
+captures BUCK5 and the two switched 3.3 V supplies. The ninth currently
+contains the unused-audio terminations, with PMIC control/RTC capture next.
 Other subsystems and the integrated PCB remain unfinished. See [the capture checkpoint](cad/README.md)
-for its exported-net checks and seventeen unresolved integration ERC findings. The
+for its exported-net checks and fourteen unresolved integration ERC findings. The
 [processor escape coupon](studies/README.md) contains real routing and its own
 DRC evidence; it is not a system design or release. Full-system ERC, schematic/PCB
 parity, DRC, Gerber inspection and 3D clearance verification have **not passed**.

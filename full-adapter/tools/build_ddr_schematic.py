@@ -159,7 +159,10 @@ def main():
     from build_cpu_power import cpu_power
     from build_pmic_ldo import pmic_ldo
     from build_pmic_ddr import pmic_ddr
-    pages=[signals(),power_page(),core_power(),cpu_power(),pmic_ldo(),pmic_ddr()]
+    from build_pmic_core import pmic_core
+    from build_pmic_aux import pmic_aux
+    from build_pmic_control import pmic_control
+    pages=[signals(),power_page(),core_power(),cpu_power(),pmic_ldo(),pmic_ddr(),pmic_core(),pmic_aux(),pmic_control()]
     root=Sheet('full-adapter','Integrated Linux USB3 modem / 2.5GbE development board',root=True)
     root.text('CURRENT DESIGN — IN PROGRESS',20.32,20.32,2.54)
     root.text('RK3568B2 + 1 GiB DDR3 + PCIe RTL8125BG-CG\nUSB3 M.2 modem; isolated PoE and USB-C auxiliary power\n\nDDR capture is present. Remaining subsystem capture and PCB routing\nare active work. This project is not a manufacturing release.',20.32,33.02,1.8)
