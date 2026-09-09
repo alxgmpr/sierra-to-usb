@@ -14,10 +14,14 @@ memory support, qualified power and Ethernet magnetics, and BGA escape analysis.
 See [qualification findings and outstanding work](QUALIFICATION.md), the
 [proposed bring-up and manufacturing test plan](TEST-PLAN.md), and
 [machine-readable screening results](research/engineering-screen.json).
-There is no integrated schematic or routed board yet. A new
+The current hierarchy starts at [cad/full-adapter.kicad_sch](cad/full-adapter.kicad_sch).
+Its two DDR pages capture the selected 1 GiB subsystem, including voltage
+references, calibration, clock termination and local bypass. Other subsystems
+and the integrated PCB remain unfinished. See [the DDR checkpoint](cad/README.md)
+for its exported-net checks and six unresolved integration ERC findings. The
 [processor escape coupon](studies/README.md) contains real routing and its own
-DRC evidence; it is not a system design or release. System ERC, schematic/PCB
-parity, DRC, Gerber inspection and 3D clearance verification have **not been run**.
+DRC evidence; it is not a system design or release. Full-system ERC, schematic/PCB
+parity, DRC, Gerber inspection and 3D clearance verification have **not passed**.
 
 Reproduce the preliminary arithmetic with
 `python3 full-adapter/research/engineering_screen.py` from the repository root.

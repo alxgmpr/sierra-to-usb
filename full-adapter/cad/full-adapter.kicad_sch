@@ -1,0 +1,8 @@
+(kicad_sch (version 20250114) (generator "full_adapter_schematic") (uuid "fda20879-fa66-56c0-be14-de2506349b46") (paper "A4")
+(title_block (title "Integrated Linux USB3 modem / 2.5GbE development board") (rev "WORK IN PROGRESS") (company "Integrated modem development board"))
+(lib_symbols )
+(text "CURRENT DESIGN — IN PROGRESS" (at 20.32 20.32 0) (effects (font (size 2.54 2.54)) (justify left top)) (uuid "277e8c42-1e50-5a25-8d5e-f81c332ddc22"))
+(text "RK3568B2 + 1 GiB DDR3 + PCIe RTL8125BG-CG\nUSB3 M.2 modem; isolated PoE and USB-C auxiliary power\n\nDDR capture is present. Remaining subsystem capture and PCB routing\nare active work. This project is not a manufacturing release." (at 20.32 33.02 0) (effects (font (size 1.8 1.8)) (justify left top)) (uuid "16866497-c345-5cc7-8ec6-dca565e0e560"))
+(sheet (at 25.4 76.2) (size 111.76 20.32) (fields_autoplaced yes) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "b1c070c5-33a6-5925-affc-d93ceccb36b3") (property "Sheetname" "1 GiB DDR3: command, data and clock termination" (at 25.4 74.93 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "ddr-signals.kicad_sch" (at 25.4 97.79 0) (effects (font (size 1.27 1.27)) (justify left top))))
+(sheet (at 25.4 116.84) (size 111.76 20.32) (fields_autoplaced yes) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "dec2022a-299e-5efb-80b8-8fb12375090e") (property "Sheetname" "DDR3 references, calibration and local bypass" (at 25.4 115.57000000000001 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "ddr-power.kicad_sch" (at 25.4 138.43 0) (effects (font (size 1.27 1.27)) (justify left top))))
+)

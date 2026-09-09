@@ -31,6 +31,10 @@ def check():
     cad = {p for p in tracked if p.endswith((".kicad_pcb", ".kicad_sch", ".kicad_pro"))}
     coupon = "full-adapter/studies/processor-escape"
     allowed = {coupon + ".kicad_pcb", coupon + ".kicad_pro"}
+    ddr_cad = {"full-adapter/cad/" + p for p in
+               ("full-adapter.kicad_sch", "full-adapter.kicad_pro",
+                "ddr-signals.kicad_sch", "ddr-power.kicad_sch")}
+    allowed |= ddr_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
     assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"
     # Validate the staged snapshot, not a possibly newer/older file on disk.
@@ -99,6 +103,11 @@ def check():
         print("Coupon checkpoint: 636 pad positions, 114 escape paths, critical USB/PCIe/DDR anchors checked.")
         print("Fresh DRC: no geometry faults. UNFINISHED: 251 unconnected items, 199 dangling vias,")
         print("114 dangling ends. System ERC/parity/DRC and release remain NOT PASSED.")
+        spec = importlib.util.spec_from_file_location(
+            "staged_ddr_checks", stage / "full-adapter/tools/check_ddr.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
 
 
 if __name__ == "__main__":

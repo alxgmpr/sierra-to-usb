@@ -1,0 +1,990 @@
+{
+  "mpn": "H5TQ4G63EFR-RDC",
+  "lcsc": "C2803259",
+  "manufacturer": "SK hynix",
+  "capacity_bits": 4294967296,
+  "organization": "256M x 16, eight banks",
+  "speed_grade": "DDR3-1866 13-13-13",
+  "voltage_v": 1.5,
+  "voltage_tolerance_v": 0.075,
+  "land_diameter_mm": 0.36,
+  "land_basis": "Vendored KiCad footprint; engineering land choice, not Hynix land recommendation",
+  "package_mm": [
+    7.5,
+    13.0
+  ],
+  "package_height_mm": 1.1,
+  "footprint": "full-adapter:FBGA-96_7.5x13mm_Layout9x16_P0.8mm",
+  "sources": {
+    "h5tq4g63efr.pdf": "00b55c6322f3e368db959beec4c8dcfe425892372e7307a6af4fce90f7a9a9bb",
+    "FBGA-96_7.5x13mm_Layout9x16_P0.8mm.kicad_mod": "5adb3ff6fb375820f673dadc9a186950f5c253a56f78b79c04ae76887f8fb363"
+  },
+  "checks": [
+    "96 table cells cross-checked to PDF page 6",
+    "Overbars visually reviewed on rendered manufacturer page 6",
+    "All ball names and coordinates match vendored footprint",
+    "Package dimensions visually checked against PDF page 33"
+  ],
+  "pins": [
+    {
+      "ball": "A1",
+      "name": "VDDQ",
+      "function": "VDDQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        -6.0
+      ]
+    },
+    {
+      "ball": "A2",
+      "name": "DQU5",
+      "function": "DQ13",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -2.4,
+        -6.0
+      ]
+    },
+    {
+      "ball": "A3",
+      "name": "DQU7",
+      "function": "DQ15",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -1.6,
+        -6.0
+      ]
+    },
+    {
+      "ball": "A7",
+      "name": "DQU4",
+      "function": "DQ12",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        1.6,
+        -6.0
+      ]
+    },
+    {
+      "ball": "A8",
+      "name": "VDDQ",
+      "function": "VDDQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        2.4,
+        -6.0
+      ]
+    },
+    {
+      "ball": "A9",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        -6.0
+      ]
+    },
+    {
+      "ball": "B1",
+      "name": "VSSQ",
+      "function": "VSSQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        -5.2
+      ]
+    },
+    {
+      "ball": "B2",
+      "name": "VDD",
+      "function": "VDD",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -2.4,
+        -5.2
+      ]
+    },
+    {
+      "ball": "B3",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -1.6,
+        -5.2
+      ]
+    },
+    {
+      "ball": "B7",
+      "name": "DQSU_N",
+      "function": "DQSU_N",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        1.6,
+        -5.2
+      ]
+    },
+    {
+      "ball": "B8",
+      "name": "DQU6",
+      "function": "DQ14",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        2.4,
+        -5.2
+      ]
+    },
+    {
+      "ball": "B9",
+      "name": "VSSQ",
+      "function": "VSSQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        -5.2
+      ]
+    },
+    {
+      "ball": "C1",
+      "name": "VDDQ",
+      "function": "VDDQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        -4.4
+      ]
+    },
+    {
+      "ball": "C2",
+      "name": "DQU3",
+      "function": "DQ11",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -2.4,
+        -4.4
+      ]
+    },
+    {
+      "ball": "C3",
+      "name": "DQU1",
+      "function": "DQ9",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -1.6,
+        -4.4
+      ]
+    },
+    {
+      "ball": "C7",
+      "name": "DQSU_P",
+      "function": "DQSU_P",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        1.6,
+        -4.4
+      ]
+    },
+    {
+      "ball": "C8",
+      "name": "DQU2",
+      "function": "DQ10",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        2.4,
+        -4.4
+      ]
+    },
+    {
+      "ball": "C9",
+      "name": "VDDQ",
+      "function": "VDDQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        -4.4
+      ]
+    },
+    {
+      "ball": "D1",
+      "name": "VSSQ",
+      "function": "VSSQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        -3.6
+      ]
+    },
+    {
+      "ball": "D2",
+      "name": "VDDQ",
+      "function": "VDDQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -2.4,
+        -3.6
+      ]
+    },
+    {
+      "ball": "D3",
+      "name": "DMU",
+      "function": "DMU",
+      "electrical_type": "input",
+      "xy_mm": [
+        -1.6,
+        -3.6
+      ]
+    },
+    {
+      "ball": "D7",
+      "name": "DQU0",
+      "function": "DQ8",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        1.6,
+        -3.6
+      ]
+    },
+    {
+      "ball": "D8",
+      "name": "VSSQ",
+      "function": "VSSQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        2.4,
+        -3.6
+      ]
+    },
+    {
+      "ball": "D9",
+      "name": "VDD",
+      "function": "VDD",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        -3.6
+      ]
+    },
+    {
+      "ball": "E1",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        -2.8
+      ]
+    },
+    {
+      "ball": "E2",
+      "name": "VSSQ",
+      "function": "VSSQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -2.4,
+        -2.8
+      ]
+    },
+    {
+      "ball": "E3",
+      "name": "DQL0",
+      "function": "DQ0",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -1.6,
+        -2.8
+      ]
+    },
+    {
+      "ball": "E7",
+      "name": "DML",
+      "function": "DML",
+      "electrical_type": "input",
+      "xy_mm": [
+        1.6,
+        -2.8
+      ]
+    },
+    {
+      "ball": "E8",
+      "name": "VSSQ",
+      "function": "VSSQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        2.4,
+        -2.8
+      ]
+    },
+    {
+      "ball": "E9",
+      "name": "VDDQ",
+      "function": "VDDQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        -2.8
+      ]
+    },
+    {
+      "ball": "F1",
+      "name": "VDDQ",
+      "function": "VDDQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        -2.0
+      ]
+    },
+    {
+      "ball": "F2",
+      "name": "DQL2",
+      "function": "DQ2",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -2.4,
+        -2.0
+      ]
+    },
+    {
+      "ball": "F3",
+      "name": "DQSL_P",
+      "function": "DQSL_P",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -1.6,
+        -2.0
+      ]
+    },
+    {
+      "ball": "F7",
+      "name": "DQL1",
+      "function": "DQ1",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        1.6,
+        -2.0
+      ]
+    },
+    {
+      "ball": "F8",
+      "name": "DQL3",
+      "function": "DQ3",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        2.4,
+        -2.0
+      ]
+    },
+    {
+      "ball": "F9",
+      "name": "VSSQ",
+      "function": "VSSQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        -2.0
+      ]
+    },
+    {
+      "ball": "G1",
+      "name": "VSSQ",
+      "function": "VSSQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        -1.2
+      ]
+    },
+    {
+      "ball": "G2",
+      "name": "DQL6",
+      "function": "DQ6",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -2.4,
+        -1.2
+      ]
+    },
+    {
+      "ball": "G3",
+      "name": "DQSL_N",
+      "function": "DQSL_N",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -1.6,
+        -1.2
+      ]
+    },
+    {
+      "ball": "G7",
+      "name": "VDD",
+      "function": "VDD",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        1.6,
+        -1.2
+      ]
+    },
+    {
+      "ball": "G8",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        2.4,
+        -1.2
+      ]
+    },
+    {
+      "ball": "G9",
+      "name": "VSSQ",
+      "function": "VSSQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        -1.2
+      ]
+    },
+    {
+      "ball": "H1",
+      "name": "VREFDQ",
+      "function": "VREFDQ",
+      "electrical_type": "input",
+      "xy_mm": [
+        -3.2,
+        -0.4
+      ]
+    },
+    {
+      "ball": "H2",
+      "name": "VDDQ",
+      "function": "VDDQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -2.4,
+        -0.4
+      ]
+    },
+    {
+      "ball": "H3",
+      "name": "DQL4",
+      "function": "DQ4",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        -1.6,
+        -0.4
+      ]
+    },
+    {
+      "ball": "H7",
+      "name": "DQL7",
+      "function": "DQ7",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        1.6,
+        -0.4
+      ]
+    },
+    {
+      "ball": "H8",
+      "name": "DQL5",
+      "function": "DQ5",
+      "electrical_type": "bidirectional",
+      "xy_mm": [
+        2.4,
+        -0.4
+      ]
+    },
+    {
+      "ball": "H9",
+      "name": "VDDQ",
+      "function": "VDDQ",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        -0.4
+      ]
+    },
+    {
+      "ball": "J1",
+      "name": "NC",
+      "function": "NC",
+      "electrical_type": "no_connect",
+      "xy_mm": [
+        -3.2,
+        0.4
+      ]
+    },
+    {
+      "ball": "J2",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -2.4,
+        0.4
+      ]
+    },
+    {
+      "ball": "J3",
+      "name": "RAS_N",
+      "function": "RAS_N",
+      "electrical_type": "input",
+      "xy_mm": [
+        -1.6,
+        0.4
+      ]
+    },
+    {
+      "ball": "J7",
+      "name": "CK_P",
+      "function": "CK_P",
+      "electrical_type": "input",
+      "xy_mm": [
+        1.6,
+        0.4
+      ]
+    },
+    {
+      "ball": "J8",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        2.4,
+        0.4
+      ]
+    },
+    {
+      "ball": "J9",
+      "name": "NC",
+      "function": "NC",
+      "electrical_type": "no_connect",
+      "xy_mm": [
+        3.2,
+        0.4
+      ]
+    },
+    {
+      "ball": "K1",
+      "name": "ODT",
+      "function": "ODT",
+      "electrical_type": "input",
+      "xy_mm": [
+        -3.2,
+        1.2
+      ]
+    },
+    {
+      "ball": "K2",
+      "name": "VDD",
+      "function": "VDD",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -2.4,
+        1.2
+      ]
+    },
+    {
+      "ball": "K3",
+      "name": "CAS_N",
+      "function": "CAS_N",
+      "electrical_type": "input",
+      "xy_mm": [
+        -1.6,
+        1.2
+      ]
+    },
+    {
+      "ball": "K7",
+      "name": "CK_N",
+      "function": "CK_N",
+      "electrical_type": "input",
+      "xy_mm": [
+        1.6,
+        1.2
+      ]
+    },
+    {
+      "ball": "K8",
+      "name": "VDD",
+      "function": "VDD",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        2.4,
+        1.2
+      ]
+    },
+    {
+      "ball": "K9",
+      "name": "CKE",
+      "function": "CKE",
+      "electrical_type": "input",
+      "xy_mm": [
+        3.2,
+        1.2
+      ]
+    },
+    {
+      "ball": "L1",
+      "name": "NC",
+      "function": "NC",
+      "electrical_type": "no_connect",
+      "xy_mm": [
+        -3.2,
+        2.0
+      ]
+    },
+    {
+      "ball": "L2",
+      "name": "CS_N",
+      "function": "CS_N",
+      "electrical_type": "input",
+      "xy_mm": [
+        -2.4,
+        2.0
+      ]
+    },
+    {
+      "ball": "L3",
+      "name": "WE_N",
+      "function": "WE_N",
+      "electrical_type": "input",
+      "xy_mm": [
+        -1.6,
+        2.0
+      ]
+    },
+    {
+      "ball": "L7",
+      "name": "A10/AP",
+      "function": "A10/AP",
+      "electrical_type": "input",
+      "xy_mm": [
+        1.6,
+        2.0
+      ]
+    },
+    {
+      "ball": "L8",
+      "name": "ZQ",
+      "function": "ZQ",
+      "electrical_type": "passive",
+      "xy_mm": [
+        2.4,
+        2.0
+      ]
+    },
+    {
+      "ball": "L9",
+      "name": "NC",
+      "function": "NC",
+      "electrical_type": "no_connect",
+      "xy_mm": [
+        3.2,
+        2.0
+      ]
+    },
+    {
+      "ball": "M1",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        2.8
+      ]
+    },
+    {
+      "ball": "M2",
+      "name": "BA0",
+      "function": "BA0",
+      "electrical_type": "input",
+      "xy_mm": [
+        -2.4,
+        2.8
+      ]
+    },
+    {
+      "ball": "M3",
+      "name": "BA2",
+      "function": "BA2",
+      "electrical_type": "input",
+      "xy_mm": [
+        -1.6,
+        2.8
+      ]
+    },
+    {
+      "ball": "M7",
+      "name": "NC",
+      "function": "NC",
+      "electrical_type": "no_connect",
+      "xy_mm": [
+        1.6,
+        2.8
+      ]
+    },
+    {
+      "ball": "M8",
+      "name": "VREFCA",
+      "function": "VREFCA",
+      "electrical_type": "input",
+      "xy_mm": [
+        2.4,
+        2.8
+      ]
+    },
+    {
+      "ball": "M9",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        2.8
+      ]
+    },
+    {
+      "ball": "N1",
+      "name": "VDD",
+      "function": "VDD",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        3.6
+      ]
+    },
+    {
+      "ball": "N2",
+      "name": "A3",
+      "function": "A3",
+      "electrical_type": "input",
+      "xy_mm": [
+        -2.4,
+        3.6
+      ]
+    },
+    {
+      "ball": "N3",
+      "name": "A0",
+      "function": "A0",
+      "electrical_type": "input",
+      "xy_mm": [
+        -1.6,
+        3.6
+      ]
+    },
+    {
+      "ball": "N7",
+      "name": "A12/BC_N",
+      "function": "A12/BC_N",
+      "electrical_type": "input",
+      "xy_mm": [
+        1.6,
+        3.6
+      ]
+    },
+    {
+      "ball": "N8",
+      "name": "BA1",
+      "function": "BA1",
+      "electrical_type": "input",
+      "xy_mm": [
+        2.4,
+        3.6
+      ]
+    },
+    {
+      "ball": "N9",
+      "name": "VDD",
+      "function": "VDD",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        3.6
+      ]
+    },
+    {
+      "ball": "P1",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        4.4
+      ]
+    },
+    {
+      "ball": "P2",
+      "name": "A5",
+      "function": "A5",
+      "electrical_type": "input",
+      "xy_mm": [
+        -2.4,
+        4.4
+      ]
+    },
+    {
+      "ball": "P3",
+      "name": "A2",
+      "function": "A2",
+      "electrical_type": "input",
+      "xy_mm": [
+        -1.6,
+        4.4
+      ]
+    },
+    {
+      "ball": "P7",
+      "name": "A1",
+      "function": "A1",
+      "electrical_type": "input",
+      "xy_mm": [
+        1.6,
+        4.4
+      ]
+    },
+    {
+      "ball": "P8",
+      "name": "A4",
+      "function": "A4",
+      "electrical_type": "input",
+      "xy_mm": [
+        2.4,
+        4.4
+      ]
+    },
+    {
+      "ball": "P9",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        4.4
+      ]
+    },
+    {
+      "ball": "R1",
+      "name": "VDD",
+      "function": "VDD",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        5.2
+      ]
+    },
+    {
+      "ball": "R2",
+      "name": "A7",
+      "function": "A7",
+      "electrical_type": "input",
+      "xy_mm": [
+        -2.4,
+        5.2
+      ]
+    },
+    {
+      "ball": "R3",
+      "name": "A9",
+      "function": "A9",
+      "electrical_type": "input",
+      "xy_mm": [
+        -1.6,
+        5.2
+      ]
+    },
+    {
+      "ball": "R7",
+      "name": "A11",
+      "function": "A11",
+      "electrical_type": "input",
+      "xy_mm": [
+        1.6,
+        5.2
+      ]
+    },
+    {
+      "ball": "R8",
+      "name": "A6",
+      "function": "A6",
+      "electrical_type": "input",
+      "xy_mm": [
+        2.4,
+        5.2
+      ]
+    },
+    {
+      "ball": "R9",
+      "name": "VDD",
+      "function": "VDD",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        5.2
+      ]
+    },
+    {
+      "ball": "T1",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        -3.2,
+        6.0
+      ]
+    },
+    {
+      "ball": "T2",
+      "name": "RESET_N",
+      "function": "RESET_N",
+      "electrical_type": "input",
+      "xy_mm": [
+        -2.4,
+        6.0
+      ]
+    },
+    {
+      "ball": "T3",
+      "name": "A13",
+      "function": "A13",
+      "electrical_type": "input",
+      "xy_mm": [
+        -1.6,
+        6.0
+      ]
+    },
+    {
+      "ball": "T7",
+      "name": "A14",
+      "function": "A14",
+      "electrical_type": "input",
+      "xy_mm": [
+        1.6,
+        6.0
+      ]
+    },
+    {
+      "ball": "T8",
+      "name": "A8",
+      "function": "A8",
+      "electrical_type": "input",
+      "xy_mm": [
+        2.4,
+        6.0
+      ]
+    },
+    {
+      "ball": "T9",
+      "name": "VSS",
+      "function": "VSS",
+      "electrical_type": "power_in",
+      "xy_mm": [
+        3.2,
+        6.0
+      ]
+    }
+  ]
+}
