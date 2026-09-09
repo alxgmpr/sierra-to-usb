@@ -215,3 +215,20 @@ as an analog input, not a VSS ball; the ground-net check now separately counts
 reference input. Four spare PMU GPIOs remain disconnected. Internal PVTM clock
 selection is required with external CLK32K_IN unused. Full-board routing and
 physical oscillator qualification remain unfinished.
+
+## eMMC capture checkpoint — 2026-09-09
+
+U6 is SanDisk SDINBDG4-8G, C577444: 8 GB, BGA153, 11.5 × 13 mm.
+Manufacturer DOC56-34-01508 Rev1.4 was read through its public PDF mirror;
+the exact URL and page anchors are in research/emmc-pins.json and
+emmc-qualification.json. The full source PDF is not locally archived.
+Manufacturer operating range is −25 to 85 °C, overriding the distributor's
+−40 °C listing. Live stock was 350 at $34.5946 each; this is not a board cost.
+
+All 153 balls and native footprint pad coordinates are checked. A project-local
+STEP was generated with official KiCad library tools; its measured Z envelope
+is approximately 0.81 mm. Full 3D clearance review is still pending.
+VCCQ uses 1.8 V BUCK5 (slot 2); VCC uses 3.3 V SW1 (slot 4). Exact permitted
+power-up/down order must still be verified. Published 150 mA VCC / 210 mA
+VCCQ HS200 peak figures are typical at 25 °C, not worst-case guarantees.
+Do not use this checkpoint to close the power budget or authorize fabrication.

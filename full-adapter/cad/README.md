@@ -158,3 +158,15 @@ Run from the repository root with `full-adapter/.venv/bin/python`:
 The pre-commit checks validate the staged snapshot and reject unregistered CAD.
 Their DDR checkpoint success does not authorize fabrication or imply that the
 full board is electrically complete or routed.
+
+## Storage capture checkpoint
+
+The hierarchy now has 17 child sheets plus the root. emmc-signals and
+emmc-power capture all 153 U6 balls, the eight data bits, CMD/CLK/DS/reset,
+12 bypass capacitors, ten 10 kΩ pull-ups and isolated service pads.
+`full-adapter/.venv/bin/python full-adapter/tools/check_emmc.py` checks the
+exported netlist and physical ball/pad mapping. Fresh ERC retains the six
+previous integration findings; the full system remains incomplete.
+The two pages and root were visually reviewed in build/emmc-review.pdf.
+The root must grow or reorganize before adding another child at its lower
+right corner, which currently contains the title block.

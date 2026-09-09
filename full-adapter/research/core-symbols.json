@@ -11368,5 +11368,1735 @@
         }
       ]
     }
+  ],
+  "SDINBDG4-8G": [
+    {
+      "unit": 1,
+      "title": "eMMC bus",
+      "width": 30.48,
+      "height": 71.12,
+      "pins": [
+        {
+          "ball": "A3",
+          "name": "DAT0",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            27.94,
+            0
+          ]
+        },
+        {
+          "ball": "A4",
+          "name": "DAT1",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            22.86,
+            0
+          ]
+        },
+        {
+          "ball": "A5",
+          "name": "DAT2",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            17.78,
+            0
+          ]
+        },
+        {
+          "ball": "B2",
+          "name": "DAT3",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "B3",
+          "name": "DAT4",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "B4",
+          "name": "DAT5",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "B5",
+          "name": "DAT6",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "B6",
+          "name": "DAT7",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "H5",
+          "name": "RCLK",
+          "type": "output",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "K5",
+          "name": "RST_n",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "M5",
+          "name": "CMD",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            -22.86,
+            0
+          ]
+        },
+        {
+          "ball": "M6",
+          "name": "CLK",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            -27.94,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "title": "eMMC supplies",
+      "width": 30.48,
+      "height": 101.6,
+      "pins": [
+        {
+          "ball": "[E6,F5,J10,K9]",
+          "physical_pins": [
+            "E6",
+            "F5",
+            "J10",
+            "K9"
+          ],
+          "name": "VCC",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 22.86,
+          "at": [
+            17.78,
+            25.4,
+            180
+          ]
+        },
+        {
+          "ball": "[C6,M4,N4,P3,P5]",
+          "physical_pins": [
+            "C6",
+            "M4",
+            "N4",
+            "P3",
+            "P5"
+          ],
+          "name": "VCCQ",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 22.86,
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "[A6,E7,G5,H10,J5,K8]",
+          "physical_pins": [
+            "A6",
+            "E7",
+            "G5",
+            "H10",
+            "J5",
+            "K8"
+          ],
+          "name": "VSS",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 22.86,
+          "at": [
+            17.78,
+            -20.32,
+            180
+          ]
+        },
+        {
+          "ball": "[C4,N2,N5,P4,P6]",
+          "physical_pins": [
+            "C4",
+            "N2",
+            "N5",
+            "P4",
+            "P6"
+          ],
+          "name": "VSSQ",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 22.86,
+          "at": [
+            17.78,
+            -43.18,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "title": "Internal bypass and test",
+      "width": 30.48,
+      "height": 86.36,
+      "pins": [
+        {
+          "ball": "C2",
+          "name": "VDDi",
+          "type": "power_out",
+          "side": "R",
+          "pitch_mm": 15.24,
+          "at": [
+            17.78,
+            25.4,
+            180
+          ]
+        },
+        {
+          "ball": "E9",
+          "name": "VSF1",
+          "type": "passive",
+          "side": "R",
+          "pitch_mm": 15.24,
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "E10",
+          "name": "VSF2",
+          "type": "passive",
+          "side": "R",
+          "pitch_mm": 15.24,
+          "at": [
+            17.78,
+            -5.08,
+            180
+          ]
+        },
+        {
+          "ball": "F10",
+          "name": "VSF3",
+          "type": "passive",
+          "side": "R",
+          "pitch_mm": 15.24,
+          "at": [
+            17.78,
+            -20.32,
+            180
+          ]
+        },
+        {
+          "ball": "K10",
+          "name": "VSF4",
+          "type": "passive",
+          "side": "R",
+          "pitch_mm": 15.24,
+          "at": [
+            17.78,
+            -35.56,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "title": "Unused balls 1",
+      "width": 30.48,
+      "height": 45.72,
+      "pins": [
+        {
+          "ball": "A1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            17.78,
+            0
+          ]
+        },
+        {
+          "ball": "A2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "A7",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "A8",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "A9",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "A10",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "A11",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "A12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "A13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "A14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "B1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "B7",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -10.16,
+            0
+          ]
+        },
+        {
+          "ball": "B8",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "B9",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -15.24,
+            0
+          ]
+        },
+        {
+          "ball": "B10",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "B11",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            17.78,
+            180
+          ]
+        },
+        {
+          "ball": "B12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "B13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "B14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "C1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "C3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "C5",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "C7",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "C8",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "C9",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -5.08,
+            180
+          ]
+        },
+        {
+          "ball": "C10",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "C11",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -10.16,
+            180
+          ]
+        },
+        {
+          "ball": "C12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -12.7,
+            180
+          ]
+        },
+        {
+          "ball": "C13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -15.24,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "title": "Unused balls 2",
+      "width": 30.48,
+      "height": 45.72,
+      "pins": [
+        {
+          "ball": "C14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            17.78,
+            0
+          ]
+        },
+        {
+          "ball": "D1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "D2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "D3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "D4",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "D12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "D13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "D14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "E1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "E2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "E3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "E5",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -10.16,
+            0
+          ]
+        },
+        {
+          "ball": "E8",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "E12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -15.24,
+            0
+          ]
+        },
+        {
+          "ball": "E13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "E14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            17.78,
+            180
+          ]
+        },
+        {
+          "ball": "F1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "F2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "F3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "F12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "F13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "F14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "G1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "G2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "G3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -5.08,
+            180
+          ]
+        },
+        {
+          "ball": "G10",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "G12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -10.16,
+            180
+          ]
+        },
+        {
+          "ball": "G13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -12.7,
+            180
+          ]
+        },
+        {
+          "ball": "G14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -15.24,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "title": "Unused balls 3",
+      "width": 30.48,
+      "height": 45.72,
+      "pins": [
+        {
+          "ball": "H1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            17.78,
+            0
+          ]
+        },
+        {
+          "ball": "H2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "H3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "H12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "H13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "H14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "J1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "J2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "J3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "J12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "J13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "J14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -10.16,
+            0
+          ]
+        },
+        {
+          "ball": "K1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "K2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -15.24,
+            0
+          ]
+        },
+        {
+          "ball": "K3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "K6",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            17.78,
+            180
+          ]
+        },
+        {
+          "ball": "K7",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "K12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "K13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "K14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "L1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "L2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "L3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "L12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "L13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -5.08,
+            180
+          ]
+        },
+        {
+          "ball": "L14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "M1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -10.16,
+            180
+          ]
+        },
+        {
+          "ball": "M2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -12.7,
+            180
+          ]
+        },
+        {
+          "ball": "M3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -15.24,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "title": "Unused balls 4",
+      "width": 30.48,
+      "height": 45.72,
+      "pins": [
+        {
+          "ball": "M7",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            17.78,
+            0
+          ]
+        },
+        {
+          "ball": "M8",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "M9",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "M10",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "M11",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "M12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "M13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "M14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "N1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "N3",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "N6",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "N7",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -10.16,
+            0
+          ]
+        },
+        {
+          "ball": "N8",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "N9",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -15.24,
+            0
+          ]
+        },
+        {
+          "ball": "N10",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "L",
+          "at": [
+            -17.78,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "N11",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            17.78,
+            180
+          ]
+        },
+        {
+          "ball": "N12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "N13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "N14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "P1",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "P2",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "P7",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "P8",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "P9",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "P10",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -5.08,
+            180
+          ]
+        },
+        {
+          "ball": "P11",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "P12",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -10.16,
+            180
+          ]
+        },
+        {
+          "ball": "P13",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -12.7,
+            180
+          ]
+        },
+        {
+          "ball": "P14",
+          "name": "NC",
+          "type": "no_connect",
+          "visible_nc": true,
+          "side": "R",
+          "at": [
+            17.78,
+            -15.24,
+            180
+          ]
+        }
+      ]
+    }
   ]
 }

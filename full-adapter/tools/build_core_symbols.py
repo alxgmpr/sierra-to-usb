@@ -76,10 +76,10 @@ def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, uni
                     x = (index - len(group)//2) * 2.54
                     y = top + 2.54 if side == 'T' else bottom - 2.54
                     angle = 270 if side == 'T' else 90
-                length = 0 if p['type'] == 'no_connect' else 2.54
-                if p['type'] == 'no_connect':
+                length = 0 if p['type'] == 'no_connect' and not p.get('visible_nc') else 2.54
+                if p['type'] == 'no_connect' and not p.get('visible_nc'):
                     x -= 2.54
-                hidden = ' (hide yes)' if p['type'] == 'no_connect' else ''
+                hidden = ' (hide yes)' if p['type'] == 'no_connect' and not p.get('visible_nc') else ''
                 x, y = round(x, 6), round(y, 6)
                 output.append(f'(pin {p["type"]} line (at {x} {y} {angle}) (length {length}){hidden} (name {Q(p.get("display_name", display_name(p["name"])))} {effects()}) (number {Q(p["ball"])} {effects()})')
                 for alt in p.get('alternates', []):
@@ -221,9 +221,46 @@ def pmic():
                        footprint_filter='RK809*QFN*68*P0.35mm*')
 
 
+def emmc():
+    source = json.loads((ROOT / 'research/emmc-pins.json').read_text())
+    units = OrderedDict((title, []) for title in ['eMMC bus', 'eMMC supplies', 'Internal bypass and test'])
+    nc = []
+    for p in source['pins']:
+        pin = {k: p[k] for k in ['ball', 'name', 'type']}
+        if p['name'] == 'NC':
+            pin['visible_nc'] = True
+            nc.append(pin)
+        elif p['type'] == 'power_in':
+            pin['side'] = 'R'
+            pin['pitch_mm'] = 5.08
+            units['eMMC supplies'].append(pin)
+        elif p['name'].startswith('VSF') or p['name'] == 'VDDi':
+            pin['side'] = 'R'
+            pin['pitch_mm'] = 15.24
+            units['Internal bypass and test'].append(pin)
+        else:
+            pin['side'] = 'L'
+            pin['pitch_mm'] = 5.08
+            units['eMMC bus'].append(pin)
+    power_pins = units['eMMC supplies']
+    units['eMMC supplies'] = []
+    for name in ['VCC', 'VCCQ', 'VSS', 'VSSQ']:
+        balls = [p['ball'] for p in power_pins if p['name'] == name]
+        units['eMMC supplies'].append({'ball':'['+','.join(balls)+']', 'physical_pins':balls,
+            'name':name, 'type':'power_in', 'side':'R', 'pitch_mm':22.86})
+    for i in range(4):
+        group = nc[i*29:(i+1)*29]
+        for j, pin in enumerate(group): pin['side'] = 'L' if j < 15 else 'R'
+        units['Unused balls ' + str(i+1)] = group
+    return make_symbol(source['mpn'], source['footprint'], source['source']['url'],
+                       source['manufacturer'], source['lcsc'],
+                       '8GB eMMC 5.1, 1.8V/3.3V IO, BGA153 11.5x13mm', units,
+                       keywords='eMMC flash storage', footprint_filter='SanDisk*BGA153*P0.5mm*')
+
+
 def main():
     syms, manifest = [], {}
-    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic)]:
+    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic), ('SDINBDG4-8G', emmc)]:
         symbol, units = fn()
         syms.append(symbol)
         manifest[name] = units

@@ -101,7 +101,7 @@ def check(root, output=None):
         for ref,val in {'R101':'49.9R 1%','R102':'49.9R 1%','R103':'120R 1%','R104':'1kR 1%','R105':'1kR 1%','R106':'240R 1%','R107':'240R 1%','C101':'100pF C0G'}.items():
             assert components[ref].findtext('value')==val
         for ref,c in components.items():
-            if ref in {'TP560','TP561','TP562'}:
+            if ref in {'TP560','TP561','TP562','TP600','TP601','TP610','TP611','TP612','TP613','TP614'}:
                 assert c.find('libsource').get('part')=='TestPoint'
                 assert c.findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
                 assert c.find("property[@name='exclude_from_bom']") is not None

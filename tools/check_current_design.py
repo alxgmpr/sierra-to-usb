@@ -33,7 +33,7 @@ def check():
     allowed = {coupon + ".kicad_pcb", coupon + ".kicad_pro"}
     ddr_cad = {"full-adapter/cad/" + p for p in
                ("full-adapter.kicad_sch", "full-adapter.kicad_pro",
-                "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch", "pmic-ddr.kicad_sch", "pmic-core.kicad_sch", "pmic-aux.kicad_sch", "pmic-control.kicad_sch", "processor-pmu.kicad_sch", "processor-io-power.kicad_sch", "processor-phy-power.kicad_sch", "processor-unused.kicad_sch", "processor-control.kicad_sch", "processor-clock.kicad_sch")}
+                "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch", "pmic-ddr.kicad_sch", "pmic-core.kicad_sch", "pmic-aux.kicad_sch", "pmic-control.kicad_sch", "processor-pmu.kicad_sch", "processor-io-power.kicad_sch", "processor-phy-power.kicad_sch", "processor-unused.kicad_sch", "processor-control.kicad_sch", "processor-clock.kicad_sch", "emmc-signals.kicad_sch", "emmc-power.kicad_sch")}
     allowed |= ddr_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
     assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"
@@ -187,6 +187,13 @@ def check():
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
         print("Processor clock checkpoint: crystal, feedback, output damping, loads and TVSS reference checked; bench tuning pending.")
+
+        spec = importlib.util.spec_from_file_location(
+            "staged_emmc_checks", stage / "full-adapter/tools/check_emmc.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("eMMC checkpoint: 153 balls, eight data bits, rails and reset checked; sequencing qualification and system routing unfinished.")
 
 
 if __name__ == "__main__":

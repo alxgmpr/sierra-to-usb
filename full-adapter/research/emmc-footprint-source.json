@@ -1,0 +1,26 @@
+{
+  "native_footprint": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_BGA.pretty/LFBGA-153_11.5x13mm_Layout14x14_P0.5mm.kicad_mod",
+  "native_sha256": "98e38f6a844edf52d99a7f732ae2fd9b98143111d7ad03091c11e543216aeb62",
+  "datasheet_url": "https://device.report/m/d13f73c8c758329714d6aae0d75f5d7d3e282e07f42ff2be363f3642a50bd194.pdf",
+  "datasheet_pages": [
+    20,
+    21,
+    22,
+    23
+  ],
+  "pads": 153,
+  "pad_diameter_mm": 0.24,
+  "pitch_mm": 0.5,
+  "array_span_mm": [
+    6.5,
+    6.5
+  ],
+  "model_source": "KiCad Library Tools package/grid_array; lib/emmc-grid-array.yaml, overall height 0.8mm",
+  "model_sha256": "b978b767fbe460712dc8bd77d4eb69eb7ad17d0c8c539357b79ada57ee2df3a8",
+  "body_tolerance_mm": [
+    0.1,
+    0.1
+  ],
+  "height_max_mm": 0.8,
+  "status": "Native lands compared to manufacturer top-view package and ball assignment; full PCB escape and assembly qualification remain."
+}

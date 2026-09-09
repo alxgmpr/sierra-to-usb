@@ -1,0 +1,63 @@
+SanDisk_SDINBDG4_BGA153_11.5x13mm_P0.5mm:
+  size_source: https://device.report/m/d13f73c8c758329714d6aae0d75f5d7d3e282e07f42ff2be363f3642a50bd194.pdf
+  description: SanDisk SDINBDG4-8G, maximum-height envelope
+  device_type: LFBGA
+  body_size_y: 13.0
+  body_size_x: 11.5
+  overall_height: 0.8
+  ball_diameter: 0.3
+  ball_type: collapsible
+  pitch: 0.5
+  layout_y: 14
+  layout_x: 14
+  row_skips:
+  - []
+  - []
+  - []
+  - - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+  - - 4
+    - 11
+  - - 4
+    - 6
+    - 7
+    - 8
+    - 9
+    - 11
+  - - 4
+    - 6
+    - 7
+    - 8
+    - 9
+    - 11
+  - - 4
+    - 6
+    - 7
+    - 8
+    - 9
+    - 11
+  - - 4
+    - 6
+    - 7
+    - 8
+    - 9
+    - 11
+  - - 4
+    - 11
+  - - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+  - []
+  - []
+  - []
+  body_pcb_gap: 0.22

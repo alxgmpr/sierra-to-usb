@@ -119,3 +119,15 @@ fixture connections. Archive ERC/parity/DRC and connectivity assertions, reviewe
 layer and 3D renders, approved JLC stackup/impedances, BOM/placement consistency,
 assembly drawings, programming images, qualification results and manufacturing
 test logs. No unrouted nets or real electrical faults may be waived.
+
+## eMMC checkpoint follow-up
+
+Verify storage supply order, discharge and IO behavior on both startup and
+brownout after completing the source review. During controlled provisioning,
+enable EXT_CSD RST_n_FUNCTION=1: the manufacturer's default disables the
+hardware reset pin. Verify reset, boot, HS200 timing and sustained read/write
+under concurrent system load and temperature. Do not provision permanent
+write protection, RPMB keys or partition settings without the final procedure.
+The D0/GND service pads follow Rockchip's power-on MaskROM procedure; release
+the short after USB enumeration. Normal recovery controls and USB connector
+are not yet captured. Keep VSF1–4 pads isolated from application circuits.
