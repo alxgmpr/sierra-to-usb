@@ -33,7 +33,7 @@ def check():
     allowed = {coupon + ".kicad_pcb", coupon + ".kicad_pro"}
     ddr_cad = {"full-adapter/cad/" + p for p in
                ("full-adapter.kicad_sch", "full-adapter.kicad_pro",
-                "ddr-signals.kicad_sch", "ddr-power.kicad_sch")}
+                "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch")}
     allowed |= ddr_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
     assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"
@@ -114,6 +114,12 @@ def check():
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
         print("RK860 library checkpoint: 20 balls, native stack export and lands checked; power circuit unfinished.")
+        spec = importlib.util.spec_from_file_location(
+            "staged_core_power_checks", stage / "full-adapter/tools/check_core_power.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("Core power checkpoint: 30 supply balls, 208 ground balls and 21 capacitors checked; regulators unfinished.")
 
 
 if __name__ == "__main__":

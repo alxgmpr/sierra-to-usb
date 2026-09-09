@@ -16,9 +16,10 @@ See [qualification findings and outstanding work](QUALIFICATION.md), the
 [machine-readable screening results](research/engineering-screen.json).
 The current hierarchy starts at [cad/full-adapter.kicad_sch](cad/full-adapter.kicad_sch).
 Its two DDR pages capture the selected 1 GiB subsystem, including voltage
-references, calibration, clock termination and local bypass. Other subsystems
-and the integrated PCB remain unfinished. See [the DDR checkpoint](cad/README.md)
-for its exported-net checks and six unresolved integration ERC findings. The
+references, calibration, clock termination and local bypass. A third page
+captures the four processor core supply groups, bypass and all 208 ground balls.
+Other subsystems and the integrated PCB remain unfinished. See [the capture checkpoint](cad/README.md)
+for its exported-net checks and eleven unresolved integration ERC findings. The
 [processor escape coupon](studies/README.md) contains real routing and its own
 DRC evidence; it is not a system design or release. Full-system ERC, schematic/PCB
 parity, DRC, Gerber inspection and 3D clearance verification have **not passed**.

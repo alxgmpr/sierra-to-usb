@@ -158,6 +158,13 @@ def processor():
     for title, pins in units.items():
         if title.startswith('DDR3'):
             pins.sort(key=lambda p: natural(p['name']))
+        elif title == 'Core supplies':
+            order = {'CPU': 0, 'LOGIC': 1, 'GPU': 2, 'NPU': 3}
+            pins.sort(key=lambda p: (order[p['name'].split('_')[1]], natural(p['name'])))
+            for pin in pins:
+                if pin['name'] == 'VDD_CPU_COM':
+                    # HW Guide §2.2.2.4: remote sense tap, not an external supply feed.
+                    pin['type'] = 'passive'
     return make_symbol('RK3568B2', 'full-adapter:RK3568B2_FCCSP636_19x19mm_P0.65mm',
                        'https://rockchip.fr/RK3568B2%20datasheet%20V2.3.pdf?download=1',
                        'Rockchip', 'C3345225', 'Quad Cortex-A55 Linux processor; exact B2 FCCSP636 pin population', units)
@@ -193,13 +200,14 @@ def main():
         print(name, len(all_pins), 'pins in', len(units), 'units')
     std = sx.loads(Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/power.kicad_sym').read_text())
     vdd = next(v for v in std if isinstance(v, list) and str(v[0]) == 'symbol' and v[1] == 'VDD')
-    power = copy.deepcopy(vdd)
-    def rename(node):
-        for i, v in enumerate(node):
-            if isinstance(v, list): rename(v)
-            elif isinstance(v, str) and (v == 'VDD' or v.startswith('VDD_')): node[i] = v.replace('VDD', 'VCC_DDR', 1)
-    rename(power)
-    syms.append(sx.dumps(power))
+    for rail in ('VCC_DDR', 'VDD_CPU', 'VDD_LOGIC', 'VDD_GPU', 'VDD_NPU'):
+        power = copy.deepcopy(vdd)
+        def rename(node):
+            for i, v in enumerate(node):
+                if isinstance(v, list): rename(v)
+                elif isinstance(v, str) and (v == 'VDD' or v.startswith('VDD_')): node[i] = v.replace('VDD', rail, 1)
+        rename(power)
+        syms.append(sx.dumps(power))
     LIB.write_text('(kicad_symbol_lib (version 20251024) (generator "full_adapter_core_symbols")\n' + '\n'.join(syms) + '\n)\n')
     sx.loads(LIB.read_text())
     (ROOT / 'research/core-symbols.json').write_text(json.dumps(manifest, indent=2) + '\n')

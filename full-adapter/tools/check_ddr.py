@@ -108,7 +108,9 @@ def check(root, output=None):
         subprocess.run([KICAD,'sch','erc',str(sch),'--format','json','-o',str(erc)],check=True,stdout=subprocess.DEVNULL)
         erc_data=json.loads(erc.read_text())
         counts=Counter(v['type'] for s in erc_data['sheets'] for v in s['violations'])
-        expected={'missing_power_pin':1,'missing_input_pin':1,'missing_bidi_pin':1,'missing_unit':1,'power_pin_not_driven':2}
+        # Four newly placed core rails await regulators; M15 awaits the remote
+        # feedback circuit. GND and DDR still await the primary power capture.
+        expected={'missing_power_pin':1,'missing_input_pin':1,'missing_bidi_pin':1,'missing_unit':1,'power_pin_not_driven':6,'isolated_pin_label':1}
         assert counts==expected,counts
         summary={'status':'DDR_CAPTURE_CHECKPOINT_NOT_RELEASE','library_pins_checked':732,'dq_nets':32,'dqs_pairs':4,'dm_nets':4,'shared_ca_nets':len(ca),'clock_rc':'2 x 49.9R 1%, common 100pF C0G to ground','erc_open_integration_findings':dict(counts),'system_routed':False}
         if output:

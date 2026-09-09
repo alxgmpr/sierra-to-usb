@@ -827,5 +827,13 @@
       ]
     ]
   },
-  "ddr-power": {}
+  "ddr-power": {},
+  "core-power": {
+    "VDD_CPU_COM": [
+      [
+        "U1",
+        "M15"
+      ]
+    ]
+  }
 }

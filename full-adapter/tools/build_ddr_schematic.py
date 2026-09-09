@@ -150,12 +150,13 @@ def power_page():
     s.wire(b,(76.2,266.7));s.label('DDR_VREFCA',(76.2,266.7))
     p=passive(s,'R105','1kR 1%',106.68,266.7,angle=90);a,b=sorted(p.values(),key=lambda p:p[0])
     s.wire((76.2,266.7),a);s.wire(b,(121.92,266.7));s.wire((121.92,266.7),(121.92,274.32));s.power('GND',(121.92,274.32))
-    s.text('VCC_DDR = 1.5V from RK809-5 BUCK3. VDDQ and VDDQL both use 1.5V.\nReference connections: Rockchip HW Guide V1.2, Figures 2-14 / 2-15.\nU1 ground balls are on the processor ground page (integration pending).',162.56,251.46)
+    s.text('VCC_DDR = 1.5V from RK809-5 BUCK3. VDDQ and VDDQL both use 1.5V.\nReference connections: Rockchip HW Guide V1.2, Figures 2-14 / 2-15.\nU1 ground balls are on the processor core power page.',162.56,251.46)
     return s
 
 
 def main():
-    pages=[signals(),power_page()]
+    from build_core_power import core_power
+    pages=[signals(),power_page(),core_power()]
     root=Sheet('full-adapter','Integrated Linux USB3 modem / 2.5GbE development board',root=True)
     root.text('CURRENT DESIGN — IN PROGRESS',20.32,20.32,2.54)
     root.text('RK3568B2 + 1 GiB DDR3 + PCIe RTL8125BG-CG\nUSB3 M.2 modem; isolated PoE and USB-C auxiliary power\n\nDDR capture is present. Remaining subsystem capture and PCB routing\nare active work. This project is not a manufacturing release.',20.32,33.02,1.8)
@@ -169,7 +170,7 @@ def main():
     (ROOT/'cad/sym-lib-table').write_text('(sym_lib_table (version 7) (lib (name "full-adapter") (type "KiCad") (uri "${KIPRJMOD}/../lib/full-adapter.kicad_sym") (options "") (descr "Verified processor and memory symbols")))\n')
     (ROOT/'cad/fp-lib-table').write_text('(fp_lib_table (version 7) (lib (name "full-adapter") (type "KiCad") (uri "${KIPRJMOD}/../lib/full-adapter.pretty") (options "") (descr "Verified local footprints")))\n')
     (ROOT/'research/ddr-schematic-intent.json').write_text(json.dumps({s.name:s.intent for s in pages},indent=2)+'\n')
-    print('Captured root and two DDR schematic pages; full-system integration remains unfinished.')
+    print('Captured DDR and core power pages; full-system integration remains unfinished.')
 
 
 if __name__=='__main__':main()

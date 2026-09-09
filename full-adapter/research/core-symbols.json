@@ -5354,18 +5354,6 @@
           ]
         },
         {
-          "ball": "L12",
-          "name": "VDD_LOGIC_1",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -17.78,
-            25.4,
-            0
-          ]
-        },
-        {
           "ball": "L15",
           "name": "VDD_CPU_6",
           "type": "power_in",
@@ -5373,7 +5361,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            22.86,
+            25.4,
             0
           ]
         },
@@ -5385,7 +5373,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            20.32,
+            22.86,
             0
           ]
         },
@@ -5397,7 +5385,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            17.78,
+            20.32,
             0
           ]
         },
@@ -5409,31 +5397,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            15.24,
-            0
-          ]
-        },
-        {
-          "ball": "M12",
-          "name": "VDD_LOGIC_2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -17.78,
-            12.7,
-            0
-          ]
-        },
-        {
-          "ball": "M15",
-          "name": "VDD_CPU_COM",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -17.78,
-            10.16,
+            17.78,
             0
           ]
         },
@@ -5445,19 +5409,43 @@
           "alternates": [],
           "at": [
             -17.78,
-            7.62,
+            15.24,
             0
           ]
         },
         {
-          "ball": "M19",
-          "name": "VDD_NPU_1",
+          "ball": "M15",
+          "name": "VDD_CPU_COM",
+          "type": "passive",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "L12",
+          "name": "VDD_LOGIC_1",
           "type": "power_in",
           "side": "L",
           "alternates": [],
           "at": [
             -17.78,
-            5.08,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "M12",
+          "name": "VDD_LOGIC_2",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -17.78,
+            7.62,
             0
           ]
         },
@@ -5469,7 +5457,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            2.54,
+            5.08,
             0
           ]
         },
@@ -5481,19 +5469,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            0.0,
-            0
-          ]
-        },
-        {
-          "ball": "N19",
-          "name": "VDD_NPU_2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -17.78,
-            -2.54,
+            2.54,
             0
           ]
         },
@@ -5505,7 +5481,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            -5.08,
+            0.0,
             0
           ]
         },
@@ -5517,43 +5493,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            -7.62,
-            0
-          ]
-        },
-        {
-          "ball": "P18",
-          "name": "VDD_NPU_3",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -17.78,
-            -10.16,
-            0
-          ]
-        },
-        {
-          "ball": "P19",
-          "name": "VDD_NPU_4",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -17.78,
-            -12.7,
-            0
-          ]
-        },
-        {
-          "ball": "P20",
-          "name": "VDD_NPU_5",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -17.78,
-            -15.24,
+            -2.54,
             0
           ]
         },
@@ -5565,19 +5505,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            -17.78,
-            0
-          ]
-        },
-        {
-          "ball": "R13",
-          "name": "VDD_GPU_1",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -17.78,
-            -20.32,
+            -5.08,
             0
           ]
         },
@@ -5589,7 +5517,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            -22.86,
+            -7.62,
             0
           ]
         },
@@ -5601,19 +5529,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            -25.4,
-            0
-          ]
-        },
-        {
-          "ball": "T13",
-          "name": "VDD_GPU_2",
-          "type": "power_in",
-          "side": "L",
-          "alternates": [],
-          "at": [
-            -17.78,
-            -27.94,
+            -10.16,
             0
           ]
         },
@@ -5625,7 +5541,31 @@
           "alternates": [],
           "at": [
             -17.78,
-            -30.48,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "R13",
+          "name": "VDD_GPU_1",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -17.78,
+            -15.24,
+            0
+          ]
+        },
+        {
+          "ball": "T13",
+          "name": "VDD_GPU_2",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -17.78,
+            -17.78,
             0
           ]
         },
@@ -5637,7 +5577,7 @@
           "alternates": [],
           "at": [
             -17.78,
-            -33.02,
+            -20.32,
             0
           ]
         },
@@ -5649,13 +5589,73 @@
           "alternates": [],
           "at": [
             -17.78,
-            -35.56,
+            -22.86,
             0
           ]
         },
         {
           "ball": "U13",
           "name": "VDD_GPU_5",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -17.78,
+            -25.4,
+            0
+          ]
+        },
+        {
+          "ball": "M19",
+          "name": "VDD_NPU_1",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -17.78,
+            -27.94,
+            0
+          ]
+        },
+        {
+          "ball": "N19",
+          "name": "VDD_NPU_2",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -17.78,
+            -30.48,
+            0
+          ]
+        },
+        {
+          "ball": "P18",
+          "name": "VDD_NPU_3",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -17.78,
+            -33.02,
+            0
+          ]
+        },
+        {
+          "ball": "P19",
+          "name": "VDD_NPU_4",
+          "type": "power_in",
+          "side": "L",
+          "alternates": [],
+          "at": [
+            -17.78,
+            -35.56,
+            0
+          ]
+        },
+        {
+          "ball": "P20",
+          "name": "VDD_NPU_5",
           "type": "power_in",
           "side": "L",
           "alternates": [],
