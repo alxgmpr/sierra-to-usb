@@ -82,6 +82,16 @@ class Sheet:
         assert a[0] == b[0] or a[1] == b[1], (a,b)
         self.items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid {Q(uid(self.name+"/wire/"+str(a)+str(b)))}))')
 
+    def field_position(self, ref, field, x, y, unit=1):
+        sid=uid(self.name+'/'+ref+'/'+str(unit))
+        index=next(i for i,item in enumerate(self.items) if item.startswith('(symbol ') and f'(uuid {Q(sid)})' in item)
+        symbol=sx.loads(self.items[index])
+        prop=next(p for p in nodes(symbol,'property') if p[1]==field)
+        one(prop,'at')[1:]=[x,y,0]
+        e=one(prop,'effects')
+        e[:]=[v for v in e if not (isinstance(v,list) and str(v[0])=='justify')]
+        self.items[index]=sx.dumps(symbol)
+
     def junction(self, p):
         self.items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid {Q(uid(self.name+"/junction/"+str(p)))}))')
 

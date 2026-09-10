@@ -134,10 +134,10 @@ def storage():
 
 def interfaces():
     s=Sheet('cm4-interfaces','CM4 Lite: native gigabit and PCIe USB3 host interfaces')
-    s.box('Native gigabit PHY / magnetics integration pending',10.16,15.24,190.5,215.9)
+    s.box('Native gigabit PHY / HX6096NL magnetics',10.16,15.24,190.5,215.9)
     nets={p['name']:p['name'].replace('Ethernet_Pair','ETH_MDI') for p in MANIFEST['CM4_J1'][3]['pins'] if p['name'].startswith('Ethernet_Pair')}
     unit(s,'J100','CM4_J1',4,93.98,78.74,nets)
-    s.text('Four MDI pairs require qualified 1:1 gigabit magnetics.\nPoE extraction stays on the isolated cable side.\nNo discrete external Ethernet PHY or PCIe NIC.\nSYNC and LED contacts currently unused.',17.78,144.78)
+    s.text('Four MDI pairs connect to T120 on ethernet-data.\nPoE extraction stays on the isolated cable side.\nNo discrete external Ethernet PHY or PCIe NIC.\nSYNC and LED contacts currently unused.',17.78,144.78)
     s.box('PCIe Gen2 x1 to dedicated USB3 host / USB2 recovery',213.36,15.24,190.5,215.9)
     nets={p['name']:p['name'].replace('PCIe','PCIE').replace('USB_','RECOVERY_USB_') for p in MANIFEST['CM4_J2'][0]['pins'] if p['name']!='USB_OTG_ID'}
     unit(s,'J101','CM4_J2',1,302.26,78.74,nets)
@@ -167,19 +167,30 @@ def root_page(sheets):
     s=Sheet('cm4-carrier','CM4 Lite integrated cellular modem development board',root=True)
     s.text('CM4001000 / 1 GB Lite / native gigabit / PCIe USB3 / isolated PoE',15.24,15.24,2.0)
     s.text('CURRENT IMPLEMENTATION - NOT FOR FABRICATION',15.24,25.4,1.6)
+    descriptions={
+        'cm4-power':'J100 / J101: two physical CM4 sockets\n5 V input, module rails, reset and boot controls',
+        'cm4-storage':'J110: removable microSD boot and root filesystem\nU110: switched card supply with output discharge',
+        'cm4-interfaces':'Native gigabit PHY / PCIe Gen2 x1\nUSB3 controller integration; native USB2 recovery',
+        'cm4-gpio':'3.3 V GPIO, I2C, SPI and console allocation\nExternal interfaces and modem controls in progress',
+        'cm4-unused':'Unused display / camera / HDMI contacts\nExplicit no-connects and all socket grounds',
+        'ethernet-data':'T120: four 1:1 gigabit channels\nJ120: Cat5e jack; U120 / U121: PHY-side ESD',
+        'ethernet-termination':'DC-blocked termination of four PoE centre taps\nC134: Y1 safety capacitor to secondary ground'}
     for index,child in enumerate(sheets):
-        x=25.4+(index%2)*190.5;y=50.8+(index//2)*66.04
-        s.items.append(f'(sheet (at {x} {y}) (size 167.64 43.18) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid {Q(uid("sheet-block/"+child.name))}) '+
+        x=20.32+(index%2)*193.04;y=45.72+(index//2)*50.8
+        s.items.append(f'(sheet (at {x} {y}) (size 177.8 30.48) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid {Q(uid("sheet-block/"+child.name))}) '+
             f'(property "Sheetname" {Q(child.title)} (at {x} {y-1.27} 0) {effects(justify="left bottom")}) '+
-            f'(property "Sheetfile" {Q(child.name+".kicad_sch")} (at {x} {y+44.45} 0) {effects(justify="left top")}) '+
+            f'(property "Sheetfile" {Q(child.name+".kicad_sch")} (at {x} {y+31.75} 0) {effects(justify="left top")}) '+
             f'(instances (project "cm4-carrier" (path {Q("/"+ROOT_ID)} (page "{index+2}")))))')
-    s.text('Historical RK3568 CAD is preserved separately. This hierarchy is the CM4 implementation.\nRemaining integration: isolated PoE / auxiliary arbitration, modem profiles, USB3 controller, IO and protection.\nRelease requires electrical closure, complete routing, ERC, parity, DRC, mechanical and manufacturing review.',15.24,259.08)
+        s.text(descriptions.get(child.name,''),x+7.62,y+8.89,1.52)
+    s.text('CM4 implementation in progress. Historical RK3568 CAD remains separate.\nRelease requires electrical closure, full routing, ERC, parity, DRC and manufacturing review.',15.24,248.92)
     return s
 
 
 if __name__=='__main__':
-    sheets=[core_power(),storage(),interfaces(),gpio(),unused()]
-    for sheet in [root_page(sheets),*sheets]:sheet.save()
+    from build_ethernet import ethernet_data, ethernet_termination
+    sheets=[core_power(),storage(),interfaces(),gpio(),unused(),ethernet_data(),ethernet_termination()]
+    root_page(sheets).save()
+    for sheet in sheets:sheet.save()
     project=ROOT/'cad/cm4-carrier.kicad_pro'
     if not project.exists():
         project.write_text(json.dumps({'meta':{'filename':project.name,'version':1},'erc':{'erc_exclusions':[]},'schematic':{'drawing':{'label_size':50}},'net_settings':{'classes':[]}},indent=2)+'\n')

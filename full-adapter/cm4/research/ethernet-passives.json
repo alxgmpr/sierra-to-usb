@@ -1,0 +1,250 @@
+{
+  "captured": "2026-09-10",
+  "source": "PCBParts JLC catalog; price breaks are explicit quantities, not quotes",
+  "parts": [
+    {
+      "lcsc": "C2974845",
+      "model": "CY1102ME14EF45W2A2",
+      "manufacturer": "Dersonic",
+      "package": "Plugin,P=10mm",
+      "stock": 172577,
+      "price": 0.0259,
+      "price_10": 0.0207,
+      "library_type": "extended",
+      "preferred": false,
+      "category": "Capacitors",
+      "subcategory": "Safety Capacitors",
+      "subcategory_id": 2998,
+      "mounting_type": "through_hole",
+      "specs": {
+        "Operating Temperature": "-40℃~+125℃",
+        "Voltage(AC)": "400V",
+        "Tolerance": "±20%",
+        "Capacitance": "1nF",
+        "safety certification": "CQC、UL、VDE、CUL、ENEC",
+        "Ratings": "Y1"
+      },
+      "description": "-40℃~+125℃ 1nF 400V CQC、UL、VDE、CUL、ENEC Y1 ±20% 插件,P=10mm Safety Capacitors ROHS",
+      "min_order": 1,
+      "reel_qty": 1000,
+      "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2202161430_Dersonic-CY1102ME14EF45W2A2_C2974845.pdf",
+      "lcsc_url": "https://www.lcsc.com/product-detail/safety-capacitors_dersonic-cy1102me14ef45w2a2_C2974845.html",
+      "prices": [
+        {
+          "qty": "1+",
+          "price": 0.0259
+        },
+        {
+          "qty": "200+",
+          "price": 0.0207
+        },
+        {
+          "qty": "1000+",
+          "price": 0.016
+        },
+        {
+          "qty": "2000+",
+          "price": 0.0143
+        },
+        {
+          "qty": "10000+",
+          "price": 0.0128
+        },
+        {
+          "qty": "20000+",
+          "price": 0.0119
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Operating Temperature",
+          "value": "-40℃~+125℃"
+        },
+        {
+          "name": "Voltage(AC)",
+          "value": "400V"
+        },
+        {
+          "name": "Tolerance",
+          "value": "±20%"
+        },
+        {
+          "name": "Capacitance",
+          "value": "1nF"
+        },
+        {
+          "name": "safety certification",
+          "value": "CQC、UL、VDE、CUL、ENEC"
+        },
+        {
+          "name": "Ratings",
+          "value": "Y1"
+        }
+      ],
+      "has_easyeda_footprint": true,
+      "easyeda_symbol_uuid": "b9fb0f92ffa3464f84bd1a07308be4e9",
+      "easyeda_footprint_uuid": "4885aa15affa47b087dd9d68023c57de"
+    },
+    {
+      "lcsc": "C313105",
+      "model": "CC0603KRX7R0BB223",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "stock": 96097,
+      "price": 0.0103,
+      "price_10": 0.0089,
+      "library_type": "extended",
+      "preferred": false,
+      "category": "Capacitors",
+      "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+      "subcategory_id": 2929,
+      "mounting_type": "smd",
+      "specs": {
+        "Voltage Rating": "100V",
+        "Tolerance": "±10%",
+        "Capacitance": "22nF",
+        "Temperature Coefficient": "X7R"
+      },
+      "description": "100V 22nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "min_order": 1,
+      "reel_qty": 4000,
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811082033_YAGEO-CC0603KRX7R0BB223_C313105.pdf",
+      "lcsc_url": "https://www.lcsc.com/product-detail/multilayer-ceramic-capacitors-mlcc-smd-smt_yageo-cc0603krx7r0bb223_C313105.html",
+      "prices": [
+        {
+          "qty": "1+",
+          "price": 0.0103
+        },
+        {
+          "qty": "1000+",
+          "price": 0.0089
+        },
+        {
+          "qty": "4000+",
+          "price": 0.0082
+        },
+        {
+          "qty": "8000+",
+          "price": 0.0077
+        },
+        {
+          "qty": "48000+",
+          "price": 0.0073
+        },
+        {
+          "qty": "100000+",
+          "price": 0.0071
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Voltage Rating",
+          "value": "100V"
+        },
+        {
+          "name": "Tolerance",
+          "value": "±10%"
+        },
+        {
+          "name": "Capacitance",
+          "value": "22nF"
+        },
+        {
+          "name": "Temperature Coefficient",
+          "value": "X7R"
+        }
+      ],
+      "has_easyeda_footprint": true,
+      "easyeda_symbol_uuid": "5cf8f3c8a5334d0981750201f532146c",
+      "easyeda_footprint_uuid": "f8151fdc728a41ebbc304e11d39e5437"
+    },
+    {
+      "lcsc": "C4275",
+      "model": "0603WAF750JT5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "stock": 3845879,
+      "price": 0.0036,
+      "price_10": 0.0028,
+      "library_type": "basic",
+      "preferred": false,
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "subcategory_id": 2980,
+      "mounting_type": "smd",
+      "specs": {
+        "Resistance": "75Ω",
+        "Operating Temperature": "-55℃~+155℃",
+        "Power(Watts)": "100mW",
+        "Type": "Thick Film Resistor",
+        "Voltage-Supply(Max)": "75V",
+        "Tolerance": "±1%",
+        "Temperature Coefficient": "±100ppm/℃"
+      },
+      "description": "-55℃~+155℃ 100mW 75V 75Ω Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "min_order": 1,
+      "reel_qty": 5000,
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010216_UNI-ROYAL-Uniroyal-Elec-0603WAF750JT5E_C4275.pdf",
+      "lcsc_url": "https://www.lcsc.com/product-detail/chip-resistor-surface-mount_uni-royal-uniroyal-elec-0603waf750jt5e_C4275.html",
+      "prices": [
+        {
+          "qty": "1+",
+          "price": 0.0036
+        },
+        {
+          "qty": "1000+",
+          "price": 0.0028
+        },
+        {
+          "qty": "5000+",
+          "price": 0.0024
+        },
+        {
+          "qty": "10000+",
+          "price": 0.0021
+        },
+        {
+          "qty": "50000+",
+          "price": 0.0018
+        },
+        {
+          "qty": "50200+",
+          "price": 0.0018
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Resistance",
+          "value": "75Ω"
+        },
+        {
+          "name": "Operating Temperature",
+          "value": "-55℃~+155℃"
+        },
+        {
+          "name": "Power(Watts)",
+          "value": "100mW"
+        },
+        {
+          "name": "Type",
+          "value": "Thick Film Resistor"
+        },
+        {
+          "name": "Voltage-Supply(Max)",
+          "value": "75V"
+        },
+        {
+          "name": "Tolerance",
+          "value": "±1%"
+        },
+        {
+          "name": "Temperature Coefficient",
+          "value": "±100ppm/℃"
+        }
+      ],
+      "has_easyeda_footprint": true,
+      "easyeda_symbol_uuid": "6276eacb67683c3bb9fe7d9fb2818e4e",
+      "easyeda_footprint_uuid": "398691f1f785460098bbe5ee6590333c"
+    }
+  ]
+}

@@ -1,5 +1,15 @@
 # CM4 Lite carrier continuation — 2026-09-10
 
+## Implementation now underway
+
+The original checkpoint below is preserved as history. Subsequent CM4 work is
+in `full-adapter/cm4/`: local milestone 2f316aa added the core, and the current
+eight-page hierarchy also captures native Ethernet magnetics, the Cat5e jack,
+ESD and isolated PoE termination. Read `cm4/README.md` and
+`cm4/research/ETHERNET-REVIEW.md` for current checks. There are 48 unfinished ERC
+findings and no integrated CM4 PCB. The ignored footprint review fixture is
+only library QA. None of these milestones satisfies the complete-board goal.
+
 ## User decision and scope
 
 Latest approval: “could we still keep poe if we did this? if so then i think we

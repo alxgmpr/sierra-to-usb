@@ -91,20 +91,24 @@ def check(root=None, output=None):
         subprocess.run([KICAD,'sch','erc','--format','json','-o',str(erc),str(sch)],check=True,stdout=subprocess.DEVNULL)
         report=json.loads(erc.read_text())
         counts=Counter(v['type'] for s in report['sheets'] for v in s['violations'])
-        assert counts=={'isolated_pin_label':51,'pin_not_driven':3,'power_pin_not_driven':2},counts
+        assert counts=={'isolated_pin_label':43,'pin_not_driven':3,'power_pin_not_driven':2},counts
         pending={'CM4_1V8','CM4_Pi_nLED_Activity','CM4_SCL0','CM4_SDA0','CM4_nEXTRST','ID_SC','ID_SD',
                  'PCIE_CLK_nREQ','PCIE_nRST','RECOVERY_USB_P','RECOVERY_USB_N'}
         pending|={f'GPIO{i}' for i in range(2,28)}
-        pending|={f'ETH_MDI{i}_{p}' for i in range(4) for p in ['P','N']}
         pending|={f'PCIE_{signal}_{p}' for signal in ['CLK','TX','RX'] for p in ['P','N']}
         actual={v['items'][0]['description'] for s in report['sheets'] for v in s['violations'] if v['type']=='isolated_pin_label'}
         assert actual=={f"Global Label '{n}'" for n in pending},actual
         project=json.loads((root/'cad/cm4-carrier.kicad_pro').read_text())
         assert not project.get('erc',{}).get('erc_exclusions')
+        import importlib.util
+        spec=importlib.util.spec_from_file_location('cm4_ethernet_checks',root/'tools/check_ethernet.py')
+        ethernet=importlib.util.module_from_spec(spec);spec.loader.exec_module(ethernet)
+        ethernet_result=ethernet.check(root,tree)
         result={'status':'CM4_CORE_CAPTURE_CHECKPOINT_NOT_RELEASE','cm4_contacts_checked':200,
                 'physical_socket_quantity':2,'sd_data_connections':6,'physical_controls':4,
+                'ethernet':ethernet_result,
                 'erc_unfinished_integration':dict(counts),'system_routed':False,
-                'scope':'core capture only; PoE, auxiliary power, USB3, modem, GPIO and protection remain open'}
+                'scope':'core and Ethernet capture; PoE conversion, auxiliary power, USB3, modem and GPIO remain open'}
         if output:Path(output).write_text(json.dumps(result,indent=2)+'\n')
         print(json.dumps(result,indent=2))
         return result

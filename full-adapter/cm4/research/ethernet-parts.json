@@ -1,0 +1,411 @@
+{
+  "captured": "2026-09-10",
+  "kind": "catalog and live lookup; no quote or inventory reservation",
+  "selected": [
+    {
+      "lcsc": "C3179022",
+      "model": "855437002",
+      "manufacturer": "MOLEX",
+      "package": "SMD",
+      "stock": 402,
+      "price": 3.0706,
+      "price_10": 2.606,
+      "library_type": "extended",
+      "preferred": false,
+      "category": "Connectors",
+      "subcategory": "Ethernet Connectors / Modular Connectors (RJ45 RJ11)",
+      "subcategory_id": 2983,
+      "mounting_type": "smd",
+      "specs": {
+        "Operating Temperature": "-40℃~+85℃",
+        "Number of Ports": "1",
+        "Contact Plating": "Gold",
+        "Contact Material": "Phosphor bronze",
+        "Connector Type": "-",
+        "LED": "Non-LED",
+        "Shielding": "Shielded",
+        "Ratings": "cat5e"
+      },
+      "description": "-40℃~+85℃ 1 Gold Non-LED Phosphor bronze Shielded cat5e SMD Ethernet Connectors / Modular Connectors (RJ45 RJ11) ROHS",
+      "min_order": 1,
+      "reel_qty": 132,
+      "datasheet": "",
+      "lcsc_url": "https://www.lcsc.com/product-detail/ethernet-connectors-modular-connectors-rj45-rj11_molex-0855437002_C3179022.html",
+      "prices": [
+        {
+          "qty": "1+",
+          "price": 3.0706
+        },
+        {
+          "qty": "10+",
+          "price": 2.606
+        },
+        {
+          "qty": "30+",
+          "price": 2.3152
+        },
+        {
+          "qty": "132+",
+          "price": 2.0178
+        },
+        {
+          "qty": "528+",
+          "price": 1.883
+        },
+        {
+          "qty": "1056+",
+          "price": 1.8245
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Operating Temperature",
+          "value": "-40℃~+85℃"
+        },
+        {
+          "name": "Number of Ports",
+          "value": "1"
+        },
+        {
+          "name": "Contact Plating",
+          "value": "Gold"
+        },
+        {
+          "name": "Contact Material",
+          "value": "Phosphor bronze"
+        },
+        {
+          "name": "Connector Type",
+          "value": "-"
+        },
+        {
+          "name": "LED",
+          "value": "Non-LED"
+        },
+        {
+          "name": "Shielding",
+          "value": "Shielded"
+        },
+        {
+          "name": "Ratings",
+          "value": "cat5e"
+        }
+      ],
+      "has_easyeda_footprint": false,
+      "easyeda_symbol_uuid": null,
+      "easyeda_footprint_uuid": null
+    },
+    {
+      "lcsc": "C5339289",
+      "model": "HX6096NL",
+      "manufacturer": "Pulse Elec",
+      "package": "SMD-24P,18.2x12.2mm",
+      "stock": 151,
+      "price": 2.4256,
+      "price_10": 2.0601,
+      "library_type": "extended",
+      "preferred": false,
+      "category": "Inductors, Coils, Chokes",
+      "subcategory": "Pulse Transformers(LAN)",
+      "subcategory_id": 3049,
+      "mounting_type": "smd",
+      "specs": {
+        "Inductance": "350uH",
+        "Number of Channels": "Single port",
+        "Isolation Voltage(Vrms)": "1.5kV",
+        "operating temperature": "-40℃~+85℃",
+        "Turns Ratio": "1CT:1CT、1CT:1CT"
+      },
+      "description": "-40℃~+85℃ 1.5kV 1CT:1CT、1CT:1CT 350uH Single port SMD-24P,18.2x12.2mm Pulse Transformers(LAN) ROHS",
+      "min_order": 1,
+      "reel_qty": 1000,
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2410010032_Pulse-Elec-HX6096NL_C5339289.pdf",
+      "lcsc_url": "https://www.lcsc.com/product-detail/pulse-transformers-lan_pulse-elec-hx6096nl_C5339289.html",
+      "prices": [
+        {
+          "qty": "1+",
+          "price": 2.4256
+        },
+        {
+          "qty": "10+",
+          "price": 2.0601
+        },
+        {
+          "qty": "30+",
+          "price": 1.8294
+        },
+        {
+          "qty": "100+",
+          "price": 1.5938
+        },
+        {
+          "qty": "500+",
+          "price": 1.4882
+        },
+        {
+          "qty": "1000+",
+          "price": 1.4427
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Inductance",
+          "value": "350uH"
+        },
+        {
+          "name": "Number of Channels",
+          "value": "Single port"
+        },
+        {
+          "name": "Isolation Voltage(Vrms)",
+          "value": "1.5kV"
+        },
+        {
+          "name": "operating temperature",
+          "value": "-40℃~+85℃"
+        },
+        {
+          "name": "Turns Ratio",
+          "value": "1CT:1CT、1CT:1CT"
+        }
+      ],
+      "has_easyeda_footprint": null,
+      "easyeda_symbol_uuid": null,
+      "easyeda_footprint_uuid": null
+    },
+    {
+      "lcsc": "C90627",
+      "model": "TPD4EUSB30DQAR",
+      "manufacturer": "Texas Instruments",
+      "package": "USON-10(1x2.5)",
+      "stock": 4289,
+      "price": 0.3836,
+      "price_10": 0.2993,
+      "library_type": "extended",
+      "preferred": false,
+      "category": "Circuit Protection",
+      "subcategory": "ESD and Surge Protection (TVS/ESD)",
+      "subcategory_id": 3035,
+      "mounting_type": "smd",
+      "specs": {
+        "Operating Temperature": "-40℃~+85℃",
+        "Type": "ESD",
+        "Junction Capacitance": "0.8pF",
+        "Number of Channels": "Four channels",
+        "Peak Pulse Power Dissipation (Ppp)": "45W@8/20us",
+        "level of protection": "IEC 61000-4-2、IEC 61000-4-5",
+        "Clamping Voltage": "8V",
+        "Polarity": "Unidirectional",
+        "Peak Pulse Current (Ipp)": "5A@8/20us",
+        "Voltage - Breakdown": "7V",
+        "Reverse Stand-Off Voltage (Vrwm)": "5.5V"
+      },
+      "description": "-40℃~+85℃ 0.8pF 45W@8/20us 5.5V 5A@8/20us 7V 8V ESD Four channels IEC 61000-4-2、IEC 61000-4-5 Unidirectional USON-10(1x2.5) ESD and Surge Protection (TVS/ESD) ROHS",
+      "min_order": 1,
+      "reel_qty": 3000,
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1805251249_Texas-Instruments-TPD4EUSB30DQAR_C90627.pdf",
+      "lcsc_url": "https://www.lcsc.com/product-detail/esd-and-surge-protection-tvs-esd_texas-instruments-tpd4eusb30dqar_C90627.html",
+      "prices": [
+        {
+          "qty": "1+",
+          "price": 0.3836
+        },
+        {
+          "qty": "50+",
+          "price": 0.2993
+        },
+        {
+          "qty": "150+",
+          "price": 0.2632
+        },
+        {
+          "qty": "500+",
+          "price": 0.2181
+        },
+        {
+          "qty": "3000+",
+          "price": 0.1979
+        },
+        {
+          "qty": "6000+",
+          "price": 0.1859
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Operating Temperature",
+          "value": "-40℃~+85℃"
+        },
+        {
+          "name": "Type",
+          "value": "ESD"
+        },
+        {
+          "name": "Junction Capacitance",
+          "value": "0.8pF"
+        },
+        {
+          "name": "Number of Channels",
+          "value": "Four channels"
+        },
+        {
+          "name": "Peak Pulse Power Dissipation (Ppp)",
+          "value": "45W@8/20us"
+        },
+        {
+          "name": "level of protection",
+          "value": "IEC 61000-4-2、IEC 61000-4-5"
+        },
+        {
+          "name": "Clamping Voltage",
+          "value": "8V"
+        },
+        {
+          "name": "Polarity",
+          "value": "Unidirectional"
+        },
+        {
+          "name": "Peak Pulse Current (Ipp)",
+          "value": "5A@8/20us"
+        },
+        {
+          "name": "Voltage - Breakdown",
+          "value": "7V"
+        },
+        {
+          "name": "Reverse Stand-Off Voltage (Vrwm)",
+          "value": "5.5V"
+        }
+      ],
+      "has_easyeda_footprint": true,
+      "easyeda_symbol_uuid": "9def3250aa5f4dcca95dcb7b4eec2492",
+      "easyeda_footprint_uuid": "407f0f5413d14acfb5d25b30b1cc5d5f"
+    }
+  ],
+  "rejected": [
+    {
+      "part": {
+        "lcsc": "C5358308",
+        "model": "JK0-0177NL",
+        "manufacturer": "Pulse Elec",
+        "package": "Plugin",
+        "stock": 20,
+        "price": 6.3231,
+        "price_10": 5.4799,
+        "library_type": "extended",
+        "preferred": false,
+        "category": "Connectors",
+        "subcategory": "Ethernet Connectors / Modular Connectors (RJ45 RJ11)",
+        "subcategory_id": 2983,
+        "mounting_type": "through_hole",
+        "specs": {
+          "Operating Temperature": "0℃~+70℃",
+          "Number of Ports": "1",
+          "Contact Plating": "Gold",
+          "Connector Type": "RJ45 Jack",
+          "Contact Material": "Phosphor bronze",
+          "LED": "Non-LED",
+          "Mounting Type": "Right Angle"
+        },
+        "description": "0℃~+70℃ 1 Gold Non-LED Phosphor bronze RJ45 Jack Right Angle 插件 Ethernet Connectors / Modular Connectors (RJ45 RJ11) ROHS",
+        "min_order": 1,
+        "reel_qty": 1000,
+        "datasheet": null,
+        "lcsc_url": null,
+        "prices": [
+          {
+            "qty": "1+",
+            "price": 6.3231
+          },
+          {
+            "qty": "10+",
+            "price": 5.4799
+          },
+          {
+            "qty": "30+",
+            "price": 4.9666
+          },
+          {
+            "qty": "100+",
+            "price": 4.536
+          },
+          {
+            "qty": "102+",
+            "price": 4.536
+          },
+          {
+            "qty": "104+",
+            "price": 4.536
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Operating Temperature",
+            "value": "0℃~+70℃"
+          },
+          {
+            "name": "Number of Ports",
+            "value": "1"
+          },
+          {
+            "name": "Contact Plating",
+            "value": "Gold"
+          },
+          {
+            "name": "Connector Type",
+            "value": "RJ45 Jack"
+          },
+          {
+            "name": "Contact Material",
+            "value": "Phosphor bronze"
+          },
+          {
+            "name": "LED",
+            "value": "Non-LED"
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Right Angle"
+          }
+        ],
+        "has_easyeda_footprint": true,
+        "easyeda_symbol_uuid": "95e514d0197e4a4383fdde5608656c89",
+        "easyeda_footprint_uuid": "2a37a4d71e0e47b0a52a9994fd52c98a"
+      },
+      "live": {
+        "results": [
+          {
+            "lcsc": "C5358308",
+            "model": "JK0-0177NL",
+            "manufacturer": "Pulse Elec",
+            "package": "Plugin",
+            "stock": 20,
+            "price": 6.3231,
+            "price_10": 5.4799,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Connectors",
+            "subcategory": "Ethernet Connectors / Modular Connectors (RJ45 RJ11)",
+            "subcategory_id": 2983,
+            "mounting_type": "through_hole",
+            "specs": {
+              "Operating Temperature": "0℃~+70℃",
+              "Number of Ports": "1",
+              "Contact Plating": "Gold",
+              "Connector Type": "RJ45 Jack",
+              "Contact Material": "Phosphor bronze",
+              "LED": "Non-LED",
+              "Mounting Type": "Right Angle"
+            }
+          }
+        ],
+        "page": 1,
+        "per_page": 5,
+        "total": 1,
+        "total_pages": 1,
+        "has_more": false
+      },
+      "reason": "J432.E supersedes old selector; JK0-0177NL rated only 30W PD over four pairs."
+    }
+  ]
+}

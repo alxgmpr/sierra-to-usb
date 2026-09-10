@@ -97,6 +97,10 @@ def build():
         'Richtek','C250547','1 A active-high switch with output discharge',
         {'microSD power switch':ps},keywords='power switch',footprint_filter='TSOT*23*5*')
     all_symbols.append(sym);manifest['RT9742GGJ5']=units
+    from ethernet_symbols import build as ethernet_symbols
+    added, added_manifest = ethernet_symbols(make_symbol)
+    all_symbols.extend(added)
+    manifest.update(added_manifest)
     # Positive rails use native KiCad power symbols, always oriented upwards.
     lib=sx.loads((STD/'power.kicad_sym').read_text())
     template=next(s for s in nodes(lib,'symbol') if s[1]=='VDD')

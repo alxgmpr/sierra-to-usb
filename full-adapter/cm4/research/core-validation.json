@@ -4,11 +4,19 @@
   "physical_socket_quantity": 2,
   "sd_data_connections": 6,
   "physical_controls": 4,
+  "ethernet": {
+    "mdi_pairs": 4,
+    "cable_pairs": 4,
+    "isolated_poe_taps": 4,
+    "esd_channels": 8,
+    "safety_capacitor": "C134 / Y1",
+    "poe_conversion_integrated": false
+  },
   "erc_unfinished_integration": {
-    "isolated_pin_label": 51,
+    "isolated_pin_label": 43,
     "power_pin_not_driven": 2,
     "pin_not_driven": 3
   },
   "system_routed": false,
-  "scope": "core capture only; PoE, auxiliary power, USB3, modem, GPIO and protection remain open"
+  "scope": "core and Ethernet capture; PoE conversion, auxiliary power, USB3, modem and GPIO remain open"
 }
