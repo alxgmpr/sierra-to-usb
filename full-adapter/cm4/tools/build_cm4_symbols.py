@@ -101,6 +101,10 @@ def build():
     added, added_manifest = ethernet_symbols(make_symbol)
     all_symbols.extend(added)
     manifest.update(added_manifest)
+    from power_input_symbols import build as power_input_symbols
+    added, added_manifest = power_input_symbols(make_symbol)
+    all_symbols.extend(added)
+    manifest.update(added_manifest)
     # Positive rails use native KiCad power symbols, always oriented upwards.
     lib=sx.loads((STD/'power.kicad_sym').read_text())
     template=next(s for s in nodes(lib,'symbol') if s[1]=='VDD')

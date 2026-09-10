@@ -41,7 +41,8 @@ def check():
     cm4_cad = {'full-adapter/cm4/cad/' + p for p in (
         'cm4-carrier.kicad_pro', 'cm4-carrier.kicad_sch', 'cm4-power.kicad_sch',
         'cm4-storage.kicad_sch', 'cm4-interfaces.kicad_sch', 'cm4-gpio.kicad_sch',
-        'cm4-unused.kicad_sch', 'ethernet-data.kicad_sch', 'ethernet-termination.kicad_sch')}
+        'cm4-unused.kicad_sch', 'ethernet-data.kicad_sch', 'ethernet-termination.kicad_sch',
+        'aux-usbc.kicad_sch', 'aux-pd.kicad_sch', 'aux-window.kicad_sch', 'input-mux.kicad_sch')}
     allowed |= cm4_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
     assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"

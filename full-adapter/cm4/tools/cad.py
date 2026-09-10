@@ -127,5 +127,5 @@ class Sheet:
 
     def save(self, paper='A3'):
         path = ROOT / 'cad' / (self.name + '.kicad_sch')
-        path.write_text(f'(kicad_sch (version 20250114) (generator "full_adapter_schematic") (uuid {Q(self.id)}) (paper {Q(paper)})\n(title_block (title {Q(self.title)}) (rev "WORK IN PROGRESS") (company "Integrated modem development board"))\n(lib_symbols ' + '\n'.join(sx.dumps(s) for s in self.libs.values()) + ')\n' + '\n'.join(self.items) + '\n)\n')
+        path.write_text(f'(kicad_sch (version 20250114) (generator "full_adapter_schematic") (uuid {Q(self.id)}) (paper {Q(paper)})\n(title_block (title {Q(self.title)}) (rev "WIP") (company "Integrated modem development board"))\n(lib_symbols ' + '\n'.join(sx.dumps(s) for s in self.libs.values()) + ')\n' + '\n'.join(self.items) + '\n)\n')
         return path

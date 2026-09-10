@@ -3,10 +3,12 @@
 ## Implementation now underway
 
 The original checkpoint below is preserved as history. Subsequent CM4 work is
-in `full-adapter/cm4/`: local milestone 2f316aa added the core, and the current
-eight-page hierarchy also captures native Ethernet magnetics, the Cat5e jack,
-ESD and isolated PoE termination. Read `cm4/README.md` and
-`cm4/research/ETHERNET-REVIEW.md` for current checks. There are 48 unfinished ERC
+in `full-adapter/cm4/`: local milestone 2f316aa added the core and 2de318b added
+native Ethernet magnetics, the Cat5e jack, ESD and isolated PoE termination.
+The current twelve-page hierarchy also captures 36 auxiliary power/input-mux
+components, for 69 components total. Read `cm4/README.md` and
+`cm4/research/POWER-INPUT-REVIEW.md` for current checks and explicit surge,
+thermal, fault-current and system-budget work still open. There are 50 unfinished ERC
 findings and no integrated CM4 PCB. The ignored footprint review fixture is
 only library QA. None of these milestones satisfies the complete-board goal.
 

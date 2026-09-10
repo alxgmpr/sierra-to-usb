@@ -3103,5 +3103,999 @@
         }
       ]
     }
+  ],
+  "HUSB238_002DD": [
+    {
+      "unit": 1,
+      "title": "20 V / 3 A PD sink",
+      "width": 30.48,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "2",
+          "name": "D+",
+          "display_name": "D+",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "D-",
+          "display_name": "D-",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "4",
+          "name": "CC1",
+          "display_name": "CC1",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "CC2",
+          "display_name": "CC2",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "SDA",
+          "display_name": "SDA",
+          "type": "bidirectional",
+          "side": "R",
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "7",
+          "name": "SCL",
+          "display_name": "SCL",
+          "type": "input",
+          "side": "R",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "8",
+          "name": "VSET",
+          "display_name": "VSET",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "9",
+          "name": "ISET",
+          "display_name": "ISET",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "10",
+          "name": "GATE",
+          "display_name": "GATE",
+          "type": "open_collector",
+          "side": "R",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "1",
+          "name": "VIN",
+          "display_name": "VIN",
+          "type": "power_in",
+          "side": "T",
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "11",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    }
+  ],
+  "TPD6S300RUKR": [
+    {
+      "unit": 1,
+      "title": "CC protection / dead battery",
+      "width": 30.48,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "4",
+          "name": "C_CC1",
+          "display_name": "C_CC1",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "7",
+          "name": "RPD_G1",
+          "display_name": "RPD_G1",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "C_CC2",
+          "display_name": "C_CC2",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "RPD_G2",
+          "display_name": "RPD_G2",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "12",
+          "name": "CC1",
+          "display_name": "CC1",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "11",
+          "name": "CC2",
+          "display_name": "CC2",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "9",
+          "name": "~{FLT}",
+          "display_name": "~{FLT}",
+          "type": "open_collector",
+          "side": "R",
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "10",
+          "name": "VPWR",
+          "display_name": "VPWR",
+          "type": "power_in",
+          "side": "T",
+          "at": [
+            -2.54,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "VBIAS",
+          "display_name": "VBIAS",
+          "type": "passive",
+          "side": "T",
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "8",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            -5.08,
+            -22.86,
+            90
+          ]
+        },
+        {
+          "ball": "13",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            -2.54,
+            -22.86,
+            90
+          ]
+        },
+        {
+          "ball": "18",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        },
+        {
+          "ball": "21",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            2.54,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "title": "Unused channels / ground",
+      "width": 30.48,
+      "height": 30.48,
+      "pins": [
+        {
+          "ball": "1",
+          "name": "C_SBU1",
+          "display_name": "C_SBU1",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "2",
+          "name": "C_SBU2",
+          "display_name": "C_SBU2",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "15",
+          "name": "SBU1",
+          "display_name": "SBU1",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "14",
+          "name": "SBU2",
+          "display_name": "SBU2",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "19",
+          "name": "D2",
+          "display_name": "D2",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "20",
+          "name": "D1",
+          "display_name": "D1",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "16",
+          "name": "NC / GND",
+          "display_name": "NC / GND",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "17",
+          "name": "NC / GND",
+          "display_name": "NC / GND",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "TLV70433DBVR": [
+    {
+      "unit": 1,
+      "title": "Auxiliary housekeeping 3.3 V",
+      "width": 30.48,
+      "height": 20.32,
+      "pins": [
+        {
+          "ball": "2",
+          "name": "IN",
+          "display_name": "IN",
+          "type": "power_in",
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "OUT",
+          "display_name": "OUT",
+          "type": "power_out",
+          "side": "R",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "4",
+          "name": "NC",
+          "display_name": "NC",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "NC",
+          "display_name": "NC",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "1",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            0.0,
+            -12.7,
+            90
+          ]
+        }
+      ]
+    }
+  ],
+  "TPS3700DDCR": [
+    {
+      "unit": 1,
+      "title": "USB-C voltage window",
+      "width": 30.48,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "3",
+          "name": "INA+",
+          "display_name": "INA+",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "4",
+          "name": "INB-",
+          "display_name": "INB-",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "1",
+          "name": "OUTA",
+          "display_name": "OUTA",
+          "type": "open_collector",
+          "side": "R",
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "OUTB",
+          "display_name": "OUTB",
+          "type": "open_collector",
+          "side": "R",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "VDD",
+          "display_name": "VDD",
+          "type": "power_in",
+          "side": "T",
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "2",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    }
+  ],
+  "SN74LVC1G14DBVR": [
+    {
+      "unit": 1,
+      "title": "Schmitt fault inverter",
+      "width": 30.48,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "2",
+          "name": "A",
+          "display_name": "A",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "4",
+          "name": "~{Y}",
+          "display_name": "~{Y}",
+          "type": "output",
+          "side": "R",
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "1",
+          "name": "NC",
+          "display_name": "NC",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "VCC",
+          "display_name": "VCC",
+          "type": "power_in",
+          "side": "T",
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    }
+  ],
+  "TPS2121RUXR": [
+    {
+      "unit": 1,
+      "title": "Power mux / reverse blocking",
+      "width": 30.48,
+      "height": 25.4,
+      "pins": [
+        {
+          "ball": "7",
+          "name": "IN1",
+          "display_name": "IN1",
+          "type": "power_in",
+          "side": "L",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "2",
+          "name": "IN2",
+          "display_name": "IN2",
+          "type": "power_in",
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "PR1",
+          "display_name": "PR1",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "CP2",
+          "display_name": "CP2",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "OV1",
+          "display_name": "OV1",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "4",
+          "name": "OV2",
+          "display_name": "OV2",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "[1,8]",
+          "name": "OUT",
+          "display_name": "OUT",
+          "type": "power_out",
+          "side": "R",
+          "physical_pins": [
+            "1",
+            "8"
+          ],
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "9",
+          "name": "ST / unused=GND",
+          "display_name": "ST / unused=GND",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "10",
+          "name": "ILIM",
+          "display_name": "ILIM",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "11",
+          "name": "SS",
+          "display_name": "SS",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "12",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            0.0,
+            -15.24,
+            90
+          ]
+        }
+      ]
+    }
+  ],
+  "USB4105-GF-A-120": [
+    {
+      "unit": 1,
+      "title": "USB-C auxiliary power",
+      "width": 30.48,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "A5",
+          "name": "CC1",
+          "display_name": "CC1",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "B5",
+          "name": "CC2",
+          "display_name": "CC2",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "A6",
+          "name": "D+",
+          "display_name": "D+",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "B6",
+          "name": "D+",
+          "display_name": "D+",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "A7",
+          "name": "D-",
+          "display_name": "D-",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "B7",
+          "name": "D-",
+          "display_name": "D-",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "A8",
+          "name": "SBU1",
+          "display_name": "SBU1",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "B8",
+          "name": "SBU2",
+          "display_name": "SBU2",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "A4",
+          "name": "VBUS",
+          "display_name": "VBUS",
+          "type": "passive",
+          "side": "T",
+          "at": [
+            -5.08,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "A9",
+          "name": "VBUS",
+          "display_name": "VBUS",
+          "type": "passive",
+          "side": "T",
+          "at": [
+            -2.54,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "B4",
+          "name": "VBUS",
+          "display_name": "VBUS",
+          "type": "passive",
+          "side": "T",
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "B9",
+          "name": "VBUS",
+          "display_name": "VBUS",
+          "type": "passive",
+          "side": "T",
+          "at": [
+            2.54,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "A1",
+          "name": "GND / shell",
+          "display_name": "GND / shell",
+          "type": "passive",
+          "side": "B",
+          "at": [
+            -5.08,
+            -22.86,
+            90
+          ]
+        },
+        {
+          "ball": "A12",
+          "name": "GND / shell",
+          "display_name": "GND / shell",
+          "type": "passive",
+          "side": "B",
+          "at": [
+            -2.54,
+            -22.86,
+            90
+          ]
+        },
+        {
+          "ball": "B1",
+          "name": "GND / shell",
+          "display_name": "GND / shell",
+          "type": "passive",
+          "side": "B",
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        },
+        {
+          "ball": "B12",
+          "name": "GND / shell",
+          "display_name": "GND / shell",
+          "type": "passive",
+          "side": "B",
+          "at": [
+            2.54,
+            -22.86,
+            90
+          ]
+        },
+        {
+          "ball": "SH",
+          "name": "GND / shell",
+          "display_name": "GND / shell",
+          "type": "passive",
+          "side": "B",
+          "at": [
+            5.08,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    }
   ]
 }
