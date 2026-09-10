@@ -28,7 +28,7 @@ def capacitance(root):
     assert c['22u_at_0v98']>10
     # Upper bounds omit negative DC-bias loss, include positive tolerance/temp.
     # Include regulator banks and U13 input bank in U12's capacitive load.
-    upper33=(5+2+3+1)*22*1.2*1.15+4.7*1.1*1.15+3*.1*1.1*1.15
+    upper33=(5+2+3+1)*22*1.2*1.15+4.7*1.1*1.15+6*.1*1.1*1.15
     upper09=(5+2)*22*1.2*1.15+5*4.7*1.1*1.15
     assert upper33<470 and upper09<470
     return {'estimated_effective_uF':c,'total_output_capacitance_upper_uF':{'3v3':upper33,'core':upper09},
@@ -59,9 +59,9 @@ def check(root=ROOT):
             assert (f'C{n}','1') in rail and (f'C{n}','2') in ground,n
         exact('ETH_CORE_ENABLE',[('U11','6'),('U13','8'),('R662','1')])
         for name,pin,ref in [('ETH_GPI','3','R672'),('ETH_LED1','27','R673'),('ETH_WAKE_N','2','R677'),('ETH_CLKREQ_N','48','R678')]:
-            exact(name,[('U11',pin),(ref,'2')]);assert (ref,'1') in v33
+            exact(name,[('U11',pin),(ref,'2')]+([('U14','7')] if pin=='2' else [('U14','6')] if pin=='48' else []));assert (ref,'1') in v33
         for name,pin,ref in [('ETH_EEDO_IDLE','25','R674'),('ETH_EEDI_STRAP','30','R675'),('ETH_EESEL_STRAP','32','R676'),('ETH_PERST_N','36','R679')]:
-            exact(name,[('U11',pin),(ref,'1')]);assert (ref,'2') in ground
+            exact(name,[('U11',pin),(ref,'1')]+([('U16','1'),('R704','2')] if pin=='36' else []));assert (ref,'2') in ground
         exact('ETH_ISOLATE_N',[('U11','1'),('R680','2'),('R681','1')]);assert ('R680','1') in v33 and ('R681','2') in ground
         for pin in ['4','5','7','26','31','35']:assert attached('U11',pin)=={('U11',pin)}
         exact('ETH_XTAL_IN',[('U11','10'),('Y670','1'),('C685','1')])

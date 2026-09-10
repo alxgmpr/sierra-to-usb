@@ -1232,7 +1232,7 @@
   "recovery-detect": {},
   "buttons": {},
   "ethernet-3v3-power": {
-    "ETH_3V3_PG": [
+    "ETH_RESET_CONDITION_N": [
       [
         "U12",
         "9"
@@ -1240,7 +1240,7 @@
     ]
   },
   "ethernet-core-power": {
-    "ETH_CORE_PG": [
+    "ETH_RESET_CONDITION_N": [
       [
         "U13",
         "9"
@@ -1500,6 +1500,88 @@
       [
         "U11",
         "48"
+      ]
+    ]
+  },
+  "ethernet-control": {
+    "SOC_PCIE_PERST_N": [
+      [
+        "U1",
+        "AD1"
+      ]
+    ],
+    "SOC_PCIE_WAKE_N": [
+      [
+        "U1",
+        "AD7"
+      ],
+      [
+        "U14",
+        "2"
+      ]
+    ],
+    "SOC_PCIE_CLKREQ_N": [
+      [
+        "U1",
+        "AG6"
+      ],
+      [
+        "U14",
+        "3"
+      ]
+    ],
+    "ETH_WAKE_N": [
+      [
+        "U14",
+        "7"
+      ]
+    ],
+    "ETH_CLKREQ_N": [
+      [
+        "U14",
+        "6"
+      ]
+    ],
+    "VCC3V3_S0": [
+      [
+        "U14",
+        "5"
+      ]
+    ]
+  },
+  "ethernet-reset": {
+    "SOC_PCIE_PERST_N": [
+      [
+        "U15",
+        "2"
+      ]
+    ],
+    "ETH_RESET_CONDITION_N": [
+      [
+        "U15",
+        "4"
+      ],
+      [
+        "U16",
+        "3"
+      ]
+    ],
+    "VCC3V3_ETH": [
+      [
+        "U16",
+        "5"
+      ]
+    ],
+    "ETH_PERST_N": [
+      [
+        "U16",
+        "1"
+      ]
+    ],
+    "ETH_RESET_CT": [
+      [
+        "U16",
+        "4"
       ]
     ]
   }

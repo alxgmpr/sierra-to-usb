@@ -1,0 +1,108 @@
+{
+  "translator": {
+    "lcsc": "C107408",
+    "model": "FXMA2102L8X",
+    "manufacturer": "onsemi",
+    "package": "SMD",
+    "pin_count": 8,
+    "pins": [
+      {
+        "number": "1",
+        "name": "VCCA"
+      },
+      {
+        "number": "2",
+        "name": "A0"
+      },
+      {
+        "number": "3",
+        "name": "A1"
+      },
+      {
+        "number": "4",
+        "name": "GND"
+      },
+      {
+        "number": "5",
+        "name": "OE"
+      },
+      {
+        "number": "6",
+        "name": "B1"
+      },
+      {
+        "number": "7",
+        "name": "B0"
+      },
+      {
+        "number": "8",
+        "name": "VCCB"
+      }
+    ],
+    "easyeda_symbol_uuid": "0d8f1f4b5726401e981d3ecd18ef05a0"
+  },
+  "supervisor": {
+    "lcsc": "C43698",
+    "model": "TPS3808G33DBVR",
+    "manufacturer": "Texas Instruments",
+    "package": "SOT-23-6",
+    "pin_count": 6,
+    "pins": [
+      {
+        "number": "1",
+        "name": "RESET#"
+      },
+      {
+        "number": "2",
+        "name": "GND"
+      },
+      {
+        "number": "3",
+        "name": "MR#"
+      },
+      {
+        "number": "4",
+        "name": "CT"
+      },
+      {
+        "number": "5",
+        "name": "SENSE"
+      },
+      {
+        "number": "6",
+        "name": "VDD"
+      }
+    ],
+    "easyeda_symbol_uuid": "72210577696184a44c9fb70c235649f1"
+  },
+  "reset_buffer": {
+    "lcsc": "C7830",
+    "model": "SN74LVC1G07DCKR",
+    "manufacturer": "Texas Instruments",
+    "package": "SC-70-5",
+    "pin_count": 5,
+    "pins": [
+      {
+        "number": "1",
+        "name": "N.C"
+      },
+      {
+        "number": "2",
+        "name": "A"
+      },
+      {
+        "number": "3",
+        "name": "GND"
+      },
+      {
+        "number": "4",
+        "name": "Y"
+      },
+      {
+        "number": "5",
+        "name": "VCC"
+      }
+    ],
+    "easyeda_symbol_uuid": "028ac0967cc445388b09ce51ec9067da"
+  }
+}

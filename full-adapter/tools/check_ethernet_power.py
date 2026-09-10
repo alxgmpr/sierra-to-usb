@@ -61,14 +61,14 @@ def check(root=ROOT):
         def attached(ref,pin):return next(n for n in nets.values() if (ref,pin) in n)
         parts={p.get('ref'):p for p in tree.findall('.//components/comp')}
         assert ('U11','6') in nets['ETH_CORE_ENABLE']
-        for n,u,vin,out,en,pg,top,bottom in [(650,'U12','VCC5V_SYS','VCC3V3_ETH','VCC3V3_S0','ETH_3V3_PG','RT0603BRE0745K3L','RT0603BRD0710KL'),(660,'U13','VCC3V3_ETH','VDD0V95_ETH','ETH_CORE_ENABLE','ETH_CORE_PG','RT0603BRD0714KL','RT0603BRD0724KL')]:
+        for n,u,vin,out,en,pg,top,bottom in [(650,'U12','VCC5V_SYS','VCC3V3_ETH','VCC3V3_S0','ETH_RESET_CONDITION_N','RT0603BRE0745K3L','RT0603BRD0710KL'),(660,'U13','VCC3V3_ETH','VDD0V95_ETH','ETH_CORE_ENABLE','ETH_RESET_CONDITION_N','RT0603BRD0714KL','RT0603BRD0724KL')]:
             assert {(u,'1'),(u,'2'),(f'C{n}','1'),(f'C{n+1}','1')}<=nets[vin]
             assert {(u,'8'),(f'R{n+2}','1')}<=nets[en] and vin!=en
             assert {(u,'4'),(u,'7'),(f'R{n+1}','2'),(f'R{n+2}','2')}<=nets['GND']
             assert attached(u,'3')=={(u,'3'),(f'L{n}','1')}
             assert attached(u,'5')=={(u,'5'),(f'R{n}','2'),(f'R{n+1}','1')}
             assert attached(u,'6')=={(u,'6'),(f'C{n+2}','1')}
-            assert attached(u,'9')=={(u,'9'),(f'R{n+3}','2'),(f'TP{n+1}','1')}
+            assert attached(u,'9')=={('U12','9'),('U13','9'),('R653','2'),('R663','2'),('TP651','1'),('TP661','1'),('U15','4'),('U16','3')}
             assert {(f'L{n}','2'),(f'R{n}','1'),(f'TP{n}','1')}|{(f'C{i}','1') for i in range(n+3,n+8)}<=nets[out]
             assert {(f'C{i}','2') for i in range(n,n+8)}<=nets['GND']
             assert (f'R{n+3}','1') in nets['VCC3V3_ETH']

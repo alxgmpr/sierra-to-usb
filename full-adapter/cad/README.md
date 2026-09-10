@@ -206,7 +206,7 @@ manufacturer switch lands, nominal3D geometry and connectivity were reviewed.
 
 ## Ethernet controller capture
 
-The current hierarchy has 27 pages including root. `ethernet-3v3-power` and
+The current hierarchy has29pages including root. `ethernet-3v3-power` and
 `ethernet-core-power` contain U12/U13 TPS6281320QWRWYRQ1 forced-PWM regulators.
 `ethernet-local-power`, `ethernet-clock-config` and `ethernet-pcie` capture every
 U11 RTL8125BG-CG pin and six U1 PCIe2 data/reference-clock balls. The original
@@ -221,8 +221,8 @@ stable unique local MAC before network-UP; see the qualification file for
 silicon-default and boot-image verification that remains necessary.
 
 The PCIe lane has one 100nF capacitor per transmit leg, with physical endpoints
-checked independently. PERST has a pulldown, but its release circuit and host
-control isolation remain unfinished. Eight MDI labels are explicit open endpoints
+checked independently. PERST now has a TPS3808G33 release circuit and host
+control isolation; fast-fault timing remains unfinished. Eight MDI labels are explicit open endpoints
 for the qualified 2.5G/PoE magnetics; they are not ERC waivers.
 
 `check_ethernet_controller.py` runs in both staged checkpoint hooks alongside
@@ -233,3 +233,17 @@ and bead copper/model review uses `../build/ethernet-passives-*`; these small
 inspection boards are not the integrated PCB. Footprint KLC exceptions are
 the manufacturer's rectangular bead lands and intentional local/shared/scaled
 generic models, documented in `../research/ethernet-controller-qualification.json`.
+
+
+`ethernet-control` and `ethernet-reset` add U1VCCIO5/M1, U14FXMA2102 bidirectional
+control isolation, U15TI open-drain host-reset buffering and U16TPS3808G33
+startup qualification. Both regulator PG outputs share the host reset-condition
+bus. R703100k selects180–420ms delay, R70410k pulls PERST up while R67947k remains
+to ground. See `../research/ethernet-control-qualification.json` for actual bounds
+and open fast-fault, clock/ASPM, partial-power and boot-image checks.
+
+`check_ethernet_control.py` runs in the staged hooks. It checks19IC pins, three M1
+balls, all control nets, independent supply membership and manufacturer lands.
+The29-page `../build/ethernet-control-review.pdf` supersedes the previous review;
+new pages22/29 and modified PG/control endpoint pages were visually inspected.
+The small ignored footprint inspection board has no system circuitry or routing.

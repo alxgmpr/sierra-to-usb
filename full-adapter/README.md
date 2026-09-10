@@ -51,11 +51,12 @@ and the full PCB remain unfinished.
 Physical RECOVERY, RESET and POWER buttons are captured on `buttons`;
 manufacturer switch lands, nominal3D geometry and connectivity were reviewed.
 
-The hierarchy now has 27 pages including the root. Five Ethernet pages capture
+The hierarchy now has29pages including the root. Seven Ethernet pages capture
 the two forced-PWM supplies and all 49 RTL8125BG pins, local bypass, the filtered
 PLL rail, 25 MHz crystal, startup pulls, and PCIe data/reference-clock connections.
 `check_ethernet_controller.py` verifies their exported nets and selected passives.
-PERST is held low pending hardware reset qualification and host control isolation;
+M1 control isolation and180–420ms startup reset qualification are captured;
+fast-fault timing, power-cycle re-arm and clock/ASPM qualification remain open;
 eight MDI endpoints await the selected 2.5G/PoE magnetics. See
 [Ethernet qualification](research/ethernet-controller-qualification.json) and
 [fresh component stock](research/ethernet-controller-live-stock.json).

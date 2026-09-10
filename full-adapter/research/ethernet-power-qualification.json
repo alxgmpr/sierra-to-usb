@@ -51,7 +51,7 @@
     "U12": "VCC5V_SYS ->3.318V VCC3V3_ETH; EN from VCC3V3_S0; R65045.3k/R65110k",
     "U13": "VCC3V3_ETH ->0.950V VDD0V95_ETH; EN from future U11POW_EXT_SWR,47k pulldown; R66014k/R66124k",
     "both": "TPS6281320QWRWYRQ1 C1849536. MODE=VIN forces PWM; COMP/FSET=GND selects2.25MHz/compensation1. Output discharge ON, SSC ON, foldback OFF. Two input22uF, five local output22uF,10nF C0G SS per stage. No added external loads allowed on Ethernet rails.",
-    "PG": "47k to VCC3V3_ETH; TP651/TP661. PG rising UVP92..98% and falling87..93%; cannot alone prove Realtek voltage window."
+    "PG": "R653/R66347k toVCC3V3_ETH; both PG outputs, TP651/TP661 and U15host-reset buffer now share ETH_RESET_CONDITION_N atU16MR. PG risingUVP92..98%, falling87..93%;40us typical deglitch. Cannot alone prove the Realtek voltage window or fast-fault timing."
   },
   "sizing": {
     "voltage_corners": {
@@ -163,13 +163,14 @@
     }
   },
   "open_work": [
-    "Complete host reset/control isolation and2.5G/PoE magnetics. U11 controller and its enable/output-load connections are captured.",
-    "Complete hardware reset sequencing: stable rails plus>=100ms delay, REFCLK timing and>=50ms off/on interval. Figure16 resolvesTPERSTB-RTD as>=10ms between PERSTB rising edges.",
+    "U11controller and U14/U15host-control isolation are captured. Complete fast-fault reset and2.5G/PoE magnetics.",
+    "U16provides180\u2013420ms startup delay. Complete fast-fault timing, REFCLK qualification and>=50ms off/on interval. Figure16 resolvesTPERSTB-RTD as>=10ms between PERSTB rising edges.",
     "Finish system input supervision and PMIC brownout re-arm; source5V must remain within this design envelope. Discharge requires input typically>=2V and prior enable; do not assume arbitrary power loss leaves outputs discharged.",
     "Close actual power budget, input/output capacitance totals, thermal placement and current limits after all loads are connected. X5R local temperature must stay<=85C.",
     "Reserve at least5mV for core DC-plane drop and validate total ripple/transient excursion against remaining~17mV margin. Measure worst-case ramp monotonicity, startup overshoot, load transients and short-circuit recovery.",
     "Frequency SSC increment, tracking gain/offset and inductor/capacitance curves have typical values; calculations size parts but do not replace prototype waveform and thermal tests.",
     "Check final footprint copper/paste Gerbers, assembly orientation, solderability and mechanical clearance on the integrated board."
   ],
-  "controller_capture": "U11 pin6 now drives U13EN; local bypass and PCIe/clock/straps are captured."
+  "controller_capture": "U11 pin6 now drives U13EN; local bypass and PCIe/clock/straps are captured.",
+  "control_capture": "ethernet-control-qualification.json"
 }

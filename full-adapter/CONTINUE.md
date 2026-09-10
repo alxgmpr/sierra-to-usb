@@ -11,11 +11,13 @@ or shared KiCad windows with stale projects. Work through files and KiCad CLI.
 
 ## Saved implementation
 
-The hierarchy has 27 pages including root: 1 GiB DDR3, RK3568B2 core/PMU/IO/PHY
+The hierarchy has 29 pages including root: 1 GiB DDR3, RK3568B2 core/PMU/IO/PHY
 supplies, RK860-0 CPU regulator, RK809-5 bucks/LDOs/controls/RTC, processor
 control/boot straps, 24 MHz crystal, SanDisk SDINBDG4-8G eMMC, console/recovery/buttons,
-and RTL8125BG supplies, local bypass, 25MHz clock/straps and PCIe data/reference clock.
-All prior symbols remain unchanged; a filtered Ethernet PLL power symbol was added. `check_emmc.py`
+and RTL8125BG supplies, local bypass,25MHz clock/straps, PCIe data/reference clock,
+M1 control isolation and180–420ms startup reset qualification.
+All prior symbols remain unchanged; U14FXMA2102L8X, U15SN74LVC1G07DCKR and
+U16TPS3808G33DBVR are added with verified manufacturer lands/local models. `check_emmc.py`
 checks 153 physical balls/pads and exported eight-bit bus, rails, bypass,
 reset and service nets. Both root checkpoint hooks run against staged files.
 Sixteen integration ERC findings remain: missing_input_pin 1, missing_bidi_pin 1,
@@ -26,11 +28,18 @@ There is no integrated PCB. The only board is a processor escape study with
 
 ## Resume here
 
-1. Finish Ethernet hardware reset and host control isolation. U11 and U13 pin6/EN
-   are connected, but R679 currently holds PERSTB LOW. Use U1 M1 functional pins
-   AD1 PERST / AD7 WAKE / AG6 CLKREQ in VCCIO5. Ethernet3.3 and S0 are distinct
-   power domains; no direct control-wire shortcut. See ethernet-controller-qualification.json.
-   Connect eight MDI endpoints to qualified 2.5G four-pair-PoE magnetics next.
+1. Finish Ethernet fast-fault reset and power-cycle re-arm. M1 control isolation
+   and normal startup reset are captured in ethernet-control / ethernet-reset.
+   U14FXMA2102 bridges WAKE/CLKREQ across S0/ETH rails. U15 open-drain buffer
+   combines host PERST with both regulator PG outputs on ETH_RESET_CONDITION_N;
+   U16 enforces180–420ms before U11 release. See ethernet-control-qualification.json.
+   PG40us deglitch and TPS3808 assertion timing are typical, not500ns guarantees.
+   Realtek TFAIL is triggered beyond specified tolerance by>500mV; do not invent
+   a tight500ns monitor at the first microvolt outside the operating window.
+   Close the fast path, >=50ms off/on interval and discharge. Verify FXMA translated
+   LOW at actual loading; its guaranteed VOL test uses0.15V input whereas both
+   endpoint VOL specs reach0.4V (typical curve is favorable, not a max guarantee).
+   Connect eight MDI endpoints to qualified2.5G four-pair PoE magnetics next.
 2. Finish eMMC electrical qualification: JESD84-B51 permits either rail order;
    current slots are compatible. Close ramps, shutdown discharge, IO back-powering
    and current allocation. Source is SanDisk DOC56-34-01508 Rev1.4, URL and pin/page
@@ -142,3 +151,27 @@ edges, not a10ms analog rise time. The separate >=100ms stable-power delay and
 Fresh live stock is in ethernet-controller-live-stock.json. The27-page review
 is build/ethernet-controller-review.pdf; root and all three new pages, crystal
 and bead copper/model views were inspected. There is still no integrated PCB.
+
+## Current Ethernet control capture
+
+U1unit31 uses AD1PERST / AD7WAKE / AG6CLKREQ on VCCIO5; remaining27pins are NC.
+U14 A0/B0 is WAKE, A1/B1 is bidirectional CLKREQ, OE follows S0 as manufacturer
+note4 allows. Unlike TXS0102, it permits crossing/equal VCCA/VCCB. R700/R7011.5k
+keep HIGH drop below0.324V with the16k minimum reset pulldown; use functional M1
+mux and disable internal pulls in firmware. R70247k holds host PERST LOW.
+
+U15 input tolerates the powered host with Ethernet off. Its output, U12PG/U13PG,
+R653/R663 and TP651/TP661 now share one condition net (the old separate PG names
+are removed). U16SENSE/VDD use ETH3.3, CT viaR703100k selects300ms typical,
+180–420ms guaranteed delay. R70410k releases PERST with originalR67947k down;
+worst HIGH2.659V. Fast-fault timing remains open. Current Linux source toggles
+reset GPIO low, enablesLTSSM, delays then drives high; final DTS polarity,
+clock/ASPM and discovery with420ms added delay must be verified in the image.
+
+`check_ethernet_control.py` checks19newIC physical pins, three M1 balls, all control
+nets, rail separation, resistor corners and three manufacturer footprints. It is
+registered in both staged hooks. Reviewed working PDF:build/ethernet-control-review.pdf,
+29pages (control22,reset29,PG14,PCIe15,root1). Footprint copper/model review lives
+in ignored build/ethernet-control-* files and is not the system PCB. KLC exceptions
+are retained assembly fields, visibleU15NC, exact onsemi rectangular lands and
+project-relative models. No new ERC exclusions;16integration findings remain.

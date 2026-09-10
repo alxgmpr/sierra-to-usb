@@ -264,6 +264,7 @@ def main():
     from build_ethernet_power import regulator_symbol
     from build_console import console_symbol
     from build_recovery import recovery_switch_symbol
+    from build_ethernet_control import control_symbol, reset_buffer_symbol, supervisor_symbol
     for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic), ('SDINBDG4-8G', emmc), ('TXU0202DCUR', console_symbol), ('TS3USB221ARSER', recovery_switch_symbol), ('RTL8125BG-CG', ethernet_symbol), ('TPS6281320QWRWYRQ1', regulator_symbol)]:
         symbol, units = fn()
         syms.append(symbol)
@@ -271,6 +272,8 @@ def main():
         all_pins = [number for u in units for p in u['pins'] for number in p.get('physical_pins', [p['ball']])]
         assert len(all_pins) == len(set(all_pins))
         print(name, len(all_pins), 'pins in', len(units), 'units')
+    for name,fn in [('FXMA2102L8X',control_symbol),('SN74LVC1G07DCKR',reset_buffer_symbol),('TPS3808G33DBVR',supervisor_symbol)]:
+        symbol,units=fn();syms.append(symbol);manifest[name]=units
     std = sx.loads(Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/power.kicad_sym').read_text())
     vdd = next(v for v in std if isinstance(v, list) and str(v[0]) == 'symbol' and v[1] == 'VDD')
     for rail in ('VCC_DDR', 'VDD_CPU', 'VDD_LOGIC', 'VDD_GPU', 'VDD_NPU', 'VCC5V_SYS', 'VCC3V3_PMU',

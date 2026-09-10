@@ -150,7 +150,7 @@
       "35 LED3"
     ],
     "ISOLATEB": "R6801k/R68115k from dedicatedEthernet3.3V; steady HIGH inS0, cold Ethernet off withS0. NoD3cold wake capability from a powered-off Ethernet rail.",
-    "PERSTB": "R67947k pulldown keeps controller in reset. Qualified hardware release and host gating remain to implement.",
+    "PERSTB": "U16TPS3808G33 drives release after180\u2013420ms valid host/PG condition; R70410k up and R67947k down define the local level. Fast-fault qualification remains open; see ethernet-control-qualification.json.",
     "logic_bounds": "RTL Vih>=2.0V, Vil<=0.8V,Voh>=2.4V,Vol<=0.4V. TableIin<=0.5uA is specified atVDD/GND. A4.7k pull gives2.4mV endpoint-leak drop;47k pull gives23.7mV. Preserve latch states throughstartup; no other load may forceLANWAKE/GPI/LED1 low.",
     "POW_EXT_SWR": "TI EN rising threshold max1.15V/falling min0.96V, endpoint leakage max150nA. RTL output levels provide DC voltage margin;47k adds<=75uA. Realtek omits test strapsR17/R18 forBG; this weaker pulldown terminates the unpowered/unsettled regulator input. Source output-current test conditions are not listed; verify startup waveform and LOW shutdown."
   },
@@ -158,7 +158,7 @@
     "mode": "RK3568 MULTI_PHY2 PCIe2 RC x1 ->RTL8125BG EP, Gen2",
     "transmit_caps": "C687/C688100nF0402 atU1W27/W28. C689/C690100nF0402 atU11HSOP38/HSON39. Exactlyone capacitor per transmitting leg.",
     "reference_clock": "U1V24/V25 reference outputs connect directly toU11REFCLK44/45 as Rockchip HW Guide specifies; asynchronous powered-off behavior still requires sequencing qualification.",
-    "host_controls": "M1 group onVCCIO5=VCC3V3_S0: AD1PERST,AD7WAKE,AG6CLKREQ. WAKEn/CLKREQn must use their functional mux, not genericGPIO. These three balls and cross-domain isolation are not captured yet.",
+    "host_controls": "M1 group onVCCIO5=VCC3V3_S0: AD1PERST,AD7WAKE,AG6CLKREQ. WAKEn/CLKREQn must use their functional mux, not genericGPIO. These three balls, U14bidirectional control isolation and U15host-reset buffer are now captured. See ethernet-control-qualification.json.",
     "layout": "Rockchip recommends0201 ACcaps;0402 is provisional and must pass the final loss/return-loss budget and layout review. No stubs; pair length/impedance validation pending."
   },
   "no_EEPROM_provisioning": {
@@ -172,17 +172,18 @@
     "source": "RTL8125BGV1.5 Table35/Figure16, physicalPDFpage51",
     "TPERSTB_RTD_min_ms": 10,
     "meaning": "Figure16 spans successive rising edges ofPERSTB across a reset pulse. This is an inter-release interval, not a10ms analog edge slew.",
-    "still_required": "Power stable>=100ms before release; reference stable>=100us; assertion>=100us; off/on>=50ms; internalPOR>=21ms aftercore valid. Hardware reset and brownout qualification are not implemented by pull resistors."
+    "still_required": "Power stable>=100ms before release; reference stable>=100us; assertion>=100us; off/on>=50ms; internalPOR>=21ms aftercore valid. U16startup delay now captures the normal reset interval; fast fault, brownout/off-on and clock sequencing remain qualification work."
   },
   "library_exceptions": {
     "F6.3": "FB670 uses exact rectangular manufacturer reflow lands.",
     "F9.3": "Project-local models; crystal native genericZscaled1.25 to0.8mm maxheight; bead intentionally shares identical BLM18P nominal geometry with the existing121-ohm variant. Body tolerances remain required in final clearance review."
   },
   "open_work": [
-    "Implement host PERST/WAKE/CLKREQ domain isolation, rail-valid delay and brownout sequencing; R679 currently prevents link startup.",
+    "Complete fast-fault and power-cycle reset qualification; host control isolation and U16startup delay are captured. Verify translated LOW voltage, partial-power behavior and the final boot image.",
     "Select and capture qualified2.5G four-pairPoE magnetics and connector, then terminate all8MDI endpoints and add portLEDs.",
     "Finish simultaneous power/thermal budgets, PoE/USB-C/modem/IO circuitry.",
     "Create, fully route and validate the integrated PCB and manufacturing outputs.",
     "Perform prototype oscillator, reset, filter/ripple, PCIe and sustained Ethernet traffic tests."
-  ]
+  ],
+  "control_capture": "ethernet-control-qualification.json"
 }

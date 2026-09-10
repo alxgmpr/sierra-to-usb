@@ -14172,5 +14172,268 @@
         }
       ]
     }
+  ],
+  "FXMA2102L8X": [
+    {
+      "unit": 1,
+      "title": "PCIe open-drain control translator",
+      "width": 35.56,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "2",
+          "name": "A0",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -20.32,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "A1",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -20.32,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "OE",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -20.32,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "7",
+          "name": "B0",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "at": [
+            20.32,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "B1",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "at": [
+            20.32,
+            -12.7,
+            180
+          ]
+        },
+        {
+          "ball": "1",
+          "name": "VCCA",
+          "type": "power_in",
+          "side": "T",
+          "pitch_mm": 5.08,
+          "at": [
+            -2.54,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "8",
+          "name": "VCCB",
+          "type": "power_in",
+          "side": "T",
+          "pitch_mm": 5.08,
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "4",
+          "name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "pitch_mm": 5.08,
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    }
+  ],
+  "SN74LVC1G07DCKR": [
+    {
+      "unit": 1,
+      "title": "Reset buffer",
+      "width": 30.48,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "1",
+          "name": "NC",
+          "type": "no_connect",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "2",
+          "name": "A",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "4",
+          "name": "Y",
+          "type": "open_collector",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "VCC",
+          "type": "power_in",
+          "side": "T",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    }
+  ],
+  "TPS3808G33DBVR": [
+    {
+      "unit": 1,
+      "title": "Ethernet reset supervisor",
+      "width": 30.48,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "3",
+          "name": "~{MR}",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "4",
+          "name": "CT",
+          "type": "passive",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "SENSE",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "at": [
+            -17.78,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "1",
+          "name": "~{RESET}",
+          "type": "open_collector",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "VDD",
+          "type": "power_in",
+          "side": "T",
+          "pitch_mm": 5.08,
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "2",
+          "name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "pitch_mm": 5.08,
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    }
   ]
 }

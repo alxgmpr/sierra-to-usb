@@ -10,7 +10,9 @@ screening findings below remain historical except where superseded there.
 
 The current Ethernet capture adds all RTL8125BG pins, two qualified regulator
 circuits, local bypass/PLL filtering, a 25MHz crystal and PCIe lanes. Hardware
-reset/host-control isolation and 2.5G/PoE magnetics remain incomplete. The exact
+startup reset and host-control isolation are now captured on two more pages.
+Fast-fault reset, power-cycle re-arm and2.5G/PoE magnetics remain incomplete.
+See [control qualification](research/ethernet-control-qualification.json). The exact
 parts, capacitor bounds, no-EEPROM MAC policy, reset timing interpretation and
 remaining tests are in [the controller qualification](research/ethernet-controller-qualification.json).
 Sixteen integration ERC findings remain; no integrated PCB or release outputs exist.

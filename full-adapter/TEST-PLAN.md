@@ -189,3 +189,22 @@ with RECOVERY held through startup/reset and released after USB recognition;
 RESET asserted until release without rail shutdown; POWER short/long presses
 using explicitly recorded RK809 debounce, shutdown and restart settings.
 Verify released ADC level tracks VCC1V8_ANLG and no service input injects power.
+
+
+### Ethernet control and reset capture checks
+
+Probe S0, Ethernet3.3, core0.95, condition bus, host PERST and U11PERST during
+cold/warm starts, forced host reset, either rail absent, brownout and shutdown.
+Check180–420ms release from the last valid condition, >=100ms stable rails,
+>=100us clock lead/assertion and >=10ms between releases. Verify regulator
+soft-start/discharge and >=50ms off/on separately. Fast-fault timing is still an
+open design requirement; no manufacturing release from these startup checks.
+
+For WAKE and CLKREQ, sink from each permitted endpoint, disable the opposite
+supply, and sweep load/temperature. Require received LOW<0.8V, HIGH>=2.0V,
+FXMA input HIGH>=localVCC−0.4, correct bidirectional release and no harmful
+back-power during slow/interrupted ramps. Confirm M1 pinmux and disable host
+internal pulls. Check <=50pF target per segment and measure edge behavior with
+fitted1.5k/4.7k pull-ups. Verify firmware reset-GPIO polarity, discovery with the
+420ms hardware delay, warm restart, ASPM/L1 substates and resume. No D3cold wake
+claim is made with Ethernet unpowered. See ethernet-control-qualification.json.

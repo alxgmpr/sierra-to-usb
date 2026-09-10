@@ -35,6 +35,7 @@ def check():
                ("full-adapter.kicad_sch", "full-adapter.kicad_pro",
                 "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch", "pmic-ddr.kicad_sch", "pmic-core.kicad_sch", "pmic-aux.kicad_sch", "pmic-control.kicad_sch", "processor-pmu.kicad_sch", "processor-io-power.kicad_sch", "processor-phy-power.kicad_sch", "processor-unused.kicad_sch", "processor-control.kicad_sch", "processor-clock.kicad_sch", "emmc-signals.kicad_sch", "emmc-power.kicad_sch", "console.kicad_sch", "recovery-usb.kicad_sch", "recovery-detect.kicad_sch", "buttons.kicad_sch")}
     ddr_cad |= {'full-adapter/cad/ethernet-3v3-power.kicad_sch', 'full-adapter/cad/ethernet-core-power.kicad_sch'}
+    ddr_cad |= {'full-adapter/cad/ethernet-control.kicad_sch', 'full-adapter/cad/ethernet-reset.kicad_sch'}
     ddr_cad |= {'full-adapter/cad/ethernet-local-power.kicad_sch', 'full-adapter/cad/ethernet-clock-config.kicad_sch', 'full-adapter/cad/ethernet-pcie.kicad_sch'}
     allowed |= ddr_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
@@ -206,12 +207,17 @@ def check():
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
-        print("Ethernet supply checkpoint: two forced-PWM stages, dividers, soft start and pads checked; controller/reset integration unfinished.")
+        print("Ethernet supply checkpoint: two forced-PWM stages, dividers, soft start and pads checked; fast-fault qualification remains open.")
         spec = importlib.util.spec_from_file_location("staged_ethernet_controller_checks", stage / "full-adapter/tools/check_ethernet_controller.py")
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
-        print("Ethernet controller checkpoint: bypass, straps, crystal and PCIe lanes checked; reset/isolation and MDI magnetics remain unfinished.")
+        print("Ethernet controller checkpoint: bypass, straps, crystal and PCIe lanes checked; MDI magnetics remain unfinished.")
+        spec = importlib.util.spec_from_file_location("staged_ethernet_control_checks", stage / "full-adapter/tools/check_ethernet_control.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("Ethernet control checkpoint: M1 pins, isolation, startup delay and manufacturer lands checked; fast-fault timing remains open.")
 
         spec = importlib.util.spec_from_file_location(
             "staged_processor_clock_checks", stage / "full-adapter/tools/check_processor_clock.py")

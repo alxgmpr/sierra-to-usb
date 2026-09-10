@@ -111,11 +111,11 @@ def ethernet_pcie():
     s.box('RK3568 MULTI_PHY2 — PCIe RC mode',10.16,15.24,198.12,106.68)
     s.place('full-adapter:RK3568B2','U1',88.9,76.2,unit=28)
     for pin,net in {'Y27':'PCIE_ETH_TO_SOC_P','Y28':'PCIE_ETH_TO_SOC_N','W27':'SOC_PCIE_TX_P','W28':'SOC_PCIE_TX_N','V24':'PCIE_REFCLK_P','V25':'PCIE_REFCLK_N'}.items():s.connect('U1',pin,net,7.62)
-    s.text('Reference clock outputs to the endpoint in RC mode.\nMULTI_PHY2 is dedicated to PCIe2; do not select SATA2/QSGMII.\nSelect functional CLKREQn/WAKEn M1 on VCCIO5 later.',17.78,101.6,1.05)
+    s.text('Reference clock outputs to the endpoint in RC mode.\nMULTI_PHY2 is dedicated to PCIe2; do not select SATA2/QSGMII.\nFunctional CLKREQn/WAKEn M1 on VCCIO5 are on the control page.',17.78,101.6,1.05)
     s.box('RTL8125BG PCIe endpoint',215.9,15.24,190.5,106.68)
     s.place('full-adapter:RTL8125BG-CG','U11',312.42,76.2,unit=2)
-    for pin,net in {'1':'ETH_ISOLATE_N','2':'ETH_WAKE_N','36':'ETH_PERST_N','38':'ETH_PCIE_TX_P','39':'ETH_PCIE_TX_N','41':'PCIE_SOC_TO_ETH_P','42':'PCIE_SOC_TO_ETH_N','44':'PCIE_REFCLK_P','45':'PCIE_REFCLK_N','48':'ETH_CLKREQ_N'}.items():s.connect('U11',pin,net,7.62)
-    s.text('Control pull-ups use the Ethernet supply. Host-side isolation,\nreset qualification and functional GPIO connections are unfinished.',223.52,109.22,1.05)
+    for pin,net in {'1':'ETH_ISOLATE_N','2':'ETH_WAKE_N','36':'ETH_PERST_N','38':'ETH_PCIE_TX_P','39':'ETH_PCIE_TX_N','41':'PCIE_SOC_TO_ETH_P','42':'PCIE_SOC_TO_ETH_N','44':'PCIE_REFCLK_P','45':'PCIE_REFCLK_N','48':'ETH_CLKREQ_N'}.items():s.connect('U11',pin,net,7.62,global_net=net in ['ETH_WAKE_N','ETH_CLKREQ_N','ETH_PERST_N'])
+    s.text('Control pull-ups use the Ethernet supply. U14 isolates WAKE/CLKREQ;\nU16 delays reset release. Fast power-loss timing remains open.',223.52,109.22,1.05)
     s.box('One AC capacitor per transmit leg — at its source',10.16,129.54,396.24,55.88)
     for ref,leftnet,rightnet,x,y in [('C687','SOC_PCIE_TX_P','PCIE_SOC_TO_ETH_P',101.6,152.4),('C688','SOC_PCIE_TX_N','PCIE_SOC_TO_ETH_N',101.6,172.72),('C689','ETH_PCIE_TX_P','PCIE_ETH_TO_SOC_P',302.26,152.4),('C690','ETH_PCIE_TX_N','PCIE_ETH_TO_SOC_N',302.26,172.72)]:
         p=json.loads((ROOT/'research/ddr-passives-search.json').read_text())['searches'][6]['results'][0]
@@ -123,10 +123,10 @@ def ethernet_pcie():
         a,b=sorted(c.values(),key=lambda p:p[0]);s.wire(a,(x-17.78,y));s.label(leftnet,(x-17.78,y),180);s.wire(b,(x+17.78,y));s.label(rightnet,(x+17.78,y))
     s.box('Local control defaults — cold Ethernet powers off with S0',10.16,193.04,396.24,55.88)
     for ref,net,x in [('R677','ETH_WAKE_N',38.1),('R678','ETH_CLKREQ_N',116.84)]:
-        r=rpart(s,ref,'4.7kR 1%',x,218.44);s.wire(r['1'],(x,210.82));s.power('VCC3V3_ETH',(x,210.82));s.wire(r['2'],(x,231.14));s.label(net,(x,231.14))
-    r=resistor(s,'R679','47kR 1%',198.12,228.6);s.wire(r['1'],(198.12,213.36));s.label('ETH_PERST_N',(198.12,213.36));s.wire(r['2'],(198.12,238.76));s.power('GND',(198.12,238.76))
+        r=rpart(s,ref,'4.7kR 1%',x,218.44);s.wire(r['1'],(x,210.82));s.power('VCC3V3_ETH',(x,210.82));s.wire(r['2'],(x,231.14));s.label(net,(x,231.14),global_net=True)
+    r=resistor(s,'R679','47kR 1%',198.12,228.6);s.wire(r['1'],(198.12,213.36));s.label('ETH_PERST_N',(198.12,213.36),global_net=True);s.wire(r['2'],(198.12,238.76));s.power('GND',(198.12,238.76))
     from build_ddr_schematic import passive
     r=passive(s,'R680','1kR 1%',302.26,213.36,90);s.wire(r['1'],(264.16,213.36));s.power('VCC3V3_ETH',(264.16,213.36));s.wire(r['2'],(353.06,213.36));s.label('ETH_ISOLATE_N',(353.06,213.36))
     r=part(s,'isolate_pulldown','Device:R_Small_US','R681','15kR 1%',353.06,228.6,'Resistor_SMD:R_0402_1005Metric');s.wire((353.06,213.36),r['1']);s.wire(r['2'],(353.06,238.76));s.power('GND',(353.06,238.76))
-    s.text('R679 holds PERSTB asserted until the hardware reset circuit is added. Do not bridge control pins directly across the two 3.3V domains.\nRoute each lane as a controlled-impedance pair with no stubs. C687/C688 at U1; C689/C690 at U11. Full routing and signal validation remain open.',15.24,266.7,1.05)
+    s.text('U16 releases PERSTB after its hardware delay; R679 retains a local pulldown. Control rails remain isolated by U14/U15.\nRoute each lane as a controlled-impedance pair with no stubs. C687/C688 at U1; C689/C690 at U11. Full routing and signal validation remain open.',15.24,266.7,1.05)
     return finish(s)

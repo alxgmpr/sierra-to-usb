@@ -20,7 +20,7 @@ def ethernet_power(core=False):
     ref='U13' if core else 'U12'
     rail='VDD0V95_ETH' if core else 'VCC3V3_ETH'
     vin='VCC3V3_ETH' if core else 'VCC5V_SYS'
-    pg='ETH_CORE_PG' if core else 'ETH_3V3_PG'
+    pg='ETH_RESET_CONDITION_N'
     s=Sheet('ethernet-core-power' if core else 'ethernet-3v3-power',
             'Ethernet 0.95V forced-PWM supply' if core else 'Ethernet 3.3V forced-PWM supply')
     s.box(('0.950V core — controlled by RTL8125BG POW_EXT_SWR' if core else '3.318V auxiliary — enabled by the sequenced S0 rail'),10.16,15.24,396.24,190.5)
@@ -70,13 +70,14 @@ def ethernet_power(core=False):
         if 0<i<4:s.junction((x,121.92))
     s.power('GND',(xs[-1],121.92))
     s.wire((383.54,u['3'][1]),(398.78,u['3'][1]));s.junction((383.54,u['3'][1]));s.place('power:PWR_FLAG',f'#FLGeth{n}',398.78,u['3'][1])
-    # PG is available for later hardware reset qualification, not a tight UV monitor.
-    s.connect(ref,'9',pg,5.08,global_net=True)
+    # Both open-drain PG outputs join the host reset condition bus.
+    p=u['9'];s.wire(p,(180.34,p[1]));s.wire((180.34,p[1]),(180.34,160.02))
+    s.label(pg,(180.34,160.02),global_net=True);s.intent.setdefault(pg,[]).append([ref,'9'])
     r=resistor(s,f'R{n+3}','47kR 1%',309.88,172.72)
     s.wire(r['1'],(309.88,160.02));s.power('VCC3V3_ETH',(309.88,160.02));s.wire(r['2'],(309.88,187.96));s.label(pg,(309.88,187.96),180,global_net=True)
     t=tp(s,f'TP{n+1}',pg,360.68,177.8);props(s,360.68,165.1);s.wire(t['1'],(360.68,187.96));s.wire((309.88,187.96),(360.68,187.96));s.junction((309.88,187.96))
     t=tp(s,f'TP{n}',rail,35.56,180.34);props(s,35.56,167.64);s.wire(t['1'],(60.96,t['1'][1]));s.power(rail,(60.96,t['1'][1]))
     s.text('VIN, MODE and EN crossings have no junction: EN must remain separate from VIN.\nPlace both input capacitors at VIN/GND; use compact SW/inductor copper.\nKeep five output capacitors at the regulator. Route FB as a quiet Kelvin trace.\nMODE = VIN forces PWM. FSET = GND selects 2.25MHz and compensation1.',15.24,213.36,1.27)
-    s.text('10nF C0G: nominal 2.4ms soft start. 0.95V rail is cascaded from 3.3V for on-time margin.\n3.3V rail is dedicated to Ethernet and its core converter; do not export accessory power.\nPG does not guarantee Realtek voltage limits. U11 is connected; hardware reset delay and brownout re-arm remain unfinished.\nTI SLVSDU1K and Realtek RTL8125BG V1.5 / reference V122. See ethernet-power-qualification.json.',15.24,251.46,1.1)
+    s.text('10nF C0G: nominal 2.4ms soft start. 0.95V rail is cascaded from 3.3V for on-time margin.\n3.3V rail is dedicated to Ethernet and its core converter; do not export accessory power.\nPG shares the U16 reset condition bus. Startup delay is captured; fast fault timing and power-cycle re-arm remain open.\nTI SLVSDU1K and Realtek RTL8125BG V1.5 / reference V122. See ethernet-power-qualification.json.',15.24,251.46,1.1)
     s.items=[v.replace('(justify left bottom)','(justify left)').replace('(justify right bottom)','(justify right)') if v.startswith('(global_label ') else v for v in s.items]
     return s
