@@ -1,5 +1,5 @@
 {
-  "status": "RECOVERY_DESIGN_CANDIDATES_NOT_CAPTURED",
+  "status": "RECOVERY_CAPTURE_NOT_RELEASE",
   "sources": [
     {
       "url": "https://www.ti.com/lit/ds/symlink/ts3usb221a.pdf",
@@ -15,6 +15,11 @@
       "url": "https://www.ti.com/lit/ds/symlink/txu0202.pdf",
       "file": "reference/txu0202.pdf",
       "sha256": "f8e3f51edcccf12c7e991bec54cf1747a7fd84dccd23b875f326a3e631241ef2"
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+      "file": "reference/tpd2eusb30.pdf",
+      "sha256": "a2c0dd845043a5bbfe610f673879c29e38649544385dea51dbe0a4c49df39136"
     }
   ],
   "usb_switch": {
@@ -49,9 +54,9 @@
   "connector": {
     "MPN": "USB4105-GF-A-120",
     "LCSC": "C5184243",
-    "tail_length_mm": 1.2,
     "interface": "USB-C USB2 only",
-    "cc": "Separate 5.1k Rd on CC1/CC2; no PD request; VBUS is sense-only"
+    "cc": "Separate 5.1k Rd on CC1/CC2; no PD request; VBUS is sense-only",
+    "shell_stake_length_mm": 1.2
   },
   "vbus_candidate": {
     "translator": "TXU0202DCUR, existing qualified footprint",
@@ -80,7 +85,29 @@
     "Check board 3.3V rail tolerance against assumed +/-5%.",
     "TXU output becomes high impedance without VBUS: verify 47k pulldown plus output/receiver leakage meets absent-VBUS threshold.",
     "Switch power-off leakage specification is at zero supply; qualify partial-supply and shutdown intervals with PHY sequencing.",
-    "Add connector ESD protection, exact passives, footprint/3D review and electrical capture.",
-    "Data-switch and translator interface timing must remain compatible with BootROM, not only Linux."
-  ]
+    "USB data ESD and passives captured; CC/VBUS ESD, exact USB connector model and board-level layout/3D review remain.",
+    "Data-switch and translator interface timing must remain compatible with BootROM, not only Linux.",
+    "Normal SARADC recovery button still missing; no claim of a complete programming interface."
+  ],
+  "capture": {
+    "sheets": [
+      "recovery-usb",
+      "recovery-detect"
+    ],
+    "switch": "U8",
+    "detector": "U9",
+    "ESD": "U10 TPD2EUSB30DRTR C97502",
+    "connector": "J630",
+    "footprint_review": [
+      "TI RSE0010A lands visually reviewed, physical PDF page25; pads matched by assertions.",
+      "TI DRT land drawing 4211172/A physical PDF page27 visually reviewed: .3mm square, .7mm X pitch, .85mm Y pitch.",
+      "GCT USB4105 RevB4 page1 pin mapping and lands visually reviewed; 120 specifies shell stake1.20mm.",
+      "USB connector STEP is native KiCad; exact stake variant and mating clearances still require board-level review."
+    ],
+    "KLC_exceptions": [
+      "S6.2: Manufacturer/MPN/LCSC intentionally present.",
+      "F9.3: project-relative STEP paths.",
+      "F7.4: native GCT shell stakes include F.Paste for reflow retention; confirm paste volume and hole-fill with the chosen stencil/assembly process."
+    ]
+  }
 }

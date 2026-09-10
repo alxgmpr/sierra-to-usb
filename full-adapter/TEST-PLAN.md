@@ -149,3 +149,10 @@ continuous bidirectional traffic and board power cycling. Measure off-state
 leakage into VCC1V8_PMU; U7's published Ioff is2uA maximum per port through85C
 under its stated zero-supply test conditions. Qualify partial-ramp behavior
 separately. System ESD testing remains part of the final interface validation.
+
+Recovery-port qualification: resolve dedicated VBUSDET HIGH/LOW/leakage bounds
+and S0/PHY partial-supply behavior before release. On hardware, exercise host
+attached before power, attached after power, unplug, shutdown, brownout and
+reset; measure both rails for injection, detector voltage and USB enumeration.
+Verify both USB-C orientations, Loader/MaskROM operation and USB2 eye quality.
+Use independent board power; this connector must not source the system rail.

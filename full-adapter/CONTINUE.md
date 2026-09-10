@@ -11,14 +11,14 @@ or shared KiCad windows with stale projects. Work through files and KiCad CLI.
 
 ## Saved implementation
 
-The hierarchy has 18 pages including root: 1 GiB DDR3, RK3568B2 core/PMU/IO/PHY
+The hierarchy has 21 pages including root: 1 GiB DDR3, RK3568B2 core/PMU/IO/PHY
 supplies, RK860-0 CPU regulator, RK809-5 bucks/LDOs/controls/RTC, processor
 control/boot straps, 24 MHz crystal, and new SanDisk SDINBDG4-8G eMMC pages.
 All previous symbols are unchanged by the eMMC addition. `check_emmc.py`
 checks 153 physical balls/pads and exported eight-bit bus, rails, bypass,
 reset and service nets. Both root checkpoint hooks run against staged files.
-Six integration ERC findings remain: missing_input_pin 1, missing_bidi_pin 1,
-missing_unit 1 and power_pin_not_driven 3. They are unfinished work, not waivers.
+Eight integration ERC findings remain: missing_input_pin 1, missing_bidi_pin 1,
+missing_unit 1, power_pin_not_driven 3 and isolated modem USB2 endpoint labels 2. They are unfinished work, not waivers.
 There is no integrated PCB. The only board is a processor escape study with
 114 escaped signals and 251 unconnected items. Do not report it as a routed system.
 
@@ -78,3 +78,11 @@ See console-qualification.json and check_console.py. U7 uses the processor's
 joins adapter power to a system supply. Fresh ERC remains six findings.
 PMIC restart candidates are recorded in continuation-candidates.json; neither
 candidate is selected/captured yet. Continue power/recovery integration next.
+
+Recovery USB/detect sheets now contain J630, U8/U9/U10 and exact passives.
+`check_recovery.py` checks connector orientation nets, data-switch pin mapping,
+VBUS separation, processor endpoints and RSE pads. Electrical qualification is
+NOT complete; see recovery-qualification.json. The two isolated labels are
+MODEM_HOST_USB2_P/N for unfinished modem host selection, not ERC exclusions.
+Next: finish VBUS bounds and startup gating; capture SARADC recovery button and
+protected analog IO. PMIC brownout restart remains unfinished.

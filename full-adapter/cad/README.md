@@ -195,3 +195,8 @@ mating cable clearance. KLC exceptions are intentional assembly fields and
 project-relative STEP paths. Sources and point-in-time stock are recorded in
 `research/console-qualification.json`. System PCB, protection review and
 physical console validation remain unfinished.
+
+Recovery USB capture is on `recovery-usb` and `recovery-detect` (21 sheets total).
+It includes a dedicated USB-C service port, power-off-specified data switch,
+USB data ESD and a separate VBUS translator. Eight integration ERC findings
+remain; recovery electrical qualification and the full PCB remain unfinished.

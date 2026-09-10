@@ -32,7 +32,7 @@ def natural(value):
     return [int(s) if s.isdigit() else s for s in re.split(r'(\d+)', value)]
 
 
-def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, units, keywords='processor DDR3 memory', footprint_filter=None):
+def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, units, keywords='processor DDR3 memory', footprint_filter=None, side_pins_from_top=False):
     props = [('Reference', 'U'), ('Value', name), ('Footprint', footprint),
              ('Datasheet', datasheet), ('Description', description),
              ('Manufacturer', manufacturer), ('MPN', name), ('LCSC', lcsc),
@@ -65,7 +65,7 @@ def make_symbol(name, footprint, datasheet, manufacturer, lcsc, description, uni
         output.append(f'(text {Q(title)} (at 0 {title_y} 0) {effects()})')
         ps = []
         for side, group in sides.items():
-            cursor_y = (-2.54 if sides['T'] or sides['B'] else top - 2.54)
+            cursor_y = (-2.54 if (sides['T'] or sides['B']) and not side_pins_from_top else top - 2.54)
             for index, p in enumerate(group):
                 if side in 'LR':
                     x = -width/2 - 2.54 if side == 'L' else width/2 + 2.54
@@ -261,7 +261,8 @@ def emmc():
 def main():
     syms, manifest = [], {}
     from build_console import console_symbol
-    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic), ('SDINBDG4-8G', emmc), ('TXU0202DCUR', console_symbol)]:
+    from build_recovery import recovery_switch_symbol
+    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic), ('SDINBDG4-8G', emmc), ('TXU0202DCUR', console_symbol), ('TS3USB221ARSER', recovery_switch_symbol)]:
         symbol, units = fn()
         syms.append(symbol)
         manifest[name] = units
@@ -273,7 +274,7 @@ def main():
     for rail in ('VCC_DDR', 'VDD_CPU', 'VDD_LOGIC', 'VDD_GPU', 'VDD_NPU', 'VCC5V_SYS', 'VCC3V3_PMU',
                  'VCC3V3_SYS', 'VDD0V9_IMAGE', 'VDD0V9_ANLG', 'VDD0V9_PMU', 'VCC3V3_CODEC',
                  'VCC_SDIO', 'VCC1V8_ANLG', 'VCC1V8_PMU', 'VCC1V8_IMAGE',
-                 'VCC1V8_SYS', 'VCC3V3_S0', 'VCC3V3_SD', 'VDD0V9_USB', 'VCC1V8_USB', 'VCC_CONSOLE'):
+                 'VCC1V8_SYS', 'VCC3V3_S0', 'VCC3V3_SD', 'VDD0V9_USB', 'VCC1V8_USB', 'VCC_CONSOLE', 'VCC_RECOVERY5V'):
         power = copy.deepcopy(vdd)
         def rename(node):
             for i, v in enumerate(node):

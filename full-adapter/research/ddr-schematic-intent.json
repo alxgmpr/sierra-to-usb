@@ -1148,5 +1148,86 @@
         "1"
       ]
     ]
-  }
+  },
+  "recovery-usb": {
+    "RECOVERY_CABLE_P": [
+      [
+        "J630",
+        "A6"
+      ],
+      [
+        "J630",
+        "B6"
+      ],
+      [
+        "U8",
+        "1"
+      ],
+      [
+        "U10",
+        "1"
+      ]
+    ],
+    "RECOVERY_CABLE_N": [
+      [
+        "J630",
+        "A7"
+      ],
+      [
+        "J630",
+        "B7"
+      ],
+      [
+        "U8",
+        "2"
+      ],
+      [
+        "U10",
+        "2"
+      ]
+    ],
+    "RECOVERY_SWITCH_P": [
+      [
+        "U8",
+        "8"
+      ]
+    ],
+    "RECOVERY_SWITCH_N": [
+      [
+        "U8",
+        "7"
+      ]
+    ],
+    "RECOVERY_VBUSDET": [
+      [
+        "U1",
+        "M24"
+      ]
+    ],
+    "MODEM_HOST_USB2_P": [
+      [
+        "U1",
+        "P24"
+      ]
+    ],
+    "MODEM_HOST_USB2_N": [
+      [
+        "U1",
+        "P25"
+      ]
+    ],
+    "SOC_RECOVERY_P": [
+      [
+        "U1",
+        "P27"
+      ]
+    ],
+    "SOC_RECOVERY_N": [
+      [
+        "U1",
+        "P28"
+      ]
+    ]
+  },
+  "recovery-detect": {}
 }
