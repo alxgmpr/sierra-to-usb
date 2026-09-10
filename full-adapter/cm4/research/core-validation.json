@@ -1,0 +1,14 @@
+{
+  "status": "CM4_CORE_CAPTURE_CHECKPOINT_NOT_RELEASE",
+  "cm4_contacts_checked": 200,
+  "physical_socket_quantity": 2,
+  "sd_data_connections": 6,
+  "physical_controls": 4,
+  "erc_unfinished_integration": {
+    "isolated_pin_label": 51,
+    "power_pin_not_driven": 2,
+    "pin_not_driven": 3
+  },
+  "system_routed": false,
+  "scope": "core capture only; PoE, auxiliary power, USB3, modem, GPIO and protection remain open"
+}

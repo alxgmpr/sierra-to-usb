@@ -38,6 +38,11 @@ def check():
     ddr_cad |= {'full-adapter/cad/ethernet-control.kicad_sch', 'full-adapter/cad/ethernet-reset.kicad_sch'}
     ddr_cad |= {'full-adapter/cad/ethernet-local-power.kicad_sch', 'full-adapter/cad/ethernet-clock-config.kicad_sch', 'full-adapter/cad/ethernet-pcie.kicad_sch'}
     allowed |= ddr_cad
+    cm4_cad = {'full-adapter/cm4/cad/' + p for p in (
+        'cm4-carrier.kicad_pro', 'cm4-carrier.kicad_sch', 'cm4-power.kicad_sch',
+        'cm4-storage.kicad_sch', 'cm4-interfaces.kicad_sch', 'cm4-gpio.kicad_sch',
+        'cm4-unused.kicad_sch')}
+    allowed |= cm4_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
     assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"
     # Validate the staged snapshot, not a possibly newer/older file on disk.
@@ -48,6 +53,12 @@ def check():
                 dest = stage / path
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 dest.write_bytes(subprocess.check_output(["git", "show", ":" + path], cwd=ROOT))
+        spec = importlib.util.spec_from_file_location(
+            "staged_cm4_core_checks", stage / "full-adapter/cm4/tools/check_core.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter/cm4")
+        print("CM4 core checked; incomplete system. Following checks preserve historical RK3568 work only.")
         board_path = stage / (coupon + ".kicad_pcb")
         board = sx.loads(board_path.read_text())
         source = json.loads((stage / "full-adapter/research/processor-pins.json").read_text())
