@@ -43,7 +43,10 @@ Reproduce the preliminary arithmetic with
 `python3 full-adapter/research/engineering_screen.py` from the repository root.
 This calculation is not an electrical or layout validation.
 
-Recovery USB capture is on `recovery-usb` and `recovery-detect` (21 sheets total).
+Recovery USB capture is on `recovery-usb` and `recovery-detect` (22 sheets total).
 It includes a dedicated USB-C service port, power-off-specified data switch,
 USB data ESD and a separate VBUS translator. Eight integration ERC findings
 remain; recovery electrical qualification and the full PCB remain unfinished.
+
+Physical RECOVERY, RESET and POWER buttons are captured on `buttons`;
+manufacturer switch lands, nominal3D geometry and connectivity were reviewed.

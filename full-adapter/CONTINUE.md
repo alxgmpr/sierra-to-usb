@@ -11,7 +11,7 @@ or shared KiCad windows with stale projects. Work through files and KiCad CLI.
 
 ## Saved implementation
 
-The hierarchy has 21 pages including root: 1 GiB DDR3, RK3568B2 core/PMU/IO/PHY
+The hierarchy has 22 pages including root: 1 GiB DDR3, RK3568B2 core/PMU/IO/PHY
 supplies, RK860-0 CPU regulator, RK809-5 bucks/LDOs/controls/RTC, processor
 control/boot straps, 24 MHz crystal, and new SanDisk SDINBDG4-8G eMMC pages.
 All previous symbols are unchanged by the eMMC addition. `check_emmc.py`
@@ -84,5 +84,11 @@ Recovery USB/detect sheets now contain J630, U8/U9/U10 and exact passives.
 VBUS separation, processor endpoints and RSE pads. Electrical qualification is
 NOT complete; see recovery-qualification.json. The two isolated labels are
 MODEM_HOST_USB2_P/N for unfinished modem host selection, not ERC exclusions.
-Next: finish VBUS bounds and startup gating; capture SARADC recovery button and
-protected analog IO. PMIC brownout restart remains unfinished.
+Next: finish VBUS bounds and startup gating; capture protected external analog IO. PMIC brownout restart remains unfinished.
+
+Buttons sheet adds SW640 RECOVERY, SW641 RESET and SW642 POWER. All use
+Alps SKRPACE010 C139797, exact manufacturer lands and a reviewed nominal3D
+model. Recovery R640 is10k to SARADC supply VCC1V8_ANLG; reset/power have
+100R series resistors. `check_buttons.py` is in the staged checkpoint checks.
+Internal SARADC spare inputs are NC; protected external analog expansion remains
+required. Eight ERC findings persist. This is still an unfinished integrated design.

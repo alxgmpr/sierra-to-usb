@@ -156,3 +156,9 @@ attached before power, attached after power, unplug, shutdown, brownout and
 reset; measure both rails for injection, detector voltage and USB enumeration.
 Verify both USB-C orientations, Loader/MaskROM operation and USB2 eye quality.
 Use independent board power; this connector must not source the system rail.
+
+Verify all three service buttons: normal boot with RECOVERY released; Loader
+with RECOVERY held through startup/reset and released after USB recognition;
+RESET asserted until release without rail shutdown; POWER short/long presses
+using explicitly recorded RK809 debounce, shutdown and restart settings.
+Verify released ADC level tracks VCC1V8_ANLG and no service input injects power.

@@ -1,0 +1,97 @@
+{
+  "status": "BUTTON_CAPTURE_NOT_RELEASE",
+  "part": {
+    "lcsc": "C139797",
+    "model": "SKRPACE010",
+    "manufacturer": "ALPSALPINE",
+    "package": "SMD-4P,4.2x3.2mm",
+    "stock": 107694,
+    "price": 0.0634,
+    "price_10": 0.051,
+    "library_type": "extended",
+    "preferred": false,
+    "category": "Switches",
+    "subcategory": "Tactile Switches",
+    "subcategory_id": 2970,
+    "mounting_type": "smd",
+    "specs": {
+      "Operating Temperature": "-30\u2103~+85\u2103",
+      "Contact Current": "50mA",
+      "Operating Force": "2.6N",
+      "Length": "4.2mm",
+      "Termination Style": "J-Lead",
+      "Voltage Rating": "16V",
+      "Actuator Style": "Oval button",
+      "Life": "50,000 cycles",
+      "Circuit": "SPST-NO",
+      "Switch Height": "2.5mm",
+      "Mounting Type": "Surface Mount,Vertical",
+      "With Lamp": "-",
+      "Width": "3.2mm"
+    }
+  },
+  "source": {
+    "url": "https://tech.alpsalpine.com/cms.media/product_catalog_ta_02_skrp_en_2cd80f610b.pdf",
+    "file": "reference/skrp.pdf",
+    "sha256": "649444e2b648c20cfa1ae929edac3fc6234fcd7da2a07a6c98a9673db39b159d",
+    "drawing": "catalog2510 drawing1, physical page2"
+  },
+  "physical_to_logical_pads": {
+    "1": "1",
+    "2": "1",
+    "3": "2",
+    "4": "2"
+  },
+  "land_size_mm": [
+    1.05,
+    0.65
+  ],
+  "land_centers_mm": [
+    [
+      -2.075,
+      -1.075
+    ],
+    [
+      2.075,
+      -1.075
+    ],
+    [
+      -2.075,
+      1.075
+    ],
+    [
+      2.075,
+      1.075
+    ]
+  ],
+  "model": "Nominal 4.2x3.2x1.8 body, 3x1.6 oval stem to 2.5mm total, 4.6mm lead span; simplified geometry, not a manufacturer tolerance model. KiCad 3D render reviewed.",
+  "controls": {
+    "SW640": "RECOVERY, direct SARADC_VIN0 to GND,10k pull-up to SARADC supply VCC1V8_ANLG",
+    "SW641": "RESET,100R series to SYS_RESET_L; PMIC output is open drain",
+    "SW642": "POWER,100R series to PMIC_PWRON_L; internal17k pull-up"
+  },
+  "electrical": {
+    "contact_rating": "10uA/1V minimum,50mA/16V maximum,initial resistance<=0.5ohm",
+    "recovery_closed_current_nominal_uA": 180,
+    "reset_discharge_peak_mA_at_3V465_1pct_100R": 35,
+    "PMIC_pullup_nominal_ohm": 17000,
+    "reset_capacitance_nominal_nF": 200,
+    "pmic_power_capacitance_nominal_nF": 100,
+    "notes": [
+      "Physical button is momentary normally open; no external supply is connected.",
+      "The hardware guide mandates SARADC_VIN0 and10k pull-up, page69.",
+      "RK809 V1.7 lists RESETB as open drain and PWRON input LOW0.4V, input pull-up17k.",
+      "100R produces about20mV on PWRON at3.3V with nominal17k pull-up; reset is about33mV through10k.",
+      "Short-press de-bounce is programmed100/500ms; long-press6..12s and action require explicit firmware configuration and hardware validation."
+    ]
+  },
+  "KLC_exceptions": [
+    "F9.3: project-relative STEP path intentionally retained."
+  ],
+  "open_items": [
+    "Automatic brownout restart is not implemented by these buttons.",
+    "Verify Loader/MaskROM workflow with final USB recovery circuit and boot image.",
+    "Protected external analog expansion remains to be captured; internal unused ADC channels are NC.",
+    "Reserve physical finger access and final labels during integrated PCB placement."
+  ]
+}

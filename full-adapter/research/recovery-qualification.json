@@ -87,7 +87,7 @@
     "Switch power-off leakage specification is at zero supply; qualify partial-supply and shutdown intervals with PHY sequencing.",
     "USB data ESD and passives captured; CC/VBUS ESD, exact USB connector model and board-level layout/3D review remain.",
     "Data-switch and translator interface timing must remain compatible with BootROM, not only Linux.",
-    "Normal SARADC recovery button still missing; no claim of a complete programming interface."
+    "SARADC recovery, reset and power buttons captured; complete programming workflow still needs electrical and hardware validation."
   ],
   "capture": {
     "sheets": [

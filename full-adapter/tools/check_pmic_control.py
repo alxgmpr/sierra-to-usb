@@ -34,8 +34,8 @@ def check(root=ROOT):
         assert attached('U5','2')=={('U5','2'),('R491','2')}
         assert attached('U5','46')=={('U5','46'),('C484','1')}
         assert attached('U5','61')=={('U5','61'),('R496','2'),('R497','1'),('C487','1')}
-        assert nets['PMIC_PWRON_L']=={('U5','52'),('C485','1')}
-        assert nets['SYS_RESET_L']=={('U5','67'),('R494','2'),('C486','1'),('U1','AH27'),('R561','2'),('C560','1')}
+        assert nets['PMIC_PWRON_L']=={('U5','52'),('C485','1'),('R642','1')}
+        assert nets['SYS_RESET_L']=={('U5','67'),('R494','2'),('C486','1'),('U1','AH27'),('R561','2'),('C560','1'),('R641','1')}
         assert nets['PMIC_INT_L']=={('U5','7'),('R495','2'),('U1','AA22')}
         assert {('U5','45'),('C483','1'),('R496','1')} <= nets['VCC3V3_SYS']
         assert ('R497','2') in nets['GND']
