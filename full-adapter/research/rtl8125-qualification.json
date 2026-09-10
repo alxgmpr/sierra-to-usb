@@ -1,5 +1,5 @@
 {
-  "status": "ETHERNET_LIBRARY_NOT_CIRCUIT",
+  "status": "ETHERNET_CONTROLLER_CAPTURE_NOT_RELEASE",
   "MPN": "RTL8125BG-CG",
   "LCSC": "C3013605",
   "source_date": "2026-09-09",
@@ -62,7 +62,7 @@
     "BG needs external0.95V regulator; pin6 POW_EXT_SWR is an enable output. Pins4/5/7 are NC, not BGS regulator pins.",
     "LANWAKEB must be pulled HIGH1k..4.7k and LED1/EESK4.7k to avoid test mode.",
     "Select EEPROM/flash/LED options from BG reference; preserve stable strap states during reset.",
-    "Table35 TPERSTB-RTD wording needs waveform review before claiming timing closure."
+    "Table35 TPERSTB-RTD is>=10ms between PERSTB rising edges perFigure16; independent100ms stable-power delay still applies."
   ],
   "regulator_candidates": [
     {
@@ -73,9 +73,9 @@
     {
       "MPN": "TPS6281320QWRWYRQ1",
       "LCSC": "C1849536",
-      "status": "CANDIDATE_NOT_CAPTURED",
+      "status": "SELECTED_AND_CAPTURED",
       "database_stock": 2232,
-      "facts": "Adjustable3A; output discharge ON; spread spectrum ON; MODE/SYNC HIGH forcesPWM; COMP/FSET supports2.25MHz; adjustableSS/TR. Need exact inductor, compensation, frequency minimum, divider and startup bounds."
+      "facts": "U12/U13 captured; see ethernet-power-qualification.json and exported-net checks."
     }
   ],
   "library_review": [
@@ -90,8 +90,9 @@
     "F9.3: local project STEP path."
   ],
   "open_items": [
-    "Complete Ethernet circuit, supplies, clock, strap defaults, host reset/isolation and PCIe wiring.",
+    "Complete hardware reset/host-control isolation and qualified2.5G/PoE magnetics; controller supplies,clock,straps andPCIe lanes are captured.",
     "Qualify2.5GbE4-pairPoE magnetics with actual stock and current/unbalance ratings.",
     "Add thermal vias, impedance routing and mechanical/3D validation on integrated PCB."
-  ]
+  ],
+  "circuit_qualification": "research/ethernet-controller-qualification.json"
 }

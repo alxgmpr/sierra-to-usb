@@ -1,0 +1,241 @@
+{
+  "queried_at_UTC": "2026-09-10 15:47:08 UTC",
+  "provider": "PCBParts live JLCPCB API",
+  "purpose": "Manufacturability stock verification only; no reservation or purchase",
+  "queries": [
+    {
+      "query": "X322525MOB4SI",
+      "response": {
+        "results": [
+          {
+            "lcsc": "C5444544",
+            "model": "XL2EL89COI-111YLC-25M",
+            "manufacturer": "YXC Crystal Oscillators",
+            "package": "SMD3225-4P",
+            "stock": 27665,
+            "price": 0.0749,
+            "price_10": 0.059,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Crystals, Oscillators, Resonators",
+            "subcategory": "Crystals",
+            "subcategory_id": 3043,
+            "mounting_type": "smd",
+            "specs": {
+              "Load Capacitance": "12pF",
+              "Operating Temperature": "-40℃~+85℃",
+              "Type": "SMD crystal oscillator",
+              "Normal temperature Frequency Tolerance": "±10ppm",
+              "Equivalent Series Resistance(ESR)": "50Ω",
+              "Frequency Stability": "±20ppm",
+              "Frequency": "25MHz"
+            }
+          },
+          {
+            "lcsc": "C9006",
+            "model": "X322525MOB4SI",
+            "manufacturer": "YXC Crystal Oscillators",
+            "package": "SMD3225-4P",
+            "stock": 113289,
+            "price": 0.0944,
+            "price_10": 0.0756,
+            "library_type": "basic",
+            "preferred": false,
+            "category": "Crystals, Oscillators, Resonators",
+            "subcategory": "Crystals",
+            "subcategory_id": 3043,
+            "mounting_type": "smd",
+            "specs": {
+              "Load Capacitance": "12pF",
+              "Operating Temperature": "-40℃~+85℃",
+              "Type": "SMD crystal oscillator",
+              "Normal temperature Frequency Tolerance": "±10ppm",
+              "Equivalent Series Resistance(ESR)": "50Ω",
+              "Frequency Stability": "±20ppm",
+              "Frequency": "25MHz"
+            }
+          }
+        ],
+        "page": 1,
+        "per_page": 20,
+        "total": 2,
+        "total_pages": 1,
+        "has_more": false
+      }
+    },
+    {
+      "query": "BLM18PG330SN1D",
+      "response": {
+        "results": [
+          {
+            "lcsc": "C88984",
+            "model": "BLM18PG330SN1D",
+            "manufacturer": "Murata Electronics",
+            "package": "0603",
+            "stock": 192986,
+            "price": 0.0249,
+            "price_10": 0.0205,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Filters",
+            "subcategory": "Ferrite Beads",
+            "subcategory_id": 3036,
+            "mounting_type": "smd",
+            "specs": {
+              "Operating Temperature": "-55℃~+125℃",
+              "Impedance @ Frequency": "33Ω@100MHz",
+              "Tolerance": "±25%",
+              "Current Rating": "3A",
+              "Number of Circuits": "1",
+              "DC Resistance(DCR)": "25mΩ"
+            }
+          }
+        ],
+        "page": 1,
+        "per_page": 20,
+        "total": 1,
+        "total_pages": 1,
+        "has_more": false
+      }
+    },
+    {
+      "query": "CL10A475KA8NQNC",
+      "response": {
+        "results": [
+          {
+            "lcsc": "C69335",
+            "model": "CL10A475KA8NQNC",
+            "manufacturer": "Samsung Electro-Mechanics",
+            "package": "0603",
+            "stock": 1867415,
+            "price": 0.0535,
+            "price_10": 0.0421,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "specs": {
+              "Voltage Rating": "25V",
+              "Tolerance": "±10%",
+              "Capacitance": "4.7uF",
+              "Temperature Coefficient": "X5R"
+            }
+          }
+        ],
+        "page": 1,
+        "per_page": 20,
+        "total": 1,
+        "total_pages": 1,
+        "has_more": false
+      }
+    },
+    {
+      "query": "RT0603BRD072K49L",
+      "response": {
+        "results": [
+          {
+            "lcsc": "C861299",
+            "model": "RT0603BRD072K49L",
+            "manufacturer": "YAGEO",
+            "package": "0603",
+            "stock": 18569,
+            "price": 0.0613,
+            "price_10": 0.0527,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "specs": {
+              "Resistance": "2.49kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thin Film Resistor",
+              "Voltage-Supply(Max)": "75V",
+              "Tolerance": "±0.1%",
+              "Temperature Coefficient": "±25ppm/℃"
+            }
+          }
+        ],
+        "page": 1,
+        "per_page": 20,
+        "total": 1,
+        "total_pages": 1,
+        "has_more": false
+      }
+    },
+    {
+      "query": "0402WGF1502TCE",
+      "response": {
+        "results": [
+          {
+            "lcsc": "C25756",
+            "model": "0402WGF1502TCE",
+            "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+            "package": "0402",
+            "stock": 1771828,
+            "price": 0.0036,
+            "price_10": 0.0029,
+            "library_type": "basic",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "specs": {
+              "Resistance": "15kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "62.5mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "50V",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "page": 1,
+        "per_page": 20,
+        "total": 1,
+        "total_pages": 1,
+        "has_more": false
+      }
+    },
+    {
+      "query": "RTL8125BG-CG",
+      "response": {
+        "results": [
+          {
+            "lcsc": "C3013605",
+            "model": "RTL8125BG-CG",
+            "manufacturer": "Realtek Semicon",
+            "package": "QFN-48-EP(6x6)",
+            "stock": 2127,
+            "price": 4.4467,
+            "price_10": 3.7968,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Interface",
+            "subcategory": "Ethernet Transceivers",
+            "subcategory_id": 3072,
+            "mounting_type": "smd",
+            "specs": {
+              "Operating Temperature": "0℃~+70℃",
+              "Type": "-",
+              "Voltage - Supply": "950mV、3.3V",
+              "Number of ports": "-",
+              "MAC Interface": "-"
+            }
+          }
+        ],
+        "page": 1,
+        "per_page": 20,
+        "total": 1,
+        "total_pages": 1,
+        "has_more": false
+      }
+    }
+  ]
+}

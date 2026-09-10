@@ -28,6 +28,7 @@
     "core_on_time_ns_at_max_base_frequency_plus_typical_SSC": 100.32719005870396,
     "calculation_limits": "DC bounds exclude ripple, transient excursion and PCB drop. Capacitance includes 20% design allowance, not a manufacturer minimum guarantee. Soft start uses the TI reference-charge model; SSC deviation and tracking gain/offset are typical. Validate waveforms on hardware."
   },
-  "controller_captured": false,
+  "controller_captured": true,
+  "hardware_reset_complete": false,
   "system_routed": false
 }

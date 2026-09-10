@@ -34,7 +34,7 @@ local bypass and recovery/test pads. Storage sequencing and worst-case load
 qualification remain open. The external console is now captured with a fixed-direction TXU0202 and a
 separately adapter-powered3.3V port. Remaining signal capture is open.
 Other subsystems and the integrated PCB remain unfinished. See [the capture checkpoint](cad/README.md)
-for its exported-net checks and six unresolved integration ERC findings. The
+for its exported-net checks and sixteen unresolved integration ERC findings. The
 [processor escape coupon](studies/README.md) contains real routing and its own
 DRC evidence; it is not a system design or release. Full-system ERC, schematic/PCB
 parity, DRC, Gerber inspection and 3D clearance verification have **not passed**.
@@ -43,10 +43,19 @@ Reproduce the preliminary arithmetic with
 `python3 full-adapter/research/engineering_screen.py` from the repository root.
 This calculation is not an electrical or layout validation.
 
-Recovery USB capture is on `recovery-usb` and `recovery-detect` (22 sheets total).
+Recovery USB capture is on `recovery-usb` and `recovery-detect`.
 It includes a dedicated USB-C service port, power-off-specified data switch,
-USB data ESD and a separate VBUS translator. Eight integration ERC findings
-remain; recovery electrical qualification and the full PCB remain unfinished.
+USB data ESD and a separate VBUS translator. Recovery electrical qualification
+and the full PCB remain unfinished.
 
 Physical RECOVERY, RESET and POWER buttons are captured on `buttons`;
 manufacturer switch lands, nominal3D geometry and connectivity were reviewed.
+
+The hierarchy now has 27 pages including the root. Five Ethernet pages capture
+the two forced-PWM supplies and all 49 RTL8125BG pins, local bypass, the filtered
+PLL rail, 25 MHz crystal, startup pulls, and PCIe data/reference-clock connections.
+`check_ethernet_controller.py` verifies their exported nets and selected passives.
+PERST is held low pending hardware reset qualification and host control isolation;
+eight MDI endpoints await the selected 2.5G/PoE magnetics. See
+[Ethernet qualification](research/ethernet-controller-qualification.json) and
+[fresh component stock](research/ethernet-controller-live-stock.json).

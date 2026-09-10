@@ -173,8 +173,10 @@ def main():
     from build_console import console
     from build_recovery import recovery_usb,recovery_detect
     from build_ethernet_power import ethernet_power
+    from build_ethernet_controller import ethernet_local_power, ethernet_clock_config, ethernet_pcie
     pages=[signals(),power_page(),core_power(),cpu_power(),pmic_ldo(),pmic_ddr(),pmic_core(),pmic_aux(),pmic_control(),processor_pmu(),processor_io_power(),processor_phy_power(),processor_unused(),processor_control(),processor_clock(),emmc_signals(),emmc_power()]
     pages.extend([console(),recovery_usb(),recovery_detect(),buttons(),ethernet_power(),ethernet_power(True)])
+    pages.extend([ethernet_local_power(),ethernet_clock_config(),ethernet_pcie()])
     root=Sheet('full-adapter','Integrated Linux USB3 modem / 2.5GbE development board',root=True)
     root.text('CURRENT DESIGN — IN PROGRESS',20.32,20.32,2.54)
     root.text('RK3568B2 + 1 GiB DDR3 + PCIe RTL8125BG-CG\nUSB3 M.2 modem; isolated PoE and USB-C auxiliary power\n\nDDR, PMIC and processor supply capture is present. Remaining subsystems\nand PCB routing are active work. This project is not a manufacturing release.',20.32,33.02,1.8)

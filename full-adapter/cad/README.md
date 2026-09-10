@@ -89,12 +89,12 @@ not additional VSS/AVSS pins. Their controller/PHY nodes must be disabled in DTS
 and 0.76425 W nominal LDO dissipation before IO loads and other PMIC losses.
 This is a partial budget, not thermal closure or a basis for selecting PoE class.
 
-The current ERC result has six **unresolved integration findings**, with no
+The current ERC result has sixteen **unresolved integration findings**, with no
 ERC exclusions: unplaced U1 units, input pins and bidirectional pins;
 three undriven rails (GND, VCC5V_SYS and
-VCC3V3_SYS). The upstream supplies and other processor units are not yet captured. These are
-open work, not manufacturing exceptions. There are no
-additional ERC findings in this checkpoint.
+VCC3V3_SYS), two modem USB2 endpoints and eight Ethernet MDI endpoints.
+The upstream supplies, other processor units and MDI magnetics are not yet captured.
+These are open work, not manufacturing exceptions.
 
 The schematic PDF was rendered and visually iterated to fix rotated passive
 fields, supply-reference overlap, power-label collisions and page-boundary
@@ -196,10 +196,40 @@ project-relative STEP paths. Sources and point-in-time stock are recorded in
 `research/console-qualification.json`. System PCB, protection review and
 physical console validation remain unfinished.
 
-Recovery USB capture is on `recovery-usb` and `recovery-detect` (22 sheets total).
+Recovery USB capture is on `recovery-usb` and `recovery-detect`.
 It includes a dedicated USB-C service port, power-off-specified data switch,
-USB data ESD and a separate VBUS translator. Eight integration ERC findings
-remain; recovery electrical qualification and the full PCB remain unfinished.
+USB data ESD and a separate VBUS translator. Recovery electrical qualification
+and the full PCB remain unfinished.
 
 Physical RECOVERY, RESET and POWER buttons are captured on `buttons`;
 manufacturer switch lands, nominal3D geometry and connectivity were reviewed.
+
+## Ethernet controller capture
+
+The current hierarchy has 27 pages including root. `ethernet-3v3-power` and
+`ethernet-core-power` contain U12/U13 TPS6281320QWRWYRQ1 forced-PWM regulators.
+`ethernet-local-power`, `ethernet-clock-config` and `ethernet-pcie` capture every
+U11 RTL8125BG-CG pin and six U1 PCIe2 data/reference-clock balls. The original
+IC symbols are unchanged; VCC3V3_ETH_PLL is an added power symbol.
+
+Fifteen local capacitors bypass the named U11 pins. FB670 supplies only pin15;
+pin43 is on 3.3V and pins40/49 are grounded. Y670 is X322525MOB4SI C9006 with
+20pF C0G loads and an initial zero-ohm CKXTAL2 damping resistor. GPI, LED1,
+LANWAKE and CLKREQ have explicit Ethernet-domain pull-ups. There is no external
+EEPROM/flash; EEDI/EESEL select 3-wire 93C46 and EEDO is held low. Provision a
+stable unique local MAC before network-UP; see the qualification file for
+silicon-default and boot-image verification that remains necessary.
+
+The PCIe lane has one 100nF capacitor per transmit leg, with physical endpoints
+checked independently. PERST has a pulldown, but its release circuit and host
+control isolation remain unfinished. Eight MDI labels are explicit open endpoints
+for the qualified 2.5G/PoE magnetics; they are not ERC waivers.
+
+`check_ethernet_controller.py` runs in both staged checkpoint hooks alongside
+the library and regulator checks. It checks nets, exact new parts, crystal and
+bead lands, and capacitor derating estimates. The reviewed 27-page working PDF
+is `../build/ethernet-controller-review.pdf` (new pages8/15/27, root1). The crystal
+and bead copper/model review uses `../build/ethernet-passives-*`; these small
+inspection boards are not the integrated PCB. Footprint KLC exceptions are
+the manufacturer's rectangular bead lands and intentional local/shared/scaled
+generic models, documented in `../research/ethernet-controller-qualification.json`.

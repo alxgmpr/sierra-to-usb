@@ -23,6 +23,6 @@ def check(root=ROOT):
         assert nodes(p,'at')[0][1:3]==expected,(i,nodes(p,'at'))
         assert nodes(p,'size')[0][1:3]==([.8,.2] if i<=12 or 25<=i<=36 else [.2,.8])
     assert nodes(pads['49'],'size')[0][1:3]==[4.3,4.3]
-    return dict(status='ETHERNET_LIBRARY_NOT_CIRCUIT',pins_checked=49,footprint_pads_checked=49,external_core_regulator_required=True,temperature_C=[0,70],circuit_captured=False)
+    return dict(status='ETHERNET_LIBRARY_CHECK_NOT_RELEASE',pins_checked=49,footprint_pads_checked=49,external_core_regulator_required=True,temperature_C=[0,70],circuit_validation='check_ethernet_controller.py')
 if __name__=='__main__':
     result=check();(ROOT/'research/rtl8125-library-validation.json').write_text(json.dumps(result,indent=2)+'\n');print(result)

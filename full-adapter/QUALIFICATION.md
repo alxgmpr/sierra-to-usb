@@ -8,6 +8,13 @@ Remaining functional circuits, the integrated PCB, routing and release outputs
 are unfinished. See [the current capture and checks](cad/README.md); the older
 screening findings below remain historical except where superseded there.
 
+The current Ethernet capture adds all RTL8125BG pins, two qualified regulator
+circuits, local bypass/PLL filtering, a 25MHz crystal and PCIe lanes. Hardware
+reset/host-control isolation and 2.5G/PoE magnetics remain incomplete. The exact
+parts, capacitor bounds, no-EEPROM MAC policy, reset timing interpretation and
+remaining tests are in [the controller qualification](research/ethernet-controller-qualification.json).
+Sixteen integration ERC findings remain; no integrated PCB or release outputs exist.
+
 Implementation has resumed. The [processor escape study](studies/README.md)
 cross-checks all 636 balls and routes 114 selected signals outside the package
 using three signal layers with no copper/drill-clearance violations in its first

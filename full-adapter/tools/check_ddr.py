@@ -120,10 +120,11 @@ def check(root, output=None):
         # CPU and DDR are driven through L300/L420 (documented power flags).
         # All processor supply balls are present. Upstream rails and remaining
         # functional units await capture; regulator I2C now connects to U1.
-        expected={'missing_input_pin':1,'missing_bidi_pin':1,'missing_unit':1,'power_pin_not_driven':3,'isolated_pin_label':2}
+        expected={'missing_input_pin':1,'missing_bidi_pin':1,'missing_unit':1,'power_pin_not_driven':3,'isolated_pin_label':10}
         assert counts==expected,counts
         isolated=[v for sh in erc_data["sheets"] for v in sh["violations"] if v["type"]=="isolated_pin_label"]
-        assert {v["items"][0]["description"] for v in isolated}=={"Global Label 'MODEM_HOST_USB2_P'", "Global Label 'MODEM_HOST_USB2_N'"}
+        open_endpoints={'MODEM_HOST_USB2_P','MODEM_HOST_USB2_N'}|{f'ETH_MDI{pair}_{polarity}' for pair in range(4) for polarity in ['P','N']}
+        assert {v["items"][0]["description"] for v in isolated}=={f"Global Label '{name}'" for name in open_endpoints}
         summary={'status':'DDR_CAPTURE_CHECKPOINT_NOT_RELEASE','library_pins_checked':732,'dq_nets':32,'dqs_pairs':4,'dm_nets':4,'shared_ca_nets':len(ca),'clock_rc':'2 x 49.9R 1%, common 100pF C0G to ground','erc_open_integration_findings':dict(counts),'system_routed':False}
         if output:
             Path(output).write_text(json.dumps(summary,indent=2)+'\n')

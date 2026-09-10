@@ -60,6 +60,7 @@ def check(root=ROOT):
         tree=ET.parse(path);nets={n.get('name'):{(p.get('ref'),p.get('pin')) for p in n.findall('node')} for n in tree.findall('.//nets/net')}
         def attached(ref,pin):return next(n for n in nets.values() if (ref,pin) in n)
         parts={p.get('ref'):p for p in tree.findall('.//components/comp')}
+        assert ('U11','6') in nets['ETH_CORE_ENABLE']
         for n,u,vin,out,en,pg,top,bottom in [(650,'U12','VCC5V_SYS','VCC3V3_ETH','VCC3V3_S0','ETH_3V3_PG','RT0603BRE0745K3L','RT0603BRD0710KL'),(660,'U13','VCC3V3_ETH','VDD0V95_ETH','ETH_CORE_ENABLE','ETH_CORE_PG','RT0603BRD0714KL','RT0603BRD0724KL')]:
             assert {(u,'1'),(u,'2'),(f'C{n}','1'),(f'C{n+1}','1')}<=nets[vin]
             assert {(u,'8'),(f'R{n+2}','1')}<=nets[en] and vin!=en
@@ -77,6 +78,6 @@ def check(root=ROOT):
             for ref,mpn in selected.items():
                 fields={f.get('name'):f.text for f in parts[ref].findall('fields/field')}
                 assert (fields['MPN'],fields['LCSC'])==(mpn,by_mpn[mpn]['lcsc']),ref
-    return dict(status='ETHERNET_POWER_CAPTURE_NOT_RELEASE',regulators=2,logical_pins_and_pads=9,sizing=sizing(root),controller_captured=False,system_routed=False)
+    return dict(status='ETHERNET_POWER_CAPTURE_NOT_RELEASE',regulators=2,logical_pins_and_pads=9,sizing=sizing(root),controller_captured=True,hardware_reset_complete=False,system_routed=False)
 if __name__=='__main__':
     result=check();(ROOT/'research/ethernet-power-validation.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))

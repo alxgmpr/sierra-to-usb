@@ -7,6 +7,7 @@
   "shared_ca_nets": 25,
   "clock_rc": "2 x 49.9R 1%, common 100pF C0G to ground",
   "erc_open_integration_findings": {
+    "isolated_pin_label": 10,
     "missing_input_pin": 1,
     "missing_bidi_pin": 1,
     "missing_unit": 1,

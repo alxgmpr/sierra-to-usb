@@ -56,6 +56,33 @@ unprogrammed flash must leave the modem profile invalid and modem power off.
 
 ## Production fixture and release records
 
+### RTL8125BG bring-up and identity
+
+- Complete the hardware reset and host-control isolation circuit before attempting
+  link bring-up. R679 currently holds PERSTB low. Measure both Ethernet rails,
+  pin6/U13 EN, ISOLATEB, PERSTB and REFCLK together. Require at least100ms of valid
+  power and100us of stable clock before PERST release, at least100us reset pulses,
+  at least10ms between release edges, and at least50ms off/on spacing. Repeat
+  brownouts and shutdown with both supply orders and asynchronous clock activity.
+- Measure 3.14–3.46V and0.92–0.98V at U11 under full traffic, including DC drop,
+  ripple and transients. Probe pin15's filtered branch for ringing and startup
+  overshoot. Check the regulator's capacitive load, discharge and PWM operation
+  after final placement; generic capacitor estimates are not production minima.
+- Tune Y670's load and CKXTAL2 damping without loading the oscillator with a
+  conventional probe. Verify startup, maximum100uW crystal drive and total
+  frequency error within±50ppm including first-year aging. The current component
+  budget leaves17ppm for load/PCB error. Keep exact BG ambient within0–70C.
+- No EEPROM/flash is fitted. Verify exact-silicon default enumeration and record
+  PCI IDs, revision, kernel, device tree and rtl8125b-2 firmware hashes. Provision
+  a unique locally administered unicast MAC per board and apply it before network-UP.
+  Record the address and board serial in the fixture ledger, reject duplicates,
+  and verify persistence after reboot and firmware update. Random driver fallback
+  is a bring-up aid, not acceptable production identity. Do not burn RTL OTP.
+- Test both PCIe directions and sustained simultaneous USB/modem/Ethernet traffic.
+  Check negotiated PCIe speed/width, AER counters, throughput, loss, thermals and
+  recovery after reset. Add qualified magnetics and all four MDI pairs before
+  these tests; isolated schematic endpoints cannot be treated as passed hardware.
+
 ### RK809 control measurements
 
 - Verify I2C0 is pulled to 1.8 V and PMUIO2 is configured to that same domain;

@@ -1,0 +1,28 @@
+{
+  "source": "https://www.ecsimple.com/files/83/blm18pg330sn1d.pdf",
+  "manufacturer_spec": "Murata JENF243A-0003AG-01, pages1/4/9",
+  "sha256": "b88499cd4cdb7e83c1945f24c7a74403204f58d9d0b7f1e7df0351a15c730f51",
+  "pad_centers_x_mm": [
+    -0.675,
+    0.675
+  ],
+  "pad_size_mm": [
+    0.65,
+    0.7
+  ],
+  "reflow_land_dimensions_mm": {
+    "a": 0.7,
+    "b": 2,
+    "c": 0.7,
+    "d": 0.7
+  },
+  "application_current_max_A": 0.1,
+  "land_pattern_limit_A": 1.5,
+  "body_nominal_mm": [
+    1.6,
+    0.8,
+    0.8
+  ],
+  "body_tolerance_mm": 0.15,
+  "note": "Existing BLM18P native-derived nominal model. Full3A rating requires larger copper extensions per manufacturer; not claimed for this low-current PLL filter."
+}

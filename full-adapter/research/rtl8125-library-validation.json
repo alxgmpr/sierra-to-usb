@@ -1,5 +1,5 @@
 {
-  "status": "ETHERNET_LIBRARY_NOT_CIRCUIT",
+  "status": "ETHERNET_LIBRARY_CHECK_NOT_RELEASE",
   "pins_checked": 49,
   "footprint_pads_checked": 49,
   "external_core_regulator_required": true,
@@ -7,5 +7,5 @@
     0,
     70
   ],
-  "circuit_captured": false
+  "circuit_validation": "check_ethernet_controller.py"
 }

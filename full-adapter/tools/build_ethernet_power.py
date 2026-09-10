@@ -42,8 +42,8 @@ def ethernet_power(core=False):
     s.wire((106.68,u['2'][1]),(106.68,u['1'][1]));s.junction((106.68,u['2'][1]));s.wire((106.68,u['1'][1]),u['1'])
     s.wire(u['7'],(116.84,u['7'][1]));s.wire((116.84,u['7'][1]),(116.84,157.48));s.power('GND',(116.84,157.48))
     s.wire(u['4'],(u['4'][0],157.48));s.power('GND',(u['4'][0],157.48))
-    # The RTL core-enable source is integrated on the controller page next.
-    # The pulldown makes the unfinished endpoint safely disabled meanwhile.
+    # U11 POW_EXT_SWR controls the core rail. The pulldown defines EN while
+    # the controller output is unpowered or not yet driving.
     en=(66.04,u['8'][1]);s.wire(en,u['8'])
     if core:s.label('ETH_CORE_ENABLE',en,180,global_net=True)
     else:s.power('VCC3V3_S0',en)
@@ -77,6 +77,6 @@ def ethernet_power(core=False):
     t=tp(s,f'TP{n+1}',pg,360.68,177.8);props(s,360.68,165.1);s.wire(t['1'],(360.68,187.96));s.wire((309.88,187.96),(360.68,187.96));s.junction((309.88,187.96))
     t=tp(s,f'TP{n}',rail,35.56,180.34);props(s,35.56,167.64);s.wire(t['1'],(60.96,t['1'][1]));s.power(rail,(60.96,t['1'][1]))
     s.text('VIN, MODE and EN crossings have no junction: EN must remain separate from VIN.\nPlace both input capacitors at VIN/GND; use compact SW/inductor copper.\nKeep five output capacitors at the regulator. Route FB as a quiet Kelvin trace.\nMODE = VIN forces PWM. FSET = GND selects 2.25MHz and compensation1.',15.24,213.36,1.27)
-    s.text('10nF C0G: nominal 2.4ms soft start. 0.95V rail is cascaded from 3.3V for on-time margin.\n3.3V rail is dedicated to Ethernet and its core converter; do not export accessory power.\nPG does not guarantee Realtek voltage limits. Reset delay, controller connections and brownout re-arm remain unfinished.\nTI SLVSDU1K and Realtek RTL8125BG V1.5 / reference V122. See ethernet-power-qualification.json.',15.24,251.46,1.1)
+    s.text('10nF C0G: nominal 2.4ms soft start. 0.95V rail is cascaded from 3.3V for on-time margin.\n3.3V rail is dedicated to Ethernet and its core converter; do not export accessory power.\nPG does not guarantee Realtek voltage limits. U11 is connected; hardware reset delay and brownout re-arm remain unfinished.\nTI SLVSDU1K and Realtek RTL8125BG V1.5 / reference V122. See ethernet-power-qualification.json.',15.24,251.46,1.1)
     s.items=[v.replace('(justify left bottom)','(justify left)').replace('(justify right bottom)','(justify right)') if v.startswith('(global_label ') else v for v in s.items]
     return s
