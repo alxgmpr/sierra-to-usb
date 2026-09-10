@@ -1230,5 +1230,21 @@
     ]
   },
   "recovery-detect": {},
-  "buttons": {}
+  "buttons": {},
+  "ethernet-3v3-power": {
+    "ETH_3V3_PG": [
+      [
+        "U12",
+        "9"
+      ]
+    ]
+  },
+  "ethernet-core-power": {
+    "ETH_CORE_PG": [
+      [
+        "U13",
+        "9"
+      ]
+    ]
+  }
 }

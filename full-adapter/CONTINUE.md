@@ -11,7 +11,7 @@ or shared KiCad windows with stale projects. Work through files and KiCad CLI.
 
 ## Saved implementation
 
-The hierarchy has 22 pages including root: 1 GiB DDR3, RK3568B2 core/PMU/IO/PHY
+The hierarchy has 24 pages including root: 1 GiB DDR3, RK3568B2 core/PMU/IO/PHY
 supplies, RK860-0 CPU regulator, RK809-5 bucks/LDOs/controls/RTC, processor
 control/boot straps, 24 MHz crystal, and new SanDisk SDINBDG4-8G eMMC pages.
 All previous symbols are unchanged by the eMMC addition. `check_emmc.py`
@@ -100,3 +100,16 @@ See rtl8125-qualification.json: exact BG is0..70C ambient,125C junction;
 for no forced PWM. TPS6281320QWRWYRQ1 C1849536 is a stocked adjustable
 3A forced-PWM/soft-start candidate for both rails; qualify and capture next.
 Do not lose the >=1MHz PWM constraint of the2024 Realtek reference.
+
+Ethernet supplies are now captured on two pages: U12/U13 TPS6281320QWRWYRQ1,
+L650/L660 SPM5030T-R47M. U12 is enabled by VCC3V3_S0 and supplies VCC3V3_ETH
+(3.318V nominal). U13 takes that rail and produces VDD0V95_ETH (0.950V).
+ETH_CORE_ENABLE has a47k pulldown but still needs U11 pin6 POW_EXT_SWR.
+Both regulators force PWM at2.25MHz and use10nF C0G soft start; five22uF local
+output capacitors each account for DC-bias/temperature loss and design allowance.
+Manufacturer RWY0009 copper/stencil lands and maximum package-envelope STEP are
+added. check_ethernet_power.py checks exported nets, pins/pads and sizing corners
+and runs in staged checkpoint hooks. See ethernet-power-qualification.json for
+limits and remaining tests. PG is not a tight voltage-valid monitor; hardware
+reset delay and brownout sequencing remain unfinished. U11 itself is still not
+captured. Continue its power/config/clock/PCIe/MDI circuit, then magnetics/PoE.

@@ -1,0 +1,46 @@
+{
+  "lcsc": "C1849536",
+  "model": "TPS6281320QWRWYRQ1",
+  "manufacturer": "Texas Instruments",
+  "package": "VQFN-9(2x3)",
+  "pin_count": 9,
+  "pins": [
+    {
+      "number": "1",
+      "name": "MODE/SYNC"
+    },
+    {
+      "number": "2",
+      "name": "VIN"
+    },
+    {
+      "number": "3",
+      "name": "SW"
+    },
+    {
+      "number": "4",
+      "name": "GND"
+    },
+    {
+      "number": "5",
+      "name": "FB"
+    },
+    {
+      "number": "6",
+      "name": "SS/TR"
+    },
+    {
+      "number": "7",
+      "name": "COMP/FSET"
+    },
+    {
+      "number": "8",
+      "name": "EN"
+    },
+    {
+      "number": "9",
+      "name": "PG"
+    }
+  ],
+  "easyeda_symbol_uuid": "68cb4f0a83e347b8b30ca92df956f708"
+}

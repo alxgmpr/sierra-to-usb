@@ -92,7 +92,7 @@ def check(root=ROOT):
             matches=[net for net in nets.values() if pin in net]
             assert len(matches)==1, pin
             return matches[0]
-        assert nets['VCC5V_SYS'] == {('U4',p) for p in ['D1','D2','E1','E2']} | {(f'C{i}','1') for i in range(300,304)}
+        assert nets['VCC5V_SYS'] == {('U4',p) for p in ['D1','D2','E1','E2']} | {(f'C{i}','1') for i in range(300,304)} | {('U12','1'),('U12','2'),('C650','1'),('C651','1')}
         assert attached(('U4','D3')) == {('U4',p) for p in ['D3','D4','E3','E4']} | {('L300','1')}
         assert attached(('U4','A2')) == {('U4','A2'),('R300','2'),('C304','1')}
         assert nets['VCC3V3_PMU'] == {('R300','1'),('U5','31'),('C407','1'),('R494','1'),('R495','1'),('U1','Y20'),('C510','1'),('R560','1'),('R562','1')}

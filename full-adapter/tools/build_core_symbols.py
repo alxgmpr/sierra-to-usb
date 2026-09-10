@@ -261,9 +261,10 @@ def emmc():
 def main():
     syms, manifest = [], {}
     from build_ethernet import ethernet_symbol
+    from build_ethernet_power import regulator_symbol
     from build_console import console_symbol
     from build_recovery import recovery_switch_symbol
-    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic), ('SDINBDG4-8G', emmc), ('TXU0202DCUR', console_symbol), ('TS3USB221ARSER', recovery_switch_symbol), ('RTL8125BG-CG', ethernet_symbol)]:
+    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic), ('SDINBDG4-8G', emmc), ('TXU0202DCUR', console_symbol), ('TS3USB221ARSER', recovery_switch_symbol), ('RTL8125BG-CG', ethernet_symbol), ('TPS6281320QWRWYRQ1', regulator_symbol)]:
         symbol, units = fn()
         syms.append(symbol)
         manifest[name] = units
@@ -275,7 +276,7 @@ def main():
     for rail in ('VCC_DDR', 'VDD_CPU', 'VDD_LOGIC', 'VDD_GPU', 'VDD_NPU', 'VCC5V_SYS', 'VCC3V3_PMU',
                  'VCC3V3_SYS', 'VDD0V9_IMAGE', 'VDD0V9_ANLG', 'VDD0V9_PMU', 'VCC3V3_CODEC',
                  'VCC_SDIO', 'VCC1V8_ANLG', 'VCC1V8_PMU', 'VCC1V8_IMAGE',
-                 'VCC1V8_SYS', 'VCC3V3_S0', 'VCC3V3_SD', 'VDD0V9_USB', 'VCC1V8_USB', 'VCC_CONSOLE', 'VCC_RECOVERY5V'):
+                 'VCC1V8_SYS', 'VCC3V3_S0', 'VCC3V3_SD', 'VDD0V9_USB', 'VCC1V8_USB', 'VCC_CONSOLE', 'VCC_RECOVERY5V', 'VCC3V3_ETH', 'VDD0V95_ETH'):
         power = copy.deepcopy(vdd)
         def rename(node):
             for i, v in enumerate(node):

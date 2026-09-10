@@ -14054,5 +14054,123 @@
         }
       ]
     }
+  ],
+  "TPS6281320QWRWYRQ1": [
+    {
+      "unit": 1,
+      "title": "3A buck",
+      "width": 30.48,
+      "height": 50.8,
+      "pins": [
+        {
+          "ball": "2",
+          "name": "VIN",
+          "type": "power_in",
+          "side": "L",
+          "pitch_mm": 10.16,
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "8",
+          "name": "EN",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 10.16,
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "1",
+          "name": "MODE/SYNC",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 10.16,
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "7",
+          "name": "COMP/FSET",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 10.16,
+          "at": [
+            -17.78,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "SW",
+          "type": "power_out",
+          "side": "R",
+          "pitch_mm": 10.16,
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "FB",
+          "type": "input",
+          "side": "R",
+          "pitch_mm": 10.16,
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "SS/TR",
+          "type": "input",
+          "side": "R",
+          "pitch_mm": 10.16,
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "9",
+          "name": "PG",
+          "type": "open_collector",
+          "side": "R",
+          "pitch_mm": 10.16,
+          "at": [
+            17.78,
+            -17.78,
+            180
+          ]
+        },
+        {
+          "ball": "4",
+          "name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "pitch_mm": 10.16,
+          "at": [
+            0.0,
+            -27.94,
+            90
+          ]
+        }
+      ]
+    }
   ]
 }

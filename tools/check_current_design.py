@@ -34,6 +34,7 @@ def check():
     ddr_cad = {"full-adapter/cad/" + p for p in
                ("full-adapter.kicad_sch", "full-adapter.kicad_pro",
                 "ddr-signals.kicad_sch", "ddr-power.kicad_sch", "core-power.kicad_sch", "cpu-regulator.kicad_sch", "pmic-ldo.kicad_sch", "pmic-ddr.kicad_sch", "pmic-core.kicad_sch", "pmic-aux.kicad_sch", "pmic-control.kicad_sch", "processor-pmu.kicad_sch", "processor-io-power.kicad_sch", "processor-phy-power.kicad_sch", "processor-unused.kicad_sch", "processor-control.kicad_sch", "processor-clock.kicad_sch", "emmc-signals.kicad_sch", "emmc-power.kicad_sch", "console.kicad_sch", "recovery-usb.kicad_sch", "recovery-detect.kicad_sch", "buttons.kicad_sch")}
+    ddr_cad |= {'full-adapter/cad/ethernet-3v3-power.kicad_sch', 'full-adapter/cad/ethernet-core-power.kicad_sch'}
     allowed |= ddr_cad
     assert cad <= allowed, "Add explicit system electrical checks for new CAD: " + str(cad - allowed)
     assert allowed <= cad, "Coupon checkpoint requires both PCB and project settings"
@@ -200,6 +201,11 @@ def check():
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
         print("Ethernet library checkpoint:49 pins/pads checked; circuit remains uncaptured.")
+        spec = importlib.util.spec_from_file_location("staged_ethernet_power_checks", stage / "full-adapter/tools/check_ethernet_power.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("Ethernet supply checkpoint: two forced-PWM stages, dividers, soft start and pads checked; controller/reset integration unfinished.")
 
         spec = importlib.util.spec_from_file_location(
             "staged_processor_clock_checks", stage / "full-adapter/tools/check_processor_clock.py")
