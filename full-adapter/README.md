@@ -4,12 +4,18 @@ Status: **implementation incomplete; not suitable for fabrication**. This direct
 the sole current design location. There is no released schematic, PCB, BOM or
 manufacturing package yet. The old boards' validation does not apply here.
 
-Required path: M.2 modem USB3 → Linux host → independent 2.5GbE controller.
-RK3568B2 with RK809-5 and an external DDR/storage subsystem is being evaluated
-first; MT7981BA/A remains an alternative pending exact variant qualification.
+Approved path (2026-09-10): M.2 modem USB3 → PCIe USB3 host controller →
+**Raspberry Pi CM4 Lite → native gigabit Ethernet**, retaining isolated PoE
+and USB-C auxiliary power. Cost reduction is a priority. See
+[the CM4 handoff](CM4-HANDOFF.md) and [continuation instructions](CONTINUE.md).
+No CM4 CAD exists yet; the existing RK3568 hierarchy below is preserved historical
+work, superseded by this decision.
 
-Architecture freeze requires exact device documentation, compatible boot and
-memory support, qualified power and Ethernet magnetics, and BGA escape analysis.
+The revised implementation requires exact module/connector documentation,
+microSD boot, a qualified PCIe USB3 controller and Linux firmware path, native
+gigabit magnetics, and a complete isolated PoE/auxiliary power budget.
+
+## Historical RK3568 implementation
 
 See [qualification findings and outstanding work](QUALIFICATION.md), the
 [proposed bring-up and manufacturing test plan](TEST-PLAN.md), and

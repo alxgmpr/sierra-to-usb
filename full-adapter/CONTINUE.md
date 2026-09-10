@@ -1,4 +1,20 @@
-# Resume the integrated modem board
+# Resume the CM4 Lite integrated modem board
+
+## Approved architecture change — 2026-09-10
+
+The user approved **CM4 Lite + native gigabit Ethernet, retaining isolated PoE**
+to reduce cost. This supersedes the original RK3568/discrete-memory and 2.5GbE
+directions, including the old resume checklist below. Read
+[CM4-HANDOFF.md](CM4-HANDOFF.md) first for the revised requirements, research,
+implementation starting point and exact unfinished state. Do not continue the
+obsolete RTL8125 or discrete processor circuits as the current design.
+
+The user requested this checkpoint and a new-session `/goal` prompt. The CM4
+carrier has **not yet been captured or routed**. Preserve the existing RK3568
+CAD and checks as historical work; their results do not validate CM4 hardware.
+The remainder of this file is the previous RK3568 checkpoint for reference.
+
+## Historical RK3568 continuation (superseded)
 
 Continue `/Users/alex/sierra-to-usb` on `codex/full-adapter`. Read the original
 objective at `/Users/alex/.codex/attachments/9070579f-f60d-47d5-8fe5-bbe63ea3adf6/pasted-text-1.txt`

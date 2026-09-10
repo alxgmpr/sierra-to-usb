@@ -1,5 +1,10 @@
 # Replacement-board qualification — 2026-09-09
 
+**Superseded architecture:** on 2026-09-10 the user approved CM4 Lite, native
+gigabit Ethernet and isolated PoE. See [CM4-HANDOFF.md](CM4-HANDOFF.md).
+The findings below describe the preserved RK3568/RTL8125 implementation; they
+are not qualification evidence for the new CM4 carrier. No CM4 CAD exists yet.
+
 ## Delivery status
 
 The requested integrated board remains **incomplete**. The current hierarchy

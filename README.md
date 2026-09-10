@@ -1,6 +1,9 @@
 # Full adapter development board
 
 The only current design effort is [full-adapter](full-adapter/README.md).
+The approved architecture is CM4 Lite with native gigabit Ethernet, isolated
+PoE, USB3 modem hosting and USB-C auxiliary power. Start with the
+[CM4 continuation checkpoint](full-adapter/CM4-HANDOFF.md).
 It is in component qualification, **not a manufacturing release**. No new PCB
 or fabrication files have been released.
 
