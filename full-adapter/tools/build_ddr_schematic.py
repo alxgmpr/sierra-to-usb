@@ -174,10 +174,10 @@ def main():
     root.text('CURRENT DESIGN — IN PROGRESS',20.32,20.32,2.54)
     root.text('RK3568B2 + 1 GiB DDR3 + PCIe RTL8125BG-CG\nUSB3 M.2 modem; isolated PoE and USB-C auxiliary power\n\nDDR, PMIC and processor supply capture is present. Remaining subsystems\nand PCB routing are active work. This project is not a manufacturing release.',20.32,33.02,1.8)
     for i,s in enumerate(pages):
-        x,y=25.4+(i%3)*130.81,81.28+(i//3)*33.02
+        x,y=25.4+(i%4)*140.97,81.28+(i//4)*38.1
         root.items.append(f'(sheet (at {x} {y}) (size 111.76 20.32) (fields_autoplaced yes) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid {Q(uid("sheet-block/"+s.name))}) (property "Sheetname" {Q(s.title)} (at {x} {y-1.27} 0) {effects(justify="left bottom")}) (property "Sheetfile" {Q(s.name+".kicad_sch")} (at {x} {y+21.59} 0) {effects(justify="left top")}))')
         s.save()
-    root.save('A3')
+    root.save('A2')
     project=ROOT/'cad/full-adapter.kicad_pro'
     if not project.exists(): project.write_text(json.dumps({'meta':{'filename':'full-adapter.kicad_pro','version':1}},indent=2)+'\n')
     (ROOT/'cad/sym-lib-table').write_text('(sym_lib_table (version 7) (lib (name "full-adapter") (type "KiCad") (uri "${KIPRJMOD}/../lib/full-adapter.kicad_sym") (options "") (descr "Verified processor and memory symbols")))\n')

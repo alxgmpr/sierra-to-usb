@@ -25,7 +25,7 @@ capacitors, and all 208 VSS/AVSS ground balls. `../tools/check_core_power.py`
 checks their fresh exported nets against fixed package anchors and the source
 ground-pin list. Ball M15 is a passive remote sense tap on VDD_CPU_COM, not an
 additional external power feed. TVSS at AB24 remains a temperature reference
-input and is not connected to ground.
+input; the later processor-clock capture connects it to ground per the tablet reference.
 
 U4 is RK860-0 with L300 SPM5030T-R35M. The CPU page includes four 22 uF input
 capacitors, four 22 uF local output capacitors, a 51 kohm / 100 nF hardware
@@ -168,5 +168,6 @@ emmc-power capture all 153 U6 balls, the eight data bits, CMD/CLK/DS/reset,
 exported netlist and physical ball/pad mapping. Fresh ERC retains the six
 previous integration findings; the full system remains incomplete.
 The two pages and root were visually reviewed in build/emmc-review.pdf.
-The root must grow or reorganize before adding another child at its lower
-right corner, which currently contains the title block.
+The root now uses an A2 four-column index, with room for additional functional
+pages clear of the title block. Its SVG/PDF render was inspected in
+`build/root-expansion.pdf`; existing child circuits are unchanged.

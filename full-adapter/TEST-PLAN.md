@@ -124,6 +124,12 @@ test logs. No unrouted nets or real electrical faults may be waived.
 
 Verify storage supply order, discharge and IO behavior on both startup and
 brownout after completing the source review. During controlled provisioning,
+check 3.3 V and 1.8 V rise times against 35 ms and 25 ms limits respectively.
+Require both supplies valid before commands. For unconditional power-cycle
+recovery, hold VCCQ below 0.5 V for more than 1 ms; VCC alone is not monitored
+in sleep. Record actual EXT_CSD power-class fields before selecting bus speed.
+The present rail order is permitted by JESD84-B51 sections 10.1.2/10.1.3.
+During controlled provisioning,
 enable EXT_CSD RST_n_FUNCTION=1: the manufacturer's default disables the
 hardware reset pin. Verify reset, boot, HS200 timing and sustained read/write
 under concurrent system load and temperature. Do not provision permanent

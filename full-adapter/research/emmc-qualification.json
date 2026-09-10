@@ -135,7 +135,22 @@
       "VCCQ": 295
     },
     "peak_duration_note": "Regulators must support peak for up to 1ms; datasheet p16 figures are typical at 25C and not worst-case guarantees.",
-    "worst_case_budget_closed": false
+    "worst_case_budget_closed": false,
+    "power_class_evidence": {
+      "EXT_CSD_237": "0xDD",
+      "EXT_CSD_187": "0x0D",
+      "manufacturer_pages": [
+        27,
+        29
+      ],
+      "jedec_section": "7.4.55 Table 133",
+      "code": 13,
+      "high_voltage_max_RMS_mA": 700,
+      "high_voltage_max_peak_mA": 800,
+      "low_voltage_max_RMS_mA": 400,
+      "low_voltage_max_peak_mA": 500,
+      "status": "Source values captured; resolve allocation across dual rails and shared PMIC loads before budget closure. Read actual EXT_CSD during provisioning."
+    }
   },
   "source_url": "https://device.report/m/d13f73c8c758329714d6aae0d75f5d7d3e282e07f42ff2be363f3642a50bd194.pdf",
   "source_document": "SanDisk DOC56-34-01508 Rev1.4 August2017",
@@ -249,6 +264,30 @@
   "sequencing": {
     "qualification_complete": false,
     "present_assignment": "VCCQ: BUCK5 slot 2; VCC: SW1 slot 4",
-    "next_check": "Verify permitted VCCQ-before-VCC power-up and reverse power-down against exact SanDisk and Rockchip requirements before architecture freeze."
+    "next_check": "Complete rail ramp/discharge and PMIC brownout restart implementation; confirm no commands before both rails are valid.",
+    "order_permitted": true,
+    "order_basis": "JESD84-B51 sections 10.1.2 and 10.1.3; Rockchip hardware guide section 2.1.8.4 refers to JEDEC.",
+    "max_ramp_ms": {
+      "VCC": 35,
+      "VCCQ": 25
+    },
+    "power_cycle_reset": {
+      "below_V": 0.5,
+      "duration_ms_greater_than": 1,
+      "note": "VCC alone is not monitored in sleep; discharge VCCQ for unconditional restart."
+    },
+    "io_domain": "U1 H18 VCCIO2, U6 VCCQ and all ten bus pull-ups share VCC1V8_SYS; no external powered bus connection. Layout must keep local IO within -0.5 to VCCQ+0.5 V.",
+    "standard_source": {
+      "url": "https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/791/JESD84_2D00_B51-_2800_1_2900_.pdf",
+      "local": "reference/jesd84-b51.pdf",
+      "sha256": "c0833130e98055a7e09fc9ba615912753b028234d09e813b0379a2a23467eadb",
+      "printed_pages": [
+        197,
+        198,
+        240,
+        241,
+        246
+      ]
+    }
   }
 }

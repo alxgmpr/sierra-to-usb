@@ -52,7 +52,7 @@ Python: `full-adapter/.venv/bin/python`. KiCad CLI:
 Generators: `tools/build_core_symbols.py`, `build_ddr_schematic.py`,
 `build_emmc.py` under full-adapter. Root `tools/check_current_design.py` validates
 staged snapshots; register new CAD/checkers there. Use the KiCad skills.
-The A3 root has room for 17 children: expand/reorganize it before the next sheet.
+The root has been expanded to A2/four columns and visually reviewed.
 `build/emmc-review.pdf` and its PNGs are regenerable ignored review outputs.
 Official library tools live in ignored `tmp/kicad-library-tools`; eMMC model
 inputs and vendoring scripts are tracked. Footprint has 153 native 0.24 mm pads
@@ -62,3 +62,12 @@ Open original objective for full requirements and continue autonomously to final
 schematic, fully routed PCB, validated fabrication/assembly outputs and test plan.
 Make local milestone commits. Bench-dependent characterization may remain stated;
 missing CAD, electrical faults and unrouted nets cannot count as completion.
+
+## Resumed source review
+
+JESD84-B51 is archived in reference/jesd84-b51.pdf; hash and source URL are in
+emmc-qualification.json. Sections 10.1.2/10.1.3 permit either supply order.
+Keep the present slots; still close ramp/discharge and brownout restart behavior.
+SanDisk EXT_CSD237=DDh and POWER_CLASS=Dh provide current-class evidence;
+Table133 distinguishes RMS/absolute peak limits. Rail allocation and combined
+PMIC loads remain open. Do not substitute the 25C typical currents.
