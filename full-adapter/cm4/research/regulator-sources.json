@@ -1,0 +1,66 @@
+{
+  "captured_at": "2026-09-10",
+  "status": "Research checkpoint, not circuit qualification",
+  "sources": [
+    {
+      "file": "full-adapter/reference/cm4/tps56637.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tps56637.pdf",
+      "review": "SLVSEG1A September2019; output filter table limits effective Cout to100uF",
+      "sha256": "18edaff6769b0d5c3d0cdef66df1232538cd357bbaac214df138969f9b0d6745",
+      "bytes": 1798868
+    },
+    {
+      "file": "full-adapter/reference/cm4/lm61460.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+      "review": "SNVSBD5D July2022; bulk combinations in table9-4",
+      "sha256": "2c8a0bf340c70aa3ac29e586146804d7651822e14bee0897f6415ee9e56be84d",
+      "bytes": 3093699
+    },
+    {
+      "file": "full-adapter/reference/cm4/tps54560.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tps54560.pdf",
+      "review": "SLVSBN0C March2017; external compensation small-signal model sections7.3.14-16",
+      "sha256": "b415db3f04e3f68133fcba4ea14b03fb2b2c37d2829babbd01b0563c223f87b3",
+      "bytes": 2472508
+    },
+    {
+      "file": "full-adapter/reference/cm4/tps25947.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+      "review": "SLVSFC9C May2026; exact470L active current limit/OVLO/latch-off",
+      "sha256": "8f96de389903091650d4f462dcfad3210071c3ae7093623a7978f34baf8a65b4",
+      "bytes": 5316794
+    },
+    {
+      "file": "full-adapter/reference/cm4/mwsa1004s.pdf",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2310251550_Sunlord-MWSA1004S-6R8MT_C408485.pdf",
+      "review": "Manufacturer PDF at distributor; scanned, exact page review pending",
+      "sha256": "ac99aaf872412413ea5524b442c491541db1a4bd100d3fb6f5a7c18a5d89ae18",
+      "bytes": 12489960
+    },
+    {
+      "file": "full-adapter/reference/cm4/ruilong-polymer.pdf",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Zhaoqing-Ruilong-Elec--8102LAM0812E2RR00O_C723059.pdf",
+      "review": "Manufacturer catalog; page6 part-number key proves E2/O is radial/bagged, contradicting LCSC SMD label",
+      "sha256": "42d14485fdcdb5420ffe9b6d68554594ae1f632bf2989e848d2d49b906395e85",
+      "bytes": 1113009
+    },
+    {
+      "file": "full-adapter/reference/cm4/lm61460-spice.zip",
+      "url": "https://www.ti.com/lit/zip/SNVMBW2",
+      "review": "TI model Final1.10,17April2020; encrypted PSpice17.4 library, not ngspice-readable",
+      "sha256": "ff87f490462b6d98dfd4949f637b5624da151e09e6f7b4ef6be4f105704891dd",
+      "bytes": 101954
+    },
+    {
+      "file": "full-adapter/reference/cm4/lm61460-calculator.zip",
+      "url": "https://dr-download.ti.com/design-tools-simulation/calculation-tool/MD-a8K3MomcQc/01.00.00.00/snvr479.zip",
+      "review": "TI calculator XLSM; downloaded/extracted only, not evaluated",
+      "sha256": "f4871d3d731b0b4a0e1f535f1368fd936c402d28c0a4ba791f51178b5c8c65ef",
+      "bytes": 763455
+    },
+    {
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/a3e7a465ffa79bd091ad064f407f4301.pdf?productCode=C54321571",
+      "review": "JIERR manufacturer MA-series datasheet; web tool read exact MA6.3V1000M6X10 row:6.3V,1000uF,14mOhm,4.1A100kHz,6.3x10mm. Local curl403. Land drawing and reflow not reviewed; not captured. Alternate manufacturer document mirror: https://atta.szlcsc.com/upload/public/pdf/source/20260306/24758A4FC016E80367B87853635CDCC1.pdf"
+    }
+  ]
+}

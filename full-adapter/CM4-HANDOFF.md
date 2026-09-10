@@ -1,5 +1,10 @@
 # CM4 Lite carrier continuation — 2026-09-10
 
+Latest user-requested pause: read [cm4/CHECKPOINT.md](cm4/CHECKPOINT.md) for
+the saved implementation, regulator draft, exact open dependencies and next
+steps. [CM4-NEXT-PROMPT.md](CM4-NEXT-PROMPT.md) contains the continuation prompt.
+The latest CAD milestone is `97f1c8f`; continue from the branch tip.
+
 ## Implementation now underway
 
 The original checkpoint below is preserved as history. Subsequent CM4 work is

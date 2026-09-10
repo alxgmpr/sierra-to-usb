@@ -1,5 +1,10 @@
 # Resume the CM4 Lite integrated modem board
 
+Latest implementation checkpoint: [cm4/CHECKPOINT.md](cm4/CHECKPOINT.md).
+Ready-to-paste continuation request: [CM4-NEXT-PROMPT.md](CM4-NEXT-PROMPT.md).
+The latest CAD milestone is `97f1c8f`; preserve the following research checkpoint
+and any subsequent work. The old RK3568 continuation below remains historical.
+
 ## Approved architecture change — 2026-09-10
 
 The user approved **CM4 Lite + native gigabit Ethernet, retaining isolated PoE**

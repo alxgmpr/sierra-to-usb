@@ -1,5 +1,9 @@
 # CM4 Lite integrated modem development board
 
+For the latest user-requested pause, read [CHECKPOINT.md](CHECKPOINT.md) and
+the [continuation prompt](../CM4-NEXT-PROMPT.md). The latest CAD milestone is
+`97f1c8f`; the subsequent checkpoint saves regulator research without adding CAD.
+
 Current implementation: `cad/cm4-carrier.kicad_pro`. Work in progress; fabrication
 release requires the complete integration, routed PCB and release checks.
 The historical RK3568 hierarchy in `../cad/` is preserved and is not this board.
