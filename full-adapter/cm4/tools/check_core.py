@@ -87,15 +87,19 @@ def check(root=None, output=None):
         assert comps['R100'].findtext('value')=='220R 1%'
         for c in comps.values():
             fields={f.get('name'):f.text for f in c.findall('fields/field')}
-            assert fields.get('MPN') and fields.get('Manufacturer') and fields.get('LCSC'),c.get('ref')
+            assert fields.get('MPN') and fields.get('Manufacturer'),c.get('ref')
+            if c.get('ref')!='J200':assert fields.get('LCSC'),c.get('ref')
         subprocess.run([KICAD,'sch','erc','--format','json','-o',str(erc),str(sch)],check=True,stdout=subprocess.DEVNULL)
         report=json.loads(erc.read_text())
         counts=Counter(v['type'] for s in report['sheets'] for v in s['violations'])
-        assert counts=={'isolated_pin_label':44,'pin_not_driven':4,'power_pin_not_driven':2},counts
+        assert counts=={'isolated_pin_label':59,'pin_not_driven':5,'power_pin_not_driven':3},counts
         pending={'CM4_1V8','CM4_Pi_nLED_Activity','CM4_SCL0','CM4_SDA0','CM4_nEXTRST','ID_SC','ID_SD',
                  'PCIE_CLK_nREQ','PCIE_nRST','RECOVERY_USB_P','RECOVERY_USB_N','POE_MUX_DISABLE'}
         pending|={f'GPIO{i}' for i in range(2,28)}
         pending|={f'PCIE_{signal}_{p}' for signal in ['CLK','TX','RX'] for p in ['P','N']}
+        pending|={'MODEM_'+s for s in ['1V8','FULL_ON','GNSS_N','LED_N','PLA_N','RADIO_N',
+            'RESET_N','WAKE_N','USB_VBUS_SENSE','USB2_P','USB2_N','USB3_H2M_P',
+            'USB3_H2M_N','USB3_M2H_P','USB3_M2H_N']}
         actual={v['items'][0]['description'] for s in report['sheets'] for v in s['violations'] if v['type']=='isolated_pin_label'}
         assert actual=={f"Global Label '{n}'" for n in pending},actual
         project=json.loads((root/'cad/cm4-carrier.kicad_pro').read_text())
@@ -107,11 +111,14 @@ def check(root=None, output=None):
         spec=importlib.util.spec_from_file_location('cm4_power_input_checks',root/'tools/check_power_input.py')
         power_input=importlib.util.module_from_spec(spec);spec.loader.exec_module(power_input)
         power_input_result=power_input.check(root,tree)
+        spec=importlib.util.spec_from_file_location('cm4_modem_checks',root/'tools/check_modem.py')
+        modem=importlib.util.module_from_spec(spec);spec.loader.exec_module(modem)
+        modem_result=modem.check(root,tree)
         result={'status':'CM4_CORE_CAPTURE_CHECKPOINT_NOT_RELEASE','cm4_contacts_checked':200,
                 'physical_socket_quantity':2,'sd_data_connections':6,'physical_controls':4,
-                'ethernet':ethernet_result,'power_input':power_input_result,
+                'ethernet':ethernet_result,'power_input':power_input_result,'modem':modem_result,
                 'erc_unfinished_integration':dict(counts),'system_routed':False,
-                'scope':'core, Ethernet and auxiliary input capture; PoE, transient/thermal closure, USB3, modem and GPIO remain open'}
+                'scope':'core, Ethernet, auxiliary input and modem/SIM profile capture; regulators, controls, PoE, USB3, GPIO and all carrier placement/routing remain open'}
         if output:Path(output).write_text(json.dumps(result,indent=2)+'\n')
         print(json.dumps(result,indent=2))
         return result

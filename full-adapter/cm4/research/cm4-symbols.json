@@ -4097,5 +4097,970 @@
         }
       ]
     }
+  ],
+  "MODEM_M2_B": [
+    {
+      "unit": 1,
+      "title": "Power / profile-dependent contacts",
+      "width": 45.72,
+      "height": 45.72,
+      "pins": [
+        {
+          "ball": "[2,4,70,72,74]",
+          "name": "VCC_MODEM",
+          "display_name": "VCC_MODEM",
+          "type": "power_in",
+          "side": "L",
+          "physical_pins": [
+            "2",
+            "4",
+            "70",
+            "72",
+            "74"
+          ],
+          "at": [
+            -25.4,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "24",
+          "name": "P24 / VCC or 1V8_OUT",
+          "display_name": "P24 / VCC or 1V8_OUT",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            25.4,
+            17.78,
+            180
+          ]
+        },
+        {
+          "ball": "38",
+          "name": "P38 / VCC or WLAN_IN",
+          "display_name": "P38 / VCC or WLAN_IN",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            25.4,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "68",
+          "name": "P68 / VCC or reserved",
+          "display_name": "P68 / VCC or reserved",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            25.4,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            -15.24,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            -12.7,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "11",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            -10.16,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "27",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            -7.62,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "33",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            -5.08,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "39",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            -2.54,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "45",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            0.0,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "51",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            2.54,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "57",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            5.08,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "71",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            7.62,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "73",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            10.16,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "SH",
+          "name": "Board locks / GND",
+          "display_name": "Board locks / GND",
+          "type": "passive",
+          "side": "B",
+          "at": [
+            12.7,
+            -25.4,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "title": "USB3 / USB2 / Sierra interface selection",
+      "width": 55.88,
+      "height": 25.4,
+      "pins": [
+        {
+          "ball": "7",
+          "name": "USB_D+",
+          "display_name": "USB_D+",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -30.48,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "9",
+          "name": "USB_D-",
+          "display_name": "USB_D-",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -30.48,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "35",
+          "name": "USB3_RX-",
+          "display_name": "USB3_RX-",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -30.48,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "37",
+          "name": "USB3_RX+",
+          "display_name": "USB3_RX+",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -30.48,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "20",
+          "name": "P20 / PCIE_DIS or reserved",
+          "display_name": "P20 / PCIE_DIS or reserved",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -30.48,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "22",
+          "name": "P22 / VBUS_SENSE or reserved",
+          "display_name": "P22 / VBUS_SENSE or reserved",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -30.48,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "29",
+          "name": "USB3_TX-",
+          "display_name": "USB3_TX-",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            30.48,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "31",
+          "name": "USB3_TX+",
+          "display_name": "USB3_TX+",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            30.48,
+            5.08,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "title": "Power, reset, radio and status",
+      "width": 66.04,
+      "height": 20.32,
+      "pins": [
+        {
+          "ball": "6",
+          "name": "FULL_CARD_POWER_OFF_N",
+          "display_name": "FULL_CARD_POWER_OFF_N",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -35.56,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "8",
+          "name": "W_DISABLE_N",
+          "display_name": "W_DISABLE_N",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -35.56,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "26",
+          "name": "GPS_DISABLE_N",
+          "display_name": "GPS_DISABLE_N",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -35.56,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "67",
+          "name": "RESET_N",
+          "display_name": "RESET_N",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -35.56,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "25",
+          "name": "DPR / optional",
+          "display_name": "DPR / optional",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -35.56,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "10",
+          "name": "WWAN_LED_N",
+          "display_name": "WWAN_LED_N",
+          "type": "open_collector",
+          "side": "R",
+          "at": [
+            35.56,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "23",
+          "name": "WAKE_ON_WAN_N",
+          "display_name": "WAKE_ON_WAN_N",
+          "type": "open_collector",
+          "side": "R",
+          "at": [
+            35.56,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "28",
+          "name": "P28 / PLA_N or reserved",
+          "display_name": "P28 / PLA_N or reserved",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            35.56,
+            0.0,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "title": "Common SIM1",
+      "width": 30.48,
+      "height": 20.32,
+      "pins": [
+        {
+          "ball": "66",
+          "name": "SIM1_DET",
+          "display_name": "SIM1_DET",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "30",
+          "name": "SIM1_RST",
+          "display_name": "SIM1_RST",
+          "type": "output",
+          "side": "R",
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "32",
+          "name": "SIM1_CLK",
+          "display_name": "SIM1_CLK",
+          "type": "output",
+          "side": "R",
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "34",
+          "name": "SIM1_DATA",
+          "display_name": "SIM1_DATA",
+          "type": "bidirectional",
+          "side": "R",
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "36",
+          "name": "SIM1_PWR",
+          "display_name": "SIM1_PWR",
+          "type": "power_out",
+          "side": "R",
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "title": "SIM2 / EM9190 mmWave outputs",
+      "width": 71.12,
+      "height": 20.32,
+      "pins": [
+        {
+          "ball": "40",
+          "name": "P40 / SIM2_DET or QTM0",
+          "display_name": "P40 / SIM2_DET or QTM0",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -38.1,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "42",
+          "name": "P42 / SIM2_DATA or QTM1",
+          "display_name": "P42 / SIM2_DATA or QTM1",
+          "type": "bidirectional",
+          "side": "R",
+          "at": [
+            38.1,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "44",
+          "name": "P44 / SIM2_CLK or QTM2",
+          "display_name": "P44 / SIM2_CLK or QTM2",
+          "type": "output",
+          "side": "R",
+          "at": [
+            38.1,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "46",
+          "name": "P46 / SIM2_RST or QTM3",
+          "display_name": "P46 / SIM2_RST or QTM3",
+          "type": "output",
+          "side": "R",
+          "at": [
+            38.1,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "48",
+          "name": "P48 / SIM2_PWR or QTM_IO",
+          "display_name": "P48 / SIM2_PWR or QTM_IO",
+          "type": "power_out",
+          "side": "R",
+          "at": [
+            38.1,
+            -2.54,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "title": "Unused PCIe / reserved contacts",
+      "width": 30.48,
+      "height": 66.04,
+      "pins": [
+        {
+          "ball": "1",
+          "name": "CONFIG3",
+          "display_name": "CONFIG3",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            27.94,
+            0
+          ]
+        },
+        {
+          "ball": "21",
+          "name": "CONFIG0",
+          "display_name": "CONFIG0",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            25.4,
+            0
+          ]
+        },
+        {
+          "ball": "69",
+          "name": "CONFIG1",
+          "display_name": "CONFIG1",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            22.86,
+            0
+          ]
+        },
+        {
+          "ball": "75",
+          "name": "CONFIG2",
+          "display_name": "CONFIG2",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            20.32,
+            0
+          ]
+        },
+        {
+          "ball": "41",
+          "name": "PCIE_TX-",
+          "display_name": "PCIE_TX-",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            17.78,
+            0
+          ]
+        },
+        {
+          "ball": "43",
+          "name": "PCIE_TX+",
+          "display_name": "PCIE_TX+",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "47",
+          "name": "PCIE_RX-",
+          "display_name": "PCIE_RX-",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "49",
+          "name": "PCIE_RX+",
+          "display_name": "PCIE_RX+",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "50",
+          "name": "PCIE_PERST_N",
+          "display_name": "PCIE_PERST_N",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "52",
+          "name": "PCIE_CLKREQ_N",
+          "display_name": "PCIE_CLKREQ_N",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "53",
+          "name": "PCIE_REFCLK-",
+          "display_name": "PCIE_REFCLK-",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "54",
+          "name": "PCIE_WAKE_N",
+          "display_name": "PCIE_WAKE_N",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "55",
+          "name": "PCIE_REFCLK+",
+          "display_name": "PCIE_REFCLK+",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "56",
+          "name": "P56",
+          "display_name": "P56",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "58",
+          "name": "P58",
+          "display_name": "P58",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "59",
+          "name": "P59",
+          "display_name": "P59",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -10.16,
+            0
+          ]
+        },
+        {
+          "ball": "60",
+          "name": "P60",
+          "display_name": "P60",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "61",
+          "name": "P61",
+          "display_name": "P61",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -15.24,
+            0
+          ]
+        },
+        {
+          "ball": "62",
+          "name": "P62",
+          "display_name": "P62",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "63",
+          "name": "P63",
+          "display_name": "P63",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -20.32,
+            0
+          ]
+        },
+        {
+          "ball": "64",
+          "name": "P64",
+          "display_name": "P64",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -22.86,
+            0
+          ]
+        },
+        {
+          "ball": "65",
+          "name": "P65",
+          "display_name": "P65",
+          "type": "passive",
+          "side": "L",
+          "at": [
+            -17.78,
+            -25.4,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "SMN-303-ARP7": [
+    {
+      "unit": 1,
+      "title": "Nano-SIM / normally closed detection",
+      "width": 35.56,
+      "height": 45.72,
+      "pins": [
+        {
+          "ball": "C2",
+          "name": "RST",
+          "display_name": "RST",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -20.32,
+            17.78,
+            0
+          ]
+        },
+        {
+          "ball": "C3",
+          "name": "CLK",
+          "display_name": "CLK",
+          "type": "input",
+          "side": "L",
+          "at": [
+            -20.32,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "C7",
+          "name": "I/O",
+          "display_name": "I/O",
+          "type": "bidirectional",
+          "side": "L",
+          "at": [
+            -20.32,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "CD",
+          "name": "DET / NC switch",
+          "display_name": "DET / NC switch",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            20.32,
+            17.78,
+            180
+          ]
+        },
+        {
+          "ball": "C6",
+          "name": "VPP / NC",
+          "display_name": "VPP / NC",
+          "type": "passive",
+          "side": "R",
+          "at": [
+            20.32,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "C1",
+          "name": "VCC",
+          "display_name": "VCC",
+          "type": "power_in",
+          "side": "T",
+          "at": [
+            0.0,
+            25.4,
+            270
+          ]
+        },
+        {
+          "ball": "C5",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "at": [
+            -2.54,
+            -25.4,
+            90
+          ]
+        },
+        {
+          "ball": "SH",
+          "name": "Shield / detect GND",
+          "display_name": "Shield / detect GND",
+          "type": "passive",
+          "side": "B",
+          "at": [
+            0.0,
+            -25.4,
+            90
+          ]
+        }
+      ]
+    }
+  ],
+  "TPD1E05U06DPYR": [
+    {
+      "unit": 1,
+      "title": "SIM supply ESD",
+      "width": 30.48,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "1",
+          "name": "IO",
+          "display_name": "IO",
+          "type": "passive",
+          "side": "T",
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "2",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "passive",
+          "side": "B",
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    }
   ]
 }

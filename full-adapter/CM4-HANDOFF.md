@@ -5,10 +5,12 @@
 The original checkpoint below is preserved as history. Subsequent CM4 work is
 in `full-adapter/cm4/`: local milestone 2f316aa added the core and 2de318b added
 native Ethernet magnetics, the Cat5e jack, ESD and isolated PoE termination.
-The current twelve-page hierarchy also captures 36 auxiliary power/input-mux
-components, for 69 components total. Read `cm4/README.md` and
-`cm4/research/POWER-INPUT-REVIEW.md` for current checks and explicit surge,
-thermal, fault-current and system-budget work still open. There are 50 unfinished ERC
+Milestone b48844c captures 36 auxiliary power/input-mux components. The current
+eighteen-page hierarchy adds the modem socket, seven assembly profiles and
+two protected nano-SIM sockets, for 105 components including 11 DNP links.
+Read `cm4/README.md`, `cm4/research/MODEM-REVIEW.md` and
+`cm4/research/POWER-INPUT-REVIEW.md` for checks, sourcing and explicit surge,
+thermal, fault-current and system-budget work still open. There are 67 unfinished ERC
 findings and no integrated CM4 PCB. The ignored footprint review fixture is
 only library QA. None of these milestones satisfies the complete-board goal.
 
@@ -50,7 +52,7 @@ MT7981 alternative and 2.5GbE requirements. Retain the remaining deliverables:
   programming/recovery/manufacturing test plan. Prefer JLC assembly where supported;
   document separately fitted SoM, microSD and any other unavoidable manual parts.
 
-## Exact saved state
+## Historical state at original handoff (superseded by implementation above)
 
 Hardware checkpoint `289e747` contains a 29-page **RK3568** hierarchy with sixteen
 unfinished integration ERC findings. Cost checkpoint `3ccb4f2` adds COST.md and

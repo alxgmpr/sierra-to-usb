@@ -106,6 +106,10 @@ def build():
     all_symbols.extend(added)
     manifest.update(added_manifest)
     # Positive rails use native KiCad power symbols, always oriented upwards.
+    from modem_symbols import build as modem_symbols
+    added, added_manifest = modem_symbols(make_symbol)
+    all_symbols.extend(added)
+    manifest.update(added_manifest)
     lib=sx.loads((STD/'power.kicad_sym').read_text())
     template=next(s for s in nodes(lib,'symbol') if s[1]=='VDD')
     for rail in ['VCC5V_CM4','CM4_3V3','CM4_1V8','SD_VDD']:

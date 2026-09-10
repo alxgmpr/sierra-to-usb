@@ -1,0 +1,173 @@
+{
+  "captured_at": "2026-09-10",
+  "scope": "36 components on six modem/SIM pages; 11 links are DNP by default",
+  "board_quantity_basis": 10,
+  "currency": "USD",
+  "lines": [
+    {
+      "mpn": "CL10A105KO8NNNC",
+      "lcsc": "C1592",
+      "refs": [
+        "C200"
+      ],
+      "qty_per_board": 1,
+      "unit_usd": 0.0141,
+      "basis": "explicit 1+ tier, 10 needed for 10 boards",
+      "extended_per_board_usd": 0.0141,
+      "profile_dependent": false
+    },
+    {
+      "mpn": "CC0402KRX7R9BB104",
+      "lcsc": "C131394",
+      "refs": [
+        "C201",
+        "C230",
+        "C240"
+      ],
+      "qty_per_board": 3,
+      "unit_usd": 0.0103,
+      "basis": "explicit 1+ tier, 30 needed for 10 boards",
+      "extended_per_board_usd": 0.0309,
+      "profile_dependent": false
+    },
+    {
+      "mpn": "MDT420B01411",
+      "lcsc": null,
+      "refs": [
+        "J200"
+      ],
+      "qty_per_board": 1,
+      "unit_usd": null,
+      "basis": "unpriced/unresolved",
+      "extended_per_board_usd": null,
+      "profile_dependent": false
+    },
+    {
+      "mpn": "RC0603JR-070RL",
+      "lcsc": "C95177",
+      "refs": [
+        "R200",
+        "R201",
+        "R202",
+        "R203",
+        "R204",
+        "R205",
+        "R220",
+        "R221",
+        "R222",
+        "R223",
+        "R224"
+      ],
+      "qty_per_board": 11,
+      "unit_usd": 0.003,
+      "basis": "explicit 1+ tier, 110 needed for 10 boards",
+      "extended_per_board_usd": 0.033,
+      "profile_dependent": true
+    },
+    {
+      "mpn": "GRM1555C1H100JA01D",
+      "lcsc": "C76946",
+      "refs": [
+        "C231",
+        "C232",
+        "C233",
+        "C241",
+        "C242",
+        "C243"
+      ],
+      "qty_per_board": 6,
+      "unit_usd": 0.0101,
+      "basis": "explicit 1+ tier, 60 needed for 10 boards",
+      "extended_per_board_usd": 0.0606,
+      "profile_dependent": false
+    },
+    {
+      "mpn": "TPD1E05U06DPYR",
+      "lcsc": "C436349",
+      "refs": [
+        "D230",
+        "D240"
+      ],
+      "qty_per_board": 2,
+      "unit_usd": 0.0615,
+      "basis": "explicit 1+ tier, 20 needed for 10 boards",
+      "extended_per_board_usd": 0.123,
+      "profile_dependent": false
+    },
+    {
+      "mpn": "SMN-303-ARP7",
+      "lcsc": "C5137194",
+      "refs": [
+        "J201",
+        "J202"
+      ],
+      "qty_per_board": 2,
+      "unit_usd": 0.4403,
+      "basis": "explicit 10+ tier, 20 needed for 10 boards",
+      "extended_per_board_usd": 0.8806,
+      "profile_dependent": false
+    },
+    {
+      "mpn": "0402WGF220JTCE",
+      "lcsc": "C25092",
+      "refs": [
+        "R230",
+        "R231",
+        "R232",
+        "R240",
+        "R241",
+        "R242"
+      ],
+      "qty_per_board": 6,
+      "unit_usd": 0.0033,
+      "basis": "explicit 1+ tier, 60 needed for 10 boards",
+      "extended_per_board_usd": 0.0198,
+      "profile_dependent": false
+    },
+    {
+      "mpn": "0402WGF1802TCE",
+      "lcsc": "C25762",
+      "refs": [
+        "R233",
+        "R243"
+      ],
+      "qty_per_board": 2,
+      "unit_usd": 0.0015,
+      "basis": "single-unit catalog price; no tiers supplied",
+      "extended_per_board_usd": 0.003,
+      "profile_dependent": false
+    },
+    {
+      "mpn": "TPD4EUSB30DQAR",
+      "lcsc": "C90627",
+      "refs": [
+        "U230",
+        "U240"
+      ],
+      "qty_per_board": 2,
+      "unit_usd": 0.3836,
+      "basis": "explicit 1+ tier, 20 needed for 10 boards",
+      "extended_per_board_usd": 0.7672,
+      "profile_dependent": false
+    }
+  ],
+  "priced_common_parts_per_board_usd": 1.8992,
+  "each_fitted_profile_link_usd": 0.003,
+  "all_11_links_allowance_usd": 0.033,
+  "unpriced": [
+    "J200 MDT420B01411"
+  ],
+  "actual_quote": null,
+  "excludes": [
+    "modem module",
+    "modem regulator/bulk/control drivers",
+    "USB3 controller",
+    "other board circuits",
+    "PCB",
+    "assembly",
+    "consignment",
+    "wastage",
+    "shipping",
+    "tax"
+  ]
+}

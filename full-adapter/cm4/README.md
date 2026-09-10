@@ -8,12 +8,14 @@ Selected architecture: CM4001000 (1 GB, non-wireless, Lite), native gigabit
 Ethernet, PCIe USB3 modem host, isolated PoE and USB-C auxiliary power.
 The Renesas uPD720202 remains under electrical/firmware qualification.
 
-The current twelve-page hierarchy includes the CM4 core, native Ethernet
+The current eighteen-page hierarchy includes the CM4 core, native Ethernet
 magnetics, connector, ESD, DC-blocked PoE termination and 36 components for
-USB-C auxiliary power and input arbitration. See the current
+USB-C auxiliary power and input arbitration, plus modem profiles and two
+protected nano-SIM sockets. It has 105 components including 11 DNP profile
+links. See the current [modem review](research/MODEM-REVIEW.md),
 [power-input review](research/POWER-INPUT-REVIEW.md),
 [Ethernet review](research/ETHERNET-REVIEW.md) and
-[core review](research/CORE-REVIEW.md). There are 50
+[core review](research/CORE-REVIEW.md). There are 67
 unfinished integration ERC findings, no exclusions, and no integrated PCB yet.
 Surge/thermal closure and the full simultaneous power budget remain open;
 the PoE class is not yet finalized. The captured auxiliary circuit alone is

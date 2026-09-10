@@ -1,0 +1,62 @@
+{
+  "reviewed": "2026-09-10",
+  "sources": [
+    {
+      "file": "full-adapter/reference/cm4/mdt420-1a.pdf",
+      "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6255/cmdt420x0x411.pdf",
+      "revision": "Amphenol CMDT420X0X411 A, 2022-11-08; manufacturer drawing hosted by distributor",
+      "sha256": "dd1d569bf0c597ac1e2d7d52e83a4362b877724f1171ca4d388037abd646a9d8",
+      "bytes": 500629
+    },
+    {
+      "file": "full-adapter/reference/cm4/smn303-arp7.pdf",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2208151601_XUNPU-SMN-303-ARP7_C5137194.pdf",
+      "revision": "XUNPU SMN-303-ARP7 A; manufacturer drawing hosted by distributor",
+      "sha256": "131e1369eb5f6fbe2d8fdc2ef74b8642f523b2edda85d79fd5b043fb41aab711",
+      "bytes": 289078
+    },
+    {
+      "file": "full-adapter/reference/cm4/tpd1e05u06.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tpd1e05u06.pdf",
+      "revision": "TI SLVSBO7O August2024; DPY0002A 4224561/C 07/2024",
+      "sha256": "c167cf1e72a5473a4d2c59b6a3c0251498701da05b7785919b9ceaae3b3e02c6",
+      "bytes": 2801466
+    },
+    {
+      "file": "full-adapter/reference/cm4/em929x-r7p1.pdf",
+      "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8927/EM92%20specification.pdf",
+      "revision": "Semtech 41114313 Rev7.1 March2026; manufacturer document hosted by distributor",
+      "sha256": "ca44b7a02c07bd4abf94c264ab0ac93232d8f2415ecf4280b06877acbe47b1f3",
+      "bytes": 2741326
+    },
+    {
+      "file": "docs/legacy/compact/reference/rm520n.pdf",
+      "url": "https://forums.quectel.com/uploads/short-url/1zkjPRnxF5BZ2woox386baCZx4g.pdf",
+      "revision": "Quectel RM520N-GL Hardware Design V1.0",
+      "sha256": "139583b38ce1fd47be76d73d47e44902bfd152510dd486956fc54022be0ec179",
+      "bytes": 2046128
+    },
+    {
+      "file": "docs/legacy/compact/reference/em919x-r8.pdf",
+      "revision": "Sierra 41113174 Rev8 May2023, preserved manufacturer source from original research",
+      "sha256": "9aaa6617ff6082f168a0861bd74250b15707ee8660e312f39cf0496039deb804",
+      "bytes": 2391515
+    },
+    {
+      "url": "https://www.amphenol-cs.com/product/mdt420b01411.html",
+      "review": "Exact MPN and 1A series active; no captured stock/price; maker CDN returned403 via curl, distributor manufacturer PDF obtained"
+    },
+    {
+      "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/smdt005.pdf",
+      "review": "Amphenol SMDT005 A 2020 electrical specification: 1A per power contact, EIA364-70 method2,30C rise maximum at25C still air; 60 mating cycles; -40..85C"
+    },
+    {
+      "url": "https://forums.quectel.com/t/pcie-only-modems/39259",
+      "review": "Manufacturer staff Bean.Wang-Q posts7/9 October29,2024: RM520NGLAA USB-capable; RM520NGLAP PCIe-only. No claim about irreversible fuses."
+    },
+    {
+      "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/datasheet/ssio/ssio_pcie_m2_gen4_1a.pdf",
+      "review": "Manufacturer series brochure, 1A power contacts,0.8mm card,67pins for B key; exact selected variant requires procurement closure"
+    }
+  ]
+}

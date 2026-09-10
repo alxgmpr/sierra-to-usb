@@ -9,8 +9,10 @@ directions, including the old resume checklist below. Read
 implementation starting point and exact unfinished state. Do not continue the
 obsolete RTL8125 or discrete processor circuits as the current design.
 
-The user requested this checkpoint and a new-session `/goal` prompt. The CM4
-carrier has **not yet been captured or routed**. Preserve the existing RK3568
+The user requested this checkpoint and a new-session `/goal` prompt. Subsequent
+work now has an 18-page CM4 hierarchy with 105 components and 67 unfinished
+ERC findings; see `cm4/README.md` and `cm4/research/MODEM-REVIEW.md`. The CM4
+carrier is partially captured and has **no integrated PCB yet**. Preserve the existing RK3568
 CAD and checks as historical work; their results do not validate CM4 hardware.
 The remainder of this file is the previous RK3568 checkpoint for reference.
 

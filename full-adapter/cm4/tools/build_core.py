@@ -178,24 +178,32 @@ def root_page(sheets):
         'aux-usbc':'J150: power-only USB-C input\nU151: CC protection and dead-battery Rd',
         'aux-pd':'U150: fixed 20 V / 3 A PD request\nU152: independent auxiliary housekeeping',
         'aux-window':'U153: precise auxiliary voltage qualification\nHardware disconnect on voltage or CC fault',
-        'input-mux':'U160: independent reverse blocking\nOnly qualified inputs may power VIN_SYS'}
+        'input-mux':'U160: independent reverse blocking\nOnly qualified inputs may power VIN_SYS',
+        'modem-power':'J200: 1 A/contact B-key modem socket\nSierra-only extra supply contacts',
+        'modem-usb':'USB3 pairs and USB2 companion\nSierra-only detection and interface selection',
+        'modem-signals':'Independent power / reset / radio endpoints\nUnused PCIe and reserved contacts',
+        'modem-sim-profile':'SIM1 common; SIM2 physically isolated\nEM9190 mmWave / Quectel eSIM boundaries',
+        'sim1':'J201: protected nano-SIM1\nModule-powered, normally closed detection',
+        'sim2':'J202: optional external nano-SIM2\nAll five profile links default absent'}
     for index,child in enumerate(sheets):
-        x=15.24+(index%3)*134.62;y=45.72+(index//3)*45.72
+        x=15.24+(index%4)*142.24;y=45.72+(index//4)*60.96
         s.items.append(f'(sheet (at {x} {y}) (size 121.92 30.48) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid {Q(uid("sheet-block/"+child.name))}) '+
             f'(property "Sheetname" {Q(child.title)} (at {x} {y-1.27} 0) {effects(justify="left bottom")}) '+
             f'(property "Sheetfile" {Q(child.name+".kicad_sch")} (at {x} {y+31.75} 0) {effects(justify="left top")}) '+
             f'(instances (project "cm4-carrier" (path {Q("/"+ROOT_ID)} (page "{index+2}")))))')
         s.text(descriptions.get(child.name,''),x+7.62,y+8.89,1.52)
-    s.text('CM4 implementation in progress. Historical RK3568 CAD remains separate.\nRelease requires electrical closure, full routing, ERC, parity, DRC and manufacturing review.',15.24,248.92)
+    s.text('CM4 implementation in progress. Historical RK3568 CAD remains separate.\nRelease requires electrical closure, full routing, ERC, parity, DRC and manufacturing review.',15.24,375.92)
     return s
 
 
 if __name__=='__main__':
     from build_ethernet import ethernet_data, ethernet_termination
     from build_power_input import aux_usbc,aux_pd,aux_window,input_mux
+    import build_modem
     sheets=[core_power(),storage(),interfaces(),gpio(),unused(),ethernet_data(),ethernet_termination(),
-            aux_usbc(),aux_pd(),aux_window(),input_mux()]
-    root_page(sheets).save()
+            aux_usbc(),aux_pd(),aux_window(),input_mux(),build_modem.power(),build_modem.usb(),
+            build_modem.controls(),build_modem.sim2_profile(),build_modem.sim(1),build_modem.sim(2)]
+    root_page(sheets).save(paper='A2')
     for sheet in sheets:sheet.save()
     project=ROOT/'cad/cm4-carrier.kicad_pro'
     if not project.exists():
