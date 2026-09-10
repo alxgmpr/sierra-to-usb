@@ -13334,5 +13334,725 @@
         }
       ]
     }
+  ],
+  "RTL8125BG-CG": [
+    {
+      "unit": 1,
+      "title": "Supplies",
+      "width": 30.48,
+      "height": 81.28,
+      "pins": [
+        {
+          "ball": "4",
+          "name": "NC",
+          "display_name": "NC",
+          "type": "no_connect",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            33.02,
+            0
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "NC",
+          "display_name": "NC",
+          "type": "no_connect",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            27.94,
+            0
+          ]
+        },
+        {
+          "ball": "7",
+          "name": "NC",
+          "display_name": "NC",
+          "type": "no_connect",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            22.86,
+            0
+          ]
+        },
+        {
+          "ball": "8",
+          "name": "DVDD09",
+          "display_name": "DVDD09",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            33.02,
+            180
+          ]
+        },
+        {
+          "ball": "11",
+          "name": "AVDD09",
+          "display_name": "AVDD09",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            27.94,
+            180
+          ]
+        },
+        {
+          "ball": "15",
+          "name": "AVDD33",
+          "display_name": "AVDD33",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            22.86,
+            180
+          ]
+        },
+        {
+          "ball": "16",
+          "name": "AVDD09",
+          "display_name": "AVDD09",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            17.78,
+            180
+          ]
+        },
+        {
+          "ball": "19",
+          "name": "AVDD33",
+          "display_name": "AVDD33",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "22",
+          "name": "AVDD09",
+          "display_name": "AVDD09",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "28",
+          "name": "DVDD09",
+          "display_name": "DVDD09",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "29",
+          "name": "DVDD33",
+          "display_name": "DVDD33",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "33",
+          "name": "AVDD33",
+          "display_name": "AVDD33",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -7.62,
+            180
+          ]
+        },
+        {
+          "ball": "34",
+          "name": "AVDD33_XTAL",
+          "display_name": "AVDD33_XTAL",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -12.7,
+            180
+          ]
+        },
+        {
+          "ball": "37",
+          "name": "EVDD09",
+          "display_name": "EVDD09",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -17.78,
+            180
+          ]
+        },
+        {
+          "ball": "43",
+          "name": "EVDD33",
+          "display_name": "EVDD33",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -22.86,
+            180
+          ]
+        },
+        {
+          "ball": "46",
+          "name": "DVDD33",
+          "display_name": "DVDD33",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -27.94,
+            180
+          ]
+        },
+        {
+          "ball": "47",
+          "name": "DVDD09",
+          "display_name": "DVDD09",
+          "type": "power_in",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -33.02,
+            180
+          ]
+        },
+        {
+          "ball": "40",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -2.54,
+            -43.18,
+            90
+          ]
+        },
+        {
+          "ball": "49",
+          "name": "GND",
+          "display_name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            0.0,
+            -43.18,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "title": "PCIe Gen2 x1",
+      "width": 30.48,
+      "height": 45.72,
+      "pins": [
+        {
+          "ball": "1",
+          "name": "ISOLATEB",
+          "display_name": "ISOLATEB",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            15.24,
+            0
+          ]
+        },
+        {
+          "ball": "36",
+          "name": "PERSTB",
+          "display_name": "PERSTB",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            10.16,
+            0
+          ]
+        },
+        {
+          "ball": "41",
+          "name": "HSIP",
+          "display_name": "HSIP",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            5.08,
+            0
+          ]
+        },
+        {
+          "ball": "42",
+          "name": "HSIN",
+          "display_name": "HSIN",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            0.0,
+            0
+          ]
+        },
+        {
+          "ball": "44",
+          "name": "REFCLK_P",
+          "display_name": "REFCLK_P",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            -5.08,
+            0
+          ]
+        },
+        {
+          "ball": "45",
+          "name": "REFCLK_N",
+          "display_name": "REFCLK_N",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            -10.16,
+            0
+          ]
+        },
+        {
+          "ball": "48",
+          "name": "CLKREQB",
+          "display_name": "CLKREQB",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -17.78,
+            -15.24,
+            0
+          ]
+        },
+        {
+          "ball": "2",
+          "name": "LANWAKEB",
+          "display_name": "LANWAKEB",
+          "type": "open_collector",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "38",
+          "name": "HSOP",
+          "display_name": "HSOP",
+          "type": "output",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "39",
+          "name": "HSON",
+          "display_name": "HSON",
+          "type": "output",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "title": "2.5GbE MDI",
+      "width": 30.48,
+      "height": 55.88,
+      "pins": [
+        {
+          "ball": "12",
+          "name": "RSET",
+          "display_name": "RSET",
+          "type": "input",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            20.32,
+            180
+          ]
+        },
+        {
+          "ball": "13",
+          "name": "MDIP0",
+          "display_name": "MDIP0",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            15.24,
+            180
+          ]
+        },
+        {
+          "ball": "14",
+          "name": "MDIN0",
+          "display_name": "MDIN0",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            10.16,
+            180
+          ]
+        },
+        {
+          "ball": "17",
+          "name": "MDIP1",
+          "display_name": "MDIP1",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            5.08,
+            180
+          ]
+        },
+        {
+          "ball": "18",
+          "name": "MDIN1",
+          "display_name": "MDIN1",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            0.0,
+            180
+          ]
+        },
+        {
+          "ball": "20",
+          "name": "MDIP2",
+          "display_name": "MDIP2",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -5.08,
+            180
+          ]
+        },
+        {
+          "ball": "21",
+          "name": "MDIN2",
+          "display_name": "MDIN2",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -10.16,
+            180
+          ]
+        },
+        {
+          "ball": "23",
+          "name": "MDIP3",
+          "display_name": "MDIP3",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -15.24,
+            180
+          ]
+        },
+        {
+          "ball": "24",
+          "name": "MDIN3",
+          "display_name": "MDIN3",
+          "type": "bidirectional",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            17.78,
+            -20.32,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "title": "Clock and configuration",
+      "width": 45.72,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "3",
+          "name": "GPI",
+          "display_name": "GPI",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -25.4,
+            12.7,
+            0
+          ]
+        },
+        {
+          "ball": "10",
+          "name": "CKXTAL1",
+          "display_name": "CKXTAL1",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -25.4,
+            7.62,
+            0
+          ]
+        },
+        {
+          "ball": "25",
+          "name": "LED2/EEDO/SPISO",
+          "display_name": "LED2/EEDO/SPISO",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -25.4,
+            2.54,
+            0
+          ]
+        },
+        {
+          "ball": "27",
+          "name": "LED1/EESK/SPISCK",
+          "display_name": "LED1/EESK/SPISCK",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -25.4,
+            -2.54,
+            0
+          ]
+        },
+        {
+          "ball": "30",
+          "name": "LED0/EEDI/SPISI/SDA",
+          "display_name": "LED0/EEDI/SPISI/SDA",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -25.4,
+            -7.62,
+            0
+          ]
+        },
+        {
+          "ball": "32",
+          "name": "EEPROM_SEL/PPS_PIN",
+          "display_name": "EEPROM_SEL/PPS_PIN",
+          "type": "bidirectional",
+          "side": "L",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            -25.4,
+            -12.7,
+            0
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "POW_EXT_SWR",
+          "display_name": "POW_EXT_SWR",
+          "type": "output",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            25.4,
+            12.7,
+            180
+          ]
+        },
+        {
+          "ball": "9",
+          "name": "CKXTAL2",
+          "display_name": "CKXTAL2",
+          "type": "output",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            25.4,
+            7.62,
+            180
+          ]
+        },
+        {
+          "ball": "26",
+          "name": "SPICSB",
+          "display_name": "SPICSB",
+          "type": "output",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            25.4,
+            2.54,
+            180
+          ]
+        },
+        {
+          "ball": "31",
+          "name": "EECS/SCL",
+          "display_name": "EECS/SCL",
+          "type": "output",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            25.4,
+            -2.54,
+            180
+          ]
+        },
+        {
+          "ball": "35",
+          "name": "LED3",
+          "display_name": "LED3",
+          "type": "output",
+          "side": "R",
+          "pitch_mm": 5.08,
+          "visible_nc": true,
+          "at": [
+            25.4,
+            -7.62,
+            180
+          ]
+        }
+      ]
+    }
   ]
 }

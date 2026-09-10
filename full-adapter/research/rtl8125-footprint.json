@@ -1,0 +1,21 @@
+{
+  "native": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Package_DFN_QFN.pretty/QFN-48-1EP_6x6mm_P0.4mm_EP4.3x4.3mm.kicad_mod",
+  "native_sha256": "23a8d1925f3c6ff0bd12fa18d5e2335e9f0e7ecbe85db81904f27f23634ee091",
+  "body_mm": [
+    6,
+    6
+  ],
+  "height_max_mm": 1,
+  "exposed_pad_nominal_mm": [
+    4.3,
+    4.3
+  ],
+  "lead_width_range_mm": [
+    0.15,
+    0.25
+  ],
+  "pitch_mm": 0.4,
+  "lands": "0.8x0.2 at normal distance2.95mm;4.3mm squareEP; native windowed paste; thermal vias to be added during board layout",
+  "orientation": "Native pin1 is upper left, with numbering counterclockwise around top view; rotated90 degrees from the pin-assignment illustration. Verify assembly rotation against library pin1.",
+  "model": "Nominal6x6 and maximum1mm height solid envelope, not manufacturer STEP"
+}

@@ -92,3 +92,11 @@ model. Recovery R640 is10k to SARADC supply VCC1V8_ANLG; reset/power have
 100R series resistors. `check_buttons.py` is in the staged checkpoint checks.
 Internal SARADC spare inputs are NC; protected external analog expansion remains
 required. Eight ERC findings persist. This is still an unfinished integrated design.
+
+RTL8125BG-CG library now contains49 verified pins in4 functional units, a
+6x6mm QFN footprint and nominal1mm-height model. It is NOT yet in the circuit.
+See rtl8125-qualification.json: exact BG is0..70C ambient,125C junction;
+100mA3.3V/650mA0.95V maximum characterized currents. TPS62095 was rejected
+for no forced PWM. TPS6281320QWRWYRQ1 C1849536 is a stocked adjustable
+3A forced-PWM/soft-start candidate for both rails; qualify and capture next.
+Do not lose the >=1MHz PWM constraint of the2024 Realtek reference.

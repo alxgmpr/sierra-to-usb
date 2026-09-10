@@ -260,9 +260,10 @@ def emmc():
 
 def main():
     syms, manifest = [], {}
+    from build_ethernet import ethernet_symbol
     from build_console import console_symbol
     from build_recovery import recovery_switch_symbol
-    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic), ('SDINBDG4-8G', emmc), ('TXU0202DCUR', console_symbol), ('TS3USB221ARSER', recovery_switch_symbol)]:
+    for name, fn in [('H5TQ4G63EFR-RDC', memory), ('RK3568B2', processor), ('RK860-0', cpu_regulator), ('RK809-5', pmic), ('SDINBDG4-8G', emmc), ('TXU0202DCUR', console_symbol), ('TS3USB221ARSER', recovery_switch_symbol), ('RTL8125BG-CG', ethernet_symbol)]:
         symbol, units = fn()
         syms.append(symbol)
         manifest[name] = units

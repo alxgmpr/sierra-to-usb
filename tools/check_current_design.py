@@ -195,6 +195,11 @@ def check():
         spec.loader.exec_module(module)
         module.check(stage / "full-adapter")
         print("Buttons checkpoint: recovery pull-up, reset and PMIC power contacts checked.")
+        spec = importlib.util.spec_from_file_location("staged_ethernet_library_checks", stage / "full-adapter/tools/check_ethernet_library.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.check(stage / "full-adapter")
+        print("Ethernet library checkpoint:49 pins/pads checked; circuit remains uncaptured.")
 
         spec = importlib.util.spec_from_file_location(
             "staged_processor_clock_checks", stage / "full-adapter/tools/check_processor_clock.py")

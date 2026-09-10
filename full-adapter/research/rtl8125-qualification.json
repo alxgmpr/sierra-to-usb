@@ -1,0 +1,97 @@
+{
+  "status": "ETHERNET_LIBRARY_NOT_CIRCUIT",
+  "MPN": "RTL8125BG-CG",
+  "LCSC": "C3013605",
+  "source_date": "2026-09-09",
+  "sources": [
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20220512/84CEBB847F37F5F3AD7D5F5F4E80AB39.pdf",
+      "file": "reference/rtl8125bg-v1.5.pdf",
+      "sha256": "65a61ea7a113063343203665020634de45612e6de84fe399256da4cf48c7d32e"
+    },
+    {
+      "url": "https://edit.wpgdadawant.com/uploads/news_file/blog/2024/16434/tech_files/sv-1729732652.pdf",
+      "file": "reference/realtek-reference-2024.pdf",
+      "sha256": "d9f3fcfc0121cabb5e4497d451b23adf2884c12e9ab353616ff1bfb4135feb8b"
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/tps62095.pdf",
+      "file": "reference/tps62095.pdf",
+      "sha256": "d59130895d7516450ee8d1b6a1305b4ac27e8e3e2b1ac075c608f959f332530f"
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/tps62813-q1.pdf",
+      "file": "reference/tps62813-q1.pdf",
+      "sha256": "329daeb6f833263f4d71f22cf48c5229073812e5c54afc6068bc8fdbb0247b02"
+    }
+  ],
+  "limits": {
+    "ambient_C": [
+      0,
+      70
+    ],
+    "junction_max_C": 125,
+    "V33_V": [
+      3.14,
+      3.46
+    ],
+    "V09_V": [
+      0.92,
+      0.98
+    ],
+    "I33_max_A": 0.1,
+    "I09_max_A": 0.65,
+    "current_conditions": "100m Cat5e, +5% of all power rails, Ta85C; characterization does not extend ambient operating rating.",
+    "IC_rail_power_at_upper_operating_voltages_W": 0.9830000000000001,
+    "V33_rise_ms": [
+      0.5,
+      10
+    ],
+    "V09_rise_ms": [
+      0.5,
+      5
+    ],
+    "off_on_interval_min_ms": 50,
+    "power_stable_to_PERST_release_min_ms": 100,
+    "REFCLK_stable_before_PERST_release_min_us": 100,
+    "PERST_assertion_min_us": 100,
+    "internal_power_on_reset_after_core_ready_min_ms": 21
+  },
+  "reference_constraints": [
+    "ReferenceV122 dated2024-08-27 requires >=1MHz PWM switching for both3.3V and0.95V.",
+    "BG needs external0.95V regulator; pin6 POW_EXT_SWR is an enable output. Pins4/5/7 are NC, not BGS regulator pins.",
+    "LANWAKEB must be pulled HIGH1k..4.7k and LED1/EESK4.7k to avoid test mode.",
+    "Select EEPROM/flash/LED options from BG reference; preserve stable strap states during reset.",
+    "Table35 TPERSTB-RTD wording needs waveform review before claiming timing closure."
+  ],
+  "regulator_candidates": [
+    {
+      "MPN": "TPS62095RGTR",
+      "status": "REJECTED",
+      "reason": "Automatic power-save operation; no forced-PWM control found, so it fails newer Realtek reference."
+    },
+    {
+      "MPN": "TPS6281320QWRWYRQ1",
+      "LCSC": "C1849536",
+      "status": "CANDIDATE_NOT_CAPTURED",
+      "database_stock": 2232,
+      "facts": "Adjustable3A; output discharge ON; spread spectrum ON; MODE/SYNC HIGH forcesPWM; COMP/FSET supports2.25MHz; adjustableSS/TR. Need exact inductor, compensation, frequency minimum, divider and startup bounds."
+    }
+  ],
+  "library_review": [
+    "All49 pins crosschecked against primary tables/pin drawing and EasyEDA; corrected truncated SPI aliases on25/27.",
+    "Native QFN6x6/.4pitch/4.3EP lands and windowed paste are compatible with package dimensions; final thermal via/stencil design pending.",
+    "Symbols and footprint/nominal1mm-height model visually reviewed in KiCad plots/renders."
+  ],
+  "KLC_exceptions": [
+    "S4.6: visible NC4/5/7 highlight exact BG external-regulator variant.",
+    "S6.2: manufacturer/MPN/LCSC assembly metadata.",
+    "F6.3: EP uses separate native paste windows.",
+    "F9.3: local project STEP path."
+  ],
+  "open_items": [
+    "Complete Ethernet circuit, supplies, clock, strap defaults, host reset/isolation and PCIe wiring.",
+    "Qualify2.5GbE4-pairPoE magnetics with actual stock and current/unbalance ratings.",
+    "Add thermal vias, impedance routing and mechanical/3D validation on integrated PCB."
+  ]
+}
