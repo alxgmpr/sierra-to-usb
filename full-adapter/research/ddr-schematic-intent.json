@@ -1122,5 +1122,31 @@
       ]
     ]
   },
-  "emmc-power": {}
+  "emmc-power": {},
+  "console": {
+    "SOC_UART2_TX_1V8": [
+      [
+        "U7",
+        "5"
+      ]
+    ],
+    "SOC_UART2_RX_1V8": [
+      [
+        "U7",
+        "4"
+      ]
+    ],
+    "CONSOLE_TX_RAW": [
+      [
+        "U7",
+        "8"
+      ]
+    ],
+    "CONSOLE_RX_RAW": [
+      [
+        "U7",
+        "1"
+      ]
+    ]
+  }
 }

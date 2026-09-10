@@ -71,3 +71,10 @@ Keep the present slots; still close ramp/discharge and brownout restart behavior
 SanDisk EXT_CSD237=DDh and POWER_CLASS=Dh provide current-class evidence;
 Table133 distinguishes RMS/absolute peak limits. Rail allocation and combined
 PMIC loads remain open. Do not substitute the 25C typical currents.
+
+Console capture is now implemented as a nineteenth sheet (including root).
+See console-qualification.json and check_console.py. U7 uses the processor's
+1.8V PMU rail and J620's dedicated adapter-supplied3.3V domain. No connection
+joins adapter power to a system supply. Fresh ERC remains six findings.
+PMIC restart candidates are recorded in continuation-candidates.json; neither
+candidate is selected/captured yet. Continue power/recovery integration next.

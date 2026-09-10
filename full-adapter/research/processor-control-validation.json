@@ -3,6 +3,6 @@
   "PMIC_I2C_host_connected": true,
   "storage_voltage_strap_integrated": true,
   "thermal_watchdog_reset_path_integrated": true,
-  "console_external_interface_integrated": false,
+  "console_external_interface_integrated": true,
   "power_good_restart_integrated": false
 }

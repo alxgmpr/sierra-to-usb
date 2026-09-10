@@ -120,7 +120,7 @@
 (property "Datasheet" "" (at 137.16 213.36 0) (effects (font (size 1.27 1.27))) (hide yes))
 (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 137.16 213.36 0) (effects (font (size 1.27 1.27))) (hide yes))
 (pin "1" (uuid "16aa27b0-c2ac-5489-8dd8-d032d3a7e1ad"))(instances (project "full-adapter" (path "/fda20879-fa66-56c0-be14-de2506349b46/0a3d8b6b-806a-5303-a7dc-3b535bf2187e" (reference "#PWRprocessorcontrol001") (unit 1)))))
-(text "I2C0 connects both RK809 and RK860.\n1.8V pull-ups and PMIC series resistors are on the PMIC page.\nConsole connector/level conversion remain to be captured." (at 17.78 208.28 0) (effects (font (size 1.1 1.1)) (justify left top)) (uuid "f49edf67-ce76-5e8e-882a-c653d8004805"))
+(text "I2C0 connects both RK809 and RK860.\n1.8V pull-ups and PMIC series resistors are on the PMIC page.\nSee console page for isolated 3.3V adapter interface." (at 17.78 208.28 0) (effects (font (size 1.1 1.1)) (justify left top)) (uuid "18d58298-bcc3-5c52-a798-d29c064db7a1"))
 (rectangle (start 198.12 15.24) (end 406.4 106.67999999999999) (stroke (width 0.254) (type default) (color 60 110 145 1)) (fill (type none)) (uuid "4051139e-540f-5609-9575-65f5c1e31a0c"))
 (text "Hardware boot configuration" (at 201.93 19.05 0) (effects (font (size 1.8 1.8)) (justify left top)) (uuid "15feab3c-c500-544e-bb30-b9af5c14ac29"))
 (symbol (lib_id "Device:R_Small_US") (at 238.76 45.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "23cc7db8-fcd6-5f27-aff8-1570fd2f3476") (property "Reference" "R560" (at 241.29999999999998 44.449999999999996 0) (effects (font (size 1.27 1.27)) (justify left)))

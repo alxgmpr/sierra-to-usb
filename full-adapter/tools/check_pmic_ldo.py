@@ -27,7 +27,7 @@ def check(root=ROOT):
         for rail,(pin,cap) in rails.items():
             expected={('U5',pin),(cap,'1')}
             if rail=='VCC3V3_PMU':expected|={('R300','1'),('R494','1'),('R495','1')}
-            if rail=='VCC1V8_PMU':expected|={('R492','1'),('R493','1')}
+            if rail=='VCC1V8_PMU':expected|={('R492','1'),('R493','1'),('U7','3'),('U7','6'),('C620','1'),('R622','1'),('R623','1')}
             processor_loads = {
                 'VDD0V9_PMU': {('U1','V21'),('U1','V19'),('C500','1'),('C501','1'),('C508','1'),('C509','1')},
                 'VCC1V8_PMU': {('U1','Y21'),('U1','W19'),('C502','1'),('C503','1'),('C511','1')},

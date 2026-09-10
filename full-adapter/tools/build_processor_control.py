@@ -32,7 +32,7 @@ def processor_control():
         end=(137.16,y+7.62);s.wire(p['1'],end)
         if net=='GND':s.power(net,end)
         else:s.label(net,end,global_net=True)
-    s.text('I2C0 connects both RK809 and RK860.\n1.8V pull-ups and PMIC series resistors are on the PMIC page.\nConsole connector/level conversion remain to be captured.',17.78,208.28,1.1)
+    s.text('I2C0 connects both RK809 and RK860.\n1.8V pull-ups and PMIC series resistors are on the PMIC page.\nSee console page for isolated 3.3V adapter interface.',17.78,208.28,1.1)
     s.box('Hardware boot configuration',198.12,15.24,208.28,91.44)
     for ref,net,x in [('R560','FLASH_VOL_SEL',238.76),('R562','SD_CARD_DET_L',342.9)]:
         r=resistor(ref,pullup,'10kR 1%',x,45.72)

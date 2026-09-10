@@ -171,3 +171,27 @@ The two pages and root were visually reviewed in build/emmc-review.pdf.
 The root now uses an A2 four-column index, with room for additional functional
 pages clear of the title block. Its SVG/PDF render was inspected in
 `build/root-expansion.pdf`; existing child circuits are unchanged.
+
+## Console capture
+
+`console.kicad_sch` adds U7 TXU0202DCUR and J620 B4B-PH-SM4-TB(LF)(SN).
+J620 is 1=GND, 2=board TX, 3=board RX, 4=adapter 3.3V input. Use a PHR-4
+mating housing and a 3.3V TTL USB-UART adapter with TX/RX crossed. Pin4 supplies
+only the translator's external domain; it does not supply the board. Ground
+is shared, so this is power-off isolation, not galvanic isolation.
+
+Four 10k pull-ups keep UART idle high on either side without crossing power
+domains. Two 1k series resistors limit DC contention at the connector. Start
+at 1.5Mbaud with a short cable and <=50pF total line loading; verify timing
+with the actual adapter. `check_console.py` checks all eight translator pins,
+both footprint pad maps, connector direction, pull-ups and rail separation.
+Fresh ERC retains six integration findings. `build/console-review.pdf` page11
+was visually reviewed after correcting field overlap and the lower box boundary.
+
+U7 uses TI DCU0008A's .85x.3mm lands with3.1mm row spacing. The native JST
+pattern matches the manufacturer's top-entry drawing. Its local STEP is a
+solid nominal header envelope, not a detailed manufacturer model; reserve
+mating cable clearance. KLC exceptions are intentional assembly fields and
+project-relative STEP paths. Sources and point-in-time stock are recorded in
+`research/console-qualification.json`. System PCB, protection review and
+physical console validation remain unfinished.

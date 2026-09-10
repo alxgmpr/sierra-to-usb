@@ -137,3 +137,15 @@ write protection, RPMB keys or partition settings without the final procedure.
 The D0/GND service pads follow Rockchip's power-on MaskROM procedure; release
 the short after USB enumeration. Normal recovery controls and USB connector
 are not yet captured. Keep VSF1–4 pads isolated from application circuits.
+
+## Console fixture connection
+
+J620: 1=GND, 2=board TX -> adapter RX, 3=board RX <- adapter TX,
+4=adapter 3.3V output (>=5mA available). Do not connect an adapter power output
+to a system rail. Use 3.3V TTL, not RS-232. The initial target is1.5Mbaud 8N1;
+confirm the programmed bootloader's baud rate and <=50pF total line loading.
+Verify idle high with either endpoint unpowered, repeated cable insertion,
+continuous bidirectional traffic and board power cycling. Measure off-state
+leakage into VCC1V8_PMU; U7's published Ioff is2uA maximum per port through85C
+under its stated zero-supply test conditions. Qualify partial-ramp behavior
+separately. System ESD testing remains part of the final interface validation.

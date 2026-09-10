@@ -13098,5 +13098,111 @@
         }
       ]
     }
+  ],
+  "TXU0202DCUR": [
+    {
+      "unit": 1,
+      "title": "UART translator",
+      "width": 30.48,
+      "height": 40.64,
+      "pins": [
+        {
+          "ball": "4",
+          "name": "A2Y",
+          "type": "tri_state",
+          "side": "L",
+          "pitch_mm": 7.62,
+          "at": [
+            -17.78,
+            -10.16,
+            0
+          ]
+        },
+        {
+          "ball": "5",
+          "name": "A1",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 7.62,
+          "at": [
+            -17.78,
+            -17.78,
+            0
+          ]
+        },
+        {
+          "ball": "6",
+          "name": "OE",
+          "type": "input",
+          "side": "L",
+          "pitch_mm": 7.62,
+          "at": [
+            -17.78,
+            -25.4,
+            0
+          ]
+        },
+        {
+          "ball": "1",
+          "name": "B2",
+          "type": "input",
+          "side": "R",
+          "pitch_mm": 7.62,
+          "at": [
+            17.78,
+            -10.16,
+            180
+          ]
+        },
+        {
+          "ball": "8",
+          "name": "B1Y",
+          "type": "tri_state",
+          "side": "R",
+          "pitch_mm": 7.62,
+          "at": [
+            17.78,
+            -17.78,
+            180
+          ]
+        },
+        {
+          "ball": "3",
+          "name": "VCCA",
+          "type": "power_in",
+          "side": "T",
+          "pitch_mm": 7.62,
+          "at": [
+            -2.54,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "7",
+          "name": "VCCB",
+          "type": "power_in",
+          "side": "T",
+          "pitch_mm": 7.62,
+          "at": [
+            0.0,
+            22.86,
+            270
+          ]
+        },
+        {
+          "ball": "2",
+          "name": "GND",
+          "type": "power_in",
+          "side": "B",
+          "pitch_mm": 7.62,
+          "at": [
+            0.0,
+            -22.86,
+            90
+          ]
+        }
+      ]
+    }
   ]
 }

@@ -31,7 +31,8 @@ PMIC bus, reset, interrupt and sleep signals and defines the hardware boot strap
 The processor-clock page adds the 24 MHz crystal network and grounded TVSS
 reference. Two eMMC pages add SDINBDG4-8G storage, eight-bit wiring, reset,
 local bypass and recovery/test pads. Storage sequencing and worst-case load
-qualification remain open. External console and remaining signal capture remain open.
+qualification remain open. The external console is now captured with a fixed-direction TXU0202 and a
+separately adapter-powered3.3V port. Remaining signal capture is open.
 Other subsystems and the integrated PCB remain unfinished. See [the capture checkpoint](cad/README.md)
 for its exported-net checks and six unresolved integration ERC findings. The
 [processor escape coupon](studies/README.md) contains real routing and its own

@@ -37,8 +37,8 @@ def check(root=ROOT):
         fields={f.get('name'):f.text for f in parts['R561'].findall('fields/field')}
         assert (fields['MPN'],fields['LCSC'])==('0402WGF0000TCE','C17168')
         assert parts['C560'].findtext('value')=='100nF'
-        assert nets['SOC_UART2_RX_1V8']=={('U1','AC20'),('TP560','1')}
-        assert nets['SOC_UART2_TX_1V8']=={('U1','AH24'),('TP561','1')}
+        assert nets['SOC_UART2_RX_1V8']=={('U1','AC20'),('TP560','1'),('U7','4'),('R623','2')}
+        assert nets['SOC_UART2_TX_1V8']=={('U1','AH24'),('TP561','1'),('U7','5'),('R622','2')}
         assert ('TP562','1') in nets['GND']
         for ref in ['TP560','TP561','TP562']:
             assert parts[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
@@ -46,7 +46,7 @@ def check(root=ROOT):
     return {'status':'PROCESSOR_CONTROL_CAPTURE_CHECKPOINT_NOT_RELEASE',
             'PMIC_I2C_host_connected':True,'storage_voltage_strap_integrated':True,
             'thermal_watchdog_reset_path_integrated':True,
-            'console_external_interface_integrated':False,'power_good_restart_integrated':False}
+            'console_external_interface_integrated':True,'power_good_restart_integrated':False}
 
 
 if __name__=='__main__':

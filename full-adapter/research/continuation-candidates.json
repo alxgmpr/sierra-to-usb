@@ -1,0 +1,401 @@
+{
+  "console": {
+    "search": {
+      "results": [
+        {
+          "lcsc": "C18197534",
+          "model": "TXU0202DTTR",
+          "manufacturer": "Texas Instruments",
+          "package": "X1SON-8(2x1)",
+          "stock": 6020,
+          "price": 0.8022,
+          "price_10": null,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Logic",
+          "subcategory": "Translators, Level Shifters",
+          "subcategory_id": 2162,
+          "mounting_type": "smd",
+          "description": "-40\u2103~+125\u2103 1.1V~5.5V 1.1V~5.5V 12mA 12mA 2 200Mbps Bidirectional Level translator Power-off protection\u3001Output enable high-impedance SPI\u3001JTAG\u3001UART Tri-State X1SON-8(2x1) Translators, Level Shifters ROHS",
+          "specs": {
+            "Operating Temperature": "-40\u2103~+125\u2103",
+            "Translator Type": "Level translator",
+            "Voltage - Supply(VCCA)": "1.1V~5.5V",
+            "Data Rate": "200Mbps",
+            "Output Type": "Tri-State",
+            "Voltage - Supply(VCCB)": "1.1V~5.5V",
+            "Channel Type": "Bidirectional",
+            "Current - Output High(IOH)": "12mA",
+            "Features": "Power-off protection\u3001Output enable high-impedance",
+            "Number of Circuits": "2",
+            "Current - Output Low(IOL)": "12mA",
+            "Interface": "SPI\u3001JTAG\u3001UART"
+          }
+        },
+        {
+          "lcsc": "C5186957",
+          "model": "TXU0202DCUR",
+          "manufacturer": "Texas Instruments",
+          "package": "VSSOP-8",
+          "stock": 4351,
+          "price": 0.7875,
+          "price_10": null,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Logic",
+          "subcategory": "Translators, Level Shifters",
+          "subcategory_id": 2162,
+          "mounting_type": "smd",
+          "description": "-40\u2103~+125\u2103 1 1.08V~5.5V 1.08V~5.5V 12mA 12mA 2 200Mbps Bidirectional Level translator Output enable high-impedance\u3001Integrated pull-up resistor SPI\u3001JTAG\u3001UART Tri-State VSSOP-8 Translators, Level Shifters ROHS",
+          "specs": {
+            "Operating Temperature": "-40\u2103~+125\u2103",
+            "Input Signal": "-",
+            "Output Type": "Tri-State",
+            "Current - Output High(IOH)": "12mA",
+            "Translator Type": "Level translator",
+            "Voltage - Supply(VCCA)": "1.08V~5.5V",
+            "Data Rate": "200Mbps",
+            "Output Signal": "-",
+            "Voltage - Supply(VCCB)": "1.08V~5.5V",
+            "Channel Type": "Bidirectional",
+            "Features": "Output enable high-impedance\u3001Integrated pull-up resistor",
+            "Number of Elements": "1",
+            "Number of Circuits": "2",
+            "Current - Output Low(IOL)": "12mA",
+            "Interface": "SPI\u3001JTAG\u3001UART"
+          }
+        },
+        {
+          "lcsc": "C20346017",
+          "model": "TXU0202QDTTRQ1",
+          "manufacturer": "Texas Instruments",
+          "package": "X1SON-8(1x2)",
+          "stock": 149,
+          "price": 1.3163,
+          "price_10": null,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Logic",
+          "subcategory": "Translators, Level Shifters",
+          "subcategory_id": 2162,
+          "mounting_type": "smd",
+          "description": "-40\u2103~+125\u2103 1 1.08V~5.5V 1.08V~5.5V 200Mbps Power-off protection\u3001Output enable high-impedance\u3001Integrated pull-up resistor Tri-State Unidirectional X1SON-8(1x2) Translators, Level Shifters ROHS",
+          "specs": {
+            "Operating Temperature": "-40\u2103~+125\u2103",
+            "Voltage - Supply(VCCA)": "1.08V~5.5V",
+            "Data Rate": "200Mbps",
+            "Output Type": "Tri-State",
+            "Voltage - Supply(VCCB)": "1.08V~5.5V",
+            "Channel Type": "Unidirectional",
+            "Features": "Power-off protection\u3001Output enable high-impedance\u3001Integrated pull-up resistor",
+            "Number of Circuits": "1"
+          }
+        }
+      ],
+      "total": 5,
+      "page_info": {
+        "limit": 3,
+        "offset": 0,
+        "returned": 3
+      },
+      "filters_applied": {
+        "query": "TXU0202",
+        "subcategory_id": null,
+        "subcategory_name": null,
+        "subcategory_resolved": null,
+        "category_id": null,
+        "category_name": null,
+        "category_resolved": null,
+        "spec_filters": [],
+        "library_type": null,
+        "prefer_no_fee": true,
+        "min_stock": 10,
+        "package": null,
+        "packages": null,
+        "manufacturer": null,
+        "match_all_terms": true
+      },
+      "library_type_counts": {
+        "basic": 0,
+        "preferred": 0,
+        "extended": 5
+      },
+      "no_fee_available": false,
+      "parsed": {
+        "original_query": "TXU0202",
+        "detected": {
+          "model_number": "TXU0202"
+        },
+        "subcategory": null,
+        "package": null,
+        "mounting_type": null,
+        "spec_filters": [],
+        "remaining_text": "TXU0202"
+      }
+    },
+    "stock": {
+      "results": [
+        {
+          "lcsc": "C5186957",
+          "model": "TXU0202DCUR",
+          "manufacturer": "Texas Instruments",
+          "package": "VSSOP-8",
+          "stock": 4346,
+          "price": 0.7875,
+          "price_10": 0.6655,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Logic",
+          "subcategory": "Translators, Level Shifters",
+          "subcategory_id": 2162,
+          "mounting_type": "smd",
+          "specs": {
+            "Operating Temperature": "-40\u2103~+125\u2103",
+            "Input Signal": "-",
+            "Output Type": "Tri-State",
+            "Current - Output High(IOH)": "12mA",
+            "Translator Type": "Level translator",
+            "Voltage - Supply(VCCA)": "1.08V~5.5V",
+            "Data Rate": "200Mbps",
+            "Output Signal": "-",
+            "Voltage - Supply(VCCB)": "1.08V~5.5V",
+            "Channel Type": "Bidirectional",
+            "Features": "Output enable high-impedance\u3001Integrated pull-up resistor",
+            "Number of Elements": "1",
+            "Number of Circuits": "2",
+            "Current - Output Low(IOL)": "12mA",
+            "Interface": "SPI\u3001JTAG\u3001UART"
+          }
+        }
+      ],
+      "page": 1,
+      "per_page": 5,
+      "total": 1,
+      "total_pages": 1,
+      "has_more": false
+    },
+    "pins": {
+      "lcsc": "C5186957",
+      "model": "TXU0202DCUR",
+      "manufacturer": "Texas Instruments",
+      "package": "VSSOP-8",
+      "pin_count": 8,
+      "pins": [
+        {
+          "number": "1",
+          "name": "B2"
+        },
+        {
+          "number": "2",
+          "name": "GND"
+        },
+        {
+          "number": "3",
+          "name": "VCCA"
+        },
+        {
+          "number": "4",
+          "name": "A2Y"
+        },
+        {
+          "number": "5",
+          "name": "A1"
+        },
+        {
+          "number": "6",
+          "name": "OE"
+        },
+        {
+          "number": "7",
+          "name": "VCCB"
+        },
+        {
+          "number": "8",
+          "name": "B1Y"
+        }
+      ],
+      "easyeda_symbol_uuid": "1dd34e99afeb48be9462526c68d79b8d"
+    },
+    "source": "https://www.ti.com/lit/ds/symlink/txu0202.pdf",
+    "candidate": "TXU0202DCUR",
+    "plan": "Superseded by captured console page and console-qualification.json; four-pin adapter-powered reference selected to avoid pull-up back-powering."
+  },
+  "restart": {
+    "search": {
+      "results": [
+        {
+          "lcsc": "C2066928",
+          "model": "TPS389033GQDSERQ1",
+          "manufacturer": "Texas Instruments",
+          "package": "WSON-6(1.5x1.5)",
+          "stock": 172,
+          "price": 1.4498,
+          "price_10": null,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Power Management (PMIC)",
+          "subcategory": "Supervisor and Reset ICs",
+          "subcategory_id": 3202,
+          "mounting_type": "smd",
+          "description": "-40\u2103~+125\u2103@(Tj) 1 1.5V~5.5V 2.1uA 25us 3.17V Active Low No Open Drain Voltage Monitor Yes WSON-6(1.5x1.5) Supervisor and Reset ICs ROHS",
+          "specs": {
+            "Function": "Manual reset input",
+            "Number of Voltages Monitored": "1",
+            "Operating Temperature": "-40\u2103~+125\u2103",
+            "ChipType": "Voltage monitor",
+            "Reset Timeout": "25us",
+            "Threshold Voltage": "3.17V",
+            "Voltage - Supply": "1.5V~5.5V",
+            "Output Type": "Open-drain",
+            "Quiescent Current": "2.1uA",
+            "Reset Active Level": "Active Low"
+          }
+        }
+      ],
+      "total": 1,
+      "page_info": {
+        "limit": 3,
+        "offset": 0,
+        "returned": 1
+      },
+      "filters_applied": {
+        "query": "TPS389033",
+        "subcategory_id": null,
+        "subcategory_name": null,
+        "subcategory_resolved": null,
+        "category_id": null,
+        "category_name": null,
+        "category_resolved": null,
+        "spec_filters": [],
+        "library_type": null,
+        "prefer_no_fee": true,
+        "min_stock": 10,
+        "package": null,
+        "packages": null,
+        "manufacturer": null,
+        "match_all_terms": true
+      },
+      "library_type_counts": {
+        "basic": 0,
+        "preferred": 0,
+        "extended": 1
+      },
+      "no_fee_available": false,
+      "parsed": {
+        "original_query": "TPS389033",
+        "detected": {
+          "model_number": "TPS389033"
+        },
+        "subcategory": null,
+        "package": null,
+        "mounting_type": null,
+        "spec_filters": [],
+        "remaining_text": "TPS389033"
+      }
+    },
+    "tps3808": {
+      "lcsc": "C43698",
+      "model": "TPS3808G33DBVR",
+      "manufacturer": "Texas Instruments",
+      "package": "SOT-23-6",
+      "stock": 26962,
+      "price": 0.4394,
+      "price_10": 0.3434,
+      "library_type": "extended",
+      "preferred": false,
+      "category": "Power Management (PMIC)",
+      "subcategory": "Supervisor and Reset ICs",
+      "subcategory_id": 3202,
+      "mounting_type": "smd",
+      "specs": {
+        "Function": "Manual reset input",
+        "Number of Voltages Monitored": "1",
+        "Operating Temperature": "-40\u2103~+125\u2103",
+        "ChipType": "Voltage monitor",
+        "Reset Timeout": "20ms",
+        "Threshold Voltage": "3.07V",
+        "Voltage - Supply": "1.7V~6.5V",
+        "Output Type": "Open-drain",
+        "Quiescent Current": "2.4uA",
+        "Reset Active Level": "Active Low"
+      },
+      "description": "-40\u2103~+125\u2103@(Tj) 1 1.7V~6.5V 2.4uA 20ms 3.07V Active Low Open Drain Voltage Monitor Yes SOT-23-6 Supervisor and Reset ICs ROHS",
+      "min_order": 1,
+      "reel_qty": 3000,
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1809231820_Texas-Instruments-TPS3808G33DBVR_C43698.pdf",
+      "lcsc_url": "https://www.lcsc.com/product-detail/supervisor-and-reset-ics_texas-instruments-tps3808g33dbvr_C43698.html",
+      "prices": [
+        {
+          "qty": "1+",
+          "price": 0.4394
+        },
+        {
+          "qty": "10+",
+          "price": 0.3434
+        },
+        {
+          "qty": "30+",
+          "price": 0.3011
+        },
+        {
+          "qty": "100+",
+          "price": 0.2506
+        },
+        {
+          "qty": "500+",
+          "price": 0.2018
+        },
+        {
+          "qty": "1000+",
+          "price": 0.1872
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Function",
+          "value": "Manual reset input"
+        },
+        {
+          "name": "Number of Voltages Monitored",
+          "value": "1"
+        },
+        {
+          "name": "Operating Temperature",
+          "value": "-40\u2103~+125\u2103"
+        },
+        {
+          "name": "ChipType",
+          "value": "Voltage monitor"
+        },
+        {
+          "name": "Reset Timeout",
+          "value": "20ms"
+        },
+        {
+          "name": "Threshold Voltage",
+          "value": "3.07V"
+        },
+        {
+          "name": "Voltage - Supply",
+          "value": "1.7V~6.5V"
+        },
+        {
+          "name": "Output Type",
+          "value": "Open-drain"
+        },
+        {
+          "name": "Quiescent Current",
+          "value": "2.4uA"
+        },
+        {
+          "name": "Reset Active Level",
+          "value": "Active Low"
+        }
+      ],
+      "has_easyeda_footprint": true,
+      "easyeda_symbol_uuid": "72210577696184a44c9fb70c235649f1",
+      "easyeda_footprint_uuid": "f3d2a2ecf658447dac746eb15158a989"
+    },
+    "status": "Candidate review only; no circuit selected or captured. TPS3808 VOL max0.4V leaves limited VDC margin. TPS3890 VOL max0.25V offers more margin; available exact candidate is automotive TPS389033GQDSERQ1, requires exact Q1 datasheet review. Need upstream 5V/3V3 faults, PMIC power-cycle behavior and VDC discharge all resolved."
+  }
+}
