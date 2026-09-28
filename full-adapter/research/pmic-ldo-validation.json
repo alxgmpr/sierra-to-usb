@@ -1,9 +1,0 @@
-{
-  "status": "PMIC_LDO_CAPTURE_CHECKPOINT_NOT_RELEASE",
-  "ldo_outputs": 9,
-  "input_groups": 3,
-  "bypass_capacitors": 12,
-  "cpu_enable_source": "U5 LDO6 pin 31",
-  "processor_supply_loads_integrated": true,
-  "IO_load_and_thermal_budget_closed": false
-}

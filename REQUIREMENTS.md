@@ -54,10 +54,12 @@ Checked 2026-09-28:
 - Quectel RM520N product documentation is a starting point, not qualification
   of every RM5x variant: https://www.quectel.com/product/5g-rm520n-series/
 
-## Historical work and scope
+## Repository scope
 
-Preserve existing CAD, libraries, source documents and checks. CM4 checkpoint
-`c81dc27` and original carrier checkpoint `4353916` remain in master history.
-Old continuation prompts are historical and must not restart CM4/RK3568 work.
+Work on `master`. The active tree contains only the restart documentation.
+Previous CAD, libraries, research, continuation prompts, generated outputs and
+checks were removed. Recover historical material from Git only when needed for
+an explicitly scoped reference; do not restore old architecture instructions.
+The final pre-restart hardware checkpoint is `c81dc27`.
 No new hardware is implemented or qualified by this requirements reset.
 Publishing, procurement and fabrication are not part of this change.

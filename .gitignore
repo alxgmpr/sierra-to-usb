@@ -1,29 +1,18 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Local state and generated output
+.DS_Store
 *.lck
 *-backups/
 _autosave*
 fp-info-cache
-.superpowers/
-docs/datasheets/*.pdf
-.env
-.env.*
-!.env.example
-tmp/
-
-# Local state and reproducible output
-.DS_Store
+*.kicad_prl
 **/__pycache__/
 **/.venv/
 **/.pytest_cache/
 *.pyc
-*.kicad_prl
-compact/build/
-compact/carrier/build/
-compact/work/
-
-full-adapter/reference/*.pdf
-full-adapter/reference/*.txt
-full-adapter/reference/*.png
-full-adapter/research-cache/
-full-adapter/build/
-full-adapter/reference/cm4/
-full-adapter/cm4/build/
+/build/
+/tmp/
