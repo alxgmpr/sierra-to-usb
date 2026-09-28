@@ -1,7 +1,8 @@
 # Sierra / Quectel 2.5GbE PoE modem appliance
 
-MCU-only, multi-gigabit WAN design study for **EM9190, EM9293, RM520N-GL and
-RM551E-GL**. No CM4/CM5 or external application processor. Work is on `master`.
+Originally MCU-only, multi-gigabit WAN design study for **EM9190, EM9293, RM520N-GL and
+RM551E-GL**. No CM4/CM5. Linux packet processors have now been reopened for comparison;
+no replacement architecture is selected. Work is on `master`.
 
 **Feasibility gate remains open.** Manufacturer documentation establishes Sierra
 PCIe endpoint/USB-device operation, not modem-hosted Ethernet. A switch does not
@@ -12,6 +13,7 @@ exact firmware and NIC qualification. No modem combination is qualified.
 - [Architecture, manufacturer evidence, networking and recovery](docs/architecture.md)
 - [Packet-path / power-domain block diagram](docs/packet-path.svg)
 - [Power and complete-cost estimates](docs/power-and-cost.md)
+- [Reopened Rockchip Linux comparison and sourcing](docs/rockchip-options.md)
 - [Actual KiCad recovery schematic](hardware/recovery.kicad_sch)
 - [Implemented circuit, checks and outstanding qualification](hardware/README.md)
 

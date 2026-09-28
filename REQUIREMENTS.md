@@ -84,3 +84,10 @@ The user subsequently confirmed: **retain all four models; hold integration**.
 Do not narrow to Quectel-only. Complete-appliance capture remains on hold until
 manufacturer evidence closes the packet-path gate. Independent recovery circuitry
 is a review milestone, not authorization to integrate an unsupported interface.
+
+## Subsequent alternatives review
+
+The user reopened Linux packet processors for consideration, specifically asking
+for sourceable, manufacturable Rockchip options. This authorizes comparison, not
+a final part selection or restoration of retired designs. All four modem models
+remain in scope. See `docs/rockchip-options.md`; integrated CAD remains on hold.
