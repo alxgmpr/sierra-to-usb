@@ -1,11 +1,39 @@
 # Packet-path feasibility — 2026-09-28
 
-**Decision gate: no architecture satisfying all requirements is yet established.**
+**Decision gate: blocked for the complete requested modem set.** The user has
+confirmed MCU-only and multi-gigabit forwarding. An external Linux/application
+processor is excluded. Requested models are RM520N-GL, RM551E-GL, EM9190, and
+EM9293 (confirmed by the user).
 Neither RP2350 nor STM32N657A0 provides a documented multi-gigabit path for
 EM919x. A Linux USB 3 host plus a 2.5GbE controller is a feasible interface
-architecture for both vendors, but adding that processor changes the MCU-only
-interpretation and requires the requested architecture decision. No modem / firmware
-combination has been tested or qualified by this project.
+alternative for both vendors, but the user has excluded it. No modem / firmware
+combination has been tested or qualified by this project. The user confirmed
+**retain all four models and hold integration**; no Quectel-only scope change
+is authorized.
+
+![Packet-path and power-domain comparison](packet-path.svg)
+
+## Does a switch solve this?
+
+No documented switch-only solution was found for EM9190 or EM9293. An Ethernet switch
+forwards Ethernet frames; it cannot terminate the modem's USB composite device,
+QMI/MBIM or MHI transport. A PCIe switch forwards transactions but does not add
+the missing root complex, DMA-buffer ownership, NIC/modem drivers or routing
+software. An integrated switch with an application processor would still need
+that processor and its software; renaming it a switch does not satisfy MCU-only.
+
+For a qualified Quectel RC mode, a **PCIe NIC controller**, not a switch, connects
+the modem to one Ethernet port. [Realtek's RTL8125BG/BGS description](https://www.realtek.com/Product/Index?cate_id=786&id=3962)
+explicitly identifies the MAC, PHY, PCIe controller and memory. A switch could
+add a separate MCU management port, but cannot fix Sierra hosting and increases
+cost/power. No undocumented internal MAC-to-switch interface is assumed.
+
+STM32F723VET6 is a candidate for **USB2 high-speed AT supervision only**, because
+[ST documents its on-chip HS USB PHY](https://www.st.com/resource/en/datasheet/stm32f723ve.pdf).
+That would avoid depending on the modem accepting a USB full-speed control host.
+It still needs USB-composition, vendor-control-driver and simultaneous PCIe/USB
+testing on each exact Quectel firmware. It is not a multi-gigabit packet forwarder.
+The G0 schematic milestone is a reset/watchdog subsystem, not proof of this AT path.
 
 ## Evidence, roles, and limits
 
@@ -15,12 +43,15 @@ combination has been tested or qualified by this project.
 | STM32N657A0 forwarding | USB 2 HS host → MCU RAM/software → Ethernet | Reject for >1 Gb/s: 480 Mb/s USB signaling, native Ethernet maximum 1 Gb/s; a 2.5G PHY cannot increase either. [ST product specification](https://www.st.com/en/microcontrollers-microprocessors/stm32n657a0.html) |
 | RM500Q-GL offload | Modem **PCIe root complex** → RTL8125 PCIe endpoint containing MAC+PHY → magnetics → cable | Promising low-cost Quectel-only candidate. Hardware Design V1.1 §4.3 documents RC/EP; EVB guide §3.8 names RTL8125, but its worked commands demonstrate RTL8111H. Exact RTL8125 silicon revision, firmware, call setup and recovery remain a gate. |
 | RM520N-GL offload | Modem RC → RTL8125 endpoint; modem firmware forwards packets | Hardware guide V1.0 describes role-dependent PCIe controls. Need manufacturer data-call guide and exact approved firmware for Ethernet/NAT/DHCP. Do not infer support for RM520N-EU, RM502Q-AE, RM521F, RM551E, or other RM5x models. |
+| RM551E-GL offload | Candidate modem RC → supported PCIe Ethernet controller | Exact production hardware design, NIC-driver support and firmware data-call behavior not established from an accessible manufacturer integration guide. Do not copy RM520 commands or qualify engineering samples from forum anecdotes. |
 | EM9190 / EM9191 offload | Would require modem RC and a modem-resident NIC driver/router | **Not established.** Manufacturer PTS r5 §1.3 assigns module EP / host RC. No documented RTL8125-hosting Ethernet mode found. Two endpoints plus wires or a PCIe switch do not supply a host. |
-| Common external packet processor | Either modem USB device → USB 3 host → Linux network stack → 2.5GbE MAC/PHY | Feasible at interface level; firmware and performance unqualified. MCU is outside packet path. NXP LS1028A documents USB 3 hosts and 2.5G Ethernet; higher cost reference candidate, not selected. A cost-reduced networking SoC needs equivalent pinout/BSP evidence. |
+| EM9293 offload | Modem PCIe Gen3 x1 EP → external RC required | **Not established.** EM92XX PTS r1 §1.3 explicitly assigns EP/RC roles; §3.3 requires USB3 support and says USB2 is not commercially supported. No documented modem-resident NIC driver/router found. |
+| Common external packet processor | Either modem USB device → USB 3 host → Linux network stack → 2.5GbE MAC/PHY | **Excluded by user: MCU-only.** Feasible interface alternative, not a selected architecture. NXP LS1028A documents suitable host/network resources. |
 
 Manufacturer sources:
 
 - [Sierra PTS r5, 41113174, manufacturer-hosted PDF](https://forum.sierrawireless.com/uploads/short-url/3YiSVtuUkMfbRcpmg2rbz4MZxDI.pdf), March 2022. **Older reference**, not a substitute for a revision-difference review. [Current r11 landing page](https://source.sierrawireless.com/resources/airprime/minicard/airprime_em919x-7690_product_technical_specification) is public; its PDF download redirected to login. r5 §3.3 says USB 2 operation is not commercially supported; do not select a USB2-only Sierra host.
+- [EM92XX PTS r1, 41114313](https://forum.sierrawireless.com/uploads/short-url/alktoXf2aUKhq8BTQEyAvx4HliS.pdf), October 2023. Manufacturer-hosted older reference; [current r7.2 landing page](https://source.sierrawireless.com/resources/airprime/minicard/airprime_em92xx_product_technical_specification) download is login-gated. Current revision and exact firmware still need review.
 - [RM500Q-GL Hardware Design V1.1](https://quectel.com/content/uploads/2024/02/Quectel_RM500Q-GL_Hardware_Design_V1.1-2.pdf).
 - [Quectel 5G-M2 EVB User Guide V1.0, §3.8](https://quectel.com/content/uploads/2024/02/Quectel_5G-M2_EVB_User_Guide_V1.0-2.pdf).
 - [RM520N-GL Hardware Design V1.0](https://forums.quectel.com/uploads/short-url/1zkjPRnxF5BZ2woox386baCZx4g.pdf), especially §§3.2 and 4.3. Preserve USB2 recovery; never burn interface-selection eFuses as routine configuration. Coexistence signals are not a general AT UART.
@@ -98,9 +129,12 @@ reset loop. No cloud account is necessary for boot or recovery.
 | Model candidate | Firmware baseline | Qualification state |
 |---|---|---|
 | EM9190 | Candidate generic SWIX55C_03.17.09.00 / PRI 030.115_000; exact orderable SKU and carrier mapping required | USB-host architecture supported by docs; firmware binary, release notes, current pinout and bench tests pending. mmWave adds antennas and power. |
-| EM9191 | Same published generic family package, subject to exact SKU confirmation | Independent test row required; EM9190 success does not qualify EM9191. |
+| EM9293 | **Unselected**; exact SKU and carrier package required | EP/USB3 host roles established by older manufacturer PTS; current pinout, firmware and bench qualification pending. No MCU-only offload evidence. |
 | RM520N-GL | **Unselected**: require manufacturer-approved USB firmware for exact hardware revision | USB interfaces documented; no available hardware/firmware identity or carrier test. Offload firmware remains separate. |
-| RM500Q-GL | **Unselected** | Documented RC candidate, not interchangeable with RM520N-GL without a separate pin/timing/firmware audit. |
+| RM551E-GL | **Unselected**: production versus engineering-sample identity also required | [Quectel brochure V8.5](https://www.quectel.com/content/uploads/2026/01/Quectel_Product_Brochure_V8.5_2026.pdf) lists the product, but is not a pinout, Ethernet driver or recovery specification. |
+
+RM500Q-GL is retained above only as a manufacturer-documented example of the RC
+architecture; it is not substituted for either requested Quectel model.
 
 [Sierra's approved firmware table](https://source.sierrawireless.com/resources/airprime/software/em919x/em9-approved-fw-packages)
 also lists operator-specific packages. Firmware approval is not appliance
@@ -110,9 +144,8 @@ tested configuration. No support label until cold boot, reattach and traffic pas
 
 ## Smallest requirement changes
 
-1. Retain both vendors and >1 Gb/s target: add a packet-processing SoC with USB3,
-   retaining an independent MCU. This is the recommended technical direction,
-   subject to the user's decision and complete cost comparison.
+1. Retain both vendors and multi-gigabit target: a packet-processing SoC with USB3
+   is an interface-feasible alternative, but **the user rejected this direction**.
 2. Retain MCU-only: qualify one Quectel offload combination and explicitly remove
    Sierra support. This does **not** meet the current dual-vendor requirement.
 3. Retain low-end MCU forwarding: lower throughput substantially and still obtain
@@ -150,6 +183,25 @@ On evaluation hardware, test each exact tuple above: 100 cold boots; cable/PSE
 power cycling; no SIM / PIN lock / invalid APN; cellular detach/reattach; host and
 modem hangs separately; rail sag during transmit; unplug during each update
 phase; recovery without remote service; 24-hour mixed traffic and thermal soak.
-Provisional acceptance target is sustained >1 Gb/s where RF/network permit;
+Acceptance target is multi-gigabit where RF/network permit (proposed test threshold
+at least 2.0 Gb/s downstream; exact simultaneous upstream target still unspecified);
 measure local forwarding separately from WAN, both directions and small packets.
 Record loss, latency, CPU load, temperatures and power. All tests are **not run**.
+
+## Socket profile hazard — integration must remain gated
+
+The M.2 mechanical key is not proof of electrical interchangeability. EM919x PTS
+r5 and EM92XX PTS r1 assign VCC to **2, 4, 24, 38, 68, 70, 72, 74**.
+RM520N-GL Hardware Design V1.0 assigns VCC to **2, 4, 70, 72, 74**, while
+contact **24 is a 1.8 V output**, 38 is WLAN_TX_EN, and 68 has a non-VCC
+assignment. Never connect the Sierra extra supply contacts to a universal VCC
+plane. This is a possible damage condition, not a software compatibility issue.
+Use physically keyed/profile-specific hardware or a reviewed, default-disconnected
+power selection design; software identification after applying unsafe power is
+not sufficient. RM551E-GL needs its own manufacturer pin table before capture.
+
+Other profile-dependent contacts include USB VBUS sensing, PCIe disable, reset,
+SIM detect and coexistence lines. Manufacturer reference circuits and the current
+hardware revision must establish voltage levels, default pulls and sequencing.
+The shared USB and SIM pin locations alone do not qualify the full socket.
+No modem socket, SIM circuit or universal profile switching is implemented yet.

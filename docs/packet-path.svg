@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6" fill="none" stroke="#355a73"/></marker></defs><rect width="1400" height="1000" fill="#f7f9fb"/><style>text{font-family:Arial,sans-serif;fill:#183348}.title{font-size:27px;font-weight:bold}.head{font-size:19px;font-weight:bold}.line{font-size:16px}.small{font-size:14px}</style>
+<text x="40" y="45" class="title">MCU-only cellular WAN: packet-path qualification gates</text>
+<text x="40" y="76" class="line">Requested: RM520N-GL / RM551E-GL / EM9190 / EM9293. No exact firmware combination qualified.</text>
+<text x="40" y="119" class="head">QUECTEL OFFLOAD CANDIDATE — not yet a supported appliance</text>
+<rect x="40" y="145" width="305" height="132" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="54" y="172" class="head">Modem owns packet forwarding</text>
+<text x="54" y="198" class="line">Cellular session + IP stack</text>
+<text x="54" y="220" class="line">PCIe RC mode / NIC driver</text>
+<text x="54" y="242" class="line">NAT, DHCP and persistence pending</text>
+<rect x="485" y="145" width="270" height="132" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="499" y="172" class="head">RTL8125 candidate</text>
+<text x="499" y="198" class="line">PCIe endpoint + MAC + PHY</text>
+<text x="499" y="220" class="line">Exact driver/revision pending</text>
+<text x="499" y="242" class="line">No MCU in packet path</text>
+<rect x="880" y="145" width="220" height="132" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="894" y="172" class="head">Ethernet magnetics</text>
+<text x="894" y="198" class="line">2.5G + PoE rated</text>
+<text x="894" y="220" class="line">Data isolation barrier</text>
+<rect x="1190" y="145" width="170" height="132" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="1204" y="172" class="head">RJ45</text>
+<text x="1204" y="198" class="line">2.5GBASE-T</text>
+<text x="1204" y="220" class="line">Router / host</text>
+<text x="1204" y="242" class="line">PoE PSE</text>
+<path d="M345 204 L485 204" stroke="#355a73" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="350.0" y="195.0" class="small">PCIe ≥ Gen2 x1</text>
+<path d="M755 204 L880 204" stroke="#355a73" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="752.5" y="195.0" class="small">2.5 Gb/s</text>
+<path d="M1100 204 L1190 204" stroke="#355a73" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="40" y="320" width="410" height="123" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="54" y="347" class="head">AT supervision candidate: STM32F723</text>
+<text x="54" y="373" class="line">USB2 HS host for control only, 480 Mb/s raw</text>
+<text x="54" y="395" class="line">Composition + concurrent PCIe/USB unqualified</text>
+<text x="54" y="417" class="line">RP2350 native 12 Mb/s is not a WAN path</text>
+<path d="M190 320 L190 277" stroke="#355a73" stroke-width="2" fill="none" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<text x="125.0" y="289.5" class="small">AT / reconnect</text>
+<rect x="490" y="320" width="870" height="123" rx="8" fill="#fff0cf" stroke="#6e8a9b"/>
+<text x="504" y="347" class="head">A switch is optional port expansion, not a modem host</text>
+<text x="504" y="373" class="line">Ethernet switch: cannot terminate QMI/MBIM/MHI or supply a missing modem driver.</text>
+<text x="504" y="395" class="line">PCIe switch: cannot replace the root complex, DMA ownership or network stack.</text>
+<text x="504" y="417" class="line">One Ethernet port needs a supported NIC; adding a switch increases cost and power.</text>
+<text x="40" y="489" class="head">SIERRA GAP — both documented PCIe interfaces are endpoints</text>
+<rect x="40" y="510" width="370" height="105" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="54" y="537" class="head">EM9190 or EM9293</text>
+<text x="54" y="563" class="line">USB3 device / PCIe Gen3 x1 EP</text>
+<text x="54" y="585" class="line">Manufacturer PTS assigns external RC</text>
+<rect x="555" y="510" width="435" height="105" rx="8" fill="#fbe2df" stroke="#6e8a9b"/>
+<text x="569" y="537" class="head">Missing MCU-only host packet path</text>
+<text x="569" y="563" class="line">USB3 / PCIe RC + modem and NIC drivers</text>
+<text x="569" y="585" class="line">No documented modem-native Ethernet mode</text>
+<rect x="1130" y="510" width="230" height="105" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="1144" y="537" class="head">2.5GbE controller</text>
+<text x="1144" y="563" class="line">Endpoint needs host</text>
+<text x="1144" y="585" class="line">Switch cannot fix gap</text>
+<path d="M410 566 L555 566" stroke="#355a73" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="417.5" y="557.0" class="small">USB3 / PCIe</text>
+<path d="M990 566 L1130 566" stroke="#355a73" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="40" y="662" class="head">POWER AND RECOVERY — architecture only, PoE class not selected</text>
+<rect x="40" y="688" width="280" height="103" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="54" y="715" class="head">Cable-side PoE domain</text>
+<text x="54" y="741" class="line">Bridges + surge / detection</text>
+<text x="54" y="763" class="line">Classification, inrush, MPS</text>
+<rect x="420" y="688" width="260" height="103" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="434" y="715" class="head">Isolated DC/DC</text>
+<text x="434" y="741" class="line">Transformer safety barrier</text>
+<text x="434" y="763" class="line">No DC ground crossing</text>
+<rect x="795" y="688" width="260" height="103" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="809" y="715" class="head">System power domain</text>
+<text x="809" y="741" class="line">Always-on MCU + watchdog</text>
+<text x="809" y="763" class="line">Switched modem + NIC rails</text>
+<rect x="1130" y="688" width="230" height="103" rx="8" fill="#e4eff6" stroke="#6e8a9b"/>
+<text x="1144" y="715" class="head">MCU recovery core</text>
+<text x="1144" y="741" class="line">Captured in KiCad</text>
+<text x="1144" y="763" class="line">3.3 V eval input only</text>
+<path d="M320 740 L420 740" stroke="#355a73" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M680 740 L795 740" stroke="#355a73" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M1055 740 L1130 740" stroke="#355a73" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="45" y="835" class="line">Control: watchdog → MCU reset; MCU → separate power enables and open-collector reset/off outputs.</text>
+<text x="45" y="863" class="line">Recovery: bounded retries → session restart → hardware reset → discharged power cycle; update rollback planned.</text>
+<text x="45" y="891" class="line">31.81 W offload planning envelope ≠ worst-case qualification. RM551E peak load and conversion losses remain open.</text>
+<text x="45" y="931" class="small">Solid: data/power connections. Dashed: control. Interface rates are not measured WAN throughput.</text>
+<text x="45" y="956" class="small">Sources, model-specific limits and rejected alternatives: architecture.md and power-and-cost.md. No PCB layout.</text>
+</svg>

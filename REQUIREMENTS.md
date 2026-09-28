@@ -63,3 +63,24 @@ an explicitly scoped reference; do not restore old architecture instructions.
 The final pre-restart hardware checkpoint is `c81dc27`.
 No new hardware is implemented or qualified by this requirements reset.
 Publishing, procurement and fabrication are not part of this change.
+
+## Session clarification — 2026-09-28
+
+- MCU-only is a hard constraint; do not add an external Linux/application
+  processor to make the packet path work.
+- Target is multi-gigabit WAN forwarding, not merely a 2.5GbE link.
+- Requested model list: RM520N-GL, RM551E-GL, EM9190, and EM9293 (confirmed
+  correction of the initial EM9193 identifier). Firmware revisions and carrier
+  profiles remain unspecified.
+- 0603 signal passives, appropriately larger power parts, and an LQFP STM32
+  package are acceptable.
+- Investigate whether a switch helps, but do not treat a PCIe switch as a root
+  complex, an Ethernet switch as a modem host, or either as modem firmware.
+
+Current research and independent recovery-circuit capture are indexed in README.
+They do not close the packet-path feasibility gate or qualify an appliance.
+
+The user subsequently confirmed: **retain all four models; hold integration**.
+Do not narrow to Quectel-only. Complete-appliance capture remains on hold until
+manufacturer evidence closes the packet-path gate. Independent recovery circuitry
+is a review milestone, not authorization to integrate an unsupported interface.

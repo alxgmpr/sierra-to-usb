@@ -4,6 +4,20 @@
 quotation, or selected PoE class.** Packet-processor choice and exact modem SKU
 remain open. One modem is installed; do not sum two mutually exclusive cards.
 
+**Scope update:** external application processors are now excluded by the user.
+The SoC columns and 47.50 W calculation below are retained as explicit rejected-
+alternative comparisons, not as the chosen design. RM551E-GL cannot inherit the EM9190/RM520N allocation. EM9293 PTS r1
+table 3-2 lists preliminary 3 A peak / 2.8 A continuous at nominal 3.3 V;
+these older preliminary limits require current-revision confirmation. A final worst-case
+power budget for the requested set is therefore still blocked by exact model and
+manufacturer peak-power data; no PoE class has been selected.
+
+For the earlier Quectel-only offload estimate, removing the 12 W external host
+allocation gives `(23.57 / 0.90 / 0.85) + 1 = 31.81 W` at the PD input. This would
+point toward Class 5 rather than Class 4, but is **not** a bound for RM551E-GL.
+The AT-control MCU, NIC, cooling, converter losses and actual modem burst power
+must be finalized first. A different target can change this conclusion.
+
 ## Simultaneous power
 
 Sierra PTS r5 table 3-2 gives EM9190 5 A peak with mmWave, 3 A without, and
@@ -87,8 +101,8 @@ increase unit cost. Compare real quotations after architecture approval.
 
 Availability spot-check using PCBParts/JLC database, 2026-09-28 (cached inventory,
 not a reservation): RTL8125BG-CG C3013605 $4.4448 / stock 1661; STM32G0B1CCT6
-C5270241 $5.1187 / stock 100. TPS3431 returned no stocked result in this index;
-TI lists it active, but second-source distributor availability needs checking.
+C5270241 $5.1187 / stock 100. TPS3823-33DBVR C7719 $0.3515 / stock 53616.
+Second-source distributor availability needs checking.
 Distributor metadata is not pinout evidence (the search returned questionable
 interface descriptions for another RTL8125 variant). No purchasing performed.
 
