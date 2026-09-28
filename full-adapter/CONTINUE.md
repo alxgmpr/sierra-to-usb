@@ -1,3 +1,7 @@
+> **Superseded 2026-09-28:** CM4/RK3568 work is preserved as history.
+> Do not execute the continuation instructions below. See the current
+> [MCU / 2.5GbE PoE appliance requirements](../REQUIREMENTS.md).
+
 # Resume the CM4 Lite integrated modem board
 
 Latest implementation checkpoint: [cm4/CHECKPOINT.md](cm4/CHECKPOINT.md).

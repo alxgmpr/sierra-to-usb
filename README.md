@@ -1,19 +1,21 @@
-# Full adapter development board
+# Sierra / Quectel 2.5GbE PoE modem appliance
 
-The only current design effort is [full-adapter](full-adapter/README.md).
-The approved architecture is CM4 Lite with native gigabit Ethernet, isolated
-PoE, USB3 modem hosting and USB-C auxiliary power. Start with the
-[CM4 continuation checkpoint](full-adapter/CM4-HANDOFF.md).
-It is in component qualification, **not a manufacturing release**. No new PCB
-or fabrication files have been released.
+The project restarted on 2026-09-28 to reduce cost. **CM4 is retired.**
+The current requirements and architecture gates are in [REQUIREMENTS.md](REQUIREMENTS.md).
+The replacement is in architecture qualification; no replacement CAD or selected
+MCU/data path exists yet. It is not ready for fabrication.
 
-The superseded root and compact boards were preserved in local checkpoint
-`4353916` before removal. Recover a historical project into a separate checkout:
+The user-facing goal is a cellular WAN appliance: with a supported modem,
+antennas and provisioned SIM installed, plug in one PoE Ethernet cable and obtain
+a WAN connection without an external USB host or routine manual intervention.
 
-```sh
-git worktree add --detach ../sierra-carrier-checkpoint 4353916
-```
+## Preserved work
 
-[Historical evidence](docs/legacy/README.md) and the reusable libraries remain.
-Historical ERC/DRC reports do not validate the replacement design. No parts have
-been ordered and no commits have been pushed.
+- [CM4 checkpoint](full-adapter/cm4/CHECKPOINT.md): superseded, incomplete design.
+- [Earlier full-adapter work](full-adapter/README.md): historical CM4/RK3568 research.
+- [Legacy evidence](docs/legacy/README.md) and reusable libraries.
+- Original carrier checkpoint: `4353916`; last CM4 checkpoint: `c81dc27`.
+
+All previous branch work was fast-forwarded into the primary local branch,
+renamed from `main` to `master`. Historical results do not validate the restart.
+No commits have been pushed as part of this restart.

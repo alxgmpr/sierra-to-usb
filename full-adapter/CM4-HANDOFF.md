@@ -1,3 +1,7 @@
+> **Superseded 2026-09-28:** CM4/RK3568 work is preserved as history.
+> Do not execute the continuation instructions below. See the current
+> [MCU / 2.5GbE PoE appliance requirements](../REQUIREMENTS.md).
+
 # CM4 Lite carrier continuation — 2026-09-10
 
 Latest user-requested pause: read [cm4/CHECKPOINT.md](cm4/CHECKPOINT.md) for

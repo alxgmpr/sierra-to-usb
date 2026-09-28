@@ -1,3 +1,7 @@
+> **Superseded 2026-09-28:** CM4/RK3568 work is preserved as history.
+> Do not execute the continuation instructions below. See the current
+> [MCU / 2.5GbE PoE appliance requirements](../REQUIREMENTS.md).
+
 # Continue the CM4 board
 
 Paste the following into the continuing task:
