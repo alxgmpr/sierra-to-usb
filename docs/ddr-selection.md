@@ -336,3 +336,21 @@ check caught the accidental join. Moving the complete recovery sink
 50.8mm right preserves its endpoint assignments and clears the new labels.
 Processor and integrated checks pass; enlarged render reviewed. Local
 bypass, processor RZQ and unused DDR pin policy are still incomplete.
+
+## Processor DDR local bypass captured
+
+Added C837-C841 on VDD_DDR_1V1: 3x100nF, 4.7uF, 10uF;
+C842-C846 on VDD_DDR_0V6: 3x100nF and 2x4.7uF, matching
+NanoPi R3S sheet 6 nominal banks. Exact selected Samsung parts are
+CL10B104KA8NNNC (0603 X7R), CL10A475KA8NQNC (0603 X5R),
+and CL31B106KAHNNNE (1206 X7R), all 25V. Each bank is explicitly
+processor-local, separate from regulator output capacitance. Native
+checks verify the complete rail memberships, all ground returns and
+MPN/rating fields; integrated capture now contains 186 components.
+The bypass sheet expanded to A3 and its render was reviewed. Fixed
+a pre-existing literal-newline text encoding that prevented standalone
+sheet export; both standalone export and integrated checks now pass.
+Reference under-package placement remains intent: our larger packages,
+especially 1206 10uF, require escape/assembly feasibility review.
+Effective capacitance, PDN impedance and regulator stability remain
+unqualified. RAM-local bypass is still separate unfinished work.

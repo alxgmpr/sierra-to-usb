@@ -78,28 +78,28 @@ with tempfile.TemporaryDirectory() as tmp:
     assert {('Q802','2'),('R805','2')} <= nets['GND']
     assert nets['VDD_NPU']=={('L504','2'),('C541','1'),('C542','1'),('R512','1')}|{(f'C{n}','1') for n in range(821,825)}|{('U801',b) for b in ['1G15','1H14','1H15','1J14','1J15']}
     assert {('C541','2'),('C542','2')}|{(f'C{n}','2') for n in range(821,825)} <= nets['GND']
-    assert {(f'C{n}','2') for n in range(825,837)} <= nets['GND']
+    assert {(f'C{n}','2') for n in range(825,847)} <= nets['GND']
     core_ids=__import__('re').findall(r'\(uuid "([^\"]+)"\)',(root/'core-power.kicad_sch').read_text())
     assert len(core_ids)==len(set(core_ids))
-    for ref,mpn in {**{f'C{n}':'CL10A475KA8NQNC' for n in [826,827,828,833]},**{f'C{n}':'CL10B104KA8NNNC' for n in [825,832]},**{f'C{n}':'CL32B226KAJNNNE' for n in [829,831,834,836]},**{f'C{n}':'CL31B106KAHNNNE' for n in [830,835]}}.items():
+    for ref,mpn in {**{f'C{n}':'CL10A475KA8NQNC' for n in [826,827,828,833,840,845,846]},**{f'C{n}':'CL10B104KA8NNNC' for n in [825,832,837,838,839,842,843,844]},**{f'C{n}':'CL32B226KAJNNNE' for n in [829,831,834,836]},**{f'C{n}':'CL31B106KAHNNNE' for n in [830,835,841]}}.items():
         component=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
         fields={f.get('name'):f.text for f in component.findall('./fields/field')}
         assert fields['MPN']==mpn and fields['Voltage Rating']=='25V'
-    assert len(tree.findall('./components/comp'))==176
+    assert len(tree.findall('./components/comp'))==186
     assert {('U901',r['ball']) for r in __import__('csv').DictReader((root/'reference/micron-ddr-electrical-review.csv').open()) if r['resolved_name']=='VSS'} <= nets['GND']
     ram_rows=list(__import__('csv').DictReader((root/'reference/micron-ddr-electrical-review.csv').open()))
     assert {p for p in nets['VCC_1V8'] if p[0]=='U901'}=={('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD1'}
     assert {('U901','G2'),('U901','T2')} <= nets['GND']
     assert nets['PMIC_SW3']=={('U501','25'),('L901','1')}
     assert nets['DDR_FB']=={('U501','27'),('R901','2'),('R902','1')}
-    assert nets['VDD_DDR_1V1']=={('U501','26'),('L901','2'),('C901','1'),('C902','1'),('R901','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD2'}|{('U801',b) for b in ['1D5','1D6','1D7','1D8','1D9','1E4','1F4','1G4']}
+    assert nets['VDD_DDR_1V1']=={('U501','26'),('L901','2'),('C901','1'),('C902','1'),('R901','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD2'}|{('U801',b) for b in ['1D5','1D6','1D7','1D8','1D9','1E4','1F4','1G4']}|{(f'C{n}','1') for n in range(837,842)}
     assert {('C901','2'),('C902','2'),('C903','2'),('R902','2')} <= nets['GND']
     assert {('U501','24'),('C903','1')} <= nets['5V_MAIN']
-    assert nets['VDD_DDR_0V6']=={('R903','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDDQ'}|{('U801',b) for b in ['1E6','1E7','1E9','1F5','1G5']}
+    assert nets['VDD_DDR_0V6']=={('R903','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDDQ'}|{('U801',b) for b in ['1E6','1E7','1E9','1F5','1G5']}|{(f'C{n}','1') for n in range(842,847)}
     zq=next(p for p in nets.values() if ('U901','A5') in p)
     assert zq=={('U901','A5'),('R903','2')}
     bus=list(__import__('csv').DictReader((root/'reference/ddr-bus-map.csv').open()))
     assert len(bus)==65
     for r in bus:
         assert nets[r['net']]=={('U801',r['processor_ball']),('U901',r['ram_ball'])},(r,nets.get(r['net']))
-print('PASS: appliance restart GPIO connection and 176-component capture; not full ERC.')
+print('PASS: appliance restart GPIO connection and 186-component capture; not full ERC.')

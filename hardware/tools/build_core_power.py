@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Capture logic/GPU local bypass values from NanoPi R3S reference sheet 5."""
+"""Capture logic/GPU local bypass values from NanoPi R3S reference sheets 5 and 6."""
 from pathlib import Path
 import uuid
 
@@ -49,6 +49,8 @@ parts = {
 for bank, net, y, values, under_count, first_ref in [
     (0, 'VDD_LOGIC', 66.04, ['100nF','4.7uF','4.7uF','4.7uF','22uF','10uF','22uF'], 4, 825),
     (1, 'VDD_GPU', 132.08, ['100nF','4.7uF','22uF','10uF','22uF'], 2, 832),
+    (2, 'VDD_DDR_1V1', 198.12, ['100nF','100nF','100nF','4.7uF','10uF'], 5, 837),
+    (3, 'VDD_DDR_0V6', 264.16, ['100nF','100nF','100nF','4.7uF','4.7uF'], 5, 842),
 ]:
     xs = [60.96 + 25.4*i for i in range(len(values))]
     for i, (x, value) in enumerate(zip(xs, values)):
@@ -77,7 +79,7 @@ for bank, net, y, values, under_count, first_ref in [
     properties = prop('Reference',f'#PWR80{bank}',x,gy+5.08,True)+prop('Value','GND',x,gy+8.89)
     items.append(f'(symbol (lib_id "power:GND") (at {x} {gy+5.08} 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "{uid(net+"-ground")}") {properties} (pin "1" (uuid "{uid(net+"-ground-pin")}")) (instances (project "core-power" (path "/{uid("root")}" (reference "#PWR80{bank}") (unit 1)))))')
     items.append(f'(text "{net}: local bypass; first {under_count} capacitors under package, remaining capacitors nearby." (at 35.56 {y-22.86} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid(net+"-note")}"))')
-items.append(f'(text "DRAFT CORE BYPASS: NanoPi R3S LTS 2411 sheet 5 nominal values.\nEffective capacitance, layout feasibility, PDN impedance and regulator stability remain to verify." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
+items.append(f'(text "DRAFT CORE BYPASS: NanoPi R3S LTS 2411 sheets 5/6 nominal values.\\nEffective capacitance, layout feasibility, PDN impedance and regulator stability remain to verify." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
 root = uid('root')
-(ROOT/'core-power.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{root}") (paper "A4") (title_block (title "Processor logic and GPU local bypass — DRAFT") (date "2026-10-04")) (lib_symbols {symbol("Device","C_Small")} {symbol("power","GND")}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
-print('Generated twelve processor-local logic/GPU bypass capacitors.')
+(ROOT/'core-power.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{root}") (paper "A3") (title_block (title "Processor logic, GPU and DDR local bypass — DRAFT") (date "2026-10-04")) (lib_symbols {symbol("Device","C_Small")} {symbol("power","GND")}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
+print('Generated twenty-two processor-local logic/GPU/DDR bypass capacitors.')
