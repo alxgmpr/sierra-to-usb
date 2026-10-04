@@ -19,11 +19,14 @@ with tempfile.TemporaryDirectory() as tmp:
  '/RK_RESET_N':{('U501','67'),('R501','2'),('C513','1')},
  '/VCC3V3_PMU':{('R501','1'),('U501','31'),('C517','1'),('C518','1')},
  'Net-(U501C-VREF)':{('U501','46'),('C515','1')},
- 'GND':{(f'C{n}','2') for n in range(501,519)}|{('U501','47'),('U501','69')},
+ '/3V3_MAIN':{('U501','22'),('C519','1')},
+ '/VDDA_0V9':{('U501','21'),('C520','1'),('C521','1')},
+ '/VDDA0V9_PMU':{('U501','20'),('C522','1'),('C523','1')},
+ 'GND':{(f'C{n}','2') for n in range(501,524)}|{('U501','47'),('U501','69')},
  }
  for name,pins in expected.items():assert nets[name]==pins,(name,nets[name],pins)
- comps=tree.findall('.//components/comp');assert len(comps)==23
+ comps=tree.findall('.//components/comp');assert len(comps)==28
  for c in comps:
   fields={f.attrib['name']:f.text for f in c.findall('fields/field')}
   assert fields.get('MPN'),c.attrib['ref']
- print('PASS: BUCK1/2/5 exact eleven-net membership and 23 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
+ print('PASS: BUCK1/2/5 exact fourteen-net membership and 28 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')

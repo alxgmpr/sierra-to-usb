@@ -610,3 +610,24 @@ Native captured-net checks pass for eleven nets and 23 exact-MPN parts.
 Visual review exposed a BUCK5 note overlapping the new LDO capacitor bank;
 the note was moved to the right. Remaining LDO banks, rail sequencing and
 complete appliance integration are still unfinished.
+
+## Analog LDO2/3 capture
+
+VCC5 pin 22 now uses 3V3_MAIN with C519 22 uF input bypass. LDO2 pin 21
+provides VDDA_0V9 and LDO3 pin 20 provides the separate VDDA0V9_PMU rail;
+each has two selected 1 uF / 25 V / 0603 capacitors. These are the selected
+-5 variant's 0.9 V slot-1 outputs; LDO3 starts 200 us after LDO2. The
+manufacturer rates LDO2 up to 400 mA and high-PSRR LDO3 up to 100 mA;
+actual analog-domain currents must be budgeted. At rated limits, their
+nominal 3.3-to-0.9 V drops dissipate up to 0.96 W and 0.24 W respectively,
+so these ratings cannot be treated as available continuous appliance load
+without the combined PMIC thermal calculation. The two output nets must
+remain distinct even though their voltage settings match.
+
+Native connectivity audit now covers fourteen nets and 28 exact-MPN parts.
+Both analog capacitor banks and the updated supply wiring were rendered and
+reviewed. The sheet expanded to A2 to reserve space for remaining PMIC channels;
+final compactness and complete hierarchy review remain pending. Neither output
+is yet connected to a captured processor package. The selected 2 uF nominal
+bypass banks exceed the reference's 1 uF nominal value; combined-corner aging,
+actual load decoupling and loop behavior remain explicit checks.
