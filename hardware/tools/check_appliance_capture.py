@@ -66,6 +66,7 @@ with tempfile.TemporaryDirectory() as tmp:
         comp=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
         fields={f.get('name'):f.text for f in comp.findall('./fields/field')}
         assert fields['MPN']=='MPZ1608S121ATAH0' and fields['DCR Maximum']=='45mOhm'
-    assert nets['SARADC_BOOT_KEY']=={('U801','1D17'),('R801','2'),('C820','1')}
-    assert len(tree.findall('./components/comp'))==140
-print('PASS: appliance restart GPIO connection and 140-component capture; not full ERC.')
+    assert ('SW801','2') in nets['GND']
+    assert nets['SARADC_BOOT_KEY']=={('U801','1D17'),('R801','2'),('C820','1'),('SW801','1')}
+    assert len(tree.findall('./components/comp'))==141
+print('PASS: appliance restart GPIO connection and 141-component capture; not full ERC.')

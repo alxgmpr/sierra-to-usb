@@ -1404,3 +1404,21 @@ CL10C102JB8NNNC ordering variant. JLC indexed stock is not a reservation.
 Native connectivity checks pass for 140 components and verify the exact
 three-terminal boot net. Full ERC reports 451 violations. The rendered
 processor sheet was reviewed and label/capacitor overlaps corrected.
+
+## 2026-10-04 manual processor recovery request
+
+Added SW801, E-Switch TL3342F160QG (C2886898), using the same
+reviewed standard footprint as SW201. Its pin 1 joins SARADC_BOOT_KEY
+and pin 2 joins GND. KiCad's four footprint pads form two duplicate-number
+contact groups, matching the previously checked Rev J manufacturer drawing.
+At nominal 1.8V, pressing the button sinks only the 180uA pull-up current.
+The switch's -20 to +70C rating remains a whole-appliance temperature limit.
+
+The intended operation is to hold the recovery request through processor
+reset/boot and release after Rockusb enumeration. It relies on the loader's
+SARADC recovery behavior; it is not an independent MaskROM override and
+does not substitute for the still-missing processor reset control, USB OTG
+connector/protection/VBUS detection or storage override mechanism.
+Native checks verify the four-terminal boot net, grounded switch contact,
+exact MPN and footprint. The appliance now has 141 components; full ERC
+remains at 451 violations. The processor sheet was rendered and reviewed.
