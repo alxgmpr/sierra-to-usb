@@ -103,3 +103,19 @@ therefore be established from geometry and ball map, not its library name.
 The single oversized symbol and unspecified electrical pin types require
 audit and readable grouping before schematic use. No production footprint
 or RAM symbol has been registered. Indexed stock of 38 is not reserved.
+
+## Power-sequence and rank-specific audit findings
+
+Micron Rev. I printed pages 43–44 require VDD1 to rise no later than
+VDD2, and VDD2 no later than VDDQ. During ramp, RESET_n stays low
+and both channels initialize together. Rail ordering must be reviewed
+against actual RK809 startup slots and the separate 0.6V regulator.
+Printed page 46 also requires ordered shutdown; uncontrolled power loss
+is limited to 400 occurrences over device life. Persistent appliance power
+loss therefore needs a shutdown/hold-up review, not just startup wiring.
+
+The native model has generic NC/second-rank aliases on H3, R3, J5, P5
+and A8. These must be resolved for the selected single-rank part before
+registration. No full manufacturer ball-map match is claimed from flattened
+PDF text. check_micron_native.py now verifies the preserved 200-entry
+inventory and symbol/footprint identity consistency.
