@@ -90,6 +90,12 @@ wire((139.7,124.46),(139.7,116.84));label('3V3_MAIN',(139.7,116.84))
 wire((139.7,129.54),(139.7,139.7));label('MAIN3V3_FB',(139.7,134.62))
 wire((91.44,76.2),(83.82,76.2));label('MAIN3V3_FB',(83.82,76.2));items[-1]=items[-1].replace('justify left bottom','justify right bottom')
 wire((139.7,144.78),(139.7,152.4));power('GND',(139.7,152.4),'#PWR610')
-note('DRAFT: enable sequencing, PG translation, capacitance and thermal margins unfinished.',(35.56,172.72))
+# Reference enable divider: rail follows upstream 5 V without a PMIC dependency.
+for ref,value,mpn,lcsc,y in [('R603','20kR','RC0603FR-0720KL','C105575',127),('R604','10kR','RC0603FR-0710KL','C98220',142.24)]:
+ add('Device','R_Small_US',ref,value,210.82,y,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':mpn,'Manufacturer':'Yageo','LCSC':lcsc,'Tolerance':'1%'})
+wire((210.82,124.46),(210.82,116.84));label('5V_MAIN',(210.82,116.84))
+wire((210.82,129.54),(210.82,139.7));label('MAIN3V3_EN',(210.82,134.62))
+wire((210.82,144.78),(210.82,152.4));power('GND',(210.82,152.4),'#PWR611')
+note('DRAFT: Upstream 5V sequencing, PG translation, capacitance and thermal margins unfinished.',(35.56,172.72))
 (ROOT/'main3v3.kicad_sch').write_text('(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A4") (lib_symbols '+''.join(used.values())+') '+''.join(items)+')\n')
 print('Generated main 3.3V draft')

@@ -140,3 +140,18 @@ The main regulator draft is now attached to the appliance root. Global
 5V_MAIN/3V3_MAIN connections are native-netlist checked against the PMIC
 input pins; recovery supply separation is asserted. The earlier standalone
 integration limitation is superseded. Enable and PG remain unfinished.
+
+## Main 3.3 V enable capture
+
+R603 RC0603FR-0720KL (20 kOhm, C105575) from 5V_MAIN and
+R604 RC0603FR-0710KL (10 kOhm, C98220) to ground now drive U601
+EN pin 8. This follows the NanoPi MP2143 enable network and avoids
+using a PMIC output to enable the rail supplying PMIC LDO inputs.
+Nominal divider voltage is 1.667 V at 5 V, versus the 1.2 V enable-high
+threshold. With +/-1% and 100 ppm/C over -40 to +85 C, unloaded
+minimum at 4.75 V is approximately 1.549 V. Manufacturer internal
+1 MOhm EN pulldown slightly lowers this (its tolerance is unspecified).
+EN leakage/tolerance guarantee and startup ramp still need closure.
+This does not define upstream 5 V generation or supervisor cold-cycle control.
+Native appliance assertions verify U601:8/R603:2/R604:1 only, top
+resistor on 5V_MAIN, and 88 total components. PG translation remains open.

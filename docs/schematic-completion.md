@@ -17,7 +17,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 | Modem power | Requirements only | Voltage/current envelope per model, switch/eFuse/ramp/discharge, default-off controls and fault sensing |
 | EM9190 / EM9293 sockets and SIM | Older manufacturer PTS research; contacts 24/38/68 conflict with Quectel | Current controlled pin tables, complete per-model profile and power/control/SIM/USB3 capture |
 | RM520N-GL / RM551E-GL sockets and SIM | RM520 guide exists; current RM551 production guide still missing | Current controlled hardware guides and per-model pin/voltage/control/SIM/USB3 capture |
-| Full hierarchy and BOM | Draft appliance root exports 86 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
+| Full hierarchy and BOM | Draft appliance root exports 88 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
 | Visual and electrical review | Always-on draft rendered and corrected; recovery tests rerun | All sheets and circuit crops inspected, native ERC and complete critical-net assertions, manufacturer pin fidelity, footprint pad parity |
 
 No PCB file exists. Do not start placement until the integrated schematic and
@@ -869,3 +869,7 @@ connection, shared 5 V input and separation from the recovery MCU supply.
 Root SVG inspected. No full ERC pass is claimed; enable, PG translation
 and downstream load/sequence remain incomplete. Regenerate build_appliance.py
 after either supply or PMIC generator.
+
+The main 3.3 V enable divider is captured and appliance-netlist checked.
+It follows 5V_MAIN; independent upstream 5 V power control remains absent.
+No PMIC output feeds this enable, avoiding a boot dependency loop.
