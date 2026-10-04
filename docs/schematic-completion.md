@@ -1186,3 +1186,18 @@ verifies the exact ground membership against the reviewed manufacturer
 ball table, one U801 component and 565 library pins. The updated A2
 render was inspected for label/body and title-block overlaps. Supplies,
 interfaces and appliance-root integration remain incomplete.
+
+## 2026-10-04 processor PMIC control terminals
+
+The standalone U801 capture now exposes global PMIC_I2C_SCL on AJ37,
+PMIC_I2C_SDA on AK38 and PMIC_SLEEP on 1P19, matching the documented
+processor assignments and existing PMIC net names. Native netlist assertions
+verify each exact ball. The symbol retains the pads' GPIO primary names
+and bidirectional electrical capability; a sheet note records the required
+I2C0 and dedicated sleep functions. Firmware pinmux remains an integration
+requirement, and the intended PMUIO2 3.3 V supply is not yet connected.
+
+These terminals do not yet connect to U501 because the processor sheet
+is standalone and the PMIC sheet's control labels remain local. Hierarchy
+integration must explicitly join them and verify pull-up and sleep-pull-down
+membership. The processor unit-D render was inspected for label collisions.
