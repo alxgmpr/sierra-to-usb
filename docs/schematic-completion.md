@@ -335,3 +335,18 @@ and a bare RK809-5.stp model reference without returned model data.
 Its paste strategy, pad geometry, courtyard and model path still require
 manufacturer/assembly review and official KiCad checks; catalog model
 availability does not establish library qualification.
+
+## PMIC electrical-type review draft
+
+`hardware/reference/rk809-5-electrical-review.kicad_sym` adapts the native
+CSE model for review, preserving all 69 existing pin numbers and geometry.
+62 pins now have proposed input/output, bidirectional, power or open-drain
+types based on their documented functions; seven analog/internal nodes
+remain passive with explicit unresolved roles in
+`hardware/pinmaps/rk809-electrical-review.csv`. Pin 18 displays SDO with
+PDMDATA as a native input alternate instead of a slash-delimited name.
+Reference prefix is U and datasheet points to Rev 2.4. KiCad's native
+symbol exporter accepts the review library. This draft is not registered
+in the active project, KLC-qualified, visually approved or integrated.
+Its inherited physical-order pin layout still needs functional grouping,
+and all electrical-type proposals require review before final capture.

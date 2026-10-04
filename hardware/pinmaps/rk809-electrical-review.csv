@@ -1,0 +1,70 @@
+Pin,CSE Name,Proposed Type,Review Status
+1,SCL,input,Proposed from documented function; review before integration
+2,SDA,bidirectional,Proposed from documented function; review before integration
+3,LDO7,power_out,Proposed from documented function; review before integration
+4,VCC7,power_in,Proposed from documented function; review before integration
+5,LDO8,power_out,Proposed from documented function; review before integration
+6,LDO9,power_out,Proposed from documented function; review before integration
+7,INT,open_collector,Proposed from documented function; review before integration
+8,FB2,input,Proposed from documented function; review before integration
+9,SW2,power_out,Proposed from documented function; review before integration
+10,VCC2,power_in,Proposed from documented function; review before integration
+11,VCC1,power_in,Proposed from documented function; review before integration
+12,SW1,power_out,Proposed from documented function; review before integration
+13,FB1,input,Proposed from documented function; review before integration
+14,LRCLK,input,Proposed from documented function; review before integration
+15,BCLK,input,Proposed from documented function; review before integration
+16,MCLK,input,Proposed from documented function; review before integration
+17,SDI,input,Proposed from documented function; review before integration
+18,SDO/PDMDATA,output,Proposed from documented function; review before integration
+19,PDMCLK,output,Proposed from documented function; review before integration
+20,LDO3,power_out,Proposed from documented function; review before integration
+21,LDO2,power_out,Proposed from documented function; review before integration
+22,VCC5,power_in,Proposed from documented function; review before integration
+23,LDO1,power_out,Proposed from documented function; review before integration
+24,VCC3,power_in,Proposed from documented function; review before integration
+25,SW3,power_out,Proposed from documented function; review before integration
+26,VBUCK3,passive,Buck3 voltage node: resolve electrical role
+27,FB3,input,Proposed from documented function; review before integration
+28,LDO4,power_out,Proposed from documented function; review before integration
+29,LDO5,power_out,Proposed from documented function; review before integration
+30,VCC6,power_in,Proposed from documented function; review before integration
+31,LDO6,power_out,Proposed from documented function; review before integration
+32,SPKP_OUT,output,Proposed from documented function; review before integration
+33,VCC_SPK_HP,power_in,Proposed from documented function; review before integration
+34,SPKN_OUT,output,Proposed from documented function; review before integration
+35,VCC_CPVSS,passive,Negative charge-pump supply: resolve electrical role
+36,CPN,passive,Charge-pump negative switching node
+37,CPP,passive,Charge-pump positive switching node
+38,VCC_CPVDD,power_in,Proposed from documented function; review before integration
+39,HPL_OUT,output,Proposed from documented function; review before integration
+40,HP_SNS,power_in,Proposed from documented function; review before integration
+41,HPR_OUT,output,Proposed from documented function; review before integration
+42,MIC1N,input,Proposed from documented function; review before integration
+43,MIC1P,input,Proposed from documented function; review before integration
+44,VCC_1P8A,passive,Internal analog 1.8V node
+45,VCC_RTC,power_in,Proposed from documented function; review before integration
+46,VREF,passive,Internal reference node
+47,GNDREF,power_in,Proposed from documented function; review before integration
+48,VCC_1P8D,passive,Internal digital 1.8V node
+49,SLEEP,input,Proposed from documented function; review before integration
+50,XIN,input,Proposed from documented function; review before integration
+51,XOUT,output,Proposed from documented function; review before integration
+52,PWRON,input,Proposed from documented function; review before integration
+53,SW5,power_out,Proposed from documented function; review before integration
+54,VCC9,power_in,Proposed from documented function; review before integration
+55,SWOUT1,power_out,Proposed from documented function; review before integration
+56,BATDIV,input,Proposed from documented function; review before integration
+57,VCC8,power_in,Proposed from documented function; review before integration
+58,SWOUT2,power_out,Proposed from documented function; review before integration
+59,FB5,input,Proposed from documented function; review before integration
+60,EXT_EN,output,Proposed from documented function; review before integration
+61,VDC,input,Proposed from documented function; review before integration
+62,SNSP,input,Proposed from documented function; review before integration
+63,SNSN,input,Proposed from documented function; review before integration
+64,FB4,input,Proposed from documented function; review before integration
+65,SW4,power_out,Proposed from documented function; review before integration
+66,VCC4,power_in,Proposed from documented function; review before integration
+67,RESETB,output,Proposed from documented function; review before integration
+68,CLK32K,open_collector,Proposed from documented function; review before integration
+69,EPAD,power_in,Proposed from documented function; review before integration
