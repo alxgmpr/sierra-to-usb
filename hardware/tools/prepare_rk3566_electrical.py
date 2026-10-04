@@ -14,6 +14,14 @@ pattern = r'\(pin (\w+) (\w+).*?\(name "([^"]+)".*?\(number "([^"]+)"[^\n]*\n   
 
 def interface_type(name):
     function = name.split('/')[0]
+    if function in {'ARM_JTAG_TCK', 'MCU_JTAG_TCK', 'MCU_JTAG_TRSTn', 'MCU_JTAG_TMS', 'MCU_JTAG_TDI', 'FLASH_RDY'}:
+        return 'input'
+    if function == 'ARM_JTAG_TMS' or function.startswith(('FSPI_', 'HDMITX_')) or function == 'HDMI_TX_HPDIN':
+        return 'bidirectional'
+    if function in {'MCU_JTAG_TDO', 'FLASH_ALE', 'FLASH_CLE', 'FLASH_WRn', 'FLASH_RDn', 'FLASH_CS0n', 'FLASH_CS1n', 'PMIC_SLEEP'} or function.startswith('TSADC_SHUT'):
+        return 'output'
+    if re.fullmatch(r'FLASH_D[0-7]', function) or function == 'FLASH_DQS':
+        return 'bidirectional'
     if re.match(r'I2C\d+_(SCL|SDA)', function) or re.match(r'SPI\d+_', function) or function.startswith('PWM'):
         return 'bidirectional'
     if re.match(r'UART\d+_(RX|CTSn)', function):
@@ -65,7 +73,7 @@ def interface_type(name):
         return 'passive'
     if function in {'DDR_VREFOUT', 'XOUT24M'}:
         return 'output'
-    if function in {'XIN24M', 'nPOR_u', 'HDMI_TX_HPDIN', 'USB_OTG0_ID', 'USB_OTG0_VBUSDET'} or function.startswith('SARADC_VIN'):
+    if function in {'XIN24M', 'nPOR_u', 'USB_OTG0_ID', 'USB_OTG0_VBUSDET'} or function.startswith('SARADC_VIN'):
         return 'input'
     if function.startswith('MIPI_CSI_RX_'):
         return 'input'
@@ -122,7 +130,7 @@ def transform(match):
             direction = 'power_in' if shorthand else interface_type(alternate)
             alternate_types[alternate] = direction
             alternate_rows.append({'ball': ball, 'function': alternate, 'electrical_type': direction,
-                                   'evidence': 'Direction review pending' if direction == 'unspecified' else 'Manufacturer interface role / shared supply alias'})
+                                   'evidence': 'Direction review pending' if direction == 'unspecified' else 'RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias'})
         result = result[:-1] + ''.join(f'(alternate "{n}" {alternate_types[n]} line)' for n in alternates) + ')'
     return result
 

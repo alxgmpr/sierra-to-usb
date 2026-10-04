@@ -495,7 +495,7 @@ AP33,HDMI_TX_D0P,HDMI_TX_D0P,output,RK3566 Rev 1.2 Table 2-4 interface direction
 AR33,HDMI_TX_D0N,HDMI_TX_D0N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 AR32,HDMI_TX_CLKP,HDMI_TX_CLKP,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 AP32,HDMI_TX_CLKN,HDMI_TX_CLKN,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
-1V17,HDMI_TX_HPDIN,HDMI_TX_HPDIN,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1V17,HDMI_TX_HPDIN,HDMI_TX_HPDIN,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1U16,HDMI_TX_REXT,HDMI_TX_REXT,passive,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1N14,HDMI_TX_AVDD_0V9_1,HDMI_TX_AVDD_0V9_1,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1N13,HDMI_TX_AVDD_0V9_2,HDMI_TX_AVDD_0V9_2,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"

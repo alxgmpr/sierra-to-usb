@@ -1,746 +1,746 @@
 ball,function,electrical_type,evidence
-G2,DDR4_DQL0_A,bidirectional,Manufacturer interface role / shared supply alias
-G2,LPDDR4_DQ0_A,bidirectional,Manufacturer interface role / shared supply alias
-G2,DDR3_DQ0,bidirectional,Manufacturer interface role / shared supply alias
-G2,LPDDR3_DQ15,bidirectional,Manufacturer interface role / shared supply alias
-F2,DDR4_DQL2_A,bidirectional,Manufacturer interface role / shared supply alias
-F2,LPDDR4_DQ1_A,bidirectional,Manufacturer interface role / shared supply alias
-F2,DDR3_DQ1,bidirectional,Manufacturer interface role / shared supply alias
-F2,LPDDR3_DQ14,bidirectional,Manufacturer interface role / shared supply alias
-F1,DDR4_DQL4_A,bidirectional,Manufacturer interface role / shared supply alias
-F1,LPDDR4_DQ2_A,bidirectional,Manufacturer interface role / shared supply alias
-F1,DDR3_DQ2,bidirectional,Manufacturer interface role / shared supply alias
-F1,LPDDR3_DQ10,bidirectional,Manufacturer interface role / shared supply alias
-E1,DDR4_DQL6_A,bidirectional,Manufacturer interface role / shared supply alias
-E1,LPDDR4_DQ3_A,bidirectional,Manufacturer interface role / shared supply alias
-E1,DDR3_DQ3,bidirectional,Manufacturer interface role / shared supply alias
-E1,LPDDR3_DQ9,bidirectional,Manufacturer interface role / shared supply alias
-M2,DDR4_DQL7_A,bidirectional,Manufacturer interface role / shared supply alias
-M2,LPDDR4_DQ4_A,bidirectional,Manufacturer interface role / shared supply alias
-M2,DDR3_DQ4,bidirectional,Manufacturer interface role / shared supply alias
-M2,LPDDR3_DQ13,bidirectional,Manufacturer interface role / shared supply alias
-K1,DDR4_DQL5_A,bidirectional,Manufacturer interface role / shared supply alias
-K1,LPDDR4_DQ5_A,bidirectional,Manufacturer interface role / shared supply alias
-K1,DDR3_DQ5,bidirectional,Manufacturer interface role / shared supply alias
-K1,LPDDR3_DQ12,bidirectional,Manufacturer interface role / shared supply alias
-K2,DDR4_DQL3_A,bidirectional,Manufacturer interface role / shared supply alias
-K2,LPDDR4_DQ6_A,bidirectional,Manufacturer interface role / shared supply alias
-K2,DDR3_DQ6,bidirectional,Manufacturer interface role / shared supply alias
-K2,LPDDR3_DQ8,bidirectional,Manufacturer interface role / shared supply alias
-1E1,DDR4_DQL1_A,bidirectional,Manufacturer interface role / shared supply alias
-1E1,LPDDR4_DQ7_A,bidirectional,Manufacturer interface role / shared supply alias
-1E1,DDR3_DQ7,bidirectional,Manufacturer interface role / shared supply alias
-1E1,LPDDR3_DQ11,bidirectional,Manufacturer interface role / shared supply alias
-1E2,DDR4_DML_A,output,Manufacturer interface role / shared supply alias
-1E2,LPDDR4_DM0_A,output,Manufacturer interface role / shared supply alias
-1E2,DDR3_DM0,output,Manufacturer interface role / shared supply alias
-1E2,LPDDR3_DM1,output,Manufacturer interface role / shared supply alias
-H2,DDR4_DQSL_P_A,bidirectional,Manufacturer interface role / shared supply alias
-H2,LPDDR4_DQS0P_A,bidirectional,Manufacturer interface role / shared supply alias
-H2,DDR3_DQS0P,bidirectional,Manufacturer interface role / shared supply alias
-H2,LPDDR3_DQS1P,bidirectional,Manufacturer interface role / shared supply alias
-H1,DDR4_DQSL_N_A,bidirectional,Manufacturer interface role / shared supply alias
-H1,LPDDR4_DQS0N_A,bidirectional,Manufacturer interface role / shared supply alias
-H1,DDR3_DQS0N,bidirectional,Manufacturer interface role / shared supply alias
-H1,LPDDR3_DQS1N,bidirectional,Manufacturer interface role / shared supply alias
-P2,DDR4_DQU3_A,bidirectional,Manufacturer interface role / shared supply alias
-P2,LPDDR4_DQ8_A,bidirectional,Manufacturer interface role / shared supply alias
-P2,DDR3_DQ8,bidirectional,Manufacturer interface role / shared supply alias
-P2,LPDDR3_DQ25,bidirectional,Manufacturer interface role / shared supply alias
-R1,DDR4_DQU1_A,bidirectional,Manufacturer interface role / shared supply alias
-R1,LPDDR4_DQ9_A,bidirectional,Manufacturer interface role / shared supply alias
-R1,DDR3_DQ9,bidirectional,Manufacturer interface role / shared supply alias
-R1,LPDDR3_DQ24,bidirectional,Manufacturer interface role / shared supply alias
-R2,DDR4_DQU7_A,bidirectional,Manufacturer interface role / shared supply alias
-R2,LPDDR4_DQ10_A,bidirectional,Manufacturer interface role / shared supply alias
-R2,DDR3_DQ10,bidirectional,Manufacturer interface role / shared supply alias
-R2,LPDDR3_DQ28,bidirectional,Manufacturer interface role / shared supply alias
-T2,DDR4_DQU5_A,bidirectional,Manufacturer interface role / shared supply alias
-T2,LPDDR4_DQ11_A,bidirectional,Manufacturer interface role / shared supply alias
-T2,DDR3_DQ11,bidirectional,Manufacturer interface role / shared supply alias
-T2,LPDDR3_DQ29,bidirectional,Manufacturer interface role / shared supply alias
-M1,DDR4_DQU2_A,bidirectional,Manufacturer interface role / shared supply alias
-M1,LPDDR4_DQ12_A,bidirectional,Manufacturer interface role / shared supply alias
-M1,DDR3_DQ12,bidirectional,Manufacturer interface role / shared supply alias
-M1,LPDDR3_DQ26,bidirectional,Manufacturer interface role / shared supply alias
-1F2,DDR4_DQU4_A,bidirectional,Manufacturer interface role / shared supply alias
-1F2,LPDDR4_DQ13_A,bidirectional,Manufacturer interface role / shared supply alias
-1F2,DDR3_DQ13,bidirectional,Manufacturer interface role / shared supply alias
-1F2,LPDDR3_DQ31,bidirectional,Manufacturer interface role / shared supply alias
-1F1,DDR4_DQU6_A,bidirectional,Manufacturer interface role / shared supply alias
-1F1,LPDDR4_DQ14_A,bidirectional,Manufacturer interface role / shared supply alias
-1F1,DDR3_DQ14,bidirectional,Manufacturer interface role / shared supply alias
-1F1,LPDDR3_DQ30,bidirectional,Manufacturer interface role / shared supply alias
-1G2,DDR4_DQU0_A,bidirectional,Manufacturer interface role / shared supply alias
-1G2,LPDDR4_DQ15_A,bidirectional,Manufacturer interface role / shared supply alias
-1G2,DDR3_DQ15,bidirectional,Manufacturer interface role / shared supply alias
-1G2,LPDDR3_DQ27,bidirectional,Manufacturer interface role / shared supply alias
-1G1,DDR4_DMU_A,output,Manufacturer interface role / shared supply alias
-1G1,LPDDR4_DM1_A,output,Manufacturer interface role / shared supply alias
-1G1,DDR3_DM1,output,Manufacturer interface role / shared supply alias
-1G1,LPDDR3_DM3,output,Manufacturer interface role / shared supply alias
-N1,DDR4_DQSU_P_A,bidirectional,Manufacturer interface role / shared supply alias
-N1,LPDDR4_DQS1P_A,bidirectional,Manufacturer interface role / shared supply alias
-N1,DDR3_DQS1P,bidirectional,Manufacturer interface role / shared supply alias
-N1,LPDDR3_DQS3P,bidirectional,Manufacturer interface role / shared supply alias
-N2,DDR4_DQSU_N_A,bidirectional,Manufacturer interface role / shared supply alias
-N2,LPDDR4_DQS1N_A,bidirectional,Manufacturer interface role / shared supply alias
-N2,DDR3_DQS1N,bidirectional,Manufacturer interface role / shared supply alias
-N2,LPDDR3_DQS3N,bidirectional,Manufacturer interface role / shared supply alias
-B12,DDR4_DQU7_B,bidirectional,Manufacturer interface role / shared supply alias
-B12,LPDDR4_DQ0_B,bidirectional,Manufacturer interface role / shared supply alias
-B12,DDR3_DQ16,bidirectional,Manufacturer interface role / shared supply alias
-B12,LPDDR3_DQ1,bidirectional,Manufacturer interface role / shared supply alias
-B10,DDR4_DQU5_B,bidirectional,Manufacturer interface role / shared supply alias
-B10,LPDDR4_DQ1_B,bidirectional,Manufacturer interface role / shared supply alias
-B10,DDR3_DQ17,bidirectional,Manufacturer interface role / shared supply alias
-B10,LPDDR3_DQ5,bidirectional,Manufacturer interface role / shared supply alias
-1A8,DDR4_DQU3_B,bidirectional,Manufacturer interface role / shared supply alias
-1A8,LPDDR4_DQ2_B,bidirectional,Manufacturer interface role / shared supply alias
-1A8,DDR3_DQ18,bidirectional,Manufacturer interface role / shared supply alias
-1A8,LPDDR3_DQ6,bidirectional,Manufacturer interface role / shared supply alias
-1A7,DDR4_DQU1_B,bidirectional,Manufacturer interface role / shared supply alias
-1A7,LPDDR4_DQ3_B,bidirectional,Manufacturer interface role / shared supply alias
-1A7,DDR3_DQ19,bidirectional,Manufacturer interface role / shared supply alias
-1A7,LPDDR3_DQ4,bidirectional,Manufacturer interface role / shared supply alias
-B13,DDR4_DQU0_B,bidirectional,Manufacturer interface role / shared supply alias
-B13,LPDDR4_DQ4_B,bidirectional,Manufacturer interface role / shared supply alias
-B13,DDR3_DQ20,bidirectional,Manufacturer interface role / shared supply alias
-B13,LPDDR3_DQ2,bidirectional,Manufacturer interface role / shared supply alias
-1A10,DDR4_DQU6_B,bidirectional,Manufacturer interface role / shared supply alias
-1A10,LPDDR4_DQ5_B,bidirectional,Manufacturer interface role / shared supply alias
-1A10,DDR3_DQ21,bidirectional,Manufacturer interface role / shared supply alias
-1A10,LPDDR3_DQ3,bidirectional,Manufacturer interface role / shared supply alias
-1B9,DDR4_DQU4_B,bidirectional,Manufacturer interface role / shared supply alias
-1B9,LPDDR4_DQ6_B,bidirectional,Manufacturer interface role / shared supply alias
-1B9,DDR3_DQ22,bidirectional,Manufacturer interface role / shared supply alias
-1B9,LPDDR3_DQ7,bidirectional,Manufacturer interface role / shared supply alias
-1A9,DDR4_DQU2_B,bidirectional,Manufacturer interface role / shared supply alias
-1A9,LPDDR4_DQ7_B,bidirectional,Manufacturer interface role / shared supply alias
-1A9,DDR3_DQ23,bidirectional,Manufacturer interface role / shared supply alias
-1A9,LPDDR3_DQ0,bidirectional,Manufacturer interface role / shared supply alias
-1B8,DDR4_DMU_B,output,Manufacturer interface role / shared supply alias
-1B8,LPDDR4_DM0_B,output,Manufacturer interface role / shared supply alias
-1B8,DDR3_DM2,output,Manufacturer interface role / shared supply alias
-1B8,LPDDR3_DM0,output,Manufacturer interface role / shared supply alias
-A13,DDR4_DQSU_P_B,bidirectional,Manufacturer interface role / shared supply alias
-A13,LPDDR4_DQS0P_B,bidirectional,Manufacturer interface role / shared supply alias
-A13,DDR3_DQS2P,bidirectional,Manufacturer interface role / shared supply alias
-A13,LPDDR3_DQS0P,bidirectional,Manufacturer interface role / shared supply alias
-A12,DDR4_DQSU_N_B,bidirectional,Manufacturer interface role / shared supply alias
-A12,LPDDR4_DQS0N_B,bidirectional,Manufacturer interface role / shared supply alias
-A12,DDR3_DQS2N,bidirectional,Manufacturer interface role / shared supply alias
-A12,LPDDR3_DQS0N,bidirectional,Manufacturer interface role / shared supply alias
-B19,DDR4_DQL0_B,bidirectional,Manufacturer interface role / shared supply alias
-B19,LPDDR4_DQ8_B,bidirectional,Manufacturer interface role / shared supply alias
-B19,DDR3_DQ24,bidirectional,Manufacturer interface role / shared supply alias
-B19,LPDDR3_DQ18,bidirectional,Manufacturer interface role / shared supply alias
-A19,DDR4_DQL2_B,bidirectional,Manufacturer interface role / shared supply alias
-A19,LPDDR4_DQ9_B,bidirectional,Manufacturer interface role / shared supply alias
-A19,DDR3_DQ25,bidirectional,Manufacturer interface role / shared supply alias
-A19,LPDDR3_DQ19,bidirectional,Manufacturer interface role / shared supply alias
-A20,DDR4_DQL4_B,bidirectional,Manufacturer interface role / shared supply alias
-A20,LPDDR4_DQ10_B,bidirectional,Manufacturer interface role / shared supply alias
-A20,DDR3_DQ26,bidirectional,Manufacturer interface role / shared supply alias
-A20,LPDDR3_DQ22,bidirectional,Manufacturer interface role / shared supply alias
-B20,DDR4_DQL6_B,bidirectional,Manufacturer interface role / shared supply alias
-B20,LPDDR4_DQ11_B,bidirectional,Manufacturer interface role / shared supply alias
-B20,DDR3_DQ27,bidirectional,Manufacturer interface role / shared supply alias
-B20,LPDDR3_DQ23,bidirectional,Manufacturer interface role / shared supply alias
-A15,DDR4_DQL7_B,bidirectional,Manufacturer interface role / shared supply alias
-A15,LPDDR4_DQ12_B,bidirectional,Manufacturer interface role / shared supply alias
-A15,DDR3_DQ28,bidirectional,Manufacturer interface role / shared supply alias
-A15,LPDDR3_DQ16,bidirectional,Manufacturer interface role / shared supply alias
-B15,DDR4_DQL5_B,bidirectional,Manufacturer interface role / shared supply alias
-B15,LPDDR4_DQ13_B,bidirectional,Manufacturer interface role / shared supply alias
-B15,DDR3_DQ29,bidirectional,Manufacturer interface role / shared supply alias
-B15,LPDDR3_DQ17,bidirectional,Manufacturer interface role / shared supply alias
-1C10,DDR4_DQL1_B,bidirectional,Manufacturer interface role / shared supply alias
-1C10,LPDDR4_DQ14_B,bidirectional,Manufacturer interface role / shared supply alias
-1C10,DDR3_DQ30,bidirectional,Manufacturer interface role / shared supply alias
-1C10,LPDDR3_DQ20,bidirectional,Manufacturer interface role / shared supply alias
-B16,DDR4_DQL3_B,bidirectional,Manufacturer interface role / shared supply alias
-B16,LPDDR4_DQ15_B,bidirectional,Manufacturer interface role / shared supply alias
-B16,DDR3_DQ31,bidirectional,Manufacturer interface role / shared supply alias
-B16,LPDDR3_DQ21,bidirectional,Manufacturer interface role / shared supply alias
-1A11,DDR4_DML_B,output,Manufacturer interface role / shared supply alias
-1A11,LPDDR4_DM1_B,output,Manufacturer interface role / shared supply alias
-1A11,DDR3_DM3,output,Manufacturer interface role / shared supply alias
-1A11,LPDDR3_DM2,output,Manufacturer interface role / shared supply alias
-A17,DDR4_DQSL_P_B,bidirectional,Manufacturer interface role / shared supply alias
-A17,LPDDR4_DQS1P_B,bidirectional,Manufacturer interface role / shared supply alias
-A17,DDR3_DQS3P,bidirectional,Manufacturer interface role / shared supply alias
-A17,LPDDR3_DQS2P,bidirectional,Manufacturer interface role / shared supply alias
-B17,DDR4_DQSL_N_B,bidirectional,Manufacturer interface role / shared supply alias
-B17,LPDDR4_DQS1N_B,bidirectional,Manufacturer interface role / shared supply alias
-B17,DDR3_DQS3N,bidirectional,Manufacturer interface role / shared supply alias
-B17,LPDDR3_DQS2N,bidirectional,Manufacturer interface role / shared supply alias
-A7,DDR4_A0,output,Manufacturer interface role / shared supply alias
-A7,LPDDR4_CLKP_B,output,Manufacturer interface role / shared supply alias
-A7,DDR3_A9,output,Manufacturer interface role / shared supply alias
-1D2,DDR4_A1,output,Manufacturer interface role / shared supply alias
-1D2,DDR3_A2,output,Manufacturer interface role / shared supply alias
-C1,DDR4_A2,output,Manufacturer interface role / shared supply alias
-C1,LPDDR4_A1_A,output,Manufacturer interface role / shared supply alias
-C1,DDR3_A4,output,Manufacturer interface role / shared supply alias
-C1,LPDDR3_A6,output,Manufacturer interface role / shared supply alias
-1C3,DDR4_A3,output,Manufacturer interface role / shared supply alias
-1C3,LPDDR4_CKE1_A,output,Manufacturer interface role / shared supply alias
-1C3,DDR3_A3,output,Manufacturer interface role / shared supply alias
-1B6,DDR4_A4,output,Manufacturer interface role / shared supply alias
-1B6,LPDDR4_A3_B,output,Manufacturer interface role / shared supply alias
-1B6,DDR3_BA1,output,Manufacturer interface role / shared supply alias
-1B6,LPDDR3_A3,output,Manufacturer interface role / shared supply alias
-B8,DDR4_A5,output,Manufacturer interface role / shared supply alias
-B8,LPDDR4_A5_B,output,Manufacturer interface role / shared supply alias
-B8,DDR3_A11,output,Manufacturer interface role / shared supply alias
-B8,LPDDR3_A2,output,Manufacturer interface role / shared supply alias
-B9,DDR4_A6,output,Manufacturer interface role / shared supply alias
-B9,LPDDR4_A1_B,output,Manufacturer interface role / shared supply alias
-B9,DDR3_A13,output,Manufacturer interface role / shared supply alias
-B9,LPDDR3_A1,output,Manufacturer interface role / shared supply alias
-A10,DDR4_A7,output,Manufacturer interface role / shared supply alias
-A10,LPDDR4_ODT0_CA_B,output,Manufacturer interface role / shared supply alias
-A10,DDR3_A8,output,Manufacturer interface role / shared supply alias
-E2,DDR4_A8,output,Manufacturer interface role / shared supply alias
-E2,LPDDR4_ODT0_CA_A,output,Manufacturer interface role / shared supply alias
-E2,DDR3_A6,output,Manufacturer interface role / shared supply alias
-E2,LPDDR3_A9,output,Manufacturer interface role / shared supply alias
-B7,DDR4_A9,output,Manufacturer interface role / shared supply alias
-B7,LPDDR4_CLKN_B,output,Manufacturer interface role / shared supply alias
-B7,DDR3_A5,output,Manufacturer interface role / shared supply alias
-1A3,DDR4_A10,output,Manufacturer interface role / shared supply alias
-1A3,LPDDR4_CKE0_B,output,Manufacturer interface role / shared supply alias
-1A3,DDR3_A10,output,Manufacturer interface role / shared supply alias
-C2,DDR4_A11,output,Manufacturer interface role / shared supply alias
-C2,LPDDR4_A0_A,output,Manufacturer interface role / shared supply alias
-C2,DDR3_A7,output,Manufacturer interface role / shared supply alias
-C2,LPDDR3_A8,output,Manufacturer interface role / shared supply alias
-1B3,DDR4_A12,output,Manufacturer interface role / shared supply alias
-1B3,LPDDR4_A3_A,output,Manufacturer interface role / shared supply alias
-1B3,DDR3_BA2,output,Manufacturer interface role / shared supply alias
-A9,DDR4_A13,output,Manufacturer interface role / shared supply alias
-A9,LPDDR4_A0_B,output,Manufacturer interface role / shared supply alias
-A9,DDR3_A14,output,Manufacturer interface role / shared supply alias
-A9,LPDDR3_A0,output,Manufacturer interface role / shared supply alias
-1B1,DDR4_A14_WEn,output,Manufacturer interface role / shared supply alias
-1B1,LPDDR4_A4_A,output,Manufacturer interface role / shared supply alias
-1B1,DDR3_A15,output,Manufacturer interface role / shared supply alias
-1B1,LPDDR3_A5,output,Manufacturer interface role / shared supply alias
-1C1,DDR4_A15_CASn,output,Manufacturer interface role / shared supply alias
-1C1,LPDDR4_A2_A,output,Manufacturer interface role / shared supply alias
-1C1,DDR3_A0,output,Manufacturer interface role / shared supply alias
-1A1,DDR4_A16_RASn,output,Manufacturer interface role / shared supply alias
-1A1,LPDDR4_A5_A,output,Manufacturer interface role / shared supply alias
-1A1,DDR3_RASn,output,Manufacturer interface role / shared supply alias
-1A1,LPDDR3_A7,output,Manufacturer interface role / shared supply alias
-1A2,DDR4_ACTn,output,Manufacturer interface role / shared supply alias
-1A2,LPDDR4_CKE1_B,output,Manufacturer interface role / shared supply alias
-1A2,DDR3_CASn,output,Manufacturer interface role / shared supply alias
-1B7,DDR4_BA0,output,Manufacturer interface role / shared supply alias
-1B7,LPDDR4_A2_B,output,Manufacturer interface role / shared supply alias
-1B7,DDR3_A1,output,Manufacturer interface role / shared supply alias
-1A6,DDR4_BA1,output,Manufacturer interface role / shared supply alias
-1A6,LPDDR4_A4_B,output,Manufacturer interface role / shared supply alias
-1A6,DDR3_A12,output,Manufacturer interface role / shared supply alias
-1A6,LPDDR3_A4,output,Manufacturer interface role / shared supply alias
-1A4,DDR4_BG0,output,Manufacturer interface role / shared supply alias
-1A4,LPDDR4_ODT1_CA_B,output,Manufacturer interface role / shared supply alias
-1A4,DDR3_WEn,output,Manufacturer interface role / shared supply alias
-1C2,DDR4_BG1,output,Manufacturer interface role / shared supply alias
-1C2,LPDDR4_ODT1_CA_A,output,Manufacturer interface role / shared supply alias
-1C2,DDR3_BA0,output,Manufacturer interface role / shared supply alias
-B4,DDR4_CKE,output,Manufacturer interface role / shared supply alias
-B4,LPDDR4_CKE0_A,output,Manufacturer interface role / shared supply alias
-B4,DDR3_CKE,output,Manufacturer interface role / shared supply alias
-B4,LPDDR3_CKE,output,Manufacturer interface role / shared supply alias
-A5,DDR4_CLKP,output,Manufacturer interface role / shared supply alias
-A5,LPDDR4_CLKP_A,output,Manufacturer interface role / shared supply alias
-A5,DDR3_CLKP,output,Manufacturer interface role / shared supply alias
-A5,LPDDR3_CLKP,output,Manufacturer interface role / shared supply alias
-B5,DDR4_CLKN,output,Manufacturer interface role / shared supply alias
-B5,LPDDR4_CLKN_A,output,Manufacturer interface role / shared supply alias
-B5,DDR3_CLKN,output,Manufacturer interface role / shared supply alias
-B5,LPDDR3_CLKN,output,Manufacturer interface role / shared supply alias
-B3,DDR4_CS0n,output,Manufacturer interface role / shared supply alias
-B3,LPDDR4_CS0n_A,output,Manufacturer interface role / shared supply alias
-B3,DDR3_ODT1,output,Manufacturer interface role / shared supply alias
-B3,LPDDR3_ODT0,output,Manufacturer interface role / shared supply alias
-A3,DDR4_CS1n,output,Manufacturer interface role / shared supply alias
-A3,LPDDR4_CS1n_A,output,Manufacturer interface role / shared supply alias
-A3,DDR3_CS1n,output,Manufacturer interface role / shared supply alias
-A3,LPDDR3_ODT1,output,Manufacturer interface role / shared supply alias
-1A5,DDR4_ODT0,output,Manufacturer interface role / shared supply alias
-1A5,LPDDR4_CS1n_B,output,Manufacturer interface role / shared supply alias
-1A5,DDR3_ODT0,output,Manufacturer interface role / shared supply alias
-1A5,LPDDR3_CS1n,output,Manufacturer interface role / shared supply alias
-1B5,DDR4_ODT1,output,Manufacturer interface role / shared supply alias
-1B5,LPDDR4_CS0n_B,output,Manufacturer interface role / shared supply alias
-1B5,DDR3_CS0n,output,Manufacturer interface role / shared supply alias
-1B5,LPDDR3_CS0n,output,Manufacturer interface role / shared supply alias
-1C7,DDR4_RESETn,output,Manufacturer interface role / shared supply alias
-1C7,LPDDR4_RESETn,output,Manufacturer interface role / shared supply alias
-1C7,DDR3_RESETn,output,Manufacturer interface role / shared supply alias
-1P18,REFCLK_OUT,output,Manufacturer interface role / shared supply alias
-1R20,TSADC_SHUT_M0,unspecified,Direction review pending
-1R20,TSADC_SHUT_ORG,unspecified,Direction review pending
-1P19,PMIC_SLEEP,unspecified,Direction review pending
-1P19,TSADC_SHUT_M1,unspecified,Direction review pending
-AF37,SDMMC0_DET,input,Manufacturer interface role / shared supply alias
+G2,DDR4_DQL0_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+G2,LPDDR4_DQ0_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+G2,DDR3_DQ0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+G2,LPDDR3_DQ15,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F2,DDR4_DQL2_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F2,LPDDR4_DQ1_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F2,DDR3_DQ1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F2,LPDDR3_DQ14,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F1,DDR4_DQL4_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F1,LPDDR4_DQ2_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F1,DDR3_DQ2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F1,LPDDR3_DQ10,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+E1,DDR4_DQL6_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+E1,LPDDR4_DQ3_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+E1,DDR3_DQ3,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+E1,LPDDR3_DQ9,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+M2,DDR4_DQL7_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+M2,LPDDR4_DQ4_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+M2,DDR3_DQ4,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+M2,LPDDR3_DQ13,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+K1,DDR4_DQL5_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+K1,LPDDR4_DQ5_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+K1,DDR3_DQ5,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+K1,LPDDR3_DQ12,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+K2,DDR4_DQL3_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+K2,LPDDR4_DQ6_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+K2,DDR3_DQ6,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+K2,LPDDR3_DQ8,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E1,DDR4_DQL1_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E1,LPDDR4_DQ7_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E1,DDR3_DQ7,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E1,LPDDR3_DQ11,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E2,DDR4_DML_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E2,LPDDR4_DM0_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E2,DDR3_DM0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E2,LPDDR3_DM1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+H2,DDR4_DQSL_P_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+H2,LPDDR4_DQS0P_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+H2,DDR3_DQS0P,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+H2,LPDDR3_DQS1P,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+H1,DDR4_DQSL_N_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+H1,LPDDR4_DQS0N_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+H1,DDR3_DQS0N,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+H1,LPDDR3_DQS1N,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+P2,DDR4_DQU3_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+P2,LPDDR4_DQ8_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+P2,DDR3_DQ8,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+P2,LPDDR3_DQ25,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+R1,DDR4_DQU1_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+R1,LPDDR4_DQ9_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+R1,DDR3_DQ9,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+R1,LPDDR3_DQ24,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+R2,DDR4_DQU7_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+R2,LPDDR4_DQ10_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+R2,DDR3_DQ10,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+R2,LPDDR3_DQ28,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+T2,DDR4_DQU5_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+T2,LPDDR4_DQ11_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+T2,DDR3_DQ11,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+T2,LPDDR3_DQ29,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+M1,DDR4_DQU2_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+M1,LPDDR4_DQ12_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+M1,DDR3_DQ12,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+M1,LPDDR3_DQ26,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F2,DDR4_DQU4_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F2,LPDDR4_DQ13_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F2,DDR3_DQ13,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F2,LPDDR3_DQ31,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F1,DDR4_DQU6_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F1,LPDDR4_DQ14_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F1,DDR3_DQ14,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F1,LPDDR3_DQ30,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1G2,DDR4_DQU0_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1G2,LPDDR4_DQ15_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1G2,DDR3_DQ15,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1G2,LPDDR3_DQ27,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1G1,DDR4_DMU_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1G1,LPDDR4_DM1_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1G1,DDR3_DM1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1G1,LPDDR3_DM3,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+N1,DDR4_DQSU_P_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+N1,LPDDR4_DQS1P_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+N1,DDR3_DQS1P,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+N1,LPDDR3_DQS3P,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+N2,DDR4_DQSU_N_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+N2,LPDDR4_DQS1N_A,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+N2,DDR3_DQS1N,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+N2,LPDDR3_DQS3N,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B12,DDR4_DQU7_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B12,LPDDR4_DQ0_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B12,DDR3_DQ16,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B12,LPDDR3_DQ1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B10,DDR4_DQU5_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B10,LPDDR4_DQ1_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B10,DDR3_DQ17,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B10,LPDDR3_DQ5,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A8,DDR4_DQU3_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A8,LPDDR4_DQ2_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A8,DDR3_DQ18,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A8,LPDDR3_DQ6,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A7,DDR4_DQU1_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A7,LPDDR4_DQ3_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A7,DDR3_DQ19,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A7,LPDDR3_DQ4,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B13,DDR4_DQU0_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B13,LPDDR4_DQ4_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B13,DDR3_DQ20,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B13,LPDDR3_DQ2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A10,DDR4_DQU6_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A10,LPDDR4_DQ5_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A10,DDR3_DQ21,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A10,LPDDR3_DQ3,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B9,DDR4_DQU4_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B9,LPDDR4_DQ6_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B9,DDR3_DQ22,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B9,LPDDR3_DQ7,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A9,DDR4_DQU2_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A9,LPDDR4_DQ7_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A9,DDR3_DQ23,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A9,LPDDR3_DQ0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B8,DDR4_DMU_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B8,LPDDR4_DM0_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B8,DDR3_DM2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B8,LPDDR3_DM0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A13,DDR4_DQSU_P_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A13,LPDDR4_DQS0P_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A13,DDR3_DQS2P,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A13,LPDDR3_DQS0P,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A12,DDR4_DQSU_N_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A12,LPDDR4_DQS0N_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A12,DDR3_DQS2N,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A12,LPDDR3_DQS0N,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B19,DDR4_DQL0_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B19,LPDDR4_DQ8_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B19,DDR3_DQ24,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B19,LPDDR3_DQ18,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A19,DDR4_DQL2_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A19,LPDDR4_DQ9_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A19,DDR3_DQ25,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A19,LPDDR3_DQ19,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A20,DDR4_DQL4_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A20,LPDDR4_DQ10_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A20,DDR3_DQ26,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A20,LPDDR3_DQ22,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B20,DDR4_DQL6_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B20,LPDDR4_DQ11_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B20,DDR3_DQ27,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B20,LPDDR3_DQ23,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A15,DDR4_DQL7_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A15,LPDDR4_DQ12_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A15,DDR3_DQ28,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A15,LPDDR3_DQ16,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B15,DDR4_DQL5_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B15,LPDDR4_DQ13_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B15,DDR3_DQ29,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B15,LPDDR3_DQ17,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C10,DDR4_DQL1_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C10,LPDDR4_DQ14_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C10,DDR3_DQ30,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C10,LPDDR3_DQ20,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B16,DDR4_DQL3_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B16,LPDDR4_DQ15_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B16,DDR3_DQ31,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B16,LPDDR3_DQ21,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A11,DDR4_DML_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A11,LPDDR4_DM1_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A11,DDR3_DM3,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A11,LPDDR3_DM2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A17,DDR4_DQSL_P_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A17,LPDDR4_DQS1P_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A17,DDR3_DQS3P,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A17,LPDDR3_DQS2P,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B17,DDR4_DQSL_N_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B17,LPDDR4_DQS1N_B,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B17,DDR3_DQS3N,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B17,LPDDR3_DQS2N,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A7,DDR4_A0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A7,LPDDR4_CLKP_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A7,DDR3_A9,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D2,DDR4_A1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D2,DDR3_A2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C1,DDR4_A2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C1,LPDDR4_A1_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C1,DDR3_A4,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C1,LPDDR3_A6,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C3,DDR4_A3,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C3,LPDDR4_CKE1_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C3,DDR3_A3,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B6,DDR4_A4,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B6,LPDDR4_A3_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B6,DDR3_BA1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B6,LPDDR3_A3,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B8,DDR4_A5,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B8,LPDDR4_A5_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B8,DDR3_A11,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B8,LPDDR3_A2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B9,DDR4_A6,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B9,LPDDR4_A1_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B9,DDR3_A13,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B9,LPDDR3_A1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A10,DDR4_A7,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A10,LPDDR4_ODT0_CA_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A10,DDR3_A8,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+E2,DDR4_A8,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+E2,LPDDR4_ODT0_CA_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+E2,DDR3_A6,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+E2,LPDDR3_A9,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B7,DDR4_A9,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B7,LPDDR4_CLKN_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B7,DDR3_A5,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A3,DDR4_A10,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A3,LPDDR4_CKE0_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A3,DDR3_A10,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C2,DDR4_A11,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C2,LPDDR4_A0_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C2,DDR3_A7,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C2,LPDDR3_A8,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B3,DDR4_A12,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B3,LPDDR4_A3_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B3,DDR3_BA2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A9,DDR4_A13,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A9,LPDDR4_A0_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A9,DDR3_A14,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A9,LPDDR3_A0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B1,DDR4_A14_WEn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B1,LPDDR4_A4_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B1,DDR3_A15,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B1,LPDDR3_A5,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C1,DDR4_A15_CASn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C1,LPDDR4_A2_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C1,DDR3_A0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A1,DDR4_A16_RASn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A1,LPDDR4_A5_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A1,DDR3_RASn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A1,LPDDR3_A7,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A2,DDR4_ACTn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A2,LPDDR4_CKE1_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A2,DDR3_CASn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B7,DDR4_BA0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B7,LPDDR4_A2_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B7,DDR3_A1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A6,DDR4_BA1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A6,LPDDR4_A4_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A6,DDR3_A12,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A6,LPDDR3_A4,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A4,DDR4_BG0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A4,LPDDR4_ODT1_CA_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A4,DDR3_WEn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C2,DDR4_BG1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C2,LPDDR4_ODT1_CA_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C2,DDR3_BA0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B4,DDR4_CKE,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B4,LPDDR4_CKE0_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B4,DDR3_CKE,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B4,LPDDR3_CKE,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A5,DDR4_CLKP,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A5,LPDDR4_CLKP_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A5,DDR3_CLKP,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A5,LPDDR3_CLKP,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B5,DDR4_CLKN,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B5,LPDDR4_CLKN_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B5,DDR3_CLKN,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B5,LPDDR3_CLKN,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B3,DDR4_CS0n,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B3,LPDDR4_CS0n_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B3,DDR3_ODT1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B3,LPDDR3_ODT0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A3,DDR4_CS1n,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A3,LPDDR4_CS1n_A,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A3,DDR3_CS1n,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A3,LPDDR3_ODT1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A5,DDR4_ODT0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A5,LPDDR4_CS1n_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A5,DDR3_ODT0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A5,LPDDR3_CS1n,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B5,DDR4_ODT1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B5,LPDDR4_CS0n_B,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B5,DDR3_CS0n,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B5,LPDDR3_CS0n,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C7,DDR4_RESETn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C7,LPDDR4_RESETn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C7,DDR3_RESETn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P18,REFCLK_OUT,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R20,TSADC_SHUT_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R20,TSADC_SHUT_ORG,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P19,PMIC_SLEEP,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P19,TSADC_SHUT_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AF37,SDMMC0_DET,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AF37,SATA_CP_DET,unspecified,Direction review pending
-AG37,SDMMC0_PWREN,output,Manufacturer interface role / shared supply alias
+AG37,SDMMC0_PWREN,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AG37,SATA_MP_SWITCH,unspecified,Direction review pending
-AG37,PCIE20_CLKREQn_M0,input,Manufacturer interface role / shared supply alias
+AG37,PCIE20_CLKREQn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AJ38,GPU_PWREN,unspecified,Direction review pending
 AJ38,SATA_CP_POD,unspecified,Direction review pending
-AF38,FLASH_VOL_SEL,input,Manufacturer interface role / shared supply alias
-1T20,CLK32K_IN,input,Manufacturer interface role / shared supply alias
-1T20,CLK32K_OUT0,output,Manufacturer interface role / shared supply alias
-AJ37,I2C0_SCL,bidirectional,Manufacturer interface role / shared supply alias
-AK38,I2C0_SDA,bidirectional,Manufacturer interface role / shared supply alias
-AK37,I2C1_SCL,bidirectional,Manufacturer interface role / shared supply alias
-AK37,MCU_JTAG_TDO,unspecified,Direction review pending
-AM38,I2C1_SDA,bidirectional,Manufacturer interface role / shared supply alias
-AM38,PCIE20_BUTTONRSTn,input,Manufacturer interface role / shared supply alias
-AM38,MCU_JTAG_TCK,unspecified,Direction review pending
-1U20,I2C2_SCL_M0,bidirectional,Manufacturer interface role / shared supply alias
-1U20,SPI0_CLK_M0,bidirectional,Manufacturer interface role / shared supply alias
-1U20,PCIE20_WAKEn_M0,bidirectional,Manufacturer interface role / shared supply alias
-1U20,PWM1_M1,bidirectional,Manufacturer interface role / shared supply alias
-1R16,I2C2_SDA_M0,bidirectional,Manufacturer interface role / shared supply alias
-1R16,SPI0_MOSI_M0,bidirectional,Manufacturer interface role / shared supply alias
-1R16,PCIE20_PERSTn_M0,input,Manufacturer interface role / shared supply alias
-1R16,PWM2_M1,bidirectional,Manufacturer interface role / shared supply alias
-1R17,PWM0_M0,bidirectional,Manufacturer interface role / shared supply alias
+AF38,FLASH_VOL_SEL,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T20,CLK32K_IN,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T20,CLK32K_OUT0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AJ37,I2C0_SCL,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AK38,I2C0_SDA,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AK37,I2C1_SCL,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AK37,MCU_JTAG_TDO,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AM38,I2C1_SDA,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AM38,PCIE20_BUTTONRSTn,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AM38,MCU_JTAG_TCK,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U20,I2C2_SCL_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U20,SPI0_CLK_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U20,PCIE20_WAKEn_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U20,PWM1_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R16,I2C2_SDA_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R16,SPI0_MOSI_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R16,PCIE20_PERSTn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R16,PWM2_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R17,PWM0_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1R17,CPUAVS,unspecified,Direction review pending
-1T19,PWM1_M0,bidirectional,Manufacturer interface role / shared supply alias
+1T19,PWM1_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1T19,GPUAVS,unspecified,Direction review pending
-1T19,UART0_RX,input,Manufacturer interface role / shared supply alias
-1R18,PWM2_M0,bidirectional,Manufacturer interface role / shared supply alias
+1T19,UART0_RX,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R18,PWM2_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1R18,NPUAVS,unspecified,Direction review pending
-1R18,UART0_TX,output,Manufacturer interface role / shared supply alias
-1R18,MCU_JTAG_TDI,unspecified,Direction review pending
-AM37,PWM3_IR,bidirectional,Manufacturer interface role / shared supply alias
-AM37,EDP_HPDIN_M1,input,Manufacturer interface role / shared supply alias
-AM37,MCU_JTAG_TMS,unspecified,Direction review pending
-AN38,PWM4,bidirectional,Manufacturer interface role / shared supply alias
+1R18,UART0_TX,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R18,MCU_JTAG_TDI,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AM37,PWM3_IR,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AM37,EDP_HPDIN_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AM37,MCU_JTAG_TMS,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AN38,PWM4,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AN38,VOP_PWM_M0,unspecified,Direction review pending
-AN38,MCU_JTAG_TRSTn,unspecified,Direction review pending
-AN37,PWM5,bidirectional,Manufacturer interface role / shared supply alias
-AN37,SPI0_CS1_M0,bidirectional,Manufacturer interface role / shared supply alias
-AN37,UART0_RTSn,output,Manufacturer interface role / shared supply alias
-1U19,PWM6,bidirectional,Manufacturer interface role / shared supply alias
-1U19,SPI0_MISO_M0,bidirectional,Manufacturer interface role / shared supply alias
-1T18,PWM7_IR,bidirectional,Manufacturer interface role / shared supply alias
-1T18,SPI0_CS0_M0,bidirectional,Manufacturer interface role / shared supply alias
-1V20,HDMITX_CEC_M1,unspecified,Direction review pending
-1V20,PWM0_M1,bidirectional,Manufacturer interface role / shared supply alias
-1V20,UART0_CTSn,input,Manufacturer interface role / shared supply alias
-1V19,UART2_RX_M0,input,Manufacturer interface role / shared supply alias
-1U18,UART2_TX_M0,output,Manufacturer interface role / shared supply alias
-A22,I2C3_SDA_M0,bidirectional,Manufacturer interface role / shared supply alias
-A22,UART3_RX_M0,input,Manufacturer interface role / shared supply alias
+AN38,MCU_JTAG_TRSTn,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AN37,PWM5,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AN37,SPI0_CS1_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AN37,UART0_RTSn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U19,PWM6,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U19,SPI0_MISO_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T18,PWM7_IR,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T18,SPI0_CS0_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V20,HDMITX_CEC_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V20,PWM0_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V20,UART0_CTSn,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V19,UART2_RX_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U18,UART2_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A22,I2C3_SDA_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A22,UART3_RX_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 A22,AUDIOPWM_LOUT_P,unspecified,Direction review pending
-B22,I2C3_SCL_M0,bidirectional,Manufacturer interface role / shared supply alias
-B22,UART3_TX_M0,output,Manufacturer interface role / shared supply alias
+B22,I2C3_SCL_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B22,UART3_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 B22,AUDIOPWM_LOUT_N,unspecified,Direction review pending
-A23,I2S1_MCLK_M0,output,Manufacturer interface role / shared supply alias
-A23,UART3_RTSn_M0,output,Manufacturer interface role / shared supply alias
-A23,SCR_CLK,output,Manufacturer interface role / shared supply alias
-B23,I2S1_SCLK_TX_M0,bidirectional,Manufacturer interface role / shared supply alias
-B23,UART3_CTSn_M0,input,Manufacturer interface role / shared supply alias
-B23,SCR_IO,bidirectional,Manufacturer interface role / shared supply alias
-1A13,I2S1_SCLK_RX_M0,bidirectional,Manufacturer interface role / shared supply alias
-1A13,UART4_RX_M0,input,Manufacturer interface role / shared supply alias
-1A13,PDM_CLK1_M0,output,Manufacturer interface role / shared supply alias
-1A13,SPDIF_TX_M0,output,Manufacturer interface role / shared supply alias
-B24,I2S1_LRCK_TX_M0,bidirectional,Manufacturer interface role / shared supply alias
-B24,UART4_RTSn_M0,output,Manufacturer interface role / shared supply alias
-B24,SCR_RST,output,Manufacturer interface role / shared supply alias
-1A14,I2S1_LRCK_RX_M0,bidirectional,Manufacturer interface role / shared supply alias
-1A14,UART4_TX_M0,output,Manufacturer interface role / shared supply alias
-1A14,PDM_CLK0_M0,output,Manufacturer interface role / shared supply alias
+A23,I2S1_MCLK_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A23,UART3_RTSn_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A23,SCR_CLK,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B23,I2S1_SCLK_TX_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B23,UART3_CTSn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B23,SCR_IO,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A13,I2S1_SCLK_RX_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A13,UART4_RX_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A13,PDM_CLK1_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A13,SPDIF_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B24,I2S1_LRCK_TX_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B24,UART4_RTSn_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B24,SCR_RST,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A14,I2S1_LRCK_RX_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A14,UART4_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A14,PDM_CLK0_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1A14,AUDIOPWM_ROUT_P,unspecified,Direction review pending
-B25,I2S1_SDO0_M0,output,Manufacturer interface role / shared supply alias
-B25,UART4_CTSn_M0,input,Manufacturer interface role / shared supply alias
-B25,SCR_DET,input,Manufacturer interface role / shared supply alias
+B25,I2S1_SDO0_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B25,UART4_CTSn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B25,SCR_DET,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 B25,AUDIOPWM_ROUT_N,unspecified,Direction review pending
-1B13,I2S1_SDO1_M0,output,Manufacturer interface role / shared supply alias
-1B13,I2S1_SDI3_M0,input,Manufacturer interface role / shared supply alias
-1B13,PDM_SDI3_M0,input,Manufacturer interface role / shared supply alias
-1B13,PCIE20_CLKREQn_M2,input,Manufacturer interface role / shared supply alias
-A26,I2S1_SDO2_M0,output,Manufacturer interface role / shared supply alias
-A26,I2S1_SDI2_M0,input,Manufacturer interface role / shared supply alias
-A26,PDM_SDI2_M0,input,Manufacturer interface role / shared supply alias
-A26,PCIE20_WAKEn_M2,bidirectional,Manufacturer interface role / shared supply alias
-B26,I2S1_SDO3_M0,output,Manufacturer interface role / shared supply alias
-B26,I2S1_SDI1_M0,input,Manufacturer interface role / shared supply alias
-B26,PDM_SDI1_M0,input,Manufacturer interface role / shared supply alias
-B26,PCIE20_PERSTn_M2,input,Manufacturer interface role / shared supply alias
-1B14,I2S1_SDI0_M0,input,Manufacturer interface role / shared supply alias
-1B14,PDM_SDI0_M0,input,Manufacturer interface role / shared supply alias
-A32,EMMC_D0,bidirectional,Manufacturer interface role / shared supply alias
-A32,FLASH_D0,unspecified,Direction review pending
-B27,EMMC_D1,bidirectional,Manufacturer interface role / shared supply alias
-B27,FLASH_D1,unspecified,Direction review pending
-B32,EMMC_D2,bidirectional,Manufacturer interface role / shared supply alias
-B32,FLASH_D2,unspecified,Direction review pending
-B29,EMMC_D3,bidirectional,Manufacturer interface role / shared supply alias
-B29,FLASH_D3,unspecified,Direction review pending
-B33,EMMC_D4,bidirectional,Manufacturer interface role / shared supply alias
-B33,FLASH_D4,unspecified,Direction review pending
-A30,EMMC_D5,bidirectional,Manufacturer interface role / shared supply alias
-A30,FLASH_D5,unspecified,Direction review pending
-B30,EMMC_D6,bidirectional,Manufacturer interface role / shared supply alias
-B30,FLASH_D6,unspecified,Direction review pending
-A33,EMMC_D7,bidirectional,Manufacturer interface role / shared supply alias
-A33,FLASH_D7,unspecified,Direction review pending
-A27,EMMC_CMD,bidirectional,Manufacturer interface role / shared supply alias
-A27,FLASH_WRn,unspecified,Direction review pending
-A29,EMMC_CLKOUT,output,Manufacturer interface role / shared supply alias
-A29,FLASH_DQS,unspecified,Direction review pending
-1A16,EMMC_DATA_STROBE,input,Manufacturer interface role / shared supply alias
-1A16,FSPI_CS1n,unspecified,Direction review pending
-1A16,FLASH_CLE,unspecified,Direction review pending
-1B16,EMMC_RSTn,output,Manufacturer interface role / shared supply alias
-1B16,FSPI_D2,unspecified,Direction review pending
+1B13,I2S1_SDO1_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B13,I2S1_SDI3_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B13,PDM_SDI3_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B13,PCIE20_CLKREQn_M2,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A26,I2S1_SDO2_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A26,I2S1_SDI2_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A26,PDM_SDI2_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A26,PCIE20_WAKEn_M2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B26,I2S1_SDO3_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B26,I2S1_SDI1_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B26,PDM_SDI1_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B26,PCIE20_PERSTn_M2,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B14,I2S1_SDI0_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B14,PDM_SDI0_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A32,EMMC_D0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A32,FLASH_D0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B27,EMMC_D1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B27,FLASH_D1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B32,EMMC_D2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B32,FLASH_D2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B29,EMMC_D3,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B29,FLASH_D3,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B33,EMMC_D4,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B33,FLASH_D4,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A30,EMMC_D5,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A30,FLASH_D5,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B30,EMMC_D6,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B30,FLASH_D6,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A33,EMMC_D7,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A33,FLASH_D7,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A27,EMMC_CMD,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A27,FLASH_WRn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A29,EMMC_CLKOUT,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A29,FLASH_DQS,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A16,EMMC_DATA_STROBE,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A16,FSPI_CS1n,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A16,FLASH_CLE,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B16,EMMC_RSTn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B16,FSPI_D2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1B16,FLASH_WPn,unspecified,Direction review pending
-1A15,FSPI_CLK,unspecified,Direction review pending
-1A15,FLASH_ALE,unspecified,Direction review pending
-1A17,FSPI_D0,unspecified,Direction review pending
-1A17,FLASH_RDY,unspecified,Direction review pending
-1A18,FSPI_D1,unspecified,Direction review pending
-1A18,FLASH_RDn,unspecified,Direction review pending
-1B17,FSPI_CS0n,unspecified,Direction review pending
-1B17,FLASH_CS0n,unspecified,Direction review pending
-1C15,FSPI_D3,unspecified,Direction review pending
-1C15,FLASH_CS1n,unspecified,Direction review pending
-1E20,SDMMC0_D0,bidirectional,Manufacturer interface role / shared supply alias
-1E20,UART2_TX_M1,output,Manufacturer interface role / shared supply alias
-1E20,UART6_TX_M1,output,Manufacturer interface role / shared supply alias
-1E20,PWM8_M1,bidirectional,Manufacturer interface role / shared supply alias
-1F19,SDMMC0_D1,bidirectional,Manufacturer interface role / shared supply alias
-1F19,UART2_RX_M1,input,Manufacturer interface role / shared supply alias
-1F19,UART6_RX_M1,input,Manufacturer interface role / shared supply alias
-1F19,PWM9_M1,bidirectional,Manufacturer interface role / shared supply alias
-1D20,SDMMC0_D2,bidirectional,Manufacturer interface role / shared supply alias
-1D20,ARM_JTAG_TCK,unspecified,Direction review pending
-1D20,UART5_CTSn_M0,input,Manufacturer interface role / shared supply alias
-1F18,SDMMC0_D3,bidirectional,Manufacturer interface role / shared supply alias
-1F18,ARM_JTAG_TMS,unspecified,Direction review pending
-1F18,UART5_RTSn_M0,output,Manufacturer interface role / shared supply alias
-1E19,SDMMC0_CMD,bidirectional,Manufacturer interface role / shared supply alias
-1E19,PWM10_M1,bidirectional,Manufacturer interface role / shared supply alias
-1E19,UART5_RX_M0,input,Manufacturer interface role / shared supply alias
-G38,SDMMC0_CLK,output,Manufacturer interface role / shared supply alias
+1A15,FSPI_CLK,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A15,FLASH_ALE,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A17,FSPI_D0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A17,FLASH_RDY,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A18,FSPI_D1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A18,FLASH_RDn,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B17,FSPI_CS0n,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B17,FLASH_CS0n,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C15,FSPI_D3,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C15,FLASH_CS1n,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E20,SDMMC0_D0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E20,UART2_TX_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E20,UART6_TX_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E20,PWM8_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F19,SDMMC0_D1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F19,UART2_RX_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F19,UART6_RX_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F19,PWM9_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D20,SDMMC0_D2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D20,ARM_JTAG_TCK,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D20,UART5_CTSn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F18,SDMMC0_D3,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F18,ARM_JTAG_TMS,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1F18,UART5_RTSn_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E19,SDMMC0_CMD,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E19,PWM10_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E19,UART5_RX_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+G38,SDMMC0_CLK,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 G38,TEST_CLKOUT,unspecified,Direction review pending
-G38,UART5_TX_M0,output,Manufacturer interface role / shared supply alias
-1C19,SDMMC1_D0,bidirectional,Manufacturer interface role / shared supply alias
-1C19,UART6_RX_M0,input,Manufacturer interface role / shared supply alias
-1E18,SDMMC1_D1,bidirectional,Manufacturer interface role / shared supply alias
-1E18,UART6_TX_M0,output,Manufacturer interface role / shared supply alias
-1D18,SDMMC1_D2,bidirectional,Manufacturer interface role / shared supply alias
-1D18,UART7_RX_M0,input,Manufacturer interface role / shared supply alias
-1A20,SDMMC1_D3,bidirectional,Manufacturer interface role / shared supply alias
-1A20,UART7_TX_M0,output,Manufacturer interface role / shared supply alias
-B35,SDMMC1_CMD,bidirectional,Manufacturer interface role / shared supply alias
-B35,UART9_RX_M0,input,Manufacturer interface role / shared supply alias
-B37,SDMMC1_CLK,output,Manufacturer interface role / shared supply alias
-B37,UART9_TX_M0,output,Manufacturer interface role / shared supply alias
-A35,SDMMC1_PWREN,output,Manufacturer interface role / shared supply alias
-A35,I2C4_SDA_M1,bidirectional,Manufacturer interface role / shared supply alias
-A35,UART8_RTSn_M0,output,Manufacturer interface role / shared supply alias
-B34,SDMMC1_DET,input,Manufacturer interface role / shared supply alias
-B34,I2C4_SCL_M1,bidirectional,Manufacturer interface role / shared supply alias
-B34,UART8_CTSn_M0,input,Manufacturer interface role / shared supply alias
-1C20,UART1_RX_M0,input,Manufacturer interface role / shared supply alias
-F38,UART1_TX_M0,output,Manufacturer interface role / shared supply alias
-F37,UART1_RTSn_M0,output,Manufacturer interface role / shared supply alias
-F37,SPI1_CLK_M0,bidirectional,Manufacturer interface role / shared supply alias
-G37,UART1_CTSn_M0,input,Manufacturer interface role / shared supply alias
-G37,SPI1_MISO_M0,bidirectional,Manufacturer interface role / shared supply alias
-D38,I2S2_SCLK_RX_M0,bidirectional,Manufacturer interface role / shared supply alias
-D38,UART6_RTSn_M0,output,Manufacturer interface role / shared supply alias
-D38,SPI1_MOSI_M0,bidirectional,Manufacturer interface role / shared supply alias
-A37,I2S2_LRCK_RX_M0,bidirectional,Manufacturer interface role / shared supply alias
-A37,UART6_CTSn_M0,input,Manufacturer interface role / shared supply alias
-A37,SPI1_CS0_M0,bidirectional,Manufacturer interface role / shared supply alias
-B36,I2S2_MCLK_M0,output,Manufacturer interface role / shared supply alias
+G38,UART5_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C19,SDMMC1_D0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C19,UART6_RX_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E18,SDMMC1_D1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1E18,UART6_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D18,SDMMC1_D2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D18,UART7_RX_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A20,SDMMC1_D3,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1A20,UART7_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B35,SDMMC1_CMD,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B35,UART9_RX_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B37,SDMMC1_CLK,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B37,UART9_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A35,SDMMC1_PWREN,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A35,I2C4_SDA_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A35,UART8_RTSn_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B34,SDMMC1_DET,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B34,I2C4_SCL_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B34,UART8_CTSn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1C20,UART1_RX_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F38,UART1_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F37,UART1_RTSn_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+F37,SPI1_CLK_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+G37,UART1_CTSn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+G37,SPI1_MISO_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+D38,I2S2_SCLK_RX_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+D38,UART6_RTSn_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+D38,SPI1_MOSI_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A37,I2S2_LRCK_RX_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A37,UART6_CTSn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+A37,SPI1_CS0_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B36,I2S2_MCLK_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 B36,ETH0_REFCLKO_25M,unspecified,Direction review pending
-B36,UART7_RTSn_M0,output,Manufacturer interface role / shared supply alias
-B36,SPI2_CLK_M0,bidirectional,Manufacturer interface role / shared supply alias
-C37,I2S2_SCLK_TX_M0,bidirectional,Manufacturer interface role / shared supply alias
-C37,UART7_CTSn_M0,input,Manufacturer interface role / shared supply alias
-C37,SPI2_MISO_M0,bidirectional,Manufacturer interface role / shared supply alias
-1D19,I2S2_LRCK_TX_M0,bidirectional,Manufacturer interface role / shared supply alias
-1D19,UART9_RTSn_M0,output,Manufacturer interface role / shared supply alias
-1D19,SPI2_MOSI_M0,bidirectional,Manufacturer interface role / shared supply alias
-1B20,I2S2_SDO_M0,output,Manufacturer interface role / shared supply alias
-1B20,UART9_CTSn_M0,input,Manufacturer interface role / shared supply alias
-1B20,SPI2_CS0_M0,bidirectional,Manufacturer interface role / shared supply alias
-D37,I2S2_SDI_M0,input,Manufacturer interface role / shared supply alias
-D37,UART8_TX_M0,output,Manufacturer interface role / shared supply alias
-D37,SPI2_CS1_M0,bidirectional,Manufacturer interface role / shared supply alias
-B38,CLK32K_OUT1,output,Manufacturer interface role / shared supply alias
-B38,UART8_RX_M0,input,Manufacturer interface role / shared supply alias
-B38,SPI1_CS1_M0,bidirectional,Manufacturer interface role / shared supply alias
+B36,UART7_RTSn_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B36,SPI2_CLK_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C37,I2S2_SCLK_TX_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C37,UART7_CTSn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+C37,SPI2_MISO_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D19,I2S2_LRCK_TX_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D19,UART9_RTSn_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1D19,SPI2_MOSI_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B20,I2S2_SDO_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B20,UART9_CTSn_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1B20,SPI2_CS0_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+D37,I2S2_SDI_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+D37,UART8_TX_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+D37,SPI2_CS1_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B38,CLK32K_OUT1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B38,UART8_RX_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+B38,SPI1_CS1_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1U5,VOP_BT1120_D0,unspecified,Direction review pending
-1U5,SPI1_CS0_M1,bidirectional,Manufacturer interface role / shared supply alias
-1U5,SDMMC2_D0_M1,bidirectional,Manufacturer interface role / shared supply alias
+1U5,SPI1_CS0_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U5,SDMMC2_D0_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AR10,VOP_BT1120_D1,unspecified,Direction review pending
-AR10,GMAC1_TXD2_M0,output,Manufacturer interface role / shared supply alias
-AR10,I2S3_MCLK_M0,output,Manufacturer interface role / shared supply alias
-AR10,SDMMC2_D1_M1,bidirectional,Manufacturer interface role / shared supply alias
+AR10,GMAC1_TXD2_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR10,I2S3_MCLK_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR10,SDMMC2_D1_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AP10,VOP_BT1120_D2,unspecified,Direction review pending
-AP10,GMAC1_TXD3_M0,output,Manufacturer interface role / shared supply alias
-AP10,I2S3_SCLK_M0,bidirectional,Manufacturer interface role / shared supply alias
-AP10,SDMMC2_D2_M1,bidirectional,Manufacturer interface role / shared supply alias
+AP10,GMAC1_TXD3_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP10,I2S3_SCLK_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP10,SDMMC2_D2_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AR9,VOP_BT1120_D3,unspecified,Direction review pending
-AR9,GMAC1_RXD2_M0,input,Manufacturer interface role / shared supply alias
-AR9,I2S3_LRCK_M0,bidirectional,Manufacturer interface role / shared supply alias
-AR9,SDMMC2_D3_M1,bidirectional,Manufacturer interface role / shared supply alias
+AR9,GMAC1_RXD2_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR9,I2S3_LRCK_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR9,SDMMC2_D3_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AP9,VOP_BT1120_D4,unspecified,Direction review pending
-AP9,GMAC1_RXD3_M0,input,Manufacturer interface role / shared supply alias
-AP9,I2S3_SDO_M0,output,Manufacturer interface role / shared supply alias
-AP9,SDMMC2_CMD_M1,bidirectional,Manufacturer interface role / shared supply alias
+AP9,GMAC1_RXD3_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP9,I2S3_SDO_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP9,SDMMC2_CMD_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1U4,VOP_BT1120_CLK,unspecified,Direction review pending
-1U4,GMAC1_TXCLK_M0,output,Manufacturer interface role / shared supply alias
-1U4,I2S3_SDI_M0,input,Manufacturer interface role / shared supply alias
-1U4,SDMMC2_CLK_M1,output,Manufacturer interface role / shared supply alias
+1U4,GMAC1_TXCLK_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U4,I2S3_SDI_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U4,SDMMC2_CLK_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1V3,VOP_BT1120_D5,unspecified,Direction review pending
-1V3,GMAC1_RXCLK_M0,input,Manufacturer interface role / shared supply alias
-1V3,SDMMC2_DET_M1,input,Manufacturer interface role / shared supply alias
+1V3,GMAC1_RXCLK_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V3,SDMMC2_DET_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AR7,VOP_BT1120_D6,unspecified,Direction review pending
 AR7,ETH1_REFCLKO_25M_M0,unspecified,Direction review pending
-AR7,SDMMC2_PWREN_M1,output,Manufacturer interface role / shared supply alias
+AR7,SDMMC2_PWREN_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AP7,VOP_BT1120_D7,unspecified,Direction review pending
-AP7,GMAC1_RXD0_M0,input,Manufacturer interface role / shared supply alias
-AP7,UART4_RX_M1,input,Manufacturer interface role / shared supply alias
-AP7,PWM8_M0,bidirectional,Manufacturer interface role / shared supply alias
+AP7,GMAC1_RXD0_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP7,UART4_RX_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP7,PWM8_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AR6,VOP_BT1120_D8,unspecified,Direction review pending
-AR6,GMAC1_RXD1_M0,input,Manufacturer interface role / shared supply alias
-AR6,UART4_TX_M1,output,Manufacturer interface role / shared supply alias
-AR6,PWM9_M0,bidirectional,Manufacturer interface role / shared supply alias
+AR6,GMAC1_RXD1_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR6,UART4_TX_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR6,PWM9_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AP6,VOP_BT1120_D9,unspecified,Direction review pending
-AP6,GMAC1_RXDV_CRS_M0,input,Manufacturer interface role / shared supply alias
-AP6,I2C5_SCL_M0,bidirectional,Manufacturer interface role / shared supply alias
-AP6,PDM_SDI0_M2,input,Manufacturer interface role / shared supply alias
+AP6,GMAC1_RXDV_CRS_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP6,I2C5_SCL_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP6,PDM_SDI0_M2,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1U3,VOP_BT1120_D10,unspecified,Direction review pending
-1U3,GMAC1_RXER_M0,input,Manufacturer interface role / shared supply alias
-1U3,I2C5_SDA_M0,bidirectional,Manufacturer interface role / shared supply alias
-1U3,PDM_SDI1_M2,input,Manufacturer interface role / shared supply alias
+1U3,GMAC1_RXER_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U3,I2C5_SDA_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U3,PDM_SDI1_M2,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1T4,VOP_BT1120_D11,unspecified,Direction review pending
-1T4,GMAC1_TXD0_M0,output,Manufacturer interface role / shared supply alias
-1T4,I2C3_SCL_M1,bidirectional,Manufacturer interface role / shared supply alias
-1T4,PWM10_M0,bidirectional,Manufacturer interface role / shared supply alias
+1T4,GMAC1_TXD0_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T4,I2C3_SCL_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T4,PWM10_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1V2,VOP_BT1120_D12,unspecified,Direction review pending
-1V2,GMAC1_TXD1_M0,output,Manufacturer interface role / shared supply alias
-1V2,I2C3_SDA_M1,bidirectional,Manufacturer interface role / shared supply alias
-1V2,PWM11_IR_M0,bidirectional,Manufacturer interface role / shared supply alias
-AP5,PWM12_M0,bidirectional,Manufacturer interface role / shared supply alias
-AP5,GMAC1_TXEN_M0,output,Manufacturer interface role / shared supply alias
-AP5,UART3_TX_M1,output,Manufacturer interface role / shared supply alias
-AP5,PDM_SDI2_M2,input,Manufacturer interface role / shared supply alias
-AR4,PWM13_M0,bidirectional,Manufacturer interface role / shared supply alias
-AR4,GMAC1_MCLKINOUT_M0,bidirectional,Manufacturer interface role / shared supply alias
-AR4,UART3_RX_M1,input,Manufacturer interface role / shared supply alias
-AR4,PDM_SDI3_M2,input,Manufacturer interface role / shared supply alias
+1V2,GMAC1_TXD1_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V2,I2C3_SDA_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V2,PWM11_IR_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP5,PWM12_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP5,GMAC1_TXEN_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP5,UART3_TX_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP5,PDM_SDI2_M2,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR4,PWM13_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR4,GMAC1_MCLKINOUT_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR4,UART3_RX_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR4,PDM_SDI3_M2,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AP4,VOP_BT1120_D13,unspecified,Direction review pending
-AP4,SPI1_MOSI_M1,bidirectional,Manufacturer interface role / shared supply alias
-AP4,PCIE20_PERSTn_M1,input,Manufacturer interface role / shared supply alias
-AP4,I2S1_SDO2_M2,output,Manufacturer interface role / shared supply alias
+AP4,SPI1_MOSI_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP4,PCIE20_PERSTn_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP4,I2S1_SDO2_M2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AP3,VOP_BT1120_D14,unspecified,Direction review pending
-AP3,SPI1_MISO_M1,bidirectional,Manufacturer interface role / shared supply alias
-AP3,UART5_TX_M1,output,Manufacturer interface role / shared supply alias
-AP3,I2S1_SDO3_M2,output,Manufacturer interface role / shared supply alias
+AP3,SPI1_MISO_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP3,UART5_TX_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP3,I2S1_SDO3_M2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AR2,VOP_BT1120_D15,unspecified,Direction review pending
-AR2,SPI1_CLK_M1,bidirectional,Manufacturer interface role / shared supply alias
-AR2,UART5_RX_M1,input,Manufacturer interface role / shared supply alias
-AR2,I2S1_SCLK_RX_M2,bidirectional,Manufacturer interface role / shared supply alias
-1P3,PWM14_M0,bidirectional,Manufacturer interface role / shared supply alias
+AR2,SPI1_CLK_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR2,UART5_RX_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR2,I2S1_SCLK_RX_M2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P3,PWM14_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1P3,VOP_PWM_M1,unspecified,Direction review pending
-1P3,GMAC1_MDC_M0,output,Manufacturer interface role / shared supply alias
-1P3,UART7_TX_M1,output,Manufacturer interface role / shared supply alias
-1P3,PDM_CLK1_M2,output,Manufacturer interface role / shared supply alias
-1P4,PWM15_IR_M0,bidirectional,Manufacturer interface role / shared supply alias
-1P4,SPDIF_TX_M1,output,Manufacturer interface role / shared supply alias
-1P4,GMAC1_MDIO_M0,bidirectional,Manufacturer interface role / shared supply alias
-1P4,UART7_RX_M1,input,Manufacturer interface role / shared supply alias
-1P4,I2S1_LRCK_RX_M2,bidirectional,Manufacturer interface role / shared supply alias
-1T2,CIF_D0,input,Manufacturer interface role / shared supply alias
+1P3,GMAC1_MDC_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P3,UART7_TX_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P3,PDM_CLK1_M2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P4,PWM15_IR_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P4,SPDIF_TX_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P4,GMAC1_MDIO_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P4,UART7_RX_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P4,I2S1_LRCK_RX_M2,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T2,CIF_D0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1T2,EBC_SDDO0,unspecified,Direction review pending
-1T2,SDMMC2_D0_M0,bidirectional,Manufacturer interface role / shared supply alias
-1T2,I2S1_MCLK_M1,output,Manufacturer interface role / shared supply alias
+1T2,SDMMC2_D0_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T2,I2S1_MCLK_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1T2,VOP_BT656_D0_M1,unspecified,Direction review pending
-1U1,CIF_D1,input,Manufacturer interface role / shared supply alias
+1U1,CIF_D1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1U1,EBC_SDDO1,unspecified,Direction review pending
-1U1,SDMMC2_D1_M0,bidirectional,Manufacturer interface role / shared supply alias
-1U1,I2S1_SCLK_TX_M1,bidirectional,Manufacturer interface role / shared supply alias
+1U1,SDMMC2_D1_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U1,I2S1_SCLK_TX_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1U1,VOP_BT656_D1_M1,unspecified,Direction review pending
-AP1,CIF_D2,input,Manufacturer interface role / shared supply alias
+AP1,CIF_D2,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AP1,EBC_SDDO2,unspecified,Direction review pending
-AP1,SDMMC2_D2_M0,bidirectional,Manufacturer interface role / shared supply alias
-AP1,I2S1_LRCK_TX_M1,bidirectional,Manufacturer interface role / shared supply alias
+AP1,SDMMC2_D2_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP1,I2S1_LRCK_TX_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AP1,VOP_BT656_D2_M1,unspecified,Direction review pending
-AN2,CIF_D3,input,Manufacturer interface role / shared supply alias
+AN2,CIF_D3,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AN2,EBC_SDDO3,unspecified,Direction review pending
-AN2,SDMMC2_D3_M0,bidirectional,Manufacturer interface role / shared supply alias
-AN2,I2S1_SDO0_M1,output,Manufacturer interface role / shared supply alias
+AN2,SDMMC2_D3_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AN2,I2S1_SDO0_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AN2,VOP_BT656_D3_M1,unspecified,Direction review pending
-AM2,CIF_D4,input,Manufacturer interface role / shared supply alias
+AM2,CIF_D4,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AM2,EBC_SDDO4,unspecified,Direction review pending
-AM2,SDMMC2_CMD_M0,bidirectional,Manufacturer interface role / shared supply alias
-AM2,I2S1_SDI0_M1,input,Manufacturer interface role / shared supply alias
+AM2,SDMMC2_CMD_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AM2,I2S1_SDI0_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AM2,VOP_BT656_D4_M1,unspecified,Direction review pending
-AM1,CIF_D5,input,Manufacturer interface role / shared supply alias
+AM1,CIF_D5,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AM1,EBC_SDDO5,unspecified,Direction review pending
-AM1,SDMMC2_CLK_M0,output,Manufacturer interface role / shared supply alias
-AM1,I2S1_SDI1_M1,input,Manufacturer interface role / shared supply alias
+AM1,SDMMC2_CLK_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AM1,I2S1_SDI1_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AM1,VOP_BT656_D5_M1,unspecified,Direction review pending
-1R2,CIF_D6,input,Manufacturer interface role / shared supply alias
+1R2,CIF_D6,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1R2,EBC_SDDO6,unspecified,Direction review pending
-1R2,SDMMC2_DET_M0,input,Manufacturer interface role / shared supply alias
-1R2,I2S1_SDI2_M1,input,Manufacturer interface role / shared supply alias
+1R2,SDMMC2_DET_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R2,I2S1_SDI2_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1R2,VOP_BT656_D6_M1,unspecified,Direction review pending
-1T1,CIF_D7,input,Manufacturer interface role / shared supply alias
+1T1,CIF_D7,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1T1,EBC_SDDO7,unspecified,Direction review pending
-1T1,SDMMC2_PWREN_M0,output,Manufacturer interface role / shared supply alias
-1T1,I2S1_SDI3_M1,input,Manufacturer interface role / shared supply alias
+1T1,SDMMC2_PWREN_M0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T1,I2S1_SDI3_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1T1,VOP_BT656_D7_M1,unspecified,Direction review pending
-AL2,CIF_D8,input,Manufacturer interface role / shared supply alias
+AL2,CIF_D8,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AL2,EBC_SDDO8,unspecified,Direction review pending
-AL2,GMAC1_TXD2_M1,output,Manufacturer interface role / shared supply alias
-AL2,UART1_TX_M1,output,Manufacturer interface role / shared supply alias
-AL2,PDM_CLK0_M1,output,Manufacturer interface role / shared supply alias
-AL1,CIF_D9,input,Manufacturer interface role / shared supply alias
+AL2,GMAC1_TXD2_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AL2,UART1_TX_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AL2,PDM_CLK0_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AL1,CIF_D9,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AL1,EBC_SDDO9,unspecified,Direction review pending
-AL1,GMAC1_TXD3_M1,output,Manufacturer interface role / shared supply alias
-AL1,UART1_RX_M1,input,Manufacturer interface role / shared supply alias
-AL1,PDM_SDI0_M1,input,Manufacturer interface role / shared supply alias
-AK2,CIF_D10,input,Manufacturer interface role / shared supply alias
+AL1,GMAC1_TXD3_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AL1,UART1_RX_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AL1,PDM_SDI0_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AK2,CIF_D10,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AK2,EBC_SDDO10,unspecified,Direction review pending
-AK2,GMAC1_TXCLK_M1,output,Manufacturer interface role / shared supply alias
-AK2,PDM_CLK1_M1,output,Manufacturer interface role / shared supply alias
-1P2,CIF_D11,input,Manufacturer interface role / shared supply alias
+AK2,GMAC1_TXCLK_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AK2,PDM_CLK1_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P2,CIF_D11,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1P2,EBC_SDDO11,unspecified,Direction review pending
-1P2,GMAC1_RXD2_M1,input,Manufacturer interface role / shared supply alias
-1P2,PDM_SDI1_M1,input,Manufacturer interface role / shared supply alias
-1R1,CIF_D12,input,Manufacturer interface role / shared supply alias
+1P2,GMAC1_RXD2_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P2,PDM_SDI1_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R1,CIF_D12,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1R1,EBC_SDDO12,unspecified,Direction review pending
-1R1,GMAC1_RXD3_M1,input,Manufacturer interface role / shared supply alias
-1R1,UART7_TX_M2,output,Manufacturer interface role / shared supply alias
-1R1,PDM_SDI2_M1,input,Manufacturer interface role / shared supply alias
-AJ2,CIF_D13,input,Manufacturer interface role / shared supply alias
+1R1,GMAC1_RXD3_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R1,UART7_TX_M2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1R1,PDM_SDI2_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AJ2,CIF_D13,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AJ2,EBC_SDDO13,unspecified,Direction review pending
-AJ2,GMAC1_RXCLK_M1,input,Manufacturer interface role / shared supply alias
-AJ2,UART7_RX_M2,input,Manufacturer interface role / shared supply alias
-AJ2,PDM_SDI3_M1,input,Manufacturer interface role / shared supply alias
-1N2,CIF_D14,input,Manufacturer interface role / shared supply alias
+AJ2,GMAC1_RXCLK_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AJ2,UART7_RX_M2,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AJ2,PDM_SDI3_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1N2,CIF_D14,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1N2,EBC_SDDO14,unspecified,Direction review pending
-1N2,GMAC1_TXD0_M1,output,Manufacturer interface role / shared supply alias
-1N2,UART9_TX_M2,output,Manufacturer interface role / shared supply alias
-1N2,I2S2_LRCK_TX_M1,bidirectional,Manufacturer interface role / shared supply alias
-AJ1,CIF_D15,input,Manufacturer interface role / shared supply alias
+1N2,GMAC1_TXD0_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1N2,UART9_TX_M2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1N2,I2S2_LRCK_TX_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AJ1,CIF_D15,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AJ1,EBC_SDDO15,unspecified,Direction review pending
-AJ1,GMAC1_TXD1_M1,output,Manufacturer interface role / shared supply alias
-AJ1,UART9_RX_M2,input,Manufacturer interface role / shared supply alias
-AJ1,I2S2_LRCK_RX_M1,bidirectional,Manufacturer interface role / shared supply alias
+AJ1,GMAC1_TXD1_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AJ1,UART9_RX_M2,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AJ1,I2S2_LRCK_RX_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AH2,ISP_FLASHTRIGOUT,unspecified,Direction review pending
 AH2,EBC_SDCE0,unspecified,Direction review pending
-AH2,GMAC1_TXEN_M1,output,Manufacturer interface role / shared supply alias
-AH2,SPI3_CS0_M0,bidirectional,Manufacturer interface role / shared supply alias
-AH2,I2S1_SCLK_RX_M1,bidirectional,Manufacturer interface role / shared supply alias
-1N1,CAM_CLKOUT0,output,Manufacturer interface role / shared supply alias
+AH2,GMAC1_TXEN_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AH2,SPI3_CS0_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AH2,I2S1_SCLK_RX_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1N1,CAM_CLKOUT0,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1N1,EBC_SDCE1,unspecified,Direction review pending
-1N1,GMAC1_RXD0_M1,input,Manufacturer interface role / shared supply alias
-1N1,SPI3_CS1_M0,bidirectional,Manufacturer interface role / shared supply alias
-1N1,I2S1_LRCK_RX_M1,bidirectional,Manufacturer interface role / shared supply alias
-1L2,CAM_CLKOUT1,output,Manufacturer interface role / shared supply alias
+1N1,GMAC1_RXD0_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1N1,SPI3_CS1_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1N1,I2S1_LRCK_RX_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1L2,CAM_CLKOUT1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1L2,EBC_SDCE2,unspecified,Direction review pending
-1L2,GMAC1_RXD1_M1,input,Manufacturer interface role / shared supply alias
-1L2,SPI3_MISO_M0,bidirectional,Manufacturer interface role / shared supply alias
-1L2,I2S1_SDO1_M1,output,Manufacturer interface role / shared supply alias
+1L2,GMAC1_RXD1_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1L2,SPI3_MISO_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1L2,I2S1_SDO1_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AG2,ISP_PRELIGHT_TRIG,unspecified,Direction review pending
 AG2,EBC_SDCE3,unspecified,Direction review pending
-AG2,GMAC1_RXDV_CRS_M1,input,Manufacturer interface role / shared supply alias
-AG2,I2S1_SDO2_M1,output,Manufacturer interface role / shared supply alias
-AF2,I2C4_SDA_M0,bidirectional,Manufacturer interface role / shared supply alias
+AG2,GMAC1_RXDV_CRS_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AG2,I2S1_SDO2_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AF2,I2C4_SDA_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AF2,EBC_VCOM,unspecified,Direction review pending
-AF2,GMAC1_RXER_M1,input,Manufacturer interface role / shared supply alias
-AF2,SPI3_MOSI_M0,bidirectional,Manufacturer interface role / shared supply alias
-AF2,I2S2_SDI_M1,input,Manufacturer interface role / shared supply alias
-AE2,I2C4_SCL_M0,bidirectional,Manufacturer interface role / shared supply alias
+AF2,GMAC1_RXER_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AF2,SPI3_MOSI_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AF2,I2S2_SDI_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AE2,I2C4_SCL_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AE2,EBC_GDOE,unspecified,Direction review pending
 AE2,ETH1_REFCLKO_25M_M1,unspecified,Direction review pending
-AE2,SPI3_CLK_M0,bidirectional,Manufacturer interface role / shared supply alias
-AE2,I2S2_SDO_M1,output,Manufacturer interface role / shared supply alias
-AF1,I2C2_SDA_M1,bidirectional,Manufacturer interface role / shared supply alias
+AE2,SPI3_CLK_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AE2,I2S2_SDO_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AF1,I2C2_SDA_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AF1,EBC_GDSP,unspecified,Direction review pending
 AF1,ISP_FLASH_TRIGIN,unspecified,Direction review pending
 AF1,VOP_BT656_CLK_M1,unspecified,Direction review pending
-AD1,I2C2_SCL_M1,bidirectional,Manufacturer interface role / shared supply alias
+AD1,I2C2_SCL_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AD1,EBC_SDSHR,unspecified,Direction review pending
-AD1,I2S1_SDO3_M1,output,Manufacturer interface role / shared supply alias
-1L1,CIF_HREF,input,Manufacturer interface role / shared supply alias
+AD1,I2S1_SDO3_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1L1,CIF_HREF,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1L1,EBC_SDLE,unspecified,Direction review pending
-1L1,GMAC1_MDC_M1,output,Manufacturer interface role / shared supply alias
-1L1,UART1_RTSn_M1,output,Manufacturer interface role / shared supply alias
-1L1,I2S2_MCLK_M1,output,Manufacturer interface role / shared supply alias
-AC2,CIF_VSYNC,input,Manufacturer interface role / shared supply alias
+1L1,GMAC1_MDC_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1L1,UART1_RTSn_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1L1,I2S2_MCLK_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AC2,CIF_VSYNC,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AC2,EBC_SDOE,unspecified,Direction review pending
-AC2,GMAC1_MDIO_M1,bidirectional,Manufacturer interface role / shared supply alias
-AC2,I2S2_SCLK_TX_M1,bidirectional,Manufacturer interface role / shared supply alias
-AB2,CIF_CLKOUT,output,Manufacturer interface role / shared supply alias
+AC2,GMAC1_MDIO_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AC2,I2S2_SCLK_TX_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AB2,CIF_CLKOUT,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AB2,EBC_GDCLK,unspecified,Direction review pending
-AB2,PWM11_IR_M1,bidirectional,Manufacturer interface role / shared supply alias
-AB1,CIF_CLKIN,input,Manufacturer interface role / shared supply alias
+AB2,PWM11_IR_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AB1,CIF_CLKIN,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 AB1,EBC_SDCLK,unspecified,Direction review pending
-AB1,GMAC1_MCLKINOUT_M1,bidirectional,Manufacturer interface role / shared supply alias
-AB1,UART1_CTSn_M1,input,Manufacturer interface role / shared supply alias
-AB1,I2S2_SCLK_RX_M1,bidirectional,Manufacturer interface role / shared supply alias
-1U7,PWM14_M1,bidirectional,Manufacturer interface role / shared supply alias
-1U7,SPI3_CLK_M1,bidirectional,Manufacturer interface role / shared supply alias
-1U7,I2S3_MCLK_M1,output,Manufacturer interface role / shared supply alias
-AP12,PWM15_IR_M1,bidirectional,Manufacturer interface role / shared supply alias
-AP12,SPI3_MOSI_M1,bidirectional,Manufacturer interface role / shared supply alias
-AP12,I2S3_SCLK_M1,bidirectional,Manufacturer interface role / shared supply alias
-1V6,EDP_HPDIN_M0,input,Manufacturer interface role / shared supply alias
-1V6,SPDIF_TX_M2,output,Manufacturer interface role / shared supply alias
+AB1,GMAC1_MCLKINOUT_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AB1,UART1_CTSn_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AB1,I2S2_SCLK_RX_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U7,PWM14_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U7,SPI3_CLK_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U7,I2S3_MCLK_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP12,PWM15_IR_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP12,SPI3_MOSI_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP12,I2S3_SCLK_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V6,EDP_HPDIN_M0,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V6,SPDIF_TX_M2,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1V6,SATA2_ACT_LED,unspecified,Direction review pending
-1V6,I2S3_LRCK_M1,bidirectional,Manufacturer interface role / shared supply alias
-1U6,PWM12_M1,bidirectional,Manufacturer interface role / shared supply alias
-1U6,SPI3_MISO_M1,bidirectional,Manufacturer interface role / shared supply alias
+1V6,I2S3_LRCK_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U6,PWM12_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U6,SPI3_MISO_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1U6,SATA1_ACT_LED,unspecified,Direction review pending
-1U6,UART9_TX_M1,output,Manufacturer interface role / shared supply alias
-1U6,I2S3_SDO_M1,output,Manufacturer interface role / shared supply alias
-1T6,PWM13_M1,bidirectional,Manufacturer interface role / shared supply alias
-1T6,SPI3_CS0_M1,bidirectional,Manufacturer interface role / shared supply alias
+1U6,UART9_TX_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1U6,I2S3_SDO_M1,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T6,PWM13_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T6,SPI3_CS0_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
 1T6,SATA0_ACT_LED,unspecified,Direction review pending
-1T6,UART9_RX_M1,input,Manufacturer interface role / shared supply alias
-1T6,I2S3_SDI_M1,input,Manufacturer interface role / shared supply alias
-AR12,HDMITX_SCL,unspecified,Direction review pending
-AR12,I2C5_SCL_M1,bidirectional,Manufacturer interface role / shared supply alias
-AP11,HDMITX_SDA,unspecified,Direction review pending
-AP11,I2C5_SDA_M1,bidirectional,Manufacturer interface role / shared supply alias
-1V5,HDMITX_CEC_M0,unspecified,Direction review pending
-1V5,SPI3_CS1_M1,bidirectional,Manufacturer interface role / shared supply alias
-AP30,LVDS_TX0_D0P,output,Manufacturer interface role / shared supply alias
-AR30,LVDS_TX0_D0N,output,Manufacturer interface role / shared supply alias
-AR29,LVDS_TX0_D1P,output,Manufacturer interface role / shared supply alias
-AP29,LVDS_TX0_D1N,output,Manufacturer interface role / shared supply alias
-AP27,LVDS_TX0_D2P,output,Manufacturer interface role / shared supply alias
-AR27,LVDS_TX0_D2N,output,Manufacturer interface role / shared supply alias
-AR26,LVDS_TX0_D3P,output,Manufacturer interface role / shared supply alias
-AP26,LVDS_TX0_D3N,output,Manufacturer interface role / shared supply alias
-1V16,LVDS_TX0_CLKP,output,Manufacturer interface role / shared supply alias
-1V15,LVDS_TX0_CLKN,output,Manufacturer interface role / shared supply alias
-1P11,LVDS_TX0_AVDD_0V9,power_in,Manufacturer interface role / shared supply alias
-1P12,LVDS_TX0_AVDD_1V8,power_in,Manufacturer interface role / shared supply alias
-W37,SATA1_TXP,output,Manufacturer interface role / shared supply alias
-W38,SATA1_TXN,output,Manufacturer interface role / shared supply alias
-V38,SATA1_RXP,input,Manufacturer interface role / shared supply alias
-V37,SATA1_RXN,input,Manufacturer interface role / shared supply alias
-AA37,SATA2_TXP,output,Manufacturer interface role / shared supply alias
-AA38,SATA2_TXN,output,Manufacturer interface role / shared supply alias
-AB37,SATA2_RXP,input,Manufacturer interface role / shared supply alias
-AB38,SATA2_RXN,input,Manufacturer interface role / shared supply alias
+1T6,UART9_RX_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1T6,I2S3_SDI_M1,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR12,HDMITX_SCL,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR12,I2C5_SCL_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP11,HDMITX_SDA,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP11,I2C5_SDA_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V5,HDMITX_CEC_M0,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V5,SPI3_CS1_M1,bidirectional,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP30,LVDS_TX0_D0P,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR30,LVDS_TX0_D0N,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR29,LVDS_TX0_D1P,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP29,LVDS_TX0_D1N,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP27,LVDS_TX0_D2P,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR27,LVDS_TX0_D2N,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AR26,LVDS_TX0_D3P,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AP26,LVDS_TX0_D3N,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V16,LVDS_TX0_CLKP,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1V15,LVDS_TX0_CLKN,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P11,LVDS_TX0_AVDD_0V9,power_in,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+1P12,LVDS_TX0_AVDD_1V8,power_in,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+W37,SATA1_TXP,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+W38,SATA1_TXN,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+V38,SATA1_RXP,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+V37,SATA1_RXN,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AA37,SATA2_TXP,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AA38,SATA2_TXN,output,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AB37,SATA2_RXP,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
+AB38,SATA2_RXN,input,RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias
