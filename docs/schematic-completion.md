@@ -10,14 +10,14 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 |---|---|---|
 | Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 32-component supply-integrated capture; native ERC/connectivity passes on 2026-10-03 | MCU pin audit closure; physical startup/reset behavior; target-domain interface integration |
 | Independent always-on supply | `hardware/always-on.kicad_sch`, 6 components, TPS62177DQCR, LPS4018-103MRC; integrated recovery hierarchy and PG fault net; typical capacitor bias reviewed | Guaranteed capacitor corners/aging and loop behavior; rail load; final appliance hierarchy |
-| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 46-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
+| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 47-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
 | 2.5GbE | RTL8125BG-CG remains candidate | Exact pin/reference circuit, clocks/rails/reset/PCIe coupling and 2.5G PoE-rated magnetics; symbol and footprint checks |
 | Isolated PoE | Archived TI TIDA-050023 schematic and BOM as candidate reference | Whole-appliance peak and startup budget, exact class, transformer/protection/feedback/MPS/allocation integration; isolation boundary audit |
 | Modem power | Requirements only | Voltage/current envelope per model, switch/eFuse/ramp/discharge, default-off controls and fault sensing |
 | EM9190 / EM9293 sockets and SIM | Older manufacturer PTS research; contacts 24/38/68 conflict with Quectel | Current controlled pin tables, complete per-model profile and power/control/SIM/USB3 capture |
 | RM520N-GL / RM551E-GL sockets and SIM | RM520 guide exists; current RM551 production guide still missing | Current controlled hardware guides and per-model pin/voltage/control/SIM/USB3 capture |
-| Full hierarchy and BOM | Draft appliance root exports 78 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
+| Full hierarchy and BOM | Draft appliance root exports 79 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
 | Visual and electrical review | Always-on draft rendered and corrected; recovery tests rerun | All sheets and circuit crops inspected, native ERC and complete critical-net assertions, manufacturer pin fidelity, footprint pad parity |
 
 No PCB file exists. Do not start placement until the integrated schematic and
@@ -836,3 +836,18 @@ before integration. No exclusion was added. Full appliance ERC is still
 incomplete because the remaining PMIC and subsystem circuits are absent.
 Firmware pulse timing, reset-default behavior and physical restart require
 verification after the full schematic is captured.
+
+## Remaining buck rail audit
+
+RK809 Rev 2.4 Table 4-4 specifies RK809-5 BUCK4 startup OFF, with a
+0.5 V programmed default. It cannot supply boot-time 3V3_MAIN. VCC4 pin
+66 now joins 5V_MAIN with C533 (CL32B226KAJNNNE) input bypass; SW4/FB4
+remain unfinished. Native capture checks pass 47 PMIC components and 79
+appliance components. A separate switched 3.3 V source remains required.
+
+BUCK3 is a 1.5 A DDR regulator with 0.8 V feedback (0.784–0.816 V in
+external-divider mode). DDR type determines its output and divider;
+RK3566 guide section 2.4.4 differentiates LPDDR4 and LPDDR4X supplies.
+No DDR output voltage or divider is committed before exact memory selection.
+Sources: archived rk809-datasheet-v2.4.pdf pages 22, 34;
+rk3566-hardware-guide-v1.1-cn.pdf page 32.

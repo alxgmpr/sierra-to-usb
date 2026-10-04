@@ -10,5 +10,5 @@ with tempfile.TemporaryDirectory() as tmp:
     net=next(n for n in tree.findall('./nets/net') if n.get('name')=='MCU_PWRON_KICK')
     pins={(n.get('ref'),n.get('pin')) for n in net.findall('node')}
     assert pins=={('U201','43'),('R508','1')},pins
-    assert len(tree.findall('./components/comp'))==78
-print('PASS: appliance restart GPIO connection and 78-component capture; not full ERC.')
+    assert len(tree.findall('./components/comp'))==79
+print('PASS: appliance restart GPIO connection and 79-component capture; not full ERC.')

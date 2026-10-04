@@ -101,6 +101,11 @@ for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC_SENSE',501),(2,1
  add('Device','C_Small',f'C{cref+3}','22uF / 25V',185.42,y+12.7,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
  wire((185.42,y+10.16),(185.42,y));label('5V_MAIN',(185.42,y));wire((185.42,y+15.24),(185.42,y+22.86));power('GND',(185.42,y+22.86),f'#PWR51{channel}')
  note(f'BUCK{channel}: '+('1.8V' if channel==5 else '0.9V')+' startup / 2.5A rated; 3 x 22uF output bank',(223.52 if channel==5 else 175.26,y-12.7))
+# BUCK4 is OFF by default in RK809-5; this is input bypass only, not a 3.3V source.
+a=units[1]['66'];wire(a,(a[0],33.02));label('5V_MAIN',(a[0],33.02))
+add('Device','C_Small','C533','22uF / 25V',320.04,190.5,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
+wire((320.04,187.96),(320.04,180.34));label('5V_MAIN',(320.04,180.34));wire((320.04,193.04),(320.04,200.66));power('GND',(320.04,200.66),'#PWR540')
+note('BUCK4: RK809-5 startup OFF; bypass only. Do not use for boot-time 3V3_MAIN.',(284.48,170.18))
 # PMIC ground return and processor reset: pull up only to its fixed 3.3 V PMUIO1 domain.
 for n in ['47','69']:
  a=units[3][n];wire(a,(a[0],279.4))
