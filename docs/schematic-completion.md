@@ -1383,3 +1383,24 @@ the required 10k pull-up at VIN0 (1D17) and the recommended local 1nF
 input filter; neither is claimed captured. The unused-GPIO supply exemption
 in section 2.1.13.3 is not evidence that unused USB PHY supplies may float.
 USB HOST2/3 supply policy and total LDO8 load still require resolution.
+
+## 2026-10-04 SARADC default boot input
+
+Captured SARADC_BOOT_KEY at U801 1D17: R801 (Yageo
+RC0603FR-0710KL, 10kR / 1%, 0603, C98220) pulls to VCCA_1V8;
+C820 (Samsung CL10C102JB8NNNC, 1nF / 50V / 5%, C0G, 0603,
+C163508) filters to ground. The guide Figure 2-49 and Table 2-14
+require the pull-up and specify a local 1nF filter. C0G replaces the
+reference X5R dielectric for stable capacitance; nominal value is retained.
+At 1.8V a grounded input draws 180uA and dissipates 0.324mW in
+the resistor; nominal RC is 10us. These calculations do not establish
+bootloader sampling thresholds or recovery timing. No key switch or
+MCU sink is captured yet, and no functional recovery claim is made.
+
+Manufacturer exact capacitor specifications and order suffix were checked:
+https://product.samsungsem.com/cn/mlcc/CL10C102JB8NNN.do
+The page lists 1nF, 50V, C0G (-55 to +125C), 5%, 0603 and the
+CL10C102JB8NNNC ordering variant. JLC indexed stock is not a reservation.
+Native connectivity checks pass for 140 components and verify the exact
+three-terminal boot net. Full ERC reports 451 violations. The rendered
+processor sheet was reviewed and label/capacitor overlaps corrected.

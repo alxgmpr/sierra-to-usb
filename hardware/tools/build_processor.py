@@ -33,7 +33,7 @@ symbol = re.sub(r'("Footprint"\s+)"[^"]*"', r'\1""', symbol, count=1)
 (ROOT / 'ProcessorDraft.kicad_sym').write_text('(kicad_symbol_lib (version 20211014) (generator eeschema) ' + symbol.replace('(symbol "ProcessorDraft:RK3566"','(symbol "RK3566"',1) + ')\n')
 items = []
 ground_balls = set()
-control_nets = {'AJ37':'PMIC_I2C_SCL','AK38':'PMIC_I2C_SDA','1P19':'PMIC_SLEEP','AG38':'RK_RESET_N','1R19':'PMIC_INT_N'}
+control_nets = {'AJ37':'PMIC_I2C_SCL','AK38':'PMIC_I2C_SDA','1P19':'PMIC_SLEEP','AG38':'RK_RESET_N','1R19':'PMIC_INT_N','1D17':'SARADC_BOOT_KEY'}
 connected_controls = set()
 rail_balls = {}
 for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),(5,76.2,304.8),(6,279.4,304.8),(7,444.5,228.6),(8,444.5,330.2)]:
@@ -73,7 +73,7 @@ def wire(a,b,key):
     items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid(key)}"))')
 def label(net,x,y,key):
     items.append(f'(global_label "{net}" (shape passive) (at {x} {y} 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid(key)}"))')
-for bank,net,x,y in [(0,'VDDA0V9_PMU',50.8,152.4),(1,'VCCA1V8_PMU',50.8,213.36),(2,'VDDA_0V9',304.8,223.52),(3,'VCCA_1V8',406.4,147.32),(4,'VDDA0V9_PMU',50.8,370.84),(5,'VCC3V3_PMU',304.8,375.92),(6,'USB_AVDD_0V9',330.2,284.48),(7,'USB_AVDD_1V8',406.4,284.48),(8,'3V3_MAIN',482.6,284.48),(9,'VCCA_1V8',381,375.92),(10,'VCCA_1V8',431.8,375.92)]:
+for bank,net,x,y in [(0,'VDDA0V9_PMU',50.8,152.4),(1,'VCCA1V8_PMU',50.8,213.36),(2,'VDDA_0V9',304.8,223.52),(3,'VCCA_1V8',406.4,147.32),(4,'VDDA0V9_PMU',50.8,370.84),(5,'VCC3V3_PMU',304.8,375.92),(6,'USB_AVDD_0V9',355.6,284.48),(7,'USB_AVDD_1V8',406.4,284.48),(8,'3V3_MAIN',482.6,284.48),(9,'VCCA_1V8',381,375.92),(10,'VCCA_1V8',431.8,375.92)]:
     offsets = [(0,'1uF','CL10B105KA8NNNC','C29936'),(1,'100nF','CL10B104KA8NNNC','C1590')]
     if bank >= 6:
         offsets = [(0,'100nF','CL10B104KA8NNNC','C1590')]
@@ -98,8 +98,26 @@ for bank,net,x,y in [(0,'VDDA0V9_PMU',50.8,152.4),(1,'VCCA1V8_PMU',50.8,213.36),
         wire((x,y+10.16),(x+30.48,y+10.16),net+str(bank)+'-bottom')
     label(net,x,y-10.16,net+str(bank)+'-label')
     label('GND',x,y+10.16,net+str(bank)+'-ground')
+# Defined normal-boot level and local SARADC VIN0 input filter.
+resistor = block(cap_source, cap_source.index('(symbol "R_Small_US"')).replace('(symbol "R_Small_US"','(symbol "Device:R_Small_US"',1)
+for name,ref,value,x,y,fp,fields in [
+ ('R_Small_US','R801','10kR',350.52,320.04,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W'}),
+ ('C_Small','C820','1nF',350.52,345.44,'Capacitor_SMD:C_0603_1608Metric',{'MPN':'CL10C102JB8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C163508','Tolerance':'5%','Voltage Rating':'50V','Dielectric':'C0G'})]:
+ fields.update({'Footprint':fp,'Qualification':'SARADC VIN0 normal-boot pull-up and input filter; RK3566 guide Figure 2-49'})
+ properties=prop('Reference',ref,x+7.62,y-1.27)+prop('Value',value,x+7.62,y+1.27)
+ for key,val in fields.items():properties+=prop(key,val,x,y,True)
+ items.append(f'(symbol (lib_id "Device:{name}") (at {x} {y} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(ref)}") {properties} '+''.join(f'(pin "{n}" (uuid "{uid(ref+":"+n)}"))' for n in ['1','2'])+f' (instances (project "processor" (path "/{uid("root")}" (reference "{ref}") (unit 1)))))')
+wire((350.52,317.5),(350.52,309.88),'boot-pullup-top')
+label('VCCA_1V8',350.52,309.88,'boot-pullup-supply')
+wire((350.52,322.58),(350.52,332.74),'boot-pullup-bottom')
+wire((350.52,332.74),(350.52,342.9),'boot-filter-top')
+wire((350.52,332.74),(365.76,332.74),'boot-node-label-wire')
+items.append(f'(global_label "SARADC_BOOT_KEY" (shape passive) (at 365.76 332.74 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("boot-node-label")}"))')
+items.append(f'(junction (at 350.52 332.74) (diameter 0) (color 0 0 0 0) (uuid "{uid("boot-node-junction")}"))')
+wire((350.52,347.98),(350.52,355.6),'boot-filter-ground')
+label('GND',350.52,355.6,'boot-filter-ground-label')
 items.append(f'(text "INCOMPLETE PROCESSOR CAPTURE: all 565 balls present; documented grounds, logic/GPU and PMU supplies connected; circuitry incomplete.\\nPMIC controls: AJ37=I2C0 SCL, AK38=I2C0 SDA, 1P19=PMIC_SLEEP.\\n19 alternate roles and TVSS unresolved. No production footprint assigned.\\nIntegrated draft: CPU, DDR, analog/IO supplies and peripheral circuitry remain open." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
-(ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol} {cap}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
+(ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol} {cap} {resistor}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
 assert len(rail_balls) == 26
 assert connected_controls == set(control_nets)
 assert len(ground_balls) == 187 and '1M18' not in ground_balls
