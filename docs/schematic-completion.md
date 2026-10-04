@@ -8,9 +8,9 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 
 | Required block | Current authoritative state | Required before schematic completion |
 |---|---|---|
-| Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 31-component supply-integrated capture; native ERC/connectivity passes again on 2026-10-03 | C203 effective-capacitance review pending; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
-| Independent always-on supply | `hardware/always-on.kicad_sch`, 5 components, TPS62177DQCR, LPS4018-103MRC; native ERC and all five circuit-net checks pass | Capacitor effective capacitance; rail load; power fault integration; final appliance hierarchy still required; now integrated into recovery hierarchy |
-| RK3566 / DDR / PMIC | Archived reference schematic, Rockchip full datasheet and hardware guide; 565-ball CSV extracted; symbol-table review pending | Exact supported RAM and DDR training route; PMIC silicon/suffix and rail sequence; all package balls checked; native capture with complete decoupling and clocks |
+| Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 32-component supply-integrated capture; native ERC/connectivity passes on 2026-10-03 | MCU pin audit closure; physical startup/reset behavior; target-domain interface integration |
+| Independent always-on supply | `hardware/always-on.kicad_sch`, 6 components, TPS62177DQCR, LPS4018-103MRC; integrated recovery hierarchy and PG fault net; typical capacitor bias reviewed | Guaranteed capacitor corners/aging and loop behavior; rail load; final appliance hierarchy |
+| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 38-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
 | 2.5GbE | RTL8125BG-CG remains candidate | Exact pin/reference circuit, clocks/rails/reset/PCIe coupling and 2.5G PoE-rated magnetics; symbol and footprint checks |
 | Isolated PoE | Archived TI TIDA-050023 schematic and BOM as candidate reference | Whole-appliance peak and startup budget, exact class, transformer/protection/feedback/MPS/allocation integration; isolation boundary audit |
@@ -682,3 +682,21 @@ no-connect or ground markers were added just to suppress ERC. Unused handling
 remains open. Native checks now cover nineteen nets and 37 exact-MPN parts.
 The render exposed RTC ground-label proximity to the I2C label; the RTC ground
 was moved upward before saving.
+
+## PMIC interrupt capture
+
+INT pin 7 now uses PMIC_INT_N with a 10 kR R504 pull-up to VCC3V3_PMU.
+The selected Yageo RC0603FR-0710KL is already used in recovery/reset circuits.
+The manufacturer electrical table defines INT as open drain; the processor
+interrupt input must belong to the selected 3.3 V PMU domain. Pin selection,
+firmware active-low configuration, wake behavior and off-state behavior remain
+integration checks. At 3.3 V +5 percent and minimum 1-percent resistor, sink
+current is at most about 0.35 mA with about 1.21 mW pull-up dissipation.
+The input's inactive rise time depends on final trace/pin capacitance and
+must satisfy the actual interrupt timing requirements.
+
+The PMIC draft passes exact membership assertions for twenty captured nets
+and MPN coverage for 38 fitted parts. Native SVG was visually reviewed.
+The completion matrix was refreshed to remove stale 31-part recovery and
+five-part supply claims; those earlier dated sections are historical progress.
+Full schematic completion and PCB placement remain unachieved.

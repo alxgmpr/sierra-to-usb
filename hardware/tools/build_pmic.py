@@ -157,6 +157,10 @@ for ref,x,net in [('R502',50.8,'PMIC_I2C_SCL'),('R503',88.9,'PMIC_I2C_SDA')]:
  wire((x,317.5),(x,309.88));wire((x,322.58),(x,330.2));label(net,(x,330.2))
 wire((50.8,309.88),(88.9,309.88));label('VCC3V3_PMU',(50.8,309.88))
 note('I2C0: 3.3V PMUIO2; 2.2kR pull-ups. Capacitance and firmware speed review pending.',(35.56,345.44))
+# Interrupt is active-low open drain; its processor input must use the 3.3 V PMU domain.
+a=units[3]['7'];b=(a[0]+7.62,a[1]);wire(a,b);label('PMIC_INT_N',b)
+add('Device','R_Small_US','R504','10kR',127,320.04,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
+wire((127,317.5),(127,309.88));wire((88.9,309.88),(127,309.88));junction((88.9,309.88));wire((127,322.58),(127,330.2));label('PMIC_INT_N',(127,330.2))
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(35.56,31.75))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
