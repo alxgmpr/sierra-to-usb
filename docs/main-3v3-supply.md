@@ -41,3 +41,26 @@ Catalog lookup on 2026-10-03 identified C43427, extended assembly library,
 2047 indexed stock. This is neither reserved nor real-time stock proof.
 The manufacturer PDF was read through web PDF extraction; direct download
 returned non-PDF content and was rejected rather than archived as a PDF.
+
+## Exact feedback candidates and corner correction
+
+Upper: Yageo RC0603FR-07200KL, 200 kOhm, C105574. Lower:
+Yageo RC0603FR-0744K2L, 44.2 kOhm. Both are manufacturer-verified
+0603, 1%, 100 ppm/C, 100 mW, 75 V. Exact manufacturer spec sheets
+are archived with hashes. The lower part was not found in the indexed
+JLC database; its assembly availability remains unresolved.
+
+The earlier 3.196–3.438 V estimate omits resistor temperature drift.
+Conservatively summing initial tolerance and opposing 100 ppm/C drift
+from 25 C, then applying +/-2% regulator feedback, gives:
+
+| Temperature | Lower bound | Upper bound |
+|---|---|---|
+| -40 C | 3.1623 V | 3.4741 V |
+| 25 C | 3.1959 V | 3.4372 V |
+| 85 C | 3.1648 V | 3.4713 V |
+
+These are calculated component corners, not measured regulation bounds.
+No guaranteed maximum FB bias current was established; the datasheet
+10 nA figure is typical. Dynamic errors remain additional. Raw calculation
+inputs and results are in hardware/reference/main-3v3-divider-corners.json.
