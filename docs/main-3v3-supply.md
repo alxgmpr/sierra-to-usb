@@ -123,3 +123,15 @@ actual rail load remain open. Manufacturer footprint dimensions and
 
 Primary source: https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xgl/xgl4030/xgl4030-102/
 Catalog C6336766 had 380 indexed parts on 2026-10-03; not reserved stock.
+
+## Captured standalone draft
+
+hardware/main3v3.kicad_sch now contains U601, L601, C601–603 and
+R601–602 with exact MPN fields. Native netlist verifies separate switch
+node, OUT sensing after L601 and the divider midpoint at FB. Initial SVG
+review caught left-label overlap; label justification was corrected.
+Input is one 22 uF capacitor and output two 22 uF capacitors; sizing
+remains provisional pending loop and effective-capacitance review.
+Enable and 5 V PG are explicit unfinished boundaries. This standalone
+sheet is not yet joined to the appliance root and is not ERC-qualified.
+Reproduce with python3 hardware/tools/build_main3v3.py.
