@@ -366,3 +366,15 @@ Native processor/integrated checks verify the exact calibration endpoints
 and supply membership; enlarged pin and supply renders reviewed.
 Capture now contains 187 components. Other unused DDR outputs, RAM-local
 bypass, the 0.6V source and electrical/boot qualification remain open.
+
+## Unused processor DDR outputs made explicit
+
+For the selected single-rank part, mark LPDDR4 CKE1 and CS1n outputs
+unused: 1A2/1C3 and 1A5/A3 respectively. LPDDR4X ignores ODT_CA
+while requiring valid RAM input levels (our RAM inputs remain grounded),
+so the processor's four ODT outputs 1A4/1C2/A10/E2 also remain unused.
+Together with DDR_VREFOUT 1H3 these nine pins have explicit no-connect
+markers. Native checks ensure none joins another endpoint; marker coordinates
+are checked against the audited native pin positions. Enlarged render reviewed.
+Firmware must initialize the selected single-rank LPDDR4X topology. This
+capture policy does not establish loader compatibility or physical training.

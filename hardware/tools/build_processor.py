@@ -55,8 +55,8 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
             bx = round(ax + (-12.7 if left else 12.7),4)
             items.append(f'(wire (pts (xy {ax} {ay}) (xy {bx} {ay})) (stroke (width 0) (type default)) (uuid "{uid("control-wire-"+number)}"))')
             items.append(f'(global_label "{control}" (shape passive) (at {bx} {ay} {0 if left else 180}) (effects (font (size 1.27 1.27)) (justify {"right" if left else "left"})) (uuid "{uid("control-label-"+number)}"))')
-        if number == '1H3':
-            items.append(f'(no_connect (at {round(x+float(px),4)} {round(y-float(py),4)}) (uuid "{uid("ddr-vrefout-nc")}"))')
+        if number in {'1H3','1A2','1A4','1A5','1C2','1C3','A3','A10','E2'}:
+            items.append(f'(no_connect (at {round(x+float(px),4)} {round(y-float(py),4)}) (uuid "{uid("ddr-unused-"+number)}"))')
         if not (re.fullmatch(r'(?:VSS|AVSS|AVSS1)_\d+', name) or name in {'DDR_AVSS','PMUPLL_AVSS','SYSPLL_AVSS'}):
             continue
         ground_balls.add(number)

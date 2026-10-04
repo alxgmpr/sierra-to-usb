@@ -55,3 +55,14 @@ all_pins = {p.attrib['num'] for p in netlist.findall("./libparts/libpart[@part='
 assert len(all_pins) == 565
 print('PASS: one U801, twenty-one local bypass capacitors and one input filter, 565 library pins, exactly 187 documented balls on GND; TVSS excluded; PMIC controls and reset ball assignments verified.')
 print('Partial capture only: processor supplies and peripherals remain incomplete.')
+
+# Single-rank LPDDR4X: rank-1 and ODT control outputs are unused.
+unused={'1H3','1A2','1A4','1A5','1C2','1C3','A3','A10','E2'}
+for ball in unused:
+    assert not any(len(n.findall('node'))>1 and any(v.get('ref')=='U801' and v.get('pin')==ball for v in n.findall('node')) for n in nets),ball
+text=(ROOT/'processor.kicad_sch').read_text()
+markers={(round(float(x),4),round(float(y),4)) for x,y in re.findall(r'\(no_connect \(at ([\d.-]+) ([\d.-]+)\)',text)}
+model=(ROOT/'reference/rk3566-electrical-review.kicad_sym').read_text()
+expected_markers={(round(279.4+float(x),4),round(139.7-float(y),4)) for x,y,ball in re.findall(r'\(pin \w+ \w+.*?\(at ([\d.-]+) ([\d.-]+) [\d.-]+\).*?\(number "([^"]+)"',model,re.S) if ball in unused}
+assert len(expected_markers)==9 and markers==expected_markers
+print('PASS: nine unused DDR outputs explicitly no-connect for single-rank LPDDR4X.')
