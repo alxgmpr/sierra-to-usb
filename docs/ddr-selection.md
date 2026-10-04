@@ -461,3 +461,29 @@ source becomes high impedance in shutdown. Review BUCK5 discharge and
 IN persistence; the reference RC alone does not establish the off state.
 Output-capacitor recommendation is >22uF X5R or better; verify effective
 capacitance of the reference 2x22uF+10uF bank and RAM-local loading.
+
+## 0.6V package and inductor audit
+
+Visually reviewed Silergy AN_SY8089/A page 9 recommended land pattern:
+0.95mm pitch, 2.40mm row-center span, pads 0.55mm wide by 0.80mm
+long. Native footprint (180-degree rotation relative to stock KiCad)
+has matching pin ordering and pitch, but 2.60mm row span and
+1.10x0.60mm copper pads. Its courtyard +/-0.80x+/-1.45mm excludes
+pads extending to +/-1.85mm; it is not a production-ready courtyard.
+Also retains a temporary /tmp model path and lacks a Fab body outline.
+Stock KiCad SOT-23-5 has 2.275mm row span and 1.325x0.60mm pads,
+so it is not an exact manufacturer-recommended land-pattern substitute.
+No footprint assigned or modified; review manufacturer pattern and
+assembly requirements before production assignment.
+
+Exact reference inductor WPN201610H2R2MT / C97005 indexed as Sunlord
+2.2uH +/-20%, 1.45A rated, 2.15A saturation, 170mR DCR. Supplier
+values require manufacturer temperature/derating validation. Do not infer
+a qualified 2A rail from the regulator rating when this inductor is used.
+At 0.612V output, 3.3V input and nominal 1MHz, ripple estimate is
+0.227A p-p with 2.2uH, increasing to 0.283A at -20% inductance;
+this excludes frequency tolerances and inductance loss with current.
+Select against the combined processor/RAM worst-case VDDQ load and
+regulator fault current before freezing L902. A larger existing-footprint
+inductor may be appropriate; XGL4020-222MEC had no exact JLC DB hit,
+which is not proof of manufacturer unavailability.
