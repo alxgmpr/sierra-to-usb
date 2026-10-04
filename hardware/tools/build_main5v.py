@@ -60,7 +60,7 @@ def wire(a,b):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
 def label(name,p):
- if name in {'5V_MAIN','ISO_12V','MCU_MAIN5V_EN'}:
+ if name in {'5V_MAIN','ISO_12V','MCU_MAIN5V_EN','MAIN5V_GOOD'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("global"+name+str(p))}"))');return
  items.append(f'(label "{name}" (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "{uid("label"+name+str(p))}"))')
 def power(name,p,ref):add('power',name,ref,name,*p)
@@ -78,10 +78,10 @@ label('MAIN5V_MODE',(66.04,81.28))
 # Feedback divider shares its node with the FB pin using a named local connection.
 wire((88.9,76.2),(78.74,76.2));label('MAIN5V_FB',(78.74,76.2));items[-1]=items[-1].replace('justify left bottom','justify right bottom')
 for ref,value,mpn,lcsc,y in [('R702','73.2kR','RT0603BRD0773K2L','C861548',58.42),('R703','10kR','RT0603BRD0710KL','C95204',83.82)]:
- add('Device','R_Small_US',ref,value,180.34,y,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':mpn,'Manufacturer':'Yageo','LCSC':lcsc,'Tolerance':'0.1%','TCR':'25ppm/K'})
-wire((180.34,55.88),(180.34,45.72));label('5V_MAIN',(180.34,45.72))
-wire((180.34,60.96),(180.34,81.28));label('MAIN5V_FB',(180.34,73.66))
-wire((180.34,86.36),(180.34,96.52));power('GND',(180.34,96.52),'#PWR702')
+ add('Device','R_Small_US',ref,value,200.66,y,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':mpn,'Manufacturer':'Yageo','LCSC':lcsc,'Tolerance':'0.1%','TCR':'25ppm/K'})
+wire((200.66,55.88),(200.66,45.72));label('5V_MAIN',(200.66,45.72))
+wire((200.66,60.96),(200.66,81.28));label('MAIN5V_FB',(200.66,73.66))
+wire((200.66,86.36),(200.66,96.52));power('GND',(200.66,96.52),'#PWR702')
 # AGND and PGND share the electrical return; physical connection follows TI layout guidance.
 wire((99.06,88.9),(99.06,99.06));wire((104.14,88.9),(104.14,99.06));wire((99.06,99.06),(104.14,99.06));power('GND',(101.6,99.06),'#PWR703');junction((101.6,99.06))
 # Bootstrap capacitor: differential voltage is BOOT-SW, not the rail-to-ground voltage.
@@ -107,9 +107,13 @@ wire((63.5,68.58),(53.34,68.58));label('MCU_MAIN5V_EN',(53.34,68.58));items[-1]=
 wire((68.58,68.58),(76.2,68.58));wire((76.2,68.58),(76.2,71.12));wire((76.2,71.12),(88.9,71.12));wire((76.2,71.12),(40.64,71.12));junction((76.2,71.12))
 add('Device','R_Small_US','R705','10kR',40.64,104.14,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%'})
 wire((40.64,71.12),(40.64,101.6));wire((40.64,106.68),(40.64,114.3));power('GND',(40.64,114.3),'#PWR706')
+# PG is open drain; use the independent recovery supply for the MCU-safe pullup.
+add('Device','R_Small_US','R706','10kR',154.94,73.66,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%'})
+wire((154.94,71.12),(154.94,63.5));power('+3V3',(154.94,63.5),'#PWR707')
+wire((114.3,76.2),(154.94,76.2));wire((154.94,76.2),(154.94,81.28));label('MAIN5V_GOOD',(154.94,81.28));junction((154.94,76.2))
 note('MAIN 5 V CONTROL DRAFT — INCOMPLETE',(35.56,25.4),1.524)
 note('MODE: 500 kHz; high valley current limit option. Feedback: 4.992 V nominal.',(35.56,132.08))
-note('Missing: inductor/output bank and PG circuits.',(35.56,139.7))
+note('Missing: inductor and output bank.',(35.56,139.7))
 note('No 5 V power source exists on this sheet yet. Regulator footprint awaits review.',(35.56,147.32))
 (ROOT/'main5v.kicad_sch').write_text('(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A4") (lib_symbols '+''.join(used.values())+') '+''.join(items)+')\n')
-print('Generated main 5 V control draft with eleven exact-MPN components.')
+print('Generated main 5 V control draft with twelve exact-MPN components.')

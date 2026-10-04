@@ -230,3 +230,26 @@ No ERC exclusions added.
 
 Sources: https://www.st.com/resource/en/datasheet/stm32g0b1cc.pdf;
 archived TPS56837 Sections 5.5 and 6.3.4.
+
+## Power-good feedback captured
+
+U701 PG/pin 4 now connects to U201 PB7/pin 46 (MAIN5V_GOOD).
+R706 is RC0603FR-0710KL, 10 kOhm/1%/0603, pulled up to the
+independent recovery 3.3 V rail. The GPIO never receives a 5 V pullup.
+TI Section 6.3.10 permits external PG pullup below 5.5 V and specifies
+10 mA sink capability at 0.4 V; this pullup draws about 0.33 mA.
+The 10 kOhm value differs from TI's recommended 100 kOhm/5 V
+example to provide a stronger recovery-domain logic pullup.
+
+PG is not an independent absolute-voltage supervisor: its thresholds
+track FB and its state is not valid once VIN disappears. Firmware
+must qualify MAIN5V_GOOD with commanded enable and valid input-power
+state; a high signal alone cannot prove main 5 V exists. The isolated
+input monitor and full power-collapse behavior remain unresolved.
+
+Native checks verify PG, MCU pin and recovery pullup membership.
+Both affected sheets rendered and reviewed, including moving the PG
+label clear of resistor text. Appliance has 104 components and 57 ERC
+violations; no exclusions added. Inductor/output bank and footprint
+qualification still prevent this draft from being a working power stage.
+Current ERC types: {'pin_not_connected': 39, 'pin_not_driven': 10, 'power_pin_not_driven': 8}.

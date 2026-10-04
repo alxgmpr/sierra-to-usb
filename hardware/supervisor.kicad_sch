@@ -81,7 +81,7 @@
   (global_label "MCU_PWRON_KICK" (shape output) (at 134.62 152.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ad04c914-06cb-5ad4-b1bd-417fdb56dbe8"))
   (global_label "MAIN3V3_GOOD" (shape input) (at 134.62 154.94 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ef13a75c-77a8-5550-8052-9becf5a466a9"))
   (global_label "MCU_MAIN5V_EN" (shape output) (at 134.62 157.48 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d8eaa3d6-619d-515a-ae12-91214eb7a41f"))
-  (no_connect (at 134.62 160.02) (uuid "027fc39d-3644-56dc-a473-2c9c483d11ba"))
+  (global_label "MAIN5V_GOOD" (shape input) (at 134.62 160.02 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6654d652-3341-5945-b294-670bcc235c0c"))
   (no_connect (at 134.62 162.56) (uuid "3a7046d9-dd0b-526f-9dc2-ddb71493ecae"))
   (no_connect (at 134.62 165.1) (uuid "0fed5a37-c2d2-5515-b2d3-16e019e2e869"))
   (text "PF2 / pin 10 MUST remain NRST via option bytes.\nInternal BOR and IWDG enabled by protected boot firmware.\nPA2/PA3: USART2 AF1; PA13/PA14: SWD.\nUART is service only; no modem AT transport selected.\nTwo signed app slots + protected loader planned; not implemented." (at 33.02 225.425 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6a5d8ffa-7ded-5beb-b8cf-334ffa01ead4"))
