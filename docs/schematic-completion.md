@@ -17,7 +17,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 | Modem power | Requirements only | Voltage/current envelope per model, switch/eFuse/ramp/discharge, default-off controls and fault sensing |
 | EM9190 / EM9293 sockets and SIM | Older manufacturer PTS research; contacts 24/38/68 conflict with Quectel | Current controlled pin tables, complete per-model profile and power/control/SIM/USB3 capture |
 | RM520N-GL / RM551E-GL sockets and SIM | RM520 guide exists; current RM551 production guide still missing | Current controlled hardware guides and per-model pin/voltage/control/SIM/USB3 capture |
-| Full hierarchy and BOM | Draft appliance root exports 79 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
+| Full hierarchy and BOM | Draft appliance root exports 86 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
 | Visual and electrical review | Always-on draft rendered and corrected; recovery tests rerun | All sheets and circuit crops inspected, native ERC and complete critical-net assertions, manufacturer pin fidelity, footprint pad parity |
 
 No PCB file exists. Do not start placement until the integrated schematic and
@@ -858,3 +858,14 @@ See main-3v3-supply.md: MP2143DJ-LF-Z is source-audited as a
 5V_MAIN-to-3V3_MAIN candidate. Its PG output has an internal VIN pull-up
 and cannot connect directly to the independent 3.3 V MCU. No regulator
 circuit or exact passive BOM is captured yet.
+
+## Main 3.3 V appliance integration
+
+The main3v3 sheet is now in the appliance root. 5V_MAIN and 3V3_MAIN
+are global between regulator and PMIC sheets. Native export contains 86
+components. check_appliance_capture.py verifies exact 3V3_MAIN membership
+including regulator output sensing and PMIC VCC5/VCC7 inputs, restart
+connection, shared 5 V input and separation from the recovery MCU supply.
+Root SVG inspected. No full ERC pass is claimed; enable, PG translation
+and downstream load/sequence remain incomplete. Regenerate build_appliance.py
+after either supply or PMIC generator.
