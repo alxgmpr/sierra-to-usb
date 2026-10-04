@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Native ERC/export plus critical recovery-net checks; outputs stay outside repo."""
 import argparse
+import csv
 import shutil
 import subprocess
 from pathlib import Path
@@ -43,4 +44,16 @@ assert pins('U201:7','U202:2','J101:2','R307:2','R308:2','R202:2') <= nets['GND'
 assert not nets['+3V3'] & nets['GND']
 run('sch', 'export', 'svg', '--output', a.output / 'svg', schematic)
 run('sch', 'export', 'pdf', '--output', a.output / 'recovery.pdf', schematic)
+components = r.findall('.//components/comp')
+missing_mpn = []
+with (a.output / 'bom.csv').open('w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['Reference', 'Value', 'Footprint', 'MPN', 'Manufacturer', 'Required Mating Part'])
+    for comp in components:
+        fields = {item.get('name'): item.text or '' for item in comp.findall('./fields/field')}
+        if not fields.get('MPN'):
+            missing_mpn.append(comp.get('ref'))
+        writer.writerow([comp.get('ref'), comp.findtext('value'), comp.findtext('footprint'),
+                         fields.get('MPN', ''), fields.get('Manufacturer', ''), fields.get('Required Mating Part', '')])
+print(f'BOM MPN coverage: {len(components)-len(missing_mpn)}/{len(components)}; missing: {", ".join(missing_mpn)}')
 print(f'PASS: native ERC, critical reset/watchdog/SWD/control connectivity; {len(r.findall(".//components/comp"))} components. Not hardware qualification.')

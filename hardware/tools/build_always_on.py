@@ -87,7 +87,7 @@ add('Device','C_Small','C401','2.2uF / 50V',63.5,76.2,fp='Capacitor_SMD:C_1206_3
 wire((63.5,73.66),(63.5,63.5));label('ISO_12V',(63.5,63.5));wire((63.5,78.74),(63.5,86.36));power('GND',(63.5,86.36),'#PWR410')
 add('Device','C_Small','C402','22uF / 25V',185.42,76.2,fp='Capacitor_SMD:C_1210_3225Metric',fields={'MPN':'CL32B226KAJNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C309062','Qualification':'DC-bias curve pending; provisional selection'})
 wire((185.42,73.66),(185.42,sw[1]));wire((165.1,sw[1]),(185.42,sw[1]));wire((185.42,78.74),(185.42,86.36));power('GND',(185.42,86.36),'#PWR411')
-add('Device','R_Small_US','R401','100kR',63.5,109.22,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo'})
+add('Device','R_Small_US','R401','100kR',63.5,109.22,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W'})
 wire((63.5,106.68),(63.5,101.6));power('+3V3',(63.5,101.6),'#PWR412');wire((63.5,111.76),(63.5,116.84));label('AON_POWER_GOOD',(63.5,116.84))
 # Flags describe external isolated input and buck output, not raw PoE.
 add('power','PWR_FLAG','#FLG401','PWR_FLAG',63.5,63.5)

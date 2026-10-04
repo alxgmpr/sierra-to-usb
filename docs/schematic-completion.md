@@ -8,9 +8,9 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 
 | Required block | Current authoritative state | Required before schematic completion |
 |---|---|---|
-| Recovery MCU, watchdog, SWD and reset outputs | Existing 27-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | Exact passive/connector/switch MPNs; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
+| Recovery MCU, watchdog, SWD and reset outputs | Existing 27-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | Six MPNs still missing (five capacitors and reset switch); manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
 | Independent always-on supply | `hardware/always-on.kicad_sch`, 5 components, TPS62177DQCR, LPS4018-103MRC; native ERC and all five circuit-net checks pass | Capacitor effective capacitance; rail load; power fault integration; connect into final appliance hierarchy |
-| RK3566 / DDR / PMIC | Archived NanoPi R3S LTS 2411 reference schematic | Exact supported RAM and DDR training route; PMIC silicon/suffix and rail sequence; all package balls checked; native capture with complete decoupling and clocks |
+| RK3566 / DDR / PMIC | Archived reference schematic, Rockchip full datasheet and hardware guide; 565-ball CSV extracted; symbol-table review pending | Exact supported RAM and DDR training route; PMIC silicon/suffix and rail sequence; all package balls checked; native capture with complete decoupling and clocks |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
 | 2.5GbE | RTL8125BG-CG remains candidate | Exact pin/reference circuit, clocks/rails/reset/PCIe coupling and 2.5G PoE-rated magnetics; symbol and footprint checks |
 | Isolated PoE | Archived TI TIDA-050023 schematic and BOM as candidate reference | Whole-appliance peak and startup budget, exact class, transformer/protection/feedback/MPS/allocation integration; isolation boundary audit |
@@ -73,3 +73,51 @@ verify DC bias, load margin, system integration or physical operation.
 `hardware/tools/build_always_on.py` reconstructs only the new always-on draft;
 it does not touch the preserved recovery sheets. Do not rerun it over manual
 edits without preserving those edits first.
+
+## 2026-10-03 processor and recovery progress
+
+`hardware/pinmaps/rk3566.csv` preserves all 565 unique package ball names from
+Rockchip datasheet Rev 1.2, pages 24–30, including wrapped mux names. The
+reproducible extractor verifies the saved table against the PDF; this is not
+yet a symbol, and it does not claim electrical pin types or unused-pin policy.
+The KiCad symbol skill requires user review before the PDF-derived table is
+used to generate a new processor symbol. That review is pending.
+
+All eleven recovery resistors now have exact Yageo MPN, manufacturer, LCSC,
+1 percent tolerance, 0.1 W rating and 75 V rating fields in the schematic.
+At 3.3 V the worst full-rail dissipation is about 1.1 mW for a 10 kR part, well
+below 0.1 W. Their operational leakage/default-state margins remain target
+interface checks. The four headers are now Wuerth 61300211121 (J101/J202),
+61300611121 (J201), and 61301011121 (J102). J202's native schematic field requires
+the 60900213421 mating RUN shunt. Header pitch, height and recommended holes
+were reviewed against the manufacturer drawings. The original generic KiCad
+footprint holes were 1.00 mm; local variants use the recommended 1.10 mm
+drill while retaining the original 1.70 mm pads and 2.54 mm pitch.
+
+The local variants retain the official KiCad equivalent-envelope STEP models,
+packaged locally under `hardware/Recovery.3dshapes`; these are not vendor-exact
+models. Native footprint SVGs were rendered and inspected. Official library
+tools KLC checks pass with the F9.3 official-library-path rule excluded because
+this project deliberately uses `${KIPRJMOD}` local model paths. No geometry
+rule is excluded. Full board-level 3D/mechanical review remains pending.
+
+The current recovery BOM has 21/27 fitted components with exact MPN fields.
+The five capacitors and reset switch are still unresolved. The native checker
+now exports the BOM and reports missing MPNs, so ERC cannot be mistaken for
+parts-completion evidence. The complete appliance BOM is still absent.
+
+The manufacturer RK3566 guide adds constraints that must carry into capture:
+- 24 MHz crystal circuit requires its 22 R output resistor and 1 MR feedback;
+  load capacitors depend on the selected crystal rather than a copied value.
+- Reset pull-up must match PMUIO1; retain 100 nF at the reset input.
+- VCCIO2 and FLASH_VOL_SEL must agree at reset (high for 1.8 V, low for 3.3 V).
+- Keep USB OTG0 available for ROM recovery; use USB2 PHY1 with USB3 HOST1.
+- PCIe clock-request and wake use actual function pins with the same MUX group;
+  TX needs 100 nF coupling at the source and RX coupling belongs at the endpoint.
+- RK809 RTC input must be supplied first and at the highest input potential;
+  BUCK1/2 output capacitance must exceed 30 uF as specified by the guide.
+
+Official Rockchip rkbin provides RK3566 DDR training binaries, but availability
+is not proof of training with a selected RAM. Catalog searches returned costly,
+low-stock Micron parts; those are research candidates, not substitutions for a
+compatible, economical RAM selection. Exact RAM and eMMC remain open.
