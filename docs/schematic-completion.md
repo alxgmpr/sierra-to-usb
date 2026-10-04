@@ -429,3 +429,25 @@ type is now power_out rather than power_in, with an explicit audit assertion.
 Do not connect this pin to an external 2.3 V source during capture.
 This corrects the earlier candidate electrical-type proposal; no PMIC circuit
 has yet been captured.
+
+## PMIC input mapping from the actual reference circuit
+
+`hardware/pinmaps/rk809-reference-inputs.csv` records the supply pins traced
+on NanoPi R3S LTS 2411 sheet 14. VCC1/2/3/4 use its VCC5V0_SYS rail;
+VCC5/6/7/8/9 and VCC_RTC use VCC3V3_SYS. The overview on sheet 2 lists
+3.3 V for BUCK1-4 and conflicts with the actual circuit. Capture must follow
+the reviewed circuit, with final input/load validation against RK809 limits.
+The appliance names 5V_MAIN and 3V3_MAIN are distinct from recovery +3V3;
+its 0.5 A always-on regulator cannot supply these processor rails.
+
+This establishes a need for both main 5 V and main 3.3 V intermediate supplies
+from isolated 12 V. Their startup order must satisfy the PMIC VCC_RTC/VCC9
+requirement before enabling dependent rails. The reference mapping does not
+prove appliance power budget, startup margin or load qualification.
+
+Sheet 14 also explicitly describes unused codec handling. It grounds pins
+14/15/16/17/19/44/40 and leaves 18/36/37/38/35/39/41/34/32/43/42 floating.
+That is reference guidance to reconcile against the manufacturer hardware
+requirements before capture; it is not permission to omit required internal
+supply bypassing without that reconciliation. No audio function is required
+for the cellular appliance.
