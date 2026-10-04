@@ -7,7 +7,7 @@ s=(root/'reference/micron-ddr-grouped-review.kicad_sym').read_text();start=s.ind
 def uid(k):return str(uuid.uuid5(uuid.NAMESPACE_URL,'sierra-ram-review-'+k))
 def prop(k,v,x,y):return f'(property "{k}" "{v}" (at {x} {y} 0) (effects (font (size 1.27 1.27))))'
 items=[]
-positions=[(70,80),(180,80),(290,80),(400,80),(70,230),(180,230),(290,230)]
+positions=[(76.2,76.2),(177.8,76.2),(279.4,76.2),(406.4,76.2),(76.2,228.6),(177.8,228.6),(279.4,228.6)]
 for unit,(x,y) in enumerate(positions,1):
  h=10.16 if unit in {3,4,5,6} else [22,22,32,20,29,29,14][unit-1]*2.54+5.08
  margin=15.24 if unit in {3,4} else 7.62

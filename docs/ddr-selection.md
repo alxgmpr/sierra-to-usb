@@ -214,3 +214,16 @@ check passes, and KiCad XML export still contains all 200 library pins.
 The complete re-render was inspected with reference/value fields clear of
 pin numbers. This completes the current symbol orientation review, while
 RAM power/bus circuitry and the fabrication footprint remain unfinished.
+
+## RAM draft attached to appliance
+
+Registered the audited grouped model in MemoryDraft with blank footprint
+and added ram.kicad_sch as appliance page 12. U901 carries exact MPN
+MT53E512M32D1ZW-046 WT:B / C5330500. All 58 ground balls are connected
+and verified in the integrated native netlist; twelve permitted floating
+DNU balls have no-connect markers. The ten NC pins retain no-connect type.
+Supplies, bus, ODT_CA and reset remain visibly unfinished. No RAM operation
+or final selection qualification is claimed. The regenerated RAM sheet was
+visually reviewed after grid alignment and exact value-field updates.
+Integrated capture checks pass for 169 components across 12 sheets; full
+ERC reports 645 violations, including newly exposed unfinished RAM pins.
