@@ -253,3 +253,37 @@ label clear of resistor text. Appliance has 104 components and 57 ERC
 violations; no exclusions added. Inductor/output bank and footprint
 qualification still prevent this draft from being a working power stage.
 Current ERC types: {'pin_not_connected': 39, 'pin_not_driven': 10, 'power_pin_not_driven': 8}.
+
+## Inductor and local output bank captured
+
+L701 is Coilcraft XAL7070-332MEC (C3911435), 3.3 uH ±20%,
+9.42 mOhm maximum DCR at 25 C, 19.4 A typical current at 30%
+inductance drop, and reference RMS currents 11.5/15.1 A at 20/40 C
+rise. These are not guaranteed hot saturation or application thermal
+limits. This gives greater room than the Würth reference's 15 A typical
+30% drop point against the earlier 14.46 A valley-limit sensitivity case.
+That comparison does not prove a minimum inductance or safe fault peak.
+Estimated DC copper loss at 8 A and 25 C maximum DCR is about
+0.60 W before AC loss and hot-resistance increase.
+
+Manufacturer document 856 revised 2026-02-25 is archived and hashed.
+Visually audited its recommended 1.92 x 6.50 mm pads at 4.82 mm
+center spacing against installed Inductor_SMD:L_Coilcraft_XAL7070-XXX:
+pads 1/2 at x=-2.41/+2.41, identical sizes. The existing standard
+footprint is used; no new footprint generator is introduced.
+Catalog showed 559 indexed parts; this is not reserved stock.
+
+C706/C707 are each CL32B226KAJNNNE, 22 uF/25 V X7R/1210.
+They connect electrically between the inductor output (5V_MAIN) and
+GND, making the total currently captured nominal distributed output
+capacitance 177 uF. Effective capacitance and full loop compensation
+remain unqualified; do not equate Samsung bank behavior with TI's
+Murata reference bank without the bias/temperature comparison.
+
+Native XML checks verify the complete SW-to-inductor-to-5V path and
+both local output capacitors. Render inspected after moving capacitor
+fields away from the recovery pullup and relocating the divider to
+avoid crossing the input bank. Appliance total is 107 components.
+Regulator footprint, final load budget, startup, thermal and fault tests
+remain open; this is circuit capture, not a fabrication-ready supply.
+Source: https://www.coilcraft.com/pdfs/xal7070.pdf.
