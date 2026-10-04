@@ -102,11 +102,13 @@ this project deliberately uses `${KIPRJMOD}` local model paths. No geometry
 rule is excluded. Full board-level 3D/mechanical review remains pending.
 
 The current recovery BOM has 27/27 fitted components with exact MPN fields.
-C203 now has provisional CL21B475KAFNNNE (4.7 uF, 25 V, X7R, 0805).
-Samsung typical bias loss is 13.26 percent at 3.3 V and 15.92 percent at
-3.6 V: about 4.08 uF and 3.95 uF before tolerance, temperature and aging.
-Its effective-capacitance acceptance remains open; MPN coverage is not
-parts qualification. The original 0603 footprint is enlarged to 0805. C201/C202/C204/C205 are now
+C203 is now CL31B106KAHNNNE (10 uF, 25 V, X7R, 1206), replacing
+the provisional 4.7 uF / 0805 selection. Published typical loss at 3.6 V
+is 15.26 percent. Combining that curve with -10 percent initial tolerance
+and -15 percent X7R temperature change gives about 6.48 uF, providing
+margin above ST's nominal 4.7 uF decoupling recommendation. This estimate
+is not guaranteed combined-corner data and excludes aging; qualification
+remains open. C201/C202/C204/C205 are now
 Samsung CL10B104KA8NNNC, 100 nF, 25 V, X7R, +/-10 percent, 0603.
 Published typical 25 C DC-bias data show +0.94 percent at 3.3 V and
 +0.83 percent at 3.6 V; this is not guaranteed corner performance. SW201 is now E-Switch TL3342F160QG.
