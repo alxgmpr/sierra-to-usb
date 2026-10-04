@@ -10,7 +10,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 |---|---|---|
 | Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 32-component supply-integrated capture; native connectivity verified; standalone recovery ERC now reports boundary labels for appliance-only signals | MCU pin audit closure; physical startup/reset behavior; target-domain interface integration |
 | Independent always-on supply | `hardware/always-on.kicad_sch`, 6 components, TPS62177DQCR, LPS4018-103MRC; integrated recovery hierarchy and PG fault net; typical capacitor bias reviewed | Guaranteed capacitor corners/aging and loop behavior; rail load; complete appliance hierarchy |
-| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 54-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
+| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 56-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
 | Main 5 V and 3.3 V supplies | Native 15-part TPS56837 main 5 V draft and 13-part MP2143 3.3 V draft; MCU enable/PG and shared ISO_12V captured | TPS56837 footprint approval, combined capacitor/compensation and startup/current/thermal budget closure; reviewed interface states |
 | External CPU supply | Missing; NanoPi reference uses I²C-controlled TCS4525 | Exact programmable regulator, boot voltage/OPP/driver compatibility, RK809 EXT_EN sequence, input/output bank and complete capture |
 | Boot storage and recovery | 16 GB native-mode A/B sizing proposal; Kingston exact candidate has lifecycle hold; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
@@ -19,7 +19,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 | Modem power | Requirements only | Voltage/current envelope per model, switch/eFuse/ramp/discharge, default-off controls and fault sensing |
 | EM9190 / EM9293 sockets and SIM | Older manufacturer PTS research; contacts 24/38/68 conflict with Quectel | Current controlled pin tables, complete per-model profile and power/control/SIM/USB3 capture |
 | RM520N-GL / RM551E-GL sockets and SIM | RM520 guide exists; current RM551 production guide still missing | Current controlled hardware guides and per-model pin/voltage/control/SIM/USB3 capture |
-| Full hierarchy and BOM | Draft appliance root exports 114 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
+| Full hierarchy and BOM | Draft appliance root exports 116 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
 | Visual and electrical review | Always-on draft rendered and corrected; recovery tests rerun | All sheets and circuit crops inspected, native ERC and complete critical-net assertions, manufacturer pin fidelity, footprint pad parity |
 
 No PCB file exists. Do not start placement until the integrated schematic and
@@ -28,11 +28,11 @@ power interruption and unattended recovery remain separate qualification work.
 
 ## Current verification snapshot — 2026-10-04
 
-Appliance capture checker exports the native XML and verifies 114 components,
+Appliance capture checker exports the native XML and verifies 116 components,
 recovery/main rail separation, PMIC restart, main 5 V enable/PG, bootstrap,
 soft start, input bypass and output-filter connectivity. It is not a full-appliance
-checker. The last full ERC run reported 41 violations: 28 unconnected pins,
-8 undriven signal pins and 5 undriven power pins. No exclusions added.
+checker. The last full ERC run reported 25 violations: 16 unconnected pins,
+4 undriven signal pins and 5 undriven power pins. No exclusions added.
 The processor, RAM, storage, Ethernet, PoE and modem circuits are still absent.
 
 The dated sections below preserve intermediate research and capture decisions;
@@ -980,3 +980,27 @@ the source BUCK5. VCC8 pin 57 and C538 now connect to **3V3_MAIN**.
 This correction supersedes the earlier VCC8 entry. Native checks remove
 VCC8/C538 from VCC_1V8 and require them on 3V3_MAIN. SWOUT2 remains
 unused; any later use passes through 3.3 V and requires startup/load review.
+
+## 2026-10-04 unused-codec capture
+
+No audio function is required. RK809 Rev 2.4 section 4.4.5 identifies MCLK
+as a fixed input and LRCLK/BCLK as mode-dependent inputs/outputs. MCLK 16
+and SDI 17 now connect to ground. LRCLK 14/BCLK 15 use separate 10 kR
+R510/R511 pull-downs (Yageo RC0603FR-0710KL, 0603). Unlike the NanoPi
+reference's hard grounds, these permit an accidentally enabled output to
+drive without a direct short. At 5.5 V and -1 percent resistance, each would
+draw at most 0.56 mA / 3.1 mW, below the 0.1 W resistor rating. Actual
+codec operating configuration remains disabled and must be enforced by firmware.
+
+Unused SDO 18, PDMCLK 19, speaker outputs 32/34, headphone outputs 39/41
+and microphone inputs 42/43 now have no-connect markers. The NanoPi reference
+floats the corresponding audio pins except PDMCLK, which it grounds; we leave
+PDMCLK open because the manufacturer pin table explicitly defines it as an
+output. Internal supplies retain the captured bypass/charge-pump networks.
+No supply output is grounded. Manufacturer register defaults leave PDM_EN
+and SCK_EN zero (0x48); I2S_RX_MST resets to slave (section 5, page 109).
+
+Native captured-net checks pass for 56 PMIC / 116 appliance components.
+Rendered views were corrected for reset-label and title-block overlap.
+Full ERC reports 25 violations without exclusions; this closes only the
+captured unused audio circuitry, not the still-missing appliance blocks.

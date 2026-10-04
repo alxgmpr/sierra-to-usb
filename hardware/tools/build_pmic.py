@@ -60,7 +60,7 @@ def wire(a,b):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
 def label(name,p):
- if name in {'5V_MAIN','3V3_MAIN'}:
+ if name in {'5V_MAIN','3V3_MAIN','GND'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("global"+name+str(p))}"))');return
  items.append(f'(label "{name}" (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "{uid("label"+name+str(p))}"))')
 def power(name,p,ref):add('power',name,ref,name,*p)
@@ -113,7 +113,7 @@ note('BUCK4: RK809-5 startup OFF; bypass only. Do not use for boot-time 3V3_MAIN
 for n in ['47','69']:
  a=units[3][n];wire(a,(a[0],279.4))
 wire((99.06,279.4),(104.14,279.4));power('GND',(101.6,279.4),'#PWR520')
-a=units[3]['67'];wire(a,(185.42,a[1]));label('RK_RESET_N',(185.42,a[1]))
+a=units[3]['67'];wire(a,(185.42,a[1]));label('RK_RESET_N',(185.42,a[1]));items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
 add('Device','R_Small_US','R501','10kR',160.02,226.06,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W'})
 wire((160.02,223.52),(160.02,215.9));label('VCC3V3_PMU',(160.02,215.9));wire((160.02,228.6),(160.02,a[1]));junction((160.02,a[1]))
 add('Device','C_Small','C513','100nF / 25V',160.02,254,fp='Capacitor_SMD:C_0603_1608Metric',fields={'MPN':'CL10B104KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C1590','Qualification':'Place at RK3566 nPOR; reset assertion on brownout remains to verify'})
@@ -205,7 +205,7 @@ a=units[4]['38'];b=(a[0],a[1]-7.62);wire(a,b);label('PMIC_INTERNAL_CPVDD',b)
 wire((330.2,288.29),(330.2,278.13));label('PMIC_INTERNAL_CPVDD',(330.2,278.13))
 wire((330.2,293.37),(330.2,300.99));power('GND',(330.2,300.99),'#PWR555')
 # Internal analog/digital 1.8 V LDO outputs: individual bypasses, never external feeds.
-for pin,ref,name,x,pwr in [('44','C535','PMIC_INTERNAL_1V8A',330.2,'#PWR556'),('48','C536','PMIC_INTERNAL_1V8D',368.3,'#PWR557')]:
+for pin,ref,name,x,pwr in [('44','C535','PMIC_INTERNAL_1V8A',330.2,'#PWR556'),('48','C536','PMIC_INTERNAL_1V8D',358.14,'#PWR557')]:
  a=units[4][pin];b=(a[0]+12.7,a[1]);wire(a,b);label(name,b)
  add('Device','C_Small',ref,'1uF / 25V',x,250.19,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
  wire((x,247.65),(x,237.49));label(name,(x,237.49))
@@ -220,9 +220,9 @@ a=units[4]['40'];wire(a,(a[0],279.4));power('GND',(a[0],279.4),'#PWR559')
 # Preserve the manufacturer's speaker/charge-pump input supply and bypass.
 a=units[4]['33'];b=(a[0],213.36);wire(a,b);label('5V_MAIN',b)
 items[-1]=items[-1].replace('(justify left)','(justify right)')
-add('Device','C_Small','C537','10uF / 50V',368.3,290.83,fp='Capacitor_SMD:C_1206_3216Metric',fields={'MPN':'CL31B106KBHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C89632','Dielectric':'X7R','Qualification':'Speaker/charge-pump supply bypass; unused audio policy pending'})
-wire((368.3,288.29),(368.3,278.13));label('5V_MAIN',(368.3,278.13))
-wire((368.3,293.37),(368.3,300.99));power('GND',(368.3,300.99),'#PWR560')
+add('Device','C_Small','C537','10uF / 50V',358.14,290.83,fp='Capacitor_SMD:C_1206_3216Metric',fields={'MPN':'CL31B106KBHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C89632','Dielectric':'X7R','Qualification':'Speaker/charge-pump supply bypass; unused audio policy pending'})
+wire((358.14,288.29),(358.14,278.13));label('5V_MAIN',(358.14,278.13))
+wire((358.14,293.37),(358.14,300.99));power('GND',(358.14,300.99),'#PWR560')
 # Switch2 electrical range is 2.7–5 V: use main 3.3 V, not our 1.8 V BUCK5.
 a=units[1]['57'];wire(a,(a[0],50.8));wire((a[0],50.8),(134.62,50.8));label('3V3_MAIN',(134.62,50.8))
 add('Device','C_Small','C538','1uF / 25V',154.94,104.14,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
@@ -240,6 +240,19 @@ wire((500.38,252.73),(500.38,262.89));label('PMIC_CPN',(500.38,262.89))
 add('Device','C_Small','C540','2.2uF / 50V',500.38,290.83,fp='Capacitor_SMD:C_1206_3216Metric',fields=cpfields)
 wire((500.38,288.29),(500.38,278.13));label('PMIC_INTERNAL_CPVSS',(500.38,278.13))
 wire((500.38,293.37),(500.38,300.99));power('GND',(500.38,300.99),'#PWR562')
+# Unused codec: fixed inputs MCLK/SDI grounded; mode-dependent clocks weakly held low.
+for pin in ['16','17']:
+ a=units[4][pin];b=(a[0]-7.62,a[1]);wire(a,b);label('GND',b)
+ items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)').replace('(justify left)','(justify right)')
+wire((457.2,320.04),(457.2,327.66));label('GND',(457.2,320.04));power('GND',(457.2,327.66),'#PWR563')
+for pin,ref,name,x,pwr in [('14','R510','UNUSED_CODEC_LRCLK',457.2,'#PWR564'),('15','R511','UNUSED_CODEC_BCLK',500.38,'#PWR565')]:
+ a=units[4][pin];b=(a[0]-7.62,a[1]);wire(a,b);label(name,b)
+ items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
+ add('Device','R_Small_US',ref,'10kR',x,355.6,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W'})
+ wire((x,353.06),(x,345.44));label(name,(x,345.44))
+ wire((x,358.14),(x,365.76));power('GND',(x,365.76),pwr)
+for pin in ['18','19','32','34','39','41','42','43']:
+ a=units[4][pin];items.append(f'(no_connect (at {a[0]} {a[1]}) (uuid "{uid("unused-codec-"+pin)}"))')
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(241.3,375.92))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
