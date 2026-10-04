@@ -889,3 +889,10 @@ inputs and the main 3.3 V output source representation. These require
 circuit/unused-pin policy closure, not blanket flags or suppression.
 PMIC 25-net/47-MPN and appliance 92-component integration checks still pass.
 This is an incomplete-design baseline, not a schematic release.
+
+## DDR exact-part investigation
+
+See ddr-selection.md. The NanoPi reference symbol has no exact memory
+MPN. Micron Z42M 2 GB x32 candidate identified, but manufacturer full
+datasheet access and orderable suffix reconciliation remain open. No
+unsupported DDR ball map or voltage divider is captured.
