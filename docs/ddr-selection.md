@@ -119,3 +119,21 @@ and A8. These must be resolved for the selected single-rank part before
 registration. No full manufacturer ball-map match is claimed from flattened
 PDF text. check_micron_native.py now verifies the preserved 200-entry
 inventory and symbol/footprint identity consistency.
+
+## Original PDF retrieved and visually inspected
+
+The RS URL with ?download=1 and a browser User-Agent returned the original
+9,334,735-byte PDF. It is now archived as micron-z42m-rev-i.pdf with
+SHA-256 provenance. This supersedes the earlier local-retrieval failure;
+its age and distributor-hosting boundary remain unchanged. A rendered
+printed page 22 was inspected: A8, H3, R3, J5 and P5 are NC for the
+single-rank device, resolving the native model's five second-rank aliases.
+Full 200-ball comparison is still pending.
+
+RK809 Rev 2.4 printed pages 29–30 describe RESETB assertion followed by
+power-channel shutdown 2ms later for normal shutdown. Undervoltage uses
+a separate path with immediate buck shutdown. Neither statement proves
+Micron's CKE/input-level or rail-decay limits at the memory balls. Extra
+hold-up is a possible implementation, not an established requirement;
+first review regulator disable/discharge paths and worst-case capacitance,
+load and decay trajectories for planned and abrupt loss of input power.
