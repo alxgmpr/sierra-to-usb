@@ -1477,3 +1477,32 @@ standalone recovery check stops at five isolated-pin-label warnings: the
 four previously integrated control labels plus this new reset label have
 their destination circuits outside the standalone recovery hierarchy.
 No ERC exclusions or passing standalone-recovery claim were added.
+
+## 2026-10-04 independent MCU Rockusb recovery request
+
+U201 PB3/pin 42 now drives MCU_PROCESSOR_RECOVERY_ASSERT.
+Q802 (Nexperia MMBT3904,215, SOT-23) sinks SARADC_BOOT_KEY,
+with R804 (RC0603FR-0710KL, 10kR) limiting base current and R805
+(RC0603FR-07100KL, 100kR) holding the base low during MCU reset.
+Both resistors are 0603, 1%, 0.1W. The collector joins the processor
+VIN0 ball 1D17, manual SW801, 10k pull-up and 1nF local filter.
+The emitter and base pull-down join GND. No MCU supply is tied to
+the processor's 1.8V input through a pull-up. Nominal collector pull-up
+current is 180uA. Sink/ADC voltage limits and powered-off leakage remain
+to qualify; the low-current draft uses the same reviewed transistor model
+and electrical proof boundary as Q801.
+
+Firmware must initialize PB2/PB3 low before enabling their outputs.
+For loader recovery, assert PB3 before requesting a shared reset with PB2,
+keep the recovery request through boot sampling, then release after
+Rockusb enumeration. This is a required sequencing contract, not an
+implemented firmware feature. Exact loader sampling and reset pulse timing
+remain to verify. Independent MaskROM access and USB OTG physical
+interface/protection/VBUS detection are still absent.
+
+Native checks pass for 148 appliance components and verify both MCU pins,
+base networks, collectors and grounds. Full ERC remains 451 violations.
+Both changed sheets were rendered and inspected; the recovery input label
+was moved clear of the DDR symbol. A reused loop-variable error was fixed
+before commit, and the processor checker now rejects duplicate schematic
+UUIDs. No ERC exclusion or hardware recovery proof is claimed.

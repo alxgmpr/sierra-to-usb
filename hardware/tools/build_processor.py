@@ -130,30 +130,35 @@ for ref,net,title,sy in [('SW801','SARADC_BOOT_KEY','PROCESSOR RECOVERY',248.92)
 # Existing native MMBT3904 model, reviewed for recovery sinks.
 control_source=(ROOT/'controls.kicad_sch').read_text()
 bjt=block(control_source,control_source.index('(symbol "Transistor_BJT:MMBT3904"'))
-for name,ref,value,x,y,angle,fp,fields in [
- ('Device:R_Small_US','R802','10kR',320.04,55.88,90,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220'}),
- ('Device:R_Small_US','R803','100kR',332.74,71.12,0,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675'}),
- ('Transistor_BJT:MMBT3904','Q801','MMBT3904,215',345.44,55.88,0,'Package_TO_SOT_SMD:SOT-23',{'MPN':'MMBT3904,215','Manufacturer':'Nexperia','Datasheet':'https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf'})]:
- properties=prop('Reference',ref,x+(12.7 if ref=='Q801' else 7.62) if angle==0 else x,y-1.27 if angle==0 else y-8.89)+prop('Value',value,x+(12.7 if ref=='Q801' else 7.62) if angle==0 else x,y+1.27 if angle==0 else y-6.35)
- if angle==90:properties=re.sub(r'(\(at [^()]+) 0\)',r'\1 90)',properties)
- if ref.startswith('R'):
-  fields.update({'Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
- fields.update({'Footprint':fp,'Qualification':'Draft MCU-requested processor/PMIC restart; sink limits and timing require qualification'})
- for key,val in fields.items():properties+=prop(key,val,x,y,True)
- pin_numbers=['1','2','3'] if ref=='Q801' else ['1','2']
- items.append(f'(symbol (lib_id "{name}") (at {x} {y} {angle}) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(ref)}") {properties} '+''.join(f'(pin "{n}" (uuid "{uid(ref+":"+n)}"))' for n in pin_numbers)+f' (instances (project "processor" (path "/{uid("root")}" (reference "{ref}") (unit 1)))))')
-wire((304.8,55.88),(317.5,55.88),'reset-driver-input')
-label('MCU_PROCESSOR_RESET_ASSERT',304.8,55.88,'reset-driver-input-label')
-wire((322.58,55.88),(332.74,55.88),'reset-base1')
-wire((332.74,55.88),(340.36,55.88),'reset-base2')
-wire((332.74,55.88),(332.74,68.58),'reset-base-pulldown')
-items.append(f'(junction (at 332.74 55.88) (diameter 0) (color 0 0 0 0) (uuid "{uid("reset-base-junction")}"))')
-wire((347.98,50.8),(347.98,40.64),'reset-collector')
-label('RK_RESET_N',347.98,40.64,'reset-collector-label')
-wire((347.98,60.96),(347.98,81.28),'reset-emitter')
-wire((332.74,73.66),(332.74,81.28),'reset-pulldown-ground')
-wire((332.74,81.28),(347.98,81.28),'reset-ground-common')
-label('GND',332.74,81.28,'reset-ground-label')
+for key,control,output,qref,rbase,rpull,offset in [('reset','MCU_PROCESSOR_RESET_ASSERT','RK_RESET_N','Q801','R802','R803',0),('recovery','MCU_PROCESSOR_RECOVERY_ASSERT','SARADC_BOOT_KEY','Q802','R804','R805',58.42)]:
+ for name,ref,value,x,y,angle,fp,fields in [
+  ('Device:R_Small_US',rbase,'10kR',320.04,55.88+offset,90,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220'}),
+  ('Device:R_Small_US',rpull,'100kR',332.74,71.12+offset,0,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675'}),
+  ('Transistor_BJT:MMBT3904',qref,'MMBT3904,215',345.44,55.88+offset,0,'Package_TO_SOT_SMD:SOT-23',{'MPN':'MMBT3904,215','Manufacturer':'Nexperia','Datasheet':'https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf'})]:
+  properties=prop('Reference',ref,x+(12.7 if ref.startswith('Q') else 7.62) if angle==0 else x,y-1.27 if angle==0 else y-8.89)+prop('Value',value,x+(12.7 if ref.startswith('Q') else 7.62) if angle==0 else x,y+1.27 if angle==0 else y-6.35)
+  if angle==90:properties=re.sub(r'(\(at [^()]+) 0\)',r'\1 90)',properties)
+  if ref.startswith('R'):
+   fields.update({'Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
+  fields.update({'Footprint':fp,'Qualification':'Draft MCU-controlled '+key+' sink; electrical limits and timing require qualification'})
+  for field_key,val in fields.items():properties+=prop(field_key,val,x,y,True)
+  pin_numbers=['1','2','3'] if ref.startswith('Q') else ['1','2']
+  items.append(f'(symbol (lib_id "{name}") (at {x} {y} {angle}) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(ref)}") {properties} '+''.join(f'(pin "{n}" (uuid "{uid(ref+":"+n)}"))' for n in pin_numbers)+f' (instances (project "processor" (path "/{uid("root")}" (reference "{ref}") (unit 1)))))')
+ wire((304.8,55.88+offset),(317.5,55.88+offset),key+'-driver-input')
+ if key == 'recovery':
+  wire((304.8,55.88+offset),(304.8,43.18+offset),key+'-input-label-rise')
+  items.append(f'(global_label "{control}" (shape passive) (at 304.8 {43.18+offset} 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid(key+"-driver-input-label")}"))')
+ else:
+  label(control,304.8,55.88+offset,key+'-driver-input-label')
+ wire((322.58,55.88+offset),(332.74,55.88+offset),key+'-base1')
+ wire((332.74,55.88+offset),(340.36,55.88+offset),key+'-base2')
+ wire((332.74,55.88+offset),(332.74,68.58+offset),key+'-base-pulldown')
+ items.append(f'(junction (at 332.74 {55.88+offset}) (diameter 0) (color 0 0 0 0) (uuid "{uid(key+"-base-junction")}"))')
+ wire((347.98,50.8+offset),(347.98,40.64+offset),key+'-collector')
+ label(output,347.98,40.64+offset,key+'-collector-label')
+ wire((347.98,60.96+offset),(347.98,81.28+offset),key+'-emitter')
+ wire((332.74,73.66+offset),(332.74,81.28+offset),key+'-pulldown-ground')
+ wire((332.74,81.28+offset),(347.98,81.28+offset),key+'-ground-common')
+ label('GND',332.74,81.28+offset,key+'-ground-label')
 items.append(f'(text "INCOMPLETE PROCESSOR CAPTURE: all 565 balls present; documented grounds, logic/GPU and PMU supplies connected; circuitry incomplete.\\nPMIC controls: AJ37=I2C0 SCL, AK38=I2C0 SDA, 1P19=PMIC_SLEEP.\\n19 alternate roles and TVSS unresolved. No production footprint assigned.\\nIntegrated draft: CPU, DDR, analog/IO supplies and peripheral circuitry remain open." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
 (ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol} {cap} {resistor} {switch} {bjt}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
 assert len(rail_balls) == 26

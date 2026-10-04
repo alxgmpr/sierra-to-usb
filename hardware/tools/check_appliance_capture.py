@@ -67,10 +67,14 @@ with tempfile.TemporaryDirectory() as tmp:
         fields={f.get('name'):f.text for f in comp.findall('./fields/field')}
         assert fields['MPN']=='MPZ1608S121ATAH0' and fields['DCR Maximum']=='45mOhm'
     assert {('SW801','2'),('SW802','2')} <= nets['GND']
-    assert nets['SARADC_BOOT_KEY']=={('U801','1D17'),('R801','2'),('C820','1'),('SW801','1')}
+    assert nets['SARADC_BOOT_KEY']=={('U801','1D17'),('R801','2'),('C820','1'),('SW801','1'),('Q802','3')}
     assert nets['MCU_PROCESSOR_RESET_ASSERT']=={('U201','21'),('R802','1')}
     base=next(v for v in nets.values() if ('Q801','1') in v)
     assert base=={('Q801','1'),('R802','2'),('R803','1')}
     assert {('Q801','2'),('R803','2')} <= nets['GND']
-    assert len(tree.findall('./components/comp'))==145
-print('PASS: appliance restart GPIO connection and 145-component capture; not full ERC.')
+    assert nets['MCU_PROCESSOR_RECOVERY_ASSERT']=={('U201','42'),('R804','1')}
+    recovery_base=next(v for v in nets.values() if ('Q802','1') in v)
+    assert recovery_base=={('Q802','1'),('R804','2'),('R805','1')}
+    assert {('Q802','2'),('R805','2')} <= nets['GND']
+    assert len(tree.findall('./components/comp'))==148
+print('PASS: appliance restart GPIO connection and 148-component capture; not full ERC.')
