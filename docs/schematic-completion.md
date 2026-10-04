@@ -223,3 +223,20 @@ must not infer which source asserted it. The separate supply checker now
 uses the native integrated root, because its output is a real hierarchical
 interface. It filters supply pins when checking shared power/ground nets;
 `hardware/check.py` verifies MCU/watchdog rail membership and fault loads.
+
+## Input capacitor margin correction
+
+C401 now uses CL31B475KBHNNNE (4.7 uF, 50 V, X7R, 1206, C51205),
+replacing the 2.2 uF part without changing footprint or connectivity.
+Samsung typical loss is 24.16 percent at 12 V and 27.36 percent at 13.2 V.
+Combining the 13.2 V curve with -10 percent tolerance and -15 percent
+temperature allowance gives about 2.61 uF before aging, above the
+reference's nominal 2.2 uF. The 13.2 V assumption corresponds to a
+12 V +/-10 percent intermediate rail; final PoE regulation/transient limits
+must confirm that envelope. This remains typical-data engineering margin,
+not a guaranteed combined-corner minimum.
+
+TI Table 2 explicitly permits 10 uH with nominal 22, 47, 100 or 200 uF,
+assuming typical +/-20 percent variation. Output capacitor temperature/bias
+margin may therefore be improved by moving toward the supported 47 uF
+combination; current single 22 uF output selection remains provisional.
