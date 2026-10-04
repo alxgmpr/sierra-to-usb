@@ -21,7 +21,7 @@ Build and measure the intended image before freezing capacity. Firmware has
 not been implemented here. Endurance, write amplification and log write-rate
 limits also remain open.
 
-## Candidate investigation — 2026-10-04
+## Candidate investigation — 2026-10-04 (lifecycle hold)
 
 [Kingston's manufacturer page](https://www.kingston.com/en/embedded/emmc-embedded-flash)
 lists EMMC16G-WW28: 16 GB, eMMC 5.1 (HS400), TLC, -40 to +85 C,
@@ -55,3 +55,35 @@ candidate compatibility remains unproved. Capture requires the selected
 memory's reset policy, boot-partition configuration, supplies/bypassing and
 processor integration. Retain independent USB MaskROM recovery: an eMMC
 recovery partition cannot recover a failed eMMC or corrupt boot configuration.
+
+## Exact-suffix lifecycle and firmware-mode audit
+
+The [DigiKey exact-part page](https://www.digikey.com/en/products/detail/kingston-technology/EMMC16G-WW28-04B22/26975041)
+lists EMMC16G-WW28-04B22 as Last Time Buy. A regional listing also reports
+Not Recommended for New Designs. Do not freeze this ordering code from its
+small indexed stock alone; request current manufacturer lifecycle evidence or
+choose a supported successor. This lifecycle hold supersedes its earlier
+candidate-family status; no replacement is selected yet. Datasheets found for
+-01E10, -01E22 and -03022 do not establish exact -04B22 firmware behavior.
+
+[Kingston's firmware configuration guide](https://media.kingston.com/pdfs/embedded/firmware-config_us.pdf)
+distinguishes native NAND, fixed pSLC and Dynamic Boost. Fixed pSLC converts
+TLC capacity to one third (MLC to one half); Dynamic Boost retains native
+reported capacity but can reduce lifetime writes. For bounded router logging,
+evaluate native mode without Dynamic Boost and obtain exact suffix mapping
+from the manufacturer. Do not assume suffix decoding from another device.
+
+The 7.875 GiB proposal therefore needs at least 8,455,716,864 bytes of actual
+usable user area after firmware configuration. Nominal 16 GB TLC in full-device
+pSLC mode would provide only about 4.97 GiB before other reservations, which
+is insufficient. Nominal 32 GB TLC in that mode is about 9.93 GiB, subject to
+exact-device user-area sizing; this is arithmetic, not a replacement selection.
+Partial enhanced areas need separate accounting and endurance review.
+
+The Kingston guide was read through the web tool. Direct raw PDF retrieval
+returned HTTP 403; no archived PDF or hash is claimed.
+
+The RK3566 guide section 2.1.4 specifies FLASH_VOL_SEL high during reset for
+1.8 V VCCIO2, low for 3.3 V. Preserve this hardware strap requirement in
+processor capture; a later software IO setting cannot substitute for the
+correct boot strap and physical IO voltage.
