@@ -631,3 +631,26 @@ final compactness and complete hierarchy review remain pending. Neither output
 is yet connected to a captured processor package. The selected 2 uF nominal
 bypass banks exceed the reference's 1 uF nominal value; combined-corner aging,
 actual load decoupling and loop behavior remain explicit checks.
+
+## Remaining enabled LDO output capture
+
+LDO7 pin 3 now supplies VCCA1V8_PMU and LDO8 pin 5 supplies VCCA_1V8,
+both 1.8 V at slot 2, with independent two-part 1 uF bypass banks. VCC7
+pin 4 uses 3V3_MAIN and C524 22 uF input bypass. LDO5 pin 29 now supplies
+VCCIO_SD with the same two-part bank, starting at 3.3 V at slot 4 and
+retaining software voltage adjustment for the SD IO domain. VCC6 already
+uses 5 V, providing headroom for this 3.3 V rail as well as LDO6.
+The SD card's actual switched supply and boot-mode circuitry remain absent.
+
+Native netlist checks now prove exact membership for seventeen captured nets
+and 35 exact-MPN parts. The render was reviewed for separate domain labels
+and uncluttered bypass banks. LDO1/4/9 remain unused candidates awaiting
+manufacturer unused-output policy. LDO7/8 ratings are 400 mA with stated
+headroom; at rated maximum each would dissipate 0.6 W from 3.3 V, so actual
+load and combined PMIC thermal qualification remain necessary.
+
+The startup CSV now calls switch outputs input pass-through explicitly.
+The table's nominal 3.3 V examples do not make SWOUT1/2 voltage regulators:
+SWOUT1 follows VCC9 (5 V in the current appliance), while SWOUT2 follows
+VCC8, still uncaptured. This prevents silently importing a 3.3 V switch-output
+name after the manufacturer-priority RTC/VCC9 correction.

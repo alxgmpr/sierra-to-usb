@@ -137,7 +137,19 @@ for pin,net,y,cref in [('21','VDDA_0V9',63.5,520),('20','VDDA0V9_PMU',129.54,522
   wire((x,y),(x,y+10.16));wire((x,y+15.24),(x,y+22.86))
  wire((419.1,y+22.86),(449.58,y+22.86));power('GND',(434.34,y+22.86),f'#PWR{cref+10}')
  note(('LDO2: 0.9V / 400mA' if pin=='21' else 'LDO3: 0.9V / 100mA high PSRR')+'; load budget pending',(398.78,y-12.7))
-note('PMIC capture in progress — BUCK1 / BUCK2 / BUCK5',(35.56,22.86),2.54)
+# Separate analog 1.8 V rails and adjustable SD IO domain.
+a=units[2]['4'];wire(a,(a[0],127));label('3V3_MAIN',(a[0],127))
+add('Device','C_Small','C524','22uF / 25V',50.8,91.44,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
+wire((50.8,88.9),(50.8,78.74));label('3V3_MAIN',(50.8,78.74));wire((50.8,93.98),(50.8,101.6));power('GND',(50.8,101.6),'#PWR534')
+for pin,net,y,cref,title in [('3','VCCA1V8_PMU',195.58,525,'LDO7: 1.8V / slot 2'),('5','VCCA_1V8',261.62,527,'LDO8: 1.8V / slot 2'),('29','VCCIO_SD',327.66,529,'LDO5: 3.3V startup / slot 4; SD IO adjustable')]:
+ a=units[2][pin];b=(a[0]+7.62,a[1]);wire(a,b);label(net,b)
+ wire((419.1,y),(449.58,y));label(net,(419.1,y))
+ for j,x in enumerate([419.1,449.58]):
+  add('Device','C_Small',f'C{cref+j}','1uF / 25V',x,y+12.7,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
+  wire((x,y),(x,y+10.16));wire((x,y+15.24),(x,y+22.86))
+ wire((419.1,y+22.86),(449.58,y+22.86));power('GND',(434.34,y+22.86),f'#PWR{cref+10}')
+ note(title+'; load budget pending',(398.78,y-12.7))
+note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(35.56,31.75))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
 (ROOT/'pmic.kicad_sch').write_text(text)

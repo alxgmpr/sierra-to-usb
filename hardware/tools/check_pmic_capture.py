@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check captured BUCK1/2/5 connectivity only; other PMIC circuitry is unfinished."""
+"""Check captured PMIC rail and reset connectivity only; other PMIC circuitry is unfinished."""
 from pathlib import Path
 import subprocess, tempfile, xml.etree.ElementTree as E
 root=Path(__file__).resolve().parents[1]
@@ -19,14 +19,17 @@ with tempfile.TemporaryDirectory() as tmp:
  '/RK_RESET_N':{('U501','67'),('R501','2'),('C513','1')},
  '/VCC3V3_PMU':{('R501','1'),('U501','31'),('C517','1'),('C518','1')},
  'Net-(U501C-VREF)':{('U501','46'),('C515','1')},
- '/3V3_MAIN':{('U501','22'),('C519','1')},
+ '/3V3_MAIN':{('U501','22'),('C519','1'),('U501','4'),('C524','1')},
  '/VDDA_0V9':{('U501','21'),('C520','1'),('C521','1')},
  '/VDDA0V9_PMU':{('U501','20'),('C522','1'),('C523','1')},
- 'GND':{(f'C{n}','2') for n in range(501,524)}|{('U501','47'),('U501','69')},
+ '/VCCA1V8_PMU':{('U501','3'),('C525','1'),('C526','1')},
+ '/VCCA_1V8':{('U501','5'),('C527','1'),('C528','1')},
+ '/VCCIO_SD':{('U501','29'),('C529','1'),('C530','1')},
+ 'GND':{(f'C{n}','2') for n in range(501,531)}|{('U501','47'),('U501','69')},
  }
  for name,pins in expected.items():assert nets[name]==pins,(name,nets[name],pins)
- comps=tree.findall('.//components/comp');assert len(comps)==28
+ comps=tree.findall('.//components/comp');assert len(comps)==35
  for c in comps:
   fields={f.attrib['name']:f.text for f in c.findall('fields/field')}
   assert fields.get('MPN'),c.attrib['ref']
- print('PASS: BUCK1/2/5 exact fourteen-net membership and 28 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
+ print('PASS: PMIC captured rails: exact seventeen-net membership and 35 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
