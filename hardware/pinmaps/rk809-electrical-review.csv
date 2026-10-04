@@ -36,7 +36,7 @@ Pin,CSE Name,Proposed Type,Review Status
 35,VCC_CPVSS,passive,Negative charge-pump supply: resolve electrical role
 36,CPN,passive,Charge-pump negative switching node
 37,CPP,passive,Charge-pump positive switching node
-38,VCC_CPVDD,power_in,Proposed from documented function; review before integration
+38,VCC_CPVDD,power_out,Rev 2.4 Figure 1-1 page 10 shows internal LDO_2V3 output with external bypass
 39,HPL_OUT,output,Proposed from documented function; review before integration
 40,HP_SNS,power_in,Proposed from documented function; review before integration
 41,HPR_OUT,output,Proposed from documented function; review before integration

@@ -420,3 +420,12 @@ name heuristic; metadata description was corrected separately. Symbol
 library version matches the installed checker schema. Recovery native
 ERC and all critical net checks still pass after the library update
 (32 components); PMIC circuitry remains uncaptured.
+
+## PMIC headphone supply pin correction
+
+Manufacturer Rev 2.4 Figure 1-1 (page 10) shows VCC_CPVDD (pin 38)
+as the internal LDO_2V3 output, bypassed externally. Its registered symbol
+type is now power_out rather than power_in, with an explicit audit assertion.
+Do not connect this pin to an external 2.3 V source during capture.
+This corrects the earlier candidate electrical-type proposal; no PMIC circuit
+has yet been captured.

@@ -33,6 +33,7 @@ for row in csv.DictReader((ROOT / 'pinmaps/rk809-cse-audit.csv').open()):
 for number in ['7', '67', '68']:
     assert actual[number][1] == 'open_collector'
 assert actual['69'][1] == 'power_in'
+assert actual['38'][1] == 'power_out'  # Internal headphone LDO output; not an external supply input.
 assert '(alternate "PDMDATA" input line)' in symbol
 assert actual['1'][1] == 'input' and actual['2'][1] == 'bidirectional'
 assert {number for number, (_, kind) in actual.items() if kind == 'passive'} == {'36', '37'}
