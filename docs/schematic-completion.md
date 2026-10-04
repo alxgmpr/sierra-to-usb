@@ -580,3 +580,33 @@ The alternative CL21B225KAFNNNE was rejected for new capture because the
 manufacturer marks it NRND, despite current catalog stock. Its mass-production
 CL21B225KAFNFNE alternate is an available 2.2 uF / 25 V / 0805 candidate
 (C364318), but has not been selected or substituted into the schematic.
+
+## Manufacturer-priority correction and LDO6 capture
+
+This section supersedes the earlier 3.3 V RTC/VCC9 reference mapping for
+our appliance. RK809 Rev 2.4 Figure 1-2 explicitly requires VCC_RTC to be
+the highest PMIC input. The RK3566 hardware guide repeats this (except
+VCC_SPK_HP) and recommends sharing VCC9. NanoPi's actual sheet uses 3.3 V
+RTC/VCC9 alongside 5 V buck inputs and therefore cannot be inherited as
+proof of this manufacturer rule. Captured RTC pin 45 and VCC9 pin 54 are
+now on 5V_MAIN. BUCK5 is specified for this input. SWOUT1 consequently
+follows 5 V and must not later be labeled a 3.3 V output; its use is unresolved.
+The reference input CSV header now says Reference Net, avoiding an appliance
+mapping claim. RTC-first timing is still required; sharing a rail alone does
+not prove it, particularly during differing input-capacitor ramps.
+
+VCC6 pin 30 now uses 5V_MAIN with C516 22 uF input bypass. LDO6 pin 31
+provides VCC3V3_PMU and the existing reset pull-up, with parallel C517/C518
+1 uF capacitors. Manufacturer section 4.2.2 permits nominal 1 uF LDO output
+capacitors; two parts estimate about 1.38 uF at 3.6 V including initial and
+temperature factors before aging. The additional capacitance requires loop
+review. Feeding a 3.3 V LDO from nominal 3.3 V lacks the datasheet's stated
+0.2/0.4 V headroom for its 200/400 mA load ratings. 5 V supplies headroom,
+but dissipation can reach 0.68 W at 400 mA and nominal voltages; total PMIC
+thermal and actual PMU-domain load must be budgeted. All 5 V PMIC inputs
+must remain within their 5.5 V maximum, including startup/transients.
+
+Native captured-net checks pass for eleven nets and 23 exact-MPN parts.
+Visual review exposed a BUCK5 note overlapping the new LDO capacitor bank;
+the note was moved to the right. Remaining LDO banks, rail sequencing and
+complete appliance integration are still unfinished.

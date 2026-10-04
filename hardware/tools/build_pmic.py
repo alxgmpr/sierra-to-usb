@@ -86,7 +86,7 @@ for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1
  else:
   a=units[1][str(n)];b=(a[0],40.64);wire(a,b)
 wire((88.9,40.64),(93.98,40.64));label("5V_MAIN",(88.9,40.64))
-a=units[1]['54'];wire(a,(a[0],48.26));label('3V3_MAIN',(a[0],48.26))
+a=units[1]['54'];wire(a,(a[0],48.26));label('5V_MAIN',(a[0],48.26))
 capfields={'MPN':'CL32B226KAJNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C309062','Qualification':'Typical bias curve reviewed; combined-corner aging and loop stability pending'}
 for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC_SENSE',501),(2,129.54,'VDD_GPU','VDD_GPU_SENSE',505),(5,195.58,'VCC_1V8','VCC_1V8_SENSE',509)]:
  add('Device','L_Small',f'L50{channel}','0.47uH',238.76,y,90,fp='Inductor_SMD:L_Coilcraft_XxL4020',fields={'MPN':'XGL4020-471MEC','Manufacturer':'Coilcraft','LCSC':'C5837785'})
@@ -99,8 +99,8 @@ for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC_SENSE',501),(2,1
  # Dedicated routed sense connects electrically at bank; physical Kelvin route to load required.
  wire((327.66,y),(353.06,y));wire((353.06,y),(353.06,y+22.86));label(sense,(353.06,y+22.86))
  add('Device','C_Small',f'C{cref+3}','22uF / 25V',185.42,y+12.7,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
- wire((185.42,y+10.16),(185.42,y));label('3V3_MAIN' if channel==5 else '5V_MAIN',(185.42,y));wire((185.42,y+15.24),(185.42,y+22.86));power('GND',(185.42,y+22.86),f'#PWR51{channel}')
- note(f'BUCK{channel}: '+('1.8V' if channel==5 else '0.9V')+' startup / 2.5A rated; 3 x 22uF output bank',(175.26,y-12.7))
+ wire((185.42,y+10.16),(185.42,y));label('5V_MAIN',(185.42,y));wire((185.42,y+15.24),(185.42,y+22.86));power('GND',(185.42,y+22.86),f'#PWR51{channel}')
+ note(f'BUCK{channel}: '+('1.8V' if channel==5 else '0.9V')+' startup / 2.5A rated; 3 x 22uF output bank',(223.52 if channel==5 else 175.26,y-12.7))
 # PMIC ground return and processor reset: pull up only to its fixed 3.3 V PMUIO1 domain.
 for n in ['47','69']:
  a=units[3][n];wire(a,(a[0],279.4))
@@ -113,11 +113,20 @@ wire((160.02,a[1]),(160.02,251.46));wire((160.02,256.54),(160.02,269.24));power(
 # Reference nominal 1 uF RTC and VREF bypass capacitors; bias/corner margin remains explicit.
 oneuf={'MPN':'CL10B105KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C29936','Qualification':'Manufacturer mass-production and bias curve reviewed; effective minimum pending'}
 add('Device','C_Small','C514','1uF / 25V',50.8,215.9,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
-a=units[3]['45'];wire(a,(a[0],203.2));wire((50.8,203.2),(a[0],203.2));label('3V3_MAIN',(50.8,203.2));wire((50.8,203.2),(50.8,213.36));wire((50.8,218.44),(50.8,228.6));power('GND',(50.8,228.6),'#PWR522')
+a=units[3]['45'];wire(a,(a[0],203.2));wire((50.8,203.2),(a[0],203.2));label('5V_MAIN',(50.8,203.2));wire((50.8,203.2),(50.8,213.36));wire((50.8,218.44),(50.8,228.6));power('GND',(50.8,228.6),'#PWR522')
 add('Device','C_Small','C515','1uF / 25V',185.42,269.24,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
 a=units[3]['46'];wire(a,(185.42,a[1]));wire((185.42,a[1]),(185.42,266.7));wire((185.42,271.78),(185.42,281.94));power('GND',(185.42,281.94),'#PWR523')
+# Feed the 3.3 V LDO bank from 5 V: the stated load ratings require headroom.
+a=units[2]['30'];wire(a,(a[0],116.84));wire((50.8,116.84),(a[0],116.84));label('5V_MAIN',(50.8,116.84))
+add('Device','C_Small','C516','22uF / 25V',50.8,129.54,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
+wire((50.8,116.84),(50.8,127));wire((50.8,132.08),(50.8,139.7));power('GND',(50.8,139.7),'#PWR524')
+a=units[2]['31'];wire(a,(193.04,a[1]));label('VCC3V3_PMU',(193.04,a[1]))
+for ref,x in [('C517',160.02),('C518',185.42)]:
+ add('Device','C_Small',ref,'1uF / 25V',x,182.88,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
+ wire((x,a[1]),(x,180.34));junction((x,a[1]));wire((x,185.42),(x,190.5))
+wire((160.02,190.5),(185.42,190.5));power('GND',(172.72,190.5),'#PWR525')
 note('PMIC capture in progress — BUCK1 / BUCK2 / BUCK5',(35.56,22.86),2.54)
-note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(175.26,165.1))
+note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(35.56,31.75))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A3") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
 (ROOT/'pmic.kicad_sch').write_text(text)
 print('Generated PMIC draft; all 69 pins retained, unfinished pins intentionally visible.')
