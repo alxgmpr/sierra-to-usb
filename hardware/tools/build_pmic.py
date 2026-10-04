@@ -71,7 +71,7 @@ s=block(raw,raw.index('(symbol "RK809-5"')).replace('(symbol "RK809-5"','(symbol
 used['Recovery:RK809-5']=s
 fp=re.search(r'\(property "Footprint" "([^"]+)"',s)[1]
 units={}
-for unit,x,y in [(1,101.6,81.28),(2,101.6,165.1),(3,101.6,248.92),(4,279.4,215.9)]:
+for unit,x,y in [(1,101.6,81.28),(2,101.6,165.1),(3,101.6,248.92),(4,238.76,248.92)]:
  u=block(s,s.index(f'(symbol "RK809-5_{unit}_1"'))
  pins={n:(round(x+float(px),4),round(y-float(py),4)) for px,py,n in re.findall(r'\(pin .*?\(at ([\d.\-]+) ([\d.\-]+) [\d.\-]+\).*?\(number "([^"]+)"',u,re.S)}
  units[unit]=pins
@@ -81,13 +81,14 @@ def terminal(n,net,direction):
  a=units[1][str(n)];b=(round(a[0]+direction*7.62,4),a[1]);wire(a,b);label(net,b)
  # Left-side label text must extend away from the body.
  if direction<0:items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
-for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1',1),(8,'VDD_GPU_SENSE',-1),(13,'VDD_LOGIC_SENSE',-1)]:
+for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1',1),(8,'VDD_GPU_SENSE',-1),(13,'VDD_LOGIC_SENSE',-1),(53,'PMIC_SW5',1),(59,'VCC_1V8_SENSE',-1)]:
  if d:terminal(n,net,d)
  else:
   a=units[1][str(n)];b=(a[0],40.64);wire(a,b)
 wire((88.9,40.64),(93.98,40.64));label("5V_MAIN",(88.9,40.64))
+a=units[1]['54'];wire(a,(a[0],48.26));label('3V3_MAIN',(a[0],48.26))
 capfields={'MPN':'CL32B226KAJNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C309062','Qualification':'Typical bias curve reviewed; combined-corner aging and loop stability pending'}
-for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC_SENSE',501),(2,129.54,'VDD_GPU','VDD_GPU_SENSE',505)]:
+for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC_SENSE',501),(2,129.54,'VDD_GPU','VDD_GPU_SENSE',505),(5,195.58,'VCC_1V8','VCC_1V8_SENSE',509)]:
  add('Device','L_Small',f'L50{channel}','0.47uH',238.76,y,90,fp='Inductor_SMD:L_Coilcraft_XxL4020',fields={'MPN':'XGL4020-471MEC','Manufacturer':'Coilcraft','LCSC':'C5837785'})
  wire((223.52,y),(236.22,y));label(f'PMIC_SW{channel}',(223.52,y))
  wire((241.3,y),(327.66,y));label(out,(327.66,y))
@@ -98,10 +99,10 @@ for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC_SENSE',501),(2,1
  # Dedicated routed sense connects electrically at bank; physical Kelvin route to load required.
  wire((327.66,y),(353.06,y));wire((353.06,y),(353.06,y+22.86));label(sense,(353.06,y+22.86))
  add('Device','C_Small',f'C{cref+3}','22uF / 25V',185.42,y+12.7,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
- wire((185.42,y+10.16),(185.42,y));label('5V_MAIN',(185.42,y));wire((185.42,y+15.24),(185.42,y+22.86));power('GND',(185.42,y+22.86),f'#PWR51{channel}')
- note(f'BUCK{channel}: 0.9V startup / 2.5A rated; 3 x 22uF output bank',(175.26,y-12.7))
-note('PMIC capture in progress — BUCK1 / BUCK2',(35.56,22.86),2.54)
-note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(175.26,172.72))
+ wire((185.42,y+10.16),(185.42,y));label('3V3_MAIN' if channel==5 else '5V_MAIN',(185.42,y));wire((185.42,y+15.24),(185.42,y+22.86));power('GND',(185.42,y+22.86),f'#PWR51{channel}')
+ note(f'BUCK{channel}: '+('1.8V' if channel==5 else '0.9V')+' startup / 2.5A rated; 3 x 22uF output bank',(175.26,y-12.7))
+note('PMIC capture in progress — BUCK1 / BUCK2 / BUCK5',(35.56,22.86),2.54)
+note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(175.26,165.1))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A3") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
 (ROOT/'pmic.kicad_sch').write_text(text)
 print('Generated PMIC draft; all 69 pins retained, unfinished pins intentionally visible.')

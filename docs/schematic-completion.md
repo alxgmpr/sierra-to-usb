@@ -521,3 +521,20 @@ effective-capacitance minimum. Aging, supplier guaranteed data, ripple-current
 and the larger output bank's loop/transient behavior remain required checks.
 Schematic fields now distinguish this completed typical-bias review from the
 remaining qualification work.
+
+## BUCK5 native capture
+
+The PMIC draft now captures BUCK5 as well: VCC9 pin 54 on 3V3_MAIN,
+SW5 pin 53 through L505 XGL4020-471MEC, and FB5 pin 59 sensed after
+the inductor on VCC_1V8. C509-C511 form a provisional 66 uF output bank;
+C512 is the separate 22 uF input capacitor. Selected RK809-5 startup is
+1.8 V at slot 2. VCC9 must be coordinated with VCC_RTC at system startup;
+the latter is still unwired and cannot be treated as completed sequencing.
+
+Native netlist checks now cover nine exact nets and 16 fitted components with
+MPNs. BUCK3/4, LDOs, RTC/control and unused audio handling remain incomplete.
+The updated A3 render was reviewed after moving the codec unit clear of the
+third capacitor bank and title block. The reproducible bias calculator now
+includes BUCK5 at 1.8 V and the maximum programmable 3.6 V; its 33 uF
+comparison comes from the typical application nominal capacitor, not a
+specified guaranteed minimum. Output-bank stability remains unqualified.

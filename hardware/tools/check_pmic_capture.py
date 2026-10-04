@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check captured BUCK1/2 connectivity only; other PMIC circuitry is unfinished."""
+"""Check captured BUCK1/2/5 connectivity only; other PMIC circuitry is unfinished."""
 from pathlib import Path
 import subprocess, tempfile, xml.etree.ElementTree as E
 root=Path(__file__).resolve().parents[1]
@@ -14,11 +14,14 @@ with tempfile.TemporaryDirectory() as tmp:
  '/PMIC_SW2':{('U501','9'),('L502','1')},
  '/VDD_LOGIC':{('U501','13'),('L501','2'),('C501','1'),('C502','1'),('C503','1')},
  '/VDD_GPU':{('U501','8'),('L502','2'),('C505','1'),('C506','1'),('C507','1')},
- 'GND':{(f'C{n}','2') for n in range(501,509)},
+ '/3V3_MAIN':{('U501','54'),('C512','1')},
+ '/PMIC_SW5':{('U501','53'),('L505','1')},
+ '/VCC_1V8':{('U501','59'),('L505','2'),('C509','1'),('C510','1'),('C511','1')},
+ 'GND':{(f'C{n}','2') for n in range(501,513)},
  }
  for name,pins in expected.items():assert nets[name]==pins,(name,nets[name],pins)
- comps=tree.findall('.//components/comp');assert len(comps)==11
+ comps=tree.findall('.//components/comp');assert len(comps)==16
  for c in comps:
   fields={f.attrib['name']:f.text for f in c.findall('fields/field')}
   assert fields.get('MPN'),c.attrib['ref']
- print('PASS: BUCK1/2 exact six-net membership and 11 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
+ print('PASS: BUCK1/2/5 exact nine-net membership and 16 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
