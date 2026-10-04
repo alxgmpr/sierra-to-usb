@@ -165,6 +165,15 @@ wire((127,317.5),(127,309.88));wire((88.9,309.88),(127,309.88));junction((88.9,3
 a=units[3]['49'];b=(a[0]-7.62,a[1]);wire(a,b);label('PMIC_SLEEP',b);items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
 add('Device','R_Small_US','R505','10kR',185.42,320.04,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
 wire((185.42,317.5),(185.42,309.88));label('PMIC_SLEEP',(185.42,309.88));wire((185.42,322.58),(185.42,330.2));power('GND',(185.42,330.2),'#PWR550')
+# VDC rising-edge startup sensing, referenced to main 5 V rather than raw PoE.
+a=units[3]['61'];b=(a[0]-7.62,a[1]);wire(a,b);label('PMIC_VDC',b);items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
+for ref,y in [('R506',307.34),('R507',330.2)]:
+ add('Device','R_Small_US',ref,'100kR',260.35,y,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
+wire((260.35,304.8),(260.35,294.64));label('5V_MAIN',(260.35,294.64))
+wire((260.35,309.88),(260.35,327.66));junction((260.35,320.04));wire((260.35,320.04),(335.28,320.04));label('PMIC_VDC',(335.28,320.04))
+add('Device','C_Small','C531','100nF / 25V',335.28,330.2,fp='Capacitor_SMD:C_0603_1608Metric',fields={'MPN':'CL10B104KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C1590','Qualification':'VDC filter and startup ramp verification pending'})
+wire((335.28,320.04),(335.28,327.66));wire((335.28,332.74),(335.28,340.36));wire((260.35,332.74),(260.35,340.36));wire((260.35,340.36),(335.28,340.36));power('GND',(279.4,340.36),'#PWR551')
+note('VDC: 100kR / 100kR, 100nF; nominal 2.5V at main 5V. Startup timing pending.',(241.3,355.6))
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(35.56,31.75))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'

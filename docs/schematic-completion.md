@@ -726,3 +726,30 @@ of correct suspend/resume behavior.
 The updated render was inspected, and the native captured-net audit passes
 for twenty-one nets and 39 exact-MPN components. Remaining power-on control,
 RTC clock, DDR rail and unused-pin policy are still unfinished.
+
+## VDC automatic-start sensing capture
+
+VDC pin 61 now uses PMIC_VDC with R506/R507 100 kR / 100 kR divider
+from 5V_MAIN and C531 100 nF to ground. All three are already-reviewed
+exact 0603 parts. The manufacturer's no-battery reference uses a divider
+and 100 nF filter; this design chooses a 1:1 ratio on the common 5 V rail
+rather than sensing isolated 12 V ahead of RTC supply. At 5 V nominal,
+VDC is 2.5 V. With a preliminary 5 V +/-5 percent rail and independent
+1-percent resistors it spans approximately 2.35-2.65 V, below the 5.5 V
+operating input limit and above the stated 0.55 V rising-edge threshold.
+Threshold tolerance and VDC input leakage are not bounded in the reviewed
+pin description, so this calculation is a design estimate rather than a
+complete guaranteed startup margin. The nominal Thevenin resistance is
+50 kR and RC is 5 ms; the divider load is 25 uA at 5 V.
+
+The PMIC requires VDC asserted for 140 ms before startup, then its -5
+variant EXT_EN-to-rail preparation delay (4+N ms, N<50 ms), 2 ms rail slots,
+and final reset release. These timings still need full RTC-first/main-rail
+integration. A continuously high VDC is rising-edge triggered and must not
+be assumed to reboot the PMIC after software shutdown; independent recovery
+must produce a valid power/start event. PWRON control remains uncaptured.
+
+Native assertions pass for twenty-two nets and 42 exact-MPN components.
+Render review exposed overlap between the bottom-divider resistor value and
+filter-capacitor value; the capacitor was moved farther right and connectivity
+was checked again. Full PMIC/appliance ERC and physical startup remain open.
