@@ -85,7 +85,7 @@ with tempfile.TemporaryDirectory() as tmp:
         component=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
         fields={f.get('name'):f.text for f in component.findall('./fields/field')}
         assert fields['MPN']==mpn and fields['Voltage Rating']=='25V'
-    assert len(tree.findall('./components/comp'))==175
+    assert len(tree.findall('./components/comp'))==176
     assert {('U901',r['ball']) for r in __import__('csv').DictReader((root/'reference/micron-ddr-electrical-review.csv').open()) if r['resolved_name']=='VSS'} <= nets['GND']
     ram_rows=list(__import__('csv').DictReader((root/'reference/micron-ddr-electrical-review.csv').open()))
     assert {p for p in nets['VCC_1V8'] if p[0]=='U901'}=={('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD1'}
@@ -95,4 +95,7 @@ with tempfile.TemporaryDirectory() as tmp:
     assert nets['VDD_DDR_1V1']=={('U501','26'),('L901','2'),('C901','1'),('C902','1'),('R901','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD2'}
     assert {('C901','2'),('C902','2'),('C903','2'),('R902','2')} <= nets['GND']
     assert {('U501','24'),('C903','1')} <= nets['5V_MAIN']
-print('PASS: appliance restart GPIO connection and 175-component capture; not full ERC.')
+    assert nets['VDD_DDR_0V6']=={('R903','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDDQ'}
+    zq=next(p for p in nets.values() if ('U901','A5') in p)
+    assert zq=={('U901','A5'),('R903','2')}
+print('PASS: appliance restart GPIO connection and 176-component capture; not full ERC.')

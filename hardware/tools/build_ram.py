@@ -16,7 +16,7 @@ def ground(x,y,key):
 positions=[(76.2,76.2),(177.8,76.2),(279.4,76.2),(406.4,76.2),(76.2,228.6),(177.8,228.6),(279.4,228.6)]
 for unit,(x,y) in enumerate(positions,1):
  h=10.16 if unit in {3,4,5,6} else [22,22,32,20,29,29,14][unit-1]*2.54+5.08
- margin=40.64 if unit==3 else 15.24 if unit==4 else 7.62
+ margin=40.64 if unit==3 else 25.4 if unit==4 else 7.62
  fields=prop('Reference','U901',x,y-h/2-margin)+prop('Value','MT53E512M32D1ZW-046 WT:B',x,y-h/2-margin+2.54)
  for key,value in {'MPN':'MT53E512M32D1ZW-046 WT:B','Manufacturer':'Micron','LCSC':'C5330500','Footprint':'','Qualification':'DRAFT: DDR supplies, bus, WDQS and land pattern unresolved'}.items():
   fields+=f'(property "{key}" "{value}" (at {x} {y} 0) (effects (font (size 1.27 1.27)) (hide yes)))'
@@ -28,6 +28,8 @@ for unit,(x,y) in enumerate(positions,1):
   ax,ay=round(x+float(px),4),round(y-float(py),4)
   if pname=='VSS':
    wire((ax,ay),(ax,y+20.32),'gnd-'+ball)
+  elif pname=='VDDQ':
+   wire((ax,ay),(ax,y-20.32),'vddq-'+ball)
   elif pname=='VDD2':
    wire((ax,ay),(ax,y-30.48),'vdd2-'+ball)
   elif pname=='VDD1':
@@ -37,6 +39,9 @@ for unit,(x,y) in enumerate(positions,1):
    ground(ax-7.62,ay,'odt-label-'+ball)
   elif pname=='DNU':
    items.append(f'(no_connect (at {ax} {ay}) (uuid "{uid("nc-"+ball)}"))')
+ if unit==4:
+  wire((x-24.13,y-20.32),(x+24.13,y-20.32),'vddq-bank')
+  items.append(f'(global_label "VDD_DDR_0V6" (shape passive) (at {x+24.13} {y-20.32} 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("vddq-label")}"))')
  if unit==3:
   wire((x-19.05,y-30.48),(x+39.37,y-30.48),'vdd2-bank')
   items.append(f'(global_label "VDD_DDR_1V1" (shape passive) (at {x+39.37} {y-30.48} 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("vdd2-label")}"))')
@@ -45,4 +50,25 @@ for unit,(x,y) in enumerate(positions,1):
  if unit in {5,6}:
   wire((x-35.56,y+20.32),(x+35.56,y+20.32),'ground-bank-'+str(unit))
   ground(x-35.56,y+20.32,'ground-label-'+str(unit))
-(root/'ram.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator "eeschema") (uuid "{uid("root")}") (paper "A2") (title_block (title "Micron RAM — DRAFT: supplies and DDR bus incomplete") (date "2026-10-04")) (lib_symbols {symbol}) '+''.join(items)+')')
+def block(text,start):
+ depth=0;quoted=False;escape=False
+ for i in range(start,len(text)):
+  c=text[i]
+  if escape:escape=False;continue
+  if quoted and c=='\\':escape=True;continue
+  if c=='"':quoted=not quoted
+  if not quoted:
+   depth+=(c=='(')-(c==')')
+   if depth==0:return text[start:i+1]
+ raise ValueError('Unbalanced symbol')
+raw=Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/Device.kicad_sym').read_text()
+resistor=block(raw,raw.index('(symbol "R_Small_US"')).replace('(symbol "R_Small_US"','(symbol "Device:R_Small_US"',1)
+fields=prop('Reference','R903',236.22,207.01)+prop('Value','240R',236.22,209.55)
+fields=re.sub(r'(\(at [^()]+) 0\)',r'\1 90)',fields)
+for key,value in {'MPN':'RC0603FR-07240RL','LCSC':'C114613','Manufacturer':'Yageo','Footprint':'Resistor_SMD:R_0603_1608Metric','Tolerance':'1%','Power Rating':'0.1W'}.items():
+ fields+=f'(property "{key}" "{value}" (at 236.22 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))'
+items.append(f'(symbol (lib_id "Device:R_Small_US") (at 236.22 215.9 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid("R903")}") {fields} (instances (project "ram" (path "/{uid("root")}" (reference "R903") (unit 1)))))')
+wire((238.76,215.9),(259.08,215.9),'zq-output')
+wire((233.68,215.9),(223.52,215.9),'zq-vddq')
+items.append(f'(global_label "VDD_DDR_0V6" (shape passive) (at 223.52 215.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid("zq-vddq-label")}"))')
+(root/'ram.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator "eeschema") (uuid "{uid("root")}") (paper "A2") (title_block (title "Micron RAM — DRAFT: supplies and DDR bus incomplete") (date "2026-10-04")) (lib_symbols {symbol} {resistor}) '+''.join(items)+')')

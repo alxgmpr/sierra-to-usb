@@ -284,3 +284,16 @@ the final placement corrected it before commit. The supply, RAM, PMIC and
 root renders were reviewed; root notes moved clear of the title block.
 Capture now has 175 components across 13 sheets. Local bypass, 0.6V rail,
 DDR bus and load/loop/thermal/sequence qualification remain incomplete.
+
+## ZQ calibration and VDDQ domain captured
+
+Added R903 240R ±1%, Yageo RC0603FR-07240RL / C114613, 0603,
+from U901 ZQ0 A5 to VDD_DDR_0V6 as required by Micron Table 5.
+All twenty RAM VDDQ balls now join that named domain. Exact native
+net membership checks prevent joining VDDQ to VDD1/VDD2 and verify
+ZQ0 reaches only the resistor's opposite terminal. The 0.6V source is
+still absent, visibly leaving a power-not-driven ERC condition; no label
+or PWR_FLAG is used to claim a working supply. ZQ and VDDQ enlarged
+renders were visually reviewed. Integrated capture checks pass for
+176 components; full ERC reports 533 violations. The drop in ERC count
+reflects captured wiring, not completed supply or functional qualification.
