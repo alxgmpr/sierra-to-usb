@@ -8,7 +8,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 
 | Required block | Current authoritative state | Required before schematic completion |
 |---|---|---|
-| Recovery MCU, watchdog, SWD and reset outputs | Existing 27-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | C203 effective-capacitance review pending; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
+| Recovery MCU, watchdog, SWD and reset outputs | Existing 26-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | C203 effective-capacitance review pending; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
 | Independent always-on supply | `hardware/always-on.kicad_sch`, 5 components, TPS62177DQCR, LPS4018-103MRC; native ERC and all five circuit-net checks pass | Capacitor effective capacitance; rail load; power fault integration; connect into final appliance hierarchy |
 | RK3566 / DDR / PMIC | Archived reference schematic, Rockchip full datasheet and hardware guide; 565-ball CSV extracted; symbol-table review pending | Exact supported RAM and DDR training route; PMIC silicon/suffix and rail sequence; all package balls checked; native capture with complete decoupling and clocks |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
@@ -101,7 +101,7 @@ tools KLC checks pass with the F9.3 official-library-path rule excluded because
 this project deliberately uses `${KIPRJMOD}` local model paths. No geometry
 rule is excluded. Full board-level 3D/mechanical review remains pending.
 
-The current recovery BOM has 27/27 fitted components with exact MPN fields.
+The current recovery BOM has 26/26 fitted components with exact MPN fields.
 C203 is now CL31B106KAHNNNE (10 uF, 25 V, X7R, 1206), replacing
 the provisional 4.7 uF / 0805 selection. Published typical loss at 3.6 V
 is 15.26 percent. Combining that curve with -10 percent initial tolerance
@@ -181,10 +181,11 @@ but any replacement must preserve watchdog timing and manual-reset behavior.
 
 ## Reset-interface correction selected for next capture
 
-Use TPS3828-33DBVR (TI, LCSC C20032) in place of TPS3823-33DBVR,
-and remove D201: connect open-drain RESET directly to MCU_NRST_N.
+TPS3828-33DBVR (TI, LCSC C20032) now replaces TPS3823-33DBVR.
+D201 is removed; open-drain RESET connects directly to MCU_NRST_N.
 Retain R201 and C205, the existing WDI RUN shunt/pulldown, and MR button.
-This change is selected but **not yet applied to the native schematic**.
+This change is applied to the native schematic. Native ERC and direct-reset
+connectivity assertions pass; the BOM contains 26/26 exact MPNs.
 
 TI SLVS165O Rev O (March 2025), Device Comparison Table and Table 5-1:
 TPS3828 retains WDI and MR, 200 ms nominal reset delay and 1.6 s nominal
@@ -200,7 +201,7 @@ this replacement must not be described as proving all startup behavior.
 PCBParts catalog snapshot on 2026-10-03: C20032, SOT-23-5, 65,899
 listed stock, $0.3713 single-unit indicative price. Stock is not reserved.
 Installed KiCad Power_Supervisor library has no TPS3828 symbol; capture
-needs a checked local open-drain variant of the existing pin-compatible
+uses a local open-drain variant of the existing pin-compatible
 TPS3823 symbol rather than keeping its push-pull electrical type.
 After capture, update critical-net assertions to require U202:1 directly
 on MCU_NRST_N, exclude D201 from inventory, rerun ERC and inspect the

@@ -28,8 +28,7 @@ model distinctions are in [architecture.md](architecture.md),
 | References | Qty | Captured value / package | Qualification gap |
 |---|---:|---|---|
 | U201 | 1 | STM32G0B1CCT6 / LQFP48 | Exact part entered; current manufacturer pin/reference-circuit audit, option bytes and firmware/recovery tests pending. |
-| U202 | 1 | TPS3823-33DBVR / SOT-23-5 | Exact part entered; reset timing and watchdog startup must be verified at limits and on hardware. |
-| D201 | 1 | BAT54WS-7-F / SOD-323 | Exact part entered; 25 C reset-low calculation has 78 mV margin at specified watchdog test point; cold-temperature and supply-ramp guarantees remain open. |
+| U202 | 1 | TPS3828-33DBVR / SOT-23-5 | Exact part entered; reset timing and watchdog startup must be verified at limits and on hardware. |
 | Q301–Q303 | 3 | Nexperia MMBT3904,215 / SOT-23 | Exact part entered; actual target sink voltage/current and powered-off interface review pending. Datasheet field now points to Nexperia. |
 | C201, C202, C204, C205 | 4 | CL10B104KA8NNNC / 100 nF, 25 V X7R, 0603 | Exact MPN captured; typical bias data archived; temperature/aging qualification pending. |
 | C203 | 1 | CL31B106KAHNNNE / 10 µF, 25 V X7R, 1206 | Enlarged for capacitance margin; typical combined estimate 6.48 µF at 3.6 V with tolerance/temperature allowance; aging pending. |
@@ -40,9 +39,9 @@ model distinctions are in [architecture.md](architecture.md),
 | J102 | 1 | 10-pin 2.54 mm control boundary | 61301011121 captured with checked local drill variant; production target interface remains unqualified. |
 | SW201 | 1 | Reset button / TL3342 footprint | TL3342F160QG captured; Rev J pad geometry and common-contact grouping match footprint. |
 
-Total: **27 fitted schematic components**, excluding power symbols and the
+Total: **26 fitted schematic components**, excluding power symbols and the
 required J202 mating shunt. The netlist supplies the component inventory; exact
-manufacturer part numbers are now entered for all 27 components. Electrical
+manufacturer part numbers are now entered for all 26 components. Electrical
 qualification and full-appliance integration remain incomplete. See
 [schematic-completion.md](schematic-completion.md) for current audit evidence.
 Prices, stock and assembly feasibility require a fresh quote after the design

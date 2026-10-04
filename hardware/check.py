@@ -24,8 +24,8 @@ def pins(*items):
     return {tuple(item.split(':')) for item in items}
 def exact(name, *items):
     assert nets[name] == pins(*items), (name, nets[name], pins(*items))
-exact('/Supervisor/MCU_NRST_N', 'U201:10', 'D201:2', 'R201:2', 'C205:1', 'J201:5')
-exact('/Supervisor/WDT_RESET_N', 'U202:1', 'D201:1')
+exact('/Supervisor/MCU_NRST_N', 'U201:10', 'U202:1', 'R201:2', 'C205:1', 'J201:5')
+assert not any(c.get('ref') == 'D201' for c in r.findall('.//components/comp'))
 exact('/Supervisor/WDT_INPUT', 'U202:4', 'J202:2')
 exact('/Supervisor/WDT_KICK', 'U201:19', 'J202:1', 'R202:1')
 exact('/Supervisor/MANUAL_RESET_N', 'U202:3', 'R203:2', 'SW201:1')
