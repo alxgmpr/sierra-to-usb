@@ -137,3 +137,15 @@ Micron's CKE/input-level or rail-decay limits at the memory balls. Extra
 hold-up is a possible implementation, not an established requirement;
 first review regulator disable/discharge paths and worst-case capacitance,
 load and decay trajectories for planned and abrupt loss of input power.
+
+## Complete native ball-name comparison
+
+The archived single-rank diagram was extracted by its cell coordinates,
+including split subscript text, and compared with the existing native model.
+All 200 identifiers were covered: 195 names match exactly; the remaining
+five are the previously reviewed NC/second-rank aliases. There are no other
+name differences. The RESET_n spelling is preserved exactly.
+The reproducible extraction audit and result CSV are now saved. This audits
+an existing native model; it does not register a new PDF-derived symbol.
+Electrical pin typing, readable unit grouping, package geometry and WDQS
+classification remain before RAM schematic integration.
