@@ -29,3 +29,27 @@ No upstream regulator symbol or circuit is yet captured.
 Source: https://www.ti.com/lit/ds/symlink/tps56637.pdf, sections 8.2/8.2.2.
 Catalog C841386 showed 5915 indexed parts on 2026-10-03, not reserved.
 Raw scenario: hardware/reference/main-5v-rating-scenario.json.
+
+## Preferred 8 A candidate and native source
+
+TPS56837RPAR (TI, C22428366) is the preferred stage candidate for
+capture while the actual peak budget remains open. Manufacturer Rev B
+(SLVSGM3B, January 2024) is archived. It retains RPA 10-pin HotRod
+package, 4.5–28 V input, and adds selectable frequency/current limit
+and adjustable soft start. The source catalog incorrectly says through-hole;
+manufacturer RPA package is surface mount. C22428366 has 2306 indexed
+units, not reserved inventory.
+
+The installed EasyEDA converter exported all 10 pins, whose names and
+numbers match manufacturer Table 4-1. Raw symbol and footprint archived;
+correct electrical types recorded in hardware/pinmaps/tps56837.csv.
+Footprint source name refers to TPS56838RPAR; dimension/pad audit is
+required before using this shared family geometry.
+
+At 500 kHz and 5 V, manufacturer table recommends 3.3 uH and a
+nominal 22 uF bank (one minimum, two typical, ten maximum), based
+on specific Murata parts/derating described in the table notes. This differs
+from the older TPS56637 effective-capacitance table and must be checked
+directly. Current-limit and MODE selection, exact inductor, capacitors,
+upstream supervisor enable and full load/thermal qualification remain open.
+Source: https://www.ti.com/lit/ds/symlink/tps56837.pdf.
