@@ -64,3 +64,22 @@ These are calculated component corners, not measured regulation bounds.
 No guaranteed maximum FB bias current was established; the datasheet
 10 nA figure is typical. Dynamic errors remain additional. Raw calculation
 inputs and results are in hardware/reference/main-3v3-divider-corners.json.
+
+## Preferred precision divider
+
+Use RT0603BRD07200KL (200 kOhm, C728585) and RT0603BRD0744K2L
+(44.2 kOhm, C861410) for the capture. Manufacturer exact spec sheets
+confirm 0603, 0.1%, 25 ppm/C and 0.1 W at 70 C; both were found in the
+indexed assembly catalog. These replace the thick-film candidates above
+for this feedback circuit. Nominal voltage stays 3.3149 V.
+
+| Temperature | Lower calculated bound | Upper calculated bound |
+|---|---|---|
+| -40 C | 3.2347 V | 3.3958 V |
+| 25 C | 3.2433 V | 3.3868 V |
+| 85 C | 3.2354 V | 3.3951 V |
+
+The 3.3 V +/-5% comparison window is 3.135–3.465 V. These component
+corners fit that comparison window, but it is not an established common
+requirement for every downstream device. Feedback bias, aging, ripple,
+transients and load drops remain outside this calculation.
