@@ -265,4 +265,159 @@
 			)
 		)
 		(embedded_fonts no)
-	)) (symbol (lib_id "Recovery:TPS56837RPAR") (at 101.6 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7f76cda7-fd67-540f-858c-3f5ed97e34df") (property "Reference" "U701" (at 101.6 53.34 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS56837RPAR" (at 101.6 56.388 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TPS56837RPAR" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C22428366" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Footprint pending review; incomplete power path" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "7d0bd8c7-7dc9-514f-9ee1-cab9b42c89ac"))(pin "2" (uuid "b503f5e5-7bf8-5cf1-931b-6d986ba0506c"))(pin "3" (uuid "22cc5593-6fb6-54e3-93eb-6ae46717eb30"))(pin "4" (uuid "82c05f09-1110-57b5-82a2-c7947b30cbe4"))(pin "5" (uuid "072b0c59-0362-5b44-a95e-dfb113252d98"))(pin "6" (uuid "07571798-4d7a-5678-8e84-af4a140014ce"))(pin "7" (uuid "786e7a04-62a7-50f8-9ca7-e510cd97558a"))(pin "8" (uuid "f07321df-97b0-5cc6-9eb6-ea0b49a2c5e2"))(pin "9" (uuid "66e2d771-c919-53a8-abaf-b042d9150848"))(pin "10" (uuid "c2e4e956-0ebb-5063-9ed8-77ff582c826b")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "U701") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "U701") (unit 1)))))(wire (pts (xy 88.9 81.28) (xy 66.04 81.28)) (stroke (width 0) (type default)) (uuid "3c1e106f-711e-57a2-9371-f2e0f7102bf7"))(wire (pts (xy 66.04 81.28) (xy 66.04 101.6)) (stroke (width 0) (type default)) (uuid "07fa0d58-4939-5096-8872-3a5b04eba65c"))(symbol (lib_id "Device:R_Small_US") (at 66.04 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4aa9c2b9-ddf4-5433-97df-35dde42ce94e") (property "Reference" "R701" (at 74.93 102.87 0) (effects (font (size 1.27 1.27))))(property "Value" "30.1kR" (at 78.74000000000001 105.41 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0730K1L" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C137745" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "7a1c2fee-79f9-5ce0-8e84-67509d39fd22"))(pin "2" (uuid "5b518e70-f29d-5d3f-b23f-41bf4181258e")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "R701") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "R701") (unit 1)))))(wire (pts (xy 66.04 106.68) (xy 66.04 114.3)) (stroke (width 0) (type default)) (uuid "2c3be24d-d580-5906-8716-1ee955707344"))(symbol (lib_id "power:GND") (at 66.04 114.3 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "668c14fa-e8da-5dff-b5da-34e3f86e0703") (property "Reference" "#PWR701" (at 66.04 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 66.04 118.11 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 66.04 114.3 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "a4d2dff4-43cd-5684-8369-1af087873209")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "#PWR701") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "#PWR701") (unit 1)))))(label "MAIN5V_MODE" (at 66.04 81.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "29e837c9-22a1-5d94-9df3-acd05f9e5a22"))(wire (pts (xy 88.9 76.2) (xy 78.74 76.2)) (stroke (width 0) (type default)) (uuid "67ac9c08-4cea-52d8-9c9f-9a7b381fb2a4"))(label "MAIN5V_FB" (at 78.74 76.2 0) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "669a861c-29d8-5ba0-8f2e-e100b294c67d"))(symbol (lib_id "Device:R_Small_US") (at 180.34 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7c1ed613-45fb-58af-92b4-4c1a0a36f229") (property "Reference" "R702" (at 189.23000000000002 57.15 0) (effects (font (size 1.27 1.27))))(property "Value" "73.2kR" (at 193.04 59.690000000000005 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RT0603BRD0773K2L" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C861548" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "0.1%" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "TCR" "25ppm/K" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "e1b410a2-bf72-5e3e-a73e-0b932683e379"))(pin "2" (uuid "77b85211-1fdf-560b-bf85-86cdc0bcbe05")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "R702") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "R702") (unit 1)))))(symbol (lib_id "Device:R_Small_US") (at 180.34 83.82 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bce74d66-e796-5532-a7b4-d9232ffa715a") (property "Reference" "R703" (at 189.23000000000002 82.55 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 193.04 85.08999999999999 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RT0603BRD0710KL" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C95204" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "0.1%" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "TCR" "25ppm/K" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "f42f33e9-991d-5b00-8868-406e8a4e4dfe"))(pin "2" (uuid "bc7b3c08-d042-597a-ad1b-933aaf81ee44")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "R703") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "R703") (unit 1)))))(wire (pts (xy 180.34 55.88) (xy 180.34 45.72)) (stroke (width 0) (type default)) (uuid "d3fd6b7a-290d-5eb3-9ede-14e7db313a57"))(global_label "5V_MAIN" (shape passive) (at 180.34 45.72 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ace5d6c2-6c6e-5ab7-b36f-f1cd78d3b579"))(wire (pts (xy 180.34 60.96) (xy 180.34 81.28)) (stroke (width 0) (type default)) (uuid "052fd7fd-42a4-5c5c-a32d-7dc2f7319e45"))(label "MAIN5V_FB" (at 180.34 73.66 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "df4722a2-80e0-5ee0-a92b-df2b197fa713"))(wire (pts (xy 180.34 86.36) (xy 180.34 96.52)) (stroke (width 0) (type default)) (uuid "871bd6a5-377e-562b-892a-1155fcd94303"))(symbol (lib_id "power:GND") (at 180.34 96.52 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "8760dfd6-4268-51fc-9d4c-81696ebd5b76") (property "Reference" "#PWR702" (at 180.34 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 180.34 100.33 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 180.34 96.52 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "456c322c-2e7b-5a69-bdc6-1f10f56aa132")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "#PWR702") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "#PWR702") (unit 1)))))(wire (pts (xy 99.06 88.9) (xy 99.06 99.06)) (stroke (width 0) (type default)) (uuid "32e4af83-84c2-5d7b-8787-ec850ad32042"))(wire (pts (xy 104.14 88.9) (xy 104.14 99.06)) (stroke (width 0) (type default)) (uuid "90f84b4a-3129-5144-8e3a-107300fe75e6"))(wire (pts (xy 99.06 99.06) (xy 104.14 99.06)) (stroke (width 0) (type default)) (uuid "519c2c51-5cd1-5512-8087-97bf32c0e27f"))(symbol (lib_id "power:GND") (at 101.6 99.06 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "193a1084-6c15-524d-991c-d675a1fec596") (property "Reference" "#PWR703" (at 101.6 99.06 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 101.6 102.87 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 99.06 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "6f19f907-0fb6-52e5-aca0-fcab72f54dc7")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "#PWR703") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "#PWR703") (unit 1)))))(junction (at 101.6 99.06) (diameter 0) (color 0 0 0 0) (uuid "809cbb8d-2e8d-5812-9cb0-4b83dcc8d27f"))(text "MAIN 5 V CONTROL DRAFT — INCOMPLETE" (at 35.56 25.4 0) (effects (font (size 1.524 1.524)) (justify left)) (uuid "f809e9b9-ab7e-54f2-b193-d1ac3324fe9e"))(text "MODE: 500 kHz; high valley current limit option. Feedback: 4.992 V nominal." (at 35.56 132.08 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4823505b-85e4-576f-b015-1aeb31fdc030"))(text "Missing: VIN bypass, BOOT capacitor, inductor/output bank, SS, EN and PG circuits." (at 35.56 139.7 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f8f23c44-e88f-5824-bf86-48524d44da54"))(text "No 5 V power source exists on this sheet yet. Regulator footprint awaits review." (at 35.56 147.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5f39745f-74de-5bde-953c-c3601a4c0460")))
+	)(symbol "Device:C_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.254 1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 0.254 -2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "capacitor cap"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.524 0.508) (xy 1.524 0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.524 -0.508) (xy 1.524 -0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)) (symbol (lib_id "Recovery:TPS56837RPAR") (at 101.6 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7f76cda7-fd67-540f-858c-3f5ed97e34df") (property "Reference" "U701" (at 88.9 53.34 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS56837RPAR" (at 88.9 56.388 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TPS56837RPAR" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C22428366" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Footprint pending review; incomplete power path" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "7d0bd8c7-7dc9-514f-9ee1-cab9b42c89ac"))(pin "2" (uuid "b503f5e5-7bf8-5cf1-931b-6d986ba0506c"))(pin "3" (uuid "22cc5593-6fb6-54e3-93eb-6ae46717eb30"))(pin "4" (uuid "82c05f09-1110-57b5-82a2-c7947b30cbe4"))(pin "5" (uuid "072b0c59-0362-5b44-a95e-dfb113252d98"))(pin "6" (uuid "07571798-4d7a-5678-8e84-af4a140014ce"))(pin "7" (uuid "786e7a04-62a7-50f8-9ca7-e510cd97558a"))(pin "8" (uuid "f07321df-97b0-5cc6-9eb6-ea0b49a2c5e2"))(pin "9" (uuid "66e2d771-c919-53a8-abaf-b042d9150848"))(pin "10" (uuid "c2e4e956-0ebb-5063-9ed8-77ff582c826b")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "U701") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "U701") (unit 1)))))(wire (pts (xy 88.9 81.28) (xy 66.04 81.28)) (stroke (width 0) (type default)) (uuid "3c1e106f-711e-57a2-9371-f2e0f7102bf7"))(wire (pts (xy 66.04 81.28) (xy 66.04 101.6)) (stroke (width 0) (type default)) (uuid "07fa0d58-4939-5096-8872-3a5b04eba65c"))(symbol (lib_id "Device:R_Small_US") (at 66.04 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4aa9c2b9-ddf4-5433-97df-35dde42ce94e") (property "Reference" "R701" (at 74.93 102.87 0) (effects (font (size 1.27 1.27))))(property "Value" "30.1kR" (at 78.74000000000001 105.41 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0730K1L" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C137745" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "7a1c2fee-79f9-5ce0-8e84-67509d39fd22"))(pin "2" (uuid "5b518e70-f29d-5d3f-b23f-41bf4181258e")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "R701") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "R701") (unit 1)))))(wire (pts (xy 66.04 106.68) (xy 66.04 114.3)) (stroke (width 0) (type default)) (uuid "2c3be24d-d580-5906-8716-1ee955707344"))(symbol (lib_id "power:GND") (at 66.04 114.3 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "668c14fa-e8da-5dff-b5da-34e3f86e0703") (property "Reference" "#PWR701" (at 66.04 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 66.04 118.11 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 66.04 114.3 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "a4d2dff4-43cd-5684-8369-1af087873209")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "#PWR701") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "#PWR701") (unit 1)))))(label "MAIN5V_MODE" (at 66.04 81.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "29e837c9-22a1-5d94-9df3-acd05f9e5a22"))(wire (pts (xy 88.9 76.2) (xy 78.74 76.2)) (stroke (width 0) (type default)) (uuid "67ac9c08-4cea-52d8-9c9f-9a7b381fb2a4"))(label "MAIN5V_FB" (at 78.74 76.2 0) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "669a861c-29d8-5ba0-8f2e-e100b294c67d"))(symbol (lib_id "Device:R_Small_US") (at 180.34 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7c1ed613-45fb-58af-92b4-4c1a0a36f229") (property "Reference" "R702" (at 189.23000000000002 57.15 0) (effects (font (size 1.27 1.27))))(property "Value" "73.2kR" (at 193.04 59.690000000000005 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RT0603BRD0773K2L" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C861548" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "0.1%" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "TCR" "25ppm/K" (at 180.34 58.42 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "e1b410a2-bf72-5e3e-a73e-0b932683e379"))(pin "2" (uuid "77b85211-1fdf-560b-bf85-86cdc0bcbe05")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "R702") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "R702") (unit 1)))))(symbol (lib_id "Device:R_Small_US") (at 180.34 83.82 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bce74d66-e796-5532-a7b4-d9232ffa715a") (property "Reference" "R703" (at 189.23000000000002 82.55 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 193.04 85.08999999999999 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RT0603BRD0710KL" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C95204" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "0.1%" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "TCR" "25ppm/K" (at 180.34 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "f42f33e9-991d-5b00-8868-406e8a4e4dfe"))(pin "2" (uuid "bc7b3c08-d042-597a-ad1b-933aaf81ee44")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "R703") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "R703") (unit 1)))))(wire (pts (xy 180.34 55.88) (xy 180.34 45.72)) (stroke (width 0) (type default)) (uuid "d3fd6b7a-290d-5eb3-9ede-14e7db313a57"))(global_label "5V_MAIN" (shape passive) (at 180.34 45.72 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ace5d6c2-6c6e-5ab7-b36f-f1cd78d3b579"))(wire (pts (xy 180.34 60.96) (xy 180.34 81.28)) (stroke (width 0) (type default)) (uuid "052fd7fd-42a4-5c5c-a32d-7dc2f7319e45"))(label "MAIN5V_FB" (at 180.34 73.66 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "df4722a2-80e0-5ee0-a92b-df2b197fa713"))(wire (pts (xy 180.34 86.36) (xy 180.34 96.52)) (stroke (width 0) (type default)) (uuid "871bd6a5-377e-562b-892a-1155fcd94303"))(symbol (lib_id "power:GND") (at 180.34 96.52 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "8760dfd6-4268-51fc-9d4c-81696ebd5b76") (property "Reference" "#PWR702" (at 180.34 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 180.34 100.33 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 180.34 96.52 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "456c322c-2e7b-5a69-bdc6-1f10f56aa132")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "#PWR702") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "#PWR702") (unit 1)))))(wire (pts (xy 99.06 88.9) (xy 99.06 99.06)) (stroke (width 0) (type default)) (uuid "32e4af83-84c2-5d7b-8787-ec850ad32042"))(wire (pts (xy 104.14 88.9) (xy 104.14 99.06)) (stroke (width 0) (type default)) (uuid "90f84b4a-3129-5144-8e3a-107300fe75e6"))(wire (pts (xy 99.06 99.06) (xy 104.14 99.06)) (stroke (width 0) (type default)) (uuid "519c2c51-5cd1-5512-8087-97bf32c0e27f"))(symbol (lib_id "power:GND") (at 101.6 99.06 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "193a1084-6c15-524d-991c-d675a1fec596") (property "Reference" "#PWR703" (at 101.6 99.06 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 101.6 102.87 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 99.06 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "6f19f907-0fb6-52e5-aca0-fcab72f54dc7")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "#PWR703") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "#PWR703") (unit 1)))))(junction (at 101.6 99.06) (diameter 0) (color 0 0 0 0) (uuid "809cbb8d-2e8d-5812-9cb0-4b83dcc8d27f"))(symbol (lib_id "Device:C_Small") (at 139.7 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "eb0ac63c-22b8-568d-b7cf-d29cebf1398d") (property "Reference" "C701" (at 129.54 57.15 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "100nF / 25V" (at 129.54 59.690000000000005 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 139.7 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 139.7 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 139.7 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C1590" (at 139.7 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X7R" (at 139.7 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Place immediately between BOOT and SW" (at 139.7 58.42 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "cf3f8b33-1a7f-52cb-86e7-405debb16074"))(pin "2" (uuid "6685ecce-bf82-58ae-838c-0529a82ab040")) (instances (project "main5v" (path "/67626c44-65b2-5096-88fd-dd5ad98a1eca" (reference "C701") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc" (reference "C701") (unit 1)))))(wire (pts (xy 104.14 63.5) (xy 104.14 45.72)) (stroke (width 0) (type default)) (uuid "3fbd08b0-0686-59b8-ae3f-d14ae432df6d"))(wire (pts (xy 104.14 45.72) (xy 139.7 45.72)) (stroke (width 0) (type default)) (uuid "644914eb-8b84-5ee9-b64c-ce33207ce2b4"))(wire (pts (xy 139.7 45.72) (xy 139.7 55.88)) (stroke (width 0) (type default)) (uuid "2a64c95b-2891-54fe-afca-f8c5f52a81b8"))(wire (pts (xy 139.7 60.96) (xy 139.7 71.12)) (stroke (width 0) (type default)) (uuid "0e1aa031-8bd3-5c46-992f-2f356bf7f867"))(wire (pts (xy 114.3 71.12) (xy 139.7 71.12)) (stroke (width 0) (type default)) (uuid "47920535-be96-52ab-8666-d9c19b00c403"))(label "MAIN5V_SW" (at 139.7 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c1b77cc3-733c-5791-ac50-277a3a602590"))(text "MAIN 5 V CONTROL DRAFT — INCOMPLETE" (at 35.56 25.4 0) (effects (font (size 1.524 1.524)) (justify left)) (uuid "f809e9b9-ab7e-54f2-b193-d1ac3324fe9e"))(text "MODE: 500 kHz; high valley current limit option. Feedback: 4.992 V nominal." (at 35.56 132.08 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4823505b-85e4-576f-b015-1aeb31fdc030"))(text "Missing: VIN bypass, inductor/output bank, SS, EN and PG circuits." (at 35.56 139.7 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "19493ff6-f426-5d85-a618-b5ece70507b5"))(text "No 5 V power source exists on this sheet yet. Regulator footprint awaits review." (at 35.56 147.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5f39745f-74de-5bde-953c-c3601a4c0460")))

@@ -151,3 +151,12 @@ pending review. This is a partial control capture, not a working power stage.
 Full appliance ERC after this partial capture: 65 violations (45 unconnected
 pins, 11 undriven signal pins, 9 undriven power pins). No ERC exclusions
 or flags were introduced to mask unfinished circuits.
+
+## Bootstrap captured
+
+C701 is Samsung CL10B104KA8NNNC, 100 nF/25 V X7R in 0603,
+connected directly between U701 BOOT pin 7 and SW pin 6. TI Section
+7.2.2.5 requires 100 nF ceramic, X5R or better, rated at least 10 V.
+The appliance now contains 97 components. Native netlist checks verify
+that neither bootstrap terminal is grounded or tied directly to 5V_MAIN.
+Physical placement and the remaining power stage are still unfinished.
