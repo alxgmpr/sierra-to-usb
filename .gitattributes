@@ -1,2 +1,5 @@
 # Manufacturer reference PDFs are binary artifacts.
 *.pdf binary
+
+# Preserve the manufacturer page bytes recorded by the source hash.
+hardware/reference/cl10b473kb8nnn-manufacturer.html binary

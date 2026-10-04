@@ -160,3 +160,23 @@ connected directly between U701 BOOT pin 7 and SW pin 6. TI Section
 The appliance now contains 97 components. Native netlist checks verify
 that neither bootstrap terminal is grounded or tied directly to 5V_MAIN.
 Physical placement and the remaining power stage are still unfinished.
+
+## Soft start captured
+
+C702 is Samsung CL10B473KB8NNNC, 47 nF/50 V X7R ±10% in 0603
+(C1622). Manufacturer page confirms the full packaging suffix and current
+mass-production status; page HTML archived and hashed. Catalog stock
+is indexed, not reserved. C702 connects U701 SS pin 5 to AGND/GND.
+Native netlist and rendered schematic were reviewed. Appliance total: 98.
+
+Using typical 6 uA charge current and 0.6 V reference gives 4.7 ms
+nominal soft start. Capacitor tolerance alone gives 4.23–5.17 ms; this
+is not a guaranteed timing range because ISS has only a typical value,
+and X7R temperature/bias/aging effects are additional. For an illustrative
+177 uF nominal distributed bank, ideal capacitive charging current is
+177 uF × 4.992 V / 4.7 ms = 0.188 A, excluding downstream operating
+loads and further CPU/DDR input capacitors. This estimate does not
+prove startup without current limiting or acceptable PoE input inrush.
+
+Manufacturer: https://product.samsungsem.com/mlcc/CL10B473KB8NNN.do;
+regulator soft-start source: TPS56837 Section 6.3.3, Equation 1.
