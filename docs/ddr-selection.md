@@ -32,3 +32,39 @@ Primary sources reviewed 2026-10-03:
 
 No DDR symbol, footprint or regulator divider has been generated from this
 candidate. Continued supply/processor/storage/modem work remains possible.
+
+## Manufacturer loader and WDQS wiring requirements
+
+Pinned rockchip-linux/rkbin revision
+3e288fe814e059dd06833495f845cab04ac20a5c includes RK3566 200-ball
+LPDDR4X templates and a separate WDQS loader family. The specific
+release note dated 2025-11-20 requires a 560R weak pull-up on DQSn
+for WDQS support. It warns that boards without DQSn pull-ups must use
+regular bin/rk35 loaders, while boards with these pull-ups must use
+WDQS loaders; mismatching them can cause reliability issues.
+The template table identifies parts needing WDQS through application
+notes in Rockchip's controlled DDR approved/reference vendor lists.
+Those lists remain unavailable, so we cannot infer WDQS requirements
+from a generic LPDDR4X marketing description or ball count.
+
+The default RK3566MINIALL.ini uses the regular 1056MHz v1.26 loader,
+USB plug v1.17 and SPL v1.14. Standard release notes report single-channel
+LPDDR4/LPDDR4X support and capacity/startup fixes in v1.26. Special
+mixed-package latency-mode parts require a separate v1.26 loader and
+matching BL31; this does not prove our Micron candidate uses that mode.
+Preserve the original RK3568 CHIP_NAME in the archived manufacturer INI;
+it is not a typo we have independently qualified for correction.
+
+Before RAM capture, resolve exact-part vendor-list classification and
+DQSn pull-up requirements together with its ball map and power sequence.
+Before firmware release, choose and hash the matching DDR loader and
+BL31, then verify training, repeated cold/warm starts, suspend/resume,
+voltage/frequency transitions and memory margins on the actual PCB.
+Manufacturer full-space test notes explicitly say the test does not detect
+all faulty cells; max-frequency scan is only an approximate aid.
+No binary has been installed or executed on hardware.
+
+Original manufacturer documents and SHA-256 provenance are archived in
+hardware/reference/rockchip-ddr-template-table.md,
+rockchip-rk3566-ddr-release.md, rockchip-rk3566-ddr-specific-release.md
+and rockchip-rk3566-loader.ini, with URLs in sources.json.

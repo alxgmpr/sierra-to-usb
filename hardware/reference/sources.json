@@ -291,5 +291,31 @@
     "sha256": "382b08e53681c7fd8eb2315e3b4cea21d3d965173eeb93174fdc304f823e233e",
     "retrieved": "2026-10-04",
     "note": "Original GPL-2.0+ OR MIT source; operating-point evidence, not boot qualification"
+  },
+  {
+    "file": "rockchip-ddr-template-table.md",
+    "url": "https://github.com/rockchip-linux/rkbin/blob/3e288fe814e059dd06833495f845cab04ac20a5c/specific/Rockchip_Specific_PCB_Template_and_DDR_bin_Configuration_Table.md",
+    "sha256": "a0d9bb3e7975c61831bcd9c73b9e539af3964c4a3e1b12d5ac0ea3c63809519e",
+    "retrieved": "2026-10-04"
+  },
+  {
+    "file": "rockchip-rk3566-ddr-release.md",
+    "url": "https://github.com/rockchip-linux/rkbin/blob/3e288fe814e059dd06833495f845cab04ac20a5c/doc/release/RK3566_EN.md",
+    "sha256": "fdac407b851977fd3c61be3c633881831727fbce04bb46118d21e7e14b5dd49f",
+    "retrieved": "2026-10-04"
+  },
+  {
+    "file": "rockchip-rk3566-ddr-specific-release.md",
+    "url": "https://github.com/rockchip-linux/rkbin/blob/3e288fe814e059dd06833495f845cab04ac20a5c/specific/rk3566/RK3566_EN.md",
+    "sha256": "440bea8ff4d76323646e3dbddb028c2028696db9cc27278d42fe54a29139457c",
+    "retrieved": "2026-10-04",
+    "source_sha256": "db2ea9d4132ea1fe50079e6a4977eee3fc155ad5dddfadf60cbe01102c394450",
+    "note": "Trailing blank line at EOF removed; source_sha256 records original upstream bytes"
+  },
+  {
+    "file": "rockchip-rk3566-loader.ini",
+    "url": "https://github.com/rockchip-linux/rkbin/blob/3e288fe814e059dd06833495f845cab04ac20a5c/RKBOOT/RK3566MINIALL.ini",
+    "sha256": "677bc9a5340e34f21c41b89d5ff30e70b7bef32ab175fd50103eb5a360e26890",
+    "retrieved": "2026-10-04"
   }
 ]
