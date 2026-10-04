@@ -255,3 +255,23 @@ guaranteed all-corner compliance with Table 2. Native ERC, supply net
 membership, direct reset and fault net assertions pass with 32 fitted
 components, all carrying exact MPNs. Prior 31-component figures describe
 the earlier single-output-capacitor revision.
+
+## PMIC reference identification
+
+NanoPi R3S LTS 2411 uses **RK809-5**, not an unspecified RK809 suffix.
+Page 3 assigns BUCK1/2 to logic/GPU (0.9 V defaults, slots 1/2),
+BUCK3 to adjustable DDR (slot 3), BUCK5 to 1.8 V (slot 2), LDO2/3
+to 0.9 V analog/PMU (slot 1), LDO6/7/8 to 3.3 V PMU and 1.8 V
+analog/PMU (slot 2). SW1/SW2 supply 3.3 V system/SD in slot 4.
+RESETn releases at slot 4+5. Two external 3 A buck circuits generate
+3.3 V and 5 V system rails from 12 V before the PMIC sequence.
+These are reference assignments, not yet this appliance's captured rails.
+Do not use the independent 0.5 A recovery converter as the RK809 input.
+Exact orderable suffix availability and manufacturer programming defaults
+still require confirmation before committing native PMIC capture.
+
+Updated supply and root renders were inspected. Root sheet placement
+was moved above the control-header labels to remove an overlap. J101
+now reads RAIL TEST rather than EVAL SUPPLY; its back-power warning
+and root scope notes match the integrated supply. ERC/net assertions
+pass after these drawing corrections.
