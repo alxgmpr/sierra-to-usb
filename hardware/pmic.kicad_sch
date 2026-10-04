@@ -532,6 +532,160 @@
 			)
 		)
 		(embedded_fonts no)
+	)
+(symbol "Device:R_Small_US"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 0.762 0.508 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_Small_US"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "r resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_Small_US_1_1"
+			(polyline
+				(pts
+					(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 2.54 270)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
 	))
 (symbol (lib_id "Recovery:RK809-5") (at 101.6 81.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "609ca19f-e32a-5f65-8b29-6d155ed212dc") (property "Reference" "U501" (at 76.19999999999999 50.8 0) (effects (font (size 1.27 1.27))))(property "Value" "RK809-5" (at 76.19999999999999 53.34 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DFN_QFN:ArtInChip_QFN-68-1EP_7x7mm_P0.35mm_EP5.49x5.49mm_ThermalVias" (at 101.6 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RK809-5" (at 101.6 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Rockchip" (at 101.6 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C2939628" (at 101.6 81.28 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "8" (uuid "572cb337-b5e3-55c2-9b8a-07333f7f503d"))(pin "9" (uuid "d8624518-b8dc-594b-8082-85301339ec42"))(pin "10" (uuid "2c7d9c13-c491-57c6-9895-0f3a3c7e40d2"))(pin "11" (uuid "dfa2f632-fca9-5311-ae96-3032626ac32a"))(pin "12" (uuid "62c0d415-054f-577d-a869-0fb92967385f"))(pin "13" (uuid "fea56058-3155-5958-b731-d2e276e86de8"))(pin "24" (uuid "f91c2347-386f-5c2c-a5ed-e247a9ba499a"))(pin "25" (uuid "4851c158-4ca6-50af-9b2b-2d385f2fdd40"))(pin "26" (uuid "9ed2a08a-8690-5d10-bea1-0ad0b773f967"))(pin "27" (uuid "d12adb72-3320-522a-9b98-cb19bfc662d8"))(pin "53" (uuid "c4186064-4bca-5a37-99ab-ab4b3ed8cc1e"))(pin "54" (uuid "706c3865-cf98-5f93-85e0-e2cf0487b08c"))(pin "55" (uuid "746ad39a-80ff-510c-bb89-7b202a4292bb"))(pin "57" (uuid "645058a3-7e76-5b7e-a49c-b5dadf40eede"))(pin "58" (uuid "20925097-3206-54bd-84fc-57eec9129203"))(pin "59" (uuid "78a77f72-32a5-570b-9e6d-8a07fdb0cf6a"))(pin "64" (uuid "ef0352b1-8227-53bc-927a-5d85b64b8692"))(pin "65" (uuid "b76885c2-fb44-52dc-b437-eb090a541293"))(pin "66" (uuid "75ed50dc-88ad-5cec-8141-e6c2357a307f")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "U501") (unit 1)))))
 (symbol (lib_id "Recovery:RK809-5") (at 101.6 165.1 0) (unit 2) (in_bom yes) (on_board yes) (dnp no) (uuid "43b73de3-45f9-5b0b-977f-f5ba9051a642") (property "Reference" "U501" (at 76.19999999999999 134.62 0) (effects (font (size 1.27 1.27))))(property "Value" "RK809-5" (at 76.19999999999999 137.16 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DFN_QFN:ArtInChip_QFN-68-1EP_7x7mm_P0.35mm_EP5.49x5.49mm_ThermalVias" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RK809-5" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Rockchip" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C2939628" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "3" (uuid "93570d83-e537-5782-81ce-05d6a3cabe84"))(pin "4" (uuid "f1b2e053-73b2-5062-a204-2b8c3d8e2b6c"))(pin "5" (uuid "d787f5f0-f71b-5c83-959e-6fb7393fbf9d"))(pin "6" (uuid "dc2da4d0-342c-5af1-a2de-0884a8874b6d"))(pin "20" (uuid "f04c00a8-4b84-528b-b519-8f938f82c14a"))(pin "21" (uuid "fe778538-2839-5a1a-9858-e828bd338cfb"))(pin "22" (uuid "344a1912-4930-5ee0-8a83-b26dbaed7d6b"))(pin "23" (uuid "732ab009-f648-5b4f-afa2-8984c715cee9"))(pin "28" (uuid "ea2be39b-42e1-5775-89bd-e13fc77592f1"))(pin "29" (uuid "99cc1799-f51c-5c93-9971-ab6f32916e01"))(pin "30" (uuid "6933de6b-1992-5a1a-aa92-a53d4cf0320c"))(pin "31" (uuid "f9e16cdf-fd8b-517e-ae61-ba6dbe2b8eb2")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "U501") (unit 2)))))
@@ -642,6 +796,21 @@
 (wire (pts (xy 185.42 210.82) (xy 185.42 218.44)) (stroke (width 0) (type default)) (uuid "9df8dcbe-42a6-5674-9fa3-53a9c1aaa102"))
 (symbol (lib_id "power:GND") (at 185.42 218.44 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "273bb744-9105-5302-9c98-5b055f8cff50") (property "Reference" "#PWR515" (at 185.42 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 185.42 222.25 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 185.42 218.44 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "363638ba-2e0a-5193-a437-9a30a398550c")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "#PWR515") (unit 1)))))
 (text "BUCK5: 1.8V startup / 2.5A rated; 3 x 22uF output bank" (at 175.26 182.88000000000002 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "edecf2b2-b326-5998-8aa1-0006c1e8474b"))
+(wire (pts (xy 99.06 271.78) (xy 99.06 279.4)) (stroke (width 0) (type default)) (uuid "a958adb8-6031-5e7b-9a5f-0464869367d3"))
+(wire (pts (xy 104.14 271.78) (xy 104.14 279.4)) (stroke (width 0) (type default)) (uuid "55c8d812-fbd8-556f-a2b1-db12f6a11419"))
+(wire (pts (xy 99.06 279.4) (xy 104.14 279.4)) (stroke (width 0) (type default)) (uuid "81795116-253b-5d66-89cf-7700c1ababa9"))
+(symbol (lib_id "power:GND") (at 101.6 279.4 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "490d84e7-b77e-5c7d-ada5-4d5846e6b9fa") (property "Reference" "#PWR520" (at 101.6 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 101.6 283.21 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 279.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "48416493-1443-545d-8ed8-95bdf21fb95a")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "#PWR520") (unit 1)))))
+(wire (pts (xy 134.62 241.3) (xy 185.42 241.3)) (stroke (width 0) (type default)) (uuid "3974d255-d32e-525d-977a-cfe4e9f29a38"))
+(label "RK_RESET_N" (at 185.42 241.3 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "80834a6e-acb7-59f9-86d1-880a2624d0e7"))
+(symbol (lib_id "Device:R_Small_US") (at 160.02 226.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4811b6f0-8faa-5917-b05b-ad48e3b27936") (property "Reference" "R501" (at 168.91000000000003 224.79 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 172.72 227.33 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 160.02 226.06 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 160.02 226.06 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 160.02 226.06 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C98220" (at 160.02 226.06 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 160.02 226.06 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 160.02 226.06 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "fa3e7b3a-fab8-5768-805f-a8f9467b4415"))(pin "2" (uuid "6f25876c-cb41-5a6d-bd9d-6e2fc0e29aa0")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "R501") (unit 1)))))
+(wire (pts (xy 160.02 223.52) (xy 160.02 215.9)) (stroke (width 0) (type default)) (uuid "5610b479-5a0c-52e1-a72d-e31a0b0aeb15"))
+(label "VCC3V3_PMU" (at 160.02 215.9 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f4557e03-b87d-5c21-83cd-afd389ed87ad"))
+(wire (pts (xy 160.02 228.6) (xy 160.02 241.3)) (stroke (width 0) (type default)) (uuid "99f9ce90-0d1e-55f3-b40b-74ad517b05f9"))
+(junction (at 160.02 241.3) (diameter 0) (color 0 0 0 0) (uuid "78264bac-262a-57a8-9a3c-4cb7279bf5aa"))
+(symbol (lib_id "Device:C_Small") (at 160.02 254 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e3d05786-3ce1-5c9d-802c-8000d3a273cf") (property "Reference" "C513" (at 149.86 252.73 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "100nF / 25V" (at 149.86 255.27 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 160.02 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 160.02 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 160.02 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C1590" (at 160.02 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Place at RK3566 nPOR; reset assertion on brownout remains to verify" (at 160.02 254 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "dde74532-e489-52d2-986e-2a594cb976c7"))(pin "2" (uuid "21db8dbe-ac53-5d29-9c24-45b5247283b0")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "C513") (unit 1)))))
+(wire (pts (xy 160.02 241.3) (xy 160.02 251.46)) (stroke (width 0) (type default)) (uuid "ac05c517-3385-5eb2-85f6-ba7f24a461ba"))
+(wire (pts (xy 160.02 256.54) (xy 160.02 269.24)) (stroke (width 0) (type default)) (uuid "f673bf56-281b-5721-aa3d-8b3c8c9d0782"))
+(symbol (lib_id "power:GND") (at 160.02 269.24 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "bcea2b37-3b5e-569c-819b-53f7d980080c") (property "Reference" "#PWR521" (at 160.02 269.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 160.02 273.05 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 160.02 269.24 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "222387b3-4575-54da-ae7f-db8dbb722e03")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "#PWR521") (unit 1)))))
 (text "PMIC capture in progress — BUCK1 / BUCK2 / BUCK5" (at 35.56 22.86 0) (effects (font (size 2.54 2.54)) (justify left)) (uuid "be054a62-cf93-5ed0-9c9b-2c8da0c9af69"))
 (text "DRAFT: other rails and management/audio pins are deliberately unwired.\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\nFeedback sense must route to processor load; verify ground return and placement." (at 175.26 165.1 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ef932fe8-8aee-5900-b8c2-67301ed6efac"))
 (sheet_instances (path "/" (page "1"))))

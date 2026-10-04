@@ -538,3 +538,23 @@ third capacitor bank and title block. The reproducible bias calculator now
 includes BUCK5 at 1.8 V and the maximum programmable 3.6 V; its 33 uF
 comparison comes from the typical application nominal capacitor, not a
 specified guaranteed minimum. Output-bank stability remains unqualified.
+
+## PMIC ground and processor reset capture
+
+U501 GNDREF pin 47 and exposed ground pad 69 now connect to GND. RESETB
+pin 67 drives RK_RESET_N directly, with R501 10 kR pull-up to VCC3V3_PMU
+and C513 100 nF to ground. Both use already-reviewed exact 0603 MPNs.
+The RK3566 hardware guide section 2.1.3 requires 100 nF near nPOR and a
+pull-up matching PMUIO1; its IO-domain table fixes PMUIO1 at 3.3 V. The
+10 kR value is a design choice, giving approximately 1 ms RC and 0.33 mA
+pull-up load at 3.3 V. The capacitor must be placed at the future processor
+pin rather than next to the PMIC. The MCU recovery reset sink still needs
+integration with this net, including fault/off-state behavior.
+
+The guide additionally requires reset asserted before PMUIO1 falls below
+2.93 V during shutdown. Connecting PMIC RESETB alone does not prove this
+condition on brownout; threshold, sequencing and the recovery reset path
+must be reviewed before release. VCC3V3_PMU is still an unresolved LDO
+output in the draft. Netlist assertions now cover eleven nets and 18 exact
+MPNs; full PMIC ERC remains intentionally incomplete. The render was checked
+with the reset passives directly wired and both ground pins visibly joined.

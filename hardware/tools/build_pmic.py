@@ -101,6 +101,15 @@ for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC_SENSE',501),(2,1
  add('Device','C_Small',f'C{cref+3}','22uF / 25V',185.42,y+12.7,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
  wire((185.42,y+10.16),(185.42,y));label('3V3_MAIN' if channel==5 else '5V_MAIN',(185.42,y));wire((185.42,y+15.24),(185.42,y+22.86));power('GND',(185.42,y+22.86),f'#PWR51{channel}')
  note(f'BUCK{channel}: '+('1.8V' if channel==5 else '0.9V')+' startup / 2.5A rated; 3 x 22uF output bank',(175.26,y-12.7))
+# PMIC ground return and processor reset: pull up only to its fixed 3.3 V PMUIO1 domain.
+for n in ['47','69']:
+ a=units[3][n];wire(a,(a[0],279.4))
+wire((99.06,279.4),(104.14,279.4));power('GND',(101.6,279.4),'#PWR520')
+a=units[3]['67'];wire(a,(185.42,a[1]));label('RK_RESET_N',(185.42,a[1]))
+add('Device','R_Small_US','R501','10kR',160.02,226.06,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W'})
+wire((160.02,223.52),(160.02,215.9));label('VCC3V3_PMU',(160.02,215.9));wire((160.02,228.6),(160.02,a[1]));junction((160.02,a[1]))
+add('Device','C_Small','C513','100nF / 25V',160.02,254,fp='Capacitor_SMD:C_0603_1608Metric',fields={'MPN':'CL10B104KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C1590','Qualification':'Place at RK3566 nPOR; reset assertion on brownout remains to verify'})
+wire((160.02,a[1]),(160.02,251.46));wire((160.02,256.54),(160.02,269.24));power('GND',(160.02,269.24),'#PWR521')
 note('PMIC capture in progress — BUCK1 / BUCK2 / BUCK5',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(175.26,165.1))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A3") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'

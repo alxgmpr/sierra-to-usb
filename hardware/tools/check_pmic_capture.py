@@ -17,11 +17,13 @@ with tempfile.TemporaryDirectory() as tmp:
  '/3V3_MAIN':{('U501','54'),('C512','1')},
  '/PMIC_SW5':{('U501','53'),('L505','1')},
  '/VCC_1V8':{('U501','59'),('L505','2'),('C509','1'),('C510','1'),('C511','1')},
- 'GND':{(f'C{n}','2') for n in range(501,513)},
+ '/RK_RESET_N':{('U501','67'),('R501','2'),('C513','1')},
+ '/VCC3V3_PMU':{('R501','1')},
+ 'GND':{(f'C{n}','2') for n in range(501,514)}|{('U501','47'),('U501','69')},
  }
  for name,pins in expected.items():assert nets[name]==pins,(name,nets[name],pins)
- comps=tree.findall('.//components/comp');assert len(comps)==16
+ comps=tree.findall('.//components/comp');assert len(comps)==18
  for c in comps:
   fields={f.attrib['name']:f.text for f in c.findall('fields/field')}
   assert fields.get('MPN'),c.attrib['ref']
- print('PASS: BUCK1/2/5 exact nine-net membership and 16 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
+ print('PASS: BUCK1/2/5 exact eleven-net membership and 18 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
