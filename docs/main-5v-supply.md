@@ -78,3 +78,25 @@ Recovery:TPS56837RPAR is registered with ten unique pins and audited
 electrical types. Native symbol render inspected. check_tps56837_symbol.py
 verifies the manufacturer-reviewed table. Footprint field intentionally blank
 pending RPA geometry review. No circuit is represented by this symbol alone.
+
+## Control values selected for capture
+
+Use the approved manufacturer reference-design package policy. MODE
+30.1 kOhm (RC0603FR-0730K1L, 0603, 1%) selects 500 kHz and the
+higher valley-current-limit option: 8 A minimum, 9.6 A typical,
+11.1 A maximum. These are valley limits, not guaranteed load current
+or acceptable inductor peak current. MODE is latched at startup.
+
+The reference feedback pair is 73.2 kOhm / 10 kOhm; prefer
+RT0603BRD0773K2L and RT0603BRD0710KL (0603, 0.1%, 25 ppm/K).
+Nominal output is 4.992 V. The manufacturer's full-temperature feedback
+limits are 0.591–0.609 V, rather than the 25 C ±1% figure. With opposing
+0.1% resistor tolerances alone, output spans approximately 4.908–5.076 V.
+Temperature coefficient, bias, ripple and transient effects remain additional
+terms; this calculation does not close the downstream 5.5 V ceiling.
+
+Reference SS capacitance is 47 nF. With typical 6 uA charge current
+and 0.6 V reference, the nominal ramp is 4.7 ms (Equation 1). Exact
+capacitor selection and minimum/maximum startup timing remain open.
+No control circuit has been captured yet; footprint review is pending.
+Source: archived tps56837.pdf, Sections 5.5, 6.3.1, 6.3.3 and Figure 7-1.
