@@ -378,3 +378,27 @@ markers. Native checks ensure none joins another endpoint; marker coordinates
 are checked against the audited native pin positions. Enlarged render reviewed.
 Firmware must initialize the selected single-rank LPDDR4X topology. This
 capture policy does not establish loader compatibility or physical training.
+
+## RAM-local bypass reference inventory
+
+Visually reviewed NanoPi R3S LTS 2411 sheet 7 and prepared
+ram-local-bypass-plan.csv with fifty distinct capacitor references C905-C954:
+- VDD1: 2x10uF plus 6x100nF (C3848-C3851 and C3823-C3826).
+- VDD2: 22uF plus 3x10uF plus 16x100nF (C3801-C3820).
+- VDDQ: 22uF plus 3x10uF plus 18x100nF
+  (C3828-C3846, C3854, C3821, C3822).
+
+These are RAM-local banks, additional to BUCK3 output capacitors and
+processor-local DDR bypass. Inventory is a capture plan, not yet fitted.
+The reference uses 0201 high-frequency capacitors and 0402/0603 bulk
+parts; our selected larger parts cannot be treated as equivalent physical
+PDN performance. Package, bias, placement and impedance review remains.
+Reference VDD1 is ferrite-fed VCCA1V8_PMU; our current RAM VDD1 is
+BUCK5 VCC_1V8. Review source loading and sequencing before introducing
+the reference bead or changing the source rail.
+
+Sheet 7 also identifies a SY8089A 0.6V buck, 2.2uH inductor,
+2kR/100kR feedback for LPDDR4X, and 20kR/100nF enable network
+driven by VCC1V8_DDR. Capture requires exact regulator variant/model,
+feedback accuracy, load and sequence checks. Its generic dual-rank RAM
+symbol is not authority to reconnect our audited single-rank NC balls.
