@@ -8,21 +8,37 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 
 | Required block | Current authoritative state | Required before schematic completion |
 |---|---|---|
-| Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 32-component supply-integrated capture; native ERC/connectivity passes on 2026-10-03 | MCU pin audit closure; physical startup/reset behavior; target-domain interface integration |
-| Independent always-on supply | `hardware/always-on.kicad_sch`, 6 components, TPS62177DQCR, LPS4018-103MRC; integrated recovery hierarchy and PG fault net; typical capacitor bias reviewed | Guaranteed capacitor corners/aging and loop behavior; rail load; final appliance hierarchy |
+| Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 32-component supply-integrated capture; native connectivity verified; standalone recovery ERC now reports boundary labels for appliance-only signals | MCU pin audit closure; physical startup/reset behavior; target-domain interface integration |
+| Independent always-on supply | `hardware/always-on.kicad_sch`, 6 components, TPS62177DQCR, LPS4018-103MRC; integrated recovery hierarchy and PG fault net; typical capacitor bias reviewed | Guaranteed capacitor corners/aging and loop behavior; rail load; complete appliance hierarchy |
 | RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 47-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
+| Main 5 V and 3.3 V supplies | Native 15-part TPS56837 main 5 V draft and 13-part MP2143 3.3 V draft; MCU enable/PG and shared ISO_12V captured | TPS56837 footprint approval, combined capacitor/compensation and startup/current/thermal budget closure; reviewed interface states |
+| External CPU supply | Missing; NanoPi reference uses I²C-controlled TCS4525 | Exact programmable regulator, boot voltage/OPP/driver compatibility, RK809 EXT_EN sequence, input/output bank and complete capture |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
 | 2.5GbE | RTL8125BG-CG remains candidate | Exact pin/reference circuit, clocks/rails/reset/PCIe coupling and 2.5G PoE-rated magnetics; symbol and footprint checks |
 | Isolated PoE | Archived TI TIDA-050023 schematic and BOM as candidate reference | Whole-appliance peak and startup budget, exact class, transformer/protection/feedback/MPS/allocation integration; isolation boundary audit |
 | Modem power | Requirements only | Voltage/current envelope per model, switch/eFuse/ramp/discharge, default-off controls and fault sensing |
 | EM9190 / EM9293 sockets and SIM | Older manufacturer PTS research; contacts 24/38/68 conflict with Quectel | Current controlled pin tables, complete per-model profile and power/control/SIM/USB3 capture |
 | RM520N-GL / RM551E-GL sockets and SIM | RM520 guide exists; current RM551 production guide still missing | Current controlled hardware guides and per-model pin/voltage/control/SIM/USB3 capture |
-| Full hierarchy and BOM | Draft appliance root exports 92 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
+| Full hierarchy and BOM | Draft appliance root exports 107 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
 | Visual and electrical review | Always-on draft rendered and corrected; recovery tests rerun | All sheets and circuit crops inspected, native ERC and complete critical-net assertions, manufacturer pin fidelity, footprint pad parity |
 
 No PCB file exists. Do not start placement until the integrated schematic and
 exact parts meet the criteria above. Physical throughput, thermal/EMC/isolation,
 power interruption and unattended recovery remain separate qualification work.
+
+## Current verification snapshot — 2026-10-04
+
+Appliance capture checker exports the native XML and verifies 107 components,
+recovery/main rail separation, PMIC restart, main 5 V enable/PG, bootstrap,
+soft start, input bypass and output-filter connectivity. It is not a full-appliance
+checker. The last full ERC run reported 57 violations: 39 unconnected pins,
+10 undriven signal pins and 8 undriven power pins. No exclusions added.
+The processor, RAM, storage, Ethernet, PoE and modem circuits are still absent.
+
+The dated sections below preserve intermediate research and capture decisions;
+older component counts, ERC claims and unconnected-interface descriptions are
+superseded by this snapshot and the current native files. Physical verification
+remains separate from schematic capture and is not implied by netlist checks.
 
 ## Always-on circuit decisions
 
