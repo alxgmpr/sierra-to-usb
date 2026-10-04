@@ -228,6 +228,18 @@ a=units[1]['57'];wire(a,(a[0],50.8));wire((a[0],50.8),(134.62,50.8));label('VCC_
 add('Device','C_Small','C538','1uF / 25V',154.94,104.14,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
 wire((154.94,101.6),(154.94,93.98));label('VCC_1V8',(154.94,93.98))
 wire((154.94,106.68),(154.94,114.3));power('GND',(154.94,114.3),'#PWR561')
+# RK809 Figure 1-2: 2.2 uF flying capacitor and negative-rail bypass.
+for pin,name in [('36','PMIC_CPN'),('37','PMIC_CPP')]:
+ a=units[4][pin];b=(a[0]-7.62,a[1]);wire(a,b);label(name,b)
+ items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
+a=units[4]['35'];b=(a[0]+12.7,a[1]);wire(a,b);label('PMIC_INTERNAL_CPVSS',b)
+cpfields={'MPN':'CL31B225KBHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C50254','Dielectric':'X7R','Tolerance':'10%','Qualification':'Reference nominal charge-pump capacitance; effective corner and startup pending'}
+add('Device','C_Small','C539','2.2uF / 50V',500.38,250.19,fp='Capacitor_SMD:C_1206_3216Metric',fields=cpfields)
+wire((500.38,247.65),(500.38,237.49));label('PMIC_CPP',(500.38,237.49))
+wire((500.38,252.73),(500.38,262.89));label('PMIC_CPN',(500.38,262.89))
+add('Device','C_Small','C540','2.2uF / 50V',500.38,290.83,fp='Capacitor_SMD:C_1206_3216Metric',fields=cpfields)
+wire((500.38,288.29),(500.38,278.13));label('PMIC_INTERNAL_CPVSS',(500.38,278.13))
+wire((500.38,293.37),(500.38,300.99));power('GND',(500.38,300.99),'#PWR562')
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(241.3,375.92))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'

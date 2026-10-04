@@ -36,11 +36,14 @@ with tempfile.TemporaryDirectory() as tmp:
  '/PMIC_INTERNAL_CPVDD':{('U501','38'),('C534','1')},
  '/PMIC_INTERNAL_1V8A':{('U501','44'),('C535','1')},
  '/PMIC_INTERNAL_1V8D':{('U501','48'),('C536','1')},
- 'GND':{(f'C{n}','2') for n in range(501,539)}|{('U501','47'),('U501','69'),('U501','62'),('U501','63'),('U501','40'),('R505','2'),('R507','2'),('Q501','2'),('R509','2')},
+ '/PMIC_CPP':{('U501','37'),('C539','1')},
+ '/PMIC_CPN':{('U501','36'),('C539','2')},
+ '/PMIC_INTERNAL_CPVSS':{('U501','35'),('C540','1')},
+ 'GND':{(f'C{n}','2') for n in range(501,539)}|{('C540','2')}|{('U501','47'),('U501','69'),('U501','62'),('U501','63'),('U501','40'),('R505','2'),('R507','2'),('Q501','2'),('R509','2')},
  }
  for name,pins in expected.items():assert nets[name]==pins,(name,nets[name],pins)
- comps=tree.findall('.//components/comp');assert len(comps)==52
+ comps=tree.findall('.//components/comp');assert len(comps)==54
  for c in comps:
   fields={f.attrib['name']:f.text for f in c.findall('fields/field')}
   assert fields.get('MPN'),c.attrib['ref']
- print('PASS: PMIC captured rails: exact twenty-eight-net membership and 52 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
+ print('PASS: PMIC captured rails: exact thirty-one-net membership and 54 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
