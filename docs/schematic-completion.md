@@ -558,3 +558,25 @@ must be reviewed before release. VCC3V3_PMU is still an unresolved LDO
 output in the draft. Netlist assertions now cover eleven nets and 18 exact
 MPNs; full PMIC ERC remains intentionally incomplete. The render was checked
 with the reset passives directly wired and both ground pins visibly joined.
+
+## RTC and VREF bypass capture
+
+Added C514 and C515 as Samsung CL10B105KA8NNNC, 1 uF / 25 V / X7R /
++/-10 percent / 0603 (C29936), matching the reference's nominal 1 uF RTC
+and internal-reference bypasses. Manufacturer lists this family in mass
+production; typical bias arrays are archived with SHA-256 provenance.
+RTC pin 45 now joins 3V3_MAIN, and VREF pin 46 has its direct bypass.
+Native checks cover twelve nets and twenty exact-MPN components, and the
+updated render was reviewed.
+
+Typical bias change is -0.31 percent at 1.2 V, -8.59 percent at 3.3 V and
+-10.04 percent at 3.6 V. Combined with -10 percent initial and -15 percent
+temperature factors, estimates are 0.763/0.699/0.688 uF before aging.
+These are nominal-reference bypass selections, not proof of any guaranteed
+1 uF effective minimum. Do not automatically reuse them for LDO outputs
+until required minimum capacitance and stability are resolved.
+
+The alternative CL21B225KAFNNNE was rejected for new capture because the
+manufacturer marks it NRND, despite current catalog stock. Its mass-production
+CL21B225KAFNFNE alternate is an available 2.2 uF / 25 V / 0805 candidate
+(C364318), but has not been selected or substituted into the schematic.

@@ -110,6 +110,12 @@ add('Device','R_Small_US','R501','10kR',160.02,226.06,fp='Resistor_SMD:R_0603_16
 wire((160.02,223.52),(160.02,215.9));label('VCC3V3_PMU',(160.02,215.9));wire((160.02,228.6),(160.02,a[1]));junction((160.02,a[1]))
 add('Device','C_Small','C513','100nF / 25V',160.02,254,fp='Capacitor_SMD:C_0603_1608Metric',fields={'MPN':'CL10B104KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C1590','Qualification':'Place at RK3566 nPOR; reset assertion on brownout remains to verify'})
 wire((160.02,a[1]),(160.02,251.46));wire((160.02,256.54),(160.02,269.24));power('GND',(160.02,269.24),'#PWR521')
+# Reference nominal 1 uF RTC and VREF bypass capacitors; bias/corner margin remains explicit.
+oneuf={'MPN':'CL10B105KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C29936','Qualification':'Manufacturer mass-production and bias curve reviewed; effective minimum pending'}
+add('Device','C_Small','C514','1uF / 25V',50.8,215.9,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
+a=units[3]['45'];wire(a,(a[0],203.2));wire((50.8,203.2),(a[0],203.2));label('3V3_MAIN',(50.8,203.2));wire((50.8,203.2),(50.8,213.36));wire((50.8,218.44),(50.8,228.6));power('GND',(50.8,228.6),'#PWR522')
+add('Device','C_Small','C515','1uF / 25V',185.42,269.24,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
+a=units[3]['46'];wire(a,(185.42,a[1]));wire((185.42,a[1]),(185.42,266.7));wire((185.42,271.78),(185.42,281.94));power('GND',(185.42,281.94),'#PWR523')
 note('PMIC capture in progress — BUCK1 / BUCK2 / BUCK5',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(175.26,165.1))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A3") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'

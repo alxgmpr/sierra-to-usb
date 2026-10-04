@@ -14,16 +14,17 @@ with tempfile.TemporaryDirectory() as tmp:
  '/PMIC_SW2':{('U501','9'),('L502','1')},
  '/VDD_LOGIC':{('U501','13'),('L501','2'),('C501','1'),('C502','1'),('C503','1')},
  '/VDD_GPU':{('U501','8'),('L502','2'),('C505','1'),('C506','1'),('C507','1')},
- '/3V3_MAIN':{('U501','54'),('C512','1')},
+ '/3V3_MAIN':{('U501','54'),('C512','1'),('U501','45'),('C514','1')},
  '/PMIC_SW5':{('U501','53'),('L505','1')},
  '/VCC_1V8':{('U501','59'),('L505','2'),('C509','1'),('C510','1'),('C511','1')},
  '/RK_RESET_N':{('U501','67'),('R501','2'),('C513','1')},
  '/VCC3V3_PMU':{('R501','1')},
- 'GND':{(f'C{n}','2') for n in range(501,514)}|{('U501','47'),('U501','69')},
+ 'Net-(U501C-VREF)':{('U501','46'),('C515','1')},
+ 'GND':{(f'C{n}','2') for n in range(501,516)}|{('U501','47'),('U501','69')},
  }
  for name,pins in expected.items():assert nets[name]==pins,(name,nets[name],pins)
- comps=tree.findall('.//components/comp');assert len(comps)==18
+ comps=tree.findall('.//components/comp');assert len(comps)==20
  for c in comps:
   fields={f.attrib['name']:f.text for f in c.findall('fields/field')}
   assert fields.get('MPN'),c.attrib['ref']
- print('PASS: BUCK1/2/5 exact eleven-net membership and 18 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
+ print('PASS: BUCK1/2/5 exact twelve-net membership and 20 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
