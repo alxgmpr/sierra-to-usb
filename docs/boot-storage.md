@@ -87,3 +87,28 @@ The RK3566 guide section 2.1.4 specifies FLASH_VOL_SEL high during reset for
 1.8 V VCCIO2, low for 3.3 V. Preserve this hardware strap requirement in
 processor capture; a later software IO setting cannot substitute for the
 correct boot strap and physical IO voltage.
+
+## Supported-family investigation
+
+ISSI IS21ES16G-JCLI has a public manufacturer datasheet, but exact catalog
+C1236835 reports stock zero. Distributor search names IS21TF16G-JCLI as a
+recommended successor; the indexed lookup has no exact entry. The newer
+IS21/22TF family datasheet URL is known, but direct retrieval returned HTML
+instead of a PDF and web retrieval returned 403. No file, hash or extracted
+ball map is claimed for it. Do not equate a successor listing with component
+availability or validated RK3566 compatibility.
+
+Swissbit's manufacturer host-compatibility report Rev 1.0, 28-Feb-2024 is
+archived as hardware/reference/swissbit-em30-host-compatibility.pdf with source
+and hash in sources.json. Its table 2 explicitly tests the 16 GB TLC device
+**SFEM016GB2ED1TO-I-5E-111-STD** (the generation suffix ends in letter O,
+not zero). Other test devices include 64/256 GB TLC and 20/80 GB pSLC.
+
+Tests include read/write, filesystem and OS boot at ambient temperature. The
+listed Rockchip platform is RK3288 on ASUS Tinker Board S R2.0, **not RK3566**.
+This source does not close the processor compatibility gate. Its family-wide
+controller/NAND compatibility statement is reference evidence; the report
+still calls for validation in the customer's system. Exact-part electrical
+data, lifecycle, sourcing, package approval and RK3566 support remain open.
+
+Source: https://www.swissbit.com/files/public/data-symlink/EM-30/Swissbit_Host_Chipset_eMMC_Compatibility_EM-30_Series.pdf
