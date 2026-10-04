@@ -1313,3 +1313,20 @@ Off-state leakage, retention and interrupt timing remain system checks.
 The processor render was inspected with adjacent PMIC_SLEEP and
 PMIC_INT_N labels distinct. Component count remains 125. Full native
 ERC reports 461 violations, with unfinished circuitry still visible.
+
+## 2026-10-04 PMU logic and IO local bypass capture
+
+C809 1 uF plus C810 100 nF now bypass PMU_VDD_LOGIC_0V9
+ball 1N16 on VDDA0V9_PMU. C811 and C812 each provide 100 nF
+on VCC3V3_PMU, with placement fields assigning C811 to PMUIO1
+ball 1P16 and C812 to PMUIO2 ball 1N15. These nominal banks follow
+NanoPi R3S reference sheet 8, separately from the PLL and PMIC output
+capacitors. They use the same reviewed 25 V 0603 exact MPNs as
+C801–C808; their values/ratings are checked in exported BOM fields.
+
+The appliance capture now contains **129 components**. Exact native
+netlist assertions cover the additional capacitor tops and grounds. The
+A2 render was inspected for borders and title-block clearance. Schematic
+UUID uniqueness is verified, including repeated VDDA0V9_PMU banks.
+Physical decoupling placement and effective capacitance remain layout
+and electrical qualification tasks. Major appliance circuits remain open.
