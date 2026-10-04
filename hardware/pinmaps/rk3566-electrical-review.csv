@@ -213,82 +213,82 @@ Y37,AVSS1_5,AVSS1_5,power_in,"RK3566 Rev 1.2 Table 2-2 ground groups, pages 30-3
 1J18,AVSS1_12,AVSS1_12,power_in,"RK3566 Rev 1.2 Table 2-2 ground groups, pages 30-31"
 1K18,AVSS1_13,AVSS1_13,power_in,"RK3566 Rev 1.2 Table 2-2 ground groups, pages 30-31"
 1L19,AVSS1_14,AVSS1_14,power_in,"RK3566 Rev 1.2 Table 2-2 ground groups, pages 30-31"
-G2,DDR_DQ0_A,DDR_DQ0_A/DDR4_DQL0_A/LPDDR4_DQ0_A/DDR3_DQ0/LPDDR3_DQ15,unspecified,Unresolved: functional and mux-direction review required
-F2,DDR_DQ1_A,DDR_DQ1_A/DDR4_DQL2_A/LPDDR4_DQ1_A/DDR3_DQ1/LPDDR3_DQ14,unspecified,Unresolved: functional and mux-direction review required
-F1,DDR_DQ2_A,DDR_DQ2_A/DDR4_DQL4_A/LPDDR4_DQ2_A/DDR3_DQ2/LPDDR3_DQ10,unspecified,Unresolved: functional and mux-direction review required
-E1,DDR_DQ3_A,DDR_DQ3_A/DDR4_DQL6_A/LPDDR4_DQ3_A/DDR3_DQ3/LPDDR3_DQ9,unspecified,Unresolved: functional and mux-direction review required
-M2,DDR_DQ4_A,DDR_DQ4_A/DDR4_DQL7_A/LPDDR4_DQ4_A/DDR3_DQ4/LPDDR3_DQ13,unspecified,Unresolved: functional and mux-direction review required
-K1,DDR_DQ5_A,DDR_DQ5_A/DDR4_DQL5_A/LPDDR4_DQ5_A/DDR3_DQ5/LPDDR3_DQ12,unspecified,Unresolved: functional and mux-direction review required
-K2,DDR_DQ6_A,DDR_DQ6_A/DDR4_DQL3_A/LPDDR4_DQ6_A/DDR3_DQ6/LPDDR3_DQ8,unspecified,Unresolved: functional and mux-direction review required
-1E1,DDR_DQ7_A,DDR_DQ7_A/DDR4_DQL1_A/LPDDR4_DQ7_A/DDR3_DQ7/LPDDR3_DQ11,unspecified,Unresolved: functional and mux-direction review required
-1E2,DDR_DM0_A,DDR_DM0_A/DDR4_DML_A/LPDDR4_DM0_A/DDR3_DM0/LPDDR3_DM1,unspecified,Unresolved: functional and mux-direction review required
-H2,DDR_DQS0P_A,DDR_DQS0P_A/DDR4_DQSL_P_A/LPDDR4_DQS0P_A/DDR3_DQS0P/LPDDR3_DQS1P,unspecified,Unresolved: functional and mux-direction review required
-H1,DDR_DQS0N_A,DDR_DQS0N_A/DDR4_DQSL_N_A/LPDDR4_DQS0N_A/DDR3_DQS0N/LPDDR3_DQS1N,unspecified,Unresolved: functional and mux-direction review required
-P2,DDR_DQ8_A,DDR_DQ8_A/DDR4_DQU3_A/LPDDR4_DQ8_A/DDR3_DQ8/LPDDR3_DQ25,unspecified,Unresolved: functional and mux-direction review required
-R1,DDR_DQ9_A,DDR_DQ9_A/DDR4_DQU1_A/LPDDR4_DQ9_A/DDR3_DQ9/LPDDR3_DQ24,unspecified,Unresolved: functional and mux-direction review required
-R2,DDR_DQ10_A,DDR_DQ10_A/DDR4_DQU7_A/LPDDR4_DQ10_A/DDR3_DQ10/LPDDR3_DQ28,unspecified,Unresolved: functional and mux-direction review required
-T2,DDR_DQ11_A,DDR_DQ11_A/DDR4_DQU5_A/LPDDR4_DQ11_A/DDR3_DQ11/LPDDR3_DQ29,unspecified,Unresolved: functional and mux-direction review required
-M1,DDR_DQ12_A,DDR_DQ12_A/DDR4_DQU2_A/LPDDR4_DQ12_A/DDR3_DQ12/LPDDR3_DQ26,unspecified,Unresolved: functional and mux-direction review required
-1F2,DDR_DQ13_A,DDR_DQ13_A/DDR4_DQU4_A/LPDDR4_DQ13_A/DDR3_DQ13/LPDDR3_DQ31,unspecified,Unresolved: functional and mux-direction review required
-1F1,DDR_DQ14_A,DDR_DQ14_A/DDR4_DQU6_A/LPDDR4_DQ14_A/DDR3_DQ14/LPDDR3_DQ30,unspecified,Unresolved: functional and mux-direction review required
-1G2,DDR_DQ15_A,DDR_DQ15_A/DDR4_DQU0_A/LPDDR4_DQ15_A/DDR3_DQ15/LPDDR3_DQ27,unspecified,Unresolved: functional and mux-direction review required
-1G1,DDR_DM1_A,DDR_DM1_A/DDR4_DMU_A/LPDDR4_DM1_A/DDR3_DM1/LPDDR3_DM3,unspecified,Unresolved: functional and mux-direction review required
-N1,DDR_DQS1P_A,DDR_DQS1P_A/DDR4_DQSU_P_A/LPDDR4_DQS1P_A/DDR3_DQS1P/LPDDR3_DQS3P,unspecified,Unresolved: functional and mux-direction review required
-N2,DDR_DQS1N_A,DDR_DQS1N_A/DDR4_DQSU_N_A/LPDDR4_DQS1N_A/DDR3_DQS1N/LPDDR3_DQS3N,unspecified,Unresolved: functional and mux-direction review required
-B12,DDR_DQ0_B,DDR_DQ0_B/DDR4_DQU7_B/LPDDR4_DQ0_B/DDR3_DQ16/LPDDR3_DQ1,unspecified,Unresolved: functional and mux-direction review required
-B10,DDR_DQ1_B,DDR_DQ1_B/DDR4_DQU5_B/LPDDR4_DQ1_B/DDR3_DQ17/LPDDR3_DQ5,unspecified,Unresolved: functional and mux-direction review required
-1A8,DDR_DQ2_B,DDR_DQ2_B/DDR4_DQU3_B/LPDDR4_DQ2_B/DDR3_DQ18/LPDDR3_DQ6,unspecified,Unresolved: functional and mux-direction review required
-1A7,DDR_DQ3_B,DDR_DQ3_B/DDR4_DQU1_B/LPDDR4_DQ3_B/DDR3_DQ19/LPDDR3_DQ4,unspecified,Unresolved: functional and mux-direction review required
-B13,DDR_DQ4_B,DDR_DQ4_B/DDR4_DQU0_B/LPDDR4_DQ4_B/DDR3_DQ20/LPDDR3_DQ2,unspecified,Unresolved: functional and mux-direction review required
-1A10,DDR_DQ5_B,DDR_DQ5_B/DDR4_DQU6_B/LPDDR4_DQ5_B/DDR3_DQ21/LPDDR3_DQ3,unspecified,Unresolved: functional and mux-direction review required
-1B9,DDR_DQ6_B,DDR_DQ6_B/DDR4_DQU4_B/LPDDR4_DQ6_B/DDR3_DQ22/LPDDR3_DQ7,unspecified,Unresolved: functional and mux-direction review required
-1A9,DDR_DQ7_B,DDR_DQ7_B/DDR4_DQU2_B/LPDDR4_DQ7_B/DDR3_DQ23/LPDDR3_DQ0,unspecified,Unresolved: functional and mux-direction review required
-1B8,DDR_DM0_B,DDR_DM0_B/DDR4_DMU_B/LPDDR4_DM0_B/DDR3_DM2/LPDDR3_DM0,unspecified,Unresolved: functional and mux-direction review required
-A13,DDR_DQS0P_B,DDR_DQS0P_B/DDR4_DQSU_P_B/LPDDR4_DQS0P_B/DDR3_DQS2P/LPDDR3_DQS0P,unspecified,Unresolved: functional and mux-direction review required
-A12,DDR_DQS0N_B,DDR_DQS0N_B/DDR4_DQSU_N_B/LPDDR4_DQS0N_B/DDR3_DQS2N/LPDDR3_DQS0N,unspecified,Unresolved: functional and mux-direction review required
-B19,DDR_DQ8_B,DDR_DQ8_B/DDR4_DQL0_B/LPDDR4_DQ8_B/DDR3_DQ24/LPDDR3_DQ18,unspecified,Unresolved: functional and mux-direction review required
-A19,DDR_DQ9_B,DDR_DQ9_B/DDR4_DQL2_B/LPDDR4_DQ9_B/DDR3_DQ25/LPDDR3_DQ19,unspecified,Unresolved: functional and mux-direction review required
-A20,DDR_DQ10_B,DDR_DQ10_B/DDR4_DQL4_B/LPDDR4_DQ10_B/DDR3_DQ26/LPDDR3_DQ22,unspecified,Unresolved: functional and mux-direction review required
-B20,DDR_DQ11_B,DDR_DQ11_B/DDR4_DQL6_B/LPDDR4_DQ11_B/DDR3_DQ27/LPDDR3_DQ23,unspecified,Unresolved: functional and mux-direction review required
-A15,DDR_DQ12_B,DDR_DQ12_B/DDR4_DQL7_B/LPDDR4_DQ12_B/DDR3_DQ28/LPDDR3_DQ16,unspecified,Unresolved: functional and mux-direction review required
-B15,DDR_DQ13_B,DDR_DQ13_B/DDR4_DQL5_B/LPDDR4_DQ13_B/DDR3_DQ29/LPDDR3_DQ17,unspecified,Unresolved: functional and mux-direction review required
-1C10,DDR_DQ14_B,DDR_DQ14_B/DDR4_DQL1_B/LPDDR4_DQ14_B/DDR3_DQ30/LPDDR3_DQ20,unspecified,Unresolved: functional and mux-direction review required
-B16,DDR_DQ15_B,DDR_DQ15_B/DDR4_DQL3_B/LPDDR4_DQ15_B/DDR3_DQ31/LPDDR3_DQ21,unspecified,Unresolved: functional and mux-direction review required
-1A11,DDR_DM1_B,DDR_DM1_B/DDR4_DML_B/LPDDR4_DM1_B/DDR3_DM3/LPDDR3_DM2,unspecified,Unresolved: functional and mux-direction review required
-A17,DDR_DQS1P_B,DDR_DQS1P_B/DDR4_DQSL_P_B/LPDDR4_DQS1P_B/DDR3_DQS3P/LPDDR3_DQS2P,unspecified,Unresolved: functional and mux-direction review required
-B17,DDR_DQS1N_B,DDR_DQS1N_B/DDR4_DQSL_N_B/LPDDR4_DQS1N_B/DDR3_DQS3N/LPDDR3_DQS2N,unspecified,Unresolved: functional and mux-direction review required
-A7,AC0,DDR4_A0/LPDDR4_CLKP_B/DDR3_A9/-/AC0,unspecified,Unresolved: functional and mux-direction review required
-1D2,AC1,DDR4_A1/-/DDR3_A2/-/AC1,unspecified,Unresolved: functional and mux-direction review required
-C1,AC2,DDR4_A2/LPDDR4_A1_A/DDR3_A4/LPDDR3_A6/AC2,unspecified,Unresolved: functional and mux-direction review required
-1C3,AC3,DDR4_A3/LPDDR4_CKE1_A/DDR3_A3/-/AC3,unspecified,Unresolved: functional and mux-direction review required
-1B6,AC4,DDR4_A4/LPDDR4_A3_B/DDR3_BA1/LPDDR3_A3/AC4,unspecified,Unresolved: functional and mux-direction review required
-B8,AC5,DDR4_A5/LPDDR4_A5_B/DDR3_A11/LPDDR3_A2/AC5,unspecified,Unresolved: functional and mux-direction review required
-B9,AC6,DDR4_A6/LPDDR4_A1_B/DDR3_A13/LPDDR3_A1/AC6,unspecified,Unresolved: functional and mux-direction review required
-A10,AC7,DDR4_A7/LPDDR4_ODT0_CA_B/DDR3_A8/-/AC7,unspecified,Unresolved: functional and mux-direction review required
-E2,AC8,DDR4_A8/LPDDR4_ODT0_CA_A/DDR3_A6/LPDDR3_A9/AC8,unspecified,Unresolved: functional and mux-direction review required
-B7,AC9,DDR4_A9/LPDDR4_CLKN_B/DDR3_A5/-/AC9,unspecified,Unresolved: functional and mux-direction review required
-1A3,AC10,DDR4_A10/LPDDR4_CKE0_B/DDR3_A10/-/AC10,unspecified,Unresolved: functional and mux-direction review required
-C2,AC11,DDR4_A11/LPDDR4_A0_A/DDR3_A7/LPDDR3_A8/AC11,unspecified,Unresolved: functional and mux-direction review required
-1B3,AC12,DDR4_A12/LPDDR4_A3_A/DDR3_BA2/-/AC12,unspecified,Unresolved: functional and mux-direction review required
-A9,AC13,DDR4_A13/LPDDR4_A0_B/DDR3_A14/LPDDR3_A0/AC13,unspecified,Unresolved: functional and mux-direction review required
-1B1,AC14,DDR4_A14_WEn/LPDDR4_A4_A/DDR3_A15/LPDDR3_A5/AC14,unspecified,Unresolved: functional and mux-direction review required
-1C1,AC15,DDR4_A15_CASn/LPDDR4_A2_A/DDR3_A0/-/AC15,unspecified,Unresolved: functional and mux-direction review required
-1A1,AC16,DDR4_A16_RASn/LPDDR4_A5_A/DDR3_RASn/LPDDR3_A7/AC16,unspecified,Unresolved: functional and mux-direction review required
-1A2,AC17,DDR4_ACTn/LPDDR4_CKE1_B/DDR3_CASn/-/AC17,unspecified,Unresolved: functional and mux-direction review required
-1B7,AC18,DDR4_BA0/LPDDR4_A2_B/DDR3_A1/-/AC18,unspecified,Unresolved: functional and mux-direction review required
-1A6,AC19,DDR4_BA1/LPDDR4_A4_B/DDR3_A12/LPDDR3_A4/AC19,unspecified,Unresolved: functional and mux-direction review required
-1A4,AC20,DDR4_BG0/LPDDR4_ODT1_CA_B/DDR3_WEn/-/AC20,unspecified,Unresolved: functional and mux-direction review required
-1C2,AC21,DDR4_BG1/LPDDR4_ODT1_CA_A/DDR3_BA0/-/AC21,unspecified,Unresolved: functional and mux-direction review required
-B4,AC22,DDR4_CKE/LPDDR4_CKE0_A/DDR3_CKE/LPDDR3_CKE/AC22,unspecified,Unresolved: functional and mux-direction review required
-A5,AC23,DDR4_CLKP/LPDDR4_CLKP_A/DDR3_CLKP/LPDDR3_CLKP/AC23,unspecified,Unresolved: functional and mux-direction review required
-B5,AC24,DDR4_CLKN/LPDDR4_CLKN_A/DDR3_CLKN/LPDDR3_CLKN/AC24,unspecified,Unresolved: functional and mux-direction review required
-B3,AC25,DDR4_CS0n/LPDDR4_CS0n_A/DDR3_ODT1/LPDDR3_ODT0/AC25,unspecified,Unresolved: functional and mux-direction review required
-A3,AC26,DDR4_CS1n/LPDDR4_CS1n_A/DDR3_CS1n/LPDDR3_ODT1/AC26,unspecified,Unresolved: functional and mux-direction review required
-1A5,AC27,DDR4_ODT0/LPDDR4_CS1n_B/DDR3_ODT0/LPDDR3_CS1n/AC27,unspecified,Unresolved: functional and mux-direction review required
-1B5,AC28,DDR4_ODT1/LPDDR4_CS0n_B/DDR3_CS0n/LPDDR3_CS0n/AC28,unspecified,Unresolved: functional and mux-direction review required
-1C7,AC29,DDR4_RESETn/LPDDR4_RESETn/DDR3_RESETn/AC29,unspecified,Unresolved: functional and mux-direction review required
-1F3,DDR_RZQ,DDR_RZQ,unspecified,Unresolved: functional and mux-direction review required
-1H3,DDR_VREFOUT,DDR_VREFOUT,unspecified,Unresolved: functional and mux-direction review required
+G2,DDR_DQ0_A,DDR_DQ0_A/DDR4_DQL0_A/LPDDR4_DQ0_A/DDR3_DQ0/LPDDR3_DQ15,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+F2,DDR_DQ1_A,DDR_DQ1_A/DDR4_DQL2_A/LPDDR4_DQ1_A/DDR3_DQ1/LPDDR3_DQ14,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+F1,DDR_DQ2_A,DDR_DQ2_A/DDR4_DQL4_A/LPDDR4_DQ2_A/DDR3_DQ2/LPDDR3_DQ10,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+E1,DDR_DQ3_A,DDR_DQ3_A/DDR4_DQL6_A/LPDDR4_DQ3_A/DDR3_DQ3/LPDDR3_DQ9,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+M2,DDR_DQ4_A,DDR_DQ4_A/DDR4_DQL7_A/LPDDR4_DQ4_A/DDR3_DQ4/LPDDR3_DQ13,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+K1,DDR_DQ5_A,DDR_DQ5_A/DDR4_DQL5_A/LPDDR4_DQ5_A/DDR3_DQ5/LPDDR3_DQ12,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+K2,DDR_DQ6_A,DDR_DQ6_A/DDR4_DQL3_A/LPDDR4_DQ6_A/DDR3_DQ6/LPDDR3_DQ8,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1E1,DDR_DQ7_A,DDR_DQ7_A/DDR4_DQL1_A/LPDDR4_DQ7_A/DDR3_DQ7/LPDDR3_DQ11,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1E2,DDR_DM0_A,DDR_DM0_A/DDR4_DML_A/LPDDR4_DM0_A/DDR3_DM0/LPDDR3_DM1,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+H2,DDR_DQS0P_A,DDR_DQS0P_A/DDR4_DQSL_P_A/LPDDR4_DQS0P_A/DDR3_DQS0P/LPDDR3_DQS1P,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+H1,DDR_DQS0N_A,DDR_DQS0N_A/DDR4_DQSL_N_A/LPDDR4_DQS0N_A/DDR3_DQS0N/LPDDR3_DQS1N,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+P2,DDR_DQ8_A,DDR_DQ8_A/DDR4_DQU3_A/LPDDR4_DQ8_A/DDR3_DQ8/LPDDR3_DQ25,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+R1,DDR_DQ9_A,DDR_DQ9_A/DDR4_DQU1_A/LPDDR4_DQ9_A/DDR3_DQ9/LPDDR3_DQ24,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+R2,DDR_DQ10_A,DDR_DQ10_A/DDR4_DQU7_A/LPDDR4_DQ10_A/DDR3_DQ10/LPDDR3_DQ28,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+T2,DDR_DQ11_A,DDR_DQ11_A/DDR4_DQU5_A/LPDDR4_DQ11_A/DDR3_DQ11/LPDDR3_DQ29,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+M1,DDR_DQ12_A,DDR_DQ12_A/DDR4_DQU2_A/LPDDR4_DQ12_A/DDR3_DQ12/LPDDR3_DQ26,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1F2,DDR_DQ13_A,DDR_DQ13_A/DDR4_DQU4_A/LPDDR4_DQ13_A/DDR3_DQ13/LPDDR3_DQ31,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1F1,DDR_DQ14_A,DDR_DQ14_A/DDR4_DQU6_A/LPDDR4_DQ14_A/DDR3_DQ14/LPDDR3_DQ30,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1G2,DDR_DQ15_A,DDR_DQ15_A/DDR4_DQU0_A/LPDDR4_DQ15_A/DDR3_DQ15/LPDDR3_DQ27,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1G1,DDR_DM1_A,DDR_DM1_A/DDR4_DMU_A/LPDDR4_DM1_A/DDR3_DM1/LPDDR3_DM3,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+N1,DDR_DQS1P_A,DDR_DQS1P_A/DDR4_DQSU_P_A/LPDDR4_DQS1P_A/DDR3_DQS1P/LPDDR3_DQS3P,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+N2,DDR_DQS1N_A,DDR_DQS1N_A/DDR4_DQSU_N_A/LPDDR4_DQS1N_A/DDR3_DQS1N/LPDDR3_DQS3N,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B12,DDR_DQ0_B,DDR_DQ0_B/DDR4_DQU7_B/LPDDR4_DQ0_B/DDR3_DQ16/LPDDR3_DQ1,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B10,DDR_DQ1_B,DDR_DQ1_B/DDR4_DQU5_B/LPDDR4_DQ1_B/DDR3_DQ17/LPDDR3_DQ5,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A8,DDR_DQ2_B,DDR_DQ2_B/DDR4_DQU3_B/LPDDR4_DQ2_B/DDR3_DQ18/LPDDR3_DQ6,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A7,DDR_DQ3_B,DDR_DQ3_B/DDR4_DQU1_B/LPDDR4_DQ3_B/DDR3_DQ19/LPDDR3_DQ4,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B13,DDR_DQ4_B,DDR_DQ4_B/DDR4_DQU0_B/LPDDR4_DQ4_B/DDR3_DQ20/LPDDR3_DQ2,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A10,DDR_DQ5_B,DDR_DQ5_B/DDR4_DQU6_B/LPDDR4_DQ5_B/DDR3_DQ21/LPDDR3_DQ3,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1B9,DDR_DQ6_B,DDR_DQ6_B/DDR4_DQU4_B/LPDDR4_DQ6_B/DDR3_DQ22/LPDDR3_DQ7,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A9,DDR_DQ7_B,DDR_DQ7_B/DDR4_DQU2_B/LPDDR4_DQ7_B/DDR3_DQ23/LPDDR3_DQ0,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1B8,DDR_DM0_B,DDR_DM0_B/DDR4_DMU_B/LPDDR4_DM0_B/DDR3_DM2/LPDDR3_DM0,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A13,DDR_DQS0P_B,DDR_DQS0P_B/DDR4_DQSU_P_B/LPDDR4_DQS0P_B/DDR3_DQS2P/LPDDR3_DQS0P,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A12,DDR_DQS0N_B,DDR_DQS0N_B/DDR4_DQSU_N_B/LPDDR4_DQS0N_B/DDR3_DQS2N/LPDDR3_DQS0N,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B19,DDR_DQ8_B,DDR_DQ8_B/DDR4_DQL0_B/LPDDR4_DQ8_B/DDR3_DQ24/LPDDR3_DQ18,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A19,DDR_DQ9_B,DDR_DQ9_B/DDR4_DQL2_B/LPDDR4_DQ9_B/DDR3_DQ25/LPDDR3_DQ19,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A20,DDR_DQ10_B,DDR_DQ10_B/DDR4_DQL4_B/LPDDR4_DQ10_B/DDR3_DQ26/LPDDR3_DQ22,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B20,DDR_DQ11_B,DDR_DQ11_B/DDR4_DQL6_B/LPDDR4_DQ11_B/DDR3_DQ27/LPDDR3_DQ23,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A15,DDR_DQ12_B,DDR_DQ12_B/DDR4_DQL7_B/LPDDR4_DQ12_B/DDR3_DQ28/LPDDR3_DQ16,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B15,DDR_DQ13_B,DDR_DQ13_B/DDR4_DQL5_B/LPDDR4_DQ13_B/DDR3_DQ29/LPDDR3_DQ17,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1C10,DDR_DQ14_B,DDR_DQ14_B/DDR4_DQL1_B/LPDDR4_DQ14_B/DDR3_DQ30/LPDDR3_DQ20,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B16,DDR_DQ15_B,DDR_DQ15_B/DDR4_DQL3_B/LPDDR4_DQ15_B/DDR3_DQ31/LPDDR3_DQ21,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A11,DDR_DM1_B,DDR_DM1_B/DDR4_DML_B/LPDDR4_DM1_B/DDR3_DM3/LPDDR3_DM2,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A17,DDR_DQS1P_B,DDR_DQS1P_B/DDR4_DQSL_P_B/LPDDR4_DQS1P_B/DDR3_DQS3P/LPDDR3_DQS2P,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B17,DDR_DQS1N_B,DDR_DQS1N_B/DDR4_DQSL_N_B/LPDDR4_DQS1N_B/DDR3_DQS3N/LPDDR3_DQS2N,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A7,AC0,DDR4_A0/LPDDR4_CLKP_B/DDR3_A9/-/AC0,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1D2,AC1,DDR4_A1/-/DDR3_A2/-/AC1,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+C1,AC2,DDR4_A2/LPDDR4_A1_A/DDR3_A4/LPDDR3_A6/AC2,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1C3,AC3,DDR4_A3/LPDDR4_CKE1_A/DDR3_A3/-/AC3,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1B6,AC4,DDR4_A4/LPDDR4_A3_B/DDR3_BA1/LPDDR3_A3/AC4,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B8,AC5,DDR4_A5/LPDDR4_A5_B/DDR3_A11/LPDDR3_A2/AC5,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B9,AC6,DDR4_A6/LPDDR4_A1_B/DDR3_A13/LPDDR3_A1/AC6,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A10,AC7,DDR4_A7/LPDDR4_ODT0_CA_B/DDR3_A8/-/AC7,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+E2,AC8,DDR4_A8/LPDDR4_ODT0_CA_A/DDR3_A6/LPDDR3_A9/AC8,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B7,AC9,DDR4_A9/LPDDR4_CLKN_B/DDR3_A5/-/AC9,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A3,AC10,DDR4_A10/LPDDR4_CKE0_B/DDR3_A10/-/AC10,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+C2,AC11,DDR4_A11/LPDDR4_A0_A/DDR3_A7/LPDDR3_A8/AC11,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1B3,AC12,DDR4_A12/LPDDR4_A3_A/DDR3_BA2/-/AC12,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A9,AC13,DDR4_A13/LPDDR4_A0_B/DDR3_A14/LPDDR3_A0/AC13,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1B1,AC14,DDR4_A14_WEn/LPDDR4_A4_A/DDR3_A15/LPDDR3_A5/AC14,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1C1,AC15,DDR4_A15_CASn/LPDDR4_A2_A/DDR3_A0/-/AC15,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A1,AC16,DDR4_A16_RASn/LPDDR4_A5_A/DDR3_RASn/LPDDR3_A7/AC16,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A2,AC17,DDR4_ACTn/LPDDR4_CKE1_B/DDR3_CASn/-/AC17,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1B7,AC18,DDR4_BA0/LPDDR4_A2_B/DDR3_A1/-/AC18,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A6,AC19,DDR4_BA1/LPDDR4_A4_B/DDR3_A12/LPDDR3_A4/AC19,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A4,AC20,DDR4_BG0/LPDDR4_ODT1_CA_B/DDR3_WEn/-/AC20,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1C2,AC21,DDR4_BG1/LPDDR4_ODT1_CA_A/DDR3_BA0/-/AC21,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B4,AC22,DDR4_CKE/LPDDR4_CKE0_A/DDR3_CKE/LPDDR3_CKE/AC22,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A5,AC23,DDR4_CLKP/LPDDR4_CLKP_A/DDR3_CLKP/LPDDR3_CLKP/AC23,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B5,AC24,DDR4_CLKN/LPDDR4_CLKN_A/DDR3_CLKN/LPDDR3_CLKN/AC24,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+B3,AC25,DDR4_CS0n/LPDDR4_CS0n_A/DDR3_ODT1/LPDDR3_ODT0/AC25,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+A3,AC26,DDR4_CS1n/LPDDR4_CS1n_A/DDR3_CS1n/LPDDR3_ODT1/AC26,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A5,AC27,DDR4_ODT0/LPDDR4_CS1n_B/DDR3_ODT0/LPDDR3_CS1n/AC27,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1B5,AC28,DDR4_ODT1/LPDDR4_CS0n_B/DDR3_CS0n/LPDDR3_CS0n/AC28,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1C7,AC29,DDR4_RESETn/LPDDR4_RESETn/DDR3_RESETn/AC29,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1F3,DDR_RZQ,DDR_RZQ,passive,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1H3,DDR_VREFOUT,DDR_VREFOUT,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1D5,DDRPHY_VDDQ_1,DDRPHY_VDDQ_1,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1D6,DDRPHY_VDDQ_2,DDRPHY_VDDQ_2,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1D7,DDRPHY_VDDQ_3,DDRPHY_VDDQ_3,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
@@ -303,8 +303,8 @@ A3,AC26,DDR4_CS1n/LPDDR4_CS1n_A/DDR3_CS1n/LPDDR3_ODT1/AC26,unspecified,Unresolve
 1F5,DDRPHY_VDDQL_4,DDRPHY_VDDQL_4,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1G5,DDRPHY_VDDQL_5,DDRPHY_VDDQL_5,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1D4,DDR_AVSS,DDR_AVSS,power_in,"RK3566 Rev 1.2 Table 2-2 ground groups, pages 30-31"
-AD38,XOUT24M,XOUT24M,unspecified,Unresolved: functional and mux-direction review required
-AD37,XIN24M,XIN24M,unspecified,Unresolved: functional and mux-direction review required
+AD38,XOUT24M,XOUT24M,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AD37,XIN24M,XIN24M,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1M18,TVSS,TVSS,unspecified,Unresolved: functional and mux-direction review required
 1N19,GPIO0_D3_d,GPIO0_D3_d,bidirectional,RK3566 Rev 1.2 GPIO pad capabilities / mux table; not a reset-direction claim
 1M19,GPIO0_D4_d,GPIO0_D4_d,bidirectional,RK3566 Rev 1.2 GPIO pad capabilities / mux table; not a reset-direction claim
@@ -316,7 +316,7 @@ AD37,XIN24M,XIN24M,unspecified,Unresolved: functional and mux-direction review r
 1H5,SYSPLL_AVDD_0V9,SYSPLL_AVDD_0V9,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1H4,SYSPLL_AVDD_1V8,SYSPLL_AVDD_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1J5,SYSPLL_AVSS,SYSPLL_AVSS,power_in,"RK3566 Rev 1.2 Table 2-2 ground groups, pages 30-31"
-AG38,nPOR_u,nPOR_u,unspecified,Unresolved: functional and mux-direction review required
+AG38,nPOR_u,nPOR_u,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1P18,GPIO0_A0_d,REFCLK_OUT/GPIO0_A0_d,bidirectional,RK3566 Rev 1.2 GPIO pad capabilities / mux table; not a reset-direction claim
 1R20,GPIO0_A1_z,TSADC_SHUT_M0/TSADC_SHUT_ORG/GPIO0_A1_z,bidirectional,RK3566 Rev 1.2 GPIO pad capabilities / mux table; not a reset-direction claim
 1P19,GPIO0_A2_d,PMIC_SLEEP/TSADC_SHUT_M1/GPIO0_A2_d,bidirectional,RK3566 Rev 1.2 GPIO pad capabilities / mux table; not a reset-direction claim
@@ -467,100 +467,100 @@ AR12,GPIO4_C7_u,HDMITX_SCL/I2C5_SCL_M1/GPIO4_C7_u,bidirectional,RK3566 Rev 1.2 G
 AP11,GPIO4_D0_u,HDMITX_SDA/I2C5_SDA_M1/GPIO4_D0_u,bidirectional,RK3566 Rev 1.2 GPIO pad capabilities / mux table; not a reset-direction claim
 1V5,GPIO4_D1_u,HDMITX_CEC_M0/SPI3_CS1_M1/GPIO4_D1_u,bidirectional,RK3566 Rev 1.2 GPIO pad capabilities / mux table; not a reset-direction claim
 1N8,VCCIO7,VCCIO7,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
-1D17,SARADC_VIN0,SARADC_VIN0,unspecified,Unresolved: functional and mux-direction review required
-1C17,SARADC_VIN1,SARADC_VIN1,unspecified,Unresolved: functional and mux-direction review required
-1B18,SARADC_VIN2,SARADC_VIN2,unspecified,Unresolved: functional and mux-direction review required
-1A19,SARADC_VIN3,SARADC_VIN3,unspecified,Unresolved: functional and mux-direction review required
+1D17,SARADC_VIN0,SARADC_VIN0,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1C17,SARADC_VIN1,SARADC_VIN1,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1B18,SARADC_VIN2,SARADC_VIN2,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1A19,SARADC_VIN3,SARADC_VIN3,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1D16,SARADC_AVDD_1V8,SARADC_AVDD_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1D15,OTP_VCC18,OTP_VCC18,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
-AP18,MIPI_CSI_RX_D0P,MIPI_CSI_RX_D0P,unspecified,Unresolved: functional and mux-direction review required
-AR18,MIPI_CSI_RX_D0N,MIPI_CSI_RX_D0N,unspecified,Unresolved: functional and mux-direction review required
-AR17,MIPI_CSI_RX_D1P,MIPI_CSI_RX_D1P,unspecified,Unresolved: functional and mux-direction review required
-AP17,MIPI_CSI_RX_D1N,MIPI_CSI_RX_D1N,unspecified,Unresolved: functional and mux-direction review required
-AP15,MIPI_CSI_RX_D2P,MIPI_CSI_RX_D2P,unspecified,Unresolved: functional and mux-direction review required
-AR15,MIPI_CSI_RX_D2N,MIPI_CSI_RX_D2N,unspecified,Unresolved: functional and mux-direction review required
-AR14,MIPI_CSI_RX_D3P,MIPI_CSI_RX_D3P,unspecified,Unresolved: functional and mux-direction review required
-AP14,MIPI_CSI_RX_D3N,MIPI_CSI_RX_D3N,unspecified,Unresolved: functional and mux-direction review required
-1V9,MIPI_CSI_RX_CLK0P,MIPI_CSI_RX_CLK0P,unspecified,Unresolved: functional and mux-direction review required
-1U9,MIPI_CSI_RX_CLK0N,MIPI_CSI_RX_CLK0N,unspecified,Unresolved: functional and mux-direction review required
-1V8,MIPI_CSI_RX_CLK1P,MIPI_CSI_RX_CLK1P,unspecified,Unresolved: functional and mux-direction review required
-1U8,MIPI_CSI_RX_CLK1N,MIPI_CSI_RX_CLK1N,unspecified,Unresolved: functional and mux-direction review required
+AP18,MIPI_CSI_RX_D0P,MIPI_CSI_RX_D0P,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR18,MIPI_CSI_RX_D0N,MIPI_CSI_RX_D0N,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR17,MIPI_CSI_RX_D1P,MIPI_CSI_RX_D1P,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP17,MIPI_CSI_RX_D1N,MIPI_CSI_RX_D1N,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP15,MIPI_CSI_RX_D2P,MIPI_CSI_RX_D2P,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR15,MIPI_CSI_RX_D2N,MIPI_CSI_RX_D2N,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR14,MIPI_CSI_RX_D3P,MIPI_CSI_RX_D3P,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP14,MIPI_CSI_RX_D3N,MIPI_CSI_RX_D3N,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1V9,MIPI_CSI_RX_CLK0P,MIPI_CSI_RX_CLK0P,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1U9,MIPI_CSI_RX_CLK0N,MIPI_CSI_RX_CLK0N,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1V8,MIPI_CSI_RX_CLK1P,MIPI_CSI_RX_CLK1P,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1U8,MIPI_CSI_RX_CLK1N,MIPI_CSI_RX_CLK1N,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1N9,MIPI_CSI_RX_AVDD_0V9,MIPI_CSI_RX_AVDD_0V9,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1P9,MIPI_CSI_RX_AVDD_1V8,MIPI_CSI_RX_AVDD_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
-AP36,HDMI_TX_D2P,HDMI_TX_D2P,unspecified,Unresolved: functional and mux-direction review required
-AR36,HDMI_TX_D2N,HDMI_TX_D2N,unspecified,Unresolved: functional and mux-direction review required
-AR35,HDMI_TX_D1P,HDMI_TX_D1P,unspecified,Unresolved: functional and mux-direction review required
-AP35,HDMI_TX_D1N,HDMI_TX_D1N,unspecified,Unresolved: functional and mux-direction review required
-AP33,HDMI_TX_D0P,HDMI_TX_D0P,unspecified,Unresolved: functional and mux-direction review required
-AR33,HDMI_TX_D0N,HDMI_TX_D0N,unspecified,Unresolved: functional and mux-direction review required
-AR32,HDMI_TX_CLKP,HDMI_TX_CLKP,unspecified,Unresolved: functional and mux-direction review required
-AP32,HDMI_TX_CLKN,HDMI_TX_CLKN,unspecified,Unresolved: functional and mux-direction review required
-1V17,HDMI_TX_HPDIN,HDMI_TX_HPDIN,unspecified,Unresolved: functional and mux-direction review required
-1U16,HDMI_TX_REXT,HDMI_TX_REXT,unspecified,Unresolved: functional and mux-direction review required
+AP36,HDMI_TX_D2P,HDMI_TX_D2P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR36,HDMI_TX_D2N,HDMI_TX_D2N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR35,HDMI_TX_D1P,HDMI_TX_D1P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP35,HDMI_TX_D1N,HDMI_TX_D1N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP33,HDMI_TX_D0P,HDMI_TX_D0P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR33,HDMI_TX_D0N,HDMI_TX_D0N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR32,HDMI_TX_CLKP,HDMI_TX_CLKP,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP32,HDMI_TX_CLKN,HDMI_TX_CLKN,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1V17,HDMI_TX_HPDIN,HDMI_TX_HPDIN,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1U16,HDMI_TX_REXT,HDMI_TX_REXT,passive,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1N14,HDMI_TX_AVDD_0V9_1,HDMI_TX_AVDD_0V9_1,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1N13,HDMI_TX_AVDD_0V9_2,HDMI_TX_AVDD_0V9_2,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1P13,HDMI_TX_AVDD_1V8,HDMI_TX_AVDD_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
-AP30,MIPI_DSI_TX0_D0P/LVDS_TX0_D0P,MIPI_DSI_TX0_D0P/LVDS_TX0_D0P,unspecified,Unresolved: functional and mux-direction review required
-AR30,MIPI_DSI_TX0_D0N/LVDS_TX0_D0N,MIPI_DSI_TX0_D0N/LVDS_TX0_D0N,unspecified,Unresolved: functional and mux-direction review required
-AR29,MIPI_DSI_TX0_D1P/LVDS_TX0_D1P,MIPI_DSI_TX0_D1P/LVDS_TX0_D1P,unspecified,Unresolved: functional and mux-direction review required
-AP29,MIPI_DSI_TX0_D1N/LVDS_TX0_D1N,MIPI_DSI_TX0_D1N/LVDS_TX0_D1N,unspecified,Unresolved: functional and mux-direction review required
-AP27,MIPI_DSI_TX0_D2P/LVDS_TX0_D2P,MIPI_DSI_TX0_D2P/LVDS_TX0_D2P,unspecified,Unresolved: functional and mux-direction review required
-AR27,MIPI_DSI_TX0_D2N/LVDS_TX0_D2N,MIPI_DSI_TX0_D2N/LVDS_TX0_D2N,unspecified,Unresolved: functional and mux-direction review required
-AR26,MIPI_DSI_TX0_D3P/LVDS_TX0_D3P,MIPI_DSI_TX0_D3P/LVDS_TX0_D3P,unspecified,Unresolved: functional and mux-direction review required
-AP26,MIPI_DSI_TX0_D3N/LVDS_TX0_D3N,MIPI_DSI_TX0_D3N/LVDS_TX0_D3N,unspecified,Unresolved: functional and mux-direction review required
-1V16,MIPI_DSI_TX0_CLKP/LVDS_TX0_CLKP,MIPI_DSI_TX0_CLKP/LVDS_TX0_CLKP,unspecified,Unresolved: functional and mux-direction review required
-1V15,MIPI_DSI_TX0_CLKN/LVDS_TX0_CLKN,MIPI_DSI_TX0_CLKN/LVDS_TX0_CLKN,unspecified,Unresolved: functional and mux-direction review required
+AP30,MIPI_DSI_TX0_D0P/LVDS_TX0_D0P,MIPI_DSI_TX0_D0P/LVDS_TX0_D0P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR30,MIPI_DSI_TX0_D0N/LVDS_TX0_D0N,MIPI_DSI_TX0_D0N/LVDS_TX0_D0N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR29,MIPI_DSI_TX0_D1P/LVDS_TX0_D1P,MIPI_DSI_TX0_D1P/LVDS_TX0_D1P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP29,MIPI_DSI_TX0_D1N/LVDS_TX0_D1N,MIPI_DSI_TX0_D1N/LVDS_TX0_D1N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP27,MIPI_DSI_TX0_D2P/LVDS_TX0_D2P,MIPI_DSI_TX0_D2P/LVDS_TX0_D2P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR27,MIPI_DSI_TX0_D2N/LVDS_TX0_D2N,MIPI_DSI_TX0_D2N/LVDS_TX0_D2N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR26,MIPI_DSI_TX0_D3P/LVDS_TX0_D3P,MIPI_DSI_TX0_D3P/LVDS_TX0_D3P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP26,MIPI_DSI_TX0_D3N/LVDS_TX0_D3N,MIPI_DSI_TX0_D3N/LVDS_TX0_D3N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1V16,MIPI_DSI_TX0_CLKP/LVDS_TX0_CLKP,MIPI_DSI_TX0_CLKP/LVDS_TX0_CLKP,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1V15,MIPI_DSI_TX0_CLKN/LVDS_TX0_CLKN,MIPI_DSI_TX0_CLKN/LVDS_TX0_CLKN,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1P11,MIPI_DSI_TX0/LVDS_TX0_AVDD_0V9,MIPI_DSI_TX0/LVDS_TX0_AVDD_0V9,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1P12,MIPI_DSI_TX0/LVDS_TX0_AVDD_1V8,MIPI_DSI_TX0/LVDS_TX0_AVDD_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
-AP24,MIPI_DSI_TX1_D0P,MIPI_DSI_TX1_D0P,unspecified,Unresolved: functional and mux-direction review required
-AR24,MIPI_DSI_TX1_D0N,MIPI_DSI_TX1_D0N,unspecified,Unresolved: functional and mux-direction review required
-AR23,MIPI_DSI_TX1_D1P,MIPI_DSI_TX1_D1P,unspecified,Unresolved: functional and mux-direction review required
-AP23,MIPI_DSI_TX1_D1N,MIPI_DSI_TX1_D1N,unspecified,Unresolved: functional and mux-direction review required
-AP21,MIPI_DSI_TX1_D2P,MIPI_DSI_TX1_D2P,unspecified,Unresolved: functional and mux-direction review required
-AR21,MIPI_DSI_TX1_D2N,MIPI_DSI_TX1_D2N,unspecified,Unresolved: functional and mux-direction review required
-AR20,MIPI_DSI_TX1_D3P,MIPI_DSI_TX1_D3P,unspecified,Unresolved: functional and mux-direction review required
-AP20,MIPI_DSI_TX1_D3N,MIPI_DSI_TX1_D3N,unspecified,Unresolved: functional and mux-direction review required
-1V11,MIPI_DSI_TX1_CLKP,MIPI_DSI_TX1_CLKP,unspecified,Unresolved: functional and mux-direction review required
-1U11,MIPI_DSI_TX1_CLKN,MIPI_DSI_TX1_CLKN,unspecified,Unresolved: functional and mux-direction review required
+AP24,MIPI_DSI_TX1_D0P,MIPI_DSI_TX1_D0P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR24,MIPI_DSI_TX1_D0N,MIPI_DSI_TX1_D0N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR23,MIPI_DSI_TX1_D1P,MIPI_DSI_TX1_D1P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP23,MIPI_DSI_TX1_D1N,MIPI_DSI_TX1_D1N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP21,MIPI_DSI_TX1_D2P,MIPI_DSI_TX1_D2P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR21,MIPI_DSI_TX1_D2N,MIPI_DSI_TX1_D2N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AR20,MIPI_DSI_TX1_D3P,MIPI_DSI_TX1_D3P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AP20,MIPI_DSI_TX1_D3N,MIPI_DSI_TX1_D3N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1V11,MIPI_DSI_TX1_CLKP,MIPI_DSI_TX1_CLKP,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1U11,MIPI_DSI_TX1_CLKN,MIPI_DSI_TX1_CLKN,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1N10,MIPI_DSI_TX1_AVDD_0V9,MIPI_DSI_TX1_AVDD_0V9,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1R10,MIPI_DSI_TX1_AVDD_1V8,MIPI_DSI_TX1_AVDD_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
-J37,EDP_TX_D0P,EDP_TX_D0P,unspecified,Unresolved: functional and mux-direction review required
-J38,EDP_TX_D0N,EDP_TX_D0N,unspecified,Unresolved: functional and mux-direction review required
-K38,EDP_TX_D1P,EDP_TX_D1P,unspecified,Unresolved: functional and mux-direction review required
-K37,EDP_TX_D1N,EDP_TX_D1N,unspecified,Unresolved: functional and mux-direction review required
-M37,EDP_TX_D2P,EDP_TX_D2P,unspecified,Unresolved: functional and mux-direction review required
-M38,EDP_TX_D2N,EDP_TX_D2N,unspecified,Unresolved: functional and mux-direction review required
-N37,EDP_TX_D3P,EDP_TX_D3P,unspecified,Unresolved: functional and mux-direction review required
-N38,EDP_TX_D3N,EDP_TX_D3N,unspecified,Unresolved: functional and mux-direction review required
-1H19,EDP_TX_AUXP,EDP_TX_AUXP,unspecified,Unresolved: functional and mux-direction review required
-1H20,EDP_TX_AUXN,EDP_TX_AUXN,unspecified,Unresolved: functional and mux-direction review required
+J37,EDP_TX_D0P,EDP_TX_D0P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+J38,EDP_TX_D0N,EDP_TX_D0N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+K38,EDP_TX_D1P,EDP_TX_D1P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+K37,EDP_TX_D1N,EDP_TX_D1N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+M37,EDP_TX_D2P,EDP_TX_D2P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+M38,EDP_TX_D2N,EDP_TX_D2N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+N37,EDP_TX_D3P,EDP_TX_D3P,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+N38,EDP_TX_D3N,EDP_TX_D3N,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1H19,EDP_TX_AUXP,EDP_TX_AUXP,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1H20,EDP_TX_AUXN,EDP_TX_AUXN,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1H17,EDP_TX_AVDD_0V9,EDP_TX_AVDD_0V9,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1G17,EDP_TX_AVDD_1V8,EDP_TX_AVDD_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
-R37,USB_OTG0_DP,USB_OTG0_DP,unspecified,Unresolved: functional and mux-direction review required
-R38,USB_OTG0_DM,USB_OTG0_DM,unspecified,Unresolved: functional and mux-direction review required
-T38,USB_OTG0_VBUSDET,USB_OTG0_VBUSDET,unspecified,Unresolved: functional and mux-direction review required
-T37,USB_OTG0_ID,USB_OTG0_ID,unspecified,Unresolved: functional and mux-direction review required
-1J19,USB3_HOST1_DP,USB3_HOST1_DP,unspecified,Unresolved: functional and mux-direction review required
-1J20,USB3_HOST1_DM,USB3_HOST1_DM,unspecified,Unresolved: functional and mux-direction review required
+R37,USB_OTG0_DP,USB_OTG0_DP,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+R38,USB_OTG0_DM,USB_OTG0_DM,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+T38,USB_OTG0_VBUSDET,USB_OTG0_VBUSDET,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+T37,USB_OTG0_ID,USB_OTG0_ID,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1J19,USB3_HOST1_DP,USB3_HOST1_DP,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1J20,USB3_HOST1_DM,USB3_HOST1_DM,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1J17,USB_AVDD1_0V9,USB_AVDD1_0V9,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1H16,USB_AVDD1_1V8,USB_AVDD1_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1H18,USB_AVDD1_3V3,USB_AVDD1_3V3,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
-W37,USB3_HOST1_SSTXP/SATA1_TXP,USB3_HOST1_SSTXP/SATA1_TXP,unspecified,Unresolved: functional and mux-direction review required
-W38,USB3_HOST1_SSTXN/SATA1_TXN,USB3_HOST1_SSTXN/SATA1_TXN,unspecified,Unresolved: functional and mux-direction review required
-V38,USB3_HOST1_SSRXP/SATA1_RXP,USB3_HOST1_SSRXP/SATA1_RXP,unspecified,Unresolved: functional and mux-direction review required
-V37,USB3_HOST1_SSRXN/SATA1_RXN,USB3_HOST1_SSRXN/SATA1_RXN,unspecified,Unresolved: functional and mux-direction review required
-AA37,PCIE20_TXP/SATA2_TXP,PCIE20_TXP/SATA2_TXP,unspecified,Unresolved: functional and mux-direction review required
-AA38,PCIE20_TXN/SATA2_TXN,PCIE20_TXN/SATA2_TXN,unspecified,Unresolved: functional and mux-direction review required
-AB37,PCIE20_RXP/SATA2_RXP,PCIE20_RXP/SATA2_RXP,unspecified,Unresolved: functional and mux-direction review required
-AB38,PCIE20_RXN/SATA2_RXN,PCIE20_RXN/SATA2_RXN,unspecified,Unresolved: functional and mux-direction review required
-1K19,PCIE20_REFCLKP,PCIE20_REFCLKP,unspecified,Unresolved: functional and mux-direction review required
-1K20,PCIE20_REFCLKN,PCIE20_REFCLKN,unspecified,Unresolved: functional and mux-direction review required
+W37,USB3_HOST1_SSTXP/SATA1_TXP,USB3_HOST1_SSTXP/SATA1_TXP,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+W38,USB3_HOST1_SSTXN/SATA1_TXN,USB3_HOST1_SSTXN/SATA1_TXN,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+V38,USB3_HOST1_SSRXP/SATA1_RXP,USB3_HOST1_SSRXP/SATA1_RXP,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+V37,USB3_HOST1_SSRXN/SATA1_RXN,USB3_HOST1_SSRXN/SATA1_RXN,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AA37,PCIE20_TXP/SATA2_TXP,PCIE20_TXP/SATA2_TXP,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AA38,PCIE20_TXN/SATA2_TXN,PCIE20_TXN/SATA2_TXN,output,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AB37,PCIE20_RXP/SATA2_RXP,PCIE20_RXP/SATA2_RXP,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+AB38,PCIE20_RXN/SATA2_RXN,PCIE20_RXN/SATA2_RXN,input,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1K19,PCIE20_REFCLKP,PCIE20_REFCLKP,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+1K20,PCIE20_REFCLKN,PCIE20_REFCLKN,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1K16,MULTI_PHY_AVDD_0V9,MULTI_PHY_AVDD_0V9,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1K17,MULTI_PHY_AVDD_1V8,MULTI_PHY_AVDD_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
-V2,USB_HOST2_DP,USB_HOST2_DP,unspecified,Unresolved: functional and mux-direction review required
-V1,USB_HOST2_DM,USB_HOST2_DM,unspecified,Unresolved: functional and mux-direction review required
-Y2,USB_HOST3_DP,USB_HOST3_DP,unspecified,Unresolved: functional and mux-direction review required
-Y1,USB_HOST3_DM,USB_HOST3_DM,unspecified,Unresolved: functional and mux-direction review required
+V2,USB_HOST2_DP,USB_HOST2_DP,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+V1,USB_HOST2_DM,USB_HOST2_DM,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+Y2,USB_HOST3_DP,USB_HOST3_DP,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
+Y1,USB_HOST3_DM,USB_HOST3_DM,bidirectional,RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6
 1J4,USB_AVDD2_0V9,USB_AVDD2_0V9,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1J3,USB_AVDD2_1V8,USB_AVDD2_1V8,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"
 1J2,USB_AVDD2_3V3,USB_AVDD2_3V3,power_in,"RK3566 Rev 1.2 supply groups / recommended operating conditions, pages 31-32 and 53-54"

@@ -1058,3 +1058,22 @@ The PMU/GPIO unit was visually inspected; original pin-number/name spacing,
 clock glyphs, supply placement and in-body properties still need cleanup.
 This does not claim a complete symbol or switch processor capture to an
 unqualified model.
+
+## 2026-10-04 processor interface electrical roles
+
+The native derivative now types the DDR address/command outputs, bidirectional
+data/strobes, output data masks, USB2 data pairs, USB3/PCIe transmit and
+receive lanes, bidirectional PCIe reference clock and eDP AUX, video inputs
+and outputs, 24 MHz oscillator pins, reset input and SARADC inputs.
+Evidence: RK3566 Rev 1.2 Table 2-4, pages 42–51; DDR_RZQ/VREF analog roles
+also follow hardware-guide sections 2.1.9.5–6. DDR_RZQ and HDMI_REXT are
+passive resistor interfaces, not GPIO outputs. DDR_VREFOUT is an output.
+
+Totals: 267 power inputs, 194 bidirectional pins, 76 outputs, 25 inputs,
+2 passive pins and **one unspecified primary pin (TVSS)**. All 565 ball
+identifiers are retained. The 443 GPIO alternate directions remain unreviewed.
+Native KiCad exports all eight units; the high-speed interface unit was
+visually inspected. Long protocol alternatives and native graphical markers
+still need cleanup before active registration. No processor circuit is yet
+connected, and these counts do not close pin selection, rail mapping, unused
+PHY policy, memory training, footprint geometry or system qualification.

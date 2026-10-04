@@ -12,6 +12,34 @@ rows = []
 alternate_rows = []
 pattern = r'\(pin (\w+) (\w+).*?\(name "([^"]+)".*?\(number "([^"]+)"[^\n]*\n      \)'
 
+def interface_type(name):
+    function = name.split('/')[0]
+    if re.fullmatch(r'AC\d+', function):
+        return 'output'
+    if function.startswith(('DDR_DQ',)):
+        return 'bidirectional'
+    if function.startswith('DDR_DM'):
+        return 'output'
+    if function in {'DDR_RZQ', 'HDMI_TX_REXT'}:
+        return 'passive'
+    if function in {'DDR_VREFOUT', 'XOUT24M'}:
+        return 'output'
+    if function in {'XIN24M', 'nPOR_u', 'HDMI_TX_HPDIN', 'USB_OTG0_ID', 'USB_OTG0_VBUSDET'} or function.startswith('SARADC_VIN'):
+        return 'input'
+    if function.startswith('MIPI_CSI_RX_'):
+        return 'input'
+    if function.startswith(('MIPI_DSI_TX', 'HDMI_TX_D', 'HDMI_TX_CLK', 'EDP_TX_D')):
+        return 'output'
+    if function.startswith('EDP_TX_AUX') or function.startswith('PCIE20_REFCLK'):
+        return 'bidirectional'
+    if re.fullmatch(r'USB(?:3_HOST1|_HOST[23]|_OTG0)_D[PM]', function):
+        return 'bidirectional'
+    if function.startswith(('USB3_HOST1_SSTX', 'PCIE20_TX')):
+        return 'output'
+    if function.startswith(('USB3_HOST1_SSRX', 'PCIE20_RX')):
+        return 'input'
+    return 'unspecified'
+
 def transform(match):
     original_type, shape, native_name, ball = match.groups()
     name = manufacturer[ball]
@@ -31,9 +59,12 @@ def transform(match):
     elif primary.startswith('GPIO'):
         pin_type = 'bidirectional'
         evidence = 'RK3566 Rev 1.2 GPIO pad capabilities / mux table; not a reset-direction claim'
+    elif interface_type(primary) != 'unspecified':
+        pin_type = interface_type(primary)
+        evidence = 'RK3566 Rev 1.2 Table 2-4 interface directions; DDR analog roles additionally guide 2.1.9.5-6'
     rows.append({'ball': ball, 'primary_name': primary, 'manufacturer_name': name,
                  'electrical_type': pin_type, 'evidence': evidence})
-    desired_shape = 'line' if pin_type in {'power_in', 'bidirectional'} else shape
+    desired_shape = 'line' if pin_type != 'unspecified' else shape
     result = match.group(0).replace('(pin ' + original_type + ' ' + shape, '(pin ' + pin_type + ' ' + desired_shape, 1)
     result = result.replace('(name "' + native_name + '"', '(name "' + primary + '"', 1)
     if primary.startswith('GPIO'):
