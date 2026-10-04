@@ -102,3 +102,24 @@ VIN is on top, PG/SW on the right, EN/FB/OUT on the left and both returns
 on the bottom. Native SVG was inspected. check_mp2143_symbol.py verifies
 all eight names/types and official TSOT-23-8 pad-number parity. Package
 dimensions, KLC review and regulator circuit capture remain unfinished.
+
+## Inductor choice
+
+Prefer Coilcraft XGL4030-102MEC (1 uH +/-20%, C6336766) over
+XGL4020-102MEC for this 3 A regulator. Manufacturer data at 25 C:
+7.2 mOhm maximum DCR; 10/20/30% inductance drop at 4.8/7.6/10.3 A;
+RMS 10.8/13 A for 20/40 C rise. The catalog 10.3 A saturation number
+is the 30% drop point, not the near-nominal-inductance rating.
+
+Using 5.5 V input, 3.3958 V output, 0.9 MHz (-25% frequency),
+0.8 uH initial minimum and an additional 10% bias drop gives
+2.005 A ripple and 4.002 A peak at 3 A load. This is below
+the 4.8 A 10% drop point at 25 C and the regulator 4.2 A minimum
+current-limit figure, with little current-limit margin. XGL4020-102MEC
+reaches 10% drop at 3.8 A and does not support the same assumption.
+Hot saturation, fault current-limit upper bound, regulator thermals and
+actual rail load remain open. Manufacturer footprint dimensions and
+3.1 mm maximum height need checking before capture.
+
+Primary source: https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xgl/xgl4030/xgl4030-102/
+Catalog C6336766 had 380 indexed parts on 2026-10-03; not reserved stock.
