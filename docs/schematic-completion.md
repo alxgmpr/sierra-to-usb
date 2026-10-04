@@ -1023,3 +1023,21 @@ every comparison. All 565 electrical types are unspecified, so this model
 cannot yet support meaningful ERC. Mux alternates, electrical directions,
 functional grouping/visual review and package geometry need completion before
 registration and processor capture. No new processor circuitry added yet.
+
+## 2026-10-04 processor supply/ground electrical roles
+
+`hardware/tools/prepare_rk3566_electrical.py` produces an unregistered native
+model derivative and a per-ball evidence CSV. It types **80 supply and 187
+ground balls** as power inputs, based on RK3566 Rev 1.2 power/ground groups
+and recommended operating conditions. Thirteen DDRPHY supply names and two
+USB3_HOST1 names are corrected to the manufacturer names. Power-pin shapes
+are plain lines, avoiding native inversion glyphs on supply inputs.
+
+All 565 ball identifiers remain unique and intact. The other **298 balls**
+remain explicitly unspecified pending function/mux-direction review; TVSS
+is among them and is not blindly classified as an ordinary ground. The
+derivative is not registered for capture. Eight native units export through
+KiCad, and the core-supply unit was visually inspected. Native spacing and
+property placement still need cleanup and full multi-unit visual review.
+This role pass does not choose voltages for unused PHY domains or prove
+package geometry, processor sequencing or complete electrical fidelity.
