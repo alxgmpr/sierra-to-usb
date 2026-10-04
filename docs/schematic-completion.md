@@ -153,3 +153,28 @@ ST DS13560 Rev 6 specifies local 100 nF plus 4.7 uF supply decoupling;
 NRST Table 60 requires low <=0.3 x VDDIO1 and high >=0.7 x VDDIO1,
 with an internal 25-55 kR pull-up. Those limits must be used in the
 watchdog/diode reset margin audit, including startup rail conditions.
+
+## MCU reset low-margin audit
+
+Native nets place D201 anode on MCU_NRST_N and cathode on WDT_RESET_N.
+R201 pulls MCU_NRST_N to the same 3.3 V rail through 10 kR +/-1 percent;
+ST DS13560 Rev 6 Table 60 adds an internal 25-55 kR pull-up. At the
+MCU's 3.6 V supply maximum, total pull-up current is bounded by
+3.6 / 9900 + 3.6 / 25000 = 0.508 mA (assuming reset is at ground).
+This is below TI's 1.2 mA reset-output test load and Diodes' 1 mA VF point.
+
+TI TPS3823-33 maximum VOL is 0.4 V at VDD = VIT- - 0.2 V. BAT54WS
+maximum VF is 0.32 V at 1 mA and 25 C. Using those tabulated points
+and monotonic forward conduction gives a 0.72 V reset-low bound at 25 C.
+TI's minimum VIT- over -40 to +85 C is 2.86 V, so its lowest specified
+VOL test supply is 2.66 V. ST's VIL limit there is 0.3 x 2.66 = 0.798 V:
+78 mV margin at that test point, and 270 mV at nominal 3.3 V.
+
+This is a bounded 25 C calculation, not a guarantee over the appliance's
+temperature range or the entire supply ramp. The diode VF table is explicitly
+at 25 C; below the watchdog VOL test supply, a comparable 1.2 mA bound
+is not provided. TI's 0.9 V power-up reset point uses only 20 uA, while
+the external plus internal pull-ups can exceed that load. Startup reset
+behavior and cold-temperature VF therefore remain qualification gaps.
+A direct open-drain supervisor interface may remove the series-diode drop,
+but any replacement must preserve watchdog timing and manual-reset behavior.
