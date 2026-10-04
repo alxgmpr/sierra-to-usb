@@ -1548,3 +1548,25 @@ The new PMIC identity check also found existing unit-instance IDs colliding
 with pin IDs 1–4 because both used the same generator key. Unit IDs now
 use a separate namespace within the generator; pin IDs and electrical
 connections are preserved. The check must pass before this change is committed.
+
+## 2026-10-04 NPU processor-local bypass bank
+
+Rendered NanoPi R3S LTS 2411 sheet 5 (RK3566 Power/GND) and checked
+the actual values: 100nF, 22uF, 10uF, 22uF. Added C821
+(CL10B104KA8NNNC, 100nF / 25V, 0603), C822/C824
+(CL32B226KAJNNNE, 22uF / 25V, 1210) and C823
+(CL31B106KAHNNNE, 10uF / 25V, 1206) on VDD_NPU to ground.
+These retain the reference nominal values with previously selected exact
+parts. C821/C822 carry the reference's under-package placement intent;
+C823/C824 carry its nearby placement intent. Larger capacitor placement,
+fanout clearance, effective capacitance and PDN impedance remain unverified
+until layout and electrical review. The reference does not show three 10uF
+parts; visual inspection resolved the flattened-text ambiguity before capture.
+
+Native checks verify the five NPU balls, four capacitor supply and ground
+connections, MPNs, voltage fields and footprints. Both standalone and
+integrated checks pass for 156 appliance components. Processor UUIDs
+remain unique. The rendered processor sheet was reviewed with the new
+bank in clear space beneath the core-power unit. Full ERC remains 450
+violations. No NPU startup enable, software operation, transient or thermal
+qualification is claimed; BUCK4 still starts disabled.

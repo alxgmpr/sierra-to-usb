@@ -827,7 +827,7 @@
 (wire (pts (xy 492.76 35.56) (xy 492.76 45.72)) (stroke (width 0) (type default)) (uuid "9d6b018d-369c-5162-8778-00e87d21c47e"))
 (wire (pts (xy 492.76 50.8) (xy 492.76 58.42)) (stroke (width 0) (type default)) (uuid "368063fb-d894-5392-985c-7e0a0ee3dad8"))
 (label "NPU_FB" (at 492.76 58.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "411dc91c-d0e3-5f65-b8aa-69f3642cf251"))
-(text "NPU BUCK4: 1.5A; startup OFF. Program 0.9V before enable. Local load bypass pending." (at 360.68 22.86 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "05bc6eea-5a74-514c-bbb5-d637c8945d36"))
+(text "NPU BUCK4: 1.5A; startup OFF. Program 0.9V before enable. Local load bypass captured; qualification pending." (at 360.68 22.86 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "cc96d0e6-9ac6-52d9-80ba-38c505ddf816"))
 (wire (pts (xy 99.06 271.78) (xy 99.06 279.4)) (stroke (width 0) (type default)) (uuid "654bbc37-0f9f-52c0-8687-d002593ae8ae"))
 (wire (pts (xy 104.14 271.78) (xy 104.14 279.4)) (stroke (width 0) (type default)) (uuid "9004f4e3-4aad-5e75-896e-d56e2f9b81c4"))
 (wire (pts (xy 99.06 279.4) (xy 104.14 279.4)) (stroke (width 0) (type default)) (uuid "ac054c21-b346-581a-b1a1-b29ff4787c81"))

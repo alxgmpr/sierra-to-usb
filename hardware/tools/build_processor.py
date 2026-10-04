@@ -98,6 +98,26 @@ for bank,net,x,y in [(0,'VDDA0V9_PMU',50.8,152.4),(1,'VCCA1V8_PMU',50.8,213.36),
         wire((x,y+10.16),(x+30.48,y+10.16),net+str(bank)+'-bottom')
     label(net,x,y-10.16,net+str(bank)+'-label')
     label('GND',x,y+10.16,net+str(bank)+'-ground')
+# NPU local bypass: NanoPi R3S sheet 5 distinguishes under-package and nearby bulk.
+for ref,x,value,mpn,lcsc,footprint,placement in [
+ ('C821',50.8,'100nF','CL10B104KA8NNNC','C1590','Capacitor_SMD:C_0603_1608Metric','under processor package'),
+ ('C822',76.2,'22uF','CL32B226KAJNNNE','C309062','Capacitor_SMD:C_1210_3225Metric','under processor package; placement feasibility pending'),
+ ('C823',101.6,'10uF','CL31B106KAHNNNE','C14860','Capacitor_SMD:C_1206_3216Metric','close to processor package'),
+ ('C824',127,'22uF','CL32B226KAJNNNE','C309062','Capacitor_SMD:C_1210_3225Metric','close to processor package')]:
+ y=119.38
+ properties=prop('Reference',ref,x+8.89,y-1.27)+prop('Value',value,x+8.89,y+1.27)
+ for field_name,val in {'Footprint':footprint,'MPN':mpn,'Manufacturer':'Samsung Electro-Mechanics','LCSC':lcsc,'Voltage Rating':'25V','Qualification':'NPU local bypass '+placement+'; effective capacitance and impedance pending'}.items():
+  properties+=prop(field_name,val,x,y,True)
+ items.append(f'(symbol (lib_id "Device:C_Small") (at {x} {y} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(ref)}") {properties} '+''.join(f'(pin "{n}" (uuid "{uid(ref+":"+n)}"))' for n in ['1','2'])+f' (instances (project "processor" (path "/{uid("root")}" (reference "{ref}") (unit 1)))))')
+ wire((x,116.84),(x,109.22),ref+'-top')
+ wire((x,121.92),(x,129.54),ref+'-bottom')
+for x1,x2 in [(50.8,76.2),(76.2,101.6),(101.6,127)]:
+ wire((x1,109.22),(x2,109.22),'npu-top-'+str(x1))
+ wire((x1,129.54),(x2,129.54),'npu-bottom-'+str(x1))
+for x in [76.2,101.6]:
+ for y in [109.22,129.54]:items.append(f'(junction (at {x} {y}) (diameter 0) (color 0 0 0 0) (uuid "{uid("npu-junction-"+str(x)+":"+str(y))}"))')
+label('VDD_NPU',50.8,109.22,'npu-local-supply')
+label('GND',50.8,129.54,'npu-local-ground')
 # Defined normal-boot level and local SARADC VIN0 input filter.
 resistor = block(cap_source, cap_source.index('(symbol "R_Small_US"')).replace('(symbol "R_Small_US"','(symbol "Device:R_Small_US"',1)
 for name,ref,value,x,y,fp,fields in [

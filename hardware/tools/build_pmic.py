@@ -119,7 +119,7 @@ for ref,x,value,fp,fields in [('C541',430.78,'22uF / 25V','Capacitor_SMD:C_1210_
 wire((430.78,58.42),(461.26,58.42));power('GND',(430.78,58.42),'#PWR566')
 add('Device','R_Small_US','R512','100R',492.76,48.26,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100RL','Manufacturer':'Yageo','LCSC':'C105588','Tolerance':'1%','Power Rating':'0.1W','Qualification':'NPU remote sense series resistor; NanoPi R3S reference sheet 14'})
 wire((492.76,35.56),(492.76,45.72));wire((492.76,50.8),(492.76,58.42));label('NPU_FB',(492.76,58.42))
-note('NPU BUCK4: 1.5A; startup OFF. Program 0.9V before enable. Local load bypass pending.',(360.68,22.86))
+note('NPU BUCK4: 1.5A; startup OFF. Program 0.9V before enable. Local load bypass captured; qualification pending.',(360.68,22.86))
 # PMIC ground return and processor reset: pull up only to its fixed 3.3 V PMUIO1 domain.
 for n in ['47','69']:
  a=units[3][n];wire(a,(a[0],279.4))

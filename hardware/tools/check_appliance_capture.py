@@ -76,7 +76,7 @@ with tempfile.TemporaryDirectory() as tmp:
     recovery_base=next(v for v in nets.values() if ('Q802','1') in v)
     assert recovery_base=={('Q802','1'),('R804','2'),('R805','1')}
     assert {('Q802','2'),('R805','2')} <= nets['GND']
-    assert nets['VDD_NPU']=={('L504','2'),('C541','1'),('C542','1'),('R512','1')}|{('U801',b) for b in ['1G15','1H14','1H15','1J14','1J15']}
-    assert {('C541','2'),('C542','2')} <= nets['GND']
-    assert len(tree.findall('./components/comp'))==152
-print('PASS: appliance restart GPIO connection and 152-component capture; not full ERC.')
+    assert nets['VDD_NPU']=={('L504','2'),('C541','1'),('C542','1'),('R512','1')}|{(f'C{n}','1') for n in range(821,825)}|{('U801',b) for b in ['1G15','1H14','1H15','1J14','1J15']}
+    assert {('C541','2'),('C542','2')}|{(f'C{n}','2') for n in range(821,825)} <= nets['GND']
+    assert len(tree.findall('./components/comp'))==156
+print('PASS: appliance restart GPIO connection and 156-component capture; not full ERC.')
