@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate reviewed USB analog supply filter draft from standard symbols."""
+"""Generate DDR supply and processor calibration draft from standard symbols."""
 from pathlib import Path
 import re
 import uuid
@@ -47,5 +47,8 @@ wire((215.9,63.5),(215.9,76.2),'r-top');wire((215.9,81.28),(215.9,101.6),'r-mid'
 wire((215.9,106.68),(215.9,116.84),'r-ground');wire((139.7,116.84),(215.9,116.84),'ground-bank');label('GND',(139.7,116.84),0,'ground-label')
 add('C_Small','C903','10uF',63.5,142.24,0,'Capacitor_SMD:C_1206_3216Metric',{'MPN':'CL31B106KAHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C14860','Voltage Rating':'25V','Qualification':'Place at RK809 VCC3 pin 24'})
 wire((63.5,139.7),(63.5,129.54),'input');label('5V_MAIN',(63.5,129.54),0,'input-label');wire((63.5,144.78),(63.5,152.4),'input-ground');label('GND',(63.5,152.4),0,'input-ground-label')
+add('R_Small_US','R904','120R',190.5,152.4,90,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-07120RL','Manufacturer':'Yageo','LCSC':'C114640','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V','Qualification':'Processor RZQ pull-up for LPDDR4/LPDDR4X; NanoPi R3S sheet 6'})
+wire((160.02,152.4),(187.96,152.4),'soc-zq');label('DDR_SOC_RZQ',(160.02,152.4),0,'soc-zq-label')
+wire((193.04,152.4),(218.44,152.4),'soc-zq-supply');label('VDD_DDR_1V1',(218.44,152.4),180,'soc-zq-supply-label')
 items.append(f'(text "BUCK3: 1.5A rated, external FB reset mode, startup slot 3.\\nNominal 1.113V; ripple, load, thermal and shutdown qualification pending." (at 35.56 25.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
 (ROOT/'ddr-power.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A4") (title_block (title "DDR BUCK3 supply — DRAFT") (date "2026-10-04")) (lib_symbols '+symbol('L_Small')+symbol('C_Small')+symbol('R_Small_US')+') '+' '.join(items)+')')

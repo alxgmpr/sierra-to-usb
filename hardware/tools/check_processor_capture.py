@@ -20,7 +20,7 @@ ground = [n for n in nets if n.attrib['name'] == 'GND']
 assert len(ground) == 1
 actual = {(n.attrib['ref'],n.attrib['pin']) for n in ground[0].findall('node')}
 assert actual == {('U801',ball) for ball in expected}|{(f'C{n}','2') for n in list(range(801,813))+list(range(815,825))}|{('SW801','2'),('SW802','2'),('Q801','2'),('R803','2'),('Q802','2'),('R805','2')}
-for name, ball in {'PMIC_I2C_SCL':'AJ37','PMIC_I2C_SDA':'AK38','PMIC_SLEEP':'1P19','RK_RESET_N':'AG38','PMIC_INT_N':'1R19'}.items():
+for name, ball in {'PMIC_I2C_SCL':'AJ37','PMIC_I2C_SDA':'AK38','PMIC_SLEEP':'1P19','RK_RESET_N':'AG38','PMIC_INT_N':'1R19','DDR_SOC_RZQ':'1F3'}.items():
     matches = [n for n in nets if n.attrib['name'] == name]
     assert len(matches) == 1
     assert {(n.attrib['ref'],n.attrib['pin']) for n in matches[0].findall('node')} == ({('U801',ball),('SW802','1'),('Q801','3')} if name == 'RK_RESET_N' else {('U801',ball)})

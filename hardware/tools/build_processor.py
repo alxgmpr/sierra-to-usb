@@ -33,7 +33,7 @@ symbol = re.sub(r'("Footprint"\s+)"[^"]*"', r'\1""', symbol, count=1)
 (ROOT / 'ProcessorDraft.kicad_sym').write_text('(kicad_symbol_lib (version 20211014) (generator eeschema) ' + symbol.replace('(symbol "ProcessorDraft:RK3566"','(symbol "RK3566"',1) + ')\n')
 items = []
 ground_balls = set()
-control_nets = {'AJ37':'PMIC_I2C_SCL','AK38':'PMIC_I2C_SDA','1P19':'PMIC_SLEEP','AG38':'RK_RESET_N','1R19':'PMIC_INT_N','1D17':'SARADC_BOOT_KEY'}
+control_nets = {'AJ37':'PMIC_I2C_SCL','AK38':'PMIC_I2C_SDA','1P19':'PMIC_SLEEP','AG38':'RK_RESET_N','1R19':'PMIC_INT_N','1D17':'SARADC_BOOT_KEY','1F3':'DDR_SOC_RZQ'}
 ddr_map={r['processor_ball']:r['net'] for r in __import__('csv').DictReader((ROOT/'reference/ddr-bus-map.csv').open())}
 connected_controls = set()
 rail_balls = {}
@@ -55,6 +55,8 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
             bx = round(ax + (-12.7 if left else 12.7),4)
             items.append(f'(wire (pts (xy {ax} {ay}) (xy {bx} {ay})) (stroke (width 0) (type default)) (uuid "{uid("control-wire-"+number)}"))')
             items.append(f'(global_label "{control}" (shape passive) (at {bx} {ay} {0 if left else 180}) (effects (font (size 1.27 1.27)) (justify {"right" if left else "left"})) (uuid "{uid("control-label-"+number)}"))')
+        if number == '1H3':
+            items.append(f'(no_connect (at {round(x+float(px),4)} {round(y-float(py),4)}) (uuid "{uid("ddr-vrefout-nc")}"))')
         if not (re.fullmatch(r'(?:VSS|AVSS|AVSS1)_\d+', name) or name in {'DDR_AVSS','PMUPLL_AVSS','SYSPLL_AVSS'}):
             continue
         ground_balls.add(number)

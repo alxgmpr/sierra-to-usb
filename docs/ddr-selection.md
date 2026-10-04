@@ -354,3 +354,15 @@ Reference under-package placement remains intent: our larger packages,
 especially 1206 10uF, require escape/assembly feasibility review.
 Effective capacitance, PDN impedance and regulator stability remain
 unqualified. RAM-local bypass is still separate unfinished work.
+
+## Processor DDR calibration captured
+
+Added R904 120R ±1%, Yageo RC0603FR-07120RL / C114640,
+0603 0.1W 75V, from U801 DDR_RZQ ball 1F3 to VDD_DDR_1V1.
+This follows the explicit LP4/LP4X pull-up note on NanoPi R3S sheet 6.
+It is separate from Micron ZQ0's 240R resistor to VDD_DDR_0V6.
+DDR_VREFOUT ball 1H3 is explicitly no-connect, matching that reference.
+Native processor/integrated checks verify the exact calibration endpoints
+and supply membership; enlarged pin and supply renders reviewed.
+Capture now contains 187 components. Other unused DDR outputs, RAM-local
+bypass, the 0.6V source and electrical/boot qualification remain open.
