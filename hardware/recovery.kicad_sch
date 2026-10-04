@@ -74,5 +74,8 @@
   (text "Service UART / health / fault inputs:\n3.3V only. Add powered-off-safe translation\nwhen target voltage requires it.\nService UART must not back-power target.\n\nNo MCU modem-session interface is implemented." (at 271.78 210.82 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "153ad989-0ba9-59ac-8056-deca3134ed96"))
   (sheet_instances (path "/" (page "1")))
 
-(sheet (at 83.82 200.66) (size 93.98 25.4) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "f59113a4-3e20-583a-958d-73838cc73e76") (property "Sheetname" "Always-on supply" (at 83.82 198.12 0) (effects (font (size 1.27 1.27)))) (property "Sheetfile" "always-on.kicad_sch" (at 83.82 228.6 0) (effects (font (size 1.27 1.27)))) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351" (page "4")))))
+(sheet (at 83.82 200.66) (size 93.98 25.4) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "f59113a4-3e20-583a-958d-73838cc73e76") (property "Sheetname" "Always-on supply" (at 83.82 198.12 0) (effects (font (size 1.27 1.27)))) (property "Sheetfile" "always-on.kicad_sch" (at 83.82 228.6 0) (effects (font (size 1.27 1.27)))) (pin "AON_POWER_GOOD" output (at 177.8 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fc43f5b6-a7a0-5774-86a9-a595fb176315")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351" (page "4")))))
+
+(wire (pts (xy 177.8 210.82) (xy 185.42 210.82)) (stroke (width 0) (type default)) (uuid "47ffd650-7d0b-5327-8859-ef21f3563058"))
+(label "POWER_FAULT_N" (at 185.42 210.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "04fad7c8-edfb-5a50-89b6-540188c74886"))
 )

@@ -98,6 +98,7 @@ note('DRAFT: isolated 12V input; 3.3V / 0.5A output. No connection to raw PoE.\\
 note('TI SLVSB35C, Figure 8 / Tables 2-3. 10uH + 22uF nominal.\\nCapacitor DC bias, complete rail load and layout review remain open.\\nRoute VOS as Kelvin sense after L401; join AGND / PGND / exposed pad locally.',(40.64,160.02))
 items.insert(0,'(rectangle (start 35.56 40.64) (end 208.28 124.46) (stroke (width 0.254) (type default)) (fill (type none)) (uuid "'+uid('box')+'"))')
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A4") (title_block (title "Always-on supervisor supply") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
+text=text.replace('(label "AON_POWER_GOOD" (at 76.2 91.44 0)', '(hierarchical_label "AON_POWER_GOOD" (shape output) (at 76.2 91.44 0)')
 # Retain both standalone and integrated recovery annotation contexts.
 recovery_root='37b14702-5d54-5543-b96e-899c36eac351'
 recovery_sheet=str(uuid.uuid5(uuid.NAMESPACE_URL,'sierra-recovery-always-on-sheet'))

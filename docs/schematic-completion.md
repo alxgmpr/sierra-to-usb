@@ -67,8 +67,8 @@ python3 hardware/check.py --output /tmp/sierra-recovery-check
 python3 hardware/check_always_on.py --output /tmp/sierra-aon-check
 ```
 
-The always-on checker validates native ERC, exact membership of every circuit
-net and five-component inventory, then exports SVG/PDF and BOM. It does not
+The always-on checker validates native ERC of the recovery hierarchy,
+exact supply-component membership of every supply net and five-component inventory, then exports SVG/PDF and BOM. It does not
 verify DC bias, load margin, system integration or physical operation.
 `hardware/tools/build_always_on.py` reconstructs only the new always-on draft;
 it does not touch the preserved recovery sheets. Do not rerun it over manual
@@ -211,7 +211,15 @@ The always-on supply is now page 4 of `recovery.kicad_sch`. Native netlist
 proves L401 output, U401 sense/SLEEP, output capacitor and PG pull-up
 share +3V3 with the MCU and watchdog. Native ERC and supply/reset/control
 assertions pass for 31 fitted components. ISO_12V remains a named external
-input, not captured PoE; PG is still local and not connected to MCU fault
-sensing. J101 remains a rail test/header boundary: do not connect a second
+input, not captured PoE; PG now connects through the sheet interface to MCU POWER_FAULT_N
+and J102:9, with its 100 kR pull-up on the converter output. External
+fault sources on J102:9 must be open-drain and compatible with 3.3 V. J101 remains a rail test/header boundary: do not connect a second
 3.3 V source while the converter is active. This is recovery integration,
 not the full appliance hierarchy.
+
+Power-good integration checks require exactly U401:7, R401:2, U201:20
+and J102:9 on POWER_FAULT_N. A low signifies at least one fault; firmware
+must not infer which source asserted it. The separate supply checker now
+uses the native integrated root, because its output is a real hierarchical
+interface. It filters supply pins when checking shared power/ground nets;
+`hardware/check.py` verifies MCU/watchdog rail membership and fault loads.
