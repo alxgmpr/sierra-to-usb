@@ -896,3 +896,10 @@ See ddr-selection.md. The NanoPi reference symbol has no exact memory
 MPN. Micron Z42M 2 GB x32 candidate identified, but manufacturer full
 datasheet access and orderable suffix reconciliation remain open. No
 unsupported DDR ball map or voltage divider is captured.
+
+## Main 5 V stage sizing investigation
+
+TPS56637RPAR 5 V/6 A manufacturer reference archived. See
+main-5v-supply.md: a simultaneous downstream-rating scenario exceeds
+6 A, so the stage is not frozen before actual domain budgeting.
+No 5 V input power flags were added to conceal the missing source.

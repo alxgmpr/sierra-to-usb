@@ -1,0 +1,31 @@
+# Isolated 12 V to main 5 V stage — selection open
+
+TPS56637RPAR is a source-audited candidate (TI, RPA 10-pin 3 x 3 mm
+HotRod VQFN, C841386). It accepts 4.5–28 V and is rated 6 A. It must
+use the isolated 12 V intermediate, not raw PoE. Manufacturer datasheet
+Rev A is archived and hashed. Its Figure 17 is a 5 V/6 A reference.
+
+Table 4 recommends 3.3 uH and 20–100 uF **effective** output capacitance
+(30 uF typical) at 5 V, with 73.2 kOhm / 10 kOhm divider. Nominal
+output is 4.992 V. Optional feed-forward is 100–220 pF with 20 kOhm
+series resistance; do not assume it is mandatory. Output-bank sizing
+must include all downstream input caps and reflected startup loads.
+
+A simultaneous-rating scenario gives 35.412 W or 7.082 A at 5 V:
+CPU 1.025 V/6 A, logic and GPU each 0.9 V/2.5 A, buck5 1.8 V/2.5 A,
+main 3.3 V/3 A and illustrative DDR 1.1 V/1.5 A, each at assumed 85%
+efficiency; add 4 W for two 400 mA LDO inputs directly from 5 V.
+Main 3.3 V-fed LDO loads are included in its 3 A scenario, not added twice.
+This is not actual processor or memory demand, and 85% is not guaranteed.
+It shows 6 A cannot cover all stated downstream ratings concurrently.
+
+Do not freeze this regulator before domain load/peak/sequence budgeting.
+Evaluate an 8 A stage if the verified workload requires it; do not silently
+limit downstream scope to make a 6 A circuit pass. Modem supply routing
+and isolated PoE peak allocation remain separately unresolved. Main 5 V
+must stay within RK809/MP2143 5.5 V operating limits including transients.
+No upstream regulator symbol or circuit is yet captured.
+
+Source: https://www.ti.com/lit/ds/symlink/tps56637.pdf, sections 8.2/8.2.2.
+Catalog C841386 showed 5915 indexed parts on 2026-10-03, not reserved.
+Raw scenario: hardware/reference/main-5v-rating-scenario.json.
