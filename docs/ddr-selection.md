@@ -243,3 +243,27 @@ LPDDR4 topology changes require revisiting the termination policy. RAM
 VDD2/VDDQ, reset, ZQ and bus remain unfinished. Rendered the updated
 sheet and moved power-unit fields clear of the new VDD1 bank. Native
 integration checks pass; full ERC remains incomplete.
+
+## BUCK3 circuit resolved for capture
+
+RK809-5 Rev 2.4 Table 4-4 starts BUCK3 in slot 3, after BUCK5's
+1.8V slot 2. PMIC_POWER_CONFIG 0xB9 bit 6 resets to zero, selecting
+external feedback. Native pin identities are VCC3=24, SW3=25,
+VBUCK3=26 and FB3=27. Do not treat FB3 as a direct output sense pin
+or copy the 2.5A BUCK1/2 rating: BUCK3 is rated 1.5A.
+
+Rendered NanoPi R3S LTS sheet 14 and confirmed its LPDDR4/4X divider:
+47kR from output to FB3, 120kR from FB3 to ground, with 0.8V feedback.
+Nominal output is 1.11333V; independent ±1% resistor corners alone give
+1.10713–1.11966V. Both lie within Micron's VDD2 1.06–1.17V range,
+but PMIC feedback accuracy, drift, ripple and transient errors remain.
+The reference output bank is 22uF + 10uF and input bypass 10uF; its
+0.47uH inductor is rated above the buck's load current. Retain these
+nominal values using already reviewed capacitor/inductor parts.
+
+Exact divider candidates for capture: Yageo RC0603FR-0747KL / C105579
+and RC0603FR-07120KL / C114607, 0603 ±1%, 0.1W. Indexed catalog
+entries resolve the exact MPNs; current inventory is not reserved.
+Next capture uses VDD_DDR_1V1 for VBUCK3/output, separate DDR_FB for
+FB3, and the divider at the sense connection. The later 0.6V VDDQ rail
+must rise after VDD2; no complete rail-sequencing proof exists yet.
