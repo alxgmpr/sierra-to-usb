@@ -258,7 +258,9 @@ the earlier single-output-capacitor revision.
 
 ## PMIC reference identification
 
-NanoPi R3S LTS 2411 uses **RK809-5**, not an unspecified RK809 suffix.
+NanoPi R3S LTS 2411 power overview names **RK809-5**, but the actual
+U2100 multi-unit symbols name **RK809A-5**. This naming discrepancy
+must be resolved before freezing the orderable PMIC.
 Page 3 assigns BUCK1/2 to logic/GPU (0.9 V defaults, slots 1/2),
 BUCK3 to adjustable DDR (slot 3), BUCK5 to 1.8 V (slot 2), LDO2/3
 to 0.9 V analog/PMU (slot 1), LDO6/7/8 to 3.3 V PMU and 1.8 V
@@ -275,3 +277,21 @@ was moved above the control-header labels to remove an overlap. J101
 now reads RAIL TEST rather than EVAL SUPPLY; its back-power warning
 and root scope notes match the integrated supply. ERC/net assertions
 pass after these drawing corrections.
+
+## PMIC suffix evidence and sourcing
+
+Rockchip-authored RK809 Rev 2.4 is archived with hash provenance from
+its public mirror. Package ordering information lists RK809-5 and
+RK809-5A separately; top markings also distinguish them. Table 4-8
+for -5A gives the expected logic/GPU/DDR slots 1/2/3 and BUCK5 1.8 V
+slot 2. LDO3 follows LDO2 by about 200 us; short PWRON press is 100 ms.
+Do not assume the reference spelling RK809A-5 is an orderable alias for
+RK809-5A without supplier/manufacturer confirmation.
+
+PCBParts returns exact RK809-5 as C2939628, QFN-68-EP 7 x 7 mm,
+1,521 listed stock and indicative $2.458 price on 2026-10-03. That
+listing proves catalog availability of -5 only, not -5A equivalence or
+startup compatibility. Selection remains pending suffix resolution.
+The public distributor download initially returned HTML rather than PDF;
+it was rejected and removed. Only the verified %PDF manufacturer-authored
+Rev 2.4 file is recorded in the source manifest.
