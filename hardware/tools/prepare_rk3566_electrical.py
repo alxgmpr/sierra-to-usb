@@ -14,6 +14,8 @@ pattern = r'\(pin (\w+) (\w+).*?\(name "([^"]+)".*?\(number "([^"]+)"[^\n]*\n   
 
 def interface_type(name):
     function = name.split('/')[0]
+    if function.startswith(('DDR3_', 'DDR4_', 'LPDDR3_', 'LPDDR4_')):
+        return 'bidirectional' if '_DQ' in function else 'output'
     if re.fullmatch(r'AC\d+', function):
         return 'output'
     if function.startswith(('DDR_DQ',)):
@@ -28,7 +30,7 @@ def interface_type(name):
         return 'input'
     if function.startswith('MIPI_CSI_RX_'):
         return 'input'
-    if function.startswith(('MIPI_DSI_TX', 'HDMI_TX_D', 'HDMI_TX_CLK', 'EDP_TX_D')):
+    if function.startswith(('MIPI_DSI_TX', 'LVDS_TX', 'HDMI_TX_D', 'HDMI_TX_CLK', 'EDP_TX_D', 'SATA1_TX', 'SATA2_TX')):
         return 'output'
     if function.startswith('EDP_TX_AUX') or function.startswith('PCIE20_REFCLK'):
         return 'bidirectional'
@@ -36,7 +38,7 @@ def interface_type(name):
         return 'bidirectional'
     if function.startswith(('USB3_HOST1_SSTX', 'PCIE20_TX')):
         return 'output'
-    if function.startswith(('USB3_HOST1_SSRX', 'PCIE20_RX')):
+    if function.startswith(('USB3_HOST1_SSRX', 'PCIE20_RX', 'SATA1_RX', 'SATA2_RX')):
         return 'input'
     return 'unspecified'
 
@@ -48,6 +50,13 @@ def transform(match):
         primary = native_name.replace('DDR_', 'DDRPHY_', 1)
     elif native_name in {'USB_HOST1_DP', 'USB_HOST1_DM'}:
         primary = native_name.replace('USB_HOST1', 'USB3_HOST1')
+    functions = name.split('/')
+    shorthand = re.fullmatch(r'(MIPI_DSI_TX0)/(LVDS_TX0)(_AVDD_[01]V[89])', name)
+    if shorthand:
+        functions = [shorthand[1] + shorthand[3], shorthand[2] + shorthand[3]]
+        primary = functions[0]
+    elif '/' in primary:
+        primary = functions[0]
     pin_type = original_type
     evidence = 'Unresolved: functional and mux-direction review required'
     if re.fullmatch(r'(?:VSS|AVSS|AVSS1)_\d+', name) or name in {'DDR_AVSS', 'PMUPLL_AVSS', 'SYSPLL_AVSS'}:
@@ -67,16 +76,19 @@ def transform(match):
     desired_shape = 'line' if pin_type != 'unspecified' else shape
     result = match.group(0).replace('(pin ' + original_type + ' ' + shape, '(pin ' + pin_type + ' ' + desired_shape, 1)
     result = result.replace('(name "' + native_name + '"', '(name "' + primary + '"', 1)
-    if primary.startswith('GPIO'):
-        # GPIO mux entries are complete function names; power names can use slash shorthand.
-        alternates = list(dict.fromkeys(n for n in name.split('/') if n not in {primary, '-'}))
+    if len(functions) > 1:
+        alternates = list(dict.fromkeys(n for n in functions if n not in {primary, '-'}))
+        alternate_types = {}
         for alternate in alternates:
-            alternate_rows.append({'ball': ball, 'function': alternate, 'electrical_type': 'unspecified',
-                                   'evidence': 'Manufacturer mux identity verified; direction review pending'})
-        result = result[:-1] + ''.join(f'(alternate "{n}" unspecified line)' for n in alternates) + ')'
+            direction = 'power_in' if shorthand else interface_type(alternate)
+            alternate_types[alternate] = direction
+            alternate_rows.append({'ball': ball, 'function': alternate, 'electrical_type': direction,
+                                   'evidence': 'Direction review pending' if direction == 'unspecified' else 'Manufacturer interface role / shared supply alias'})
+        result = result[:-1] + ''.join(f'(alternate "{n}" {alternate_types[n]} line)' for n in alternates) + ')'
     return result
 
 review = re.sub(pattern, transform, source, flags=re.S)
+review = re.sub(r'\s*\(circle\s+\(center [^)]*\)\s+\(radius [^)]*\)\s+\(stroke .*?\(fill \(type none\)\)\s*\)', '', review, flags=re.S)
 assert len(rows) == 565 and len({r['ball'] for r in rows}) == 565
 assert {r['ball'] for r in rows} == set(manufacturer)
 (root / 'reference/rk3566-electrical-review.kicad_sym').write_text(review)
@@ -89,5 +101,5 @@ with (root / 'pinmaps/rk3566-mux-review.csv').open('w') as handle:
     writer.writeheader()
     writer.writerows(alternate_rows)
 print('Prepared unregistered native derivative:', dict(collections.Counter(r['electrical_type'] for r in rows)))
-print('GPIO alternate functions preserved:', len(alternate_rows))
+print('Alternate functions preserved:', len(alternate_rows))
 print('Remaining unspecified pins are explicit; this is not a qualified processor symbol.')

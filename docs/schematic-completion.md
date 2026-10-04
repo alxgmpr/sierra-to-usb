@@ -1077,3 +1077,24 @@ visually inspected. Long protocol alternatives and native graphical markers
 still need cleanup before active registration. No processor circuit is yet
 connected, and these counts do not close pin selection, rail mapping, unused
 PHY policy, memory training, footprint geometry or system qualification.
+
+## 2026-10-04 processor protocol alternate cleanup
+
+The native derivative now has 745 selectable alternates spanning GPIO, memory
+and protocol functions. Primary display names no longer contain slash lists.
+DDR and high-speed protocol alternate directions follow the already reviewed
+manufacturer interface roles; unresolved GPIO directions remain unspecified.
+Two MIPI_DSI_TX0/LVDS_TX0 supply-name shorthand entries are expanded into
+complete primary/alternate supply names, both power inputs. No minus-sign
+placeholder becomes an alternate function. All 565 balls remain unchanged.
+
+Eight imported graphical circles were removed: these were pin-one decoration
+at each unit's first row and visually resembled inversion bubbles despite not
+being electrical pin shapes. Native KiCad exports all eight cleaned units;
+the protocol unit was inspected. Functional regrouping, correct supply/ground
+placement, property positioning and pin-number spacing remain before capture.
+
+TVSS remains unresolved. Search located a newer manufacturer-authored Rev 1.5
+PDF mirror, but direct retrieval returned 404; no archive or revision-parity
+claim was made. The NanoPi reference connects TVSS, but that alone does not
+establish its exact electrical type. No guesses were added to suppress ERC.
