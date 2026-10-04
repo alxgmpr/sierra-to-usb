@@ -94,3 +94,11 @@ unspecified and therefore must be corrected before registration; proposed
 types are recorded in hardware/pinmaps/mp2143.csv. In particular, OUT is
 the sense input and SW is the power output. Native library registration,
 KLC/render review and footprint dimensions still remain.
+
+## Registered regulator symbol
+
+Recovery:MP2143DJ-LF-Z is now registered with eight explicitly typed pins.
+VIN is on top, PG/SW on the right, EN/FB/OUT on the left and both returns
+on the bottom. Native SVG was inspected. check_mp2143_symbol.py verifies
+all eight names/types and official TSOT-23-8 pad-number parity. Package
+dimensions, KLC review and regulator circuit capture remain unfinished.
