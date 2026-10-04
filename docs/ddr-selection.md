@@ -519,3 +519,17 @@ When source is actively discharged, its impedance changes decay.
 Leakage, capacitor bias/tolerance, source ramp/discharge and input
 persistence require qualification; nominal timing is not sequencing proof.
 Switching output and feedback circuit remain absent.
+
+## VDDQ feedback network captured
+
+Added R905 2kR RC0603FR-072KL/C105576 upper and R906 100kR
+RC0603FR-07100KL/C14675 lower, both 0603 +/-1%, 0.1W/75V.
+C959 100pF CL10C101JB8NNNC/C14858, 0603 C0G 50V +/-5%,
+bridges output to feedback in parallel with R905. This retains
+NanoPi sheet 7 values and the recorded 2kR recommendation exception.
+Native checks verify exact FB endpoint set U902.5/R905.2/R906.1/
+C959.2, both output endpoints and lower ground return, plus MPNs.
+Enlarged render reviewed; integrated capture has 245 components.
+No inductor/output bank has been added yet: VDD_DDR_0V6 remains
+unpowered. Loop, load, ripple, thermal and sequencing qualification
+still required; 0.612V is nominal, not a guaranteed complete rail.
