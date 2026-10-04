@@ -10,7 +10,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 |---|---|---|
 | Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 32-component supply-integrated capture; native connectivity verified; standalone recovery ERC now reports boundary labels for appliance-only signals | MCU pin audit closure; physical startup/reset behavior; target-domain interface integration |
 | Independent always-on supply | `hardware/always-on.kicad_sch`, 6 components, TPS62177DQCR, LPS4018-103MRC; integrated recovery hierarchy and PG fault net; typical capacitor bias reviewed | Guaranteed capacitor corners/aging and loop behavior; rail load; complete appliance hierarchy |
-| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 51-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
+| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 52-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
 | Main 5 V and 3.3 V supplies | Native 15-part TPS56837 main 5 V draft and 13-part MP2143 3.3 V draft; MCU enable/PG and shared ISO_12V captured | TPS56837 footprint approval, combined capacitor/compensation and startup/current/thermal budget closure; reviewed interface states |
 | External CPU supply | Missing; NanoPi reference uses I²C-controlled TCS4525 | Exact programmable regulator, boot voltage/OPP/driver compatibility, RK809 EXT_EN sequence, input/output bank and complete capture |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
@@ -19,7 +19,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 | Modem power | Requirements only | Voltage/current envelope per model, switch/eFuse/ramp/discharge, default-off controls and fault sensing |
 | EM9190 / EM9293 sockets and SIM | Older manufacturer PTS research; contacts 24/38/68 conflict with Quectel | Current controlled pin tables, complete per-model profile and power/control/SIM/USB3 capture |
 | RM520N-GL / RM551E-GL sockets and SIM | RM520 guide exists; current RM551 production guide still missing | Current controlled hardware guides and per-model pin/voltage/control/SIM/USB3 capture |
-| Full hierarchy and BOM | Draft appliance root exports 111 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
+| Full hierarchy and BOM | Draft appliance root exports 112 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
 | Visual and electrical review | Always-on draft rendered and corrected; recovery tests rerun | All sheets and circuit crops inspected, native ERC and complete critical-net assertions, manufacturer pin fidelity, footprint pad parity |
 
 No PCB file exists. Do not start placement until the integrated schematic and
@@ -28,10 +28,10 @@ power interruption and unattended recovery remain separate qualification work.
 
 ## Current verification snapshot — 2026-10-04
 
-Appliance capture checker exports the native XML and verifies 111 components,
+Appliance capture checker exports the native XML and verifies 112 components,
 recovery/main rail separation, PMIC restart, main 5 V enable/PG, bootstrap,
 soft start, input bypass and output-filter connectivity. It is not a full-appliance
-checker. The last full ERC run reported 46 violations: 32 unconnected pins,
+checker. The last full ERC run reported 45 violations: 31 unconnected pins,
 8 undriven signal pins and 6 undriven power pins. No exclusions added.
 The processor, RAM, storage, Ethernet, PoE and modem circuits are still absent.
 
@@ -944,3 +944,13 @@ Native exact-net checks pass for all new connections and the 111-component
 appliance capture. The affected circuitry was rendered and visually reviewed.
 Charge-pump wiring, digital audio unused-pin policy and full-system startup
 remain open.
+
+## 2026-10-04 PMIC switch-input supply capture
+
+VCC8 pin 57 now connects to VCC_1V8 (BUCK5), following RK809 Rev 2.4
+Figure 1-2, with C538 1 uF / 25 V Samsung CL10B105KA8NNNC bypass.
+SWOUT2 remains unused and unconnected; any future use would pass through
+1.8 V, not regulate an independent rail. Native checks verify exact membership
+of the expanded VCC_1V8 net and ground return. The affected supply circuitry
+was rendered and inspected. The PMIC draft has 52 components and the appliance
+112. Full ERC reports 45 violations without exclusions.
