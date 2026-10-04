@@ -155,3 +155,21 @@ EN leakage/tolerance guarantee and startup ramp still need closure.
 This does not define upstream 5 V generation or supervisor cold-cycle control.
 Native appliance assertions verify U601:8/R603:2/R604:1 only, top
 resistor on 5V_MAIN, and 88 total components. PG translation remains open.
+
+## Captured power-good translation
+
+U602 SN74LVC1G17DBVR (TI C7836, SOT-23-5) now buffers the MP2143
+PG signal. VCC and C604 100 nF use independent recovery +3V3, while
+input A tolerates up to 5.5 V per TI datasheet Rev Y. Pin mapping matches
+the official 74xGxx:74LVC1G17 symbol: 1 NC, 2 A, 3 GND, 4 Y, 5 VCC.
+R605 10 kOhm to 5V_MAIN strengthens the MP2143 internal 500 kOhm
+pull-up; R606 100 kOhm to ground prevents an undriven high when main
+5 V is absent. With only the internal pull-up, the buffer worst-case
+5 uA input leakage could consume 2.5 V of high-level margin.
+
+MAIN3V3_GOOD is currently a local output boundary, not yet assigned
+to the supervisor. Native appliance assertions check exact PG net
+membership and U602/C604 recovery-supply connections; 92 components.
+Full voltage/threshold corners, visual review, NC/footprint checks and
+MCU input integration remain required before this interface is closed.
+TI primary datasheet archived with SHA-256 in sources.json.

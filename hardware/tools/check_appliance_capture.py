@@ -18,5 +18,8 @@ with tempfile.TemporaryDirectory() as tmp:
     en=next(p for name,p in nets.items() if name.endswith('/MAIN3V3_EN'))
     assert en=={('U601','8'),('R603','2'),('R604','1')},en
     assert ('R603','1') in nets['5V_MAIN']
-    assert len(tree.findall('./components/comp'))==88
-print('PASS: appliance restart GPIO connection and 88-component capture; not full ERC.')
+    pg=next(p for name,p in nets.items() if name.endswith('/MAIN3V3_PG_5V'))
+    assert pg=={('U601','1'),('U602','2'),('R605','2'),('R606','1')},pg
+    assert ('U602','5') in recovery and ('C604','1') in recovery
+    assert len(tree.findall('./components/comp'))==92
+print('PASS: appliance restart GPIO connection and 92-component capture; not full ERC.')

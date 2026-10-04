@@ -96,6 +96,18 @@ for ref,value,mpn,lcsc,y in [('R603','20kR','RC0603FR-0720KL','C105575',127),('R
 wire((210.82,124.46),(210.82,116.84));label('5V_MAIN',(210.82,116.84))
 wire((210.82,129.54),(210.82,139.7));label('MAIN3V3_EN',(210.82,134.62))
 wire((210.82,144.78),(210.82,152.4));power('GND',(210.82,152.4),'#PWR611')
+# 5 V tolerant Schmitt input, powered by the independent recovery supply.
+add('74xGxx','74LVC1G17','U602','SN74LVC1G17DBVR',210.82,45.72,fp='Package_TO_SOT_SMD:SOT-23-5',fields={'MPN':'SN74LVC1G17DBVR','Manufacturer':'Texas Instruments','LCSC':'C7836'})
+wire((198.12,45.72),(185.42,45.72));label('MAIN3V3_PG_5V',(185.42,45.72));items[-1]=items[-1].replace('justify left bottom','justify right bottom')
+wire((220.98,45.72),(233.68,45.72));label('MAIN3V3_GOOD',(233.68,45.72))
+power('+3V3',(205.74,35.56),'#PWR612');power('GND',(205.74,55.88),'#PWR613')
+add('Device','C_Small','C604','100nF / 25V',254,66.04,fp='Capacitor_SMD:C_0603_1608Metric',fields={'MPN':'CL10B104KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C1590'})
+power('+3V3',(254,63.5),'#PWR614');power('GND',(254,68.58),'#PWR615')
+for ref,value,mpn,lcsc,y in [('R605','10kR','RC0603FR-0710KL','C98220',127),('R606','100kR','RC0603FR-07100KL','C14675',142.24)]:
+ add('Device','R_Small_US',ref,value,254,y,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':mpn,'Manufacturer':'Yageo','LCSC':lcsc,'Tolerance':'1%'})
+wire((254,124.46),(254,116.84));label('5V_MAIN',(254,116.84))
+wire((254,129.54),(254,139.7));label('MAIN3V3_PG_5V',(254,134.62))
+wire((254,144.78),(254,152.4));power('GND',(254,152.4),'#PWR616')
 note('DRAFT: Upstream 5V sequencing, PG translation, capacitance and thermal margins unfinished.',(35.56,172.72))
 (ROOT/'main3v3.kicad_sch').write_text('(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A4") (lib_symbols '+''.join(used.values())+') '+''.join(items)+')\n')
 print('Generated main 3.3V draft')
