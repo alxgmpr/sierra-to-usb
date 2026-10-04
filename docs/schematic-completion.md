@@ -1004,3 +1004,22 @@ Native captured-net checks pass for 56 PMIC / 116 appliance components.
 Rendered views were corrected for reset-label and title-block overlap.
 Full ERC reports 25 violations without exclusions; this closes only the
 captured unused audio circuitry, not the still-missing appliance blocks.
+
+## 2026-10-04 native RK3566 model audit
+
+C2943786 has an eight-unit native EasyEDA model. easyeda2kicad v1.0.1
+converted it to the unregistered reference candidate
+`hardware/reference/rk3566-native-candidate.kicad_sym`; the accompanying
+footprint is also archived as a candidate, with hashes in sources.json.
+This provides an existing native model to adapt and audit rather than
+generating a new symbol from the pending PDF-derived table.
+
+`python3 hardware/tools/check_rk3566_native.py` verifies all 565 unique
+ball identifiers exactly match the manufacturer extraction. Names comprise
+339 exact matches, 211 single manufacturer mux-function names and 15 other
+differences. Thirteen differences shorten DDRPHY supply names to DDR; two
+shorten USB3_HOST1_DP/DM to USB_HOST1_DP/DM. The saved audit CSV preserves
+every comparison. All 565 electrical types are unspecified, so this model
+cannot yet support meaningful ERC. Mux alternates, electrical directions,
+functional grouping/visual review and package geometry need completion before
+registration and processor capture. No new processor circuitry added yet.

@@ -258,5 +258,19 @@
     "url": "https://www.swissbit.com/files/public/data-symlink/EM-30/Swissbit_Host_Chipset_eMMC_Compatibility_EM-30_Series.pdf",
     "sha256": "87bfff3284b4626d38a495ff28ec4333a0968b5dc0315d8a65006c5ee70cc387",
     "retrieved": "2026-10-04"
+  },
+  {
+    "file": "rk3566-native-candidate.kicad_sym",
+    "url": "https://www.lcsc.com/product-detail/microcontrollers-mcu-mpu-soc_rockchip-rk3566_C2943786.html",
+    "sha256": "1d2265dca84c41e0015406b34ccbf505c8313192312b002b6b5fab487a3746cc",
+    "retrieved": "2026-10-04",
+    "note": "easyeda2kicad v1.0.1 native C2943786 conversion; unregistered audit candidate, not qualified model"
+  },
+  {
+    "file": "rk3566-native-candidate.kicad_mod",
+    "url": "https://www.lcsc.com/product-detail/microcontrollers-mcu-mpu-soc_rockchip-rk3566_C2943786.html",
+    "sha256": "dcb67e54eedf4d674847ce004364b8c64ec88ffe1ddd6c2e9f7d653d32324af9",
+    "retrieved": "2026-10-04",
+    "note": "easyeda2kicad v1.0.1 native C2943786 conversion; unregistered audit candidate, not qualified model"
   }
 ]
