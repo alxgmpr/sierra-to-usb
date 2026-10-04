@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check captured PMIC rail and reset connectivity only; other PMIC circuitry is unfinished."""
 from pathlib import Path
-import subprocess, tempfile, xml.etree.ElementTree as E
+import subprocess, tempfile, re, xml.etree.ElementTree as E
 root=Path(__file__).resolve().parents[1]
 with tempfile.TemporaryDirectory() as tmp:
  net=Path(tmp)/'pmic.xml'
@@ -16,6 +16,9 @@ with tempfile.TemporaryDirectory() as tmp:
  'VDD_GPU':{('U501','8'),('L502','2'),('C505','1'),('C506','1'),('C507','1')},
  '/PMIC_SW5':{('U501','53'),('L505','1')},
  '/VCC_1V8':{('U501','59'),('L505','2'),('C509','1'),('C510','1'),('C511','1')},
+ '/PMIC_SW4':{('U501','65'),('L504','1')},
+ '/NPU_FB':{('U501','64'),('R512','2')},
+ 'VDD_NPU':{('L504','2'),('C541','1'),('C542','1'),('R512','1')},
  'RK_RESET_N':{('U501','67'),('R501','2'),('C513','1')},
  'VCC3V3_PMU':{('R501','1'),('U501','31'),('C517','1'),('C518','1'),('R502','1'),('R503','1'),('R504','1')},
  'Net-(U501C-VREF)':{('U501','46'),('C515','1')},
@@ -41,11 +44,13 @@ with tempfile.TemporaryDirectory() as tmp:
  '/PMIC_INTERNAL_CPVSS':{('U501','35'),('C540','1')},
  '/UNUSED_CODEC_LRCLK':{('U501','14'),('R510','1')},
  '/UNUSED_CODEC_BCLK':{('U501','15'),('R511','1')},
- 'GND':{(f'C{n}','2') for n in range(501,539)}|{('C540','2'),('U501','16'),('U501','17'),('R510','2'),('R511','2')}|{('U501','47'),('U501','69'),('U501','62'),('U501','63'),('U501','40'),('R505','2'),('R507','2'),('Q501','2'),('R509','2')},
+ 'GND':{(f'C{n}','2') for n in range(501,539)}|{('C540','2'),('C541','2'),('C542','2'),('U501','16'),('U501','17'),('R510','2'),('R511','2')}|{('U501','47'),('U501','69'),('U501','62'),('U501','63'),('U501','40'),('R505','2'),('R507','2'),('Q501','2'),('R509','2')},
  }
  for name,pins in expected.items():assert nets[name]==pins,(name,nets[name],pins)
- comps=tree.findall('.//components/comp');assert len(comps)==56
+ ids=re.findall(r'\(uuid "([^\"]+)"\)',(root/'pmic.kicad_sch').read_text())
+ assert len(ids)==len(set(ids)), 'Duplicate PMIC schematic identity'
+ comps=tree.findall('.//components/comp');assert len(comps)==60
  for c in comps:
   fields={f.attrib['name']:f.text for f in c.findall('fields/field')}
   assert fields.get('MPN'),c.attrib['ref']
- print('PASS: PMIC captured rails: exact thirty-three-net membership and 56 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
+ print('PASS: PMIC captured rails: exact thirty-six-net membership and 60 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')

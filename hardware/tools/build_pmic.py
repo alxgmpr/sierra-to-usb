@@ -60,7 +60,7 @@ def wire(a,b):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
 def label(name,p):
- if name in {'PMIC_I2C_SCL','PMIC_I2C_SDA','PMIC_SLEEP','VDD_LOGIC','VDD_GPU','VCC3V3_PMU','RK_RESET_N','VDDA0V9_PMU','VCCA1V8_PMU','VDDA_0V9','VCCA_1V8','PMIC_INT_N'}:
+ if name in {'PMIC_I2C_SCL','PMIC_I2C_SDA','PMIC_SLEEP','VDD_LOGIC','VDD_GPU','VDD_NPU','VCC3V3_PMU','RK_RESET_N','VDDA0V9_PMU','VCCA1V8_PMU','VDDA_0V9','VCCA_1V8','PMIC_INT_N'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid("global"+name+str(p))}"))');return
  if name in {'5V_MAIN','3V3_MAIN','GND'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("global"+name+str(p))}"))');return
@@ -81,12 +81,12 @@ for unit,x,y in [(1,101.6,81.28),(2,101.6,165.1),(3,101.6,248.92),(4,238.76,248.
  pins={n:(round(x+float(px),4),round(y-float(py),4)) for px,py,n in re.findall(r'\(pin .*?\(at ([\d.\-]+) ([\d.\-]+) [\d.\-]+\).*?\(number "([^"]+)"',u,re.S)}
  units[unit]=pins
  fields=prop('Reference','U501',x-25.4,y-30.48)+prop('Value','RK809-5',x-25.4,y-27.94)+prop('Footprint',fp,x,y,True)+prop('MPN','RK809-5',x,y,True)+prop('Manufacturer','Rockchip',x,y,True)+prop('LCSC','C2939628',x,y,True)
- items.append(f'(symbol (lib_id "Recovery:RK809-5") (at {x} {y} 0) (unit {unit}) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid("U501:"+str(unit))}") '+fields+' '+''.join(f'(pin "{n}" (uuid "{uid("U501:"+n)}"))' for n in pins)+f' (instances (project "pmic" (path "/{uid("root")}" (reference "U501") (unit {unit})))))')
+ items.append(f'(symbol (lib_id "Recovery:RK809-5") (at {x} {y} 0) (unit {unit}) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid("U501:unit:"+str(unit))}") '+fields+' '+''.join(f'(pin "{n}" (uuid "{uid("U501:"+n)}"))' for n in pins)+f' (instances (project "pmic" (path "/{uid("root")}" (reference "U501") (unit {unit})))))')
 def terminal(n,net,direction):
  a=units[1][str(n)];b=(round(a[0]+direction*7.62,4),a[1]);wire(a,b);label(net,b)
  # Left-side label text must extend away from the body.
  if direction<0:items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
-for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1',1),(8,'VDD_GPU',-1),(13,'VDD_LOGIC',-1),(53,'PMIC_SW5',1),(59,'VCC_1V8',-1)]:
+for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1',1),(8,'VDD_GPU',-1),(13,'VDD_LOGIC',-1),(53,'PMIC_SW5',1),(59,'VCC_1V8',-1),(65,'PMIC_SW4',1),(64,'NPU_FB',-1)]:
  if d:terminal(n,net,d)
  else:
   a=units[1][str(n)];b=(a[0],40.64);wire(a,b)
@@ -106,11 +106,20 @@ for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC',501),(2,129.54,
  add('Device','C_Small',f'C{cref+3}','22uF / 25V',185.42,y+12.7,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
  wire((185.42,y+10.16),(185.42,y));label('5V_MAIN',(185.42,y));wire((185.42,y+15.24),(185.42,y+22.86));power('GND',(185.42,y+22.86),f'#PWR51{channel}')
  note(f'BUCK{channel}: '+('1.8V' if channel==5 else '0.9V')+' startup / 2.5A rated; 3 x 22uF output bank',(223.52 if channel==5 else 175.26,y-12.7))
-# BUCK4 is OFF by default in RK809-5; this is input bypass only, not a 3.3V source.
+# NPU BUCK4: off at boot; software must program the intended voltage before enabling.
 a=units[1]['66'];wire(a,(a[0],33.02));label('5V_MAIN',(a[0],33.02))
-add('Device','C_Small','C533','22uF / 25V',320.04,190.5,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
-wire((320.04,187.96),(320.04,180.34));label('5V_MAIN',(320.04,180.34));wire((320.04,193.04),(320.04,200.66));power('GND',(320.04,200.66),'#PWR540')
-note('BUCK4: RK809-5 startup OFF; bypass only. Do not use for boot-time 3V3_MAIN.',(284.48,170.18))
+add('Device','C_Small','C533','22uF / 25V',365.76,47.32,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
+wire((365.76,44.78),(365.76,35.56));label('5V_MAIN',(365.76,35.56));wire((365.76,49.86),(365.76,58.42));power('GND',(365.76,58.42),'#PWR540')
+add('Device','L_Small','L504','0.47uH',398.78,35.56,90,fp='Inductor_SMD:L_Coilcraft_XxL4020',fields={'MPN':'XGL4020-471MEC','Manufacturer':'Coilcraft','LCSC':'C5837785'})
+wire((383.54,35.56),(396.24,35.56));label('PMIC_SW4',(383.54,35.56))
+wire((401.32,35.56),(492.76,35.56));label('VDD_NPU',(461.26,35.56))
+for ref,x,value,fp,fields in [('C541',430.78,'22uF / 25V','Capacitor_SMD:C_1210_3225Metric',capfields),('C542',461.26,'10uF / 25V','Capacitor_SMD:C_1206_3216Metric',{'MPN':'CL31B106KAHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C14860','Qualification':'NPU output bank; effective capacitance and loop stability pending'})]:
+ add('Device','C_Small',ref,value,x,48.26,fp=fp,fields=fields)
+ wire((x,35.56),(x,45.72));wire((x,50.8),(x,58.42));junction((x,35.56))
+wire((430.78,58.42),(461.26,58.42));power('GND',(430.78,58.42),'#PWR566')
+add('Device','R_Small_US','R512','100R',492.76,48.26,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100RL','Manufacturer':'Yageo','LCSC':'C105588','Tolerance':'1%','Power Rating':'0.1W','Qualification':'NPU remote sense series resistor; NanoPi R3S reference sheet 14'})
+wire((492.76,35.56),(492.76,45.72));wire((492.76,50.8),(492.76,58.42));label('NPU_FB',(492.76,58.42))
+note('NPU BUCK4: 1.5A; startup OFF. Program 0.9V before enable. Local load bypass pending.',(360.68,22.86))
 # PMIC ground return and processor reset: pull up only to its fixed 3.3 V PMUIO1 domain.
 for n in ['47','69']:
  a=units[3][n];wire(a,(a[0],279.4))
@@ -146,7 +155,7 @@ for pin,net,y,cref in [('21','VDDA_0V9',63.5,520),('20','VDDA0V9_PMU',129.54,522
   add('Device','C_Small',f'C{cref+j}','1uF / 25V',x,y+12.7,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
   wire((x,y),(x,y+10.16));wire((x,y+15.24),(x,y+22.86))
  wire((419.1,y+22.86),(449.58,y+22.86));power('GND',(434.34,y+22.86),f'#PWR{cref+10}')
- note(('LDO2: 0.9V / 400mA' if pin=='21' else 'LDO3: 0.9V / 100mA high PSRR')+'; load budget pending',(398.78,y-12.7))
+ note(('LDO2: 0.9V / 400mA' if pin=='21' else 'LDO3: 0.9V / 100mA high PSRR')+'; load budget pending',(398.78,y+33.02 if pin=='21' else y-12.7))
 # Separate analog 1.8 V rails and adjustable SD IO domain.
 a=units[2]['4'];wire(a,(a[0],127));label('3V3_MAIN',(a[0],127))
 add('Device','C_Small','C524','22uF / 25V',50.8,91.44,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
@@ -158,7 +167,7 @@ for pin,net,y,cref,title in [('3','VCCA1V8_PMU',195.58,525,'LDO7: 1.8V / slot 2'
   add('Device','C_Small',f'C{cref+j}','1uF / 25V',x,y+12.7,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
   wire((x,y),(x,y+10.16));wire((x,y+15.24),(x,y+22.86))
  wire((419.1,y+22.86),(449.58,y+22.86));power('GND',(434.34,y+22.86),f'#PWR{cref+10}')
- note(title+'; load budget pending',(398.78,y-12.7))
+ note(title+'; load budget pending',(398.78,y+33.02 if pin=='21' else y-12.7))
 # I2C0 uses PMUIO2, selected as 3.3 V alongside PMUIO1; do not attach 5 V pull-ups.
 for n,net in [('1','PMIC_I2C_SCL'),('2','PMIC_I2C_SDA')]:
  a=units[3][n];b=(a[0]-7.62,a[1]);wire(a,b);label(net,b);items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')

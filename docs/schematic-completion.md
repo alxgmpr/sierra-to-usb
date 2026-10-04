@@ -1515,3 +1515,36 @@ generator to derive each switch UUID from its actual reference. The
 connectivity assertions had passed but did not detect this editor-identity
 issue. The prior commit alone did not pass the new processor check; the
 corrected state must pass that check before use.
+
+## 2026-10-04 NPU BUCK4 output capture
+
+Inspected NanoPi R3S LTS 2411 reference sheet 14 as a rendered page and
+RK809 Rev 2.4 pin table. BUCK4 uses VCC4 pin 66, SW4 pin 65 and
+FB4 pin 64. Added L504 (Coilcraft XGL4020-471MEC, 0.47uH), C541
+(Samsung CL32B226KAJNNNE, 22uF / 25V, 1210), C542
+(CL31B106KAHNNNE, 10uF / 25V, 1206), and R512 (Yageo
+RC0603FR-07100RL, 100R / 1%, 0603, C105588). The reference uses
+0.47uH, 22uF + 10uF and a 100R series sense resistor; these nominal
+values are retained with already selected larger power packages. Existing
+C533 remains the 22uF / 25V input bypass on 5V_MAIN and was moved
+next to the new output bank, clearing its earlier crowded placement.
+
+VDD_NPU now connects to all five manufacturer ball IDs: 1G15, 1H14,
+1H15, 1J14 and 1J15. FB4 connects through R512 to that rail; layout
+must take the sense connection at the processor load as illustrated by
+the reference. Local processor bypass is still absent. BUCK4 is rated
+1.5A and starts OFF in RK809-5; software must program the intended
+0.9V before enabling it. No boot-time NPU supply or NPU performance
+is claimed. Loop stability, effective capacitance, ripple, load/transient
+limits, sequencing, inductor loss and aggregate input power remain open.
+
+PMIC native checks pass for 60 exact-MPN components and thirty-six
+checked nets. Processor and integrated checks pass for 152 appliance
+components; UUID uniqueness is now checked on both changed sheets.
+Full ERC reports 450 violations. Both sheets were rendered and reviewed,
+and the LDO2 annotation moved clear of the new NPU capacitor fields.
+
+The new PMIC identity check also found existing unit-instance IDs colliding
+with pin IDs 1–4 because both used the same generator key. Unit IDs now
+use a separate namespace within the generator; pin IDs and electrical
+connections are preserved. The check must pass before this change is committed.
