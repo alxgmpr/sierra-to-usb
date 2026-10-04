@@ -451,3 +451,29 @@ That is reference guidance to reconcile against the manufacturer hardware
 requirements before capture; it is not permission to omit required internal
 supply bypassing without that reconciliation. No audio function is required
 for the cellular appliance.
+
+## PMIC buck inductor selected for capture
+
+Use Coilcraft XGL4020-471MEC (0.47 uH +/-20%, LCSC C5837785)
+for the five PMIC buck channels, with standard KiCad footprint
+`Inductor_SMD:L_Coilcraft_XxL4020`. Manufacturer drawing Document 1529-3
+Rev 02/19/26 specifies two 0.98 x 3.4 mm lands at 2.37 mm center spacing;
+the installed footprint has these exact dimensions. Body is 4.0 +/-0.3 mm,
+height 2.10 mm maximum. Orient terminal-start marking to the quiet/output
+side for the manufacturer's lowest-EMI guidance (not an electrical polarity).
+
+Manufacturer Document 1529-1 gives 5.1 mOhm maximum DCR, 6.1/9.7/13.4 A
+at 10/20/30 percent inductance drop, and 14.3/19.7 A RMS for 20/40 C rise
+at 25 C. Catalog shorthand 13.4 A must not be mistaken for a no-drop rating.
+At BUCK1/2 rated 2.5 A, 5.5 V maximum input, 2.25 MHz minimum switching
+frequency and 0.376 uH initial minimum inductance, the maximum ideal CCM
+ripple across any output voltage is Vin/(4*f*L) = 1.63 A peak-to-peak;
+peak current is about 3.31 A before bias loss. Even applying 10 percent
+inductance loss gives about 3.41 A peak, below the manufacturer's 6.1 A
+10-percent-drop test point at 25 C. At 2.5 A, DC copper loss is about 32 mW
+using maximum DCR; AC/core loss, hot saturation, fault current and actual
+application temperature rise remain verification work. Manufacturer thermal
+ratings are reference test conditions, not a board temperature guarantee.
+The PMIC reference calls 0.47 uH/4 A for BUCK1/2/5 and /3 A for BUCK3/4;
+this selection supplies current headroom at the expense of a larger 4 mm body.
+Capacitor bank selection and complete buck capture remain open.
