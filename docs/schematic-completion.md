@@ -1330,3 +1330,19 @@ A2 render was inspected for borders and title-block clearance. Schematic
 UUID uniqueness is verified, including repeated VDDA0V9_PMU banks.
 Physical decoupling placement and effective capacitance remain layout
 and electrical qualification tasks. Major appliance circuits remain open.
+
+## 2026-10-04 USB analog supply filter capture
+
+Added `phy-power.kicad_sch` to the appliance hierarchy: FB801/FB802 are
+TDK MPZ1608S121ATAH0 (0603, 120R at 100MHz, maximum DCR 45mOhm).
+C813/C814 are Samsung CL10B105KA8NNNC, 1uF / 25V source-side bypass
+capacitors. The separate USB_AVDD_0V9 and USB_AVDD_1V8 filtered nets
+currently terminate at the beads; processor loads and local bypass remain
+to capture. See `processor-phy-supplies.md` for source and headroom limits.
+
+The native XML netlist checker passes for 133 components across ten sheets,
+including exact bead parts and rail memberships. The new sheet was rendered
+and visually checked after correcting rotated bead fields and capacitor
+text placement. Full appliance ERC reports 463 violations; the two added
+filtered global labels have no downstream processor connections yet.
+This is an incomplete capture, not a release or a qualified power tree.
