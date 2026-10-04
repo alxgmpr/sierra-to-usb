@@ -210,6 +210,19 @@ for pin,ref,name,x,pwr in [('44','C535','PMIC_INTERNAL_1V8A',330.2,'#PWR556'),('
  add('Device','C_Small',ref,'1uF / 25V',x,250.19,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
  wire((x,247.65),(x,237.49));label(name,(x,237.49))
  wire((x,252.73),(x,260.35));power('GND',(x,260.35),pwr)
+# No-battery reference: unused current-sense inputs share ground (Figure 1-2).
+for pin in ['62','63']:
+ a=units[3][pin];wire(a,(60.96,a[1]))
+wire((60.96,254),(60.96,256.54));junction((60.96,256.54))
+wire((60.96,256.54),(60.96,264.16));power('GND',(60.96,264.16),'#PWR558')
+# Headphone reference return is ground, not a supply output.
+a=units[4]['40'];wire(a,(a[0],279.4));power('GND',(a[0],279.4),'#PWR559')
+# Preserve the manufacturer's speaker/charge-pump input supply and bypass.
+a=units[4]['33'];b=(a[0],213.36);wire(a,b);label('5V_MAIN',b)
+items[-1]=items[-1].replace('(justify left)','(justify right)')
+add('Device','C_Small','C537','10uF / 50V',368.3,290.83,fp='Capacitor_SMD:C_1206_3216Metric',fields={'MPN':'CL31B106KBHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C89632','Dielectric':'X7R','Qualification':'Speaker/charge-pump supply bypass; unused audio policy pending'})
+wire((368.3,288.29),(368.3,278.13));label('5V_MAIN',(368.3,278.13))
+wire((368.3,293.37),(368.3,300.99));power('GND',(368.3,300.99),'#PWR560')
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(35.56,31.75))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
