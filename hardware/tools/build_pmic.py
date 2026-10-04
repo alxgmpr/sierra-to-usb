@@ -60,7 +60,7 @@ def wire(a,b):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
 def label(name,p):
- if name in {'PMIC_I2C_SCL','PMIC_I2C_SDA','PMIC_SLEEP','VDD_LOGIC','VDD_GPU','VDD_NPU','VCC3V3_PMU','RK_RESET_N','VDDA0V9_PMU','VCCA1V8_PMU','VDDA_0V9','VCCA_1V8','PMIC_INT_N'}:
+ if name in {'PMIC_I2C_SCL','PMIC_I2C_SDA','PMIC_SLEEP','VDD_LOGIC','VDD_GPU','VDD_NPU','VCC3V3_PMU','RK_RESET_N','VDDA0V9_PMU','VCCA1V8_PMU','VDDA_0V9','VCCA_1V8','PMIC_INT_N','PMIC_SW3','DDR_FB','VDD_DDR_1V1'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid("global"+name+str(p))}"))');return
  if name in {'5V_MAIN','3V3_MAIN','GND'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("global"+name+str(p))}"))');return
@@ -86,10 +86,12 @@ def terminal(n,net,direction):
  a=units[1][str(n)];b=(round(a[0]+direction*7.62,4),a[1]);wire(a,b);label(net,b)
  # Left-side label text must extend away from the body.
  if direction<0:items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
-for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1',1),(8,'VDD_GPU',-1),(13,'VDD_LOGIC',-1),(53,'PMIC_SW5',1),(59,'VCC_1V8',-1),(65,'PMIC_SW4',1),(64,'NPU_FB',-1)]:
+for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1',1),(8,'VDD_GPU',-1),(13,'VDD_LOGIC',-1),(53,'PMIC_SW5',1),(59,'VCC_1V8',-1),(25,'PMIC_SW3',1),(27,'DDR_FB',-1),(65,'PMIC_SW4',1),(64,'NPU_FB',-1)]:
  if d:terminal(n,net,d)
  else:
   a=units[1][str(n)];b=(a[0],40.64);wire(a,b)
+a=units[1]['24'];wire(a,(a[0],40.64));wire((a[0],40.64),(93.98,40.64))
+a=units[1]['26'];label('VDD_DDR_1V1',a);items[-1]=items[-1].replace(f'(at {a[0]} {a[1]} 0)',f'(at {a[0]} {a[1]} 180)').replace('(justify right)','(justify left)')
 wire((88.9,40.64),(93.98,40.64));label("5V_MAIN",(88.9,40.64))
 a=units[1]['54'];wire(a,(a[0],48.26));label('5V_MAIN',(a[0],48.26))
 capfields={'MPN':'CL32B226KAJNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C309062','Qualification':'Typical bias curve reviewed; combined-corner aging and loop stability pending'}

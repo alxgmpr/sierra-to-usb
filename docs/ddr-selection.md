@@ -267,3 +267,20 @@ entries resolve the exact MPNs; current inventory is not reserved.
 Next capture uses VDD_DDR_1V1 for VBUCK3/output, separate DDR_FB for
 FB3, and the divider at the sense connection. The later 0.6V VDDQ rail
 must rise after VDD2; no complete rail-sequencing proof exists yet.
+
+## BUCK3 and RAM VDD2 captured
+
+Added ddr-power.kicad_sch (page 13): L901 0.47uH XGL4020-471MEC,
+C901 22uF CL32B226KAJNNNE, C902/C903 10uF CL31B106KAHNNNE,
+and R901/R902 47kR/120kR exact Yageo parts. Input bypass connects
+5V_MAIN to ground at VCC3; output uses the reference 22uF + 10uF bank.
+U501 pins 24/25/26/27 connect respectively to 5V_MAIN, PMIC_SW3,
+VDD_DDR_1V1 and DDR_FB. All 24 RAM VDD2 balls join VDD_DDR_1V1.
+
+Native checks verify the exact switch, feedback, output/load memberships
+and capacitor/resistor ground returns. Initial short wire placements crossed
+existing PMIC supply wiring; the failing integration checks caught this and
+the final placement corrected it before commit. The supply, RAM, PMIC and
+root renders were reviewed; root notes moved clear of the title block.
+Capture now has 175 components across 13 sheets. Local bypass, 0.6V rail,
+DDR bus and load/loop/thermal/sequence qualification remain incomplete.
