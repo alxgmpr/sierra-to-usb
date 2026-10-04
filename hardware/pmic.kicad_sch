@@ -1,0 +1,612 @@
+(kicad_sch (version 20250114) (generator eeschema) (uuid "152b7cfd-b2ed-5d28-883d-f6de3f0c70ef") (paper "A3") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols (symbol "Recovery:RK809-5" (pin_names (offset 0.508)) (in_bom yes) (on_board yes) (property "Reference" "U" (at -30.48 27.94 0) (effects (font (size 1.27 1.27)))) (property "Value" "RK809-5" (at -30.48 25.4 0) (effects (font (size 1.27 1.27)))) (property "Datasheet" "https://rockchip.fr/RK809%20datasheet%20V2.4.pdf" (at 0 -7.62 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_DFN_QFN:ArtInChip_QFN-68-1EP_7x7mm_P0.35mm_EP5.49x5.49mm_ThermalVias" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Description" "PMIC, 5 bucks, 9 LDOs, RTC and codec; charge-pump capacitor terminals passive" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "ki_keywords" "Rockchip PMIC buck LDO low-dropout regulator RTC" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "ki_fp_filters" "*QFN*7x7mm*P0.35mm*" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+
+(symbol "RK809-5_1_1" (rectangle (start -30.48 20.32) (end 30.48 -20.32) (stroke (width 0.254) (type default)) (fill (type background)))
+(pin input line (at -33.02 15.24 0) (length 2.54) (name "FB2" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 15.24 180) (length 2.54) (name "SW2" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -12.7 22.86 270) (length 2.54) (name "VCC2" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -7.619999999999999 22.86 270) (length 2.54) (name "VCC1" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 12.7 180) (length 2.54) (name "SW1" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 12.7 0) (length 2.54) (name "FB1" (effects (font (size 1.27 1.27)))) (number "13" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -2.539999999999999 22.86 270) (length 2.54) (name "VCC3" (effects (font (size 1.27 1.27)))) (number "24" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 10.16 180) (length 2.54) (name "SW3" (effects (font (size 1.27 1.27)))) (number "25" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 17.78 22.86 270) (length 2.54) (name "VBUCK3" (effects (font (size 1.27 1.27)))) (number "26" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 7.62 0) (length 2.54) (name "FB3" (effects (font (size 1.27 1.27)))) (number "27" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 7.62 180) (length 2.54) (name "SW5" (effects (font (size 1.27 1.27)))) (number "53" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 2.540000000000001 22.86 270) (length 2.54) (name "VCC9" (effects (font (size 1.27 1.27)))) (number "54" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 5.08 180) (length 2.54) (name "SWOUT1" (effects (font (size 1.27 1.27)))) (number "55" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 7.620000000000001 22.86 270) (length 2.54) (name "VCC8" (effects (font (size 1.27 1.27)))) (number "57" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 2.54 180) (length 2.54) (name "SWOUT2" (effects (font (size 1.27 1.27)))) (number "58" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 5.08 0) (length 2.54) (name "FB5" (effects (font (size 1.27 1.27)))) (number "59" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 2.54 0) (length 2.54) (name "FB4" (effects (font (size 1.27 1.27)))) (number "64" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 -0.0 180) (length 2.54) (name "SW4" (effects (font (size 1.27 1.27)))) (number "65" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 12.7 22.86 270) (length 2.54) (name "VCC4" (effects (font (size 1.27 1.27)))) (number "66" (effects (font (size 1.27 1.27)))))
+)
+(symbol "RK809-5_2_1" (rectangle (start -30.48 20.32) (end 30.48 -20.32) (stroke (width 0.254) (type default)) (fill (type background)))
+(pin power_out line (at 33.02 15.24 180) (length 2.54) (name "LDO7" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -12.7 22.86 270) (length 2.54) (name "VCC7" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 12.7 180) (length 2.54) (name "LDO8" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 10.16 180) (length 2.54) (name "LDO9" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 7.62 180) (length 2.54) (name "LDO3" (effects (font (size 1.27 1.27)))) (number "20" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 5.08 180) (length 2.54) (name "LDO2" (effects (font (size 1.27 1.27)))) (number "21" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -7.619999999999999 22.86 270) (length 2.54) (name "VCC5" (effects (font (size 1.27 1.27)))) (number "22" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 2.54 180) (length 2.54) (name "LDO1" (effects (font (size 1.27 1.27)))) (number "23" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 -0.0 180) (length 2.54) (name "LDO4" (effects (font (size 1.27 1.27)))) (number "28" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 -2.54 180) (length 2.54) (name "LDO5" (effects (font (size 1.27 1.27)))) (number "29" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -2.539999999999999 22.86 270) (length 2.54) (name "VCC6" (effects (font (size 1.27 1.27)))) (number "30" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 -5.08 180) (length 2.54) (name "LDO6" (effects (font (size 1.27 1.27)))) (number "31" (effects (font (size 1.27 1.27)))))
+)
+(symbol "RK809-5_3_1" (rectangle (start -30.48 20.32) (end 30.48 -20.32) (stroke (width 0.254) (type default)) (fill (type background)))
+(pin input line (at -33.02 15.24 0) (length 2.54) (name "SCL" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin bidirectional line (at -33.02 12.7 0) (length 2.54) (name "SDA" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin open_collector line (at 33.02 15.24 180) (length 2.54) (name "INT" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -12.7 22.86 270) (length 2.54) (name "VCC_RTC" (effects (font (size 1.27 1.27)))) (number "45" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 2.54 180) (length 2.54) (name "VREF" (effects (font (size 1.27 1.27)))) (number "46" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -2.54 -22.86 90) (length 2.54) (name "GNDREF" (effects (font (size 1.27 1.27)))) (number "47" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 7.62 0) (length 2.54) (name "SLEEP" (effects (font (size 1.27 1.27)))) (number "49" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 5.08 0) (length 2.54) (name "XIN" (effects (font (size 1.27 1.27)))) (number "50" (effects (font (size 1.27 1.27)))))
+(pin output line (at 33.02 12.7 180) (length 2.54) (name "XOUT" (effects (font (size 1.27 1.27)))) (number "51" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 2.54 0) (length 2.54) (name "PWRON" (effects (font (size 1.27 1.27)))) (number "52" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 -0.0 0) (length 2.54) (name "BATDIV" (effects (font (size 1.27 1.27)))) (number "56" (effects (font (size 1.27 1.27)))))
+(pin output line (at 33.02 10.16 180) (length 2.54) (name "EXT_EN" (effects (font (size 1.27 1.27)))) (number "60" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 -2.54 0) (length 2.54) (name "VDC" (effects (font (size 1.27 1.27)))) (number "61" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 -5.08 0) (length 2.54) (name "SNSP" (effects (font (size 1.27 1.27)))) (number "62" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 -7.62 0) (length 2.54) (name "SNSN" (effects (font (size 1.27 1.27)))) (number "63" (effects (font (size 1.27 1.27)))))
+(pin open_collector line (at 33.02 7.62 180) (length 2.54) (name "RESETB" (effects (font (size 1.27 1.27)))) (number "67" (effects (font (size 1.27 1.27)))))
+(pin open_collector line (at 33.02 5.08 180) (length 2.54) (name "CLK32K" (effects (font (size 1.27 1.27)))) (number "68" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 2.54 -22.86 90) (length 2.54) (name "EPAD" (effects (font (size 1.27 1.27)))) (number "69" (effects (font (size 1.27 1.27)))))
+)
+(symbol "RK809-5_4_1" (rectangle (start -30.48 20.32) (end 30.48 -20.32) (stroke (width 0.254) (type default)) (fill (type background)))
+(pin bidirectional line (at -33.02 15.24 0) (length 2.54) (name "LRCLK" (effects (font (size 1.27 1.27)))) (number "14" (effects (font (size 1.27 1.27)))))
+(pin bidirectional line (at -33.02 12.7 0) (length 2.54) (name "BCLK" (effects (font (size 1.27 1.27)))) (number "15" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 10.16 0) (length 2.54) (name "MCLK" (effects (font (size 1.27 1.27)))) (number "16" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 7.62 0) (length 2.54) (name "SDI" (effects (font (size 1.27 1.27)))) (number "17" (effects (font (size 1.27 1.27)))))
+(pin output line (at 33.02 15.24 180) (length 2.54) (name "SDO" (effects (font (size 1.27 1.27)))) (number "18" (effects (font (size 1.27 1.27)))) (alternate "PDMDATA" input line))
+(pin output line (at 33.02 12.7 180) (length 2.54) (name "PDMCLK" (effects (font (size 1.27 1.27)))) (number "19" (effects (font (size 1.27 1.27)))))
+(pin output line (at 33.02 10.16 180) (length 2.54) (name "SPKP_OUT" (effects (font (size 1.27 1.27)))) (number "32" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -12.7 22.86 270) (length 2.54) (name "VCC_SPK_HP" (effects (font (size 1.27 1.27)))) (number "33" (effects (font (size 1.27 1.27)))))
+(pin output line (at 33.02 7.62 180) (length 2.54) (name "SPKN_OUT" (effects (font (size 1.27 1.27)))) (number "34" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 0 180) (length 2.54) (name "VCC_CPVSS" (effects (font (size 1.27 1.27)))) (number "35" (effects (font (size 1.27 1.27)))))
+(pin passive line (at -33.02 2.54 0) (length 2.54) (name "CPN" (effects (font (size 1.27 1.27)))) (number "36" (effects (font (size 1.27 1.27)))))
+(pin passive line (at -33.02 -0.0 0) (length 2.54) (name "CPP" (effects (font (size 1.27 1.27)))) (number "37" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at -7.619999999999999 22.86 270) (length 2.54) (name "VCC_CPVDD" (effects (font (size 1.27 1.27)))) (number "38" (effects (font (size 1.27 1.27)))))
+(pin output line (at 33.02 5.08 180) (length 2.54) (name "HPL_OUT" (effects (font (size 1.27 1.27)))) (number "39" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -2.54 -22.86 90) (length 2.54) (name "HP_SNS" (effects (font (size 1.27 1.27)))) (number "40" (effects (font (size 1.27 1.27)))))
+(pin output line (at 33.02 2.54 180) (length 2.54) (name "HPR_OUT" (effects (font (size 1.27 1.27)))) (number "41" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 -2.54 0) (length 2.54) (name "MICIN" (effects (font (size 1.27 1.27)))) (number "42" (effects (font (size 1.27 1.27)))))
+(pin input line (at -33.02 -5.08 0) (length 2.54) (name "MICIP" (effects (font (size 1.27 1.27)))) (number "43" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 -2.54 180) (length 2.54) (name "VCC_1P8A" (effects (font (size 1.27 1.27)))) (number "44" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 33.02 -5.08 180) (length 2.54) (name "VCC_1P8D" (effects (font (size 1.27 1.27)))) (number "48" (effects (font (size 1.27 1.27)))))
+)
+)
+(symbol "Device:L_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "L"
+			(at 0.762 1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "L_Small"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor, small symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "inductor choke coil reactor magnetic"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "L_Small_0_1"
+			(arc
+				(start 0 2.032)
+				(mid 0.5058 1.524)
+				(end 0 1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 1.016)
+				(mid 0.5058 0.508)
+				(end 0 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 0)
+				(mid 0.5058 -0.508)
+				(end 0 -1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 -1.016)
+				(mid 0.5058 -1.524)
+				(end 0 -2.032)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "L_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 0.508)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 0.508)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:C_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.254 1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 0.254 -2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "capacitor cap"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.524 0.508) (xy 1.524 0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.524 -0.508) (xy 1.524 -0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "power:GND"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#PWR"
+			(at 0 -6.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 0 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "GND_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "GND_1_1"
+			(pin power_in line
+				(at 0 0 270)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	))
+(symbol (lib_id "Recovery:RK809-5") (at 101.6 81.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "609ca19f-e32a-5f65-8b29-6d155ed212dc") (property "Reference" "U501" (at 76.19999999999999 50.8 0) (effects (font (size 1.27 1.27))))(property "Value" "RK809-5" (at 76.19999999999999 53.34 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DFN_QFN:ArtInChip_QFN-68-1EP_7x7mm_P0.35mm_EP5.49x5.49mm_ThermalVias" (at 101.6 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RK809-5" (at 101.6 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Rockchip" (at 101.6 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C2939628" (at 101.6 81.28 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "8" (uuid "572cb337-b5e3-55c2-9b8a-07333f7f503d"))(pin "9" (uuid "d8624518-b8dc-594b-8082-85301339ec42"))(pin "10" (uuid "2c7d9c13-c491-57c6-9895-0f3a3c7e40d2"))(pin "11" (uuid "dfa2f632-fca9-5311-ae96-3032626ac32a"))(pin "12" (uuid "62c0d415-054f-577d-a869-0fb92967385f"))(pin "13" (uuid "fea56058-3155-5958-b731-d2e276e86de8"))(pin "24" (uuid "f91c2347-386f-5c2c-a5ed-e247a9ba499a"))(pin "25" (uuid "4851c158-4ca6-50af-9b2b-2d385f2fdd40"))(pin "26" (uuid "9ed2a08a-8690-5d10-bea1-0ad0b773f967"))(pin "27" (uuid "d12adb72-3320-522a-9b98-cb19bfc662d8"))(pin "53" (uuid "c4186064-4bca-5a37-99ab-ab4b3ed8cc1e"))(pin "54" (uuid "706c3865-cf98-5f93-85e0-e2cf0487b08c"))(pin "55" (uuid "746ad39a-80ff-510c-bb89-7b202a4292bb"))(pin "57" (uuid "645058a3-7e76-5b7e-a49c-b5dadf40eede"))(pin "58" (uuid "20925097-3206-54bd-84fc-57eec9129203"))(pin "59" (uuid "78a77f72-32a5-570b-9e6d-8a07fdb0cf6a"))(pin "64" (uuid "ef0352b1-8227-53bc-927a-5d85b64b8692"))(pin "65" (uuid "b76885c2-fb44-52dc-b437-eb090a541293"))(pin "66" (uuid "75ed50dc-88ad-5cec-8141-e6c2357a307f")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "U501") (unit 1)))))
+(symbol (lib_id "Recovery:RK809-5") (at 101.6 165.1 0) (unit 2) (in_bom yes) (on_board yes) (dnp no) (uuid "43b73de3-45f9-5b0b-977f-f5ba9051a642") (property "Reference" "U501" (at 76.19999999999999 134.62 0) (effects (font (size 1.27 1.27))))(property "Value" "RK809-5" (at 76.19999999999999 137.16 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DFN_QFN:ArtInChip_QFN-68-1EP_7x7mm_P0.35mm_EP5.49x5.49mm_ThermalVias" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RK809-5" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Rockchip" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C2939628" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "3" (uuid "93570d83-e537-5782-81ce-05d6a3cabe84"))(pin "4" (uuid "f1b2e053-73b2-5062-a204-2b8c3d8e2b6c"))(pin "5" (uuid "d787f5f0-f71b-5c83-959e-6fb7393fbf9d"))(pin "6" (uuid "dc2da4d0-342c-5af1-a2de-0884a8874b6d"))(pin "20" (uuid "f04c00a8-4b84-528b-b519-8f938f82c14a"))(pin "21" (uuid "fe778538-2839-5a1a-9858-e828bd338cfb"))(pin "22" (uuid "344a1912-4930-5ee0-8a83-b26dbaed7d6b"))(pin "23" (uuid "732ab009-f648-5b4f-afa2-8984c715cee9"))(pin "28" (uuid "ea2be39b-42e1-5775-89bd-e13fc77592f1"))(pin "29" (uuid "99cc1799-f51c-5c93-9971-ab6f32916e01"))(pin "30" (uuid "6933de6b-1992-5a1a-aa92-a53d4cf0320c"))(pin "31" (uuid "f9e16cdf-fd8b-517e-ae61-ba6dbe2b8eb2")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "U501") (unit 2)))))
+(symbol (lib_id "Recovery:RK809-5") (at 101.6 248.92 0) (unit 3) (in_bom yes) (on_board yes) (dnp no) (uuid "93570d83-e537-5782-81ce-05d6a3cabe84") (property "Reference" "U501" (at 76.19999999999999 218.44 0) (effects (font (size 1.27 1.27))))(property "Value" "RK809-5" (at 76.19999999999999 220.98 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DFN_QFN:ArtInChip_QFN-68-1EP_7x7mm_P0.35mm_EP5.49x5.49mm_ThermalVias" (at 101.6 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RK809-5" (at 101.6 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Rockchip" (at 101.6 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C2939628" (at 101.6 248.92 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "609ca19f-e32a-5f65-8b29-6d155ed212dc"))(pin "2" (uuid "43b73de3-45f9-5b0b-977f-f5ba9051a642"))(pin "7" (uuid "5505de46-aecf-58f0-b96d-cc56ed12836e"))(pin "45" (uuid "c1353790-8d75-5f60-a70d-074de91d549d"))(pin "46" (uuid "f34e778f-ca78-5a23-86de-a18f558978f1"))(pin "47" (uuid "2f58fdff-ab53-5b8c-9f53-e3fa6343af7c"))(pin "49" (uuid "f87e8501-7877-50ef-a08c-99bb71ceea54"))(pin "50" (uuid "73693b39-6ed0-5850-92b1-eaf8391971f6"))(pin "51" (uuid "f84deeb8-d874-5041-99df-6a66f519baf4"))(pin "52" (uuid "05da1896-a533-5d4b-9d0c-99b942070fa7"))(pin "56" (uuid "cb2afec7-d589-5316-b014-f5d361f71899"))(pin "60" (uuid "cdd7686b-ea47-5173-a752-0bef828008b6"))(pin "61" (uuid "68e303e0-7602-5a21-9c34-a561a21605c6"))(pin "62" (uuid "072b4d8d-492c-55da-a77d-9f3d1c569361"))(pin "63" (uuid "aa712e4c-4bfb-5fe6-85f8-21c334d20cfa"))(pin "67" (uuid "440ff0cc-dfc5-535c-98ca-3f6e438d2de9"))(pin "68" (uuid "af2c84ca-748f-56c9-a271-c1db57822bb7"))(pin "69" (uuid "ec9198e4-b102-5c55-acbe-e1e3d248da69")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "U501") (unit 3)))))
+(symbol (lib_id "Recovery:RK809-5") (at 279.4 215.9 0) (unit 4) (in_bom yes) (on_board yes) (dnp no) (uuid "f1b2e053-73b2-5062-a204-2b8c3d8e2b6c") (property "Reference" "U501" (at 253.99999999999997 185.42000000000002 0) (effects (font (size 1.27 1.27))))(property "Value" "RK809-5" (at 253.99999999999997 187.96 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DFN_QFN:ArtInChip_QFN-68-1EP_7x7mm_P0.35mm_EP5.49x5.49mm_ThermalVias" (at 279.4 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RK809-5" (at 279.4 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Rockchip" (at 279.4 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C2939628" (at 279.4 215.9 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "14" (uuid "c047dbb0-4ea5-5d20-a7e3-525697eea4b7"))(pin "15" (uuid "a6ac6359-1bba-5045-80ff-9a6e9b350d53"))(pin "16" (uuid "8d0f5efe-259f-51a9-83d4-c34cefb6ddaa"))(pin "17" (uuid "31d400c6-7730-5a0f-a9a7-ff0aa5c89616"))(pin "18" (uuid "0953db86-e6f6-53c0-97e7-8cde700ee9f3"))(pin "19" (uuid "71de3794-d652-5ea2-a42b-29404242a0df"))(pin "32" (uuid "163d2c46-3e89-5661-ae0a-b11631a425ae"))(pin "33" (uuid "7816501f-ed5a-5afb-9798-52540cc6bb4e"))(pin "34" (uuid "58912e77-2691-5274-8ab0-69eb6c1881d2"))(pin "35" (uuid "36960503-2bb8-527a-8fa9-4d12e4e74349"))(pin "36" (uuid "91cc508f-08b8-581e-9f61-a48952d88d0d"))(pin "37" (uuid "2d2fee0d-d2d2-5101-a4dc-01d8fcb57bdd"))(pin "38" (uuid "61d39183-5c1e-52bc-a9ca-361f9874843e"))(pin "39" (uuid "d3eda293-2bf2-50aa-af59-198de142361a"))(pin "40" (uuid "8d0adb71-1aed-5da4-a11c-a9c4afb17ede"))(pin "41" (uuid "1e6a67f5-fc6a-50ed-a0bb-c87603404b73"))(pin "42" (uuid "3a81012f-61f0-5e1d-bbae-e71360dac381"))(pin "43" (uuid "71eefcd1-a689-50b7-b713-130da7cf685f"))(pin "44" (uuid "6ee67b5d-0a13-52fc-8a8d-398c56f07d66"))(pin "48" (uuid "5d19b5d6-afec-56e8-a8f8-fe9b9db50e37")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "U501") (unit 4)))))
+(wire (pts (xy 88.9 58.42) (xy 88.9 40.64)) (stroke (width 0) (type default)) (uuid "eac5a39b-edd7-5a26-bb2e-b54b7f408d05"))
+(wire (pts (xy 93.98 58.42) (xy 93.98 40.64)) (stroke (width 0) (type default)) (uuid "ce25bc59-c767-5ab2-898b-1e0653c26b49"))
+(wire (pts (xy 134.62 66.04) (xy 142.24 66.04)) (stroke (width 0) (type default)) (uuid "0d6a6151-0274-5f81-a7c9-34a04136dd60"))
+(label "PMIC_SW2" (at 142.24 66.04 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "81cfa1ac-be22-55a6-afb6-4ce0a5985549"))
+(wire (pts (xy 134.62 68.58) (xy 142.24 68.58)) (stroke (width 0) (type default)) (uuid "73ab58b1-0c0e-5c09-9f34-f9cef52f573c"))
+(label "PMIC_SW1" (at 142.24 68.58 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6ec5693f-8be6-5ca5-a0e1-1c6af76c19a8"))
+(wire (pts (xy 68.58 66.04) (xy 60.96 66.04)) (stroke (width 0) (type default)) (uuid "f4810c05-a790-5768-98a6-27f5783d2012"))
+(label "VDD_GPU_SENSE" (at 60.96 66.04 0) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "0f7ec954-d7fe-5681-a72e-70fdc4610dac"))
+(wire (pts (xy 68.58 68.58) (xy 60.96 68.58)) (stroke (width 0) (type default)) (uuid "1efaf3b7-6a52-51f6-a7ee-dc42e4f89641"))
+(label "VDD_LOGIC_SENSE" (at 60.96 68.58 0) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c666a6fb-5ef6-54d6-bcd3-2aec256feaa9"))
+(wire (pts (xy 88.9 40.64) (xy 93.98 40.64)) (stroke (width 0) (type default)) (uuid "e3843f79-a4d5-57fd-97d8-26f1e07bc3ab"))
+(label "5V_MAIN" (at 88.9 40.64 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "610ef75c-ee2b-5998-b45d-1ff9a9e2f10c"))
+(symbol (lib_id "Device:L_Small") (at 238.76 63.5 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2dc7fffe-540c-5677-a349-640312b74cb5") (property "Reference" "L501" (at 238.76 57.15 90) (effects (font (size 1.27 1.27))))(property "Value" "0.47uH" (at 238.76 59.69 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_Coilcraft_XxL4020" (at 238.76 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "XGL4020-471MEC" (at 238.76 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Coilcraft" (at 238.76 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C5837785" (at 238.76 63.5 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "eacf8448-17d0-5389-835c-6437f14d2160"))(pin "2" (uuid "c5e667a6-bd96-58f1-adf9-f2b404130d76")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "L501") (unit 1)))))
+(wire (pts (xy 223.52 63.5) (xy 236.22 63.5)) (stroke (width 0) (type default)) (uuid "1cbaebd5-e453-5671-b3f9-abcba5cea2fd"))
+(label "PMIC_SW1" (at 223.52 63.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c9385ca5-ab85-5228-a405-7aa5f7e45f86"))
+(wire (pts (xy 241.3 63.5) (xy 327.66 63.5)) (stroke (width 0) (type default)) (uuid "2a4befd7-4a5c-5823-aa7e-0aaa0063dc6f"))
+(label "VDD_LOGIC" (at 327.66 63.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "54d508ce-da6d-5b6c-9891-cac6b72765e2"))
+(symbol (lib_id "Device:C_Small") (at 266.7 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4a84b0ca-5b04-531c-867c-5d8f4dc55c74") (property "Reference" "C501" (at 256.53999999999996 74.93 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "22uF / 25V" (at 256.53999999999996 77.47 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 266.7 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 266.7 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 266.7 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C309062" (at 266.7 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Effective-capacitance review and load stability pending" (at 266.7 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "b56886e6-9bdb-59b7-90fa-d1bdbbe7d0b3"))(pin "2" (uuid "818f8c2e-faea-51fa-b954-93d49ff7eca2")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "C501") (unit 1)))))
+(wire (pts (xy 266.7 63.5) (xy 266.7 73.66)) (stroke (width 0) (type default)) (uuid "0429a122-373f-520f-b935-74e098c1099c"))
+(wire (pts (xy 266.7 78.74) (xy 266.7 86.36)) (stroke (width 0) (type default)) (uuid "85e7d8a2-8588-5b71-ae9b-77208b2f565a"))
+(junction (at 266.7 63.5) (diameter 0) (color 0 0 0 0) (uuid "51edcee4-8b28-5e60-ab7d-a1accb470049"))
+(symbol (lib_id "Device:C_Small") (at 297.18 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "17b2a5f1-baa7-5c7d-a148-b25a1f692b34") (property "Reference" "C502" (at 287.02 74.93 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "22uF / 25V" (at 287.02 77.47 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 297.18 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 297.18 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 297.18 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C309062" (at 297.18 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Effective-capacitance review and load stability pending" (at 297.18 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "bc64a284-5c29-58a0-99de-8fd478b5be87"))(pin "2" (uuid "a24085a1-f82f-5ce3-9c92-e4b14daa5abf")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "C502") (unit 1)))))
+(wire (pts (xy 297.18 63.5) (xy 297.18 73.66)) (stroke (width 0) (type default)) (uuid "c04ba6de-5ece-557f-8d14-d791fc3f687a"))
+(wire (pts (xy 297.18 78.74) (xy 297.18 86.36)) (stroke (width 0) (type default)) (uuid "1c6eb4cf-e231-591f-898c-f48a1c5f0439"))
+(junction (at 297.18 63.5) (diameter 0) (color 0 0 0 0) (uuid "bfa95d15-cd72-597d-9a8a-caa605651773"))
+(symbol (lib_id "Device:C_Small") (at 327.66 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "31257bb9-a5b0-5379-8a63-9ce7b007d81d") (property "Reference" "C503" (at 317.5 74.93 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "22uF / 25V" (at 317.5 77.47 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 327.66 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 327.66 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 327.66 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C309062" (at 327.66 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Effective-capacitance review and load stability pending" (at 327.66 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "ddaaf3e3-2432-552f-9974-7a40e0a85405"))(pin "2" (uuid "6787aa0d-020c-560f-b956-9cc14914fd82")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "C503") (unit 1)))))
+(wire (pts (xy 327.66 63.5) (xy 327.66 73.66)) (stroke (width 0) (type default)) (uuid "331a0f19-7769-50e3-ad6a-034b17ada2de"))
+(wire (pts (xy 327.66 78.74) (xy 327.66 86.36)) (stroke (width 0) (type default)) (uuid "f63e0bef-0a2b-5e63-bb6f-9d403ed44b98"))
+(junction (at 327.66 63.5) (diameter 0) (color 0 0 0 0) (uuid "fecf7404-f6a2-534d-b769-1ae91c1940c1"))
+(wire (pts (xy 266.7 86.36) (xy 327.66 86.36)) (stroke (width 0) (type default)) (uuid "c10bf9b4-dd84-50a5-b4bb-d839ad8f0b3d"))
+(junction (at 297.18 86.36) (diameter 0) (color 0 0 0 0) (uuid "49551635-9623-5402-a327-eed830dca68e"))
+(symbol (lib_id "power:GND") (at 297.18 86.36 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "0f2fe188-e776-5092-a8c4-52366464deaa") (property "Reference" "#PWR501" (at 297.18 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 297.18 90.17 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 297.18 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "c676ea13-0eb6-5a81-8d87-834d297b7ab4")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "#PWR501") (unit 1)))))
+(wire (pts (xy 327.66 63.5) (xy 353.06 63.5)) (stroke (width 0) (type default)) (uuid "09b0e2c0-815c-5754-9580-a97aa4a66379"))
+(wire (pts (xy 353.06 63.5) (xy 353.06 86.36)) (stroke (width 0) (type default)) (uuid "9f626c07-a5df-58a7-8cc0-02f638c99ea3"))
+(label "VDD_LOGIC_SENSE" (at 353.06 86.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "83203736-034f-5fc0-a041-6c0e4dc4af2f"))
+(symbol (lib_id "Device:C_Small") (at 185.42 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cb0b7d00-caf7-5c4a-9fa1-6aacc719cd48") (property "Reference" "C504" (at 175.26 74.93 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "22uF / 25V" (at 175.26 77.47 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 185.42 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 185.42 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 185.42 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C309062" (at 185.42 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Effective-capacitance review and load stability pending" (at 185.42 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "b14495dd-ebdc-5add-914c-8972c06a3900"))(pin "2" (uuid "685905c1-7dc3-51da-9439-e2a9dc33e1bd")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "C504") (unit 1)))))
+(wire (pts (xy 185.42 73.66) (xy 185.42 63.5)) (stroke (width 0) (type default)) (uuid "d48ca69b-dae1-5f37-b75e-c7184bd5e31c"))
+(label "5V_MAIN" (at 185.42 63.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0e11b74e-e2fe-5865-866b-1b94083e7bd9"))
+(wire (pts (xy 185.42 78.74) (xy 185.42 86.36)) (stroke (width 0) (type default)) (uuid "5bff9757-4265-5c7d-a73f-a712f575e00b"))
+(symbol (lib_id "power:GND") (at 185.42 86.36 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "ab0a2eed-d46a-552a-988c-ece48d3a2fce") (property "Reference" "#PWR511" (at 185.42 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 185.42 90.17 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 185.42 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "7b9de4c7-e4f7-5306-9274-910c6892bb09")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "#PWR511") (unit 1)))))
+(text "BUCK1: 0.9V startup / 2.5A rated; 3 x 22uF output bank" (at 175.26 50.8 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d387ce16-f22e-5e21-9216-9741f3fa7d8e"))
+(symbol (lib_id "Device:L_Small") (at 238.76 129.54 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4549e03c-f640-5dc4-a330-f9f95cf57d60") (property "Reference" "L502" (at 238.76 123.19 90) (effects (font (size 1.27 1.27))))(property "Value" "0.47uH" (at 238.76 125.72999999999999 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_Coilcraft_XxL4020" (at 238.76 129.54 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "XGL4020-471MEC" (at 238.76 129.54 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Coilcraft" (at 238.76 129.54 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C5837785" (at 238.76 129.54 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "9cadedd9-58ad-5a3b-b2bc-ec958c07ab86"))(pin "2" (uuid "f5debc50-1f7a-57e7-b9b4-5a5a8cf96667")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "L502") (unit 1)))))
+(wire (pts (xy 223.52 129.54) (xy 236.22 129.54)) (stroke (width 0) (type default)) (uuid "1f4df40f-5a86-5432-9bec-c6553ed4d8fa"))
+(label "PMIC_SW2" (at 223.52 129.54 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7b22e44d-fb24-5677-bb75-4e5077956d85"))
+(wire (pts (xy 241.3 129.54) (xy 327.66 129.54)) (stroke (width 0) (type default)) (uuid "7803318f-f729-5d39-9654-860461db6540"))
+(label "VDD_GPU" (at 327.66 129.54 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "23c87bc4-8e69-5843-9e80-39851601e8e7"))
+(symbol (lib_id "Device:C_Small") (at 266.7 142.23999999999998 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b7d95bc7-a644-51a8-b843-4817a4e77aac") (property "Reference" "C505" (at 256.53999999999996 140.96999999999997 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "22uF / 25V" (at 256.53999999999996 143.51 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 266.7 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 266.7 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 266.7 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C309062" (at 266.7 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Effective-capacitance review and load stability pending" (at 266.7 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "c549d810-1839-5ecf-9d71-72de28611c99"))(pin "2" (uuid "0bf4c64b-937f-5f42-b9e3-6f0a90ce3c59")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "C505") (unit 1)))))
+(wire (pts (xy 266.7 129.54) (xy 266.7 139.7)) (stroke (width 0) (type default)) (uuid "459b877e-57ac-5cfe-b5de-66db5b785866"))
+(wire (pts (xy 266.7 144.78) (xy 266.7 152.4)) (stroke (width 0) (type default)) (uuid "7d61cb0f-e323-5937-a411-973a68c6f231"))
+(junction (at 266.7 129.54) (diameter 0) (color 0 0 0 0) (uuid "df176c64-9850-5a60-96dc-03584080c8b2"))
+(symbol (lib_id "Device:C_Small") (at 297.18 142.23999999999998 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d687351d-3ac1-532c-9c7b-b98155be9081") (property "Reference" "C506" (at 287.02 140.96999999999997 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "22uF / 25V" (at 287.02 143.51 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 297.18 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 297.18 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 297.18 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C309062" (at 297.18 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Effective-capacitance review and load stability pending" (at 297.18 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "08ea576d-c32f-5896-8029-f3ca90a3244f"))(pin "2" (uuid "56a63caf-5912-5e4c-af3a-888157878e25")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "C506") (unit 1)))))
+(wire (pts (xy 297.18 129.54) (xy 297.18 139.7)) (stroke (width 0) (type default)) (uuid "fecff032-4aad-5eaa-ae23-c037e843f354"))
+(wire (pts (xy 297.18 144.78) (xy 297.18 152.4)) (stroke (width 0) (type default)) (uuid "26d6e392-6f80-5d51-bdb0-19c6e18e4074"))
+(junction (at 297.18 129.54) (diameter 0) (color 0 0 0 0) (uuid "80cb79cc-6300-5a4a-a808-13fad58c376f"))
+(symbol (lib_id "Device:C_Small") (at 327.66 142.23999999999998 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "05f201d0-01d1-5e4c-bb29-f150772b47b2") (property "Reference" "C507" (at 317.5 140.96999999999997 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "22uF / 25V" (at 317.5 143.51 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 327.66 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 327.66 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 327.66 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C309062" (at 327.66 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Effective-capacitance review and load stability pending" (at 327.66 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "82f88796-2216-5966-84cf-cee22104fc09"))(pin "2" (uuid "5dcc9679-0e6e-5e2a-94a6-610e7294ef61")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "C507") (unit 1)))))
+(wire (pts (xy 327.66 129.54) (xy 327.66 139.7)) (stroke (width 0) (type default)) (uuid "3f28ec95-e049-51e8-b8db-990d289c5986"))
+(wire (pts (xy 327.66 144.78) (xy 327.66 152.4)) (stroke (width 0) (type default)) (uuid "aafebe26-ccbf-5d83-9803-a9150fb163db"))
+(junction (at 327.66 129.54) (diameter 0) (color 0 0 0 0) (uuid "fb005e46-5726-5728-be42-a34d801eb0d7"))
+(wire (pts (xy 266.7 152.4) (xy 327.66 152.4)) (stroke (width 0) (type default)) (uuid "1b559a99-0219-5175-895f-40b050362fbe"))
+(junction (at 297.18 152.39999999999998) (diameter 0) (color 0 0 0 0) (uuid "cddbe25b-8a4a-5378-98ef-b334c33a0ca6"))
+(symbol (lib_id "power:GND") (at 297.18 152.39999999999998 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "8d1c76a2-a832-5aa4-a21e-3d1ea0abf6de") (property "Reference" "#PWR502" (at 297.18 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 297.18 156.20999999999998 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 297.18 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "ab573a87-cad5-57f9-8bfa-8a60e2372cc1")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "#PWR502") (unit 1)))))
+(wire (pts (xy 327.66 129.54) (xy 353.06 129.54)) (stroke (width 0) (type default)) (uuid "db2c537e-11e6-5a5d-9fe8-78ca4a328ed8"))
+(wire (pts (xy 353.06 129.54) (xy 353.06 152.4)) (stroke (width 0) (type default)) (uuid "fdc8b93d-383d-5db8-b8a7-830b1cd528a3"))
+(label "VDD_GPU_SENSE" (at 353.06 152.39999999999998 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "08f6a141-5e2a-5fcc-baf9-20e96ee5425c"))
+(symbol (lib_id "Device:C_Small") (at 185.42 142.23999999999998 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "00bd9e28-2b13-56d3-9e67-7bf539a513d2") (property "Reference" "C508" (at 175.26 140.96999999999997 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Value" "22uF / 25V" (at 175.26 143.51 0) (effects (font (size 1.27 1.27)) (justify right)))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 185.42 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 185.42 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 185.42 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C309062" (at 185.42 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Effective-capacitance review and load stability pending" (at 185.42 142.23999999999998 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "dee927a1-5869-5bba-8798-6d08ebf7e13e"))(pin "2" (uuid "61012d1a-2594-51b1-b1fa-7be817d3dc6c")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "C508") (unit 1)))))
+(wire (pts (xy 185.42 139.7) (xy 185.42 129.54)) (stroke (width 0) (type default)) (uuid "27a09ae9-4bf0-5b7c-b683-c62a8a24a7c3"))
+(label "5V_MAIN" (at 185.42 129.54 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4dee7e61-6f7f-55e3-a90c-b21ef51121f7"))
+(wire (pts (xy 185.42 144.78) (xy 185.42 152.4)) (stroke (width 0) (type default)) (uuid "5009d23e-2807-5037-a337-dcfbe1db526c"))
+(symbol (lib_id "power:GND") (at 185.42 152.39999999999998 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "eb8f4888-46bb-54d9-91fc-c2604bacff94") (property "Reference" "#PWR512" (at 185.42 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "GND" (at 185.42 156.20999999999998 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 185.42 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "63e8491f-3b9e-5d9a-a8b4-220aacc366fe")) (instances (project "pmic" (path "/152b7cfd-b2ed-5d28-883d-f6de3f0c70ef" (reference "#PWR512") (unit 1)))))
+(text "BUCK2: 0.9V startup / 2.5A rated; 3 x 22uF output bank" (at 175.26 116.83999999999999 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a4ff3985-01d8-5352-abcf-0f681ddd5f16"))
+(text "PMIC capture in progress — BUCK1 / BUCK2" (at 35.56 22.86 0) (effects (font (size 2.54 2.54)) (justify left)) (uuid "e4bcc5af-a37a-5565-a901-9fd8beb8f1f1"))
+(text "DRAFT: other rails and management/audio pins are deliberately unwired.\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\nFeedback sense must route to processor load; verify ground return and placement." (at 175.26 172.72 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ef932fe8-8aee-5900-b8c2-67301ed6efac"))
+(sheet_instances (path "/" (page "1"))))

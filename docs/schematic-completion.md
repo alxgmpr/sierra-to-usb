@@ -477,3 +477,26 @@ ratings are reference test conditions, not a board temperature guarantee.
 The PMIC reference calls 0.47 uH/4 A for BUCK1/2/5 and /3 A for BUCK3/4;
 this selection supplies current headroom at the expense of a larger 4 mm body.
 Capacitor bank selection and complete buck capture remain open.
+
+## Native PMIC capture begun
+
+`hardware/pmic.kicad_sch` now contains all four units of U501 and complete
+BUCK1/2 draft paths: 5V_MAIN inputs, separate input capacitors, selected
+XGL4020-471MEC inductors, three CL32B226KAJNNNE 22 uF output capacitors
+per channel, and explicit feedback-sense nets connected after each inductor.
+These rails start at 0.9 V for the selected -5 variant. The 66 uF nominal bank
+is provisional to provide margin for bias/tolerance/temperature/aging above
+the hardware guide's >30 uF effective requirement; combined-corner and
+loop-stability analysis remains required. Input capacitors also require their
+5 V effective-capacitance check. This sheet is deliberately separate until
+all PMIC channels and control requirements are resolved.
+
+`python3 hardware/tools/check_pmic_capture.py` exports a native netlist and
+verifies exact membership of the six captured nets and MPN coverage for its
+11 fitted components. It does not claim full ERC: the remaining 63 PMIC pins
+are deliberately unwired. All 69 pins remain in the four-unit native symbol.
+The recovery hierarchy retains its independent 32-component checks.
+Rendered draft inspected and corrected overlapping input labels and codec
+unit/title-block overlap. `hardware/tools/build_pmic.py` reproduces this draft;
+preserve manual changes before regeneration. Kelvin sense routes to processor
+loads, placement and ground returns remain PCB-stage requirements.
