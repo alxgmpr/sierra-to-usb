@@ -1422,3 +1422,25 @@ connector/protection/VBUS detection or storage override mechanism.
 Native checks verify the four-terminal boot net, grounded switch contact,
 exact MPN and footprint. The appliance now has 141 components; full ERC
 remains at 451 violations. The processor sheet was rendered and reviewed.
+
+## 2026-10-04 shared processor/PMIC manual reset
+
+Added SW802 (TL3342F160QG, reviewed TL3342 footprint) between
+RK_RESET_N and GND. The exact native reset net now includes U801 AG38,
+RK809 U501 pin 67, R501, C513 and the switch. This is a shared reset:
+RK809 Rev 2.4 section 4.1.4, printed pages 30–31, states that externally
+pulling RESETB low in ON/SLEEP restarts the PMIC, subject to its reset
+configuration and input-voltage conditions. Firmware must preserve restart
+mode at 0xF4[7:6]=00; register-reset mode 01 resets rail defaults and is
+not a substitute for the intended complete restart. The RK3566 guide
+section 2.1.2 likewise documents the shared PMIC restart behavior.
+
+A future MCU sink must therefore request a processor/PMIC restart, rather
+than promise a CPU-only reset. STM32 PB2/pin 21 is currently unused
+(PB0/pin 19 is watchdog kick, PB1/pin 20 is power fault). No new MCU
+connection is claimed yet. Sink off-state leakage, saturated low level,
+pulse timing, and release after power sequencing remain to qualify.
+The existing PMU-domain pull-up stays on VCC3V3_PMU; no always-on
+pull-up was added. Switch operating-temperature limits remain applicable.
+Native checks and rendered inspection pass for the 142-component draft.
+Full appliance ERC remains 451 violations; reset/boot bench proof is absent.

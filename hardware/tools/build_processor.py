@@ -118,14 +118,15 @@ wire((350.52,347.98),(350.52,355.6),'boot-filter-ground')
 label('GND',350.52,355.6,'boot-filter-ground-label')
 switch_source = Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/Switch.kicad_sym').read_text()
 switch = block(switch_source,switch_source.index('(symbol "SW_Push"')).replace('(symbol "SW_Push"','(symbol "Switch:SW_Push"',1)
-properties=prop('Reference','SW801',355.6,241.3)+prop('Value','PROCESSOR RECOVERY',355.6,243.84)
-for key,val in {'Footprint':'Button_Switch_SMD:SW_SPST_TL3342','MPN':'TL3342F160QG','Manufacturer':'E-Switch','LCSC':'C2886898','Contact Rating':'12VDC 50mA','Operating Temperature':'-20 to +70 C','Qualification':'Manual Rockusb recovery request; hold through reset; not independent MaskROM override'}.items():
- properties+=prop(key,val,355.6,248.92,True)
-items.append(f'(symbol (lib_id "Switch:SW_Push") (at 355.6 248.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid("SW801")}") {properties} '+''.join(f'(pin "{n}" (uuid "{uid("SW801:"+n)}"))' for n in ['1','2'])+f' (instances (project "processor" (path "/{uid("root")}" (reference "SW801") (unit 1)))))')
-wire((340.36,248.92),(350.52,248.92),'recovery-switch-input')
-label('SARADC_BOOT_KEY',340.36,248.92,'recovery-switch-input-label')
-wire((360.68,248.92),(370.84,248.92),'recovery-switch-ground')
-items.append(f'(global_label "GND" (shape passive) (at 370.84 248.92 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("recovery-switch-ground-label")}"))')
+for ref,net,title,sy in [('SW801','SARADC_BOOT_KEY','PROCESSOR RECOVERY',248.92),('SW802','RK_RESET_N','PROCESSOR / PMIC RESET',172.72)]:
+ properties=prop('Reference',ref,355.6,sy-7.62)+prop('Value',title,355.6,sy-5.08)
+ for key,val in {'Footprint':'Button_Switch_SMD:SW_SPST_TL3342','MPN':'TL3342F160QG','Manufacturer':'E-Switch','LCSC':'C2886898','Contact Rating':'12VDC 50mA','Operating Temperature':'-20 to +70 C','Qualification':'Manual shared reset / PMIC restart' if ref == 'SW802' else 'Manual Rockusb recovery request; not independent MaskROM override'}.items():
+  properties+=prop(key,val,355.6,sy,True)
+ items.append(f'(symbol (lib_id "Switch:SW_Push") (at 355.6 {sy} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid("{ref}")}") {properties} '+''.join(f'(pin "{n}" (uuid "{uid(ref+":"+n)}"))' for n in ['1','2'])+f' (instances (project "processor" (path "/{uid("root")}" (reference "{ref}") (unit 1)))))')
+ wire((340.36,sy),(350.52,sy),ref+'-input')
+ label(net,340.36,sy,ref+'-input-label')
+ wire((360.68,sy),(370.84,sy),ref+'-ground')
+ items.append(f'(global_label "GND" (shape passive) (at 370.84 {sy} 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid(ref+"-ground-label")}"))')
 items.append(f'(text "INCOMPLETE PROCESSOR CAPTURE: all 565 balls present; documented grounds, logic/GPU and PMU supplies connected; circuitry incomplete.\\nPMIC controls: AJ37=I2C0 SCL, AK38=I2C0 SDA, 1P19=PMIC_SLEEP.\\n19 alternate roles and TVSS unresolved. No production footprint assigned.\\nIntegrated draft: CPU, DDR, analog/IO supplies and peripheral circuitry remain open." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
 (ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol} {cap} {resistor} {switch}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
 assert len(rail_balls) == 26
