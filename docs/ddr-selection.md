@@ -498,3 +498,24 @@ other endpoints until their circuits are captured. Thus U902 does not
 yet drive VDD_DDR_0V6. Explicit sheet note identifies the missing
 output/feedback/enable network. Native integration checks pass for
 239 components; enlarged render reviewed. No production readiness claim.
+
+## VDDQ enable network captured
+
+R907 20kR RC0603FR-0720KL/C105575 connects VCC_1V8 to
+DDR_VDDQ_EN; C960 100nF CL10B104KA8NNNC/C1590 shunts EN
+to ground, following reference values. Added R908 1MR
+RC0603FR-071ML/C105578 pull-down per Silergy's shutdown guidance
+for high-impedance driving sources. Both resistors 0603 +/-1%,
+0.1W/75V; capacitor 0603 X7R 25V. Native checks verify exact EN
+endpoint membership and rail/ground returns; enlarged render reviewed.
+Capture now 242 components.
+
+Nominal resistor divider makes the final EN level 1.7647V at 1.8V
+source, neglecting EN leakage. Charging time constant is 1.9608ms
+(20kR || 1MR with 100nF), reaching 1.5V around 3.72ms after an
+ideal source step. With its source open the 1MR pull-down gives
+100ms nominal time constant, so this is not a fast-off guarantee.
+When source is actively discharged, its impedance changes decay.
+Leakage, capacitor bias/tolerance, source ramp/discharge and input
+persistence require qualification; nominal timing is not sequencing proof.
+Switching output and feedback circuit remain absent.

@@ -62,6 +62,15 @@ add('C_Small','C955','10uF',139.7,225.08,0,'Capacitor_SMD:C_1206_3216Metric',{'M
 wire((100.16,222.54),(139.7,222.54),'u902-input-cap')
 wire((139.7,222.54),(139.7,207.01),'u902-input-source');label('3V3_MAIN',(139.7,207.01),180,'u902-input-label')
 wire((139.7,227.62),(139.7,238.76),'u902-cap-ground');label('GND',(139.7,238.76),180,'u902-cap-ground-label')
-items.append(f'(text "VDDQ REGULATOR INCOMPLETE: switching output, divider and enable circuitry missing." (at 35.56 193.04 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("u902-note")}"))')
+# Reference enable RC, plus application-note default-off pull-down.
+add('R_Small_US','R907','20kR',228.6,217.46,90,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-0720KL','Manufacturer':'Yageo','LCSC':'C105575','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
+wire((205.74,217.46),(226.06,217.46),'vddq-en-source');label('VCC_1V8',(205.74,217.46),0,'vddq-en-source-label')
+wire((231.14,217.46),(292.1,217.46),'vddq-en-common');label('DDR_VDDQ_EN',(292.1,217.46),180,'vddq-en-common-label')
+add('C_Small','C960','100nF',254,230.16,0,'Capacitor_SMD:C_0603_1608Metric',{'MPN':'CL10B104KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C1590','Voltage Rating':'25V','Dielectric':'X7R','Tolerance':'10%'})
+add('R_Small_US','R908','1MR',292.1,230.16,0,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-071ML','Manufacturer':'Yageo','LCSC':'C105578','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V','Qualification':'Default-off pull-down; leakage and shutdown timing qualification pending'})
+for x,key in [(254,'C960'),(292.1,'R908')]:
+ wire((x,217.46),(x,227.62),key+'-top');wire((x,232.7),(x,242.86),key+'-bottom')
+wire((254,242.86),(292.1,242.86),'vddq-en-ground');label('GND',(254,242.86),0,'vddq-en-ground-label')
+items.append(f'(text "VDDQ REGULATOR INCOMPLETE: switching output and divider missing; enable timing unqualified." (at 35.56 193.04 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("u902-note")}"))')
 items.append(f'(text "BUCK3: 1.5A rated, external FB reset mode, startup slot 3.\\nNominal 1.113V; ripple, load, thermal and shutdown qualification pending." (at 35.56 25.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
 (ROOT/'ddr-power.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A3") (title_block (title "DDR BUCK3 supply — DRAFT") (date "2026-10-04")) (lib_symbols '+symbol('L_Small')+symbol('C_Small')+symbol('R_Small_US')+ic+') '+' '.join(items)+')')
