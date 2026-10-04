@@ -11,7 +11,7 @@ with tempfile.TemporaryDirectory() as tmp:
     pins={(n.get('ref'),n.get('pin')) for n in net.findall('node')}
     assert pins=={('U201','43'),('R508','1')},pins
     nets={n.get('name'):{(v.get('ref'),v.get('pin')) for v in n.findall('node')} for n in tree.findall('./nets/net')}
-    assert nets['3V3_MAIN']=={('C602','1'),('C603','1'),('L601','2'),('R601','1'),('U601','5'),('U501','22'),('U501','4'),('C519','1'),('C524','1')},nets['3V3_MAIN']
+    assert nets['3V3_MAIN']=={('C602','1'),('C603','1'),('L601','2'),('R601','1'),('U601','5'),('U501','22'),('U501','4'),('C519','1'),('C524','1'),('U501','57'),('C538','1')},nets['3V3_MAIN']
     recovery=next(p for p in nets.values() if ('U201','4') in p)
     assert not recovery & nets['3V3_MAIN']
     assert ('U601','2') in nets['5V_MAIN'] and ('U501','66') in nets['5V_MAIN']

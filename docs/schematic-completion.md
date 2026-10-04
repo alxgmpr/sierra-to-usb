@@ -31,8 +31,8 @@ power interruption and unattended recovery remain separate qualification work.
 Appliance capture checker exports the native XML and verifies 114 components,
 recovery/main rail separation, PMIC restart, main 5 V enable/PG, bootstrap,
 soft start, input bypass and output-filter connectivity. It is not a full-appliance
-checker. The last full ERC run reported 42 violations: 28 unconnected pins,
-8 undriven signal pins and 6 undriven power pins. No exclusions added.
+checker. The last full ERC run reported 41 violations: 28 unconnected pins,
+8 undriven signal pins and 5 undriven power pins. No exclusions added.
 The processor, RAM, storage, Ethernet, PoE and modem circuits are still absent.
 
 The dated sections below preserve intermediate research and capture decisions;
@@ -969,3 +969,14 @@ PMIC components (114 in appliance). The affected circuits were rendered and
 inspected. This follows reference nominal values; effective capacitance across
 combined bias/temperature/aging, charge-pump startup and disabled-codec policy
 remain qualification/integration checks.
+
+## 2026-10-04 correction: VCC8 operating range
+
+The prior VCC8-to-BUCK5 capture followed the generic Figure 1-2 topology
+without accounting for our BUCK5's 1.8 V output. RK809 Rev 2.4 DC
+Characteristics, Switch2 table on page 25, specifies **2.7–5 V** input.
+That contradicts using our 1.8 V rail even though a generic reference labels
+the source BUCK5. VCC8 pin 57 and C538 now connect to **3V3_MAIN**.
+This correction supersedes the earlier VCC8 entry. Native checks remove
+VCC8/C538 from VCC_1V8 and require them on 3V3_MAIN. SWOUT2 remains
+unused; any later use passes through 3.3 V and requires startup/load review.

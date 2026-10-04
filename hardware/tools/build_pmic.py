@@ -223,10 +223,10 @@ items[-1]=items[-1].replace('(justify left)','(justify right)')
 add('Device','C_Small','C537','10uF / 50V',368.3,290.83,fp='Capacitor_SMD:C_1206_3216Metric',fields={'MPN':'CL31B106KBHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C89632','Dielectric':'X7R','Qualification':'Speaker/charge-pump supply bypass; unused audio policy pending'})
 wire((368.3,288.29),(368.3,278.13));label('5V_MAIN',(368.3,278.13))
 wire((368.3,293.37),(368.3,300.99));power('GND',(368.3,300.99),'#PWR560')
-# Figure 1-2 powers SWOUT2 input VCC8 from BUCK5; output remains unused.
-a=units[1]['57'];wire(a,(a[0],50.8));wire((a[0],50.8),(134.62,50.8));label('VCC_1V8',(134.62,50.8))
+# Switch2 electrical range is 2.7–5 V: use main 3.3 V, not our 1.8 V BUCK5.
+a=units[1]['57'];wire(a,(a[0],50.8));wire((a[0],50.8),(134.62,50.8));label('3V3_MAIN',(134.62,50.8))
 add('Device','C_Small','C538','1uF / 25V',154.94,104.14,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
-wire((154.94,101.6),(154.94,93.98));label('VCC_1V8',(154.94,93.98))
+wire((154.94,101.6),(154.94,93.98));label('3V3_MAIN',(154.94,93.98))
 wire((154.94,106.68),(154.94,114.3));power('GND',(154.94,114.3),'#PWR561')
 # RK809 Figure 1-2: 2.2 uF flying capacitor and negative-rail bypass.
 for pin,name in [('36','PMIC_CPN'),('37','PMIC_CPP')]:
