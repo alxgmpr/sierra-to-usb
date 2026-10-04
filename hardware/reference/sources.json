@@ -317,5 +317,19 @@
     "url": "https://github.com/rockchip-linux/rkbin/blob/3e288fe814e059dd06833495f845cab04ac20a5c/RKBOOT/RK3566MINIALL.ini",
     "sha256": "677bc9a5340e34f21c41b89d5ff30e70b7bef32ab175fd50103eb5a360e26890",
     "retrieved": "2026-10-04"
+  },
+  {
+    "file": "micron-ddr-native-candidate.kicad_sym",
+    "url": "https://www.lcsc.com/product-detail/ddr-sdram_micron-tech-mt53e512m32d1zw-046-wt-b_C5330500.html",
+    "sha256": "accfaebbc685c1a62fc3febca82ac19a262c3881ea1e6b93a95c025de764fae7",
+    "retrieved": "2026-10-04",
+    "note": "easyeda2kicad v1.0.1 native C5330500 candidate, unregistered and unqualified"
+  },
+  {
+    "file": "micron-ddr-native-candidate.kicad_mod",
+    "url": "https://www.lcsc.com/product-detail/ddr-sdram_micron-tech-mt53e512m32d1zw-046-wt-b_C5330500.html",
+    "sha256": "456df940f55b78b3b139fae8374faf8fd63fcfaadb84bbfefe893724421166c2",
+    "retrieved": "2026-10-04",
+    "note": "easyeda2kicad v1.0.1 native C5330500 candidate, unregistered and unqualified"
   }
 ]

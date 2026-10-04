@@ -89,3 +89,17 @@ Table 160 (printed page 214) gives LPDDR4X ranges: VDD1 1.70–1.95V,
 VDD2 1.06–1.17V and VDDQ 0.57–0.65V, nominal 1.8/1.1/0.6V.
 This removes the public voltage-data gap, but current/sequence review,
 exact native model audit and WDQS classification remain pending.
+
+## Native standard-substrate candidate preserved
+
+C5330500 resolves exactly to MT53E512M32D1ZW-046 WT:B, the standard
+substrate option. Its native EasyEDA symbol and footprint were converted
+with easyeda2kicad v1.0.1 and preserved unregistered in hardware/reference.
+A structural check found 200 unique symbol ball identifiers, matching all
+200 footprint pad identifiers. The native pin inventory is saved as CSV.
+This checks internal consistency only, not the manufacturer ball map.
+The footprint's name references MT53D512M32D2DS; package identity must
+therefore be established from geometry and ball map, not its library name.
+The single oversized symbol and unspecified electrical pin types require
+audit and readable grouping before schematic use. No production footprint
+or RAM symbol has been registered. Indexed stock of 38 is not reserved.
