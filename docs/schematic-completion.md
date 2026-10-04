@@ -368,3 +368,26 @@ The manufacturer block diagram identifies VREF as an internal reference
 node and the codec register identifies VCC_1P8A as an internal LDO
 voltage; these support the remaining electrical-role review but do not
 yet resolve every analog/switching node.
+
+## PMIC footprint and reset-type progress
+
+Official installed footprint candidate:
+`Package_DFN_QFN:ArtInChip_QFN-68-1EP_7x7mm_P0.35mm_EP5.49x5.49mm_ThermalVias`.
+Its 7 mm body, 0.35 mm pitch, 5.49 mm EP and 1-68 counterclockwise
+numbering plus EP69 match Rockchip Rev 2.4 package dimensions. Lead
+pads are 0.55 x 0.25 mm, centered 3.30 mm from origin, with 0.10 mm
+adjacent copper gap. The EP is split into nine paste windows, and
+includes 0.20 mm-drill thermal vias. Render inspected. This is an
+equivalent-package candidate, not a vendor-specific assembly release;
+via treatment, stencil and board thermal design remain open. Its
+installed equivalent-envelope STEP model is referenced by the library.
+
+Rev 2.4 page 27 explicitly lists CLK32K, RESETB, INT and SDA as
+open-drain outputs. RESETB type is corrected to open_collector in the
+grouped draft; SDA stays bidirectional to represent both I2C directions.
+VREF is now proposed power_out from the internal reference generator;
+its name triggers the KLC generic VREF-input heuristic, so that finding
+requires a documented function-based review rather than blindly changing
+it to an input. Six other analog roles remain unresolved. LRCLK/BCLK
+are proposed bidirectional pending I2S-mode review. The active schematic
+still does not contain this PMIC.

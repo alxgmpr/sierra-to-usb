@@ -12,8 +12,8 @@ Pin,CSE Name,Proposed Type,Review Status
 11,VCC1,power_in,Proposed from documented function; review before integration
 12,SW1,power_out,Proposed from documented function; review before integration
 13,FB1,input,Proposed from documented function; review before integration
-14,LRCLK,input,Proposed from documented function; review before integration
-15,BCLK,input,Proposed from documented function; review before integration
+14,LRCLK,bidirectional,I2S framing clock supports interface clock direction review
+15,BCLK,bidirectional,I2S bit clock supports interface clock direction review
 16,MCLK,input,Proposed from documented function; review before integration
 17,SDI,input,Proposed from documented function; review before integration
 18,SDO/PDMDATA,output,Proposed from documented function; review before integration
@@ -44,7 +44,7 @@ Pin,CSE Name,Proposed Type,Review Status
 43,MIC1P,input,Proposed from documented function; review before integration
 44,VCC_1P8A,passive,Internal analog 1.8V node
 45,VCC_RTC,power_in,Proposed from documented function; review before integration
-46,VREF,passive,Internal reference node
+46,VREF,power_out,Internal reference generator block; externally bypassed reference node
 47,GNDREF,power_in,Proposed from documented function; review before integration
 48,VCC_1P8D,passive,Internal digital 1.8V node
 49,SLEEP,input,Proposed from documented function; review before integration
@@ -65,6 +65,6 @@ Pin,CSE Name,Proposed Type,Review Status
 64,FB4,input,Proposed from documented function; review before integration
 65,SW4,power_out,Proposed from documented function; review before integration
 66,VCC4,power_in,Proposed from documented function; review before integration
-67,RESETB,output,Proposed from documented function; review before integration
+67,RESETB,open_collector,Rev 2.4 electrical table lists RESETB open drain
 68,CLK32K,open_collector,Proposed from documented function; review before integration
 69,EPAD,power_in,Proposed from documented function; review before integration
