@@ -53,3 +53,21 @@ from the older TPS56637 effective-capacitance table and must be checked
 directly. Current-limit and MODE selection, exact inductor, capacitors,
 upstream supervisor enable and full load/thermal qualification remain open.
 Source: https://www.ti.com/lit/ds/symlink/tps56837.pdf.
+
+## Imported footprint audit
+
+Inspected TI RPA0010A package and land-pattern drawings, PDF pages
+31–32 (drawing 4224047/A 01/2018). Imported model is rotated relative
+to TI view, which is permissible, but SW pad 6 is 1.8 x 0.25 mm rather
+than the recommended 1.7 x 0.25 mm. Its courtyard is essentially the
+3 x 3 mm body boundary and does not enclose all pad copper; it also
+references an absent temporary-directory 3D model. VIN pad 8 uses a
+custom comb polygon whose copper and paste need separate review.
+These prevent direct registration as a fabrication-ready footprint.
+
+Generate a local RPA0010A footprint from the TI land pattern, preserve
+10 logical pins (no extra exposed-pad number), and check the large
+VIN/PGND copper plus manufacturer stencil example separately. Do not
+substitute a generic QFN-10 with a central exposed pad. Circuit capture
+can proceed after local footprint/symbol review; assembly and thermal
+qualification remain independent.
