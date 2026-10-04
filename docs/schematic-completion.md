@@ -1297,3 +1297,19 @@ The rendered A2 sheet was inspected: banks fit in the open areas without
 covering processor units or the title block. Appliance count is now
 **125 components**. CPU, DDR, storage, Ethernet, PoE, modem and other
 processor bypass circuits remain incomplete.
+
+## 2026-10-04 PMIC interrupt integration
+
+PMIC_INT_N now joins U501 open-drain INT pin 7, R504 10 kR pull-up
+and U801 GPIO0_A3 ball 1R19. NanoPi R3S reference sheet 8 uses this
+ball for its PMIC interrupt, and RK3566 datasheet mux Table 2-3 places
+GPIO0_A3 in PMUIO1. That domain and the pull-up are both supplied by
+the selected VCC3V3_PMU rail. Exact net membership is verified in the
+combined appliance netlist; no additional pull-up was added.
+
+Firmware must keep GPIO0_A3 as an interrupt input and configure the
+PMIC interrupt polarity/trigger and wake policy to match RK809 behavior.
+Off-state leakage, retention and interrupt timing remain system checks.
+The processor render was inspected with adjacent PMIC_SLEEP and
+PMIC_INT_N labels distinct. Component count remains 125. Full native
+ERC reports 461 violations, with unfinished circuitry still visible.

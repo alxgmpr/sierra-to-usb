@@ -47,6 +47,7 @@ with tempfile.TemporaryDirectory() as tmp:
     assert {('C706','2'),('C707','2')} <= nets['GND']
     assert nets['PMIC_I2C_SCL']=={('U501','1'),('R502','2'),('U801','AJ37')}
     assert nets['PMIC_I2C_SDA']=={('U501','2'),('R503','2'),('U801','AK38')}
+    assert nets['PMIC_INT_N']=={('U501','7'),('R504','2'),('U801','1R19')}
     assert nets['RK_RESET_N']=={('U501','67'),('R501','2'),('C513','1'),('U801','AG38')}
     assert nets['PMIC_SLEEP']=={('U501','49'),('R505','1'),('U801','1P19')}
     assert len({p for r,p in nets['GND'] if r=='U801'})==187

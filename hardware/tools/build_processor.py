@@ -33,7 +33,7 @@ symbol = re.sub(r'("Footprint"\s+)"[^"]*"', r'\1""', symbol, count=1)
 (ROOT / 'ProcessorDraft.kicad_sym').write_text('(kicad_symbol_lib (version 20211014) (generator eeschema) ' + symbol.replace('(symbol "ProcessorDraft:RK3566"','(symbol "RK3566"',1) + ')\n')
 items = []
 ground_balls = set()
-control_nets = {'AJ37':'PMIC_I2C_SCL','AK38':'PMIC_I2C_SDA','1P19':'PMIC_SLEEP','AG38':'RK_RESET_N'}
+control_nets = {'AJ37':'PMIC_I2C_SCL','AK38':'PMIC_I2C_SDA','1P19':'PMIC_SLEEP','AG38':'RK_RESET_N','1R19':'PMIC_INT_N'}
 connected_controls = set()
 rail_balls = {}
 for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),(5,76.2,304.8),(6,279.4,304.8),(7,444.5,228.6),(8,444.5,330.2)]:
