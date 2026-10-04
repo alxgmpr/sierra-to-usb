@@ -4,9 +4,10 @@
 quotation, or selected PoE class.** Packet-processor choice and exact modem SKU
 remain open. One modem is installed; do not sum two mutually exclusive cards.
 
-**Scope update:** external application processors are now excluded by the user.
-The SoC columns and 47.50 W calculation below are retained as explicit rejected-
-alternative comparisons, not as the chosen design. RM551E-GL cannot inherit the EM9190/RM520N allocation. EM9293 PTS r1
+**Scope update, 2026-09-29:** RK3566 Linux processing is now the selected
+evaluation direction. The 12 W processor allowance and 47.50 W calculation
+below are still planning estimates, not RK3566 measurements or a qualified
+PoE budget. RM551E-GL cannot inherit the EM9190/RM520N allocation. EM9293 PTS r1
 table 3-2 lists preliminary 3 A peak / 2.8 A continuous at nominal 3.3 V;
 these older preliminary limits require current-revision confirmation. A final worst-case
 power budget for the requested set is therefore still blocked by exact model and

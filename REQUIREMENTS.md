@@ -91,3 +91,18 @@ The user reopened Linux packet processors for consideration, specifically asking
 for sourceable, manufacturable Rockchip options. This authorizes comparison, not
 a final part selection or restoration of retired designs. All four modem models
 remain in scope. See `docs/rockchip-options.md`; integrated CAD remains on hold.
+
+## Linux packet processor direction — 2026-09-29
+
+The user has now directed qualification of a Rockchip Linux processor. **RK3566
+is the selected processor candidate for evaluation**, paired with a PCIe
+RTL8125BG-CG 2.5GbE controller and the independent STM32 recovery subsystem.
+This supersedes the MCU-only constraint for the packet path. The MCU remains
+responsible for independent supervision and recovery. All four requested modems
+remain in scope. See [rockchip-qualification.md](docs/rockchip-qualification.md).
+
+The processor's documented simultaneous USB3-host and PCIe-root-complex
+interfaces qualify the topology for schematic planning. They do not establish
+measured multi-gigabit WAN forwarding, exact modem compatibility, a released
+memory/PMIC/storage BOM, PoE class, or safe universal M.2 socket. Detailed
+integrated capture remains gated by those exact electrical and software choices.

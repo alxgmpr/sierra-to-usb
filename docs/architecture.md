@@ -1,15 +1,15 @@
 # Packet-path feasibility — 2026-09-28
 
-**Decision gate: blocked for the complete requested modem set.** The user has
-confirmed MCU-only and multi-gigabit forwarding. An external Linux/application
-processor is excluded. Requested models are RM520N-GL, RM551E-GL, EM9190, and
-EM9293 (confirmed by the user).
+**Historical MCU-only analysis, superseded for processor selection on
+2026-09-29.** The user directed Rockchip Linux qualification, and RK3566 is now
+the selected evaluation candidate; see [rockchip-qualification.md](rockchip-qualification.md).
+The exact four-modem product qualification remains open. Requested models are
+RM520N-GL, RM551E-GL, EM9190, and EM9293.
 Neither RP2350 nor STM32N657A0 provides a documented multi-gigabit path for
-EM919x. A Linux USB 3 host plus a 2.5GbE controller is a feasible interface
-alternative for both vendors, but the user has excluded it. No modem / firmware
-combination has been tested or qualified by this project. The user confirmed
-**retain all four models and hold integration**; no Quectel-only scope change
-is authorized.
+EM919x. A Linux USB 3 host plus a 2.5GbE controller is the current interface
+direction for both vendors. No modem / firmware combination has been tested or
+qualified by this project. All four models remain in scope; detailed integration
+still requires exact electrical choices and modem evidence.
 
 ![Packet-path and power-domain comparison](packet-path.svg)
 
@@ -46,7 +46,7 @@ The G0 schematic milestone is a reset/watchdog subsystem, not proof of this AT p
 | RM551E-GL offload | Candidate modem RC → supported PCIe Ethernet controller | Exact production hardware design, NIC-driver support and firmware data-call behavior not established from an accessible manufacturer integration guide. Do not copy RM520 commands or qualify engineering samples from forum anecdotes. |
 | EM9190 / EM9191 offload | Would require modem RC and a modem-resident NIC driver/router | **Not established.** Manufacturer PTS r5 §1.3 assigns module EP / host RC. No documented RTL8125-hosting Ethernet mode found. Two endpoints plus wires or a PCIe switch do not supply a host. |
 | EM9293 offload | Modem PCIe Gen3 x1 EP → external RC required | **Not established.** EM92XX PTS r1 §1.3 explicitly assigns EP/RC roles; §3.3 requires USB3 support and says USB2 is not commercially supported. No documented modem-resident NIC driver/router found. |
-| Common external packet processor | Either modem USB device → USB 3 host → Linux network stack → 2.5GbE MAC/PHY | **Excluded by user: MCU-only.** Feasible interface alternative, not a selected architecture. NXP LS1028A documents suitable host/network resources. |
+| Common external packet processor | Either modem USB device → USB 3 host → Linux network stack → PCIe 2.5GbE controller | **RK3566 selected for evaluation on 2026-09-29.** See [processor qualification](rockchip-qualification.md); no throughput or modem tuple has passed yet. |
 
 Manufacturer sources:
 
@@ -142,10 +142,11 @@ qualification. Record ATI, firmware, PRI, USB VID/PID/composition, module SKU an
 hardware revision, carrier, SIM profile, host kernel/driver and image hash for each
 tested configuration. No support label until cold boot, reattach and traffic pass.
 
-## Smallest requirement changes
+## Historical requirement alternatives before RK3566 selection
 
 1. Retain both vendors and multi-gigabit target: a packet-processing SoC with USB3
-   is an interface-feasible alternative, but **the user rejected this direction**.
+   is an interface-feasible alternative; **the user selected this direction on
+   2026-09-29 for RK3566 evaluation**.
 2. Retain MCU-only: qualify one Quectel offload combination and explicitly remove
    Sierra support. This does **not** meet the current dual-vendor requirement.
 3. Retain low-end MCU forwarding: lower throughput substantially and still obtain

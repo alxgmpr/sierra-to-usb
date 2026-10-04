@@ -1,9 +1,11 @@
 # Rockchip Linux host comparison
 
-2026-09-28. User has reopened Linux as an option because MT7981B sourcing is a
-concern. This is an alternatives study, not selection of a production architecture
-or authorization to restore the retired design. All four modem models remain in
-scope. Integrated schematic capture is still on hold.
+2026-09-28 alternatives study, retained for comparison. On 2026-09-29 the user
+directed Rockchip Linux processor qualification; **RK3566 is now the selected
+evaluation candidate**, as recorded in [rockchip-qualification.md](rockchip-qualification.md).
+It is not a production architecture release. All four modem models remain in
+scope. Detailed integrated capture still requires exact RAM, PMIC, NIC and modem
+interface evidence.
 
 ## Recommended custom-board candidate
 
@@ -106,7 +108,7 @@ power cycling. CPU/USB/IRQ performance with NAT and real modem traffic must pass
 2.5GbE throughput test; interface rates alone are not throughput proof. Do not
 budget line-rate SQM/VPN/security inspection without separate performance tests.
 
-Recommendation: use RK3566 + RTL8125 as the custom-board candidate; test modem and
+Decision: use RK3566 + RTL8125 as the custom-board evaluation candidate; test modem and
 Linux behavior on existing hardware first. At small quantities, compare a firm SoM
 quote against the entire assembled custom circuit plus engineering/re-spin cost.
 At higher quantities, seek traceable production memory supply before asserting the
