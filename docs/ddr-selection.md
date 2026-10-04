@@ -297,3 +297,17 @@ or PWR_FLAG is used to claim a working supply. ZQ and VDDQ enlarged
 renders were visually reviewed. Integrated capture checks pass for
 176 components; full ERC reports 533 violations. The drop in ERC count
 reflects captured wiring, not completed supply or functional qualification.
+
+## Processor-to-RAM bus mapping prepared
+
+Rendered NanoPi R3S sheet 6 and compared its LPDDR4 channel/function
+labels with our audited RK3566 ball table. The reference explicitly forbids
+LPDDR4 data-sequence swaps; command/address sequences also cannot swap.
+Prepared ddr-bus-map.csv for 65 exact processor/RAM endpoint pairs:
+32 DQ, four DMI, eight differential strobe pins, twelve CA, four clock
+pins, two CS0, two CKE0 and reset. Both endpoint sets are unique.
+DQS t/c map respectively to P/N; DMI maps to the SoC DM function.
+No lane, bit or channel permutation is introduced. ODT controls retain the
+previous LPDDR4X-specific valid-level policy; single-rank CS1/CKE1 are
+not mapped to the RAM's NC balls. Physical bus wiring and unused SoC
+pin policy remain the next capture steps.
