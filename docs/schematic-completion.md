@@ -409,3 +409,14 @@ VREF still triggers the KLC name heuristic; its function-based exception
 is documented here, not a blanket exclusion of electrical-type checking.
 The registered symbol remains subject to final render and library checks
 and does not constitute captured PMIC circuitry.
+
+Registered PMIC symbol final four-unit renders inspected on 2026-10-03:
+no text/pin overlap found. `python3 hardware/tools/check_pmic_symbol.py`
+passes 69 unique pin inventory, current manufacturer names, unit count,
+open-drain reset/interrupt/clock types, I2C direction, native alternate
+and symbol-to-footprint numbered pad parity. Only CPP/CPN are passive.
+Official KLC checks on the registered symbol leave the documented VREF
+name heuristic; metadata description was corrected separately. Symbol
+library version matches the installed checker schema. Recovery native
+ERC and all critical net checks still pass after the library update
+(32 components); PMIC circuitry remains uncaptured.
