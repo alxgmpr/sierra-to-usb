@@ -402,3 +402,18 @@ Sheet 7 also identifies a SY8089A 0.6V buck, 2.2uH inductor,
 driven by VCC1V8_DDR. Capture requires exact regulator variant/model,
 feedback accuracy, load and sequence checks. Its generic dual-rank RAM
 symbol is not authority to reconnect our audited single-rank NC balls.
+
+## RAM-local bypass captured
+
+Captured all fifty planned capacitors C905-C954 directly in ram.kicad_sch,
+with separate visible banks on VCC_1V8, VDD_DDR_1V1 and VDD_DDR_0V6.
+Used the already selected exact Samsung 25V X7R parts: 100nF
+CL10B104KA8NNNC/0603, 10uF CL31B106KAHNNNE/1206 and 22uF
+CL32B226KAJNNNE/1210. Each capacitor records its reference-design
+source designator. Native checks verify all fifty rail and ground
+endpoints, values, MPNs and ratings, while retaining the exact processor/
+RAM bus assertions. Standalone RAM SVG exported and visually reviewed.
+Capture now has 237 components. Larger packages remain a placement/PDN
+qualification gap versus the reference 0201/0402/0603 implementation;
+nominal capture is not physical equivalence. The 0.6V regulator remains
+absent, and RAM VDD1 source/filter/sequence review is still required.

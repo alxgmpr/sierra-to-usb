@@ -76,4 +76,26 @@ items.append(f'(symbol (lib_id "Device:R_Small_US") (at 236.22 215.9 90) (unit 1
 wire((238.76,215.9),(259.08,215.9),'zq-output')
 wire((233.68,215.9),(223.52,215.9),'zq-vddq')
 items.append(f'(global_label "VDD_DDR_0V6" (shape passive) (at 223.52 215.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid("zq-vddq-label")}"))')
-(root/'ram.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator "eeschema") (uuid "{uid("root")}") (paper "A2") (title_block (title "Micron RAM — DRAFT: supplies and DDR bus incomplete") (date "2026-10-04")) (lib_symbols {symbol} {resistor}) '+''.join(items)+')')
+# RAM-local nominal banks from the visually audited reference inventory.
+capacitor=block(raw,raw.index('(symbol "C_Small"')).replace('(symbol "C_Small"','(symbol "Device:C_Small"',1)
+plan=list(__import__('csv').DictReader((root/'reference/ram-local-bypass-plan.csv').open()))
+parts={'100nF':('CL10B104KA8NNNC','C1590','C_0603_1608Metric'),'10uF':('CL31B106KAHNNNE','C14860','C_1206_3216Metric'),'22uF':('CL32B226KAJNNNE','C309062','C_1210_3225Metric')}
+for bank,net,x0,y in [(0,'VCC_1V8',355.6,228.6),(1,'VDD_DDR_1V1',76.2,152.4),(2,'VDD_DDR_0V6',76.2,304.8)]:
+ rows=[r for r in plan if r['rail']==net];xs=[round(x0+20.32*i,4) for i in range(len(rows))]
+ for x,row in zip(xs,rows):
+  ref=row['reference'];value=row['value'];mpn,lcsc,fp=parts[value]
+  properties=prop('Reference',ref,x+5.08,y-1.27)+prop('Value',value,x+5.08,y+1.27)
+  for k,v in {'MPN':mpn,'Manufacturer':'Samsung Electro-Mechanics','LCSC':lcsc,'Footprint':'Capacitor_SMD:'+fp,'Voltage Rating':'25V','Dielectric':'X7R','Tolerance':'10%','Qualification':'RAM local bypass nominal reference value; effective capacitance, placement and PDN review pending','Source Reference':row['source_reference']}.items():
+   properties+=f'(property "{k}" "{v}" (at {x} {y} 0) (effects (font (size 1.27 1.27)) (hide yes)))'
+  items.append(f'(symbol (lib_id "Device:C_Small") (at {x} {y} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(ref)}") {properties} (instances (project "ram" (path "/{uid("root")}" (reference "{ref}") (unit 1)))))')
+  wire((x,y-2.54),(x,y-10.16),ref+'-top');wire((x,y+2.54),(x,y+10.16),ref+'-bottom')
+ for i in range(len(xs)-1):
+  wire((xs[i],y-10.16),(xs[i+1],y-10.16),net+'-local-top-'+str(i))
+  wire((xs[i],y+10.16),(xs[i+1],y+10.16),net+'-local-bottom-'+str(i))
+ for x in xs[1:-1]:
+  for yy in [y-10.16,y+10.16]:
+   items.append(f'(junction (at {x} {yy}) (diameter 0) (color 0 0 0 0) (uuid "{uid(net+str(x)+str(yy))}"))')
+ items.append(f'(global_label "{net}" (shape passive) (at {xs[0]} {y-10.16} 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid(net+"-local-label")}"))')
+ ground(xs[0],y+10.16,net+'-local-ground')
+ items.append(f'(text "{net}: RAM-local bypass; nominal reference values. Physical PDN qualification pending." (at {xs[0]} {y-20.32} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid(net+"-local-note")}"))')
+(root/'ram.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator "eeschema") (uuid "{uid("root")}") (paper "A2") (title_block (title "Micron RAM — DRAFT: supplies and DDR bus incomplete") (date "2026-10-04")) (lib_symbols {symbol} {resistor} {capacitor}) '+''.join(items)+')')
