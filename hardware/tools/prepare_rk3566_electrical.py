@@ -14,6 +14,10 @@ pattern = r'\(pin (\w+) (\w+).*?\(name "([^"]+)".*?\(number "([^"]+)"[^\n]*\n   
 
 def interface_type(name):
     function = name.split('/')[0]
+    if function.startswith(('EBC_', 'VOP_BT1120_', 'VOP_BT656_', 'ETH1_REFCLKO_25M')) or function in {'ISP_FLASHTRIGOUT', 'ISP_PRELIGHT_TRIG'}:
+        return 'output'
+    if function == 'ISP_FLASH_TRIGIN':
+        return 'input'
     if function in {'ARM_JTAG_TCK', 'MCU_JTAG_TCK', 'MCU_JTAG_TRSTn', 'MCU_JTAG_TMS', 'MCU_JTAG_TDI', 'FLASH_RDY'}:
         return 'input'
     if function == 'ARM_JTAG_TMS' or function.startswith(('FSPI_', 'HDMITX_')) or function == 'HDMI_TX_HPDIN':
@@ -130,7 +134,7 @@ def transform(match):
             direction = 'power_in' if shorthand else interface_type(alternate)
             alternate_types[alternate] = direction
             alternate_rows.append({'ball': ball, 'function': alternate, 'electrical_type': direction,
-                                   'evidence': 'Direction review pending' if direction == 'unspecified' else 'RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; shared supply alias'})
+                                   'evidence': 'Direction review pending' if direction == 'unspecified' else 'RK3566 Rev 1.2 Table 2-4; FSPI data guide Table 2-7; shutdown/sleep guide 2.2; video guide Tables 2-30 through 2-32; Ethernet guide Table 2-19; shared supply alias'})
         result = result[:-1] + ''.join(f'(alternate "{n}" {alternate_types[n]} line)' for n in alternates) + ')'
     return result
 

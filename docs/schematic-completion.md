@@ -1117,3 +1117,25 @@ bidirectional. A root-complex NIC reset output must use a reviewed GPIO
 output configuration rather than silently repurposing the input PERST mux.
 Remaining alternate review includes flash, EBC/VOP, debug, PMIC sleep and
 thermal-shutdown controls, plus the independent TVSS primary-pin question.
+
+## 2026-10-04 flash, debug, shutdown and video alternate review
+
+The unregistered native derivative retains all 565 balls and 745 selectable
+alternates. Datasheet Rev 1.2 Table 2-4 resolves ARM SWD, MCU JTAG, NAND
+and HDMI control directions. HDMI_TX_HPDIN is corrected from input to
+bidirectional, matching the manufacturer table. FSPI data uses hardware-guide
+Table 2-7 because the datasheet direction column conflicts with its own
+“data inout” description. FSPI clocks and chip selects retain the table's
+bidirectional capability rather than assuming a fixed host-only direction.
+
+The hardware guide identifies TSADC_SHUT and PMIC_SLEEP as processor
+outputs. Tables 2-30 through 2-32 resolve BT1120, BT656 and EBC outputs;
+Table 2-19 resolves ETH1_REFCLKO_25M output. ISP flash/prelight outputs
+and flash-trigger input follow datasheet Table 2-4.
+
+There are now **19 unspecified alternate instances** and one unspecified
+primary pin, TVSS. Unresolved alternates include AVS, audio PWM, SATA
+controls, GPU power enable, FLASH_WPn, ETH0 clock, test clock and VOP PWM.
+No processor has been added to the appliance schematic yet. All eight
+units export successfully through native KiCad; functional grouping,
+geometry and footprint review remain prerequisites for active capture.
