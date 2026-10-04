@@ -60,7 +60,7 @@ def wire(a,b):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
 def label(name,p):
- if name in {'5V_MAIN','ISO_12V'}:
+ if name in {'5V_MAIN','ISO_12V','MCU_MAIN5V_EN'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("global"+name+str(p))}"))');return
  items.append(f'(label "{name}" (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "{uid("label"+name+str(p))}"))')
 def power(name,p,ref):add('power',name,ref,name,*p)
@@ -99,9 +99,17 @@ for ref,x in [('C703',210.82),('C704',236.22),('C705',261.62)]:
  wire((x,101.6),(x,91.44));wire((x,106.68),(x,116.84))
 wire((210.82,91.44),(261.62,91.44));junction((236.22,91.44));wire((236.22,91.44),(236.22,83.82));label('ISO_12V',(236.22,83.82))
 wire((210.82,116.84),(261.62,116.84));junction((236.22,116.84));power('GND',(236.22,116.84),'#PWR705')
+# Recovery MCU controls EN; external pulldown holds EN low with the GPIO high impedance.
+add('Device','R_Small_US','R704','1kR',66.04,68.58,angle=90,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-071KL','Manufacturer':'Yageo','LCSC':'C22548','Tolerance':'1%'})
+items[-1]=re.sub(r'(\(property "Reference" "R704" \(at )[^)]*',r'\g<1>66.04 60.96 90',items[-1])
+items[-1]=re.sub(r'(\(property "Value" "1kR" \(at )[^)]*',r'\g<1>66.04 63.5 90',items[-1])
+wire((63.5,68.58),(53.34,68.58));label('MCU_MAIN5V_EN',(53.34,68.58));items[-1]=items[-1].replace('(at 53.34 68.58 0)','(at 53.34 68.58 180)').replace('justify left','justify right')
+wire((68.58,68.58),(76.2,68.58));wire((76.2,68.58),(76.2,71.12));wire((76.2,71.12),(88.9,71.12));wire((76.2,71.12),(40.64,71.12));junction((76.2,71.12))
+add('Device','R_Small_US','R705','10kR',40.64,104.14,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%'})
+wire((40.64,71.12),(40.64,101.6));wire((40.64,106.68),(40.64,114.3));power('GND',(40.64,114.3),'#PWR706')
 note('MAIN 5 V CONTROL DRAFT — INCOMPLETE',(35.56,25.4),1.524)
 note('MODE: 500 kHz; high valley current limit option. Feedback: 4.992 V nominal.',(35.56,132.08))
-note('Missing: inductor/output bank, EN and PG circuits.',(35.56,139.7))
+note('Missing: inductor/output bank and PG circuits.',(35.56,139.7))
 note('No 5 V power source exists on this sheet yet. Regulator footprint awaits review.',(35.56,147.32))
 (ROOT/'main5v.kicad_sch').write_text('(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A4") (lib_symbols '+''.join(used.values())+') '+''.join(items)+')\n')
-print('Generated main 5 V control draft with nine exact-MPN components.')
+print('Generated main 5 V control draft with eleven exact-MPN components.')

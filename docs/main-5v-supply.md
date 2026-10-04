@@ -201,3 +201,32 @@ from the main rails. Rendered both affected sheets and corrected the
 input-bank field overlap and global-label direction. Total: 101 parts.
 
 Full appliance ERC: 60 violations, {'pin_not_connected': 41, 'pin_not_driven': 11, 'power_pin_not_driven': 8}. No exclusions added.
+
+## Supervisor enable captured
+
+MCU_MAIN5V_EN is assigned to U201 PB6/pin 45, verified against ST
+DS13560 Figure 5 LQFP48 pinout. It drives U701 EN/pin 1 through
+R704 RC0603FR-071KL (1 kOhm, 1%, 0603, C22548). R705
+RC0603FR-0710KL (10 kOhm, 1%, 0603, C98220) pulls EN to GND.
+High enables; low or high-impedance GPIO is intended to disable.
+Firmware must configure the output low before enabling main power.
+The recovery MCU remains on its independent supply.
+
+An ideal 3.3 V GPIO gives 3.0 V at EN via the 1k/10k divider, above
+TI's 1.26 V maximum turn-on threshold. With high-impedance GPIO,
+TI's typical 1 uA pullup gives 10 mV; including its typical additional
+3 uA hysteresis current gives 40 mV, below the 1.0 V minimum
+turn-off threshold. These are nominal calculations, not complete
+worst-case proof: pullup currents have no stated maximum here, and
+MCU leakage/VOH, reset state, brownout sequencing and power-collapse
+backfeed must be checked before release. This does not prove firmware
+control or physical shutdown.
+
+Native checks verify the two-node series connection, pulldown and
+MCU pin. Both affected sheets rendered and inspected; R704 text
+rotation corrected. Appliance has 103 components and 58 ERC
+violations (40 unconnected, 10 undriven signal, 8 undriven power).
+No ERC exclusions added.
+
+Sources: https://www.st.com/resource/en/datasheet/stm32g0b1cc.pdf;
+archived TPS56837 Sections 5.5 and 6.3.4.
