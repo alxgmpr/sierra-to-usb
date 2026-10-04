@@ -8,7 +8,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 
 | Required block | Current authoritative state | Required before schematic completion |
 |---|---|---|
-| Recovery MCU, watchdog, SWD and reset outputs | Existing 27-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | Six MPNs still missing (five capacitors and reset switch); manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
+| Recovery MCU, watchdog, SWD and reset outputs | Existing 27-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | Five capacitor MPNs still missing; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
 | Independent always-on supply | `hardware/always-on.kicad_sch`, 5 components, TPS62177DQCR, LPS4018-103MRC; native ERC and all five circuit-net checks pass | Capacitor effective capacitance; rail load; power fault integration; connect into final appliance hierarchy |
 | RK3566 / DDR / PMIC | Archived reference schematic, Rockchip full datasheet and hardware guide; 565-ball CSV extracted; symbol-table review pending | Exact supported RAM and DDR training route; PMIC silicon/suffix and rail sequence; all package balls checked; native capture with complete decoupling and clocks |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
@@ -101,8 +101,14 @@ tools KLC checks pass with the F9.3 official-library-path rule excluded because
 this project deliberately uses `${KIPRJMOD}` local model paths. No geometry
 rule is excluded. Full board-level 3D/mechanical review remains pending.
 
-The current recovery BOM has 21/27 fitted components with exact MPN fields.
-The five capacitors and reset switch are still unresolved. The native checker
+The current recovery BOM has 22/27 fitted components with exact MPN fields.
+The five capacitors are still unresolved. SW201 is now E-Switch TL3342F160QG.
+Its current P010632 Rev J drawing specifies 1.70 x 1.00 mm pads centered at
+x = +/-3.15 mm and y = +/-1.90 mm, matching the installed KiCad footprint.
+Each horizontal pair is internally common; the two rows are switched, matching
+the footprint duplicate pad numbers. The rated 12 V / 50 mA exceeds the
+3.3 V reset pull-up load. The switch limits ambient operation to -20 to +70 C;
+whole-appliance temperature qualification remains open. The native checker
 now exports the BOM and reports missing MPNs, so ERC cannot be mistaken for
 parts-completion evidence. The complete appliance BOM is still absent.
 
