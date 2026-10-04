@@ -20,11 +20,11 @@ ground = [n for n in nets if n.attrib['name'] == 'GND']
 assert len(ground) == 1
 actual = {(n.attrib['ref'],n.attrib['pin']) for n in ground[0].findall('node')}
 assert actual == {('U801',ball) for ball in expected}
-for name, ball in {'PMIC_I2C_SCL':'AJ37','PMIC_I2C_SDA':'AK38','PMIC_SLEEP':'1P19'}.items():
+for name, ball in {'PMIC_I2C_SCL':'AJ37','PMIC_I2C_SDA':'AK38','PMIC_SLEEP':'1P19','RK_RESET_N':'AG38'}.items():
     matches = [n for n in nets if n.attrib['name'] == name]
     assert len(matches) == 1
     assert {(n.attrib['ref'],n.attrib['pin']) for n in matches[0].findall('node')} == {('U801',ball)}
 all_pins = {p.attrib['num'] for p in netlist.findall('./libparts/libpart/pins/pin')}
 assert len(all_pins) == 565
-print('PASS: one U801, 565 library pins, exactly 187 documented balls on GND; TVSS excluded; three PMIC control ball assignments verified.')
+print('PASS: one U801, 565 library pins, exactly 187 documented balls on GND; TVSS excluded; PMIC controls and reset ball assignments verified.')
 print('Partial capture only: processor supplies and peripherals remain incomplete.')

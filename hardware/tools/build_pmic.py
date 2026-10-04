@@ -60,7 +60,7 @@ def wire(a,b):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
 def label(name,p):
- if name in {'PMIC_I2C_SCL','PMIC_I2C_SDA','PMIC_SLEEP','VDD_LOGIC','VDD_GPU','VCC3V3_PMU'}:
+ if name in {'PMIC_I2C_SCL','PMIC_I2C_SDA','PMIC_SLEEP','VDD_LOGIC','VDD_GPU','VCC3V3_PMU','RK_RESET_N'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid("global"+name+str(p))}"))');return
  if name in {'5V_MAIN','3V3_MAIN','GND'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("global"+name+str(p))}"))');return

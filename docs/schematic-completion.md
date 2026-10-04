@@ -1237,3 +1237,20 @@ This joins existing rail outputs only: processor-local bypass/placement,
 rail load budgets and sequencing remain unfinished. CPU, NPU, DDR,
 analog and other IO domains are still open. Full ERC reports 480
 violations after these supply connections, without exclusions.
+
+## 2026-10-04 processor reset integration and draft library
+
+U801 nPOR_u ball AG38 now joins global RK_RESET_N with U501 RESETB
+pin 67, R501 10 kR pull-up to the selected 3.3 V PMU rail and C513
+100 nF to ground. Exact appliance netlist membership is asserted. The
+processor unit-D render was inspected; reset and sleep labels remain distinct.
+This connection does not prove reset timing during supply collapse, nor
+complete the recovery MCU reset sink. C513 must be placed near AG38.
+
+The reproducible processor generator now also writes ProcessorDraft.kicad_sym,
+registered in the project's symbol table. The registered symbol matches the
+embedded draft and deliberately has no production footprint assignment.
+Native ERC no longer reports missing-library issues. Current full ERC is
+**470 violations**: 373 unconnected pins, 70 undriven power pins and
+27 undriven pins. No exclusions were used. Remaining supply, bypass,
+interface and firmware sequencing work is still required.
