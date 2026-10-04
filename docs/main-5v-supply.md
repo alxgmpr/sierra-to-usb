@@ -134,3 +134,20 @@ capacitance only with carefully tuned feed-forward compensation.
 
 Source: manufacturer 744325330.pdf and TPS56837 Sections 7.2.2.3–4;
 sensitivity inputs/results in main-5v-inductor-sensitivity.json.
+
+## Native control capture
+
+main5v.kicad_sch is attached to the appliance root. U701 and R701–703
+implement the reviewed MODE and feedback settings; AGND/PGND share
+the electrical return. Four exact-MPN components increase the appliance
+total to 96. Native XML checks verify the FB node, MODE resistor, ground
+returns and global 5V_MAIN divider connection. Render inspected after
+moving the regulator fields clear of its VIN/BOOT pin numbers.
+
+The six other regulator pins remain visibly unconnected. No placeholder
+inductor or false 5 V power source was added, and the footprint stays blank
+pending review. This is a partial control capture, not a working power stage.
+
+Full appliance ERC after this partial capture: 65 violations (45 unconnected
+pins, 11 undriven signal pins, 9 undriven power pins). No ERC exclusions
+or flags were introduced to mask unfinished circuits.

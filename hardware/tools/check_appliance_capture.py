@@ -22,5 +22,11 @@ with tempfile.TemporaryDirectory() as tmp:
     assert pg=={('U601','1'),('U602','2'),('R605','2'),('R606','1')},pg
     assert ('U602','5') in recovery and ('C604','1') in recovery
     assert nets['MAIN3V3_GOOD']=={('U602','4'),('U201','44')},nets['MAIN3V3_GOOD']
-    assert len(tree.findall('./components/comp'))==92
-print('PASS: appliance restart GPIO connection and 92-component capture; not full ERC.')
+    fb=next(p for name,p in nets.items() if name.endswith('/MAIN5V_FB'))
+    assert fb=={('U701','2'),('R702','2'),('R703','1')},fb
+    mode=next(p for name,p in nets.items() if name.endswith('/MAIN5V_MODE'))
+    assert mode=={('U701','10'),('R701','1')},mode
+    assert ('R702','1') in nets['5V_MAIN']
+    assert {('U701','3'),('U701','9'),('R701','2'),('R703','2')} <= nets['GND']
+    assert len(tree.findall('./components/comp'))==96
+print('PASS: appliance restart GPIO connection and 96-component capture; not full ERC.')

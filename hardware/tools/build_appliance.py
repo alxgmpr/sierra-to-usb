@@ -4,13 +4,14 @@ from pathlib import Path
 import re, uuid
 ROOT=Path(__file__).resolve().parents[1]
 def uid(key):return str(uuid.uuid5(uuid.NAMESPACE_URL,'sierra-appliance-'+key))
-root=uid('root'); rec=uid('recovery'); pmic=uid('pmic'); main=uid('main3v3')
+root=uid('root'); rec=uid('recovery'); pmic=uid('pmic'); main=uid('main3v3'); main5=uid('main5v')
 for filename,project,oldroot,newpath in [
  ('recovery.kicad_sch','recovery','37b14702-5d54-5543-b96e-899c36eac351',f'/{root}/{rec}'),
  ('supervisor.kicad_sch','recovery','37b14702-5d54-5543-b96e-899c36eac351',f'/{root}/{rec}'),
  ('controls.kicad_sch','recovery','37b14702-5d54-5543-b96e-899c36eac351',f'/{root}/{rec}'),
  ('always-on.kicad_sch','recovery','37b14702-5d54-5543-b96e-899c36eac351',f'/{root}/{rec}'),
  ('main3v3.kicad_sch','main3v3','2e6dd71a-ab95-5ea3-b14d-00e36bba2be3',f'/{root}/{main}'),
+ ('main5v.kicad_sch','main5v','67626c44-65b2-5096-88fd-dd5ad98a1eca',f'/{root}/{main5}'),
  ('pmic.kicad_sch','pmic','152b7cfd-b2ed-5d28-883d-f6de3f0c70ef',f'/{root}/{pmic}')]:
  p=ROOT/filename;s=p.read_text()
  # Remove previously generated project contexts before refreshing them.
@@ -20,7 +21,7 @@ for filename,project,oldroot,newpath in [
  p.write_text(s)
 font='(effects (font (size 1.27 1.27)))'
 sheets=[]
-for name,file,sid,x,y,page in [('Recovery and always-on supply','recovery.kicad_sch',rec,35.56,35.56,2),('Processor PMIC draft','pmic.kicad_sch',pmic,157.48,35.56,6),('Main 3.3V draft','main3v3.kicad_sch',main,35.56,106.68,7)]:
+for name,file,sid,x,y,page in [('Recovery and always-on supply','recovery.kicad_sch',rec,35.56,35.56,2),('Processor PMIC draft','pmic.kicad_sch',pmic,157.48,35.56,6),('Main 3.3V draft','main3v3.kicad_sch',main,35.56,106.68,7),('Main 5V control draft','main5v.kicad_sch',main5,157.48,106.68,8)]:
  sheets.append(f'(sheet (at {x} {y}) (size 96.52 50.8) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "{sid}") (property "Sheetname" "{name}" (at {x} {y-2.54} 0) {font}) (property "Sheetfile" "{file}" (at {x} {y+53.34} 0) {font}) (instances (project "appliance" (path "/{root}" (page "{page}")))))')
 (ROOT/'appliance.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{root}") (paper "A4") (title_block (title "Cellular WAN appliance — INCOMPLETE") (date "2026-10-03")) (lib_symbols) '+''.join(sheets)+f' (text "DRAFT: processor, DDR, storage, Ethernet, PoE and modem sheets still required.\\nPMIC circuitry incomplete; supervisor restart output is joined to PMIC input." (at 35.56 170.18 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}")) (sheet_instances (path "/" (page "1"))))\n')
 print('Generated appliance root and refreshed annotation contexts.')
