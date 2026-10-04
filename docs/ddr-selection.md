@@ -184,3 +184,20 @@ control unit. Temporary review-sheet generation is reproducible with
 render_micron_review.py. Native XML export parses the seven units as one
 component with all 200 expected library pins. Power-bank orientation and
 land-pattern review remain; the appliance hierarchy is unchanged.
+
+## Native package-grid audit
+
+Rendered and inspected Micron Figure 9, printed page 28. The ZW package
+uses 0.8mm column pitch and 0.65mm row pitch, with omitted columns 6/7
+and rows L/M. The native footprint is rotated 90 degrees relative to the
+top-view ball diagram; all 200 pad centers match the expected grid within
+0.006mm, including its 8.8mm and 13.65mm center spans. A reproducible
+check verifies every ball identifier and coordinate, rather than only pitch.
+
+Native circular copper pads are 0.35mm. Micron's package drawing states
+its post-reflow solder-ball dimensions apply on 0.4mm SMD pads; that is
+not a complete fabrication land-pattern specification. Do not silently
+approve the native pad size or resize copper alone: solder mask opening,
+paste aperture, assembly process and substrate option still need review.
+The native footprint also lacks courtyard and package-body Fab outline.
+The existing blank schematic footprint assignment remains appropriate.
