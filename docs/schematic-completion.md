@@ -1098,3 +1098,22 @@ TVSS remains unresolved. Search located a newer manufacturer-authored Rev 1.5
 PDF mirror, but direct retrieval returned 404; no archive or revision-parity
 claim was made. The NanoPi reference connects TVSS, but that alone does not
 establish its exact electrical type. No guesses were added to suppress ERC.
+
+## 2026-10-04 serial/control GPIO alternate directions
+
+Reviewed alternate directions now cover I2C, UART, SPI, PWM, eMMC/SDMMC,
+I2S/PDM/SPDIF, smart-card, GMAC and camera functions. RK3566 Rev 1.2 Table
+2-4 explicitly marks SPI and PWM pads bidirectional; they are not blindly
+typed as master outputs. I2C SCL/SDA are also bidirectional. eMMC strobe
+direction additionally follows hardware-guide Table 2-5.
+
+There are 745 unique alternate identities: 294 bidirectional, 226 output,
+107 input, 2 power input and **116 still unspecified**. Exact native
+ball IDs and critical I2C0/eMMC roles were checked; all eight units load and
+export through native KiCad. No primary-pin counts changed.
+
+PCIe CLKREQ and PERST mux functions are manufacturer inputs, WAKE is
+bidirectional. A root-complex NIC reset output must use a reviewed GPIO
+output configuration rather than silently repurposing the input PERST mux.
+Remaining alternate review includes flash, EBC/VOP, debug, PMIC sleep and
+thermal-shutdown controls, plus the independent TVSS primary-pin question.

@@ -14,6 +14,45 @@ pattern = r'\(pin (\w+) (\w+).*?\(name "([^"]+)".*?\(number "([^"]+)"[^\n]*\n   
 
 def interface_type(name):
     function = name.split('/')[0]
+    if re.match(r'I2C\d+_(SCL|SDA)', function) or re.match(r'SPI\d+_', function) or function.startswith('PWM'):
+        return 'bidirectional'
+    if re.match(r'UART\d+_(RX|CTSn)', function):
+        return 'input'
+    if re.match(r'UART\d+_(TX|RTSn)', function):
+        return 'output'
+    if re.match(r'EMMC_(CMD|D[0-7])$', function) or re.match(r'SDMMC\d+_(CMD|D[0-3])(?:_M\d+)?$', function):
+        return 'bidirectional'
+    if function in {'EMMC_CLKOUT', 'EMMC_RSTn'} or re.match(r'SDMMC\d+_(CLK|PWREN)', function):
+        return 'output'
+    if function in {'EMMC_DATA_STROBE', 'FLASH_VOL_SEL', 'CLK32K_IN', 'PCIE20_BUTTONRSTn'} or re.match(r'SDMMC\d+_DET', function) or re.match(r'PCIE20_(CLKREQn|PERSTn)', function):
+        return 'input'
+    if function.startswith('PCIE20_WAKEn'):
+        return 'bidirectional'
+    if function.startswith('CLK32K_OUT') or function == 'REFCLK_OUT':
+        return 'output'
+    if re.match(r'I2S\d+_(SCLK|LRCK)', function):
+        return 'bidirectional'
+    if re.match(r'I2S\d+_(MCLK|SDO)', function) or function.startswith(('SPDIF_TX', 'PDM_CLK')):
+        return 'output'
+    if re.match(r'I2S\d+_SDI', function) or function.startswith('PDM_SDI'):
+        return 'input'
+    if function in {'SCR_CLK', 'SCR_RST'}:
+        return 'output'
+    if function == 'SCR_DET':
+        return 'input'
+    if function == 'SCR_IO':
+        return 'bidirectional'
+    if function.startswith('GMAC1_'):
+        if re.match(r'GMAC1_(MCLKINOUT|MDIO)', function):
+            return 'bidirectional'
+        if re.match(r'GMAC1_(RXCLK|RXD|RXDV_CRS|RXER)', function):
+            return 'input'
+        if re.match(r'GMAC1_(TXCLK|MDC|TXD|TXEN)', function):
+            return 'output'
+    if function.startswith(('CIF_D', 'CIF_CLKIN', 'CIF_HREF', 'CIF_VSYNC', 'EDP_HPDIN')):
+        return 'input'
+    if function in {'CAM_CLKOUT0', 'CAM_CLKOUT1', 'CIF_CLKOUT'}:
+        return 'output'
     if function.startswith(('DDR3_', 'DDR4_', 'LPDDR3_', 'LPDDR4_')):
         return 'bidirectional' if '_DQ' in function else 'output'
     if re.fullmatch(r'AC\d+', function):
