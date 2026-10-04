@@ -1041,3 +1041,20 @@ KiCad, and the core-supply unit was visually inspected. Native spacing and
 property placement still need cleanup and full multi-unit visual review.
 This role pass does not choose voltages for unused PHY domains or prove
 package geometry, processor sequencing or complete electrical fidelity.
+
+## 2026-10-04 GPIO capabilities and mux identity preservation
+
+The unregistered processor derivative now types 142 primary GPIO pads as
+bidirectional, representing their GPIO input/output capability rather than
+reset configuration or any selected alternate function. All 565 balls remain
+intact: 267 supply/ground, 142 GPIO and 156 other unspecified pins.
+
+For GPIO mux entries, 443 manufacturer function names are preserved as native
+KiCad alternates instead of slash-delimited display names. Per-alternate
+electrical directions remain explicitly unspecified and are recorded in
+`hardware/pinmaps/rk3566-mux-review.csv`; they must be reviewed before selected
+functions are captured. Native KiCad successfully exports all eight units.
+The PMU/GPIO unit was visually inspected; original pin-number/name spacing,
+clock glyphs, supply placement and in-body properties still need cleanup.
+This does not claim a complete symbol or switch processor capture to an
+unqualified model.
