@@ -87,4 +87,7 @@ with tempfile.TemporaryDirectory() as tmp:
         assert fields['MPN']==mpn and fields['Voltage Rating']=='25V'
     assert len(tree.findall('./components/comp'))==169
     assert {('U901',r['ball']) for r in __import__('csv').DictReader((root/'reference/micron-ddr-electrical-review.csv').open()) if r['resolved_name']=='VSS'} <= nets['GND']
+    ram_rows=list(__import__('csv').DictReader((root/'reference/micron-ddr-electrical-review.csv').open()))
+    assert {p for p in nets['VCC_1V8'] if p[0]=='U901'}=={('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD1'}
+    assert {('U901','G2'),('U901','T2')} <= nets['GND']
 print('PASS: appliance restart GPIO connection and 169-component capture; not full ERC.')

@@ -227,3 +227,19 @@ or final selection qualification is claimed. The regenerated RAM sheet was
 visually reviewed after grid alignment and exact value-field updates.
 Integrated capture checks pass for 169 components across 12 sheets; full
 ERC reports 645 violations, including newly exposed unfinished RAM pins.
+
+## VDD1 and LPDDR4X ODT control capture
+
+Connected all eight U901 VDD1 balls to existing RK809 BUCK5 VCC_1V8.
+The integrated checker verifies these are the only RAM balls on that rail,
+so adjacent VDD2 pins are not accidentally joined. Micron's 1.70–1.95V
+VDD1 range contains the nominal 1.8V source; aggregate load, tolerance,
+local bypass and transient qualification remain incomplete. Startup ordering
+must still be checked against the future VDD2/VDDQ supplies.
+
+Grounded ODT_CA_A G2 and ODT_CA_B T2 to satisfy the valid-logic-level
+requirement for LPDDR4X. This is specific to the intended LPDDR4X mode;
+LPDDR4 topology changes require revisiting the termination policy. RAM
+VDD2/VDDQ, reset, ZQ and bus remain unfinished. Rendered the updated
+sheet and moved power-unit fields clear of the new VDD1 bank. Native
+integration checks pass; full ERC remains incomplete.
