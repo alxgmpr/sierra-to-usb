@@ -1278,3 +1278,22 @@ The combined netlist verifies exact LDO, existing output-capacitor and
 processor membership on each of the four analog rails. Processor unit-D
 render was inspected. Native full ERC is now 462 violations, without
 exclusions. PMU retention and full power sequencing remain unqualified.
+
+## 2026-10-04 processor-local PLL bypass capture
+
+C801–C808 add four local bypass banks, one 1 uF plus one 100 nF
+for each PMU/system PLL supply, as specified by guide Figures 2-17
+and 2-18. The 1 uF parts are Samsung CL10B105KA8NNNC/C29936;
+100 nF parts are CL10B104KA8NNNC/C1590. Both are reviewed 25 V
+0603 X7R parts already used elsewhere in the schematic. Placement
+fields explicitly require the capacitors at the corresponding processor
+supply ball. Effective-capacitance corner limits and layout parasitics
+remain to verify; these are nominal reference-circuit values.
+
+Exact combined-net checks include every new capacitor top on its intended
+rail and every bottom on GND. The processor capture checker verifies
+the eight capacitor MPNs and 25 V ratings through native netlist export.
+The rendered A2 sheet was inspected: banks fit in the open areas without
+covering processor units or the title block. Appliance count is now
+**125 components**. CPU, DDR, storage, Ethernet, PoE, modem and other
+processor bypass circuits remain incomplete.

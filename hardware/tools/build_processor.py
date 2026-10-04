@@ -66,8 +66,29 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
     for key,value in {'Footprint':'','MPN':'RK3566','Manufacturer':'Rockchip','LCSC':'C2943786','Qualification':'DRAFT: supplies, peripherals, TVSS and land pattern unresolved'}.items():
         fields += prop(key,value,x,y,True)
     items.append(f'(symbol (lib_id "ProcessorDraft:RK3566") (at {x} {y} 0) (unit {unit}) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(str(unit))}") {fields} ' + ''.join(f'(pin "{n}" (uuid "{uid("pin-"+n)}"))' for n in pins) + f' (instances (project "processor" (path "/{uid("root")}" (reference "U801") (unit {unit})))))')
+# Four processor-local PLL banks; distinct from PMIC output capacitance.
+cap_source = Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/Device.kicad_sym').read_text()
+cap = block(cap_source, cap_source.index('(symbol "C_Small"')).replace('(symbol "C_Small"','(symbol "Device:C_Small"',1)
+def wire(a,b,key):
+    items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid(key)}"))')
+def label(net,x,y,key):
+    items.append(f'(global_label "{net}" (shape passive) (at {x} {y} 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid(key)}"))')
+for bank,net,x,y in [(0,'VDDA0V9_PMU',50.8,152.4),(1,'VCCA1V8_PMU',50.8,213.36),(2,'VDDA_0V9',304.8,223.52),(3,'VCCA_1V8',406.4,147.32)]:
+    for offset,value,mpn,lcsc in [(0,'1uF','CL10B105KA8NNNC','C29936'),(1,'100nF','CL10B104KA8NNNC','C1590')]:
+        ref = f'C{801+2*bank+offset}'
+        cx = x+30.48*offset
+        fields = prop('Reference',ref,cx+6.35,y-1.27)+prop('Value',value,cx+6.35,y+1.27)
+        for key,val in {'Footprint':'Capacitor_SMD:C_0603_1608Metric','MPN':mpn,'Manufacturer':'Samsung Electro-Mechanics','LCSC':lcsc,'Voltage Rating':'25V','Qualification':'PLL local bypass per RK3566 guide Figures 2-17/18; place at corresponding supply ball'}.items():
+            fields += prop(key,val,cx,y,True)
+        items.append(f'(symbol (lib_id "Device:C_Small") (at {cx} {y} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(ref)}") {fields} '+''.join(f'(pin "{n}" (uuid "{uid(ref+":"+n)}"))' for n in ['1','2'])+f' (instances (project "processor" (path "/{uid("root")}" (reference "{ref}") (unit 1)))))')
+        wire((cx,y-2.54),(cx,y-10.16),ref+'-top')
+        wire((cx,y+2.54),(cx,y+10.16),ref+'-bottom')
+    wire((x,y-10.16),(x+30.48,y-10.16),net+'-top')
+    wire((x,y+10.16),(x+30.48,y+10.16),net+'-bottom')
+    label(net,x,y-10.16,net+'-label')
+    label('GND',x,y+10.16,net+'-ground')
 items.append(f'(text "INCOMPLETE PROCESSOR CAPTURE: all 565 balls present; documented grounds, logic/GPU and PMU supplies connected; circuitry incomplete.\\nPMIC controls: AJ37=I2C0 SCL, AK38=I2C0 SDA, 1P19=PMIC_SLEEP.\\n19 alternate roles and TVSS unresolved. No production footprint assigned.\\nIntegrated draft: CPU, DDR, analog/IO supplies and peripheral circuitry remain open." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
-(ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
+(ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol} {cap}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
 assert len(rail_balls) == 21
 assert connected_controls == set(control_nets)
 assert len(ground_balls) == 187 and '1M18' not in ground_balls
