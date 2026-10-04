@@ -149,3 +149,16 @@ The reproducible extraction audit and result CSV are now saved. This audits
 an existing native model; it does not register a new PDF-derived symbol.
 Electrical pin typing, readable unit grouping, package geometry and WDQS
 classification remain before RAM schematic integration.
+
+## Native-model electrical review derivative
+
+Prepared an unregistered derivative using Micron Table 5 (printed page 24):
+110 power/ground inputs, 44 bidirectional data/strobe/DMI pins, 23 inputs,
+10 NC pins and 13 passive pins (12 DNU plus ZQ0). The five rank aliases
+are resolved to NC while all 200 ball identifiers are preserved. DNU is
+passive because Micron permits grounding or floating; it is not treated as
+an ordinary signal. ZQ0 requires a 240R ±1% connection to VDDQ. ODT_CA
+must have a valid logic level even though LPDDR4X ignores its function.
+A per-ball review CSV and deterministic preparation script are saved.
+This derivative still needs readable symbol grouping and visual review;
+it has not been registered or connected into the appliance hierarchy.
