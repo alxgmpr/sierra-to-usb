@@ -51,8 +51,8 @@ with tempfile.TemporaryDirectory() as tmp:
     assert nets['RK_RESET_N']=={('U501','67'),('R501','2'),('C513','1'),('U801','AG38'),('SW802','1'),('Q801','3')}
     assert nets['PMIC_SLEEP']=={('U501','49'),('R505','1'),('U801','1P19')}
     assert len({p for r,p in nets['GND'] if r=='U801'})==187
-    assert nets['VDD_LOGIC']=={('U501','13'),('L501','2'),('C501','1'),('C502','1'),('C503','1')}|{('U801',b) for b in ['1H7','1H8','1H9','1H10','1J7','1J10','1K7','1K10','1L7']}
-    assert nets['VDD_GPU']=={('U501','8'),('L502','2'),('C505','1'),('C506','1'),('C507','1')}|{('U801',b) for b in ['1L8','1L9','1M7','1M8','1M9']}
+    assert nets['VDD_LOGIC']=={('U501','13'),('L501','2'),('C501','1'),('C502','1'),('C503','1')}|{('U801',b) for b in ['1H7','1H8','1H9','1H10','1J7','1J10','1K7','1K10','1L7']}|{(f'C{n}','1') for n in range(825,832)}
+    assert nets['VDD_GPU']=={('U501','8'),('L502','2'),('C505','1'),('C506','1'),('C507','1')}|{('U801',b) for b in ['1L8','1L9','1M7','1M8','1M9']}|{(f'C{n}','1') for n in range(832,837)}
     assert nets['VCC3V3_PMU']=={('R501','1'),('U501','31'),('C517','1'),('C518','1'),('R502','1'),('R503','1'),('R504','1'),('U801','1P16'),('U801','1N15'),('C811','1'),('C812','1')}
     assert nets['VDDA0V9_PMU']=={('U501','20'),('C522','1'),('C523','1'),('U801','1N16'),('U801','1P17')}|{(f'C{n}','1') for n in [801, 802, 809, 810]}
     assert nets['VCCA1V8_PMU']=={('U501','3'),('C525','1'),('C526','1'),('U801','1N18')}|{(f'C{n}','1') for n in [803, 804]}
@@ -78,5 +78,12 @@ with tempfile.TemporaryDirectory() as tmp:
     assert {('Q802','2'),('R805','2')} <= nets['GND']
     assert nets['VDD_NPU']=={('L504','2'),('C541','1'),('C542','1'),('R512','1')}|{(f'C{n}','1') for n in range(821,825)}|{('U801',b) for b in ['1G15','1H14','1H15','1J14','1J15']}
     assert {('C541','2'),('C542','2')}|{(f'C{n}','2') for n in range(821,825)} <= nets['GND']
-    assert len(tree.findall('./components/comp'))==156
-print('PASS: appliance restart GPIO connection and 156-component capture; not full ERC.')
+    assert {(f'C{n}','2') for n in range(825,837)} <= nets['GND']
+    core_ids=__import__('re').findall(r'\(uuid "([^\"]+)"\)',(root/'core-power.kicad_sch').read_text())
+    assert len(core_ids)==len(set(core_ids))
+    for ref,mpn in {**{f'C{n}':'CL10A475KA8NQNC' for n in [826,827,828,833]},**{f'C{n}':'CL10B104KA8NNNC' for n in [825,832]},**{f'C{n}':'CL32B226KAJNNNE' for n in [829,831,834,836]},**{f'C{n}':'CL31B106KAHNNNE' for n in [830,835]}}.items():
+        component=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
+        fields={f.get('name'):f.text for f in component.findall('./fields/field')}
+        assert fields['MPN']==mpn and fields['Voltage Rating']=='25V'
+    assert len(tree.findall('./components/comp'))==168
+print('PASS: appliance restart GPIO connection and 168-component capture; not full ERC.')

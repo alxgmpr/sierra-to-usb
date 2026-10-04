@@ -1570,3 +1570,25 @@ remain unique. The rendered processor sheet was reviewed with the new
 bank in clear space beneath the core-power unit. Full ERC remains 450
 violations. No NPU startup enable, software operation, transient or thermal
 qualification is claimed; BUCK4 still starts disabled.
+
+## 2026-10-04 Logic and GPU processor-local bypass banks
+
+Added a dedicated core-power sheet with the NanoPi R3S LTS 2411 sheet 5
+nominal bypass networks: logic C825–C831 (100nF, three 4.7uF, 22uF,
+10uF, 22uF) and GPU C832–C836 (100nF, 4.7uF, 22uF, 10uF, 22uF).
+Supply and ground connectivity are checked in the full appliance netlist.
+The first four logic capacitors and first two GPU capacitors retain the
+reference under-package placement intent; the others are nearby.
+
+The 4.7uF part is Samsung CL10A475KA8NQNC / C69335, 25V X5R,
+0603, ±10%. Samsung's current product page lists the KA8NQN family as
+mass production and explicitly lists the C packaging suffix:
+https://product.samsungsem.com/mlcc/CL10A475KA8NQN.do
+The initially considered KO8NNN family is NRND and was not captured.
+The remaining parts reuse the already captured exact Samsung 100nF,
+10uF and 22uF MPNs. Indexed distributor stock is not a reservation.
+
+Native integration checks pass for 168 components across 11 sheets;
+full ERC remains 450 violations. Root and new core-power renders were
+visually reviewed. Package placement, effective capacitance, PDN impedance
+and transient behavior remain unqualified. No PCB layout has started.
