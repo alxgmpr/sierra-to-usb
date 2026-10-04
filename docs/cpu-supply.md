@@ -61,3 +61,41 @@ maximum. This does not establish 1.05 V as a qualified boot voltage;
 absolute maximum must not be used as a recommended operating limit.
 The available evidence closes upstream driver support and exact voltage
 representation, but leaves pre-I2C startup, OPP limits and peak loading open.
+
+## Reference TCS4525 investigated
+
+The manufacturer's current TCS4525 page links to Ver.1.1 May 26,2020,
+but that download is only a one-page product summary. It advertises
+6 A, 0.6–1.4 V programming in 6.25 mV steps, and WCSP-20. It does
+not provide a pin table, full electrical limits or register reset values.
+Archived directly from the manufacturer; PDF metadata title EUP3265
+is not evidence of pin compatibility or an approved substitute.
+
+A mirrored manufacturer-authored Ver.1.0 May 26,2015 full datasheet
+is archived separately and clearly marked as older. Its reset-default
+section specifies VOUT_VSEL0 = 1.025 V and VOUT_VSEL1 = 1.15 V,
+with PWM/PFM auto mode for VSEL0 and forced PWM for VSEL1. This
+explains how the reference design can obtain 1.025 V without first
+programming I2C; selecting VSEL0 is essential. However this older
+document identifies the regulator as 5 A. Do not treat its electrical
+limits or pin table as a complete verified specification for the current
+6 A version without manufacturer revision reconciliation.
+
+Direct catalog lookup C7501359 identifies TCS4525_WT, WCSP20,
+5 A and zero indexed stock, despite exact-MPN lookup returning no
+result. No procurement decision is made from this stale/indexed stock.
+
+The upstream Linux fan53555 driver at the same pinned revision
+explicitly matches tcs,tcs4525, accepts chip ID 12 and sets a 600000 uV
+minimum with 6250 uV steps. Driver source is archived with original
+SPDX license. Target bootloader/kernel configuration remains unverified.
+
+The reference part now has stronger boot-voltage evidence than the TI
+alternative, but a complete current 6 A datasheet and exact orderable
+availability are still required before symbol/circuit selection. Neither
+source discrepancy nor missing stock justifies reducing CPU rail scope.
+
+Sources: https://www.tctek.cn/en/product/tcs4525/ and its linked
+https://www.tctek.cn/wp-content/uploads/2025/03/TCS4525_Ver.1.1_compressed.pdf;
+older manufacturer-authored PDF mirrored at
+https://datasheet4u.com/pdf/1549392/TCS4525.pdf.
