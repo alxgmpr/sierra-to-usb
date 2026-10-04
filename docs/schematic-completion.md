@@ -8,7 +8,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 
 | Required block | Current authoritative state | Required before schematic completion |
 |---|---|---|
-| Recovery MCU, watchdog, SWD and reset outputs | Existing 27-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | Bulk capacitor C203 MPN still missing; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
+| Recovery MCU, watchdog, SWD and reset outputs | Existing 27-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | C203 effective-capacitance review pending; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
 | Independent always-on supply | `hardware/always-on.kicad_sch`, 5 components, TPS62177DQCR, LPS4018-103MRC; native ERC and all five circuit-net checks pass | Capacitor effective capacitance; rail load; power fault integration; connect into final appliance hierarchy |
 | RK3566 / DDR / PMIC | Archived reference schematic, Rockchip full datasheet and hardware guide; 565-ball CSV extracted; symbol-table review pending | Exact supported RAM and DDR training route; PMIC silicon/suffix and rail sequence; all package balls checked; native capture with complete decoupling and clocks |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
@@ -101,8 +101,12 @@ tools KLC checks pass with the F9.3 official-library-path rule excluded because
 this project deliberately uses `${KIPRJMOD}` local model paths. No geometry
 rule is excluded. Full board-level 3D/mechanical review remains pending.
 
-The current recovery BOM has 26/27 fitted components with exact MPN fields.
-C203 bulk capacitance remains unresolved. C201/C202/C204/C205 are now
+The current recovery BOM has 27/27 fitted components with exact MPN fields.
+C203 now has provisional CL21B475KAFNNNE (4.7 uF, 25 V, X7R, 0805).
+Samsung typical bias loss is 13.26 percent at 3.3 V and 15.92 percent at
+3.6 V: about 4.08 uF and 3.95 uF before tolerance, temperature and aging.
+Its effective-capacitance acceptance remains open; MPN coverage is not
+parts qualification. The original 0603 footprint is enlarged to 0805. C201/C202/C204/C205 are now
 Samsung CL10B104KA8NNNC, 100 nF, 25 V, X7R, +/-10 percent, 0603.
 Published typical 25 C DC-bias data show +0.94 percent at 3.3 V and
 +0.83 percent at 3.6 V; this is not guaranteed corner performance. SW201 is now E-Switch TL3342F160QG.
@@ -141,3 +145,9 @@ CL32B226KAJNNN loses 7.33 percent at 3.3 V: 22 uF becomes about 20.39 uF
 typical, or 18.35 uF including -10 percent initial tolerance before temperature/aging.
 These data support the margin review but do not establish guaranteed minimum
 capacitance across temperature, aging and bias. The supply selections stay provisional.
+
+ST DS13560 Rev 6 specifies local 100 nF plus 4.7 uF supply decoupling;
+[manufacturer datasheet](https://www.st.com/resource/en/datasheet/stm32g0b1kc.pdf).
+NRST Table 60 requires low <=0.3 x VDDIO1 and high >=0.7 x VDDIO1,
+with an internal 25-55 kR pull-up. Those limits must be used in the
+watchdog/diode reset margin audit, including startup rail conditions.
