@@ -173,3 +173,14 @@ are unchanged. The grouped symbol has a blank footprint and remains an
 unregistered review candidate. Rendering and final supply/ground pin
 orientation cleanup remain before schematic use; this is not a completed
 RAM circuit or land-pattern approval.
+
+## Grouped-symbol render review
+
+Rendered all seven RAM units with KiCad and inspected their fields and
+pins. The controls unit initially reserved visible space for hidden NCs;
+NCs now use hidden zero-length pins on the body outline and the body
+height excludes them. A second enlarged render confirmed the corrected
+control unit. Temporary review-sheet generation is reproducible with
+render_micron_review.py. Native XML export parses the seven units as one
+component with all 200 expected library pins. Power-bank orientation and
+land-pattern review remain; the appliance hierarchy is unchanged.
