@@ -17,6 +17,14 @@ for r in rows:
 name='MT53E512M32D1ZW_046WT_B'
 symbol=f'(symbol "{name}" (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Value" "MT53E512M32D1ZW-046 WT:B" (at 0 0 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))'
 for unit,group in enumerate(groups,1):
+ if unit in {3,4,5,6}:
+  half=(len(group)-1)*2.54/2+5.08
+  symbol+=f'(symbol "{name}_{unit}_1" (rectangle (start {-half} 5.08) (end {half} -5.08) (stroke (width 0) (type default)) (fill (type background)))'
+  for i,r in enumerate(group):
+   x=(i-(len(group)-1)/2)*2.54;y=10.16 if unit in {3,4} else -10.16;angle=270 if unit in {3,4} else 90
+   symbol+=f'(pin power_in line (at {x} {y} {angle}) (length 5.08) (name "{r["resolved_name"]}" (effects (font (size 1.27 1.27)))) (number "{r["ball"]}" (effects (font (size 1.27 1.27)))))'
+  symbol+=')'
+  continue
  left=sorted([r for r in group if r['electrical_type']!='bidirectional'],key=lambda r:r['electrical_type']=='no_connect');right=[r for r in group if r['electrical_type']=='bidirectional']
  h=max(sum(r['electrical_type']!='no_connect' for r in left),len(right))*2.54+5.08
  symbol+=f'(symbol "{name}_{unit}_1" (rectangle (start -15.24 {h/2}) (end 15.24 {-h/2}) (stroke (width 0) (type default)) (fill (type background)))'

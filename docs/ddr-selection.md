@@ -203,3 +203,14 @@ The native courtyard coincides with the nominal 14.5 x 10mm body and
 provides no assembly clearance. It has ball Fab marks but lacks a
 package-body Fab outline.
 The existing blank schematic footprint assignment remains appropriate.
+
+## Power-bank orientation reviewed
+
+The four power/ground review units now use horizontal banks: VDD1/VDD2
+and VDDQ pins enter from above, and both VSS banks exit below. Every
+ball remains separately identified; no hidden stacking or duplicate ball
+numbers were introduced. The generator's full name/type/identity equality
+check passes, and KiCad XML export still contains all 200 library pins.
+The complete re-render was inspected with reference/value fields clear of
+pin numbers. This completes the current symbol orientation review, while
+RAM power/bus circuitry and the fabrication footprint remain unfinished.
