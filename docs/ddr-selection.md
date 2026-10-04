@@ -68,3 +68,24 @@ Original manufacturer documents and SHA-256 provenance are archived in
 hardware/reference/rockchip-ddr-template-table.md,
 rockchip-rk3566-ddr-release.md, rockchip-rk3566-ddr-specific-release.md
 and rockchip-rk3566-loader.ini, with URLs in sources.json.
+
+## Public Micron Z42M revision located
+
+Micron-authored Rev. I (04/2023), mirrored by RS, is readable through
+web PDF extraction at https://docs.rs-online.com/a381/A700000015750630.pdf.
+Local retrieval returned HTTP 403, so no original PDF/hash is archived yet.
+This is an older manufacturer document hosted by a distributor, not proof
+that it is Micron's latest controlled revision.
+
+Table 2 separately lists both -046 WT:B and -046B WT:B; the part-number
+chart identifies the extra B as an alternate substrate option. Therefore
+the previously observed catalog strings need not be a transcription error;
+they represent distinct ordering options. Exact package option must still
+be frozen. Figure 5 (printed page 22) is the single-rank 200-ball map;
+Figure 6 is dual-rank and must not be substituted. ZW package dimensions
+are in Figure 9 (printed page 28).
+
+Table 160 (printed page 214) gives LPDDR4X ranges: VDD1 1.70–1.95V,
+VDD2 1.06–1.17V and VDDQ 0.57–0.65V, nominal 1.8/1.1/0.6V.
+This removes the public voltage-data gap, but current/sequence review,
+exact native model audit and WDQS classification remain pending.
