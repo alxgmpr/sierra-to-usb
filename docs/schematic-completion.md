@@ -295,3 +295,21 @@ startup compatibility. Selection remains pending suffix resolution.
 The public distributor download initially returned HTML rather than PDF;
 it was rejected and removed. Only the verified %PDF manufacturer-authored
 Rev 2.4 file is recorded in the source manifest.
+
+## PMIC selected independently of reference alias
+
+Select **RK809-5 / C2939628** for this appliance. Rev 2.4 Tables 4-4
+and 4-8 have identical listed default rail voltages and startup slots,
+including the divider-defined BUCK3 in slot 3. Saved rail CSV records
+Table 4-4 defaults for design review, not a symbol pin table. A text
+comparison confirms the listed BUCK/LDO/SW/VB_OK rows match across
+variants. Figures 4-2/4-3 distinguish timing: EXT_EN to conversion starts
+after (4+N) ms for RK809-X, (12+N) ms for RK809-XA, where N is
+preparation/charging time below 50 ms. VDC must be present for 140 ms,
+and RESETB follows completion of the rail sequence by 2 ms.
+
+The design will use the selected -5's documented timing rather than
+claiming the reference's RK809A-5 is an alias. Capturing its pinout,
+external components, reset/clock controls and rail load budgets remains
+required; a compatible default table does not prove board qualification.
+Earlier suffix-pending notes are superseded by this explicit selection.

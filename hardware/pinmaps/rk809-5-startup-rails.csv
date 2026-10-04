@@ -1,0 +1,18 @@
+Channel,Default Voltage,Startup Slot,Datasheet Table
+BUCK1,0.9V,1,4-4
+BUCK2,0.9V,2,4-4
+BUCK4,0.5V,OFF,4-4
+BUCK5,1.8V,2,4-4
+LDO1,0.6V,OFF,4-4
+LDO2,0.9V,1,4-4
+LDO3,0.9V,1,4-4
+LDO4,0.6V,OFF,4-4
+LDO5,3.3V,4,4-4
+LDO6,3.3V,2,4-4
+LDO7,1.8V,2,4-4
+LDO8,1.8V,2,4-4
+LDO9,0.6V,OFF,4-4
+SWOUT1,3.3V,4,4-4
+SWOUT2,3.3V,4,4-4
+VB_OK,3.0V,x,4-4
+BUCK3,External divider or internal setting,3,4-4
