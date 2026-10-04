@@ -100,3 +100,37 @@ and 0.6 V reference, the nominal ramp is 4.7 ms (Equation 1). Exact
 capacitor selection and minimum/maximum startup timing remain open.
 No control circuit has been captured yet; footprint review is pending.
 Source: archived tps56837.pdf, Sections 5.5, 6.3.1, 6.3.3 and Figure 7-1.
+
+## Reference inductor and distributed capacitance audit
+
+Archived current Würth 744325330 datasheet revision 004.001 (2025-02-06).
+This is the 3.3 uH reference inductor, tolerance ±20%, DCR 5.9 mOhm
+±10% at 20 C. Its 15 A typical saturation figure permits 30% inductance
+loss; the 10% loss figure is only 5 A typical. Rated inductance is
+2.4 uH typical at 12 A. The updated sheet specifies 12 A at 50 K
+temperature rise, with application-dependent PCB cooling. Do not treat
+the reference design's older 9.7 A heating figure as the current sheet.
+
+At 13.2 V input, 4.992 V output, 8 A load and typical 500 kHz,
+3.3 uH gives 1.88 A peak-to-peak ripple and 8.94 A peak current.
+Using 1.848 uH as an illustrative compounded 20% tolerance and
+30% bias loss gives 3.36 A ripple and 9.68 A peak. At the maximum
+11.1 A valley-limit figure the latter ripple implies 14.46 A peak,
+close to the 15 A typical 30% drop figure. This is sensitivity analysis,
+not a proven minimum-inductance or hot/fault bound. The datasheet gives
+500 kHz typical without minimum/maximum limits. Keep the exact inductor
+selection open until bias/temperature and overload behavior are checked.
+
+Existing main-5-V-connected capacitors already include C504, C508,
+C512, C516, C533 and C601, each 22 uF nominal, plus C514 1 uF.
+Thus the regulator sees at least 133 uF distributed nominal capacitance
+before its local output bank and missing CPU/DDR inputs. TI's two
+reference 22 uF Murata capacitors give 35 uF effective at 5 V; the
+recommended maximum ten-part bank must be compared using effective
+capacitance, with interconnect effects included. A local two-part bank
+would bring the current nominal total to 177 uF. Do not qualify the
+regulator using its local output capacitors alone. TI allows greater
+capacitance only with carefully tuned feed-forward compensation.
+
+Source: manufacturer 744325330.pdf and TPS56837 Sections 7.2.2.3–4;
+sensitivity inputs/results in main-5v-inductor-sensitivity.json.

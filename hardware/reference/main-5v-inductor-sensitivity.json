@@ -1,0 +1,71 @@
+{
+  "qualification": "Sensitivity only; frequency, hot inductance and fault dynamics unqualified",
+  "cases": [
+    {
+      "load_a": 7.0824,
+      "vin_v": 13.2,
+      "vout_v": 4.992,
+      "frequency_hz": 500000,
+      "inductance_uh": 3.3,
+      "ripple_pp_a": 1.8812826446280992,
+      "peak_a": 8.02304132231405,
+      "rms_a": 7.103191193101044,
+      "maximum_valley_limit_plus_ripple_a": 12.981282644628099
+    },
+    {
+      "load_a": 7.0824,
+      "vin_v": 13.2,
+      "vout_v": 4.992,
+      "frequency_hz": 500000,
+      "inductance_uh": 2.64,
+      "ripple_pp_a": 2.3516033057851238,
+      "peak_a": 8.258201652892561,
+      "rms_a": 7.11485953965232,
+      "maximum_valley_limit_plus_ripple_a": 13.451603305785124
+    },
+    {
+      "load_a": 7.0824,
+      "vin_v": 13.2,
+      "vout_v": 4.992,
+      "frequency_hz": 500000,
+      "inductance_uh": 1.848,
+      "ripple_pp_a": 3.3594332939787486,
+      "peak_a": 8.762116646989375,
+      "rms_a": 7.14848742262243,
+      "maximum_valley_limit_plus_ripple_a": 14.459433293978748
+    },
+    {
+      "load_a": 8.0,
+      "vin_v": 13.2,
+      "vout_v": 4.992,
+      "frequency_hz": 500000,
+      "inductance_uh": 3.3,
+      "ripple_pp_a": 1.8812826446280992,
+      "peak_a": 8.94064132231405,
+      "rms_a": 8.018412272123967,
+      "maximum_valley_limit_plus_ripple_a": 12.981282644628099
+    },
+    {
+      "load_a": 8.0,
+      "vin_v": 13.2,
+      "vout_v": 4.992,
+      "frequency_hz": 500000,
+      "inductance_uh": 2.64,
+      "ripple_pp_a": 2.3516033057851238,
+      "peak_a": 9.175801652892561,
+      "rms_a": 8.028750619429005,
+      "maximum_valley_limit_plus_ripple_a": 13.451603305785124
+    },
+    {
+      "load_a": 8.0,
+      "vin_v": 13.2,
+      "vout_v": 4.992,
+      "frequency_hz": 500000,
+      "inductance_uh": 1.848,
+      "ripple_pp_a": 3.3594332939787486,
+      "peak_a": 9.679716646989375,
+      "rms_a": 8.058565794940877,
+      "maximum_valley_limit_plus_ripple_a": 14.459433293978748
+    }
+  ]
+}
