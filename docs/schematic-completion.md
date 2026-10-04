@@ -357,3 +357,14 @@ management/RTC, and audio units. All 69 audited native-model pins occur
 exactly once across the units; native exporter recognizes four units.
 Seven analog roles remain explicitly unresolved. This candidate still
 needs visual/KLC review and footprint qualification before active capture.
+
+Grouped PMIC renders were inspected; reference/value fields overlapped
+top power pins in the first draft. They now sit at the upper left;
+bodies are compacted and centered, pin offsets corrected and metadata
+added. Official KiCad symbol checks exposed unresolved VREF electrical
+type and the intentionally unassigned footprint, so KLC qualification
+is still open. No rule exclusions are being treated as a release pass.
+The manufacturer block diagram identifies VREF as an internal reference
+node and the codec register identifies VCC_1P8A as an internal LDO
+voltage; these support the remaining electrical-role review but do not
+yet resolve every analog/switching node.
