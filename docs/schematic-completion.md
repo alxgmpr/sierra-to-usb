@@ -770,3 +770,29 @@ integration checks. A named net and capacitor alone do not implement recovery.
 Updated native checks pass for twenty-three nets and 43 exact-MPN parts;
 the rendered filter and explicit 5 V/open-drain note were reviewed. RTC clock,
 DDR rail, switch outputs, unused-pin handling and full hierarchy remain open.
+
+## Recovery-to-PWRON sink interface captured
+
+Q501 is the already-reviewed Nexperia MMBT3904,215 / SOT-23 transistor:
+collector pin 3 connects to PMIC_PWRON_N, emitter pin 2 to ground, and base
+pin 1 receives MCU_PWRON_KICK through R508 10 kR. R509 100 kR pulls the
+base down while the MCU output is high impedance. The resolved recovery
+symbol is reused with a checked B/E/C pad mapping. There is no 5 V connection
+to the MCU input net. MCU_PWRON_KICK is still a boundary awaiting assignment
+to an available supervisor GPIO in the integrated hierarchy; capture does not
+yet prove independent restart behavior.
+
+At nominal 3.3 V drive and an illustrative 0.8 V base-emitter drop, base
+current after the pull-down load is about 0.24 mA, above the previously
+calculated maximum 0.185 mA steady PWRON pull-up load. This is an estimate,
+not a guaranteed saturation/temperature proof; check MCU VOH, transistor
+low-voltage behavior, off-state leakage and filter discharge during bench
+qualification. The driver inverts logical assertion: MCU high pulls PWRON low.
+Firmware must pulse for the configured key debounce while avoiding a long
+press that requests shutdown. Independent supply and MCU-watchdog operation
+must be maintained during this action.
+
+Native connectivity assertions now cover twenty-five nets and 46 exact-MPN
+parts. Visual inspection caught horizontal base-resistor property rotation;
+its reference/value placement was corrected. Full PMIC, MCU signal assignment
+and appliance integration remain unfinished.

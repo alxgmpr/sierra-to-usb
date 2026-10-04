@@ -178,7 +178,19 @@ note('VDC: 100kR / 100kR, 100nF; nominal 2.5V at main 5V. Startup timing pending
 a=units[3]['52'];b=(a[0]-7.62,a[1]);wire(a,b);label('PMIC_PWRON_N',b);items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
 add('Device','C_Small','C532','100nF / 25V',50.8,368.3,fp='Capacitor_SMD:C_0603_1608Metric',fields={'MPN':'CL10B104KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C1590','Qualification':'PWRON pulse timing and open-drain recovery interface pending'})
 wire((50.8,365.76),(50.8,355.6));label('PMIC_PWRON_N',(50.8,355.6));wire((50.8,370.84),(50.8,378.46));power('GND',(50.8,378.46),'#PWR552')
-note('PWRON: internal 35kR pull-up to 5V RTC. Open-drain control required.',(76.2,368.3))
+note('PWRON: internal 35kR pull-up to 5V RTC. Open-drain control required.',(76.2,403.86))
+# Reuse the already-resolved recovery transistor symbol, preserving manufacturer pad mapping.
+controls=(ROOT/'controls.kicad_sch').read_text()
+used['Transistor_BJT:MMBT3904']=block(controls,controls.index('(symbol "Transistor_BJT:MMBT3904"'))
+qpins=add('Transistor_BJT','MMBT3904','Q501','MMBT3904,215',127,368.3,fp='Package_TO_SOT_SMD:SOT-23',fields={'MPN':'MMBT3904,215','Manufacturer':'Nexperia','Datasheet':'https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf'})
+assert qpins=={'1':(-5.08,0.0),'2':(2.54,-5.08),'3':(2.54,5.08)},qpins
+wire((129.54,363.22),(129.54,355.6));label('PMIC_PWRON_N',(129.54,355.6));wire((129.54,373.38),(129.54,378.46));power('GND',(129.54,378.46),'#PWR553')
+add('Device','R_Small_US','R508','10kR',101.6,368.3,90,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W'})
+items[-1]=re.sub(r'(\(property "Reference" "R508" \(at )[^)]+',r'\g<1>101.6 360.68 90',items[-1])
+items[-1]=re.sub(r'(\(property "Value" "10kR" \(at )[^)]+',r'\g<1>101.6 363.22 90',items[-1])
+wire((86.36,368.3),(99.06,368.3));label('MCU_PWRON_KICK',(86.36,368.3));wire((104.14,368.3),(121.92,368.3))
+add('Device','R_Small_US','R509','100kR',114.3,386.08,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W'})
+wire((114.3,368.3),(114.3,383.54));junction((114.3,368.3));wire((114.3,388.62),(114.3,393.7));power('GND',(114.3,393.7),'#PWR554')
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(35.56,31.75))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
