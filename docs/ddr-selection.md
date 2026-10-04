@@ -417,3 +417,28 @@ Capture now has 237 components. Larger packages remain a placement/PDN
 qualification gap versus the reference 0201/0402/0603 implementation;
 nominal capture is not physical equivalence. The 0.6V regulator remains
 absent, and RAM VDD1 source/filter/sequence review is still required.
+
+## Exact 0.6V regulator variant checked
+
+Archived Silergy-authored AN_SY8089/A Rev 0.9A from LCSC C78988.
+Ordering table explicitly lists SY8089AAAC, SOT23-5; older 1MHz part
+with 2.7-5.5V input, 2A nominal continuous capability and -40..85C
+ambient range. Do not conflate it with current SY8089A1AAC/SY20149A1AAC
+1.5MHz variant. Pinout visually reviewed: EN1, GND2, LX3, IN4, FB5.
+Input requires at least 10uF ceramic locally.
+
+Reference 2kR upper /100kR lower gives 0.612V nominal. Combining
+0.588..0.612V reference limits with independent +/-1% resistors gives
+0.5995275..0.6244873V before FB leakage, ripple and dynamic effects.
+This fits the Micron static 0.57..0.65V window but does not prove the
+complete PDN or processor load limits. FB leakage spec +/-50nA adds
+about 0.1mV at this divider impedance. Limits table is stated at
+VIN=5V/TA=25C; do not assume full-temperature accuracy from this alone.
+
+EN rising threshold is listed 1.5V minimum; no guaranteed maximum
+is stated here. The reference 20kR/100nF network gives nominal 2ms RC
+and crosses 1.5V about 3.58ms after an ideal 1.8V step. Typical soft
+start is 1.2ms. Neither typical timing nor this incomplete threshold
+spec proves VDD1/VDD2/VDDQ order at corners. Disable/undervoltage
+output decay and PMIC sequencing also remain to verify before release.
+Native symbol acquisition, exact inductor and circuit capture remain next.
