@@ -162,3 +162,14 @@ must have a valid logic level even though LPDDR4X ignores its function.
 A per-ball review CSV and deterministic preparation script are saved.
 This derivative still needs readable symbol grouping and visual review;
 it has not been registered or connected into the appliance hierarchy.
+
+## Readable unit grouping prepared
+
+The audited native derivative is split into seven review units: channel A
+(33 pins), channel B (33), VDD1/VDD2 (32), VDDQ (20), two ground banks
+(29 each), and reset/ZQ/DNU/NC controls (24). A generation-time equality
+check verifies all 200 ball identifiers, resolved names and electrical types
+are unchanged. The grouped symbol has a blank footprint and remains an
+unregistered review candidate. Rendering and final supply/ground pin
+orientation cleanup remain before schematic use; this is not a completed
+RAM circuit or land-pattern approval.
