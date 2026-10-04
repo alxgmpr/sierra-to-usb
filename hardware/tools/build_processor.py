@@ -122,7 +122,7 @@ for ref,net,title,sy in [('SW801','SARADC_BOOT_KEY','PROCESSOR RECOVERY',248.92)
  properties=prop('Reference',ref,355.6,sy-7.62)+prop('Value',title,355.6,sy-5.08)
  for key,val in {'Footprint':'Button_Switch_SMD:SW_SPST_TL3342','MPN':'TL3342F160QG','Manufacturer':'E-Switch','LCSC':'C2886898','Contact Rating':'12VDC 50mA','Operating Temperature':'-20 to +70 C','Qualification':'Manual shared reset / PMIC restart' if ref == 'SW802' else 'Manual Rockusb recovery request; not independent MaskROM override'}.items():
   properties+=prop(key,val,355.6,sy,True)
- items.append(f'(symbol (lib_id "Switch:SW_Push") (at 355.6 {sy} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid("{ref}")}") {properties} '+''.join(f'(pin "{n}" (uuid "{uid(ref+":"+n)}"))' for n in ['1','2'])+f' (instances (project "processor" (path "/{uid("root")}" (reference "{ref}") (unit 1)))))')
+ items.append(f'(symbol (lib_id "Switch:SW_Push") (at 355.6 {sy} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(ref)}") {properties} '+''.join(f'(pin "{n}" (uuid "{uid(ref+":"+n)}"))' for n in ['1','2'])+f' (instances (project "processor" (path "/{uid("root")}" (reference "{ref}") (unit 1)))))')
  wire((340.36,sy),(350.52,sy),ref+'-input')
  label(net,340.36,sy,ref+'-input-label')
  wire((360.68,sy),(370.84,sy),ref+'-ground')

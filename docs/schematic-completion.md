@@ -1506,3 +1506,12 @@ Both changed sheets were rendered and inspected; the recovery input label
 was moved clear of the DDR symbol. A reused loop-variable error was fixed
 before commit, and the processor checker now rejects duplicate schematic
 UUIDs. No ERC exclusion or hardware recovery proof is claimed.
+
+### Manual switch UUID correction
+
+The new duplicate-identity check caught SW801/SW802 sharing a literal
+reference placeholder UUID after the recovery-sink commit. Corrected the
+generator to derive each switch UUID from its actual reference. The
+connectivity assertions had passed but did not detect this editor-identity
+issue. The prior commit alone did not pass the new processor check; the
+corrected state must pass that check before use.
