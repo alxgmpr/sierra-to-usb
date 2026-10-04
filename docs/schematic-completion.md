@@ -313,3 +313,25 @@ claiming the reference's RK809A-5 is an alias. Capturing its pinout,
 external components, reset/clock controls and rail load budgets remains
 required; a compatible default table does not prove board qualification.
 Earlier suffix-pending notes are superseded by this explicit selection.
+
+## RK809 native-model candidate audit
+
+PCBParts ComponentSearchEngine returned SamacSys model ID 21488395 for
+exact RK809-5: 69 symbol pins (1-68 plus EPAD 69), QFN35P700X700X80-69N-D
+footprint. Raw files are saved under `hardware/reference/rk809-5-cse-candidate.*`;
+these are **not registered active project library parts**. The native
+model uses an older Rev 1.01 datasheet URL. Against Rev 2.4 Table 2.7,
+all 68 numbered pins match names except pin 42 MIC1N vs MICIN and
+pin 43 MIC1P vs MICIP; descriptions identify the same negative/positive
+microphone functions. EPAD 69 corresponds to manufacturer's exposed ground.
+`hardware/pinmaps/rk809-cse-audit.csv` records every comparison.
+
+All 69 supplied electrical types are passive, so the symbol cannot support
+a meaningful power/input/output ERC review as supplied. Correct types and
+functional grouping, current datasheet fields and native alternates must
+be established before integration. The footprint has 0.35 mm lead pitch,
+7 x 7 mm body, 5.59 mm exposed pad, one solid exposed-pad paste aperture
+and a bare RK809-5.stp model reference without returned model data.
+Its paste strategy, pad geometry, courtyard and model path still require
+manufacturer/assembly review and official KiCad checks; catalog model
+availability does not establish library qualification.
