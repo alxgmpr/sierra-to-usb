@@ -1254,3 +1254,27 @@ Native ERC no longer reports missing-library issues. Current full ERC is
 **470 violations**: 373 unconnected pins, 70 undriven power pins and
 27 undriven pins. No exclusions were used. Remaining supply, bypass,
 interface and firmware sequencing work is still required.
+
+## 2026-10-04 PMU logic correction and PLL supply capture
+
+**Correction to the preceding supply mapping:** PMU_VDD_LOGIC_0V9
+ball 1N16 belongs on VDDA0V9_PMU, not the switched VDD_LOGIC rail.
+The NanoPi R3S reference sheet 8 explicitly places this PMU-domain logic
+input on VDDA0V9_PMU. The hardware guide section 2.2.2.1 describes
+that rail as retained for PMU-domain logic and oscillator operation. The
+previous connection was changed and exact membership assertions updated
+to prevent it silently reappearing. VDD_LOGIC now has only its nine
+VDD_LOGIC balls; 1N16 shares the dedicated PMU analog LDO rail.
+
+Guide Figures 2-17 and 2-18 additionally establish PMUPLL_AVDD_0V9
+1P17 on VDDA0V9_PMU, PMUPLL_AVDD_1V8 1N18 on VCCA1V8_PMU,
+SYSPLL_AVDD_0V9 1H5 on VDDA_0V9 and SYSPLL_AVDD_1V8 1H4 on
+VCCA_1V8. Those four balls are now connected to their separate LDO rails.
+Figure 2-17/18 require local 1 uF plus 100 nF bypass at each PLL supply;
+these processor-local banks remain to be captured and must not be
+confused with the existing PMIC output capacitor banks.
+
+The combined netlist verifies exact LDO, existing output-capacitor and
+processor membership on each of the four analog rails. Processor unit-D
+render was inspected. Native full ERC is now 462 violations, without
+exclusions. PMU retention and full power sequencing remain unqualified.

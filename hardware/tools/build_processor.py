@@ -41,7 +41,8 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
     top = float(re.search(r'\(start [-\d.]+ ([-\d.]+)\)', body)[1])
     pins = re.findall(r'\(number "([^"]+)"', body)
     for px, py, angle, name, number in re.findall(r'\(pin \w+ \w+.*?\(at ([-\d.]+) ([-\d.]+) ([-\d.]+)\).*?\(name "([^"]+)".*?\(number "([^"]+)"', body, re.S):
-        rail = ('VDD_LOGIC' if name.startswith('VDD_LOGIC_') or name == 'PMU_VDD_LOGIC_0V9' else 'VDD_GPU' if name.startswith('VDD_GPU_') else 'VCC3V3_PMU' if name in {'PMUIO1','PMUIO2'} else None)
+        analog = {'PMU_VDD_LOGIC_0V9':'VDDA0V9_PMU','PMUPLL_AVDD_0V9':'VDDA0V9_PMU','PMUPLL_AVDD_1V8':'VCCA1V8_PMU','SYSPLL_AVDD_0V9':'VDDA_0V9','SYSPLL_AVDD_1V8':'VCCA_1V8'}
+        rail = analog.get(name) or ('VDD_LOGIC' if name.startswith('VDD_LOGIC_') else 'VDD_GPU' if name.startswith('VDD_GPU_') else 'VCC3V3_PMU' if name in {'PMUIO1','PMUIO2'} else None)
         if rail:
             rail_balls[number] = rail
         control = control_nets.get(number) or rail
@@ -67,7 +68,7 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
     items.append(f'(symbol (lib_id "ProcessorDraft:RK3566") (at {x} {y} 0) (unit {unit}) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(str(unit))}") {fields} ' + ''.join(f'(pin "{n}" (uuid "{uid("pin-"+n)}"))' for n in pins) + f' (instances (project "processor" (path "/{uid("root")}" (reference "U801") (unit {unit})))))')
 items.append(f'(text "INCOMPLETE PROCESSOR CAPTURE: all 565 balls present; documented grounds, logic/GPU and PMU supplies connected; circuitry incomplete.\\nPMIC controls: AJ37=I2C0 SCL, AK38=I2C0 SDA, 1P19=PMIC_SLEEP.\\n19 alternate roles and TVSS unresolved. No production footprint assigned.\\nIntegrated draft: CPU, DDR, analog/IO supplies and peripheral circuitry remain open." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
 (ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
-assert len(rail_balls) == 17
+assert len(rail_balls) == 21
 assert connected_controls == set(control_nets)
 assert len(ground_balls) == 187 and '1M18' not in ground_balls
 print('Generated standalone eight-unit processor draft, U801; 187 documented ground balls connected.')
