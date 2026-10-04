@@ -21,5 +21,6 @@ with tempfile.TemporaryDirectory() as tmp:
     pg=next(p for name,p in nets.items() if name.endswith('/MAIN3V3_PG_5V'))
     assert pg=={('U601','1'),('U602','2'),('R605','2'),('R606','1')},pg
     assert ('U602','5') in recovery and ('C604','1') in recovery
+    assert nets['MAIN3V3_GOOD']=={('U602','4'),('U201','44')},nets['MAIN3V3_GOOD']
     assert len(tree.findall('./components/comp'))==92
 print('PASS: appliance restart GPIO connection and 92-component capture; not full ERC.')

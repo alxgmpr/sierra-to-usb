@@ -60,7 +60,7 @@ def wire(a,b):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
 def label(name,p):
- if name in {'5V_MAIN','3V3_MAIN'}:
+ if name in {'5V_MAIN','3V3_MAIN','MAIN3V3_GOOD'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("global"+name+str(p))}"))');return
  items.append(f'(label "{name}" (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "{uid("label"+name+str(p))}"))')
 def power(name,p,ref):add('power',name,ref,name,*p)
@@ -79,7 +79,7 @@ for x in [99.06,104.14]:wire((x,86.36),(x,93.98))
 wire((99.06,93.98),(104.14,93.98));power('GND',(101.6,93.98),'#PWR601')
 add('Device','L','L601','1uH',139.7,73.66,angle=90,fp='Inductor_SMD:L_Coilcraft_XxL4030',fields={'MPN':'XGL4030-102MEC','Manufacturer':'Coilcraft','LCSC':'C6336766','Qualification':'Footprint dimensions and hot saturation pending'})
 wire((111.76,73.66),(135.89,73.66));wire((143.51,73.66),(175.26,73.66));label('3V3_MAIN',(175.26,73.66))
-wire((91.44,78.74),(83.82,78.74));label('3V3_MAIN',(83.82,78.74));items[-1]=items[-1].replace('justify left bottom','justify right bottom')
+wire((91.44,78.74),(83.82,78.74));label('3V3_MAIN',(83.82,78.74));items[-1]=items[-1].replace('(at 83.82 78.74 0)','(at 83.82 78.74 180)').replace('justify left','justify right')
 cap={'MPN':'CL32B226KAJNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C309062','Qualification':'Bank sizing and loop stability pending'}
 for ref,x,y,net in [('C601',55.88,63.5,'5V_MAIN'),('C602',175.26,91.44,'3V3_MAIN'),('C603',200.66,91.44,'3V3_MAIN')]:
  add('Device','C_Small',ref,'22uF / 25V',x,y,fp='Capacitor_SMD:C_1210_3225Metric',fields=cap)
@@ -98,6 +98,7 @@ wire((210.82,129.54),(210.82,139.7));label('MAIN3V3_EN',(210.82,134.62))
 wire((210.82,144.78),(210.82,152.4));power('GND',(210.82,152.4),'#PWR611')
 # 5 V tolerant Schmitt input, powered by the independent recovery supply.
 add('74xGxx','74LVC1G17','U602','SN74LVC1G17DBVR',210.82,45.72,fp='Package_TO_SOT_SMD:SOT-23-5',fields={'MPN':'SN74LVC1G17DBVR','Manufacturer':'Texas Instruments','LCSC':'C7836'})
+items[-1]=items[-1].replace('(at 185.42 30.72 0)','(at 210.82 22.86 0)').replace('(at 185.42 33.72 0)','(at 210.82 25.4 0)')
 wire((198.12,45.72),(185.42,45.72));label('MAIN3V3_PG_5V',(185.42,45.72));items[-1]=items[-1].replace('justify left bottom','justify right bottom')
 wire((220.98,45.72),(233.68,45.72));label('MAIN3V3_GOOD',(233.68,45.72))
 power('+3V3',(205.74,35.56),'#PWR612');power('GND',(205.74,55.88),'#PWR613')

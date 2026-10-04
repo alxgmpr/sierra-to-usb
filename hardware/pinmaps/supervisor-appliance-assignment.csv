@@ -1,2 +1,3 @@
 Signal,MCU Pin,GPIO,Direction,Status,Source
 MCU_PWRON_KICK,43,PB4,Output,Connected in appliance root to R508 pin 1; isolated boundary in recovery-only schematic,ST DS13560 STM32G0B1CxT LQFP48 pinout and current native capture
+MAIN3V3_GOOD,44,PB5,Input,Connected to U602 pin 4 in appliance root,ST STM32G0B1CCT6 LQFP48 pinout and native capture

@@ -173,3 +173,20 @@ membership and U602/C604 recovery-supply connections; 92 components.
 Full voltage/threshold corners, visual review, NC/footprint checks and
 MCU input integration remain required before this interface is closed.
 TI primary datasheet archived with SHA-256 in sources.json.
+
+## Supervisor PG integration and limits
+
+MAIN3V3_GOOD now joins U602 output pin 4 to supervisor PB5/pin 44.
+Native appliance checker asserts exactly those endpoints. Render review
+caught overlap at the buffer supply text and regulator sense label; corrected
+render inspected. Recovery-only ERC gains another isolated boundary warning
+until viewed through the complete appliance hierarchy; no exclusion is added.
+
+At 5.5 V and minimum 10 kOhm pull-up (including 1% and 100 ppm/C
+over -40 to +85 C), PG sink loading stays below 0.56 mA, versus
+MP2143 specification 0.4 V at 1 mA. High-level divider estimate at
+4.75 V, opposing resistor corners and 5 uA TI input leakage remains
+above 4.2 V. TI guarantees input operation through 5.5 V. The table
+provides thresholds at 3.0/4.5 V rather than the exact 3.3 V supply;
+full intermediate-supply proof and MP2143 off-state PG leakage remain
+open. No physical signaling or firmware behavior is claimed.

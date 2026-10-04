@@ -79,7 +79,7 @@
   (no_connect (at 78.74 121.92) (uuid "94b96dfe-c2f9-5ff6-924f-631c28be0d80"))
   (no_connect (at 134.62 149.86) (uuid "615bfa47-0ddc-5ca8-a470-a7e16e1da3f5"))
   (global_label "MCU_PWRON_KICK" (shape output) (at 134.62 152.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ad04c914-06cb-5ad4-b1bd-417fdb56dbe8"))
-  (no_connect (at 134.62 154.94) (uuid "66a1a292-76b2-5592-a963-64eb222913e1"))
+  (global_label "MAIN3V3_GOOD" (shape input) (at 134.62 154.94 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ef13a75c-77a8-5550-8052-9becf5a466a9"))
   (no_connect (at 134.62 157.48) (uuid "dc9d84cc-0bb0-5df8-bb05-113ab8b6551c"))
   (no_connect (at 134.62 160.02) (uuid "027fc39d-3644-56dc-a473-2c9c483d11ba"))
   (no_connect (at 134.62 162.56) (uuid "3a7046d9-dd0b-526f-9dc2-ddb71493ecae"))
