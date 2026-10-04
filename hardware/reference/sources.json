@@ -220,5 +220,19 @@
     "url": "https://www.ti.com/lit/ds/symlink/tps62868.pdf",
     "sha256": "62f61d2bbc06f7d030be182838b00ff065a80c0b953b9319e11a4e66c4e6ab5c",
     "retrieved": "2026-10-04"
+  },
+  {
+    "file": "linux-tps6286x-regulator.c",
+    "url": "https://github.com/torvalds/linux/blob/7704c4c5bb127673b4f0ead839919db573559e38/drivers/regulator/tps6286x-regulator.c",
+    "sha256": "e065dae48d21eedfe56c162bb77911f355301ade819cfdd81ffdcb2ef64fd6ed",
+    "retrieved": "2026-10-04",
+    "revision": "7704c4c5bb127673b4f0ead839919db573559e38"
+  },
+  {
+    "file": "linux-ti-tps62864-binding.yaml",
+    "url": "https://github.com/torvalds/linux/blob/7704c4c5bb127673b4f0ead839919db573559e38/Documentation/devicetree/bindings/regulator/ti,tps62864.yaml",
+    "sha256": "751111c3142388a92e7c9b01a03a9d5c9f9671b66bf26d1224f143a9c223563d",
+    "retrieved": "2026-10-04",
+    "revision": "7704c4c5bb127673b4f0ead839919db573559e38"
   }
 ]

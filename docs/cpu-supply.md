@@ -35,3 +35,29 @@ No CPU regulator symbol or circuit has been added.
 Sources: archived NanoPi R3S LTS sheets 3 and 15;
 https://www.ti.com/lit/ds/symlink/tps62868.pdf, Sections 5 and 8.3;
 https://www.ti.com/product/TPS62869.
+
+## Upstream driver and voltage-limit evidence
+
+Fetched Linux driver and binding using gh CLI at immutable revision
+7704c4c5bb127673b4f0ead839919db573559e38; archived original SPDX
+licensed sources and SHA-256 provenance. Driver explicitly matches
+"ti,tps62869" and implements 400000 uV minimum, 5000 uV steps,
+256 selectors, VOUT1 register 0x01 and software enable in register 0x03.
+Thus 1.025 V maps to selector 125 (0x7D) for the 1A variant.
+Device-tree binding requires a regulators child with SW node.
+The driver specifies 1000 uV/us ramp delay and 3000 us enable time.
+This is upstream source support, not evidence that the eventual bootloader
+or selected kernel includes/configures the driver or initializes the rail.
+
+Rockchip RK3566 hardware guide Section 2.2.2.3 explicitly calls for an
+external CPU DC/DC supporting dynamic frequency/voltage scaling, keeping
+reference decoupling and routing a separate feedback trace from the processor.
+It calls for ripple within 60 mV and refers peak current to the separate
+RK356X Power Consumption Test Report, which has not been obtained.
+
+RK3566 datasheet V1.2 Table 3-2 lists CPU recommended voltage minimum
+0.81 V, typical 0.9 V and maximum NA. Table 3-1 lists 1.2 V absolute
+maximum. This does not establish 1.05 V as a qualified boot voltage;
+absolute maximum must not be used as a recommended operating limit.
+The available evidence closes upstream driver support and exact voltage
+representation, but leaves pre-I2C startup, OPP limits and peak loading open.
