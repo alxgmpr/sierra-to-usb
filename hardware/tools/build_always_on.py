@@ -59,7 +59,10 @@ def wire(a,b):
  counter+=1
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
-def label(name,p):items.append(f'(label "{name}" (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "{uid("label"+name+str(p))}"))')
+def label(name,p):
+ if name=='ISO_12V':
+  items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid("label"+name+str(p))}"))');return
+ items.append(f'(label "{name}" (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "{uid("label"+name+str(p))}"))')
 def power(name,p,ref):add('power',name,ref,name,*p)
 def note(text,p,size=1.27):items.append(f'(text "{text}" (at {p[0]} {p[1]} 0) (effects (font (size {size} {size})) (justify left)) (uuid "{uid(text)}"))')
 def pinlabel(number,name):

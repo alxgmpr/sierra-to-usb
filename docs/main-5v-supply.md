@@ -180,3 +180,24 @@ prove startup without current limiting or acceptable PoE input inrush.
 
 Manufacturer: https://product.samsungsem.com/mlcc/CL10B473KB8NNN.do;
 regulator soft-start source: TPS56837 Section 6.3.3, Equation 1.
+
+## Input bypass and isolated-rail integration
+
+C703/C704 are each Samsung CL31B106KBHNNNE, 10 uF/50 V X7R
+±10% in 1206 (C89632). Manufacturer page confirms the exact suffix,
+ratings and mass-production status; original HTML archived and hashed.
+C705 is CL10B104KA8NNNC, 100 nF/25 V X7R in 0603 for high-frequency
+bypass. All connect from U701 VIN to PGND/GND on isolated ISO_12V.
+Their voltage ratings exceed the assumed 13.2 V normal maximum, but
+input transient protection is not yet qualified. Nominal bulk capacitance
+is 20 uF; DC bias, temperature, ripple heating and upstream bulk
+requirements must still be verified. This is not permission to apply
+raw PoE or the regulator's full 28 V range to the assembled circuit.
+
+ISO_12V is now global in both main5v and always-on sheets. Native
+XML checks prove the shared node contains U701 VIN, the three new
+capacitors, U401 VIN/EN and C401. Recovery output remains separate
+from the main rails. Rendered both affected sheets and corrected the
+input-bank field overlap and global-label direction. Total: 101 parts.
+
+Full appliance ERC: 60 violations, {'pin_not_connected': 41, 'pin_not_driven': 11, 'power_pin_not_driven': 8}. No exclusions added.

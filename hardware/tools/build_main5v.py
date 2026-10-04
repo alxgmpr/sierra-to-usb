@@ -60,7 +60,7 @@ def wire(a,b):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
 def label(name,p):
- if name in {'5V_MAIN'}:
+ if name in {'5V_MAIN','ISO_12V'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("global"+name+str(p))}"))');return
  items.append(f'(label "{name}" (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "{uid("label"+name+str(p))}"))')
 def power(name,p,ref):add('power',name,ref,name,*p)
@@ -91,9 +91,17 @@ wire((139.7,60.96),(139.7,71.12));wire((114.3,71.12),(139.7,71.12));label('MAIN5
 # Adjustable soft-start capacitor follows the TI reference's 47 nF value.
 add('Device','C_Small','C702','47nF / 50V',139.7,104.14,fp='Capacitor_SMD:C_0603_1608Metric',fields={'MPN':'CL10B473KB8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C1622','Dielectric':'X7R','Tolerance':'10%','Qualification':'4.7ms typical startup; full timing bounds unqualified'})
 wire((114.3,81.28),(139.7,81.28));wire((139.7,81.28),(139.7,101.6));wire((139.7,106.68),(139.7,114.3));power('GND',(139.7,114.3),'#PWR704')
+# Input bypass bank: isolated rail only; never raw PoE.
+wire((99.06,63.5),(99.06,40.64));label('ISO_12V',(99.06,40.64))
+for ref,x in [('C703',210.82),('C704',236.22),('C705',261.62)]:
+ bulk=ref!='C705'
+ add('Device','C_Small',ref,'10uF / 50V' if bulk else '100nF / 25V',x,104.14,fp='Capacitor_SMD:C_1206_3216Metric' if bulk else 'Capacitor_SMD:C_0603_1608Metric',fields={'MPN':'CL31B106KBHNNNE' if bulk else 'CL10B104KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C89632' if bulk else 'C1590','Dielectric':'X7R','Qualification':'Input ripple and effective-capacitance qualification pending'})
+ wire((x,101.6),(x,91.44));wire((x,106.68),(x,116.84))
+wire((210.82,91.44),(261.62,91.44));junction((236.22,91.44));wire((236.22,91.44),(236.22,83.82));label('ISO_12V',(236.22,83.82))
+wire((210.82,116.84),(261.62,116.84));junction((236.22,116.84));power('GND',(236.22,116.84),'#PWR705')
 note('MAIN 5 V CONTROL DRAFT — INCOMPLETE',(35.56,25.4),1.524)
 note('MODE: 500 kHz; high valley current limit option. Feedback: 4.992 V nominal.',(35.56,132.08))
-note('Missing: VIN bypass, inductor/output bank, EN and PG circuits.',(35.56,139.7))
+note('Missing: inductor/output bank, EN and PG circuits.',(35.56,139.7))
 note('No 5 V power source exists on this sheet yet. Regulator footprint awaits review.',(35.56,147.32))
 (ROOT/'main5v.kicad_sch').write_text('(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A4") (lib_symbols '+''.join(used.values())+') '+''.join(items)+')\n')
-print('Generated main 5 V control draft with six exact-MPN components.')
+print('Generated main 5 V control draft with nine exact-MPN components.')

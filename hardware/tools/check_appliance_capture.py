@@ -35,5 +35,7 @@ with tempfile.TemporaryDirectory() as tmp:
     ss=next(p for p in nets.values() if ('U701','5') in p)
     assert ss=={('U701','5'),('C702','1')},ss
     assert ('C702','2') in nets['GND']
-    assert len(tree.findall('./components/comp'))==98
-print('PASS: appliance restart GPIO connection and 98-component capture; not full ERC.')
+    assert nets['ISO_12V']=={('U701','8'),('C703','1'),('C704','1'),('C705','1'),('U401','2'),('U401','3'),('C401','1')},nets['ISO_12V']
+    assert {('C703','2'),('C704','2'),('C705','2')} <= nets['GND']
+    assert len(tree.findall('./components/comp'))==101
+print('PASS: appliance restart GPIO connection and 101-component capture; not full ERC.')
