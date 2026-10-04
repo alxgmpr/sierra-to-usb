@@ -1173,3 +1173,16 @@ does not change the root's 116-component count or ERC baseline. The
 19 uncertain unused alternate roles and TVSS remain explicit. Processor
 supply mapping, bypass capacitors, clocks, reset, boot straps, storage,
 DDR and high-speed interfaces still require capture and validation.
+
+## 2026-10-04 processor ground connections
+
+The standalone processor sheet now connects exactly 187 documented
+ground balls to global GND, including DDR_AVSS, PMUPLL_AVSS and
+SYSPLL_AVSS. TVSS ball 1M18 remains unconnected and unspecified;
+its name alone does not establish a ground connection.
+
+`check_processor_capture.py` exports a native KiCad XML netlist and
+verifies the exact ground membership against the reviewed manufacturer
+ball table, one U801 component and 565 library pins. The updated A2
+render was inspected for label/body and title-block overlaps. Supplies,
+interfaces and appliance-root integration remain incomplete.

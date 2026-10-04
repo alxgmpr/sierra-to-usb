@@ -31,14 +31,25 @@ symbol = block(source, source.index('(symbol "RK3566"')).replace('(symbol "RK356
 # No production footprint assignment until land-pattern review is complete.
 symbol = re.sub(r'("Footprint"\s+)"[^"]*"', r'\1""', symbol, count=1)
 items = []
+ground_balls = set()
 for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),(5,76.2,304.8),(6,279.4,304.8),(7,444.5,228.6),(8,444.5,330.2)]:
     body = block(symbol, symbol.index(f'(symbol "RK3566_{unit}_1"'))
     top = float(re.search(r'\(start [-\d.]+ ([-\d.]+)\)', body)[1])
     pins = re.findall(r'\(number "([^"]+)"', body)
+    for px, py, angle, name, number in re.findall(r'\(pin \w+ \w+.*?\(at ([-\d.]+) ([-\d.]+) ([-\d.]+)\).*?\(name "([^"]+)".*?\(number "([^"]+)"', body, re.S):
+        if not (re.fullmatch(r'(?:VSS|AVSS|AVSS1)_\d+', name) or name in {'DDR_AVSS','PMUPLL_AVSS','SYSPLL_AVSS'}):
+            continue
+        ground_balls.add(number)
+        ax, ay = round(x + float(px),4), round(y - float(py),4)
+        left = float(px) < 0
+        bx = round(ax + (-7.62 if left else 7.62),4)
+        items.append(f'(wire (pts (xy {ax} {ay}) (xy {bx} {ay})) (stroke (width 0) (type default)) (uuid "{uid("ground-wire-"+number)}"))')
+        items.append(f'(global_label "GND" (shape passive) (at {bx} {ay} {0 if left else 180}) (effects (font (size 1.27 1.27)) (justify {"right" if left else "left"})) (uuid "{uid("ground-label-"+number)}"))')
     fields = prop('Reference','U801',x,y-top-7.62) + prop('Value','RK3566',x,y-top-5.08)
     for key,value in {'Footprint':'','MPN':'RK3566','Manufacturer':'Rockchip','LCSC':'C2943786','Qualification':'DRAFT: supplies, peripherals, TVSS and land pattern unresolved'}.items():
         fields += prop(key,value,x,y,True)
     items.append(f'(symbol (lib_id "ProcessorDraft:RK3566") (at {x} {y} 0) (unit {unit}) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(str(unit))}") {fields} ' + ''.join(f'(pin "{n}" (uuid "{uid("pin-"+n)}"))' for n in pins) + f' (instances (project "processor" (path "/{uid("root")}" (reference "U801") (unit {unit})))))')
-items.append(f'(text "INCOMPLETE PROCESSOR CAPTURE: all 565 balls present; connections remain open.\\n19 alternate roles and TVSS unresolved. No production footprint assigned.\\nThis standalone draft is not yet connected to appliance power or recovery." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
+items.append(f'(text "INCOMPLETE PROCESSOR CAPTURE: all 565 balls present; documented grounds connected; supply/interface connections open.\\n19 alternate roles and TVSS unresolved. No production footprint assigned.\\nThis standalone draft is not yet connected to appliance power or recovery." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
 (ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
-print('Generated standalone eight-unit processor draft, U801; no circuit connections claimed.')
+assert len(ground_balls) == 187 and '1M18' not in ground_balls
+print('Generated standalone eight-unit processor draft, U801; 187 documented ground balls connected.')
