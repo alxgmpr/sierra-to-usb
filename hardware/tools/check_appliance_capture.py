@@ -48,7 +48,7 @@ with tempfile.TemporaryDirectory() as tmp:
     assert nets['PMIC_I2C_SCL']=={('U501','1'),('R502','2'),('U801','AJ37')}
     assert nets['PMIC_I2C_SDA']=={('U501','2'),('R503','2'),('U801','AK38')}
     assert nets['PMIC_INT_N']=={('U501','7'),('R504','2'),('U801','1R19')}
-    assert nets['RK_RESET_N']=={('U501','67'),('R501','2'),('C513','1'),('U801','AG38'),('SW802','1')}
+    assert nets['RK_RESET_N']=={('U501','67'),('R501','2'),('C513','1'),('U801','AG38'),('SW802','1'),('Q801','3')}
     assert nets['PMIC_SLEEP']=={('U501','49'),('R505','1'),('U801','1P19')}
     assert len({p for r,p in nets['GND'] if r=='U801'})==187
     assert nets['VDD_LOGIC']=={('U501','13'),('L501','2'),('C501','1'),('C502','1'),('C503','1')}|{('U801',b) for b in ['1H7','1H8','1H9','1H10','1J7','1J10','1K7','1K10','1L7']}
@@ -68,5 +68,9 @@ with tempfile.TemporaryDirectory() as tmp:
         assert fields['MPN']=='MPZ1608S121ATAH0' and fields['DCR Maximum']=='45mOhm'
     assert {('SW801','2'),('SW802','2')} <= nets['GND']
     assert nets['SARADC_BOOT_KEY']=={('U801','1D17'),('R801','2'),('C820','1'),('SW801','1')}
-    assert len(tree.findall('./components/comp'))==142
-print('PASS: appliance restart GPIO connection and 142-component capture; not full ERC.')
+    assert nets['MCU_PROCESSOR_RESET_ASSERT']=={('U201','21'),('R802','1')}
+    base=next(v for v in nets.values() if ('Q801','1') in v)
+    assert base=={('Q801','1'),('R802','2'),('R803','1')}
+    assert {('Q801','2'),('R803','2')} <= nets['GND']
+    assert len(tree.findall('./components/comp'))==145
+print('PASS: appliance restart GPIO connection and 145-component capture; not full ERC.')

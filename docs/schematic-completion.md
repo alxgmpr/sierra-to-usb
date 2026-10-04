@@ -1444,3 +1444,36 @@ The existing PMU-domain pull-up stays on VCC3V3_PMU; no always-on
 pull-up was added. Switch operating-temperature limits remain applicable.
 Native checks and rendered inspection pass for the 142-component draft.
 Full appliance ERC remains 451 violations; reset/boot bench proof is absent.
+
+## 2026-10-04 independent MCU processor/PMIC reset sink
+
+U201 PB2/pin 21 now drives MCU_PROCESSOR_RESET_ASSERT. Removed its
+unused-pin marker, retaining PB0 watchdog kick and PB1 power-fault input.
+Q801 reuses the embedded native MMBT3904 model: Nexperia MMBT3904,215,
+SOT-23, pin 1 base / 2 emitter / 3 collector. R802 is the existing selected
+Yageo RC0603FR-0710KL (10kR, 1%, 0603); R803 is RC0603FR-07100KL
+(100kR, 1%, 0603). The latter pulls the base to ground while PB2 is
+high impedance. The collector connects to RK_RESET_N and the emitter
+to ground. No always-on pull-up is connected to the processor reset domain.
+
+The current Nexperia manufacturer PDF dated 8 April 2026 was read:
+https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf
+At nominal 3.3V, using 0.85V VBE as a calculation assumption, the base
+current is about 236.5uA after the 100k pull-down current; the reset
+pull-up contributes about 330uA steady collector current before other
+leakage. This is a sizing estimate, not a guaranteed saturation bound.
+Manufacturer VCEsat maximum 200mV is specified at IC=10mA, IB=1mA,
+25C and does not prove this circuit's complete temperature/load limits.
+Off-state leakage, the 100nF discharge transient, PMIC input current,
+MCU VOH corners, reset low-level limits and bounded pulse/release timing
+still need qualification. Firmware must drive PB2 low before making it
+an output and assert high only for the documented PMIC restart operation.
+
+Standalone processor and integrated appliance native checks pass for 145
+components, including exact MCU pin, transistor terminals and resistor nets.
+Both changed sheets were rendered and inspected; transistor fields moved
+clear of the body. Full appliance ERC remains 451 violations. The older
+standalone recovery check stops at five isolated-pin-label warnings: the
+four previously integrated control labels plus this new reset label have
+their destination circuits outside the standalone recovery hierarchy.
+No ERC exclusions or passing standalone-recovery claim were added.
