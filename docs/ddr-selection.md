@@ -442,3 +442,22 @@ start is 1.2ms. Neither typical timing nor this incomplete threshold
 spec proves VDD1/VDD2/VDDQ order at corners. Disable/undervoltage
 output decay and PMIC sequencing also remain to verify before release.
 Native symbol acquisition, exact inductor and circuit capture remain next.
+
+## Native SY8089 model audited
+
+Archived EasyEDA C78988 native symbol and footprint via easyeda2kicad
+1.0.1. All five symbol identities match AN_SY8089/A page 2. Prepared
+an unregistered derivative with EN/FB input, IN/GND power-in and LX
+power-out; no production footprint assigned. The native footprint remains
+a candidate pending dimensional review. No new datasheet-derived pin
+table or speculative symbol identities were introduced.
+
+Application-note page 7 recommends 10kR..1MR for both divider resistors,
+while NanoPi uses a 2kR upper resistor. That reference exception should
+be retained explicitly or reviewed with its 100pF feed-forward network
+before choosing a different divider. Page 8 states EN >1.5V turns on,
+EN <0.4V turns off, and recommends a 1MR pull-down if the driving
+source becomes high impedance in shutdown. Review BUCK5 discharge and
+IN persistence; the reference RC alone does not establish the off state.
+Output-capacitor recommendation is >22uF X5R or better; verify effective
+capacitance of the reference 2x22uF+10uF bank and RAM-local loading.
