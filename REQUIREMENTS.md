@@ -106,3 +106,18 @@ interfaces qualify the topology for schematic planning. They do not establish
 measured multi-gigabit WAN forwarding, exact modem compatibility, a released
 memory/PMIC/storage BOM, PoE class, or safe universal M.2 socket. Detailed
 integrated capture remains gated by those exact electrical and software choices.
+
+## Complete schematic capture — 2026-10-03
+
+The user authorized completing the full appliance schematic and exact parts
+selection before PCB layout. This supersedes the earlier hold on detailed CAD
+capture. Keep RK3566, independent STM32 supervision, isolated PoE and 2.5GbE,
+and all four modem models in scope. Use manufacturer reference-design packages
+for new power circuits; 0603 remains the signal-passive preference.
+
+Capture is an engineering draft until pin/rail/BOM/mechanical checks close.
+Bench throughput and recovery evidence remain release conditions; capture does
+not claim those tests have passed. Do not replace missing manufacturer pinouts
+with assumed compatibility. Profile-specific modem implementations are allowed
+without dropping any requested model. Current progress and acceptance criteria
+are in `docs/schematic-completion.md`.

@@ -27,3 +27,11 @@ Native ERC and critical-net checks pass; no firmware or hardware qualification.
 No PCB layout, procurement or fabrication outputs are included.
 
 Previous designs remain only in Git history; none were restored for this work.
+
+## Full schematic work — 2026-10-03
+
+Complete appliance capture and exact parts selection are now authorized and in
+progress on `codex/complete-appliance-schematic`. See
+[completion criteria and live progress](docs/schematic-completion.md). The new
+[always-on supply draft](hardware/always-on.kicad_sch) passes native ERC and
+exact-net checks. It is not yet integrated into a complete appliance hierarchy.
