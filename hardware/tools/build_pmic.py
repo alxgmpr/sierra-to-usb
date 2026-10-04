@@ -199,6 +199,17 @@ items[-1]=re.sub(r'(\(property "Value" "10kR" \(at )[^)]+',r'\g<1>101.6 363.22 9
 wire((86.36,368.3),(99.06,368.3));items.append(f'(global_label "MCU_PWRON_KICK" (shape input) (at 86.36 368.3 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("kick-global")}"))');wire((104.14,368.3),(121.92,368.3))
 add('Device','R_Small_US','R509','100kR',114.3,386.08,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W'})
 wire((114.3,368.3),(114.3,383.54));junction((114.3,368.3));wire((114.3,388.62),(114.3,393.7));power('GND',(114.3,393.7),'#PWR554')
+# Internal headphone supply bypass, following RK809 Figure 1-2.
+add('Device','C_Small','C534','1uF / 25V',330.2,290.83,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
+a=units[4]['38'];b=(a[0],a[1]-7.62);wire(a,b);label('PMIC_INTERNAL_CPVDD',b)
+wire((330.2,288.29),(330.2,278.13));label('PMIC_INTERNAL_CPVDD',(330.2,278.13))
+wire((330.2,293.37),(330.2,300.99));power('GND',(330.2,300.99),'#PWR555')
+# Internal analog/digital 1.8 V LDO outputs: individual bypasses, never external feeds.
+for pin,ref,name,x,pwr in [('44','C535','PMIC_INTERNAL_1V8A',330.2,'#PWR556'),('48','C536','PMIC_INTERNAL_1V8D',368.3,'#PWR557')]:
+ a=units[4][pin];b=(a[0]+12.7,a[1]);wire(a,b);label(name,b)
+ add('Device','C_Small',ref,'1uF / 25V',x,250.19,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
+ wire((x,247.65),(x,237.49));label(name,(x,237.49))
+ wire((x,252.73),(x,260.35));power('GND',(x,260.35),pwr)
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(35.56,31.75))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'

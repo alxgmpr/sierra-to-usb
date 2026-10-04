@@ -33,11 +33,14 @@ with tempfile.TemporaryDirectory() as tmp:
  '/PMIC_PWRON_N':{('U501','52'),('C532','1'),('Q501','3')},
  'MCU_PWRON_KICK':{('R508','1')},
  'Net-(Q501-B)':{('Q501','1'),('R508','2'),('R509','1')},
- 'GND':{(f'C{n}','2') for n in range(501,534)}|{('U501','47'),('U501','69'),('R505','2'),('R507','2'),('Q501','2'),('R509','2')},
+ '/PMIC_INTERNAL_CPVDD':{('U501','38'),('C534','1')},
+ '/PMIC_INTERNAL_1V8A':{('U501','44'),('C535','1')},
+ '/PMIC_INTERNAL_1V8D':{('U501','48'),('C536','1')},
+ 'GND':{(f'C{n}','2') for n in range(501,537)}|{('U501','47'),('U501','69'),('R505','2'),('R507','2'),('Q501','2'),('R509','2')},
  }
  for name,pins in expected.items():assert nets[name]==pins,(name,nets[name],pins)
- comps=tree.findall('.//components/comp');assert len(comps)==47
+ comps=tree.findall('.//components/comp');assert len(comps)==50
  for c in comps:
   fields={f.attrib['name']:f.text for f in c.findall('fields/field')}
   assert fields.get('MPN'),c.attrib['ref']
- print('PASS: PMIC captured rails: exact twenty-five-net membership and 47 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
+ print('PASS: PMIC captured rails: exact twenty-eight-net membership and 50 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
