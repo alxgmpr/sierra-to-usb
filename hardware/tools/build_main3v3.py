@@ -98,7 +98,7 @@ wire((210.82,129.54),(210.82,139.7));label('MAIN3V3_EN',(210.82,134.62))
 wire((210.82,144.78),(210.82,152.4));power('GND',(210.82,152.4),'#PWR611')
 # 5 V tolerant Schmitt input, powered by the independent recovery supply.
 add('74xGxx','74LVC1G17','U602','SN74LVC1G17DBVR',210.82,45.72,fp='Package_TO_SOT_SMD:SOT-23-5',fields={'MPN':'SN74LVC1G17DBVR','Manufacturer':'Texas Instruments','LCSC':'C7836'})
-items[-1]=items[-1].replace('(at 185.42 30.72 0)','(at 210.82 22.86 0)').replace('(at 185.42 33.72 0)','(at 210.82 25.4 0)')
+items[-1]=items[-1].replace('(at 210.82 30.72 0)','(at 210.82 22.86 0)').replace('(at 210.82 33.72 0)','(at 210.82 25.4 0)')
 wire((198.12,45.72),(185.42,45.72));label('MAIN3V3_PG_5V',(185.42,45.72));items[-1]=items[-1].replace('justify left bottom','justify right bottom')
 wire((220.98,45.72),(233.68,45.72));label('MAIN3V3_GOOD',(233.68,45.72))
 power('+3V3',(205.74,35.56),'#PWR612');power('GND',(205.74,55.88),'#PWR613')
