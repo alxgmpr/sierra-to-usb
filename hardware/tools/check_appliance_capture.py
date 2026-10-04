@@ -98,4 +98,8 @@ with tempfile.TemporaryDirectory() as tmp:
     assert nets['VDD_DDR_0V6']=={('R903','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDDQ'}
     zq=next(p for p in nets.values() if ('U901','A5') in p)
     assert zq=={('U901','A5'),('R903','2')}
+    bus=list(__import__('csv').DictReader((root/'reference/ddr-bus-map.csv').open()))
+    assert len(bus)==65
+    for r in bus:
+        assert nets[r['net']]=={('U801',r['processor_ball']),('U901',r['ram_ball'])},(r,nets.get(r['net']))
 print('PASS: appliance restart GPIO connection and 176-component capture; not full ERC.')

@@ -34,6 +34,7 @@ symbol = re.sub(r'("Footprint"\s+)"[^"]*"', r'\1""', symbol, count=1)
 items = []
 ground_balls = set()
 control_nets = {'AJ37':'PMIC_I2C_SCL','AK38':'PMIC_I2C_SDA','1P19':'PMIC_SLEEP','AG38':'RK_RESET_N','1R19':'PMIC_INT_N','1D17':'SARADC_BOOT_KEY'}
+ddr_map={r['processor_ball']:r['net'] for r in __import__('csv').DictReader((ROOT/'reference/ddr-bus-map.csv').open())}
 connected_controls = set()
 rail_balls = {}
 for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),(5,76.2,304.8),(6,279.4,304.8),(7,444.5,228.6),(8,444.5,330.2)]:
@@ -45,7 +46,7 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
         rail = analog.get(name) or ('VDD_LOGIC' if name.startswith('VDD_LOGIC_') else 'VDD_NPU' if name.startswith('VDD_NPU_') else 'VDD_GPU' if name.startswith('VDD_GPU_') else 'VCC3V3_PMU' if name in {'PMUIO1','PMUIO2'} else None)
         if rail:
             rail_balls[number] = rail
-        control = control_nets.get(number) or rail
+        control = control_nets.get(number) or rail or ddr_map.get(number)
         if control:
             if number in control_nets:
                 connected_controls.add(number)
@@ -138,7 +139,7 @@ wire((350.52,347.98),(350.52,355.6),'boot-filter-ground')
 label('GND',350.52,355.6,'boot-filter-ground-label')
 switch_source = Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/Switch.kicad_sym').read_text()
 switch = block(switch_source,switch_source.index('(symbol "SW_Push"')).replace('(symbol "SW_Push"','(symbol "Switch:SW_Push"',1)
-for ref,net,title,sy in [('SW801','SARADC_BOOT_KEY','PROCESSOR RECOVERY',248.92),('SW802','RK_RESET_N','PROCESSOR / PMIC RESET',172.72)]:
+for ref,net,title,sy in [('SW801','SARADC_BOOT_KEY','PROCESSOR RECOVERY',248.92),('SW802','RK_RESET_N','PROCESSOR / PMIC RESET',236.22)]:
  properties=prop('Reference',ref,355.6,sy-7.62)+prop('Value',title,355.6,sy-5.08)
  for key,val in {'Footprint':'Button_Switch_SMD:SW_SPST_TL3342','MPN':'TL3342F160QG','Manufacturer':'E-Switch','LCSC':'C2886898','Contact Rating':'12VDC 50mA','Operating Temperature':'-20 to +70 C','Qualification':'Manual shared reset / PMIC restart' if ref == 'SW802' else 'Manual Rockusb recovery request; not independent MaskROM override'}.items():
   properties+=prop(key,val,355.6,sy,True)

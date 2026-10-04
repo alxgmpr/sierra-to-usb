@@ -24,7 +24,10 @@ for r in csv.DictReader((root/'reference/micron-ddr-electrical-review.csv').open
  elif n=='RESET_n':f='LPDDR4_RESETn'
  if f:
   assert f in functions,(r,f)
-  rows.append({'net':f,'processor_ball':functions[f],'ram_ball':r['ball'],'ram_function':n})
+  net=f
+  if re.fullmatch(r'LPDDR4_(DQS[01][PN]|CLK[PN])_[AB]',f):
+   parts=f.split('_');net='DDR_'+parts[-1]+'_'+parts[1]
+  rows.append({'net':net,'processor_ball':functions[f],'ram_ball':r['ball'],'ram_function':n})
 assert len(rows)==65
 assert len({r['processor_ball'] for r in rows})==65
 assert len({r['ram_ball'] for r in rows})==65

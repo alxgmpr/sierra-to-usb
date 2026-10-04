@@ -13,7 +13,8 @@ def wire(a,b,key):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid(key)}"))')
 def ground(x,y,key):
  items.append(f'(global_label "GND" (shape passive) (at {x} {y} 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid(key)}"))')
-positions=[(76.2,76.2),(177.8,76.2),(279.4,76.2),(406.4,76.2),(76.2,228.6),(177.8,228.6),(279.4,228.6)]
+ddr_map={r['ram_ball']:r['net'] for r in __import__('csv').DictReader((root/'reference/ddr-bus-map.csv').open())}
+positions=[(76.2,76.2),(203.2,76.2),(330.2,76.2),(482.6,76.2),(76.2,228.6),(177.8,228.6),(279.4,228.6)]
 for unit,(x,y) in enumerate(positions,1):
  h=10.16 if unit in {3,4,5,6} else [22,22,32,20,29,29,14][unit-1]*2.54+5.08
  margin=40.64 if unit==3 else 25.4 if unit==4 else 7.62
@@ -26,7 +27,11 @@ for unit,(x,y) in enumerate(positions,1):
  body=symbol.split(f'(symbol "{name}_{unit}_1"',1)[1].split(f'(symbol "{name}_{unit+1}_1"',1)[0]
  for px,py,angle,pname,ball in re.findall(r'\(pin \w+ \w+.*?\(at ([\d.-]+) ([\d.-]+) ([\d.-]+)\).*?\(name "([^"]+)".*?\(number "([^"]+)"',body,re.S):
   ax,ay=round(x+float(px),4),round(y-float(py),4)
-  if pname=='VSS':
+  if ball in ddr_map:
+   left=float(px)<0;bx=round(ax+(-7.62 if left else 7.62),4)
+   wire((ax,ay),(bx,ay),'ddr-'+ball)
+   items.append(f'(global_label "{ddr_map[ball]}" (shape passive) (at {bx} {ay} {0 if left else 180}) (effects (font (size 1.27 1.27)) (justify {"right" if left else "left"})) (uuid "{uid("ddr-label-"+ball)}"))')
+  elif pname=='VSS':
    wire((ax,ay),(ax,y+20.32),'gnd-'+ball)
   elif pname=='VDDQ':
    wire((ax,ay),(ax,y-20.32),'vddq-'+ball)

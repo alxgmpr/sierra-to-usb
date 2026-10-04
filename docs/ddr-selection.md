@@ -311,3 +311,15 @@ No lane, bit or channel permutation is introduced. ODT controls retain the
 previous LPDDR4X-specific valid-level policy; single-rank CS1/CKE1 are
 not mapped to the RAM's NC balls. Physical bus wiring and unused SoC
 pin policy remain the next capture steps.
+
+## Processor-to-RAM bus captured
+
+Connected all 65 mapped signal nets using the exact unswapped ball pairs.
+Differential clock and strobe net names now end in P/N for PCB pair recognition.
+Native KiCad netlist checks assert exactly one processor ball and one RAM ball
+per bus net, with no third endpoint. Processor and integrated capture checks
+pass for 176 components. The RAM channel units were spaced for readable labels;
+the manual reset control moved clear of the newly connected processor bus.
+RAM and reset-control renders were visually reviewed. Full ERC still reports
+382 violations: this is partial capture, with DDR rail source, local bypass,
+unused processor DDR pins and functional qualification still open.
