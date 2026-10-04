@@ -851,3 +851,10 @@ RK3566 guide section 2.4.4 differentiates LPDDR4 and LPDDR4X supplies.
 No DDR output voltage or divider is committed before exact memory selection.
 Sources: archived rk809-datasheet-v2.4.pdf pages 22, 34;
 rk3566-hardware-guide-v1.1-cn.pdf page 32.
+
+## Main 3.3 V regulator candidate
+
+See main-3v3-supply.md: MP2143DJ-LF-Z is source-audited as a
+5V_MAIN-to-3V3_MAIN candidate. Its PG output has an internal VIN pull-up
+and cannot connect directly to the independent 3.3 V MCU. No regulator
+circuit or exact passive BOM is captured yet.

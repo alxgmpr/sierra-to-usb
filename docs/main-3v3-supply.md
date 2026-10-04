@@ -1,0 +1,43 @@
+# Main 3.3 V supply candidate
+
+MP2143DJ-LF-Z (MPS; TSOT23-8; LCSC C43427) is the candidate for
+5V_MAIN to 3V3_MAIN. NanoPi R3S LTS 2411 sheet 17 uses MP2143DJ,
+1 uH, 200 kOhm / 44.2 kOhm feedback and nominal 10 uF input/output.
+The reference overview suggesting a direct 12 V input is not the circuit.
+This regulator must not connect to the isolated 12 V intermediate rail.
+
+Manufacturer Rev 1.07 specifies 2.5–5.5 V input, up to 3 A output,
+0.600 V feedback and TSOT23-8. The reference divider gives
+0.6*(1+200/44.2) = 3.3149 V nominal. Using 1% resistor corners and
+±2% feedback over -40 to +85 C gives approximately 3.196 to 3.438 V,
+before ripple, transient and layout drops. The all-temperature guarantee
+through +125 C needs clarification; do not extend the ±2% figure.
+
+Pin audit from manufacturer pages 2–3:
+
+| Pin | Name | Capture requirement |
+|---|---|---|
+| 1 | PG | Internal 500 kOhm pull-up to VIN; high approaches 5 V. Never directly connect to the 3.3 V supervisor. |
+| 2 | VIN | 5V_MAIN; input bypass and overshoot must keep <=5.5 V operating. |
+| 3 | SW | External inductor input. |
+| 4 | PGND | Switching return. |
+| 5 | OUT | Output sensing; connect after inductor. |
+| 6 | AGND | Quiet feedback return; layout connection per manufacturer. |
+| 7 | FB | Divider midpoint; output bank and divider still to capture. |
+| 8 | EN | Low <=0.4 V; high >=1.2 V. Main-power control and boot/shutdown sequence still to define. |
+
+3 A is a regulator rating, not proof of appliance load/thermal margin.
+Typical soft start is 1.3 ms and power-good delay 110 us. Reference
+output capacitance cannot be copied without DC-bias and load review.
+Inductor exact MPN, saturation/current-limit margin, capacitors,
+feedback resistors, PG translation and schematic remain unfinished.
+
+Primary sources:
+- https://www.monolithicpower.com/media/document/MP2143_r1.07.pdf
+- https://www.monolithicpower.com/en/products/power-management/switching-converters-controllers/step-down-buck/converters/mp2143.html
+- Archived hardware/reference/nanopi-r3s-lts-2411.pdf sheet 17.
+
+Catalog lookup on 2026-10-03 identified C43427, extended assembly library,
+2047 indexed stock. This is neither reserved nor real-time stock proof.
+The manufacturer PDF was read through web PDF extraction; direct download
+returned non-PDF content and was rejected rather than archived as a PDF.
