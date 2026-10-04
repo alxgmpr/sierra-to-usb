@@ -87,6 +87,8 @@ add('Device','C_Small','C401','4.7uF / 50V',63.5,76.2,fp='Capacitor_SMD:C_1206_3
 wire((63.5,73.66),(63.5,63.5));label('ISO_12V',(63.5,63.5));wire((63.5,78.74),(63.5,86.36));power('GND',(63.5,86.36),'#PWR410')
 add('Device','C_Small','C402','22uF / 25V',185.42,76.2,fp='Capacitor_SMD:C_1210_3225Metric',fields={'MPN':'CL32B226KAJNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C309062','Qualification':'DC-bias curve pending; provisional selection'})
 wire((185.42,73.66),(185.42,sw[1]));wire((165.1,sw[1]),(185.42,sw[1]));wire((185.42,78.74),(185.42,86.36));power('GND',(185.42,86.36),'#PWR411')
+add('Device','C_Small','C403','22uF / 25V',200.66,99.06,fp='Capacitor_SMD:C_1210_3225Metric',fields={'MPN':'CL32B226KAJNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C309062','Qualification':'Parallel output bank; combined corner/stability validation pending'})
+wire((200.66,96.52),(200.66,sw[1]));wire((185.42,sw[1]),(200.66,sw[1]));junction((185.42,sw[1]));wire((200.66,101.6),(200.66,114.3));power('GND',(200.66,114.3),'#PWR414')
 add('Device','R_Small_US','R401','100kR',63.5,109.22,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W'})
 wire((63.5,106.68),(63.5,101.6));power('+3V3',(63.5,101.6),'#PWR412');wire((63.5,111.76),(63.5,116.84));label('AON_POWER_GOOD',(63.5,116.84))
 # Flags describe external isolated input and buck output, not raw PoE.
@@ -95,7 +97,7 @@ add('power','PWR_FLAG','#FLG402','PWR_FLAG',63.5,86.36)
 add('power','PWR_FLAG','#FLG403','PWR_FLAG',185.42,sw[1])
 note('Independent supervisor supply', (40.64,30.48),2.54)
 note('DRAFT: isolated 12V input; 3.3V / 0.5A output. No connection to raw PoE.\\nEN tied to input; SLEEP tied to 3.3V for normal operation.\\nAlways on while the isolated input is present; downstream cuts must not gate this rail.',(40.64,137.16))
-note('TI SLVSB35C, Figure 8 / Tables 2-3. 10uH + 22uF nominal.\\nCapacitor DC bias, complete rail load and layout review remain open.\\nRoute VOS as Kelvin sense after L401; join AGND / PGND / exposed pad locally.',(40.64,160.02))
+note('TI SLVSB35C, Figure 8 / Tables 2-3. 10uH + 2x22uF nominal.\\nCapacitor DC bias, complete rail load and layout review remain open.\\nRoute VOS as Kelvin sense after L401; join AGND / PGND / exposed pad locally.',(40.64,160.02))
 items.insert(0,'(rectangle (start 35.56 40.64) (end 208.28 124.46) (stroke (width 0.254) (type default)) (fill (type none)) (uuid "'+uid('box')+'"))')
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A4") (title_block (title "Always-on supervisor supply") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
 text=text.replace('(label "AON_POWER_GOOD" (at 76.2 91.44 0)', '(hierarchical_label "AON_POWER_GOOD" (shape output) (at 76.2 91.44 0)')

@@ -45,9 +45,9 @@ assert not nets['+3V3'] & nets['GND']
 exact('/Always-on supply/ISO_12V', 'C401:1', 'U401:2', 'U401:3')
 exact('/POWER_FAULT_N', 'R401:2', 'U401:7', 'U201:20', 'J102:9')
 exact('Net-(U401-SW)', 'L401:1', 'U401:9')
-assert pins('L401:2', 'U401:10', 'U401:8', 'C402:1', 'R401:1') <= nets['+3V3']
-assert pins('U401:1', 'U401:4', 'U401:5', 'U401:6', 'U401:11', 'C401:2', 'C402:2') <= nets['GND']
-assert len(r.findall('.//components/comp')) == 31
+assert pins('L401:2', 'U401:10', 'U401:8', 'C402:1', 'C403:1', 'R401:1') <= nets['+3V3']
+assert pins('U401:1', 'U401:4', 'U401:5', 'U401:6', 'U401:11', 'C401:2', 'C402:2', 'C403:2') <= nets['GND']
+assert len(r.findall('.//components/comp')) == 32
 
 run('sch', 'export', 'svg', '--output', a.output / 'svg', schematic)
 run('sch', 'export', 'pdf', '--output', a.output / 'recovery.pdf', schematic)

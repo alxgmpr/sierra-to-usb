@@ -240,3 +240,18 @@ TI Table 2 explicitly permits 10 uH with nominal 22, 47, 100 or 200 uF,
 assuming typical +/-20 percent variation. Output capacitor temperature/bias
 margin may therefore be improved by moving toward the supported 47 uF
 combination; current single 22 uF output selection remains provisional.
+
+## Parallel output bank captured
+
+C402/C403 are each CL32B226KAJNNNE, 22 uF / 25 V X7R 1210.
+The output bank is now 44 uF nominal. At 3.6 V Samsung typical loss
+is 9.60 percent: about 39.78 uF before tolerance and temperature, or
+30.43 uF with -10 percent tolerance and -15 percent temperature allowance.
+This improves absolute capacitance margin relative to the original single
+22 uF part. Nominal 44 uF is near TI's supported 47 uF / 10 uH option,
+but the combined low estimate falls below its assumed -20 percent range.
+Loop stability and aging therefore remain open; this is not a claim of
+guaranteed all-corner compliance with Table 2. Native ERC, supply net
+membership, direct reset and fault net assertions pass with 32 fitted
+components, all carrying exact MPNs. Prior 31-component figures describe
+the earlier single-output-capacitor revision.
