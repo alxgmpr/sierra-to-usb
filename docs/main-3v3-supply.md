@@ -83,3 +83,14 @@ The 3.3 V +/-5% comparison window is 3.135–3.465 V. These component
 corners fit that comparison window, but it is not an established common
 requirement for every downstream device. Feedback bias, aging, ripple,
 transients and load drops remain outside this calculation.
+
+## Native symbol source audit
+
+Installed easyeda2kicad v1.0.1 exported C43427 successfully after CSE
+returned no model for both exact MPN and MP2143DJ. Raw symbol and footprint
+are archived as mp2143-easyeda-candidate files. All eight source pin names
+and numbers match manufacturer Rev 1.07. All source electrical types are
+unspecified and therefore must be corrected before registration; proposed
+types are recorded in hardware/pinmaps/mp2143.csv. In particular, OUT is
+the sense input and SW is the power output. Native library registration,
+KLC/render review and footprint dimensions still remain.
