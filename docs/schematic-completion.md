@@ -350,3 +350,10 @@ symbol exporter accepts the review library. This draft is not registered
 in the active project, KLC-qualified, visually approved or integrated.
 Its inherited physical-order pin layout still needs functional grouping,
 and all electrical-type proposals require review before final capture.
+
+A four-unit grouped PMIC review symbol is now saved under
+`hardware/reference/rk809-5-grouped-review.kicad_sym`: buck/switch, LDO,
+management/RTC, and audio units. All 69 audited native-model pins occur
+exactly once across the units; native exporter recognizes four units.
+Seven analog roles remain explicitly unresolved. This candidate still
+needs visual/KLC review and footprint qualification before active capture.
