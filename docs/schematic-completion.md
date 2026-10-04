@@ -1139,3 +1139,22 @@ controls, GPU power enable, FLASH_WPn, ETH0 clock, test clock and VOP PWM.
 No processor has been added to the appliance schematic yet. All eight
 units export successfully through native KiCad; functional grouping,
 geometry and footprint review remain prerequisites for active capture.
+
+## 2026-10-04 existing RK3566 footprint coordinate audit
+
+`check_rk3566_footprint.py` checks the archived native footprint without
+modifying its geometry. All 565 unique pad identifiers match the extracted
+manufacturer ball table. Its 343 inner balls follow a 20-column, 18-row
+0.65 mm lattice, while 222 outer balls follow a 38-column, 35-row 0.4 mm
+lattice. Each coordinate matches within 0.011 mm, allowing the native
+export's hundredth-millimetre rounding and 0.005 mm inner-array offset.
+
+Visual inspection of Rev 1.2 Figures 2-3, 2-5 and 2-6 confirms the mixed
+pitch arrangement, top-view row/column orientation and outer 14.8 x
+13.6 mm ball-centre extent. Package body is nominally 15.5 x 14.4 mm,
+height 0.794 mm (maximum 0.889 mm). The dimensional table's ball diameter
+b is nominally 0.27 mm, range 0.22–0.32 mm; this is **not a PCB land
+diameter recommendation**. The native footprint uses 0.22 mm circular
+lands everywhere and lacks fabrication and courtyard layers and a 3D model.
+Those manufacturing details remain unresolved; the footprint is not registered
+as production-ready. This audit closes identifier/coordinate checking only.
