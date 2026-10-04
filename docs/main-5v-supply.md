@@ -71,3 +71,10 @@ VIN/PGND copper plus manufacturer stencil example separately. Do not
 substitute a generic QFN-10 with a central exposed pad. Circuit capture
 can proceed after local footprint/symbol review; assembly and thermal
 qualification remain independent.
+
+## Typed regulator symbol
+
+Recovery:TPS56837RPAR is registered with ten unique pins and audited
+electrical types. Native symbol render inspected. check_tps56837_symbol.py
+verifies the manufacturer-reviewed table. Footprint field intentionally blank
+pending RPA geometry review. No circuit is represented by this symbol alone.

@@ -3,7 +3,7 @@
 from pathlib import Path
 import csv,re
 root=Path(__file__).resolve().parents[1]
-s=(root/'Recovery.kicad_sym').read_text().split('(symbol "MP2143DJ-LF-Z"',1)[1]
+s=(root/'Recovery.kicad_sym').read_text().split('(symbol "MP2143DJ-LF-Z"',1)[1].split('(symbol "TPS56837RPAR"',1)[0]
 pins=re.findall(r'\(pin (\w+) line.*?\(name "([^\"]+)".*?\(number "([^\"]+)"',s,re.S)
 expected={(r['Electrical type'],r['Name'],r['Pin']) for r in csv.DictReader((root/'pinmaps/mp2143.csv').open())}
 assert len(pins)==8 and set(pins)==expected,pins
