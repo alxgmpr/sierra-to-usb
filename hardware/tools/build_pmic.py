@@ -86,7 +86,7 @@ for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1
  else:
   a=units[1][str(n)];b=(a[0],40.64);wire(a,b)
 wire((88.9,40.64),(93.98,40.64));label("5V_MAIN",(88.9,40.64))
-capfields={'MPN':'CL32B226KAJNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C309062','Qualification':'Effective-capacitance review and load stability pending'}
+capfields={'MPN':'CL32B226KAJNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C309062','Qualification':'Typical bias curve reviewed; combined-corner aging and loop stability pending'}
 for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC_SENSE',501),(2,129.54,'VDD_GPU','VDD_GPU_SENSE',505)]:
  add('Device','L_Small',f'L50{channel}','0.47uH',238.76,y,90,fp='Inductor_SMD:L_Coilcraft_XxL4020',fields={'MPN':'XGL4020-471MEC','Manufacturer':'Coilcraft','LCSC':'C5837785'})
  wire((223.52,y),(236.22,y));label(f'PMIC_SW{channel}',(223.52,y))

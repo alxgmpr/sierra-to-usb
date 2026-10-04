@@ -500,3 +500,24 @@ Rendered draft inspected and corrected overlapping input labels and codec
 unit/title-block overlap. `hardware/tools/build_pmic.py` reproduces this draft;
 preserve manual changes before regeneration. Kelvin sense routes to processor
 loads, placement and ground returns remain PCB-stage requirements.
+
+## Captured PMIC capacitor bank margin
+
+`python3 hardware/tools/review_pmic_capacitance.py` interpolates the archived
+Samsung CL32B226KAJNNN typical 25 C DC-bias curve. With -10 percent initial
+and -15 percent X7R temperature factors, and no credit for positive bias
+change, the captured three-capacitor 66 uF bank estimates 50.49 uF at 0.9 V
+and 49.86 uF at the PMIC's highest programmable 2.4 V output, before aging.
+The latter allows about 39.8 percent additional loss before reaching 30 uF.
+This supports retaining three capacitors instead of a marginal two-part bank;
+it does not establish a guaranteed combined-corner minimum.
+
+At the maximum 5.5 V input, the captured single 22 uF input capacitor loses
+24.37 percent typically. With the same tolerance/temperature factors it
+estimates 12.73 uF before aging, compared with the reference's nominal 10 uF.
+The remaining additional-loss allowance is about 21.4 percent. The script's
+10 uF comparison is a conservative design target, not a manufacturer stated
+effective-capacitance minimum. Aging, supplier guaranteed data, ripple-current
+and the larger output bank's loop/transient behavior remain required checks.
+Schematic fields now distinguish this completed typical-bias review from the
+remaining qualification work.
