@@ -99,3 +99,25 @@ Sources: https://www.tctek.cn/en/product/tcs4525/ and its linked
 https://www.tctek.cn/wp-content/uploads/2025/03/TCS4525_Ver.1.1_compressed.pdf;
 older manufacturer-authored PDF mirrored at
 https://datasheet4u.com/pdf/1549392/TCS4525.pdf.
+
+## Pinned CPU and GPU operating points
+
+Archived upstream rk3566.dtsi at the same immutable Linux revision as
+our regulator drivers. CPU targets are 0.85V at 408/600/816MHz, 0.90V
+at 1104MHz, 1.025V at 1416MHz, 1.10V at 1608MHz and 1.15V at
+1800MHz. The source specifies 1.15V maximum in each CPU voltage
+triplet. A 1.05V startup candidate is inside the low-frequency triplets,
+but this is software operating-point evidence rather than a manufacturer
+boot limit or proof of the actual BootROM/DDR-loader CPU clock.
+We still need the selected boot chain's pre-regulator initialization state.
+
+GPU targets are 0.85V at 200/300/400MHz, 0.90V at 600MHz, 0.95V
+at 700MHz and 1.00V at 800MHz. Therefore captured RK809 BUCK2's
+0.90V startup setting does not qualify an 800MHz GPU operating point.
+Firmware/kernel must configure voltage before increasing frequency and
+lower frequency before decreasing voltage. Final regulator device-tree
+bindings, enabled OPPs and bootloader ordering remain implementation work;
+no high-frequency operation is claimed from the startup rail capture.
+
+Evidence: hardware/reference/linux-rk3566-opp.dtsi, with original license
+and source hash recorded in hardware/reference/sources.json.

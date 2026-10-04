@@ -284,5 +284,12 @@
     "url": "https://download.epsondevice.com/td/ps/xtal_mhz.json",
     "sha256": "4459bc0cc96d37c1164178b4a3a02fd7d8dce7394eaebf93333184bb58ae4963",
     "retrieved": "2026-10-04"
+  },
+  {
+    "file": "linux-rk3566-opp.dtsi",
+    "url": "https://github.com/torvalds/linux/blob/7704c4c5bb127673b4f0ead839919db573559e38/arch/arm64/boot/dts/rockchip/rk3566.dtsi",
+    "sha256": "382b08e53681c7fd8eb2315e3b4cea21d3d965173eeb93174fdc304f823e233e",
+    "retrieved": "2026-10-04",
+    "note": "Original GPL-2.0+ OR MIT source; operating-point evidence, not boot qualification"
   }
 ]
