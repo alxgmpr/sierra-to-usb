@@ -49,5 +49,8 @@ with tempfile.TemporaryDirectory() as tmp:
     assert nets['PMIC_I2C_SDA']=={('U501','2'),('R503','2'),('U801','AK38')}
     assert nets['PMIC_SLEEP']=={('U501','49'),('R505','1'),('U801','1P19')}
     assert len({p for r,p in nets['GND'] if r=='U801'})==187
+    assert nets['VDD_LOGIC']=={('U501','13'),('L501','2'),('C501','1'),('C502','1'),('C503','1')}|{('U801',b) for b in ['1H7','1H8','1H9','1H10','1J7','1J10','1K7','1K10','1L7','1N16']}
+    assert nets['VDD_GPU']=={('U501','8'),('L502','2'),('C505','1'),('C506','1'),('C507','1')}|{('U801',b) for b in ['1L8','1L9','1M7','1M8','1M9']}
+    assert nets['VCC3V3_PMU']=={('R501','1'),('U501','31'),('C517','1'),('C518','1'),('R502','1'),('R503','1'),('R504','1'),('U801','1P16'),('U801','1N15')}
     assert len(tree.findall('./components/comp'))==117
 print('PASS: appliance restart GPIO connection and 117-component capture; not full ERC.')

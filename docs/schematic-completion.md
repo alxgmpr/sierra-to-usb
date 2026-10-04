@@ -1220,3 +1220,20 @@ Full native ERC now reports **512 violations**: 391 pin_not_connected,
 The processor's unresolved supply/interface connections remain visible;
 ProcessorDraft is embedded but not yet a registered project library. No ERC
 exclusions were added. This integration is not full electrical sign-off.
+
+## 2026-10-04 first processor supply connections
+
+All nine VDD_LOGIC balls plus PMU_VDD_LOGIC_0V9 ball 1N16 join
+VDD_LOGIC from PMIC buck 1. All five VDD_GPU balls join buck 2.
+PMUIO1 ball 1P16 and PMUIO2 ball 1N15 join VCC3V3_PMU from LDO6,
+matching the selected I2C0/reset IO voltage. The RK3566 recommended
+conditions give PMU logic 0.81–0.99 V and PMUIO1 2.97–3.63 V;
+PMUIO2's selected 3.3 V mode requires matching firmware IO-domain setup.
+
+Exact appliance-net assertions now include all 17 processor supply balls,
+the corresponding PMIC output/sense pins, inductors, output capacitor
+banks and pull-ups. Native render inspection confirms readable rail labels.
+This joins existing rail outputs only: processor-local bypass/placement,
+rail load budgets and sequencing remain unfinished. CPU, NPU, DDR,
+analog and other IO domains are still open. Full ERC reports 480
+violations after these supply connections, without exclusions.
