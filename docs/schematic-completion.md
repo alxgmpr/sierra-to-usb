@@ -654,3 +654,31 @@ The table's nominal 3.3 V examples do not make SWOUT1/2 voltage regulators:
 SWOUT1 follows VCC9 (5 V in the current appliance), while SWOUT2 follows
 VCC8, still uncaptured. This prevents silently importing a 3.3 V switch-output
 name after the manufacturer-priority RTC/VCC9 correction.
+
+## PMIC I2C capture and unused-codec audit
+
+SCL pin 1 and SDA pin 2 now have named PMIC_I2C_SCL/SDA nets and R502/R503
+2.2 kR pull-ups to VCC3V3_PMU. Exact Yageo RC0603FR-072K2L / C114662
+parts are 1 percent, 0.1 W, 75 V, 0603; the manufacturer exact-part specsheet
+is archived with hash provenance. RK3566 guide section 2.1.14 assigns I2C0
+primarily to the PMIC and to PMUIO2, selectable 1.8/3.3 V. Capture chooses
+3.3 V PMUIO2 with the PMU supply; firmware IO-domain configuration must match.
+Processor balls AJ37/AK38 remain unconnected until the processor symbol is
+approved and captured. PMIC address is 0x20 and maximum clock is 400 kHz.
+
+Using TI SLVA689's tr=0.8473*R*C relation, 2.2 kR +1 percent gives a 400 kHz
+300 ns rise-time capacitance allowance of about 159 pF. At 100 pF the estimate
+is 188 ns. With 3.3 V +5 percent and minimum resistor, a full-low sink sees
+about 1.59 mA and resistor dissipation about 5.5 mW, below PMIC's 3 mA VOL
+characterization and the resistor rating. Actual total capacitance, processor
+sink limits, leakage, rise time and additional pull-ups remain to verify.
+Source: https://www.ti.com/lit/an/slva689/slva689.pdf.
+
+The manufacturer datasheet does not give a plain unused-codec pin policy;
+the NanoPi reference explicitly grounds several codec pins and floats others.
+Register defaults confirm disabled LDO1P8A_EN_CODEC and PDM_EN, but grounding
+internal supply outputs still needs a complete enable/default audit. No codec
+no-connect or ground markers were added just to suppress ERC. Unused handling
+remains open. Native checks now cover nineteen nets and 37 exact-MPN parts.
+The render exposed RTC ground-label proximity to the I2C label; the RTC ground
+was moved upward before saving.

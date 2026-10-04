@@ -113,7 +113,7 @@ wire((160.02,a[1]),(160.02,251.46));wire((160.02,256.54),(160.02,269.24));power(
 # Reference nominal 1 uF RTC and VREF bypass capacitors; bias/corner margin remains explicit.
 oneuf={'MPN':'CL10B105KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C29936','Qualification':'Manufacturer mass-production and bias curve reviewed; effective minimum pending'}
 add('Device','C_Small','C514','1uF / 25V',50.8,215.9,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
-a=units[3]['45'];wire(a,(a[0],203.2));wire((50.8,203.2),(a[0],203.2));label('5V_MAIN',(50.8,203.2));wire((50.8,203.2),(50.8,213.36));wire((50.8,218.44),(50.8,228.6));power('GND',(50.8,228.6),'#PWR522')
+a=units[3]['45'];wire(a,(a[0],203.2));wire((50.8,203.2),(a[0],203.2));label('5V_MAIN',(50.8,203.2));wire((50.8,203.2),(50.8,213.36));wire((50.8,218.44),(50.8,223.52));power('GND',(50.8,223.52),'#PWR522')
 add('Device','C_Small','C515','1uF / 25V',185.42,269.24,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
 a=units[3]['46'];wire(a,(185.42,a[1]));wire((185.42,a[1]),(185.42,266.7));wire((185.42,271.78),(185.42,281.94));power('GND',(185.42,281.94),'#PWR523')
 # Feed the 3.3 V LDO bank from 5 V: the stated load ratings require headroom.
@@ -149,6 +149,14 @@ for pin,net,y,cref,title in [('3','VCCA1V8_PMU',195.58,525,'LDO7: 1.8V / slot 2'
   wire((x,y),(x,y+10.16));wire((x,y+15.24),(x,y+22.86))
  wire((419.1,y+22.86),(449.58,y+22.86));power('GND',(434.34,y+22.86),f'#PWR{cref+10}')
  note(title+'; load budget pending',(398.78,y-12.7))
+# I2C0 uses PMUIO2, selected as 3.3 V alongside PMUIO1; do not attach 5 V pull-ups.
+for n,net in [('1','PMIC_I2C_SCL'),('2','PMIC_I2C_SDA')]:
+ a=units[3][n];b=(a[0]-7.62,a[1]);wire(a,b);label(net,b);items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
+for ref,x,net in [('R502',50.8,'PMIC_I2C_SCL'),('R503',88.9,'PMIC_I2C_SDA')]:
+ add('Device','R_Small_US',ref,'2.2kR',x,320.04,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-072K2L','Manufacturer':'Yageo','LCSC':'C114662','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
+ wire((x,317.5),(x,309.88));wire((x,322.58),(x,330.2));label(net,(x,330.2))
+wire((50.8,309.88),(88.9,309.88));label('VCC3V3_PMU',(50.8,309.88))
+note('I2C0: 3.3V PMUIO2; 2.2kR pull-ups. Capacitance and firmware speed review pending.',(35.56,345.44))
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(35.56,31.75))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
