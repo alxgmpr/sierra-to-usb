@@ -487,3 +487,14 @@ Select against the combined processor/RAM worst-case VDDQ load and
 regulator fault current before freezing L902. A larger existing-footprint
 inductor may be appropriate; XGL4020-222MEC had no exact JLC DB hit,
 which is not proof of manufacturer unavailability.
+
+## VDDQ regulator/input draft captured
+
+Registered audited native SY8089AAAC as DdrPowerDraft and added U902
+to the DDR power sheet, with blank footprint. IN4 joins 3V3_MAIN;
+GND2 joins ground; C955 10uF CL31B106KAHNNNE/1206 provides local
+input bypass. EN1, LX3 and FB5 have distinct draft net labels with no
+other endpoints until their circuits are captured. Thus U902 does not
+yet drive VDD_DDR_0V6. Explicit sheet note identifies the missing
+output/feedback/enable network. Native integration checks pass for
+239 components; enlarged render reviewed. No production readiness claim.
