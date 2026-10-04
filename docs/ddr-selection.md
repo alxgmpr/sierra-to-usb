@@ -323,3 +323,16 @@ the manual reset control moved clear of the newly connected processor bus.
 RAM and reset-control renders were visually reviewed. Full ERC still reports
 382 violations: this is partial capture, with DDR rail source, local bypass,
 unused processor DDR pins and functional qualification still open.
+
+## Processor DDR power domains captured
+
+NanoPi R3S sheet 6 distinguishes LPDDR4X DDRPHY VDDQ (1.1V) from
+VDDQL (0.6V). Connected eight processor balls 1D5/1D6/1D7/1D8/1D9/
+1E4/1F4/1G4 to VDD_DDR_1V1 and five 1E6/1E7/1E9/1F5/1G5 to
+VDD_DDR_0V6. Exact integrated net memberships include these balls and
+the existing RAM domains; the regulator for 0.6V remains absent.
+The first placement touched the MCU recovery-control wire; the native
+check caught the accidental join. Moving the complete recovery sink
+50.8mm right preserves its endpoint assignments and clears the new labels.
+Processor and integrated checks pass; enlarged render reviewed. Local
+bypass, processor RZQ and unused DDR pin policy are still incomplete.

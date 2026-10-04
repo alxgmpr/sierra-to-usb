@@ -43,7 +43,7 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
     pins = re.findall(r'\(number "([^"]+)"', body)
     for px, py, angle, name, number in re.findall(r'\(pin \w+ \w+.*?\(at ([-\d.]+) ([-\d.]+) ([-\d.]+)\).*?\(name "([^"]+)".*?\(number "([^"]+)"', body, re.S):
         analog = {'OTP_VCC18':'VCCA_1V8','SARADC_AVDD_1V8':'VCCA_1V8','USB_AVDD1_0V9':'USB_AVDD_0V9','USB_AVDD1_1V8':'USB_AVDD_1V8','USB_AVDD1_3V3':'3V3_MAIN','PMU_VDD_LOGIC_0V9':'VDDA0V9_PMU','PMUPLL_AVDD_0V9':'VDDA0V9_PMU','PMUPLL_AVDD_1V8':'VCCA1V8_PMU','SYSPLL_AVDD_0V9':'VDDA_0V9','SYSPLL_AVDD_1V8':'VCCA_1V8'}
-        rail = analog.get(name) or ('VDD_LOGIC' if name.startswith('VDD_LOGIC_') else 'VDD_NPU' if name.startswith('VDD_NPU_') else 'VDD_GPU' if name.startswith('VDD_GPU_') else 'VCC3V3_PMU' if name in {'PMUIO1','PMUIO2'} else None)
+        rail = analog.get(name) or ('VDD_DDR_1V1' if name.startswith('DDRPHY_VDDQ_') else 'VDD_DDR_0V6' if name.startswith('DDRPHY_VDDQL_') else None) or ('VDD_LOGIC' if name.startswith('VDD_LOGIC_') else 'VDD_NPU' if name.startswith('VDD_NPU_') else 'VDD_GPU' if name.startswith('VDD_GPU_') else 'VCC3V3_PMU' if name in {'PMUIO1','PMUIO2'} else None)
         if rail:
             rail_balls[number] = rail
         control = control_nets.get(number) or rail or ddr_map.get(number)
@@ -152,6 +152,7 @@ for ref,net,title,sy in [('SW801','SARADC_BOOT_KEY','PROCESSOR RECOVERY',248.92)
 control_source=(ROOT/'controls.kicad_sch').read_text()
 bjt=block(control_source,control_source.index('(symbol "Transistor_BJT:MMBT3904"'))
 for key,control,output,qref,rbase,rpull,offset in [('reset','MCU_PROCESSOR_RESET_ASSERT','RK_RESET_N','Q801','R802','R803',0),('recovery','MCU_PROCESSOR_RECOVERY_ASSERT','SARADC_BOOT_KEY','Q802','R804','R805',58.42)]:
+ bank_start=len(items)
  for name,ref,value,x,y,angle,fp,fields in [
   ('Device:R_Small_US',rbase,'10kR',320.04,55.88+offset,90,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220'}),
   ('Device:R_Small_US',rpull,'100kR',332.74,71.12+offset,0,'Resistor_SMD:R_0603_1608Metric',{'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675'}),
@@ -180,9 +181,13 @@ for key,control,output,qref,rbase,rpull,offset in [('reset','MCU_PROCESSOR_RESET
  wire((332.74,73.66+offset),(332.74,81.28+offset),key+'-pulldown-ground')
  wire((332.74,81.28+offset),(347.98,81.28+offset),key+'-ground-common')
  label('GND',332.74,81.28+offset,key+'-ground-label')
+ if key == 'recovery':
+  # Keep the complete recovery sink clear of the DDR supply labels.
+  for i in range(bank_start,len(items)):
+   items[i]=re.sub(r'\((at|xy) ([-\d.]+) ([-\d.]+)',lambda m:f'({m[1]} {round(float(m[2])+50.8,4)} {m[3]}',items[i])
 items.append(f'(text "INCOMPLETE PROCESSOR CAPTURE: all 565 balls present; documented grounds, logic/GPU and PMU supplies connected; circuitry incomplete.\\nPMIC controls: AJ37=I2C0 SCL, AK38=I2C0 SDA, 1P19=PMIC_SLEEP.\\n19 alternate roles and TVSS unresolved. No production footprint assigned.\\nIntegrated draft: CPU, DDR, analog/IO supplies and peripheral circuitry remain open." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
 (ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol} {cap} {resistor} {switch} {bjt}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
-assert len(rail_balls) == 31
+assert len(rail_balls) == 44
 assert connected_controls == set(control_nets)
 assert len(ground_balls) == 187 and '1M18' not in ground_balls
 print('Generated standalone eight-unit processor draft, U801; 187 documented ground balls connected.')

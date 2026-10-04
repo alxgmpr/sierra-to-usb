@@ -92,10 +92,10 @@ with tempfile.TemporaryDirectory() as tmp:
     assert {('U901','G2'),('U901','T2')} <= nets['GND']
     assert nets['PMIC_SW3']=={('U501','25'),('L901','1')}
     assert nets['DDR_FB']=={('U501','27'),('R901','2'),('R902','1')}
-    assert nets['VDD_DDR_1V1']=={('U501','26'),('L901','2'),('C901','1'),('C902','1'),('R901','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD2'}
+    assert nets['VDD_DDR_1V1']=={('U501','26'),('L901','2'),('C901','1'),('C902','1'),('R901','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD2'}|{('U801',b) for b in ['1D5','1D6','1D7','1D8','1D9','1E4','1F4','1G4']}
     assert {('C901','2'),('C902','2'),('C903','2'),('R902','2')} <= nets['GND']
     assert {('U501','24'),('C903','1')} <= nets['5V_MAIN']
-    assert nets['VDD_DDR_0V6']=={('R903','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDDQ'}
+    assert nets['VDD_DDR_0V6']=={('R903','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDDQ'}|{('U801',b) for b in ['1E6','1E7','1E9','1F5','1G5']}
     zq=next(p for p in nets.values() if ('U901','A5') in p)
     assert zq=={('U901','A5'),('R903','2')}
     bus=list(__import__('csv').DictReader((root/'reference/ddr-bus-map.csv').open()))
