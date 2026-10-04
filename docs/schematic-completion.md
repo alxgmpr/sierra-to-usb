@@ -796,3 +796,21 @@ Native connectivity assertions now cover twenty-five nets and 46 exact-MPN
 parts. Visual inspection caught horizontal base-resistor property rotation;
 its reference/value placement was corrected. Full PMIC, MCU signal assignment
 and appliance integration remain unfinished.
+
+## Supervisor PWRON GPIO assignment audit
+
+Reserve STM32G0B1CCT6 PB4 / LQFP48 pin 43 for MCU_PWRON_KICK.
+The manufacturer DS13560 pinout confirms PB4 at pin 43, and the current
+native recovery symbol has that pin marked unused. Existing watchdog,
+modem/Ethernet controls, UART and SWD assignments remain occupied and unchanged.
+The assignment is recorded in `hardware/pinmaps/supervisor-appliance-assignment.csv`.
+Source: https://www.st.com/resource/en/datasheet/stm32g0b1cc.pdf.
+
+An attempted standalone pin label produced the correct isolated-pin ERC
+warning because the recovery and PMIC drafts are not yet connected under
+one root. The temporary wiring was removed; PB4 remains NC in the
+recovery-only hierarchy until its integration connects it to R508. No ERC
+exception was added. Firmware must preload low before configuring PB4 as
+push-pull output; high asserts the PWRON transistor. GPIO drive and physical
+pulse timing still require validation. This is an audited allocation, not a
+claim of completed connectivity or an operational restart path.
