@@ -1346,3 +1346,20 @@ and visually checked after correcting rotated bead fields and capacitor
 text placement. Full appliance ERC reports 463 violations; the two added
 filtered global labels have no downstream processor connections yet.
 This is an incomplete capture, not a release or a qualified power tree.
+
+## 2026-10-04 USB OTG0/HOST1 processor supply capture
+
+Connected U801 1J17 to filtered USB_AVDD_0V9, 1H16 to filtered
+USB_AVDD_1V8, and 1H18 directly to 3V3_MAIN. Manufacturer ball names
+are USB_AVDD1_0V9, USB_AVDD1_1V8 and USB_AVDD1_3V3 respectively.
+NanoPi R3S sheet 9 supplies these same balls and shows one 100nF local
+bypass each; C815–C817 use Samsung CL10B104KA8NNNC (25V, 0603).
+USB HOST2/3 supplies are still open; this does not connect their balls
+or qualify shared analog-LDO current and thermal limits.
+
+Native standalone and integrated connectivity checks pass: 136 appliance
+components, fifteen processor-local bypass capacitors, unchanged 565-ball
+model and 187 grounded balls. Full appliance ERC reports 457 violations
+(down from 463); schematic remains incomplete. The processor SVG was
+rendered and reviewed, and the new bypass bank moved into clear space
+between units 7 and 8 after checking for overlap.

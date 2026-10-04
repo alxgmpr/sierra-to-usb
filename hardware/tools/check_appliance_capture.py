@@ -11,7 +11,7 @@ with tempfile.TemporaryDirectory() as tmp:
     pins={(n.get('ref'),n.get('pin')) for n in net.findall('node')}
     assert pins=={('U201','43'),('R508','1')},pins
     nets={n.get('name'):{(v.get('ref'),v.get('pin')) for v in n.findall('node')} for n in tree.findall('./nets/net')}
-    assert nets['3V3_MAIN']=={('C602','1'),('C603','1'),('L601','2'),('R601','1'),('U601','5'),('U501','22'),('U501','4'),('C519','1'),('C524','1'),('U501','57'),('C538','1')},nets['3V3_MAIN']
+    assert nets['3V3_MAIN']=={('C602','1'),('C603','1'),('L601','2'),('R601','1'),('U601','5'),('U501','22'),('U501','4'),('C519','1'),('C524','1'),('U501','57'),('C538','1'),('U801','1H18'),('C817','1')},nets['3V3_MAIN']
     recovery=next(p for p in nets.values() if ('U201','4') in p)
     assert not recovery & nets['3V3_MAIN']
     assert ('U601','2') in nets['5V_MAIN'] and ('U501','66') in nets['5V_MAIN']
@@ -59,12 +59,12 @@ with tempfile.TemporaryDirectory() as tmp:
     assert nets['VDDA_0V9']=={('U501','21'),('C520','1'),('C521','1'),('U801','1H5')}|{(f'C{n}','1') for n in [805, 806]}|{('FB801','1'),('C813','1')}
     assert nets['VCCA_1V8']=={('U501','5'),('C527','1'),('C528','1'),('U801','1H4')}|{(f'C{n}','1') for n in [807, 808]}|{('FB802','1'),('C814','1')}
     assert {(f'C{n}','2') for n in range(801,813)} <= nets['GND']
-    assert nets['USB_AVDD_0V9']=={('FB801','2')}
-    assert nets['USB_AVDD_1V8']=={('FB802','2')}
-    assert {('C813','2'),('C814','2')} <= nets['GND']
+    assert nets['USB_AVDD_0V9']=={('FB801','2'),('U801','1J17'),('C815','1')}
+    assert nets['USB_AVDD_1V8']=={('FB802','2'),('U801','1H16'),('C816','1')}
+    assert {('C813','2'),('C814','2'),('C815','2'),('C816','2'),('C817','2')} <= nets['GND']
     for ref in ['FB801','FB802']:
         comp=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
         fields={f.get('name'):f.text for f in comp.findall('./fields/field')}
         assert fields['MPN']=='MPZ1608S121ATAH0' and fields['DCR Maximum']=='45mOhm'
-    assert len(tree.findall('./components/comp'))==133
-print('PASS: appliance restart GPIO connection and 133-component capture; not full ERC.')
+    assert len(tree.findall('./components/comp'))==136
+print('PASS: appliance restart GPIO connection and 136-component capture; not full ERC.')
