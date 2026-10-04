@@ -753,3 +753,20 @@ Native assertions pass for twenty-two nets and 42 exact-MPN components.
 Render review exposed overlap between the bottom-divider resistor value and
 filter-capacitor value; the capacitor was moved farther right and connectivity
 was checked again. Full PMIC/appliance ERC and physical startup remain open.
+
+## PWRON filter and recovery interface boundary
+
+PWRON pin 52 now uses PMIC_PWRON_N with C532 100 nF / 25 V / 0603
+(CL10B104KA8NNNC). The manufacturer's internal 35 kR +/-15 percent pull-up
+connects to VCC_RTC, now 5 V; there is no added 3.3 V pull-up or direct MCU
+drive. An open-drain transistor interface remains required before connecting
+the 3.3 V recovery MCU. The nominal input RC is 3.5 ms, much shorter than
+the PMIC's 100/500 ms power-on key debounce. Pulse lengths must still account
+for the selected debounce setting and the long-press shutdown threshold.
+At 5.5 V and minimum internal resistance 29.75 kR, a low sink carries about
+0.185 mA before leakage. Off-state leakage and startup/release timing remain
+integration checks. A named net and capacitor alone do not implement recovery.
+
+Updated native checks pass for twenty-three nets and 43 exact-MPN parts;
+the rendered filter and explicit 5 V/open-drain note were reviewed. RTC clock,
+DDR rail, switch outputs, unused-pin handling and full hierarchy remain open.

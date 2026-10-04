@@ -30,11 +30,12 @@ with tempfile.TemporaryDirectory() as tmp:
  '/PMIC_INT_N':{('U501','7'),('R504','2')},
  '/PMIC_SLEEP':{('U501','49'),('R505','1')},
  '/PMIC_VDC':{('U501','61'),('R506','2'),('R507','1'),('C531','1')},
- 'GND':{(f'C{n}','2') for n in range(501,532)}|{('U501','47'),('U501','69'),('R505','2'),('R507','2')},
+ '/PMIC_PWRON_N':{('U501','52'),('C532','1')},
+ 'GND':{(f'C{n}','2') for n in range(501,533)}|{('U501','47'),('U501','69'),('R505','2'),('R507','2')},
  }
  for name,pins in expected.items():assert nets[name]==pins,(name,nets[name],pins)
- comps=tree.findall('.//components/comp');assert len(comps)==42
+ comps=tree.findall('.//components/comp');assert len(comps)==43
  for c in comps:
   fields={f.attrib['name']:f.text for f in c.findall('fields/field')}
   assert fields.get('MPN'),c.attrib['ref']
- print('PASS: PMIC captured rails: exact twenty-two-net membership and 42 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
+ print('PASS: PMIC captured rails: exact twenty-three-net membership and 43 MPNs. Remaining PMIC channels and management are incomplete; this is not full ERC or qualification.')
