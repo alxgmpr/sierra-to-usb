@@ -10,14 +10,14 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 |---|---|---|
 | Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 32-component supply-integrated capture; native ERC/connectivity passes on 2026-10-03 | MCU pin audit closure; physical startup/reset behavior; target-domain interface integration |
 | Independent always-on supply | `hardware/always-on.kicad_sch`, 6 components, TPS62177DQCR, LPS4018-103MRC; integrated recovery hierarchy and PG fault net; typical capacitor bias reviewed | Guaranteed capacitor corners/aging and loop behavior; rail load; final appliance hierarchy |
-| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 38-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
+| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 46-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
 | 2.5GbE | RTL8125BG-CG remains candidate | Exact pin/reference circuit, clocks/rails/reset/PCIe coupling and 2.5G PoE-rated magnetics; symbol and footprint checks |
 | Isolated PoE | Archived TI TIDA-050023 schematic and BOM as candidate reference | Whole-appliance peak and startup budget, exact class, transformer/protection/feedback/MPS/allocation integration; isolation boundary audit |
 | Modem power | Requirements only | Voltage/current envelope per model, switch/eFuse/ramp/discharge, default-off controls and fault sensing |
 | EM9190 / EM9293 sockets and SIM | Older manufacturer PTS research; contacts 24/38/68 conflict with Quectel | Current controlled pin tables, complete per-model profile and power/control/SIM/USB3 capture |
 | RM520N-GL / RM551E-GL sockets and SIM | RM520 guide exists; current RM551 production guide still missing | Current controlled hardware guides and per-model pin/voltage/control/SIM/USB3 capture |
-| Full hierarchy and BOM | Not yet present | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
+| Full hierarchy and BOM | Draft appliance root exports 78 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
 | Visual and electrical review | Always-on draft rendered and corrected; recovery tests rerun | All sheets and circuit crops inspected, native ERC and complete critical-net assertions, manufacturer pin fidelity, footprint pad parity |
 
 No PCB file exists. Do not start placement until the integrated schematic and
@@ -814,3 +814,13 @@ exception was added. Firmware must preload low before configuring PB4 as
 push-pull output; high asserts the PWRON transistor. GPIO drive and physical
 pulse timing still require validation. This is an audited allocation, not a
 claim of completed connectivity or an operational restart path.
+
+## Appliance root integration
+
+`hardware/appliance.kicad_sch` now includes the recovery/always-on hierarchy and
+the partial PMIC sheet. Native export contains 78 annotated components. Recovery
+checks pass with zero ERC violations and 32/32 MPN coverage; the separate PMIC
+capture checker passes 25 exact nets and 46 MPNs. These do not establish full
+appliance ERC or schematic completion. MCU_PWRON_KICK is still an unjoined
+PMIC boundary. Run `python3 hardware/tools/build_appliance.py` after regenerating
+any child sheet to refresh appliance annotation contexts.
