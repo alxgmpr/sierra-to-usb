@@ -700,3 +700,29 @@ and MPN coverage for 38 fitted parts. Native SVG was visually reviewed.
 The completion matrix was refreshed to remove stale 31-part recovery and
 five-part supply claims; those earlier dated sections are historical progress.
 Full schematic completion and PCB placement remain unachieved.
+
+## PMIC SLEEP startup-state capture
+
+SLEEP pin 49 now uses PMIC_SLEEP with R505 10 kR to ground. This is an
+intentional change from the NanoPi reference pull-up: RK3566 guide section
+2.2.7 defines normal operation low, standby high, and wake low. RK809
+PMIC_SYS_CFG3 register 0xF4 resets SLP_POL to active-high and SLP_FUN to
+no effect. The pull-down therefore keeps the intended inactive level while
+the host is high impedance, rather than requesting standby immediately after
+firmware enables sleep semantics. RK3566 ball 1P19 is the dedicated
+PMIC_SLEEP function and must retain that role during processor capture.
+
+A 10 kR sink allows up to about 39.6 uA aggregate leakage before crossing
+the PMIC's 0.4 V input-low limit (maximum resistor 10.1 kR). No guaranteed
+aggregate leakage budget has yet been proven. When asserted from 3.3 V +5
+percent, resistor load is at most about 0.35 mA; host drive strength and
+high-level margin still require final pin configuration review. Sleep control
+must use active-high sleep mode, not the register's shutdown/restart modes.
+The datasheet requires a register read and 2 ms delay between successive
+0xF4 operations and about 66 us after each SLEEP-pin activation change;
+carry these rules into firmware rather than treating the hardware net as proof
+of correct suspend/resume behavior.
+
+The updated render was inspected, and the native captured-net audit passes
+for twenty-one nets and 39 exact-MPN components. Remaining power-on control,
+RTC clock, DDR rail and unused-pin policy are still unfinished.

@@ -161,6 +161,10 @@ note('I2C0: 3.3V PMUIO2; 2.2kR pull-ups. Capacitance and firmware speed review p
 a=units[3]['7'];b=(a[0]+7.62,a[1]);wire(a,b);label('PMIC_INT_N',b)
 add('Device','R_Small_US','R504','10kR',127,320.04,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
 wire((127,317.5),(127,309.88));wire((88.9,309.88),(127,309.88));junction((88.9,309.88));wire((127,322.58),(127,330.2));label('PMIC_INT_N',(127,330.2))
+# Sleep is active high by reset default; hold low while host pin is high impedance.
+a=units[3]['49'];b=(a[0]-7.62,a[1]);wire(a,b);label('PMIC_SLEEP',b);items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
+add('Device','R_Small_US','R505','10kR',185.42,320.04,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
+wire((185.42,317.5),(185.42,309.88));label('PMIC_SLEEP',(185.42,309.88));wire((185.42,322.58),(185.42,330.2));power('GND',(185.42,330.2),'#PWR550')
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
 note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(35.56,31.75))
 text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
