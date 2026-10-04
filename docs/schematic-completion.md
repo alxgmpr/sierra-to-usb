@@ -178,3 +178,30 @@ the external plus internal pull-ups can exceed that load. Startup reset
 behavior and cold-temperature VF therefore remain qualification gaps.
 A direct open-drain supervisor interface may remove the series-diode drop,
 but any replacement must preserve watchdog timing and manual-reset behavior.
+
+## Reset-interface correction selected for next capture
+
+Use TPS3828-33DBVR (TI, LCSC C20032) in place of TPS3823-33DBVR,
+and remove D201: connect open-drain RESET directly to MCU_NRST_N.
+Retain R201 and C205, the existing WDI RUN shunt/pulldown, and MR button.
+This change is selected but **not yet applied to the native schematic**.
+
+TI SLVS165O Rev O (March 2025), Device Comparison Table and Table 5-1:
+TPS3828 retains WDI and MR, 200 ms nominal reset delay and 1.6 s nominal
+watchdog timeout, and uses the same DBV pin map as TPS3823
+(RESET 1, GND 2, MR 3, WDI 4, VDD 5). Its RESET output is open-drain,
+so an external programmer can assert reset without fighting a high output.
+Removing the series diode improves the tabulated reset-low bound from
+0.72 V to 0.40 V at the specified TI test supply, increasing the
+2.66 V test-point margin from 78 mV to 398 mV. The shared datasheet
+power-up 20 uA condition still leaves a supply-ramp qualification gap;
+this replacement must not be described as proving all startup behavior.
+
+PCBParts catalog snapshot on 2026-10-03: C20032, SOT-23-5, 65,899
+listed stock, $0.3713 single-unit indicative price. Stock is not reserved.
+Installed KiCad Power_Supervisor library has no TPS3828 symbol; capture
+needs a checked local open-drain variant of the existing pin-compatible
+TPS3823 symbol rather than keeping its push-pull electrical type.
+After capture, update critical-net assertions to require U202:1 directly
+on MCU_NRST_N, exclude D201 from inventory, rerun ERC and inspect the
+reset circuit render before updating the authoritative BOM status.
