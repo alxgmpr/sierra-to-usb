@@ -1363,3 +1363,23 @@ model and 187 grounded balls. Full appliance ERC reports 457 violations
 (down from 463); schematic remains incomplete. The processor SVG was
 rendered and reviewed, and the new bypass bank moved into clear space
 between units 7 and 8 after checking for overlap.
+
+## 2026-10-04 SARADC and OTP supply capture
+
+RK3566 hardware guide V1.1 sections 2.3.3/2.3.4, Figure 2-49
+(printed page 51, PDF page 54) were inspected as text and a rendered page.
+The figure supplies SARADC_AVDD_1V8 at 1D16 and OTP_VCC18 at 1D15
+from VCCA_1V8. Section 2.3.4 explicitly requires OTP power and local
+bypass even in idle mode. Both balls now connect to the existing PMIC
+LDO8 rail, with individual 100nF / 25V Samsung CL10B104KA8NNNC
+0603 capacitors C818/C819. Separate local capacitors retain placement
+flexibility beyond the single shared capacitor pictured in Figure 2-49.
+
+Native processor and appliance checks pass for 138 components and seventeen
+processor-local bypass capacitors. Full ERC reports 453 violations.
+The rendered processor sheet was inspected and the new capacitors moved
+clear of the title block. Remaining SARADC input/recovery circuitry includes
+the required 10k pull-up at VIN0 (1D17) and the recommended local 1nF
+input filter; neither is claimed captured. The unused-GPIO supply exemption
+in section 2.1.13.3 is not evidence that unused USB PHY supplies may float.
+USB HOST2/3 supply policy and total LDO8 load still require resolution.

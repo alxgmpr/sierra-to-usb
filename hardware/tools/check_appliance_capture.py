@@ -57,14 +57,14 @@ with tempfile.TemporaryDirectory() as tmp:
     assert nets['VDDA0V9_PMU']=={('U501','20'),('C522','1'),('C523','1'),('U801','1N16'),('U801','1P17')}|{(f'C{n}','1') for n in [801, 802, 809, 810]}
     assert nets['VCCA1V8_PMU']=={('U501','3'),('C525','1'),('C526','1'),('U801','1N18')}|{(f'C{n}','1') for n in [803, 804]}
     assert nets['VDDA_0V9']=={('U501','21'),('C520','1'),('C521','1'),('U801','1H5')}|{(f'C{n}','1') for n in [805, 806]}|{('FB801','1'),('C813','1')}
-    assert nets['VCCA_1V8']=={('U501','5'),('C527','1'),('C528','1'),('U801','1H4')}|{(f'C{n}','1') for n in [807, 808]}|{('FB802','1'),('C814','1')}
+    assert nets['VCCA_1V8']=={('U501','5'),('C527','1'),('C528','1'),('U801','1H4')}|{(f'C{n}','1') for n in [807, 808]}|{('FB802','1'),('C814','1'),('U801','1D15'),('U801','1D16'),('C818','1'),('C819','1')}
     assert {(f'C{n}','2') for n in range(801,813)} <= nets['GND']
     assert nets['USB_AVDD_0V9']=={('FB801','2'),('U801','1J17'),('C815','1')}
     assert nets['USB_AVDD_1V8']=={('FB802','2'),('U801','1H16'),('C816','1')}
-    assert {('C813','2'),('C814','2'),('C815','2'),('C816','2'),('C817','2')} <= nets['GND']
+    assert {('C813','2'),('C814','2'),('C815','2'),('C816','2'),('C817','2'),('C818','2'),('C819','2')} <= nets['GND']
     for ref in ['FB801','FB802']:
         comp=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
         fields={f.get('name'):f.text for f in comp.findall('./fields/field')}
         assert fields['MPN']=='MPZ1608S121ATAH0' and fields['DCR Maximum']=='45mOhm'
-    assert len(tree.findall('./components/comp'))==136
-print('PASS: appliance restart GPIO connection and 136-component capture; not full ERC.')
+    assert len(tree.findall('./components/comp'))==138
+print('PASS: appliance restart GPIO connection and 138-component capture; not full ERC.')
