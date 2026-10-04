@@ -45,5 +45,9 @@ with tempfile.TemporaryDirectory() as tmp:
     assert ('R706','1') in recovery
     assert {('L701','2'),('C706','1'),('C707','1')} <= nets['5V_MAIN']
     assert {('C706','2'),('C707','2')} <= nets['GND']
-    assert len(tree.findall('./components/comp'))==116
-print('PASS: appliance restart GPIO connection and 116-component capture; not full ERC.')
+    assert nets['PMIC_I2C_SCL']=={('U501','1'),('R502','2'),('U801','AJ37')}
+    assert nets['PMIC_I2C_SDA']=={('U501','2'),('R503','2'),('U801','AK38')}
+    assert nets['PMIC_SLEEP']=={('U501','49'),('R505','1'),('U801','1P19')}
+    assert len({p for r,p in nets['GND'] if r=='U801'})==187
+    assert len(tree.findall('./components/comp'))==117
+print('PASS: appliance restart GPIO connection and 117-component capture; not full ERC.')

@@ -1201,3 +1201,22 @@ These terminals do not yet connect to U501 because the processor sheet
 is standalone and the PMIC sheet's control labels remain local. Hierarchy
 integration must explicitly join them and verify pull-up and sleep-pull-down
 membership. The processor unit-D render was inspected for label collisions.
+
+## 2026-10-04 processor hierarchy integration
+
+The appliance root now includes processor.kicad_sch as page 9, with
+U801 counted once: **117 components across nine sheets**. PMIC SCL,
+SDA and SLEEP labels are now global. Exact combined-net assertions prove
+AJ37 joins U501 pin 1 and R502 pin 2; AK38 joins U501 pin 2 and R503 pin 2;
+1P19 joins U501 pin 49 and R505 pin 1. All 187 processor ground balls
+join appliance GND. Existing restart and supply assertions continue to pass.
+
+The root was enlarged to A3 after visual review found the fifth child sheet
+outside the A4 border and a note overlapping the title block. The revised
+root render fits all five direct child sheets and the draft note.
+
+Full native ERC now reports **512 violations**: 391 pin_not_connected,
+85 power_pin_not_driven, 28 pin_not_driven and 8 lib_symbol_issues.
+The processor's unresolved supply/interface connections remain visible;
+ProcessorDraft is embedded but not yet a registered project library. No ERC
+exclusions were added. This integration is not full electrical sign-off.
