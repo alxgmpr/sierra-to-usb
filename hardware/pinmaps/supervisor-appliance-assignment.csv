@@ -1,2 +1,2 @@
 Signal,MCU Pin,GPIO,Direction,Status,Source
-MCU_PWRON_KICK,43,PB4,Output,Reserved for integrated PMIC hierarchy; currently NC in recovery-only schematic,ST DS13560 STM32G0B1CxT LQFP48 pinout and current native capture
+MCU_PWRON_KICK,43,PB4,Output,Connected in appliance root to R508 pin 1; isolated boundary in recovery-only schematic,ST DS13560 STM32G0B1CxT LQFP48 pinout and current native capture

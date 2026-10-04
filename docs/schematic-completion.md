@@ -824,3 +824,15 @@ capture checker passes 25 exact nets and 46 MPNs. These do not establish full
 appliance ERC or schematic completion. MCU_PWRON_KICK is still an unjoined
 PMIC boundary. Run `python3 hardware/tools/build_appliance.py` after regenerating
 any child sheet to refresh appliance annotation contexts.
+
+## Supervisor-to-PMIC restart integration
+
+The appliance native netlist now joins U201 pin 43 (PB4) and R508 pin 1
+on global MCU_PWRON_KICK. Q501 sinks PMIC PWRON when the supervisor
+asserts this output. The PMIC capture checker still passes all 25 nets and
+46 MPNs. Recovery-only ERC now reports one isolated_pin_label warning for
+this off-sheet boundary; its previously recorded zero-violation result was
+before integration. No exclusion was added. Full appliance ERC is still
+incomplete because the remaining PMIC and subsystem circuits are absent.
+Firmware pulse timing, reset-default behavior and physical restart require
+verification after the full schematic is captured.

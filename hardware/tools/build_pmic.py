@@ -188,7 +188,7 @@ wire((129.54,363.22),(129.54,355.6));label('PMIC_PWRON_N',(129.54,355.6));wire((
 add('Device','R_Small_US','R508','10kR',101.6,368.3,90,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W'})
 items[-1]=re.sub(r'(\(property "Reference" "R508" \(at )[^)]+',r'\g<1>101.6 360.68 90',items[-1])
 items[-1]=re.sub(r'(\(property "Value" "10kR" \(at )[^)]+',r'\g<1>101.6 363.22 90',items[-1])
-wire((86.36,368.3),(99.06,368.3));label('MCU_PWRON_KICK',(86.36,368.3));wire((104.14,368.3),(121.92,368.3))
+wire((86.36,368.3),(99.06,368.3));items.append(f'(global_label "MCU_PWRON_KICK" (shape input) (at 86.36 368.3 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("kick-global")}"))');wire((104.14,368.3),(121.92,368.3))
 add('Device','R_Small_US','R509','100kR',114.3,386.08,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W'})
 wire((114.3,368.3),(114.3,383.54));junction((114.3,368.3));wire((114.3,388.62),(114.3,393.7));power('GND',(114.3,393.7),'#PWR554')
 note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)

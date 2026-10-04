@@ -78,7 +78,7 @@
   (no_connect (at 78.74 119.38) (uuid "0a966d1b-95d6-591f-bdbf-a7b4f5eadfd2"))
   (no_connect (at 78.74 121.92) (uuid "94b96dfe-c2f9-5ff6-924f-631c28be0d80"))
   (no_connect (at 134.62 149.86) (uuid "615bfa47-0ddc-5ca8-a470-a7e16e1da3f5"))
-  (no_connect (at 134.62 152.4) (uuid "163015d0-ccd8-52d8-b5ba-b6000412c62e"))
+  (global_label "MCU_PWRON_KICK" (shape output) (at 134.62 152.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ad04c914-06cb-5ad4-b1bd-417fdb56dbe8"))
   (no_connect (at 134.62 154.94) (uuid "66a1a292-76b2-5592-a963-64eb222913e1"))
   (no_connect (at 134.62 157.48) (uuid "dc9d84cc-0bb0-5df8-bb05-113ab8b6551c"))
   (no_connect (at 134.62 160.02) (uuid "027fc39d-3644-56dc-a473-2c9c483d11ba"))
