@@ -199,5 +199,7 @@ its post-reflow solder-ball dimensions apply on 0.4mm SMD pads; that is
 not a complete fabrication land-pattern specification. Do not silently
 approve the native pad size or resize copper alone: solder mask opening,
 paste aperture, assembly process and substrate option still need review.
-The native footprint also lacks courtyard and package-body Fab outline.
+The native courtyard coincides with the nominal 14.5 x 10mm body and
+provides no assembly clearance. It has ball Fab marks but lacks a
+package-body Fab outline.
 The existing blank schematic footprint assignment remains appropriate.

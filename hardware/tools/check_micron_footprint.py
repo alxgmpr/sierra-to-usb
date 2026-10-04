@@ -17,4 +17,4 @@ for ball,x,y,w,h in pads:
  assert float(w)==float(h)==0.35
 print('PASS: 200 native pad centers match Micron ZW grid within 0.006mm after rotation.')
 print('Native copper pads are 0.35mm; manufacturer drawing references 0.4mm SMD pads.')
-print('Land pattern remains unqualified: mask/paste, courtyard, Fab outline and assembly review pending.')
+print('Land pattern remains unqualified: mask/paste, courtyard clearance, Fab body outline and assembly review pending.')
