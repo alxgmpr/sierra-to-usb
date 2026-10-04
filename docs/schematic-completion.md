@@ -8,8 +8,8 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 
 | Required block | Current authoritative state | Required before schematic completion |
 |---|---|---|
-| Recovery MCU, watchdog, SWD and reset outputs | Existing 26-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | C203 effective-capacitance review pending; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
-| Independent always-on supply | `hardware/always-on.kicad_sch`, 5 components, TPS62177DQCR, LPS4018-103MRC; native ERC and all five circuit-net checks pass | Capacitor effective capacitance; rail load; power fault integration; connect into final appliance hierarchy |
+| Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 31-component supply-integrated capture; native ERC/connectivity passes again on 2026-10-03 | C203 effective-capacitance review pending; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
+| Independent always-on supply | `hardware/always-on.kicad_sch`, 5 components, TPS62177DQCR, LPS4018-103MRC; native ERC and all five circuit-net checks pass | Capacitor effective capacitance; rail load; power fault integration; final appliance hierarchy still required; now integrated into recovery hierarchy |
 | RK3566 / DDR / PMIC | Archived reference schematic, Rockchip full datasheet and hardware guide; 565-ball CSV extracted; symbol-table review pending | Exact supported RAM and DDR training route; PMIC silicon/suffix and rail sequence; all package balls checked; native capture with complete decoupling and clocks |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
 | 2.5GbE | RTL8125BG-CG remains candidate | Exact pin/reference circuit, clocks/rails/reset/PCIe coupling and 2.5G PoE-rated magnetics; symbol and footprint checks |
@@ -101,7 +101,7 @@ tools KLC checks pass with the F9.3 official-library-path rule excluded because
 this project deliberately uses `${KIPRJMOD}` local model paths. No geometry
 rule is excluded. Full board-level 3D/mechanical review remains pending.
 
-The current recovery BOM has 26/26 fitted components with exact MPN fields.
+The recovery circuitry has 26/26 fitted components; its integrated supply adds five, giving 31/31 in the recovery hierarchy with exact MPN fields.
 C203 is now CL31B106KAHNNNE (10 uF, 25 V, X7R, 1206), replacing
 the provisional 4.7 uF / 0805 selection. Published typical loss at 3.6 V
 is 15.26 percent. Combining that curve with -10 percent initial tolerance
@@ -206,3 +206,12 @@ TPS3823 symbol rather than keeping its push-pull electrical type.
 After capture, update critical-net assertions to require U202:1 directly
 on MCU_NRST_N, exclude D201 from inventory, rerun ERC and inspect the
 reset circuit render before updating the authoritative BOM status.
+
+The always-on supply is now page 4 of `recovery.kicad_sch`. Native netlist
+proves L401 output, U401 sense/SLEEP, output capacitor and PG pull-up
+share +3V3 with the MCU and watchdog. Native ERC and supply/reset/control
+assertions pass for 31 fitted components. ISO_12V remains a named external
+input, not captured PoE; PG is still local and not connected to MCU fault
+sensing. J101 remains a rail test/header boundary: do not connect a second
+3.3 V source while the converter is active. This is recovery integration,
+not the full appliance hierarchy.
