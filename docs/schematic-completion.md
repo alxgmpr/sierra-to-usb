@@ -8,7 +8,7 @@ its files. Prior recovery circuitry is retained. No procurement or fabrication.
 
 | Required block | Current authoritative state | Required before schematic completion |
 |---|---|---|
-| Recovery MCU, watchdog, SWD and reset outputs | Existing 27-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | Five capacitor MPNs still missing; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
+| Recovery MCU, watchdog, SWD and reset outputs | Existing 27-component, three-sheet capture; native ERC/connectivity passes again on 2026-10-03 | Bulk capacitor C203 MPN still missing; manufacturer MCU pin audit; reset voltage margin; target-domain interface integration |
 | Independent always-on supply | `hardware/always-on.kicad_sch`, 5 components, TPS62177DQCR, LPS4018-103MRC; native ERC and all five circuit-net checks pass | Capacitor effective capacitance; rail load; power fault integration; connect into final appliance hierarchy |
 | RK3566 / DDR / PMIC | Archived reference schematic, Rockchip full datasheet and hardware guide; 565-ball CSV extracted; symbol-table review pending | Exact supported RAM and DDR training route; PMIC silicon/suffix and rail sequence; all package balls checked; native capture with complete decoupling and clocks |
 | Boot storage and recovery | Signed A/B and recovery requirements exist; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
@@ -101,8 +101,11 @@ tools KLC checks pass with the F9.3 official-library-path rule excluded because
 this project deliberately uses `${KIPRJMOD}` local model paths. No geometry
 rule is excluded. Full board-level 3D/mechanical review remains pending.
 
-The current recovery BOM has 22/27 fitted components with exact MPN fields.
-The five capacitors are still unresolved. SW201 is now E-Switch TL3342F160QG.
+The current recovery BOM has 26/27 fitted components with exact MPN fields.
+C203 bulk capacitance remains unresolved. C201/C202/C204/C205 are now
+Samsung CL10B104KA8NNNC, 100 nF, 25 V, X7R, +/-10 percent, 0603.
+Published typical 25 C DC-bias data show +0.94 percent at 3.3 V and
++0.83 percent at 3.6 V; this is not guaranteed corner performance. SW201 is now E-Switch TL3342F160QG.
 Its current P010632 Rev J drawing specifies 1.70 x 1.00 mm pads centered at
 x = +/-3.15 mm and y = +/-1.90 mm, matching the installed KiCad footprint.
 Each horizontal pair is internally common; the two rows are switched, matching
@@ -127,3 +130,14 @@ Official Rockchip rkbin provides RK3566 DDR training binaries, but availability
 is not proof of training with a selected RAM. Catalog searches returned costly,
 low-stock Micron parts; those are research candidates, not substitutions for a
 compatible, economical RAM selection. Exact RAM and eMMC remain open.
+
+## Archived capacitor bias data
+
+Samsung characteristic arrays are saved with source hashes in `hardware/reference`.
+At 25 C, CL31B225KBHNNN loses 13.11 percent at 12 V and 15.40 percent
+at 13.2 V. Its nominal 2.2 uF becomes about 1.91 uF typical at 12 V,
+or 1.72 uF including -10 percent initial tolerance before temperature/aging.
+CL32B226KAJNNN loses 7.33 percent at 3.3 V: 22 uF becomes about 20.39 uF
+typical, or 18.35 uF including -10 percent initial tolerance before temperature/aging.
+These data support the margin review but do not establish guaranteed minimum
+capacitance across temperature, aging and bias. The supply selections stay provisional.
