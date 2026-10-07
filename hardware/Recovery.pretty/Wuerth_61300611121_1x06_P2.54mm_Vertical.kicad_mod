@@ -1,12 +1,14 @@
 (footprint "Wuerth_61300611121_1x06_P2.54mm_Vertical"
-	(version 20260206)
-	(generator "kicad-footprint-generator")
+	(version 20260901)
+	(generator "pcbnew")
+	(generator_version "10.99")
 	(layer "F.Cu")
 	(descr "Wuerth 61300611121; 2.54mm pitch; 1.10mm drill per manufacturer drawing; official KiCad pin-header basis; https://www.we-online.com/components/products/datasheet/61300611121.pdf")
 	(tags "Through hole pin header THT 1x06 2.54mm single row")
 	(property "Reference" "REF**"
 		(at 0 -2.38 0)
 		(layer "F.SilkS")
+		(uuid "c89c0468-c0ef-419a-bcd4-b6b9a7d51574")
 		(effects
 			(font
 				(size 1 1)
@@ -17,6 +19,7 @@
 	(property "Value" "Wuerth_61300611121_1x06_P2.54mm_Vertical"
 		(at 0 15.08 0)
 		(layer "F.Fab")
+		(uuid "0f70919d-09b9-4aad-a4fc-776ef7929ef0")
 		(effects
 			(font
 				(size 1 1)
@@ -24,10 +27,33 @@
 			)
 		)
 	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "13b96318-3e2f-47cf-a28e-33f1d4fd5a49")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3c969759-4e3b-4f4f-9d9e-9d5b65e4c5da")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
 	(property "KiLib_Generator" "connector/pin_header_socket"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
+		(uuid "f9df3a64-c52f-4300-9f5b-0ff467d4747c")
 		(effects
 			(font
 				(size 1 1)
@@ -45,6 +71,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "8005dd3e-0e67-492a-b263-9a837442c6a1")
 	)
 	(fp_line
 		(start -1.38 0)
@@ -54,6 +81,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "2312d8ed-14bf-4006-a792-e527cdd328e9")
 	)
 	(fp_line
 		(start -1.38 1.27)
@@ -63,6 +91,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "c6f040d2-8a12-4ac6-b1e8-c62dde1b78e6")
 	)
 	(fp_line
 		(start -1.38 1.27)
@@ -72,6 +101,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "de2050a6-f63e-4e39-97d2-d394bdeac2b8")
 	)
 	(fp_line
 		(start -1.38 14.08)
@@ -81,6 +111,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "683c1e5c-08e9-48fd-b57a-c71fe32a3754")
 	)
 	(fp_line
 		(start 1.38 1.27)
@@ -90,6 +121,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
+		(uuid "0b31aa99-bec5-4f5d-bc2e-7f3a54ff6bf7")
 	)
 	(fp_rect
 		(start -1.77 -1.77)
@@ -100,6 +132,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
+		(uuid "9bed3470-098b-4a8a-b73c-51f2d1473bc0")
 	)
 	(fp_line
 		(start -1.27 -0.635)
@@ -109,6 +142,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "17b8cff4-353e-4350-88e4-8a74aaf05613")
 	)
 	(fp_line
 		(start -1.27 13.97)
@@ -118,6 +152,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "83de1889-5648-41f4-91de-a3a5d5720186")
 	)
 	(fp_line
 		(start -0.635 -1.27)
@@ -127,6 +162,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "7dfdcf9c-a402-49f6-8cc9-4ddd246b5b62")
 	)
 	(fp_line
 		(start 1.27 -1.27)
@@ -136,6 +172,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "44796ab6-81b1-4ea2-94fd-20f517de92b2")
 	)
 	(fp_line
 		(start 1.27 13.97)
@@ -145,10 +182,12 @@
 			(type solid)
 		)
 		(layer "F.Fab")
+		(uuid "be526c20-6724-4698-8c97-0b710a641b9c")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 6.35 90)
 		(layer "F.Fab")
+		(uuid "8335677b-d131-46bc-8279-01f00849f30e")
 		(effects
 			(font
 				(size 1 1)
@@ -162,6 +201,7 @@
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(uuid "61ba554b-bf36-4c4a-92fa-238b462492dc")
 	)
 	(pad "2" thru_hole circle
 		(at 0 2.54)
@@ -169,6 +209,7 @@
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(uuid "ff0bef5a-f9b6-4988-8880-0b8952825d1e")
 	)
 	(pad "3" thru_hole circle
 		(at 0 5.08)
@@ -176,6 +217,7 @@
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(uuid "15c33d66-3563-4dd5-be10-95c5478b3ee3")
 	)
 	(pad "4" thru_hole circle
 		(at 0 7.62)
@@ -183,6 +225,7 @@
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(uuid "11ce98d9-21f0-42e9-bbc3-506e9c880806")
 	)
 	(pad "5" thru_hole circle
 		(at 0 10.16)
@@ -190,6 +233,7 @@
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(uuid "97c3747d-1c50-421c-9e7f-2579d58a59a4")
 	)
 	(pad "6" thru_hole circle
 		(at 0 12.7)
@@ -197,6 +241,7 @@
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(uuid "3087d67d-632f-4e19-9c3a-c58fd803a097")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/Recovery.3dshapes/Wuerth_61300611121_1x06_P2.54mm_Vertical.step"

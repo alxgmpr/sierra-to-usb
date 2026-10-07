@@ -27,8 +27,15 @@ Courtyard must surround all copper with appropriate fabrication margin;
 3D package orientation must match pin 1. TI page 33 stencil openings need
 separate extraction; no full-area paste assumption for the VIN union.
 
-Current official no-lead generator supports special/custom shapes but an
-existing complete RPA0010A definition was not found. Implementation choice
-needs review before writing a new generator. Destination is existing local
-hardware/Recovery.pretty, with generator definitions beside source scripts.
-This is a geometry proposal, not an approved fabrication footprint.
+The assigned engineering footprint is now
+`Appliance:Texas_RPA0010A_TPS56837`, derived from the Component Search Engine
+TPS56A37RPAR footprint for the same TI RPA0010A package. The untouched import is
+archived as `hardware/reference/tps56a37-rpa0010a-cse.kicad_mod`. Its three right
+VIN fingers were incorrectly numbered 11/12/13; all now use electrical pin 8.
+The project retains its independently audited ten-pin TPS56837 symbol.
+
+Imported land coordinates differ from the table above by at most 0.02 mm, and
+right VIN fingers are 0.56 mm long rather than 0.60 mm. Copper overlaps the VIN
+bar. These differences and the source's separate paste openings require stencil
+and assembly review; this is an engineering assignment, not a released land
+pattern. No unverified 3D model is attached.

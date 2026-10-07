@@ -10,6 +10,8 @@
 _autosave*
 fp-info-cache
 *.kicad_prl
+*.swp
+**/.history/
 **/__pycache__/
 **/.venv/
 **/.pytest_cache/

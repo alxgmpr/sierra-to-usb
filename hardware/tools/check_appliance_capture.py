@@ -130,8 +130,10 @@ def validate(tree,directory):
   assert projected==groups,(source,'Native TI net partition changed',groups-projected,projected-groups)
   golden.append({'source':source,'retained_components':len(live),'pins':len(allpins),'net_groups':len(groups)})
  # Every assigned footprint must contain exactly the model's electrical pads.
- holds={'U701','U801','U901','J1701','T1701','J2001'}
- assert {r for r,c in C.items() if not c.findtext('footprint')}==holds
+ policy=json.loads((ROOT/'footprint-policy.json').read_text())
+ holds=set(policy['land_pattern_release_holds'])
+ assert all(c.findtext('footprint') for c in C.values()), 'Unassigned footprint'
+ assert {r:c.findtext('footprint') for r,c in C.items()}==policy['assignments'], 'Footprint policy drift'
  for ref,c in C.items():
   fp=c.findtext('footprint')
   if not fp:continue
@@ -140,7 +142,7 @@ def validate(tree,directory):
   src=c.find('libsource');assert pads==libs[(src.get('lib'),src.get('part'))],(ref,fp,'Pad identities differ')
  for path in ROOT.glob('*.kicad_sch'):
   ids=re.findall(r'\(uuid "([^\"]+)"\)',path.read_text());assert len(ids)==len(set(ids)),path
- return {'date':'2026-10-07','scope':'Full appliance native connectivity. No PCB, manufacturing release or physical qualification.','components':len(C),'nets':len(N),'accounted_major_native_pins':counts,'manufacturer_DDR_pairs':len(bus),'TI_golden_topology':golden,'default_DNP':sorted(default_dnp),'footprint_release_holds':sorted(holds),'modem_profiles_released':0,'assigned_footprints_with_exact_pad_parity':len(C)-len(holds)}
+ return {'date':'2026-10-07','scope':'Full appliance native connectivity and footprint identities; PCB is unrouted. No manufacturing release or physical qualification.','components':len(C),'nets':len(N),'accounted_major_native_pins':counts,'manufacturer_DDR_pairs':len(bus),'TI_golden_topology':golden,'default_DNP':sorted(default_dnp),'footprint_release_holds':sorted(holds),'modem_profiles_released':0,'assigned_footprints_with_exact_pad_parity':len(C)}
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path);p.add_argument('--kicad-cli',default=CLI);a=p.parse_args()
  global_cli=a.kicad_cli

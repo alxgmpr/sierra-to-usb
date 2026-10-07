@@ -1,0 +1,150 @@
+Sierra_HX4110NL:
+  library: Appliance
+  pad_pitch: 1.27
+  positions:
+  - 12
+  num_rows: 2
+  pads:
+    size:
+      x: 0.75
+      y: 1.65
+    shape: roundrect
+  first_pin:
+    position: bottom
+    marker:
+      shape: triangle
+      size: 0.5
+      offset: 0.7
+  fp_name: Sierra_HX4110NL
+  description: Pulse HX4110NL Rev A manufacturer recommended land pattern; pins 13-24
+    reversed after generator
+  tags: Pulse HX4110NL ethernet transformer
+  source: https://productfinder.pulseeng.com/doc_type/WEB301/doc_num/HX4110NL/doc_part/HX4110NL.pdf
+  row_pitch: 9.02
+  numbering_axis: row_first
+  body_size:
+    x: 16.51
+    y: 9.14
+Sierra_RJE491881401:
+  library: Appliance
+  fp_name: Sierra_RJE491881401
+  description: Amphenol RJE49-188-1X01 Rev A; reflected X and SH slots after generator
+  tags: Amphenol RJ45 8P8C
+  source: https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/rje491881x01.pdf
+  pad_pitch: 1.02
+  positions:
+  - 8
+  num_rows: 1
+  pin_y_stagger_cycle: 2
+  pin_y_stagger_offset: 1.78
+  pads:
+    size:
+      x: 1.6
+      y: 1.6
+    drill: 0.9
+    shape: oval
+  body_size:
+    x: 16.9
+    y: 20.7
+  offset:
+    pads:
+    - 0
+    - 0.89
+    body:
+    - 0
+    - 6.68
+  first_pin:
+    position: top
+    marker:
+      shape: triangle
+      size: 0.5
+      offset: 0.7
+  mount_pads:
+    shell:
+      center:
+        x: 15.9
+        y: 4.16
+      size:
+        x: 1.6
+        y: 3.2
+      drill: 1
+      shape: oval
+      name: SH
+      paste: false
+      ends: both
+Sierra_MDT420B01411:
+  library: Appliance
+  fp_name: Sierra_MDT420B01411
+  description: Amphenol CMDT420X0X411 Rev A, Key B, 4.2mm height; postprocess odd-row
+    land length 1.50mm
+  tags: Amphenol M.2 B Key
+  source: https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/cmdt420x0x411.pdf
+  pad_pitch: 0.5
+  positions:
+  - 38
+  num_rows: 2
+  row_pitch: 7.525
+  row_x_offset: 0.25
+  pads:
+    size:
+      x: 0.3
+      y: 1.55
+    shape: roundrect
+  body_size:
+    x: 21.9
+    y: 7.2
+  offset:
+    pads:
+    - 0
+    - -1.4875
+    body:
+    - 0
+    - -1.32
+  first_pin:
+    position: top
+    marker:
+      shape: triangle
+      size: 0.5
+      offset: 0.7
+  hidden_pins:
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 76
+  mount_pads:
+    top:
+      center:
+        x: 20.7
+        y: -3.4125
+      size:
+        x: 1.2
+        y: 2.75
+      shape: rect
+      name: ''
+      paste: true
+      ends: both
+    npth_left:
+      center:
+        x: 20
+        y: 1.4875
+      size: 1.1
+      drill: 1.1
+      shape: circ
+      paste: false
+      copper: false
+      ends: left
+    npth_right:
+      center:
+        x: 20
+        y: 1.4875
+      size: 1.6
+      drill: 1.6
+      shape: circ
+      paste: false
+      copper: false
+      ends: right

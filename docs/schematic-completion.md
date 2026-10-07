@@ -1,7 +1,7 @@
 # Complete appliance schematic — engineering capture complete
 
-Updated 2026-10-07 on `codex/complete-appliance-schematic`. The original dirty
-checkout is preserved. The full native hierarchy has **30 sheets, 663 components,
+Updated 2026-10-07. The pre-audit project and original checkout were sweep-committed
+before footprint changes. The full native hierarchy has **30 sheets, 663 components,
 823 nets and zero all-severity ERC violations, with no ERC exclusions**.
 This completes the remaining connectivity capture. PCB layout, manufacturing
 release, modem profile release and physical qualification remain open.
@@ -24,17 +24,20 @@ release, modem profile release and physical qualification remain open.
 
 The default assembly has 13 DNP parts and 650 fitted component/PCB-feature rows.
 The BOM contains exact MPN/manufacturer fields for all 660 purchasable parts;
-three bare test pads are PCB features. All 657 assigned footprints have exact
+three bare test pads are PCB features. All 663 assigned footprints have exact
 symbol-to-pad identity parity, including exposed and shell pads. This does not
 qualify land geometry, sourcing, temperature or physical performance.
 
 ## Release holds and proof boundary
 
-1. **Six footprint assignments deliberately remain open**: U701 TPS56837 RPA,
+1. **Six assigned engineering land patterns need release review**: U701 TPS56837 RPA,
    U801 RK3566, U901 Micron RAM, T1701 HX4110NLT, J1701 RJE491881401 and J2001
    MDT420B01411. Validate exact manufacturer lands, orientation, mask/paste and
-   retention before transferring to PCB. Existing BGA candidates only prove ball
-   identifiers/centers; substituting an unchecked footprint would hide the hold.
+   retention before manufacturing. All are on the unrouted PCB with exact pad
+   identities. The [footprint audit](footprint-audit.md) records vendor sources,
+   generated BGA geometry, model availability and remaining stencil/mechanical
+   work. Native updates in both directions propose no changes, with zero errors
+   and warnings. This does not establish placement, routing or full DRC readiness.
 2. **No modem profile is released.** Current EM919x Rev11 and EM92xx Rev7.2 downloads
    require manufacturer login; RM551E-GL production hardware guidance is missing.
    EM919x Rev5, EM92xx Rev1 and RM520N V1.0 support provisional capture. Confirm
@@ -76,16 +79,17 @@ latched faults without diagnosing them.
 ## Reproduction and review
 
 ```sh
-python3 hardware/tools/build_capture.py
 python3 hardware/check.py --output /tmp/sierra-appliance-check
+python3 hardware/tools/check_board_sync.py --output /tmp/sierra-board-check
 python3 hardware/tools/review_modem_power.py --output /tmp/modem-power-analysis.json
 python3 hardware/tools/export_appliance.py --output /tmp/sierra-appliance-review
 ```
 
 All 30 PDF sheets were rendered and inspected, including new modem/SIM circuitry.
 Deterministic regeneration and native manufacturer-symbol/ball-center checks are
-part of the recorded validation. No PCB/DRC/Gerber or physical test result is
-implied. The native source archive and document hashes are retained.
+part of the recorded validation. The current board synchronization and physical
+DRC counts are recorded separately in the footprint audit; no fabrication or
+physical test result is implied. The native source archive and hashes are retained.
 
 ## Dated research history
 

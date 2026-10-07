@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "scope": "Full appliance native connectivity. No PCB, manufacturing release or physical qualification.",
+  "scope": "Full appliance native connectivity and footprint identities; PCB is unrouted. No manufacturing release or physical qualification.",
   "components": 663,
   "nets": 823,
   "accounted_major_native_pins": {
@@ -56,6 +56,6 @@
     "U901"
   ],
   "modem_profiles_released": 0,
-  "assigned_footprints_with_exact_pad_parity": 657,
+  "assigned_footprints_with_exact_pad_parity": 663,
   "ERC_violations": 0
 }

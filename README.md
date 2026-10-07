@@ -3,7 +3,8 @@
 Multi-gigabit WAN design study for **EM9190, EM9293, RM520N-GL and
 RM551E-GL**. No CM4/CM5. **RK3566 is the selected Linux packet-processor
 candidate for evaluation**, with an independent STM32 recovery MCU. The exact
-modem tuples and complete appliance remain unqualified. The complete engineering capture is on `codex/complete-appliance-schematic`.
+modem tuples and complete appliance remain unqualified. The complete engineering
+capture is in [hardware/appliance.kicad_pro](hardware/appliance.kicad_pro).
 
 **Feasibility gate remains open.** Manufacturer documentation establishes Sierra
 PCIe endpoint/USB-device operation, not modem-hosted Ethernet. A switch does not
@@ -25,13 +26,17 @@ processor/RAM/eMMC, all supplies, 2.5GbE, isolated PoE, modem/SIM and recovery
 interfaces: 663 components, 823 nets, **zero full ERC violations**.
 [Review PDF](hardware/review/2026-10-07/appliance.pdf) and
 [completion / release holds](docs/schematic-completion.md) are available.
-Six footprint reviews, current modem guides and physical/software qualification
-remain open. There is no PCB layout or manufacturing release.
+All 663 PCB footprints are assigned, including 572 stock hand-solder variants.
+Native updates in both directions report zero errors/warnings and no changes;
+see the [footprint and model audit](docs/footprint-audit.md). Six land-pattern
+reviews, remaining model holds, current modem guides and physical/software
+qualification remain open. Placement, routing and manufacturing release remain
+pending.
 
 Previous designs remain only in Git history; none were restored for this work.
 
 ## Full schematic work — 2026-10-07
 
-Complete appliance capture is saved on `codex/complete-appliance-schematic`,
+Complete appliance capture is saved in the canonical `hardware/appliance` project,
 including the independent always-on supply and full recovery hierarchy. See
 [completion evidence and release holds](docs/schematic-completion.md).

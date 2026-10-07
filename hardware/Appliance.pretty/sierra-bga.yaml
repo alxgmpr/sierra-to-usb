@@ -1,0 +1,30 @@
+Sierra_RK3566_BGA565:
+  name: Sierra_RK3566_BGA565
+  package_type: BGA
+  description: U801 manufacturer ball map; assembly land pattern review required
+  size_source: Project archived manufacturer datasheet, see footprint-audit.md
+  body_size_x: 15.5
+  body_size_y: 14.4
+  body_pcb_gap: 0.16
+  overall_height: 0.794
+  ball_diameter: 0.27
+  pad_diameter: 0.22
+  pin_table: Sierra_RK3566_BGA565.csv
+  paste_margin: 0
+  first_corner_chamfer: 0.3
+  corner_chamfer: 0.05
+Sierra_Micron_ZW_TFBGA200:
+  name: Sierra_Micron_ZW_TFBGA200
+  package_type: BGA
+  description: U901 manufacturer ball map; assembly land pattern review required
+  size_source: Project archived manufacturer datasheet, see footprint-audit.md
+  body_size_x: 14.5
+  body_size_y: 10
+  body_pcb_gap: 0.306
+  overall_height: 0.95
+  ball_diameter: 0.436
+  pad_diameter: 0.45
+  pin_table: Sierra_Micron_ZW_TFBGA200.csv
+  paste_margin: -0.025
+  first_corner_chamfer: 0.3
+  corner_chamfer: 0.05

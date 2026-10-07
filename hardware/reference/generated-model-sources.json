@@ -1,0 +1,19 @@
+{
+  "official_generator_revision": "4115da4a5f1165c8ddf33d1e29d8f19234b6971d",
+  "generated_models": [
+    "Appliance.3dshapes/Sierra_RK3566_BGA565.step",
+    "Appliance.3dshapes/Sierra_Micron_ZW_TFBGA200.step",
+    "Appliance.3dshapes/DHVQFN-20-1EP_2.5x4.5mm_P0.5mm_EP1x3mm.step"
+  ],
+  "definition_files": [
+    "Appliance.pretty/sierra-bga.yaml",
+    "Appliance.pretty/sierra-connectors.yaml",
+    "Appliance.pretty/sierra-dhvqfn-model.yaml"
+  ],
+  "scope": "Manufacturer/package nominal envelope models, not tolerance or mating-clearance certification",
+  "imported_RPA_source": {
+    "file": "reference/tps56a37-rpa0010a-cse.kicad_mod",
+    "source": "Component Search Engine TPS56A37RPAR same TI RPA0010A package; independent ten-pin TPS56837 symbol retained",
+    "sha256": "3dc22f5c123fc60fee5fc6584d3c3d92cdf89d9589affb1e75790cf060191c45"
+  }
+}

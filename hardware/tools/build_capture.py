@@ -18,4 +18,5 @@ for path in sorted((ROOT/'reference').glob('*-captured.kicad_sym')):
   symbols[name]=body
 register(symbols.values())
 subprocess.run([sys.executable,str(ROOT/'tools/build_appliance.py')],check=True)
+subprocess.run([sys.executable,str(ROOT/'tools/apply_footprint_policy.py')],check=True)
 print('Registered',len(symbols),'audited appliance symbols.')
