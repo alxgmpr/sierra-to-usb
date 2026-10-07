@@ -1,0 +1,289 @@
+# Isolated 12 V to main 5 V stage — selection open
+
+TPS56637RPAR is a source-audited candidate (TI, RPA 10-pin 3 x 3 mm
+HotRod VQFN, C841386). It accepts 4.5–28 V and is rated 6 A. It must
+use the isolated 12 V intermediate, not raw PoE. Manufacturer datasheet
+Rev A is archived and hashed. Its Figure 17 is a 5 V/6 A reference.
+
+Table 4 recommends 3.3 uH and 20–100 uF **effective** output capacitance
+(30 uF typical) at 5 V, with 73.2 kOhm / 10 kOhm divider. Nominal
+output is 4.992 V. Optional feed-forward is 100–220 pF with 20 kOhm
+series resistance; do not assume it is mandatory. Output-bank sizing
+must include all downstream input caps and reflected startup loads.
+
+A simultaneous-rating scenario gives 35.412 W or 7.082 A at 5 V:
+CPU 1.025 V/6 A, logic and GPU each 0.9 V/2.5 A, buck5 1.8 V/2.5 A,
+main 3.3 V/3 A and illustrative DDR 1.1 V/1.5 A, each at assumed 85%
+efficiency; add 4 W for two 400 mA LDO inputs directly from 5 V.
+Main 3.3 V-fed LDO loads are included in its 3 A scenario, not added twice.
+This is not actual processor or memory demand, and 85% is not guaranteed.
+It shows 6 A cannot cover all stated downstream ratings concurrently.
+
+Do not freeze this regulator before domain load/peak/sequence budgeting.
+Evaluate an 8 A stage if the verified workload requires it; do not silently
+limit downstream scope to make a 6 A circuit pass. Modem supply routing
+and isolated PoE peak allocation remain separately unresolved. Main 5 V
+must stay within RK809/MP2143 5.5 V operating limits including transients.
+No upstream regulator symbol or circuit is yet captured.
+
+Source: https://www.ti.com/lit/ds/symlink/tps56637.pdf, sections 8.2/8.2.2.
+Catalog C841386 showed 5915 indexed parts on 2026-10-03, not reserved.
+Raw scenario: hardware/reference/main-5v-rating-scenario.json.
+
+## Preferred 8 A candidate and native source
+
+TPS56837RPAR (TI, C22428366) is the preferred stage candidate for
+capture while the actual peak budget remains open. Manufacturer Rev B
+(SLVSGM3B, January 2024) is archived. It retains RPA 10-pin HotRod
+package, 4.5–28 V input, and adds selectable frequency/current limit
+and adjustable soft start. The source catalog incorrectly says through-hole;
+manufacturer RPA package is surface mount. C22428366 has 2306 indexed
+units, not reserved inventory.
+
+The installed EasyEDA converter exported all 10 pins, whose names and
+numbers match manufacturer Table 4-1. Raw symbol and footprint archived;
+correct electrical types recorded in hardware/pinmaps/tps56837.csv.
+Footprint source name refers to TPS56838RPAR; dimension/pad audit is
+required before using this shared family geometry.
+
+At 500 kHz and 5 V, manufacturer table recommends 3.3 uH and a
+nominal 22 uF bank (one minimum, two typical, ten maximum), based
+on specific Murata parts/derating described in the table notes. This differs
+from the older TPS56637 effective-capacitance table and must be checked
+directly. Current-limit and MODE selection, exact inductor, capacitors,
+upstream supervisor enable and full load/thermal qualification remain open.
+Source: https://www.ti.com/lit/ds/symlink/tps56837.pdf.
+
+## Imported footprint audit
+
+Inspected TI RPA0010A package and land-pattern drawings, PDF pages
+31–32 (drawing 4224047/A 01/2018). Imported model is rotated relative
+to TI view, which is permissible, but SW pad 6 is 1.8 x 0.25 mm rather
+than the recommended 1.7 x 0.25 mm. Its courtyard is essentially the
+3 x 3 mm body boundary and does not enclose all pad copper; it also
+references an absent temporary-directory 3D model. VIN pad 8 uses a
+custom comb polygon whose copper and paste need separate review.
+These prevent direct registration as a fabrication-ready footprint.
+
+Generate a local RPA0010A footprint from the TI land pattern, preserve
+10 logical pins (no extra exposed-pad number), and check the large
+VIN/PGND copper plus manufacturer stencil example separately. Do not
+substitute a generic QFN-10 with a central exposed pad. Circuit capture
+can proceed after local footprint/symbol review; assembly and thermal
+qualification remain independent.
+
+## Typed regulator symbol
+
+Recovery:TPS56837RPAR is registered with ten unique pins and audited
+electrical types. Native symbol render inspected. check_tps56837_symbol.py
+verifies the manufacturer-reviewed table. Footprint field intentionally blank
+pending RPA geometry review. No circuit is represented by this symbol alone.
+
+## Control values selected for capture
+
+Use the approved manufacturer reference-design package policy. MODE
+30.1 kOhm (RC0603FR-0730K1L, 0603, 1%) selects 500 kHz and the
+higher valley-current-limit option: 8 A minimum, 9.6 A typical,
+11.1 A maximum. These are valley limits, not guaranteed load current
+or acceptable inductor peak current. MODE is latched at startup.
+
+The reference feedback pair is 73.2 kOhm / 10 kOhm; prefer
+RT0603BRD0773K2L and RT0603BRD0710KL (0603, 0.1%, 25 ppm/K).
+Nominal output is 4.992 V. The manufacturer's full-temperature feedback
+limits are 0.591–0.609 V, rather than the 25 C ±1% figure. With opposing
+0.1% resistor tolerances alone, output spans approximately 4.908–5.076 V.
+Temperature coefficient, bias, ripple and transient effects remain additional
+terms; this calculation does not close the downstream 5.5 V ceiling.
+
+Reference SS capacitance is 47 nF. With typical 6 uA charge current
+and 0.6 V reference, the nominal ramp is 4.7 ms (Equation 1). Exact
+capacitor selection and minimum/maximum startup timing remain open.
+No control circuit has been captured yet; footprint review is pending.
+Source: archived tps56837.pdf, Sections 5.5, 6.3.1, 6.3.3 and Figure 7-1.
+
+## Reference inductor and distributed capacitance audit
+
+Archived current Würth 744325330 datasheet revision 004.001 (2025-02-06).
+This is the 3.3 uH reference inductor, tolerance ±20%, DCR 5.9 mOhm
+±10% at 20 C. Its 15 A typical saturation figure permits 30% inductance
+loss; the 10% loss figure is only 5 A typical. Rated inductance is
+2.4 uH typical at 12 A. The updated sheet specifies 12 A at 50 K
+temperature rise, with application-dependent PCB cooling. Do not treat
+the reference design's older 9.7 A heating figure as the current sheet.
+
+At 13.2 V input, 4.992 V output, 8 A load and typical 500 kHz,
+3.3 uH gives 1.88 A peak-to-peak ripple and 8.94 A peak current.
+Using 1.848 uH as an illustrative compounded 20% tolerance and
+30% bias loss gives 3.36 A ripple and 9.68 A peak. At the maximum
+11.1 A valley-limit figure the latter ripple implies 14.46 A peak,
+close to the 15 A typical 30% drop figure. This is sensitivity analysis,
+not a proven minimum-inductance or hot/fault bound. The datasheet gives
+500 kHz typical without minimum/maximum limits. Keep the exact inductor
+selection open until bias/temperature and overload behavior are checked.
+
+Existing main-5-V-connected capacitors already include C504, C508,
+C512, C516, C533 and C601, each 22 uF nominal, plus C514 1 uF.
+Thus the regulator sees at least 133 uF distributed nominal capacitance
+before its local output bank and missing CPU/DDR inputs. TI's two
+reference 22 uF Murata capacitors give 35 uF effective at 5 V; the
+recommended maximum ten-part bank must be compared using effective
+capacitance, with interconnect effects included. A local two-part bank
+would bring the current nominal total to 177 uF. Do not qualify the
+regulator using its local output capacitors alone. TI allows greater
+capacitance only with carefully tuned feed-forward compensation.
+
+Source: manufacturer 744325330.pdf and TPS56837 Sections 7.2.2.3–4;
+sensitivity inputs/results in main-5v-inductor-sensitivity.json.
+
+## Native control capture
+
+main5v.kicad_sch is attached to the appliance root. U701 and R701–703
+implement the reviewed MODE and feedback settings; AGND/PGND share
+the electrical return. Four exact-MPN components increase the appliance
+total to 96. Native XML checks verify the FB node, MODE resistor, ground
+returns and global 5V_MAIN divider connection. Render inspected after
+moving the regulator fields clear of its VIN/BOOT pin numbers.
+
+The six other regulator pins remain visibly unconnected. No placeholder
+inductor or false 5 V power source was added, and the footprint stays blank
+pending review. This is a partial control capture, not a working power stage.
+
+Full appliance ERC after this partial capture: 65 violations (45 unconnected
+pins, 11 undriven signal pins, 9 undriven power pins). No ERC exclusions
+or flags were introduced to mask unfinished circuits.
+
+## Bootstrap captured
+
+C701 is Samsung CL10B104KA8NNNC, 100 nF/25 V X7R in 0603,
+connected directly between U701 BOOT pin 7 and SW pin 6. TI Section
+7.2.2.5 requires 100 nF ceramic, X5R or better, rated at least 10 V.
+The appliance now contains 97 components. Native netlist checks verify
+that neither bootstrap terminal is grounded or tied directly to 5V_MAIN.
+Physical placement and the remaining power stage are still unfinished.
+
+## Soft start captured
+
+C702 is Samsung CL10B473KB8NNNC, 47 nF/50 V X7R ±10% in 0603
+(C1622). Manufacturer page confirms the full packaging suffix and current
+mass-production status; page HTML archived and hashed. Catalog stock
+is indexed, not reserved. C702 connects U701 SS pin 5 to AGND/GND.
+Native netlist and rendered schematic were reviewed. Appliance total: 98.
+
+Using typical 6 uA charge current and 0.6 V reference gives 4.7 ms
+nominal soft start. Capacitor tolerance alone gives 4.23–5.17 ms; this
+is not a guaranteed timing range because ISS has only a typical value,
+and X7R temperature/bias/aging effects are additional. For an illustrative
+177 uF nominal distributed bank, ideal capacitive charging current is
+177 uF × 4.992 V / 4.7 ms = 0.188 A, excluding downstream operating
+loads and further CPU/DDR input capacitors. This estimate does not
+prove startup without current limiting or acceptable PoE input inrush.
+
+Manufacturer: https://product.samsungsem.com/mlcc/CL10B473KB8NNN.do;
+regulator soft-start source: TPS56837 Section 6.3.3, Equation 1.
+
+## Input bypass and isolated-rail integration
+
+C703/C704 are each Samsung CL31B106KBHNNNE, 10 uF/50 V X7R
+±10% in 1206 (C89632). Manufacturer page confirms the exact suffix,
+ratings and mass-production status; original HTML archived and hashed.
+C705 is CL10B104KA8NNNC, 100 nF/25 V X7R in 0603 for high-frequency
+bypass. All connect from U701 VIN to PGND/GND on isolated ISO_12V.
+Their voltage ratings exceed the assumed 13.2 V normal maximum, but
+input transient protection is not yet qualified. Nominal bulk capacitance
+is 20 uF; DC bias, temperature, ripple heating and upstream bulk
+requirements must still be verified. This is not permission to apply
+raw PoE or the regulator's full 28 V range to the assembled circuit.
+
+ISO_12V is now global in both main5v and always-on sheets. Native
+XML checks prove the shared node contains U701 VIN, the three new
+capacitors, U401 VIN/EN and C401. Recovery output remains separate
+from the main rails. Rendered both affected sheets and corrected the
+input-bank field overlap and global-label direction. Total: 101 parts.
+
+Full appliance ERC: 60 violations, {'pin_not_connected': 41, 'pin_not_driven': 11, 'power_pin_not_driven': 8}. No exclusions added.
+
+## Supervisor enable captured
+
+MCU_MAIN5V_EN is assigned to U201 PB6/pin 45, verified against ST
+DS13560 Figure 5 LQFP48 pinout. It drives U701 EN/pin 1 through
+R704 RC0603FR-071KL (1 kOhm, 1%, 0603, C22548). R705
+RC0603FR-0710KL (10 kOhm, 1%, 0603, C98220) pulls EN to GND.
+High enables; low or high-impedance GPIO is intended to disable.
+Firmware must configure the output low before enabling main power.
+The recovery MCU remains on its independent supply.
+
+An ideal 3.3 V GPIO gives 3.0 V at EN via the 1k/10k divider, above
+TI's 1.26 V maximum turn-on threshold. With high-impedance GPIO,
+TI's typical 1 uA pullup gives 10 mV; including its typical additional
+3 uA hysteresis current gives 40 mV, below the 1.0 V minimum
+turn-off threshold. These are nominal calculations, not complete
+worst-case proof: pullup currents have no stated maximum here, and
+MCU leakage/VOH, reset state, brownout sequencing and power-collapse
+backfeed must be checked before release. This does not prove firmware
+control or physical shutdown.
+
+Native checks verify the two-node series connection, pulldown and
+MCU pin. Both affected sheets rendered and inspected; R704 text
+rotation corrected. Appliance has 103 components and 58 ERC
+violations (40 unconnected, 10 undriven signal, 8 undriven power).
+No ERC exclusions added.
+
+Sources: https://www.st.com/resource/en/datasheet/stm32g0b1cc.pdf;
+archived TPS56837 Sections 5.5 and 6.3.4.
+
+## Power-good feedback captured
+
+U701 PG/pin 4 now connects to U201 PB7/pin 46 (MAIN5V_GOOD).
+R706 is RC0603FR-0710KL, 10 kOhm/1%/0603, pulled up to the
+independent recovery 3.3 V rail. The GPIO never receives a 5 V pullup.
+TI Section 6.3.10 permits external PG pullup below 5.5 V and specifies
+10 mA sink capability at 0.4 V; this pullup draws about 0.33 mA.
+The 10 kOhm value differs from TI's recommended 100 kOhm/5 V
+example to provide a stronger recovery-domain logic pullup.
+
+PG is not an independent absolute-voltage supervisor: its thresholds
+track FB and its state is not valid once VIN disappears. Firmware
+must qualify MAIN5V_GOOD with commanded enable and valid input-power
+state; a high signal alone cannot prove main 5 V exists. The isolated
+input monitor and full power-collapse behavior remain unresolved.
+
+Native checks verify PG, MCU pin and recovery pullup membership.
+Both affected sheets rendered and reviewed, including moving the PG
+label clear of resistor text. Appliance has 104 components and 57 ERC
+violations; no exclusions added. Inductor/output bank and footprint
+qualification still prevent this draft from being a working power stage.
+Current ERC types: {'pin_not_connected': 39, 'pin_not_driven': 10, 'power_pin_not_driven': 8}.
+
+## Inductor and local output bank captured
+
+L701 is Coilcraft XAL7070-332MEC (C3911435), 3.3 uH ±20%,
+9.42 mOhm maximum DCR at 25 C, 19.4 A typical current at 30%
+inductance drop, and reference RMS currents 11.5/15.1 A at 20/40 C
+rise. These are not guaranteed hot saturation or application thermal
+limits. This gives greater room than the Würth reference's 15 A typical
+30% drop point against the earlier 14.46 A valley-limit sensitivity case.
+That comparison does not prove a minimum inductance or safe fault peak.
+Estimated DC copper loss at 8 A and 25 C maximum DCR is about
+0.60 W before AC loss and hot-resistance increase.
+
+Manufacturer document 856 revised 2026-02-25 is archived and hashed.
+Visually audited its recommended 1.92 x 6.50 mm pads at 4.82 mm
+center spacing against installed Inductor_SMD:L_Coilcraft_XAL7070-XXX:
+pads 1/2 at x=-2.41/+2.41, identical sizes. The existing standard
+footprint is used; no new footprint generator is introduced.
+Catalog showed 559 indexed parts; this is not reserved stock.
+
+C706/C707 are each CL32B226KAJNNNE, 22 uF/25 V X7R/1210.
+They connect electrically between the inductor output (5V_MAIN) and
+GND, making the total currently captured nominal distributed output
+capacitance 177 uF. Effective capacitance and full loop compensation
+remain unqualified; do not equate Samsung bank behavior with TI's
+Murata reference bank without the bias/temperature comparison.
+
+Native XML checks verify the complete SW-to-inductor-to-5V path and
+both local output capacitors. Render inspected after moving capacitor
+fields away from the recovery pullup and relocating the divider to
+avoid crossing the input bank. Appliance total is 107 components.
+Regulator footprint, final load budget, startup, thermal and fault tests
+remain open; this is circuit capture, not a fabrication-ready supply.
+Source: https://www.coilcraft.com/pdfs/xal7070.pdf.

@@ -1,0 +1,60 @@
+{
+  "nominal_V": 3.3149321266968323,
+  "upper_MPN": "RC0603FR-07200KL",
+  "lower_MPN": "RC0603FR-0744K2L",
+  "feedback_fraction": 0.02,
+  "temperature_coefficient_ppm_C": 100,
+  "corners": [
+    {
+      "temperature_C": -40,
+      "resistor_fraction": 0.0165,
+      "min_V": 3.1622577783317345,
+      "max_V": 3.474148527628954
+    },
+    {
+      "temperature_C": 25,
+      "resistor_fraction": 0.01,
+      "min_V": 3.1959476725953135,
+      "max_V": 3.437174825174825
+    },
+    {
+      "temperature_C": 85,
+      "resistor_fraction": 0.016,
+      "min_V": 3.1648340043467416,
+      "max_V": 3.4712870544090055
+    }
+  ],
+  "excluded": [
+    "FB bias current maximum unavailable",
+    "load and line dynamics",
+    "aging",
+    "ripple",
+    "PCB drops",
+    "operation above 85 C"
+  ],
+  "precision_candidate": {
+    "upper_MPN": "RT0603BRD07200KL",
+    "upper_LCSC": "C728585",
+    "lower_MPN": "RT0603BRD0744K2L",
+    "lower_LCSC": "C861410",
+    "tolerance_fraction": 0.001,
+    "temperature_coefficient_ppm_C": 25,
+    "corners": [
+      {
+        "temperature_C": -40,
+        "min_V": 3.2347017292277447,
+        "max_V": 3.395807494673518
+      },
+      {
+        "temperature_C": 25,
+        "min_V": 3.2433175331455875,
+        "max_V": 3.3867747747747745
+      },
+      {
+        "temperature_C": 85,
+        "min_V": 3.235363491723181,
+        "max_V": 3.3951116252168876
+      }
+    ]
+  }
+}

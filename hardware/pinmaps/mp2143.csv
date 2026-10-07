@@ -1,0 +1,9 @@
+Pin,Name,Electrical type,Notes
+1,PG,open_collector,Internal pull-up to VIN; domain translation required
+2,VIN,power_in,2.5–5.5 V supply
+3,SW,power_out,Switch node to external inductor
+4,PGND,power_in,Power return
+5,OUT,input,Output voltage sensing; not the switching power output
+6,AGND,power_in,Analog return
+7,FB,input,Feedback divider midpoint
+8,EN,input,Enable logic

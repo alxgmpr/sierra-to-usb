@@ -1,0 +1,229 @@
+(footprint "USON-10_L2.5-W1.0-P0.50-BL"
+	(version 20260901)
+	(generator "pcbnew")
+	(generator_version "10.99")
+	(layer "F.Cu")
+	(descr "4-Channel ESD Protection Diode for USB Type-C and HDMI 2.0 10-USON -40 to 125")
+	(property "Reference" "REF**"
+		(at 0 -4.4 0)
+		(layer "F.SilkS")
+		(uuid "b59f1273-59f7-4892-a74c-26c638d797af")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "USON-10_L2.5-W1.0-P0.50-BL"
+		(at 0 4.4 0)
+		(layer "F.Fab")
+		(uuid "f9fbc712-c57d-4494-b840-ca0fa16f003e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4f6cb4fa-df1d-4963-8c50-148bd01f123f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "29899c76-9587-402d-80a6-656bc6793cc9")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C106794"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "239caae7-fc0b-4bef-b8aa-dc40a42976f3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.33 0.58)
+		(end -1.33 -0.58)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ffab4982-a4a6-4a10-82fd-9c9c366a7930")
+	)
+	(fp_line
+		(start 1.33 -0.58)
+		(end 1.33 0.58)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a22d1870-636c-4884-b036-7c7896806202")
+	)
+	(fp_circle
+		(center -1.25 0.5)
+		(end -1.22 0.5)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "b18709eb-3c46-427e-8608-323f051aae7a")
+	)
+	(fp_circle
+		(center -1 1.02)
+		(end -0.9 1.02)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "58000562-c48e-4bfe-8bf3-02811caac446")
+	)
+	(fp_circle
+		(center -1 0.9)
+		(end -0.9 0.9)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "868e9bc0-f257-4645-a6b0-abfe9c3e921b")
+	)
+	(fp_line
+		(start -1.25 -0.5)
+		(end 1.25 -0.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a164a378-926d-4b11-a834-f37f5eb6790a")
+	)
+	(fp_line
+		(start -1.25 0.5)
+		(end -1.25 -0.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "981a9abe-fea6-4f8e-9c2d-e6c74d0b2312")
+	)
+	(fp_line
+		(start 1.25 -0.5)
+		(end 1.25 0.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "907c612d-6120-474f-9b85-503269d1e3d0")
+	)
+	(fp_line
+		(start 1.25 0.5)
+		(end -1.25 0.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0291ab4e-3251-4ffb-8884-32ca0e346e59")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "71e494be-24b5-4412-a6f7-8e530fdbb823")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1 0.4)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c2826030-b74f-43fd-91fb-aacabc55a1a0")
+	)
+	(pad "2" smd rect
+		(at -0.5 0.4)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6e4b39f7-39ef-43ca-bf2e-ebe970fba28a")
+	)
+	(pad "3" smd rect
+		(at 0 0.4)
+		(size 0.4 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e37a12ba-ac51-4976-b3cf-56d64f01dc18")
+	)
+	(pad "4" smd rect
+		(at 0.5 0.4)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6dfc6d93-0e5a-483d-a7c6-58a2ac44ab1c")
+	)
+	(pad "5" smd rect
+		(at 1 0.4)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f34b5478-017a-482d-9198-ba8d4f826c51")
+	)
+	(pad "6" smd rect
+		(at 1 -0.4)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8478c9d8-04e6-499b-a4c3-82c7139089c2")
+	)
+	(pad "7" smd rect
+		(at 0.5 -0.4)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "44d0bc09-a216-4935-9e8d-9e513013b5bf")
+	)
+	(pad "8" smd rect
+		(at 0 -0.4)
+		(size 0.4 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "96c86e18-a306-4ff1-be74-43c219e2c814")
+	)
+	(pad "9" smd rect
+		(at -0.5 -0.4)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e6b4e380-694d-4a01-b7f5-a1637340fbef")
+	)
+	(pad "10" smd rect
+		(at -1 -0.4)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ed72d2a7-0535-4c42-a6fe-3f37cbb3c7e5")
+	)
+	(embedded_fonts no)
+)

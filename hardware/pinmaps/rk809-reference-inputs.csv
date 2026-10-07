@@ -1,0 +1,11 @@
+Pin,Name,Reference Net,Block,Source
+11,VCC1,5V_MAIN,BUCK1,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget
+10,VCC2,5V_MAIN,BUCK2,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget
+24,VCC3,5V_MAIN,BUCK3,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget
+66,VCC4,5V_MAIN,BUCK4,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget
+22,VCC5,3V3_MAIN,LDO1 LDO2 LDO3,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget
+30,VCC6,3V3_MAIN,LDO4 LDO5 LDO6,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget
+4,VCC7,3V3_MAIN,LDO7 LDO8 LDO9,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget
+57,VCC8,3V3_MAIN,SWOUT2,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget
+54,VCC9,3V3_MAIN,BUCK5 SWOUT1,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget
+45,VCC_RTC,3V3_MAIN,RTC highest-first supply,NanoPi R3S LTS 2411 sheet 14 circuit; reference mapping pending appliance load budget

@@ -1,0 +1,1147 @@
+(kicad_sch
+	(version 20260830)
+	(generator "eeschema")
+	(generator_version "10.99")
+	(uuid "4be0941e-e923-51bb-85b8-e69833501985")
+	(paper "A1")
+	(title_block
+		(title "Cellular WAN appliance — engineering capture")
+		(date "2026-10-07")
+	)
+	(lib_symbols)
+	(text "Complete appliance connectivity captured; engineering review.\nFour module assembly profiles require current controlled guides.\nFootprint release, layout, isolation, thermal, USB/PCIe and recovery\nqualification remain required before manufacturing."
+		(exclude_from_sim no)
+		(at 35.56 551.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "464f2158-8e87-5753-b9ef-ce2203337b51")
+	)
+	(sheet
+		(at 401.32 320.04)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "09654a72-b250-5725-8eb9-71b50392f44d")
+		(property "Sheetname" "Isolated 12V flyback"
+			(at 401.32 317.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "poe-flyback.kicad_sch"
+			(at 401.32 373.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "24")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 401.32 106.68)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "12adbf3d-95db-5185-851b-e66a94feec2f")
+		(property "Sheetname" "Boot storage and clock"
+			(at 401.32 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "boot.kicad_sch"
+			(at 401.32 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "15")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 35.56)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "16de2a6d-0634-5541-b3a4-9dd791ff3173")
+		(property "Sheetname" "Processor PMIC"
+			(at 157.48 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "pmic.kicad_sch"
+			(at 157.48 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 279.4 35.56)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "19535908-3292-5a77-aa46-dd02a9622c57")
+		(property "Sheetname" "DDR BUCK3"
+			(at 279.4 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "ddr-power.kicad_sch"
+			(at 279.4 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 401.32 177.8)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "267a3cab-d941-544f-a8cc-2a9d0af95195")
+		(property "Sheetname" "Host recovery interfaces"
+			(at 401.32 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "host-interface.kicad_sch"
+			(at 401.32 231.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "16")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 35.56 320.04)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "28b81926-fdde-5b0a-ace9-5f66739c1cbb")
+		(property "Sheetname" "Ethernet local bypass"
+			(at 35.56 317.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "nic-bypass.kicad_sch"
+			(at 35.56 373.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "21")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 35.56 391.16)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2a52fe17-c1a6-5f87-9414-95f980acecf2")
+		(property "Sheetname" "Isolated PoE allocation"
+			(at 35.56 388.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "poe-status.kicad_sch"
+			(at 35.56 444.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "25")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 401.32 35.56)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2e8f587d-e45b-5dae-91f1-8cc85594cc55")
+		(property "Sheetname" "CPU dynamic voltage supply"
+			(at 401.32 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "cpu-power.kicad_sch"
+			(at 401.32 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "14")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 401.32 391.16)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "32323d0b-421a-50fa-979e-c218b8a047ae")
+		(property "Sheetname" "Modem and SIM sockets"
+			(at 401.32 388.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "modem-socket.kicad_sch"
+			(at 401.32 444.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "28")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 35.56 462.28)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "32f2f75d-b8ee-5fdf-b94f-fec3d37fea9c")
+		(property "Sheetname" "Modem USB isolation"
+			(at 35.56 459.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "modem-interface.kicad_sch"
+			(at 35.56 515.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "29")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 35.56 106.68)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3d73e509-5a58-5f21-a2d5-46156f7b4f0b")
+		(property "Sheetname" "Main 3.3V"
+			(at 35.56 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "main3v3.kicad_sch"
+			(at 35.56 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 177.8)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "435cbe0c-b0e5-5b0f-8df1-acadd2eb203f")
+		(property "Sheetname" "USB analog filters"
+			(at 157.48 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "phy-power.kicad_sch"
+			(at 157.48 231.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 35.56 248.92)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "4c92019a-763e-5943-9dc7-e8a7ade0fdc5")
+		(property "Sheetname" "Peripheral supply and feedback"
+			(at 35.56 246.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "peripheral-power.kicad_sch"
+			(at 35.56 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "17")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 401.32 248.92)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "619e7371-4e83-50a5-a376-3a6968391306")
+		(property "Sheetname" "PCIe and power-cycle interfaces"
+			(at 401.32 246.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "nic-interface.kicad_sch"
+			(at 401.32 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "20")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 106.68)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "76042cd1-72e9-552d-b46c-4e8681f723dc")
+		(property "Sheetname" "Main 5V control"
+			(at 157.48 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "main5v.kicad_sch"
+			(at 157.48 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 279.4 391.16)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "809a6bc5-4e43-5535-bcdc-02983cd794a2")
+		(property "Sheetname" "Modem independent power"
+			(at 279.4 388.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "modem-power.kicad_sch"
+			(at 279.4 444.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "27")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 462.28)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9f31f64b-6123-588d-98bd-8a4fb6a978dc")
+		(property "Sheetname" "Modem local bypass"
+			(at 157.48 459.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "modem-bypass.kicad_sch"
+			(at 157.48 515.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "30")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 248.92)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a274ff3d-d983-5c2e-b904-3ff26eb8f2f2")
+		(property "Sheetname" "2.5GbE controller"
+			(at 157.48 246.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "nic.kicad_sch"
+			(at 157.48 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "18")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 279.4 320.04)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a5cfd84a-3f34-536b-8366-238e726dec2f")
+		(property "Sheetname" "PoE PD / Class 6"
+			(at 279.4 317.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "poe-pd.kicad_sch"
+			(at 279.4 373.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "23")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 279.4 106.68)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c37ed3a2-e11f-5801-b052-784de8f9ef84")
+		(property "Sheetname" "Core local bypass"
+			(at 279.4 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "core-power.kicad_sch"
+			(at 279.4 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 279.4 177.8)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c52ab0a1-5233-5470-998b-9af0eda89c30")
+		(property "Sheetname" "Micron RAM"
+			(at 279.4 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "ram.kicad_sch"
+			(at 279.4 231.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 279.4 248.92)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "cdaf67f5-a801-5da0-9794-1c3162da6202")
+		(property "Sheetname" "Ethernet power sequencing"
+			(at 279.4 246.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "nic-power.kicad_sch"
+			(at 279.4 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "19")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 320.04)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d141ea62-a75e-563e-b360-af2f82564db9")
+		(property "Sheetname" "PoE active input bridge"
+			(at 157.48 317.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "poe-input.kicad_sch"
+			(at 157.48 373.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "22")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 35.56 177.8)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d807afb5-0ba7-54f9-b977-e145eb99adab")
+		(property "Sheetname" "RK3566 processor"
+			(at 35.56 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "processor.kicad_sch"
+			(at 35.56 231.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 35.56 35.56)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ecaae96a-d952-55db-8fd2-e06cc742f8aa")
+		(property "Sheetname" "Recovery and always-on supply"
+			(at 35.56 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "recovery.kicad_sch"
+			(at 35.56 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 391.16)
+		(size 96.52 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "fe37f02d-cf76-54ac-92de-667207397af2")
+		(property "Sheetname" "Ethernet cable ingress"
+			(at 157.48 388.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sheetfile" "ethernet-ingress.kicad_sch"
+			(at 157.48 444.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985"
+					(page "26")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

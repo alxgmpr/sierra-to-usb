@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-07",
+  "scope": "Full appliance native connectivity and footprint identities; PCB is unrouted. No manufacturing release or physical qualification.",
+  "components": 663,
+  "nets": 823,
+  "accounted_major_native_pins": {
+    "U801": 565,
+    "U901": 200,
+    "U1101": 153,
+    "U501": 69,
+    "U1001": 20,
+    "U1301": 49,
+    "U201": 48,
+    "U1701": 21,
+    "U1901": 15,
+    "U1902": 10,
+    "J2001": 67,
+    "J2002": 12
+  },
+  "manufacturer_DDR_pairs": 65,
+  "TI_golden_topology": [
+    {
+      "source": "input",
+      "retained_components": 30,
+      "pins": 66,
+      "net_groups": 14
+    },
+    {
+      "source": "flyback",
+      "retained_components": 78,
+      "pins": 180,
+      "net_groups": 38
+    }
+  ],
+  "default_DNP": [
+    "C2036",
+    "C2037",
+    "C2038",
+    "D1706",
+    "D1707",
+    "D1708",
+    "D1709",
+    "R1762",
+    "R2011",
+    "R2012",
+    "R2013",
+    "R2016",
+    "R2017"
+  ],
+  "footprint_release_holds": [
+    "J1701",
+    "J2001",
+    "T1701",
+    "U701",
+    "U801",
+    "U901"
+  ],
+  "modem_profiles_released": 0,
+  "assigned_footprints_with_exact_pad_parity": 663,
+  "ERC_violations": 0
+}

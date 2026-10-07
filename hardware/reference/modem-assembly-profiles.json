@@ -1,0 +1,90 @@
+[
+  {
+    "model": "EM9190",
+    "vendor": "Sierra",
+    "released": false,
+    "evidence": "EM919x PTS Rev5 Mar2022; current Rev11 required",
+    "VCC_contacts": [
+      "2",
+      "4",
+      "24",
+      "38",
+      "68",
+      "70",
+      "72",
+      "74"
+    ],
+    "populate_optional": [
+      "R2011",
+      "R2012",
+      "R2013",
+      "R2016",
+      "R2017",
+      "C2036",
+      "C2037",
+      "C2038"
+    ],
+    "power_envelope": "3.704V nominal regulator; 5A provisional burst allocation, not verified module demand",
+    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope"
+  },
+  {
+    "model": "EM9293",
+    "vendor": "Sierra",
+    "released": false,
+    "evidence": "EM92xx PTS Rev1 Oct2023; current Rev7.2 required",
+    "VCC_contacts": [
+      "2",
+      "4",
+      "24",
+      "38",
+      "68",
+      "70",
+      "72",
+      "74"
+    ],
+    "populate_optional": [
+      "R2011",
+      "R2012",
+      "R2013",
+      "R2016",
+      "R2017",
+      "C2036",
+      "C2037",
+      "C2038"
+    ],
+    "power_envelope": "3.704V nominal regulator; 5A provisional burst allocation, not verified module demand",
+    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope"
+  },
+  {
+    "model": "RM520N-GL",
+    "vendor": "Quectel",
+    "released": false,
+    "evidence": "Hardware Design V1.0; current exact module revision confirmation required",
+    "VCC_contacts": [
+      "2",
+      "4",
+      "70",
+      "72",
+      "74"
+    ],
+    "populate_optional": [],
+    "power_envelope": "3.704V nominal regulator; 5A provisional burst allocation, not verified module demand",
+    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope"
+  },
+  {
+    "model": "RM551E-GL",
+    "vendor": "Quectel",
+    "released": false,
+    "evidence": "Production Hardware Design missing; provisional common pin assignment only",
+    "VCC_contacts": [
+      "2",
+      "4",
+      "70",
+      "72",
+      "74"
+    ],
+    "populate_optional": [],
+    "power_envelope": "3.704V nominal regulator; 5A provisional burst allocation, not verified module demand",
+    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope"
+  }
+]

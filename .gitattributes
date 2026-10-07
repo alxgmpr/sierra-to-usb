@@ -1,0 +1,17 @@
+# Manufacturer reference PDFs are binary artifacts.
+*.pdf binary
+
+# CAD models preserve vendor/generator bytes and are reviewed geometrically.
+*.step binary
+*.stp binary
+*.STEP binary
+*.STP binary
+
+# Native KiCad review renderings are visual artifacts, like the review PDF.
+hardware/review/**/footprint-audit/svg/*.svg binary
+
+# Preserve the manufacturer page bytes recorded by the source hash.
+hardware/reference/cl10b473kb8nnn-manufacturer.html binary
+hardware/reference/cl31b106kbhnnn-manufacturer.html binary
+hardware/reference/epson-crystal-parametric-2026-10-04.json binary
+hardware/reference/tps56a37-rpa0010a-cse.kicad_mod binary

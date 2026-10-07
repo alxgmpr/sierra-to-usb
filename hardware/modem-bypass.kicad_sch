@@ -1,0 +1,3021 @@
+(kicad_sch
+	(version 20260830)
+	(generator "eeschema")
+	(generator_version "10.99")
+	(uuid "d9c82883-7e32-515c-a7b5-3d8c3989a20a")
+	(paper "A3")
+	(title_block
+		(title "Modem local bulk and RF bypass")
+		(date "2026-10-07")
+	)
+	(lib_symbols
+		(symbol "Device:C_Polarized"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Polarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "C_Polarized_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "C2030 and RF bank at socket. One 100nF at each of five common VCC contacts.\nC2036/37/38 SIERRA ONLY: DNP in Quectel profiles along with their feed links.\nConfirm effective MLCC capacitance at DC bias and full modem internal capacitance.\nLayout must share current across every populated VCC/GND contact and minimize drop.\nNo released four-module burst specification or temperature/thermal qualification yet."
+		(exclude_from_sim no)
+		(at 25.4 279.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1fc8e799-0ad8-5a9c-941b-8ed439537d80")
+	)
+	(wire
+		(pts
+			(xy 193.04 73.66) (xy 193.04 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fc2b0c9-b48a-5983-ba90-12e5a5b440c4")
+	)
+	(wire
+		(pts
+			(xy 261.62 154.94) (xy 261.62 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10f46813-d6cf-5ab4-b8e3-b36ab355065b")
+	)
+	(wire
+		(pts
+			(xy 63.5 154.94) (xy 63.5 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15b980b9-94df-574c-9e07-884ebd9b286c")
+	)
+	(wire
+		(pts
+			(xy 63.5 226.06) (xy 63.5 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "181a018d-cfd3-59a3-9968-8d89f305912b")
+	)
+	(wire
+		(pts
+			(xy 195.58 160.02) (xy 195.58 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "248ec186-38bd-5204-b7d2-26d1f589b867")
+	)
+	(wire
+		(pts
+			(xy 193.04 68.58) (xy 193.04 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29cc61e9-7a06-58e7-b0df-3245cb880b8f")
+	)
+	(wire
+		(pts
+			(xy 129.54 226.06) (xy 129.54 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a1f4bea-03a4-504e-a5ca-de9a570fe6d3")
+	)
+	(wire
+		(pts
+			(xy 325.12 73.66) (xy 325.12 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4734949e-a7aa-51f8-8f93-35e4a2f2d45f")
+	)
+	(wire
+		(pts
+			(xy 325.12 68.58) (xy 325.12 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e2919e9-1a4d-51b3-bf46-378d58c36328")
+	)
+	(wire
+		(pts
+			(xy 261.62 160.02) (xy 261.62 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "503fd245-609c-5247-be80-bb20427c112a")
+	)
+	(wire
+		(pts
+			(xy 71.12 74.93) (xy 71.12 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f595e3c-023c-5fe0-9671-c9b321a6ad8e")
+	)
+	(wire
+		(pts
+			(xy 129.54 154.94) (xy 129.54 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63890b61-c4aa-5fb7-af17-557a86b7c999")
+	)
+	(wire
+		(pts
+			(xy 327.66 160.02) (xy 327.66 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c516c66-7ddf-5118-be03-a7135f8efe2d")
+	)
+	(wire
+		(pts
+			(xy 259.08 73.66) (xy 259.08 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f5f4c6c-277d-5186-b12d-a5aa259a842a")
+	)
+	(wire
+		(pts
+			(xy 195.58 154.94) (xy 195.58 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b4cfa63-0f97-5c11-9c60-f73d7e9dfd83")
+	)
+	(wire
+		(pts
+			(xy 327.66 154.94) (xy 327.66 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "985119f7-5ce4-5604-ba0a-f9d2c8acb762")
+	)
+	(wire
+		(pts
+			(xy 129.54 231.14) (xy 129.54 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a01a2434-4db3-56a3-ae1e-7a8b1a75cf7f")
+	)
+	(wire
+		(pts
+			(xy 195.58 231.14) (xy 195.58 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a13f5f01-9086-5069-b347-96f0c2d20cef")
+	)
+	(wire
+		(pts
+			(xy 261.62 231.14) (xy 261.62 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b672619f-184f-512c-836b-b4cc0d187e3f")
+	)
+	(wire
+		(pts
+			(xy 71.12 67.31) (xy 71.12 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b96be7f2-5f02-5811-8809-70836353c5d2")
+	)
+	(wire
+		(pts
+			(xy 129.54 160.02) (xy 129.54 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c687a428-594f-5a32-b95c-53e34995d286")
+	)
+	(wire
+		(pts
+			(xy 327.66 231.14) (xy 327.66 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfee47ff-d679-523f-8f32-dd1c49919837")
+	)
+	(wire
+		(pts
+			(xy 63.5 231.14) (xy 63.5 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d130cd93-1794-5b80-87e6-eea4548a073f")
+	)
+	(wire
+		(pts
+			(xy 327.66 226.06) (xy 327.66 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d324da59-7fa5-516e-bcbd-73b2c17f8b54")
+	)
+	(wire
+		(pts
+			(xy 259.08 68.58) (xy 259.08 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7e7a1b5-4f24-5820-9d02-a51d96a86e5d")
+	)
+	(wire
+		(pts
+			(xy 261.62 226.06) (xy 261.62 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "daadb2f4-e4b4-5f4b-924d-d2a1ca6e94de")
+	)
+	(wire
+		(pts
+			(xy 195.58 226.06) (xy 195.58 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbde76b1-aad3-5c96-a82c-8a871498f826")
+	)
+	(wire
+		(pts
+			(xy 63.5 160.02) (xy 63.5 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbe68a7b-a246-508f-9fd3-016df466ba81")
+	)
+	(global_label "M2_PIN24"
+		(shape passive)
+		(at 193.04 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "12845f6b-6d8f-504c-8c7a-79800836f889")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 193.04 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "M2_PIN38"
+		(shape passive)
+		(at 259.08 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "200cea68-8a71-5566-8a5a-602057a8590f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 259.08 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 71.12 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "23938b24-5aa3-5235-9a65-ec5cc1e785f0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 195.58 215.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "294181d3-162e-50cf-a0e7-75873bc3c76c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 195.58 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "M2_PIN68"
+		(shape passive)
+		(at 325.12 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3a7ff4a5-2f52-5f54-b04f-3eadf94df3ca")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 325.12 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 193.04 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3b9a0eb8-0508-5a4d-b78c-24fa6eb79cd6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 193.04 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 259.08 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3ba6363c-6bd9-5189-a291-6fa24fdc7f1e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 259.08 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 261.62 215.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "43df8a95-b1d2-586b-a292-dcd4d37a09b2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 261.62 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 129.54 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4726ab7a-ca41-5159-90e8-0eb1dfc593e0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 195.58 241.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4c40ddf7-adf3-521c-8057-a96734c21509")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 195.58 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 195.58 170.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "535f022c-5b64-5516-a941-6665b707df3c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 195.58 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 261.62 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5c4ffb84-c88b-559f-a9f6-163631a9a228")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 261.62 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 327.66 241.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5f893452-4790-5f8d-9fec-6c10f22c457b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 327.66 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 327.66 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "672982c5-59f7-55e6-82a5-c3245dd4417c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 327.66 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 261.62 170.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7d0157d9-ebd9-5b5c-a35d-7068475db283")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 261.62 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 325.12 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7df4ad53-414c-5ee5-be8a-495e0d76e0b7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 325.12 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 327.66 215.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9123c19f-8e6b-5007-943e-eaaafbc9d32b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 327.66 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 63.5 215.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a77f11e3-953e-57e2-b646-a3296810b00b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 63.5 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 71.12 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b1666fdb-8cd5-560b-bd09-6fe52e6ff0b6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 129.54 215.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bbb129ad-649b-5651-87f1-1355faa11182")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 63.5 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c2b06333-32cd-58ab-bdbb-7f35b0ddb65e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 63.5 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 129.54 241.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c3693ddb-bcd8-5eb9-a8b6-2ee095a7a981")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 261.62 241.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c63238a2-3a86-51a2-b1d6-81e7c544de26")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 261.62 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MODEM_VCC"
+		(shape passive)
+		(at 195.58 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d42937c6-995e-56b6-b1df-b0c33a29a6c6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 195.58 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 129.54 170.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d4b0d4d7-3acb-539b-a7c9-0e6da69c4aa1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 63.5 241.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e3c0454f-c73f-584f-988b-844bf3a7a132")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 63.5 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 327.66 170.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e7f758b3-c230-5cdc-ad08-8022df31cce4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 327.66 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 63.5 170.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f6c6cfc9-efd8-5f06-b5b5-176cf1066d2e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 63.5 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 129.54 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "09fda5b0-8a7c-5fa2-88e4-d52cf171c74f")
+		(property "Reference" "C2032"
+			(at 138.43 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 138.43 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 129.54 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 129.54 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 129.54 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 129.54 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "48755ab3-4832-488d-b60a-657b3c6b6352")
+		)
+		(pin "2"
+			(uuid "102c65e5-19fd-426d-a600-aaa3426b95d0")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2032")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 261.62 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0c58ba8b-5473-598e-87d9-750f58d99afb")
+		(property "Reference" "C2044"
+			(at 270.51 227.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "9.1pF"
+			(at 270.51 229.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 261.62 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.62 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10C9R1BB8NNNC"
+			(at 261.62 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 261.62 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 261.62 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "C0G"
+			(at 261.62 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement" "At M.2 VCC; RM520 recommended RF bypass bank"
+			(at 261.62 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "36191a8f-059e-4f91-808e-3e9632b3afc8")
+		)
+		(pin "2"
+			(uuid "fd9e7196-3599-4d69-a066-719c776467b6")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2044")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 325.12 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "2c03063d-5090-5bdc-8694-6f067d05e4eb")
+		(property "Reference" "C2038"
+			(at 334.01 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 334.01 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 325.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 325.12 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 325.12 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 325.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 325.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 325.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3863568f-23cd-47c1-a99d-8d6b560ab7be")
+		)
+		(pin "2"
+			(uuid "b1500d6d-246f-43e0-b8dd-6aa8088bc80b")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2038")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 195.58 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2cb4618c-7b57-546f-b944-f332f2199474")
+		(property "Reference" "C2033"
+			(at 204.47 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 204.47 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 195.58 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 195.58 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 195.58 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 195.58 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 195.58 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "38980070-6ecf-4cd7-b769-06d68cf5cad7")
+		)
+		(pin "2"
+			(uuid "a7a93d29-7386-4fa0-8f8f-38a1fd0e30da")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2033")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 195.58 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5b5eac9c-8214-54ec-bf5d-3887741b7236")
+		(property "Reference" "C2043"
+			(at 204.47 227.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "15pF"
+			(at 204.47 229.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 195.58 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 195.58 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10C150JB8NNNC"
+			(at 195.58 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 195.58 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 195.58 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "C0G"
+			(at 195.58 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement" "At M.2 VCC; RM520 recommended RF bypass bank"
+			(at 195.58 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bffbfd27-8122-4b6f-9853-1d9065637adb")
+		)
+		(pin "2"
+			(uuid "afde7d35-dd2a-485c-981c-4349bac4e3c1")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2043")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2043")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 63.5 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7ebe678c-27e9-598c-a350-1623d0267332")
+		(property "Reference" "C2031"
+			(at 72.39 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 72.39 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 63.5 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 63.5 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 63.5 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 63.5 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c3ecdca5-0b3d-4c41-9603-9622ffb79c75")
+		)
+		(pin "2"
+			(uuid "20ab7aeb-a76a-4ef5-9eeb-929da392d0cf")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2031")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 71.12 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "adc9591d-8412-5967-bf54-3da10231ac0d")
+		(property "Reference" "C2030"
+			(at 71.12 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220uF / 6.3V"
+			(at 71.12 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x5.9"
+			(at 71.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/os-con/models/6SVPC220MV"
+			(at 71.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 71.12 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "6SVPC220MV"
+			(at 71.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 71.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "20%"
+			(at 71.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ESR Maximum" "15mOhm at 100kHz"
+			(at 71.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Ripple Current" "3.16Arms at 105C/100kHz"
+			(at 71.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Layout must audit Panasonic C6 land pattern and regulator stability with effective MLCC capacitance"
+			(at 71.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e442f164-ef58-449a-a4eb-82681fe407ec")
+		)
+		(pin "2"
+			(uuid "fef600c4-a978-41fb-854a-85ffec660937")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2030")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 193.04 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "af2af263-485f-5b90-8961-18d17ce4c69d")
+		(property "Reference" "C2036"
+			(at 201.93 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 201.93 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 193.04 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 193.04 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 193.04 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 193.04 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 193.04 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "62327e0d-dbeb-43d6-9506-8e82b5003e52")
+		)
+		(pin "2"
+			(uuid "36cce3df-c11c-4751-ba23-f97a08f8fde3")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2036")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 327.66 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d095e7cf-af65-515b-88be-37727548c46b")
+		(property "Reference" "C2035"
+			(at 336.55 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 336.55 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 327.66 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 327.66 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 327.66 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 327.66 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 327.66 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 327.66 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "35e767fa-5e4d-4cbc-be9c-16866749883b")
+		)
+		(pin "2"
+			(uuid "1d790225-7109-4667-9f3d-013773db6b0c")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2035")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 261.62 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d6a740ec-a2f2-5895-86be-e8e16f299c87")
+		(property "Reference" "C2034"
+			(at 270.51 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 270.51 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 261.62 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.62 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 261.62 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 261.62 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 261.62 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d1dffb80-569c-4518-af16-5def89ebff26")
+		)
+		(pin "2"
+			(uuid "1108b1be-9d3f-4ea4-9bf5-d9b5c276a0ea")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2034")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 327.66 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d722990f-eb54-539e-a621-dc6a7723b87d")
+		(property "Reference" "C2045"
+			(at 336.55 227.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7pF"
+			(at 336.55 229.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 327.66 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 327.66 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 327.66 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10C4R7BB8NNNC"
+			(at 327.66 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 327.66 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 327.66 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "C0G"
+			(at 327.66 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement" "At M.2 VCC; RM520 recommended RF bypass bank"
+			(at 327.66 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cf0208af-07cf-4c07-a73f-74c0533553aa")
+		)
+		(pin "2"
+			(uuid "00b4580c-0c56-4f77-855c-9e4d552335e5")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2045")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 129.54 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e245badb-50ab-5e57-9388-6398c1e83b9c")
+		(property "Reference" "C2042"
+			(at 138.43 227.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "68pF"
+			(at 138.43 229.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 129.54 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10C680JB8NNNC"
+			(at 129.54 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 129.54 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 129.54 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "C0G"
+			(at 129.54 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement" "At M.2 VCC; RM520 recommended RF bypass bank"
+			(at 129.54 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "876d5b38-88f7-4b22-94bf-d1431e31a21a")
+		)
+		(pin "2"
+			(uuid "afb6c280-95b1-4c8c-ac6b-eddac48cff7a")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2042")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 63.5 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ee02c557-5860-5668-ad14-80ab171c8a4c")
+		(property "Reference" "C2041"
+			(at 72.39 227.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220pF"
+			(at 72.39 229.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 63.5 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10C221JB8NNNC"
+			(at 63.5 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 63.5 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 63.5 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "C0G"
+			(at 63.5 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement" "At M.2 VCC; RM520 recommended RF bypass bank"
+			(at 63.5 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "483dd77c-e57f-47e9-bd60-790294e2a46b")
+		)
+		(pin "2"
+			(uuid "8e82c10a-2d65-46ea-af58-230f98149996")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2041")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 259.08 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "f5a428cf-69ff-5625-94bd-4a9048f80e62")
+		(property "Reference" "C2037"
+			(at 267.97 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 267.97 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 259.08 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 259.08 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 259.08 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 259.08 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5230b435-45c2-4aa7-8064-028c1449015f")
+		)
+		(pin "2"
+			(uuid "a0573fe9-aa75-49c3-972d-35479eef2595")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc"
+					(reference "C2037")
+					(unit 1)
+				)
+			)
+			(project "modem-bypass"
+				(path "/d9c82883-7e32-515c-a7b5-3d8c3989a20a"
+					(reference "C2037")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

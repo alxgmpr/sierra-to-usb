@@ -1,0 +1,226 @@
+(footprint "Wuerth_61300211121_1x02_P2.54mm_Vertical"
+	(version 20260901)
+	(generator "pcbnew")
+	(generator_version "10.99")
+	(layer "F.Cu")
+	(descr "Wuerth 61300211121; 2.54mm pitch; 1.10mm drill per manufacturer drawing; official KiCad pin-header basis; https://www.we-online.com/components/products/datasheet/61300211121.pdf")
+	(tags "Through hole pin header THT 1x02 2.54mm single row")
+	(property "Reference" "REF**"
+		(at 0 -2.38 0)
+		(layer "F.SilkS")
+		(uuid "e167a8c8-c75a-4c38-ba58-111c02506f8d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Wuerth_61300211121_1x02_P2.54mm_Vertical"
+		(at 0 4.92 0)
+		(layer "F.Fab")
+		(uuid "d368a3d6-06c2-44be-9ac9-d1b50dd6db1b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a761cb2-c03d-479f-871e-0c8dea2c6d03")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d7e999b6-285d-4dc7-8b03-4283aa6ebbc2")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "connector/pin_header_socket"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "cf3a0ebf-22cd-4064-8e7d-4d4032ead34c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.38 -1.38)
+		(end 0 -1.38)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "002a5cb5-ac10-48d0-ad85-2e806e6c9c06")
+	)
+	(fp_line
+		(start -1.38 0)
+		(end -1.38 -1.38)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "df73c5a1-25cb-4aab-b156-ed3a06aeadf0")
+	)
+	(fp_line
+		(start -1.38 1.27)
+		(end -1.38 3.92)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b353ce33-4066-4a1f-9777-2a91ed462d37")
+	)
+	(fp_line
+		(start -1.38 1.27)
+		(end 1.38 1.27)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0a293188-c037-4fb4-af3b-489289b0bb9b")
+	)
+	(fp_line
+		(start -1.38 3.92)
+		(end 1.38 3.92)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "551df101-d695-4ca1-8680-2f5b7bf9e4cc")
+	)
+	(fp_line
+		(start 1.38 1.27)
+		(end 1.38 3.92)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0a6ce9a8-0719-4575-a9f4-a9e74d5a8b01")
+	)
+	(fp_rect
+		(start -1.77 -1.77)
+		(end 1.77 4.32)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e823b56e-ea2b-45db-99f0-57108314ef17")
+	)
+	(fp_line
+		(start -1.27 -0.635)
+		(end -0.635 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "05542d69-617d-44b6-8e57-35725265fcb1")
+	)
+	(fp_line
+		(start -1.27 3.81)
+		(end -1.27 -0.635)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4669e153-1f70-4377-8179-4c88b76aeb07")
+	)
+	(fp_line
+		(start -0.635 -1.27)
+		(end 1.27 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "cb973a40-a014-498d-be74-7cb0268ae48c")
+	)
+	(fp_line
+		(start 1.27 -1.27)
+		(end 1.27 3.81)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "54114935-ddf0-4b42-a30d-f00fa5693f61")
+	)
+	(fp_line
+		(start 1.27 3.81)
+		(end -1.27 3.81)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3406bed6-2c6d-4ba2-a3db-073b2a4c636a")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 1.27 90)
+		(layer "F.Fab")
+		(uuid "b4306b30-2e13-4c11-9dcf-9cd5b61d769c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 1.7 1.7)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "496c9f42-f661-41bc-a68d-69c6774f5ac1")
+	)
+	(pad "2" thru_hole circle
+		(at 0 2.54)
+		(size 1.7 1.7)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0a6554a0-43a7-48c9-ab5f-ce673487b616")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Recovery.3dshapes/Wuerth_61300211121_1x02_P2.54mm_Vertical.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

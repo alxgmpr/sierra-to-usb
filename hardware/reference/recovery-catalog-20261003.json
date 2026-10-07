@@ -1,0 +1,114 @@
+[
+  {
+    "checked": "2026-10-03",
+    "tool": "PCBParts jlc_get_part",
+    "result": {
+      "mpn": "RC0603FR-0710KL",
+      "total": 1,
+      "results": [
+        {
+          "lcsc": "C98220",
+          "model": "RC0603FR-0710KL",
+          "manufacturer": "YAGEO",
+          "package": "0603",
+          "stock": 12102317,
+          "price": 0.0034,
+          "price_10": null,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Resistors",
+          "subcategory": "Chip Resistor - Surface Mount",
+          "subcategory_id": 2980,
+          "mounting_type": "smd",
+          "description": "-55℃~+155℃ 100mW 10kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+          "specs": {
+            "Resistance": "10kΩ",
+            "Operating Temperature": "-55℃~+155℃",
+            "Power(Watts)": "100mW",
+            "Type": "Thick Film Resistor",
+            "Voltage-Supply(Max)": "75V",
+            "Tolerance": "±1%",
+            "Temperature Coefficient": "±100ppm/℃"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "checked": "2026-10-03",
+    "tool": "PCBParts jlc_get_part",
+    "result": {
+      "mpn": "RC0603FR-07100KL",
+      "total": 1,
+      "results": [
+        {
+          "lcsc": "C14675",
+          "model": "RC0603FR-07100KL",
+          "manufacturer": "YAGEO",
+          "package": "0603",
+          "stock": 8718130,
+          "price": 0.0026,
+          "price_10": null,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Resistors",
+          "subcategory": "Chip Resistor - Surface Mount",
+          "subcategory_id": 2980,
+          "mounting_type": "smd",
+          "description": "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+          "specs": {
+            "Resistance": "100kΩ",
+            "Operating Temperature": "-55℃~+155℃",
+            "Power(Watts)": "100mW",
+            "Type": "Thick Film Resistor",
+            "Voltage-Supply(Max)": "75V",
+            "Tolerance": "±1%",
+            "Temperature Coefficient": "±100ppm/℃"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "checked": "2026-10-03",
+    "tool": "PCBParts jlc_get_part",
+    "result": {
+      "mpn": "TL3342F160QG",
+      "total": 1,
+      "results": [
+        {
+          "lcsc": "C2886898",
+          "model": "TL3342F160QG",
+          "manufacturer": "E-Switch",
+          "package": "SMD-4P,5.2x5.2mm",
+          "stock": 1843,
+          "price": 1.0372,
+          "price_10": null,
+          "library_type": "extended",
+          "preferred": false,
+          "category": "Switches",
+          "subcategory": "Tactile Switches",
+          "subcategory_id": 2970,
+          "mounting_type": "smd",
+          "description": "-20℃~+70℃ 1.54mm 1.6N 100,000 cycles 12V 5.2mm 5.2mm 50mA Gull Wing Round Button SPST Surface Mount,Vertical Without Bracket Yellow SMD-4P,5.2x5.2mm Tactile Switches ROHS",
+          "specs": {
+            "Operating Temperature": "-20℃~+70℃",
+            "Contact Current": "50mA",
+            "Termination Style": "Gull Wing",
+            "Voltage Rating": "12V",
+            "Actuator Style": "Round Button",
+            "with Bracket": "Without Bracket",
+            "Switch Height": "1.54mm",
+            "Circuit": "SPST",
+            "Mounting Type": "Surface Mount,Vertical",
+            "Actuator/Cap Color": "Yellow",
+            "Operating Force": "1.6N",
+            "Length": "5.2mm",
+            "Life": "100,000 cycles",
+            "Width": "5.2mm"
+          }
+        }
+      ]
+    }
+  }
+]

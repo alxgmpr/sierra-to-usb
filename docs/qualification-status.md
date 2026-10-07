@@ -1,10 +1,19 @@
 # Block diagram and BOM qualification status
 
-Checked 2026-09-29 against the active three-sheet KiCad recovery schematic and
-the architecture requirements. **The block diagram is a feasibility map, not a
-qualified full-appliance circuit. The 27-component recovery BOM is a capture
-inventory, not a released procurement BOM.** No modem, PoE, NIC, power tree or
-packet processor is present in KiCad.
+Updated 2026-10-07: the [full engineering schematic](../hardware/appliance.kicad_sch)
+has 30 sheets / 663 components / 823 nets and zero full ERC violations. See the
+[current capture and release holds](schematic-completion.md) and
+[engineering BOM inventory](../hardware/review/2026-10-07/bom.csv).
+All major circuit blocks are captured. Six footprint reviews, current controlled
+modem guides, exact software tuples and physical validation remain open.
+All 663 PCB footprints are assigned, including 572 stock hand-solder choices.
+Both native synchronization directions are clean; the board is still unrouted
+and unreleased. See the [footprint/model audit](footprint-audit.md). No modem or
+forwarding/recovery tuple is qualified.
+
+The dated feasibility and recovery-only BOM tables below are historical context,
+not the current capture inventory. Current native files and the completion page
+supersede descriptions of absent circuit blocks.
 
 ## Block diagram decision gates
 
@@ -28,21 +37,22 @@ model distinctions are in [architecture.md](architecture.md),
 | References | Qty | Captured value / package | Qualification gap |
 |---|---:|---|---|
 | U201 | 1 | STM32G0B1CCT6 / LQFP48 | Exact part entered; current manufacturer pin/reference-circuit audit, option bytes and firmware/recovery tests pending. |
-| U202 | 1 | TPS3823-33DBVR / SOT-23-5 | Exact part entered; reset timing and watchdog startup must be verified at limits and on hardware. |
-| D201 | 1 | BAT54WS-7-F / SOD-323 | Exact part entered; supervisor-low plus diode-forward drop versus MCU NRST-low threshold pending. |
+| U202 | 1 | TPS3828-33DBVR / SOT-23-5 | Exact part entered; reset timing and watchdog startup must be verified at limits and on hardware. |
 | Q301–Q303 | 3 | Nexperia MMBT3904,215 / SOT-23 | Exact part entered; actual target sink voltage/current and powered-off interface review pending. Datasheet field now points to Nexperia. |
-| C201, C202, C204, C205 | 4 | 100 nF / 0603 | No MPN. Select X7R voltage rating and check effective capacitance at 3.3 V and temperature. |
-| C203 | 1 | 4.7 µF / 0603 | No MPN. Effective capacitance under DC bias and package feasibility require a manufacturer curve; enlarge if needed. |
-| R201–R203, R301, R303, R305 | 6 | 10 kR / 0603 | No MPN, tolerance or power rating; check reset and transistor-drive limits. |
-| R302, R304, R306–R308 | 5 | 100 kR / 0603 | No MPN, tolerance or power rating; check leakage and default-off margins. |
-| J101, J202 | 2 | 2-pin 2.54 mm headers | No exact orderable header or mating shunt; J202 requires a fitted RUN shunt in service. |
-| J201 | 1 | 6-pin 2.54 mm SWD header | No exact orderable part, mating connector or access/mechanical check. |
-| J102 | 1 | 10-pin 2.54 mm control boundary | Evaluation connector only; no production target interface is qualified. |
-| SW201 | 1 | Reset button / TL3342 footprint | No exact switch MPN or footprint/datasheet match. |
+| C201, C202, C204, C205 | 4 | CL10B104KA8NNNC / 100 nF, 25 V X7R, 0603 | Exact MPN captured; typical bias data archived; temperature/aging qualification pending. |
+| C203 | 1 | CL31B106KAHNNNE / 10 µF, 25 V X7R, 1206 | Enlarged for capacitance margin; typical combined estimate 6.48 µF at 3.6 V with tolerance/temperature allowance; aging pending. |
+| R201–R203, R301, R303, R305 | 6 | RC0603FR-0710KL / 10 kR, 1%, 0.1 W, 0603 | Exact MPN captured; transistor-drive limits pending. |
+| R302, R304, R306–R308 | 5 | RC0603FR-07100KL / 100 kR, 1%, 0.1 W, 0603 | Exact MPN captured; leakage and default-off margins pending. |
+| J101, J202 | 2 | 2-pin 2.54 mm headers | 61300211121 captured; J202 requires 60900213421 RUN shunt; local 1.10 mm drill footprint checked. |
+| J201 | 1 | 6-pin 2.54 mm SWD header | 61300611121 captured with checked local drill variant; access/mechanical review pending. |
+| J102 | 1 | 10-pin 2.54 mm control boundary | 61301011121 captured with checked local drill variant; production target interface remains unqualified. |
+| SW201 | 1 | Reset button / TL3342 footprint | TL3342F160QG captured; Rev J pad geometry and common-contact grouping match footprint. |
 
-Total: **27 fitted schematic components**, excluding power symbols and the
+Total: **26 fitted schematic components**, excluding power symbols and the
 required J202 mating shunt. The netlist supplies the component inventory; exact
-manufacturer part numbers must be entered in the schematic before release.
+manufacturer part numbers are now entered for all 26 components. Electrical
+qualification and full-appliance integration remain incomplete. See
+[schematic-completion.md](schematic-completion.md) for current audit evidence.
 Prices, stock and assembly feasibility require a fresh quote after the design
 architecture and exact MPNs are frozen. No purchasing approval is implied.
 

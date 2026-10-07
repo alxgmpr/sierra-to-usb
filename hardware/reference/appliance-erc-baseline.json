@@ -1,0 +1,13 @@
+{
+  "root": "hardware/appliance.kicad_sch",
+  "reviewed": "2026-10-03",
+  "severity": "all",
+  "violations": {
+    "pin_not_connected": 39,
+    "pin_not_driven": 10,
+    "power_pin_not_driven": 7
+  },
+  "total": 56,
+  "exclusions_added": false,
+  "status": "Incomplete schematic; not release acceptance"
+}

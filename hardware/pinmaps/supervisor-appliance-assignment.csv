@@ -1,0 +1,11 @@
+Signal,MCU Pin,GPIO,Direction,Status,Source
+MCU_PWRON_KICK,43,PB4,Output,Connected in appliance root to R508 pin 1; isolated boundary in recovery-only schematic,ST DS13560 STM32G0B1CxT LQFP48 pinout and current native capture
+MAIN3V3_GOOD,44,PB5,Input,Connected to U602 pin 4 in appliance root,ST STM32G0B1CCT6 LQFP48 pinout and native capture
+MCU_MAIN5V_EN,45,PB6,Output,Connected to main 5 V enable resistor R704; high enables and high impedance defaults low,ST DS13560 Figure 5 LQFP48 pinout and native capture
+MAIN5V_GOOD,46,PB7,Input,Connected to U701 PG with R706 pullup on recovery 3.3 V; qualify with commanded enable and valid input rail,ST DS13560 Figure 5 LQFP48 pinout and native capture
+POE_TPH_N,22,PB10,Input,Captured in full appliance; qualify firmware sequencing and fault response,ST DS13560 LQFP48 native pads; TPS2373/TPS3808/TPS259474 power circuitry
+POE_TPL_N,23,PB11,Input,Captured in full appliance; qualify firmware sequencing and fault response,ST DS13560 LQFP48 native pads; TPS2373/TPS3808/TPS259474 power circuitry
+POE_BT_N,24,PB12,Input,Captured in full appliance; qualify firmware sequencing and fault response,ST DS13560 LQFP48 native pads; TPS2373/TPS3808/TPS259474 power circuitry
+MODEM_RAIL_GOOD,25,PB13,Input,Captured in full appliance; qualify firmware sequencing and fault response,ST DS13560 LQFP48 native pads; TPS2373/TPS3808/TPS259474 power circuitry
+MODEM_SWITCH_GOOD,26,PB14,Input,Captured in full appliance; qualify firmware sequencing and fault response,ST DS13560 LQFP48 native pads; TPS2373/TPS3808/TPS259474 power circuitry
+MODEM_BUCK_GOOD,27,PB15,Input,Captured in full appliance; qualify firmware sequencing and fault response,ST DS13560 LQFP48 native pads; TPS2373/TPS3808/TPS259474 power circuitry

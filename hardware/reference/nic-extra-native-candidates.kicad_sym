@@ -1,0 +1,328 @@
+(kicad_symbol_lib
+  (version 20211014)
+  (generator https://github.com/uPesy/easyeda2kicad.py)
+
+  (symbol "TMUXHS4212IRKSR"
+    (in_bom yes)
+    (on_board yes)
+    (property
+      "Reference"
+      "U"
+      (id 0)
+      (at 0 17.78 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Value"
+      "TMUXHS4212IRKSR"
+      (id 1)
+      (at 0 -17.78 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Footprint"
+      "nic-extra:DHVQFN-20_L4.5-W2.5-P0.50-BL-EP"
+      (id 2)
+      (at 0 -20.32 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Datasheet"
+      "https://www.lcsc.com/datasheet/C3656912.pdf"
+      (id 3)
+      (at 0 -22.86 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Manufacturer"
+      "TI(德州仪器)"
+      (id 4)
+      (at 0 -25.40 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "MPN"
+      "TMUXHS4212IRKSR"
+      (id 5)
+      (at 0 -27.94 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "LCSC Part"
+      "C3656912"
+      (id 6)
+      (at 0 -30.48 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "ki_keywords"
+      "Analog Switches / Multiplexers"
+      (id 8)
+      (at 0 -33.02 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (symbol "TMUXHS4212IRKSR_0_1"
+      (rectangle
+        (start -8.89 15.24)
+        (end 8.89 -15.24)
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (circle
+        (center -7.62 13.97)
+        (radius 0.38)
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (pin unspecified line
+        (at 11.43 12.70 180)
+        (length 2.54)
+        (name "EP" (effects (font (size 1.27 1.27))))
+        (number "21" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 10.16 180)
+        (length 2.54)
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "20" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 7.62 180)
+        (length 2.54)
+        (name "B0P" (effects (font (size 1.27 1.27))))
+        (number "19" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 5.08 180)
+        (length 2.54)
+        (name "B0N" (effects (font (size 1.27 1.27))))
+        (number "18" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 2.54 180)
+        (length 2.54)
+        (name "B1P" (effects (font (size 1.27 1.27))))
+        (number "17" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 -0.00 180)
+        (length 2.54)
+        (name "B1N" (effects (font (size 1.27 1.27))))
+        (number "16" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 -2.54 180)
+        (length 2.54)
+        (name "C0P" (effects (font (size 1.27 1.27))))
+        (number "15" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 -5.08 180)
+        (length 2.54)
+        (name "C0N" (effects (font (size 1.27 1.27))))
+        (number "14" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 -7.62 180)
+        (length 2.54)
+        (name "C1P" (effects (font (size 1.27 1.27))))
+        (number "13" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 -10.16 180)
+        (length 2.54)
+        (name "C1N" (effects (font (size 1.27 1.27))))
+        (number "12" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 11.43 -12.70 180)
+        (length 2.54)
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "11" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 -12.70 0)
+        (length 2.54)
+        (name "RSVD2" (effects (font (size 1.27 1.27))))
+        (number "10" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 -10.16 0)
+        (length 2.54)
+        (name "SEL" (effects (font (size 1.27 1.27))))
+        (number "9" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 -7.62 0)
+        (length 2.54)
+        (name "A1n" (effects (font (size 1.27 1.27))))
+        (number "8" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 -5.08 0)
+        (length 2.54)
+        (name "A1p" (effects (font (size 1.27 1.27))))
+        (number "7" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 -2.54 0)
+        (length 2.54)
+        (name "VCC" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 -0.00 0)
+        (length 2.54)
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 2.54 0)
+        (length 2.54)
+        (name "A0n" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 5.08 0)
+        (length 2.54)
+        (name "A0p" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 7.62 0)
+        (length 2.54)
+        (name "OEn" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -11.43 10.16 0)
+        (length 2.54)
+        (name "RSVD1" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+
+  (symbol "93LC46BT-I_SN_C16253"
+    (in_bom yes)
+    (on_board yes)
+    (property
+      "Reference"
+      "U"
+      (id 0)
+      (at 0 8.89 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Value"
+      "93LC46BT-I/SN_C16253"
+      (id 1)
+      (at 0 -8.89 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Footprint"
+      "nic-extra:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
+      (id 2)
+      (at 0 -11.43 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Datasheet"
+      "https://lcsc.com/product-detail/EEPROM_MICROCHIP_93LC46BT-I-SN_93LC46BT-I-SN_C16253.html"
+      (id 3)
+      (at 0 -13.97 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Manufacturer"
+      "MICROCHIP(美国微芯)"
+      (id 4)
+      (at 0 -16.51 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "MPN"
+      "93LC46BT-I/SN"
+      (id 5)
+      (at 0 -19.05 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "LCSC Part"
+      "C16253"
+      (id 6)
+      (at 0 -21.59 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "ki_keywords"
+      "EEPROM"
+      (id 8)
+      (at 0 -24.13 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (symbol "93LC46BT-I_SN_C16253_0_1"
+      (rectangle
+        (start -6.35 6.35)
+        (end 6.35 -6.35)
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (circle
+        (center -5.08 5.08)
+        (radius 0.38)
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (pin unspecified line
+        (at -8.89 3.81 0)
+        (length 2.54)
+        (name "CS" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -8.89 1.27 0)
+        (length 2.54)
+        (name "CLK" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -8.89 -1.27 0)
+        (length 2.54)
+        (name "DI" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -8.89 -3.81 0)
+        (length 2.54)
+        (name "DO" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 8.89 -3.81 180)
+        (length 2.54)
+        (name "VSS" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 8.89 -1.27 180)
+        (length 2.54)
+        (name "NC" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 8.89 1.27 180)
+        (length 2.54)
+        (name "NC" (effects (font (size 1.27 1.27))))
+        (number "7" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 8.89 3.81 180)
+        (length 2.54)
+        (name "VCC" (effects (font (size 1.27 1.27))))
+        (number "8" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+)

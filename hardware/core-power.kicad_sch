@@ -1,0 +1,5546 @@
+(kicad_sch
+	(version 20260830)
+	(generator "eeschema")
+	(generator_version "10.99")
+	(uuid "3a5434a2-586b-50f0-b09b-0612ac42cdd1")
+	(paper "A3")
+	(title_block
+		(title "Processor logic, GPU and DDR local bypass — DRAFT")
+		(date "2026-10-04")
+	)
+	(lib_symbols
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "VDD_LOGIC: local bypass; first 4 capacitors under package, remaining capacitors nearby."
+		(exclude_from_sim no)
+		(at 35.56 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "284c91a0-c3a1-564f-b172-a87bd26375f4")
+	)
+	(text "VDD_GPU: local bypass; first 2 capacitors under package, remaining capacitors nearby."
+		(exclude_from_sim no)
+		(at 35.56 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "67e2784a-b1e8-5e76-8e17-e25dffaa5297")
+	)
+	(text "VDD_DDR_1V1: local bypass; first 5 capacitors under package, remaining capacitors nearby."
+		(exclude_from_sim no)
+		(at 35.56 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8c30bd69-15e0-561a-8cbc-7601e890c6c5")
+	)
+	(text "VDD_DDR_0V6: local bypass; first 5 capacitors under package, remaining capacitors nearby."
+		(exclude_from_sim no)
+		(at 35.56 241.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b0fd64ef-f7d6-5316-a7bd-d69ce61b110b")
+	)
+	(text "DRAFT CORE BYPASS: NanoPi R3S LTS 2411 sheets 5/6 nominal values.\nEffective capacitance, layout feasibility, PDN impedance and regulator stability remain to verify."
+		(exclude_from_sim no)
+		(at 25.4 20.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c9542758-31b6-5205-b0ef-f7209a4368c8")
+	)
+	(junction
+		(at 137.16 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "009f8ac9-9abe-549a-bc9a-771209e22db7")
+	)
+	(junction
+		(at 111.76 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "010acc11-2471-5bc3-9ac1-fc24aaec7983")
+	)
+	(junction
+		(at 60.96 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "01358fc4-2a6a-4020-b857-304fdd95df5b")
+	)
+	(junction
+		(at 111.76 254)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "01370284-dbb2-5cba-a342-b1954215b38a")
+	)
+	(junction
+		(at 111.76 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c511b6c-79a5-5741-b680-4901ce91402b")
+	)
+	(junction
+		(at 86.36 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0cc4f646-1299-5356-a0ec-fa09a564542e")
+	)
+	(junction
+		(at 137.16 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12a7db41-c550-5690-8bf1-5433e81daf90")
+	)
+	(junction
+		(at 137.16 274.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1a7fab60-ad79-535b-ab7b-aa907a827ad0")
+	)
+	(junction
+		(at 86.36 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1ab9794c-55cf-5774-8558-96835740d4f4")
+	)
+	(junction
+		(at 111.76 208.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2424cbfe-78d9-5a98-aaeb-6a01b1d9670f")
+	)
+	(junction
+		(at 86.36 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2afe783a-9ec2-5405-a84c-983ae25a87dc")
+	)
+	(junction
+		(at 137.16 208.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2df22c4e-cb7b-59cb-8685-ba83c30499da")
+	)
+	(junction
+		(at 137.16 254)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "30bbf2e7-e8ed-5663-ae5c-76b2381ad2a2")
+	)
+	(junction
+		(at 60.96 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "316ffff7-b464-47a6-8a9e-aa99a3bcf749")
+	)
+	(junction
+		(at 137.16 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ec14ade-f9e1-51d6-9220-0a2230278d0d")
+	)
+	(junction
+		(at 162.56 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b9b818c-388f-5fe2-9573-14aec4e9a105")
+	)
+	(junction
+		(at 187.96 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "62bc4edd-f58c-5e10-80e0-3078953db8d0")
+	)
+	(junction
+		(at 86.36 208.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6f8134cc-c0fd-5b9c-887d-0303672b257f")
+	)
+	(junction
+		(at 137.16 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "714c5e7f-764f-565e-a8a0-e3c0ff5d4944")
+	)
+	(junction
+		(at 86.36 274.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "766cf410-59de-543a-8921-f3b8ec332b48")
+	)
+	(junction
+		(at 137.16 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8030d219-99b7-585f-9857-dd79379d4281")
+	)
+	(junction
+		(at 111.76 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "809b4a04-1385-586d-a47e-c6a34b8c39b0")
+	)
+	(junction
+		(at 60.96 208.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "860cb809-9f3b-4d1f-b161-eecd8876d595")
+	)
+	(junction
+		(at 187.96 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8832af9c-8975-5a93-8f0a-eb6068a62c38")
+	)
+	(junction
+		(at 111.76 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8e7f358b-d30b-5b95-89b7-3d6f8679176f")
+	)
+	(junction
+		(at 111.76 274.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "909e26b6-d5dd-5525-9189-72aecef8b77b")
+	)
+	(junction
+		(at 86.36 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "997488b7-53c7-5b67-8e7b-d03ad7f52980")
+	)
+	(junction
+		(at 60.96 274.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bc851959-f4a0-44bc-ae9f-86c43987529c")
+	)
+	(junction
+		(at 86.36 254)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c04b62df-e72d-587a-a621-b195697998cc")
+	)
+	(junction
+		(at 162.56 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c73bc113-cca8-5511-96be-2d81dacb4092")
+	)
+	(junction
+		(at 86.36 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "da520e7e-35b2-522b-89f1-85e935ead7e4")
+	)
+	(junction
+		(at 111.76 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db9421d5-78af-535b-ac46-ccd9824ff63e")
+	)
+	(wire
+		(pts
+			(xy 111.76 266.7) (xy 111.76 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "007ab299-36ad-5850-8ccc-e7d9ddef97ef")
+	)
+	(wire
+		(pts
+			(xy 60.96 187.96) (xy 86.36 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00a8b1b4-78ee-51f2-a7a4-420a3a958616")
+	)
+	(wire
+		(pts
+			(xy 86.36 261.62) (xy 86.36 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00f23f16-a9b5-5488-a91e-634d16bfa442")
+	)
+	(wire
+		(pts
+			(xy 111.76 68.58) (xy 111.76 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04d96ec7-dfd8-5c2a-b9a1-11645abc9a7e")
+	)
+	(wire
+		(pts
+			(xy 60.96 134.62) (xy 60.96 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05ea90a0-8a3c-5fdc-9bf3-749ba859f37e")
+	)
+	(wire
+		(pts
+			(xy 86.36 274.32) (xy 111.76 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f09758e-2b3d-5556-823c-c9b72625b81f")
+	)
+	(wire
+		(pts
+			(xy 60.96 76.2) (xy 60.96 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff0cdb4-1032-59ee-adb1-a61585dde9f8")
+	)
+	(wire
+		(pts
+			(xy 162.56 76.2) (xy 187.96 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1125eac4-0189-5fdd-84fe-2560b1803adc")
+	)
+	(wire
+		(pts
+			(xy 137.16 208.28) (xy 162.56 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18a7ab37-a339-5d16-9fea-c1559bf6d00e")
+	)
+	(wire
+		(pts
+			(xy 111.76 63.5) (xy 111.76 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18c6a0b6-de05-5a9d-aa9a-70d35aff91cb")
+	)
+	(wire
+		(pts
+			(xy 60.96 274.32) (xy 60.96 279.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "197c455a-045c-531b-865f-d48ff7f59fa7")
+	)
+	(wire
+		(pts
+			(xy 111.76 187.96) (xy 137.16 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cf97e37-0487-597c-a8a9-39fcba9cba0a")
+	)
+	(wire
+		(pts
+			(xy 60.96 254) (xy 86.36 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d296f75-1b3e-53de-a435-4450dd41094d")
+	)
+	(wire
+		(pts
+			(xy 137.16 68.58) (xy 137.16 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23470a67-2b18-5905-a3cb-45b7f88dbe13")
+	)
+	(wire
+		(pts
+			(xy 60.96 208.28) (xy 86.36 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26850524-cfa0-5957-b917-559a2e4bd94e")
+	)
+	(wire
+		(pts
+			(xy 60.96 129.54) (xy 60.96 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "272b91d1-9062-521f-91e1-46709a7a6661")
+	)
+	(wire
+		(pts
+			(xy 60.96 121.92) (xy 86.36 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c99571c-6ad1-57d1-b50a-9d3c83900ffb")
+	)
+	(wire
+		(pts
+			(xy 137.16 200.66) (xy 137.16 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dcce540-c530-5f03-8887-8da5b9b00f5b")
+	)
+	(wire
+		(pts
+			(xy 86.36 121.92) (xy 111.76 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f69faa8-6cba-52bd-965e-d3ed2a546604")
+	)
+	(wire
+		(pts
+			(xy 86.36 134.62) (xy 86.36 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "317b8e8d-586e-5b02-907e-04056cb68e70")
+	)
+	(wire
+		(pts
+			(xy 86.36 142.24) (xy 111.76 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34c16570-6402-5268-abc8-a9395bdf8dc8")
+	)
+	(wire
+		(pts
+			(xy 60.96 195.58) (xy 60.96 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "382cfd7a-112a-5e5b-ad7d-44a382fa91f7")
+	)
+	(wire
+		(pts
+			(xy 187.96 55.88) (xy 213.36 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3dbffa62-e906-5a35-aebd-3f8efed2079d")
+	)
+	(wire
+		(pts
+			(xy 111.76 129.54) (xy 111.76 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e9c486d-8990-5345-84d5-fca812d95990")
+	)
+	(wire
+		(pts
+			(xy 137.16 142.24) (xy 162.56 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4762820a-bde5-5416-917c-f659bf37c278")
+	)
+	(wire
+		(pts
+			(xy 137.16 261.62) (xy 137.16 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "493b0776-58c5-5370-8e06-2abd8c5f0750")
+	)
+	(wire
+		(pts
+			(xy 86.36 129.54) (xy 86.36 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a4f84d6-dab0-5837-83bb-c2eb7be18329")
+	)
+	(wire
+		(pts
+			(xy 86.36 55.88) (xy 111.76 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b31e02c-3f2c-5cdc-ac52-eecfdd3dc101")
+	)
+	(wire
+		(pts
+			(xy 60.96 200.66) (xy 60.96 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "526b8007-c5db-5578-b5a8-44ffb9857ce6")
+	)
+	(wire
+		(pts
+			(xy 60.96 55.88) (xy 86.36 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56a44329-0c6b-5aae-80a7-c8b0e8f6d789")
+	)
+	(wire
+		(pts
+			(xy 137.16 134.62) (xy 137.16 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58757bd8-fd21-5588-bb33-7a5581cb002a")
+	)
+	(wire
+		(pts
+			(xy 60.96 261.62) (xy 60.96 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58ccc658-90d1-5bee-b0e1-387f4c2ee5ca")
+	)
+	(wire
+		(pts
+			(xy 86.36 76.2) (xy 111.76 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c16e2d5-4332-5520-a3a4-e695bdd3fee8")
+	)
+	(wire
+		(pts
+			(xy 60.96 68.58) (xy 60.96 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d2113d5-154d-5428-aaae-34132043097a")
+	)
+	(wire
+		(pts
+			(xy 86.36 195.58) (xy 86.36 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64031709-0b09-5853-a2f7-cab7d1696568")
+	)
+	(wire
+		(pts
+			(xy 111.76 200.66) (xy 111.76 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a46fd49-cd3c-5ec5-8413-8d4e1e301be5")
+	)
+	(wire
+		(pts
+			(xy 137.16 121.92) (xy 162.56 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "719e82a1-abac-5df5-9c55-927e40ba8249")
+	)
+	(wire
+		(pts
+			(xy 60.96 76.2) (xy 86.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7227b098-7f2d-5d70-9ec2-dd0580be0469")
+	)
+	(wire
+		(pts
+			(xy 86.36 266.7) (xy 86.36 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7603cb64-480f-59fc-892d-5de3dced273b")
+	)
+	(wire
+		(pts
+			(xy 162.56 261.62) (xy 162.56 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7738b0f7-9366-5b1d-85fc-683cc2f3d0b4")
+	)
+	(wire
+		(pts
+			(xy 111.76 76.2) (xy 137.16 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7955b81c-1e0c-52f8-b56b-94094dba421e")
+	)
+	(wire
+		(pts
+			(xy 86.36 254) (xy 111.76 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c869be8-d199-5c48-a21a-280fe58e1bc1")
+	)
+	(wire
+		(pts
+			(xy 60.96 142.24) (xy 86.36 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "809b7898-6c68-5728-a47b-328c1d7f15a9")
+	)
+	(wire
+		(pts
+			(xy 60.96 63.5) (xy 60.96 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "815ab748-1249-5e40-88ea-85e380f5193b")
+	)
+	(wire
+		(pts
+			(xy 137.16 266.7) (xy 137.16 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81f8005f-33dc-52bc-ac33-d81472609a80")
+	)
+	(wire
+		(pts
+			(xy 60.96 208.28) (xy 60.96 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "822911f2-20eb-520c-a0eb-e624df23e1be")
+	)
+	(wire
+		(pts
+			(xy 60.96 274.32) (xy 86.36 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84b1612e-4398-53ac-8915-f77cb6d98034")
+	)
+	(wire
+		(pts
+			(xy 111.76 208.28) (xy 137.16 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88199069-ac53-57cf-867e-83ab04284631")
+	)
+	(wire
+		(pts
+			(xy 86.36 208.28) (xy 111.76 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c2d3b60-de06-51f4-80f6-fd48ae11855b")
+	)
+	(wire
+		(pts
+			(xy 213.36 68.58) (xy 213.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e8a0546-93ef-5351-b863-63c958a5fdbb")
+	)
+	(wire
+		(pts
+			(xy 162.56 266.7) (xy 162.56 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9273928a-113f-5c7d-aea0-9908c948504c")
+	)
+	(wire
+		(pts
+			(xy 111.76 121.92) (xy 137.16 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f46f261-597a-54f8-9701-e2b38f4105e9")
+	)
+	(wire
+		(pts
+			(xy 213.36 63.5) (xy 213.36 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a30e3035-4c23-5076-8669-39eb7f0b8fbc")
+	)
+	(wire
+		(pts
+			(xy 137.16 63.5) (xy 137.16 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a87424c4-3d98-5521-bb1c-714eaad88cc7")
+	)
+	(wire
+		(pts
+			(xy 137.16 187.96) (xy 162.56 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa7da314-826a-5d25-b3e1-806d5433ca81")
+	)
+	(wire
+		(pts
+			(xy 111.76 261.62) (xy 111.76 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac7a6fe5-7975-51e2-8ecb-e718067d6be8")
+	)
+	(wire
+		(pts
+			(xy 187.96 63.5) (xy 187.96 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6a283bf-9a3c-55bb-947c-41207d0b6c3c")
+	)
+	(wire
+		(pts
+			(xy 86.36 187.96) (xy 111.76 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b70243df-3da2-5b83-8bae-b8623968ffd2")
+	)
+	(wire
+		(pts
+			(xy 86.36 63.5) (xy 86.36 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8805f56-12fa-5e5c-9069-3e654a0d4dbc")
+	)
+	(wire
+		(pts
+			(xy 60.96 142.24) (xy 60.96 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b93656ae-eb91-5d23-ae39-ac6977fdbaf8")
+	)
+	(wire
+		(pts
+			(xy 111.76 195.58) (xy 111.76 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be68ca7d-fe08-5263-897a-319187f775b3")
+	)
+	(wire
+		(pts
+			(xy 111.76 134.62) (xy 111.76 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beb73af0-9e54-59c1-9386-63d2b586e9d8")
+	)
+	(wire
+		(pts
+			(xy 86.36 68.58) (xy 86.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7bcc61c-a267-5e8a-8a1d-b9daa1f85dcf")
+	)
+	(wire
+		(pts
+			(xy 137.16 76.2) (xy 162.56 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c842df67-e9b1-507f-9e27-5048cc5823bd")
+	)
+	(wire
+		(pts
+			(xy 162.56 195.58) (xy 162.56 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c93079fd-f5d0-501b-9dcb-3c9b687e920d")
+	)
+	(wire
+		(pts
+			(xy 162.56 55.88) (xy 187.96 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd8650e0-3113-570b-8413-323c6e4ada35")
+	)
+	(wire
+		(pts
+			(xy 111.76 254) (xy 137.16 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1486ec5-eb4a-5e2b-9b16-5e8e2443da7b")
+	)
+	(wire
+		(pts
+			(xy 137.16 129.54) (xy 137.16 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6a0513a-fe78-5f13-ab04-402a6fba21de")
+	)
+	(wire
+		(pts
+			(xy 137.16 195.58) (xy 137.16 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9755823-0691-5a8a-9451-d2c9963866d8")
+	)
+	(wire
+		(pts
+			(xy 162.56 68.58) (xy 162.56 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc529183-8607-5b0a-9b90-6cc8d32b2a4a")
+	)
+	(wire
+		(pts
+			(xy 187.96 76.2) (xy 213.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddd00aeb-bad8-5a43-adaf-948b926944eb")
+	)
+	(wire
+		(pts
+			(xy 137.16 274.32) (xy 162.56 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddf6a3d5-616e-50ab-857a-9ec5afb5d703")
+	)
+	(wire
+		(pts
+			(xy 111.76 142.24) (xy 137.16 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0ff6fb3-5375-50bd-8d7d-25d69c38f0a5")
+	)
+	(wire
+		(pts
+			(xy 60.96 266.7) (xy 60.96 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e15f6f26-2c02-5ba8-bb57-17fb67db5843")
+	)
+	(wire
+		(pts
+			(xy 187.96 68.58) (xy 187.96 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1d42e6d-2ded-5779-bece-3b13eb426c38")
+	)
+	(wire
+		(pts
+			(xy 137.16 55.88) (xy 162.56 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e498c9bd-4be7-59e2-8a32-a8eaf13c80eb")
+	)
+	(wire
+		(pts
+			(xy 162.56 129.54) (xy 162.56 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8e3a9bc-4104-53f5-855e-03964ef0594c")
+	)
+	(wire
+		(pts
+			(xy 137.16 254) (xy 162.56 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9e14e9a-1751-539b-b8dc-67ad4941bd2a")
+	)
+	(wire
+		(pts
+			(xy 111.76 274.32) (xy 137.16 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea020aa4-2426-5967-b2af-45c0dded1a02")
+	)
+	(wire
+		(pts
+			(xy 162.56 134.62) (xy 162.56 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea5cebab-2f17-55af-8f6f-3d3b54b4effe")
+	)
+	(wire
+		(pts
+			(xy 86.36 200.66) (xy 86.36 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed25f37d-cfe2-5a1f-ab5f-55c9eeebc1a8")
+	)
+	(wire
+		(pts
+			(xy 111.76 55.88) (xy 137.16 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efea2132-bbb5-5060-91ac-2329827a8e51")
+	)
+	(wire
+		(pts
+			(xy 162.56 63.5) (xy 162.56 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3513690-92c1-5a17-83e7-e2398bcea868")
+	)
+	(wire
+		(pts
+			(xy 162.56 200.66) (xy 162.56 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f64ca6dd-e55f-5168-8a1e-e674ed4111ab")
+	)
+	(global_label "VDD_GPU"
+		(shape passive)
+		(at 60.96 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3b009182-532e-5c29-a61b-651dd2a26ce1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60.96 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VDD_DDR_0V6"
+		(shape passive)
+		(at 60.96 254 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "44adf3d4-b90a-50a4-975d-68293b1c9c98")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60.96 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VDD_LOGIC"
+		(shape passive)
+		(at 60.96 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c47b342a-061a-5fed-8211-a53ed220392c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60.96 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VDD_DDR_1V1"
+		(shape passive)
+		(at 60.96 187.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f606c632-4e45-56b2-ae83-0e24b191a59f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60.96 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 162.56 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2c6c6758-c2ed-5f9b-a41d-13f569db167b")
+		(property "Reference" "C836"
+			(at 170.18 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 170.18 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL32B226KAJNNNE"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C309062"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "close to processor package"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d72b9f42-2914-5cfd-b3e6-9002269ea990")
+		)
+		(pin "2"
+			(uuid "090e1ff6-3b13-5fe8-a739-cdf23cce2b58")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C836")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C836")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 111.76 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "318b5305-84f4-524e-86b1-94a2277f2340")
+		(property "Reference" "C827"
+			(at 119.38 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 119.38 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 111.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A475KA8NQNC"
+			(at 111.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 111.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C69335"
+			(at 111.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 111.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X5R"
+			(at 111.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 111.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 111.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 111.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b2c2d4b1-2721-503a-b8a3-250d3cf701d1")
+		)
+		(pin "2"
+			(uuid "e9dddf2b-4b0b-53a3-a618-4420ec8f1a76")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C827")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C827")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 162.56 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3c8b4c67-04aa-58ef-a9cb-71a5006451ca")
+		(property "Reference" "C829"
+			(at 170.18 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 170.18 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
+			(at 162.56 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL32B226KAJNNNE"
+			(at 162.56 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 162.56 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C309062"
+			(at 162.56 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 162.56 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 162.56 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 162.56 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "close to processor package"
+			(at 162.56 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 162.56 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aaec2d36-e5d9-5315-abb3-d57236702d6f")
+		)
+		(pin "2"
+			(uuid "919455af-42ba-5146-afbf-114eeb21dad2")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C829")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C829")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 60.96 279.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3eeea9bd-f1d9-57a7-9b1d-e828787a1497")
+		(property "Reference" "#PWR803"
+			(at 60.96 279.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 60.96 283.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 279.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 279.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 279.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4bfb1379-aaae-5e33-83f6-bc24fe35d5fe")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "#PWR803")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "#PWR803")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 137.16 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "459ef368-fbf4-5605-af98-9de655f0011f")
+		(property "Reference" "C828"
+			(at 144.78 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 144.78 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A475KA8NQNC"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C69335"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X5R"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4257f813-024f-5939-b9e8-16b733cfc708")
+		)
+		(pin "2"
+			(uuid "6b91fa8e-1820-5f69-8ac5-7ecd4767f921")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C828")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C828")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 162.56 198.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "46d4383e-fccf-5ca5-8d64-de9f2dea4925")
+		(property "Reference" "C841"
+			(at 170.18 196.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF"
+			(at 170.18 199.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL31B106KAHNNNE"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14860"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1b601d66-e792-5004-a37e-a7ee5c34f2e0")
+		)
+		(pin "2"
+			(uuid "9eaf855f-1566-5b04-b46a-d0d3846d5760")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C841")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C841")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 86.36 264.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "480ddb1f-9ad4-5635-8cd3-3a89ff63b427")
+		(property "Reference" "C843"
+			(at 93.98 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 93.98 265.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 86.36 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 86.36 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 86.36 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 86.36 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 86.36 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 86.36 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 86.36 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 86.36 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 86.36 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4e8fac43-72e2-5408-b5ea-51b9c238dba9")
+		)
+		(pin "2"
+			(uuid "001177c6-9cc0-51d2-9c04-a6fc5cf6d378")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C843")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C843")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 111.76 198.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5690c9d2-4866-52b7-b393-292becf2b61d")
+		(property "Reference" "C839"
+			(at 119.38 196.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 119.38 199.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 111.76 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 111.76 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 111.76 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 111.76 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 111.76 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 111.76 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 111.76 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 111.76 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 111.76 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "39dc3816-3fec-54e9-ac9f-4e9d5a59287d")
+		)
+		(pin "2"
+			(uuid "c0cb5243-6c9d-5535-a501-fa4664d5bae6")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C839")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C839")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 137.16 264.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "62269127-1878-5006-b6d5-95545ac2a14d")
+		(property "Reference" "C845"
+			(at 144.78 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 144.78 265.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 137.16 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A475KA8NQNC"
+			(at 137.16 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 137.16 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C69335"
+			(at 137.16 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 137.16 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X5R"
+			(at 137.16 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 137.16 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 137.16 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 137.16 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3549fdd1-8574-5cae-a96e-82d8b53647bd")
+		)
+		(pin "2"
+			(uuid "de7e8a31-2d5a-50fb-8a39-de01aee91e21")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C845")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C845")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 86.36 198.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6a588d9f-597c-54fe-9046-a7f092564f4a")
+		(property "Reference" "C838"
+			(at 93.98 196.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 93.98 199.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 86.36 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 86.36 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 86.36 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 86.36 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 86.36 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 86.36 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 86.36 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 86.36 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 86.36 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0e0443e5-c973-53f8-b817-cccb6d94faa1")
+		)
+		(pin "2"
+			(uuid "a0dff08c-4464-5b5a-90de-11a7f0a972a2")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C838")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C838")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 60.96 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6f61b876-7c81-5a9c-812f-14bf9fdf2732")
+		(property "Reference" "C825"
+			(at 68.58 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 68.58 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f5ca8ae1-42d9-5451-a92c-27e29f315803")
+		)
+		(pin "2"
+			(uuid "a45bf3be-da2e-5157-8441-304dd981632b")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C825")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C825")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 187.96 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6f7ea35c-9f45-5291-906f-c3e37a1ccb88")
+		(property "Reference" "C830"
+			(at 195.58 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF"
+			(at 195.58 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 187.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 187.96 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL31B106KAHNNNE"
+			(at 187.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 187.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14860"
+			(at 187.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 187.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 187.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 187.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "close to processor package"
+			(at 187.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 187.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e7866f19-4f5f-5eb4-ba60-6ae36d4552cf")
+		)
+		(pin "2"
+			(uuid "577d2d48-a669-50b1-b9d6-3abcdee98806")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C830")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C830")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 213.36 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "804141c1-1545-504d-8baa-a995dd64b9a4")
+		(property "Reference" "C831"
+			(at 220.98 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 220.98 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
+			(at 213.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 213.36 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL32B226KAJNNNE"
+			(at 213.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 213.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C309062"
+			(at 213.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 213.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 213.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 213.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "close to processor package"
+			(at 213.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 213.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9a36acf9-63dd-5412-a485-637ec8d12600")
+		)
+		(pin "2"
+			(uuid "6e06ce4e-e875-59fd-8007-ab26bf830bc0")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C831")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C831")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 60.96 213.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8a42b7d6-0130-59dc-8a09-ed7072da22b5")
+		(property "Reference" "#PWR802"
+			(at 60.96 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 60.96 217.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 213.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 213.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 213.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6ecf2074-6376-5745-aa60-1594c9174cfd")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "#PWR802")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "#PWR802")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 137.16 198.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8efb9119-605d-5dab-abf0-67901d02e249")
+		(property "Reference" "C840"
+			(at 144.78 196.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 144.78 199.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 137.16 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A475KA8NQNC"
+			(at 137.16 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 137.16 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C69335"
+			(at 137.16 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 137.16 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X5R"
+			(at 137.16 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 137.16 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 137.16 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 137.16 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "67b9e560-f939-59e8-acab-a14afe2c0316")
+		)
+		(pin "2"
+			(uuid "934d18b4-f2f7-5885-a49b-2101206bc414")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C840")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C840")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 60.96 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "952a75e6-cdf7-5221-854b-661ae3116fca")
+		(property "Reference" "#PWR801"
+			(at 60.96 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 60.96 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee04c36c-7047-547e-b75d-09a7c678593a")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "#PWR801")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "#PWR801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 137.16 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "95a43747-36f2-5759-b053-e7402be02a99")
+		(property "Reference" "C835"
+			(at 144.78 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF"
+			(at 144.78 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 137.16 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL31B106KAHNNNE"
+			(at 137.16 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 137.16 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14860"
+			(at 137.16 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 137.16 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 137.16 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 137.16 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "close to processor package"
+			(at 137.16 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 137.16 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7dbadc45-8905-58aa-8699-a91f0c9e6548")
+		)
+		(pin "2"
+			(uuid "6365f3b0-721e-5233-846e-5ca4429a4f20")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C835")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C835")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 111.76 264.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a0f6c59b-df56-574e-8bb2-ec60b90899e8")
+		(property "Reference" "C844"
+			(at 119.38 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 119.38 265.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 111.76 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 111.76 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 111.76 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 111.76 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 111.76 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 111.76 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 111.76 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 111.76 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 111.76 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "283bfdbb-4545-53c7-a1d2-82606be2ea51")
+		)
+		(pin "2"
+			(uuid "f7304bba-51f5-5e0e-946c-e9a6f023762f")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C844")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C844")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 60.96 81.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a6c84f57-2bc8-5f9b-a697-26b7993ade24")
+		(property "Reference" "#PWR800"
+			(at 60.96 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 60.96 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "627b9b2f-b87a-5141-ba5c-f819f6dbf63e")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "#PWR800")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "#PWR800")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 60.96 198.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b23189b5-64df-574d-ac83-ae3144f30ed4")
+		(property "Reference" "C837"
+			(at 68.58 196.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 68.58 199.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 60.96 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 60.96 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 60.96 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 60.96 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 60.96 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 60.96 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 60.96 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 60.96 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 60.96 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "250eb871-2f25-54bc-adfe-ed1f9bf8014c")
+		)
+		(pin "2"
+			(uuid "ffede181-a897-525c-a590-d45f895bb149")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C837")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C837")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 86.36 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cc13bd44-11e1-54f2-a21f-45356d66b970")
+		(property "Reference" "C833"
+			(at 93.98 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 93.98 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 86.36 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A475KA8NQNC"
+			(at 86.36 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 86.36 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C69335"
+			(at 86.36 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 86.36 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X5R"
+			(at 86.36 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 86.36 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 86.36 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 86.36 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6a21e657-f2d6-5c98-9688-53364953b4f7")
+		)
+		(pin "2"
+			(uuid "faece342-33fc-5214-8807-58102278ee07")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C833")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C833")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 162.56 264.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cfeeb72f-5ef9-5853-b686-4f388dc91e2a")
+		(property "Reference" "C846"
+			(at 170.18 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 170.18 265.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 162.56 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A475KA8NQNC"
+			(at 162.56 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 162.56 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C69335"
+			(at 162.56 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 162.56 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X5R"
+			(at 162.56 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 162.56 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 162.56 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 162.56 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cbcaa2bb-aed1-5437-97b1-abfc30c9db3f")
+		)
+		(pin "2"
+			(uuid "9b953626-4262-5ed5-a720-fe2bd70727f4")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C846")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C846")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 60.96 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d36ee502-35ff-5739-8be4-8f6c17f8816f")
+		(property "Reference" "C832"
+			(at 68.58 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 68.58 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 60.96 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 60.96 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 60.96 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 60.96 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 60.96 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 60.96 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 60.96 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 60.96 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 60.96 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a52b4bc5-7665-53ac-bf28-9c0619473682")
+		)
+		(pin "2"
+			(uuid "0f0c174a-165b-5e02-9c1e-2acec0d8df31")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C832")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C832")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 86.36 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "db47d77f-1222-563a-aad6-c81513603bce")
+		(property "Reference" "C826"
+			(at 93.98 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 93.98 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 86.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A475KA8NQNC"
+			(at 86.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 86.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C69335"
+			(at 86.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 86.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X5R"
+			(at 86.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 86.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 86.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 86.36 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ce49f2df-697e-5018-9252-b89a7b2d3ba5")
+		)
+		(pin "2"
+			(uuid "ebf9cc02-1b71-5e28-804e-417b734e8cff")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C826")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C826")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 60.96 264.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dffa545e-4981-5eef-bacc-d29bd2c38e53")
+		(property "Reference" "C842"
+			(at 68.58 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 68.58 265.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 60.96 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KA8NNNC"
+			(at 60.96 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 60.96 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 60.96 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 60.96 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 60.96 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 60.96 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "under processor package"
+			(at 60.96 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 60.96 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cb02c2c4-f7a3-5f7f-9ce0-faa97967f52f")
+		)
+		(pin "2"
+			(uuid "f46b358f-6492-58df-8f5d-c5664c1c083f")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C842")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C842")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 111.76 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f4d899e8-f9bf-588e-b75d-d84fee139be2")
+		(property "Reference" "C834"
+			(at 119.38 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 119.38 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
+			(at 111.76 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL32B226KAJNNNE"
+			(at 111.76 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 111.76 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C309062"
+			(at 111.76 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 111.76 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 111.76 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 111.76 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Placement Intent" "close to processor package"
+			(at 111.76 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Reference nominal value; bias, aging, impedance, placement and regulator stability pending"
+			(at 111.76 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "37bcf06e-cbca-586c-a1aa-3f0e274c5396")
+		)
+		(pin "2"
+			(uuid "3ccfc2e6-94ce-59d6-8191-975dae3e1c36")
+		)
+		(instances
+			(project "core-power"
+				(path "/3a5434a2-586b-50f0-b09b-0612ac42cdd1"
+					(reference "C834")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84"
+					(reference "C834")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

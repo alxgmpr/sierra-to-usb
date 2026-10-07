@@ -1,82 +1,97 @@
-# Independent recovery subsystem — review draft
+# Appliance schematic
 
-Open `recovery.kicad_pro` / `recovery.kicad_sch`. Three hierarchical sheets,
-27 actual components, no PCB layout. This is **not a complete WAN appliance**.
-The packet-path gate in [architecture.md](../docs/architecture.md) remains open.
+The complete engineering capture is [appliance.kicad_sch](appliance.kicad_sch), with
+30 sheets, 663 components and 823 native nets. Open [appliance.kicad_pro](appliance.kicad_pro)
+in KiCad. [appliance.kicad_pcb](appliance.kicad_pcb) contains all 663 footprints
+with native schematic links; placement and routing are still pending.
 
-Implemented:
+The remaining processor, boot storage, CPU power, Ethernet, isolated PoE,
+modem power, M.2, SIM and USB isolation circuits are now captured. The engineering
+capture passes full ERC at all severities, with **zero violations and no exclusions**.
+Native schematic-to-PCB and PCB-to-schematic updates both report zero errors and
+warnings and propose no changes. This is not a manufacturing or four-modem release.
 
-- STM32G0B1CCT6 in LQFP48, local decoupling, internal clock, SWD recovery header.
-- TPS3823-33DBVR independent watchdog/brownout reset, manual reset button and
-  physical watchdog service jumper. Fit the RUN shunt for unattended operation.
-- BAT54WS reset isolation so the push-pull supervisor does not contend with SWD
-  reset. Keep PF2/pin 10 configured as NRST; boot firmware must preserve it.
-- Three MMBT3904 open-collector reset/off outputs; 10 kR base and 100 kR
-  base-emitter resistors; two default-low power-enable outputs.
-- Explicit evaluation boundaries: regulated/current-limited 3.3 V at J101,
-  GPIO/service interfaces at J102. J102 is not a modem connector. No firmware.
+[Review PDF](review/2026-10-07/appliance.pdf) ·
+[Native BOM inventory](review/2026-10-07/bom.csv) ·
+[Validation report](review/2026-10-07/capture-report.json) ·
+[Footprint and model audit](../docs/footprint-audit.md) ·
+[Detailed completion and release holds](../docs/schematic-completion.md)
 
-The G0 is an independent recovery study, **not a selected appliance controller**:
-it does not establish modem AT control or multi-gigabit forwarding. The possible
-F723 USB-HS control role is separate and remains unqualified. Do not assemble a
-second MCU merely because both appear in architecture discussion.
+## Reproduce and inspect
 
-## Validation on 2026-09-28
-
-KiCad CLI 10.99.0: **0 ERC violations at all severities**. Native hierarchical
-XML netlist checks pass for diode orientation, watchdog jumper isolation, MCU
-NRST, SWD, all three transistor base/collector/emitter networks, enable pull-downs
-and essential supply contacts. Three-sheet SVGs were rendered to PNG and visually
-reviewed through multiple placement revisions. Native PDF export passes.
-These checks establish capture connectivity, not electrical or production approval.
-
-Reproduce without putting generated output in the repository:
+Requires KiCad CLI 10.99 (the version used for native Altium reference import) and
+Python 3. Run without `python -O`; the checker uses assertions.
 
 ```sh
-python3 hardware/check.py --output /tmp/sierra-wan-check
+python3 hardware/check.py --output /tmp/sierra-appliance-check
+python3 hardware/tools/check_board_sync.py --output /tmp/sierra-board-check
+python3 hardware/tools/review_modem_power.py --output /tmp/modem-power-analysis.json
+python3 hardware/tools/export_appliance.py --output /tmp/sierra-appliance-review
 ```
 
-Use `--kicad-cli /path/to/kicad-cli` if required. The script stops on ERC findings
-and exports XML, SVG and PDF for inspection. It does not generate fabrication files.
-Do not run Python with `-O`, which disables the connectivity assertions.
+The checker validates the native netlist and all-severity ERC; all 565 RK3566,
+200 RAM, 153 eMMC and other major-device contacts are accounted for. It checks
+65 manufacturer DDR pair mappings, the complete retained TI bridge/flyback net
+partitions, critical rail/reset/interface connections, four assembly-profile power
+maps, deterministic identities and exact pad-number parity for all 663 assigned
+footprints. Pad parity establishes identity, not a fabrication land-pattern review.
+626 components use default KiCad footprints, including 572 stock hand-solder
+variants. Existing package sizes are retained. All attached model paths resolve;
+missing or mechanically unverified models are explicitly recorded in
+[footprint-policy.json](footprint-policy.json). Imported TI embedded STEP assets
+are now stored in the project.
 
-## Sources and remaining qualification
+Use the native Update PCB / Update Schematic dialogs for normal edits, with
+reference relinking off. `build_capture.py` regenerates the original capture and
+applies the footprint policy; it overwrites manual schematic graphics. Preserve
+editor changes before regeneration. `sync_board.py` is only an unrouted-board
+refresh helper and refuses routed boards.
 
-- [STM32G0B1 datasheet DS13560](https://www.st.com/resource/en/datasheet/stm32g0b1kc.pdf).
-  Capture uses the stock KiCad STM32G0B1CCTx pin identities, without pin swaps.
-  Full current manufacturer package-pin/reference-circuit cross-check is still
-  pending: the full ST PDF could not be retrieved in this session. Do not treat
-  a clean library-based netlist as a completed manufacturer pin audit.
-- [TI TPS3823 datasheet](https://www.ti.com/lit/ds/symlink/tps3823.pdf): RESET pin 1,
-  GND 2, MR 3, WDI 4, VDD 5; SOT-23-5. Nominal 1.6 s watchdog, 200 ms reset,
-  2.93 V threshold. WDI floating disables the watchdog; the fitted RUN jumper
-  connects a pulled-down MCU signal so MCU reset does not float it.
-- [Diodes BAT54WS](https://www.diodes.com/datasheet/download/BAT54WS.pdf): verify
-  supervisor VOL plus diode VF stays below MCU NRST VIL across voltage,
-  temperature and reset pull-up currents before release.
-- [Nexperia MMBT3904](https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf):
-  base 1, emitter 2, collector 3. Target sink-current allocation is 1 mA;
-  verify low voltage against each actual modem/NIC input requirement.
+The PDF was rendered and all 30 sheets inspected. Cropped modem content, a duplicate
+crystal-ground wire and the recovery USB shell-pad model were corrected during review.
 
-Passives have 0603 footprints; exact MPNs/tolerances and capacitor effective
-capacitance are not a released BOM. Headers, RUN shunt and switch need exact
-orderable parts and mechanical review. MCU update partition sizing, signed
-bootloader, BOR/option bytes, recovery firmware and watchdog startup timing are
-not implemented or tested. The RUN jumper must not be omitted in production.
-The grouped native-netlist inventory and block-level gates are recorded in
-[qualification-status.md](../docs/qualification-status.md).
+## Assembly and software obligations
 
-External reset pull-ups must come from the relevant switched target domain;
-`MODEM_OFF_N` needs the profile-specific FULL_CARD_POWER_OFF# pull-up. Without
-that pull-up, the modem remains off. Neither power switching nor discharge is
-implemented. Service UART, HEALTH_IN and POWER_FAULT_N are 3.3 V boundaries;
-add appropriate powered-off-safe translation/protection for actual targets.
+The default is the Quectel stuffing pattern. R2011/R2012/R2013/R2016/R2017 and
+C2036/C2037/C2038 are DNP. Sierra USB profiles require all eight populated after
+exact module review. Never energize Quectel contacts 24, 38 or 68. The native
+[profile file](reference/modem-assembly-profiles.json) is machine-checked; all four
+profiles have `released: false`. This is assembly selection, not hot interchange.
 
-Not implemented: PoE PD/protection/isolation, final power budget/class, modem
-regulator/load switch, socket profiles, SIM, Ethernet controller/magnetics,
-USB/PCIe, AT/session control, modem recovery/update transport, complete BOM.
-No hardware, throughput, thermal, EMC, isolation or unattended tests have run.
+The independent STM32 must keep main, modem and NIC loads off until an isolated
+Class 6 grant is stable (TPH_N/TPL_N/BT_N = 0/1/0), and cut loads on loss of grant.
+It controls power, reset and recovery while Linux runs the packet path. Firmware
+for those policies and real recovery/traffic behavior still need qualification.
+The no-detect SIM socket permits card changes only with modem power off.
 
-Embedded library-symbol audit: all 18 embedded symbol entries retain the stock
-KiCad pin numbers, names and electrical types (inheritance resolved). This checks
-symbol fidelity only; it does not replace the outstanding manufacturer pin audit.
+Modem USB isolation is powered from the always-on rail. Hardware enables data
+only with valid host power and modem power delayed by 180–420 ms. A latched eFuse,
+independent monitor and explicit discharge support recovery; measured rail fall,
+USB isolation, off-time and per-model timing remain required.
+
+## Release holds
+
+- Six assigned engineering land patterns still require release review: U701 TPS56837 RPA, U801 RK3566,
+  U901 Micron RAM, T1701 HX4110NLT, J1701 RJE491881401 and J2001 MDT420B01411.
+  Exact land patterns, copper/mask/paste, orientation and retention need review.
+  RK/RAM retain the audited ball centers; connector lands follow archived vendor
+  drawings. The detailed audit records mask, stencil and mechanical limitations.
+- The staged board has no routing or outline. All-severity physical DRC remains
+  open; the native synchronization check reports the actual counts without
+  suppressing rules. Do not export it for fabrication.
+- Current controlled EM919x and EM92xx technical specifications and the RM551E-GL
+  production hardware guide remain unavailable. Older manufacturer guides and the
+  RM520N V1.0 guide support provisional capture. Current pin/timing differences,
+  exact firmware/composition and power envelopes must be closed per module.
+- 5 A modem current is a provisional burst allocation. Connector hot derating,
+  voltage drop, regulator stability/current, PoE startup/MPS/allocation, thermal,
+  isolation/creepage, SI/EMC and RF operation require physical testing. HV MLCCs
+  across isolation are not a certified safety-barrier assembly.
+- CPU DVS/kernel/DDR training/eMMC/NIC drivers and unique Ethernet MAC provisioning
+  require an actual software image and boot/traffic/recovery tests.
+
+Sources, revisions and hashes are saved in [reference/sources.json](reference/sources.json).
+TI's source archive retains its notices; imported symbols and footprints are derived
+from TIDA-050023. The topology comparison excludes deleted evaluation headers,
+auxiliary input and the old 1 GbE transformer. The new capture requests Class 6,
+extracts all four PoE pairs with 2.5 GbE magnetics, and isolates allocation status.
