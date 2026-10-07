@@ -1,91 +1,3157 @@
 (kicad_sch
-  (version 20250114)
-  (generator eeschema)
-  (uuid "bb28e328-4da2-5788-8b8f-19f46e1ab14c")
-  (paper "A3")
-  (title_block (title "Recovery outputs — safe control interfaces") (date "2026-09-28") (rev "0.1") (company "sierra-to-usb") (comment 1 "REVIEW ONLY - independent recovery core"))
-  (lib_symbols (symbol "Transistor_BJT:MMBT3904" (property "Reference" "Q" (at 5.08 1.905 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "MMBT3904" (at 5.08 0 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 5.08 -1.905 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27) (italic yes)) (justify left))) (property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "NPN Transistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_fp_filters" "SOT?23*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (embedded_fonts no) (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Sim.Device" "NPN" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Sim.Pins" "1=B 2=E 3=C" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "MMBT3904_0_1" (polyline (pts (xy -2.54 0) (xy 0.635 0)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0.635 1.905) (xy 0.635 -1.905)) (stroke (width 0.508) (type default)) (fill (type none))) (circle (center 1.27 0) (radius 2.8194) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "MMBT3904_1_1" (polyline (pts (xy 0.635 0.635) (xy 2.54 2.54)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0.635 -0.635) (xy 2.54 -2.54)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)) (stroke (width 0) (type default)) (fill (type outline))) (pin input line (at -5.08 0 0) (length 2.54) (name "B" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 -5.08 90) (length 2.54) (name "E" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 5.08 270) (length 2.54) (name "C" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) (symbol "Device:R_Small_US" (pin_numbers (hide yes)) (pin_names (offset 0.254) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "R" (at 0.762 0.508 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "R_Small_US" (at 0.762 -1.016 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "Resistor, small US symbol" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "r resistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_fp_filters" "R_*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "R_Small_US_1_1" (polyline (pts (xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)) (stroke (width 0) (type default)) (fill (type none))) (pin passive line (at 0 2.54 270) (length 1.016) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -2.54 90) (length 1.016) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) (symbol "power:GND" (power global) (pin_numbers (hide yes)) (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "#PWR" (at 0 -6.35 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Value" "GND" (at 0 -3.81 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "global power" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "GND_0_1" (polyline (pts (xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))) (symbol "GND_1_1" (pin power_in line (at 0 0 270) (length 0) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)))
-  (rectangle (start 20.32 20.32) (end 398.78 119.38) (stroke (width 0.254) (type default) (color 70 100 130 1)) (fill (type none)) (uuid "f1e3f035-9d9f-58f1-9aeb-8e373db6df50"))
-  (text "OPEN-COLLECTOR RESET / OFF — NO EXTERNAL PULL-UP TO ALWAYS-ON RAIL" (at 24.13 25.4 0) (effects (font (size 1.524 1.524) (bold yes)) (justify left)) (uuid "52ae4637-25c7-562f-b83d-5c1fe284124b"))
-  (symbol (lib_id "Transistor_BJT:MMBT3904") (at 83.82 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4588812f-d397-539f-a3a9-e414a07c361f") (property "Reference" "Q301" (at 87.63 63.50000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "MMBT3904,215" (at 87.63 66.04 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 83.82 66.04 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf" (at 83.82 66.04 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "MPN" "MMBT3904,215" (at 83.82 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Nexperia" (at 83.82 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "6bc2d88f-5389-5bb9-9785-6c2f95da0d9e")) (pin "2" (uuid "bd09f1d5-4ca4-5ff0-abdf-d55b763ff2f3")) (pin "3" (uuid "9ecc8a84-9d16-5e13-9f1e-ffd72c56f8aa")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "Q301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "Q301") (unit 1)))))
-  (symbol (lib_id "Device:R_Small_US") (at 63.49999999999999 66.04 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ade25baa-ee8a-59ff-b4d8-a21f35e3cc7a") (property "Reference" "R301" (at 59.69 59.690000000000005 90) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "10kR" (at 59.69 62.230000000000004 90) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 63.49999999999999 66.04 90) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf" (at 63.49999999999999 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "a0557b91-e2e8-5e35-ad5d-63b0fbd333c6")) (pin "2" (uuid "e439434f-6879-57cd-abeb-a5d9f7089a43")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R301") (unit 1)))) (property "MPN" "RC0603FR-0710KL" (at 63.49999999999999 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Yageo" (at 63.49999999999999 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "LCSC" "C98220" (at 63.49999999999999 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Tolerance" "1%" (at 63.49999999999999 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Power Rating" "0.1W" (at 63.49999999999999 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Voltage Rating" "75V" (at 63.49999999999999 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))))
-  (wire (pts (xy 66.04 66.04) (xy 78.74 66.04)) (stroke (width 0) (type default)) (uuid "5ba88fe1-b3fb-559d-b99e-8bea1effb0e8"))
-  (hierarchical_label "MODEM_RESET_ASSERT" (shape input) (at 38.099999999999994 53.34 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "81a7a34d-e6df-534f-9890-37ba3f2cc2ad"))
-  (wire (pts (xy 38.099999999999994 53.34) (xy 38.099999999999994 66.04)) (stroke (width 0) (type default)) (uuid "352e26b4-3d15-5850-b71e-19a16d0d7f48"))
-  (wire (pts (xy 38.099999999999994 66.04) (xy 60.96 66.04)) (stroke (width 0) (type default)) (uuid "70be3c9d-aaec-5a16-9c4d-794dfbbe73b2"))
-  (symbol (lib_id "Device:R_Small_US") (at 73.66 78.74000000000001 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "07df199b-dae6-51c7-99e9-371dc578ad3f") (property "Reference" "R302" (at 77.47 76.2 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "100kR" (at 77.47 78.74000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 73.66 78.74000000000001 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf" (at 73.66 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "7cd6f5c1-dd12-57bd-984f-2fb35879a9a8")) (pin "2" (uuid "a8bcee4a-3fd2-5872-94db-fa05e50ec2c4")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R302") (unit 1)))) (property "MPN" "RC0603FR-07100KL" (at 73.66 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Yageo" (at 73.66 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "LCSC" "C14675" (at 73.66 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Tolerance" "1%" (at 73.66 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Power Rating" "0.1W" (at 73.66 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Voltage Rating" "75V" (at 73.66 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))))
-  (wire (pts (xy 73.66 66.04) (xy 78.74 66.04)) (stroke (width 0) (type default)) (uuid "7ec5c30c-1dae-5b1d-82d6-66b989b7a93e"))
-  (junction (at 73.66 66.04) (diameter 0) (color 0 0 0 0) (uuid "0b2703f3-8754-57f2-8901-da871ee15c1f"))
-  (wire (pts (xy 73.66 66.04) (xy 73.66 76.2)) (stroke (width 0) (type default)) (uuid "4de2de76-e754-532b-8324-fef6d2997d47"))
-  (wire (pts (xy 73.66 81.28) (xy 73.66 88.9)) (stroke (width 0) (type default)) (uuid "2f03d7e3-90ec-53a9-8af9-ce8ea04cfe61"))
-  (wire (pts (xy 86.36 71.12) (xy 86.36 88.9)) (stroke (width 0) (type default)) (uuid "13b28799-922e-508a-9c7d-c0a173ab558b"))
-  (wire (pts (xy 73.66 88.9) (xy 86.36 88.9)) (stroke (width 0) (type default)) (uuid "e7b142c7-96cf-591e-816a-a8d368b1c78f"))
-  (symbol (lib_id "power:GND") (at 86.36 88.9 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "14b22066-4942-51bb-ada7-35c88ae03838") (property "Reference" "#PWR13" (at 90.17 86.36 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Value" "GND" (at 87.63 92.71000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 86.36 88.9 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "" (at 86.36 88.9 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (pin "1" (uuid "078f3fe8-e426-52f6-84f0-7da24df82a1b")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR13") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR13") (unit 1)))))
-  (junction (at 86.36 88.9) (diameter 0) (color 0 0 0 0) (uuid "6c7749d4-5a8e-5097-846e-a2c0d81c4b57"))
-  (wire (pts (xy 86.36 60.96) (xy 86.36 45.72)) (stroke (width 0) (type default)) (uuid "f913afeb-df53-50c8-853f-1f2697965dc0"))
-  (wire (pts (xy 86.36 45.72) (xy 101.6 45.72)) (stroke (width 0) (type default)) (uuid "4df9b696-fd19-5ac5-ac0a-4d21891c7c61"))
-  (hierarchical_label "MODEM_RESET_N" (shape output) (at 101.6 45.72 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9971dd9b-fc38-54ea-a60a-5d63f9094a3d"))
-  (text "HIGH input asserts LOW output.\nTarget pull-up / timing is profile-specific." (at 38.099999999999994 106.68 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e3bf689e-82d3-581c-82fc-b8b6276a0677"))
-  (symbol (lib_id "Transistor_BJT:MMBT3904") (at 203.2 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9d198787-4788-54ee-8bea-fa375d5cbfe2") (property "Reference" "Q302" (at 207.01 63.50000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "MMBT3904,215" (at 207.01 66.04 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 203.2 66.04 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf" (at 203.2 66.04 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "MPN" "MMBT3904,215" (at 203.2 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Nexperia" (at 203.2 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "63013901-672a-5327-846f-f6df54625675")) (pin "2" (uuid "105d6feb-6675-5025-8f10-493645ee847a")) (pin "3" (uuid "74bf29bc-130f-5225-a1fb-c63efbaac932")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "Q302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "Q302") (unit 1)))))
-  (symbol (lib_id "Device:R_Small_US") (at 182.88 66.04 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "31b0b5cd-9981-5dbe-873d-66df88697965") (property "Reference" "R303" (at 179.07 59.690000000000005 90) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "10kR" (at 179.07 62.230000000000004 90) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 182.88 66.04 90) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf" (at 182.88 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "c8661a29-4f80-598f-8b15-6ecbd6919171")) (pin "2" (uuid "f3797299-2c5b-5b48-8af5-aa39f97374a9")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R303") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R303") (unit 1)))) (property "MPN" "RC0603FR-0710KL" (at 182.88 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Yageo" (at 182.88 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "LCSC" "C98220" (at 182.88 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Tolerance" "1%" (at 182.88 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Power Rating" "0.1W" (at 182.88 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Voltage Rating" "75V" (at 182.88 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))))
-  (wire (pts (xy 185.42 66.04) (xy 198.12 66.04)) (stroke (width 0) (type default)) (uuid "63c03089-7a60-527d-96d9-eda187733818"))
-  (hierarchical_label "MODEM_OFF_ASSERT" (shape input) (at 157.48 53.34 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3e78be8b-f160-570b-ab0b-21c8d1cad33d"))
-  (wire (pts (xy 157.48 53.34) (xy 157.48 66.04)) (stroke (width 0) (type default)) (uuid "3b859288-fc73-5b03-859e-31c95cea3d2a"))
-  (wire (pts (xy 157.48 66.04) (xy 180.34 66.04)) (stroke (width 0) (type default)) (uuid "9d175262-7374-5f72-8232-e01b213a22ea"))
-  (symbol (lib_id "Device:R_Small_US") (at 193.04 78.74000000000001 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "464e97a5-5d54-5b8a-a2b0-f5a8f98a19cd") (property "Reference" "R304" (at 196.85 76.2 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "100kR" (at 196.85 78.74000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 193.04 78.74000000000001 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf" (at 193.04 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "eb63e293-1470-59d3-a29f-4c1a6b55532b")) (pin "2" (uuid "f88f35a4-208e-5daa-9e5f-843aa8158f43")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R304") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R304") (unit 1)))) (property "MPN" "RC0603FR-07100KL" (at 193.04 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Yageo" (at 193.04 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "LCSC" "C14675" (at 193.04 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Tolerance" "1%" (at 193.04 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Power Rating" "0.1W" (at 193.04 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Voltage Rating" "75V" (at 193.04 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))))
-  (wire (pts (xy 193.04 66.04) (xy 198.12 66.04)) (stroke (width 0) (type default)) (uuid "9365d71c-faa4-5bd1-b264-9326a427aa91"))
-  (junction (at 193.04 66.04) (diameter 0) (color 0 0 0 0) (uuid "046fcc4d-a017-5aeb-92ea-b3160c5ceadd"))
-  (wire (pts (xy 193.04 66.04) (xy 193.04 76.2)) (stroke (width 0) (type default)) (uuid "ea41aa55-5b30-5f20-b89d-2a754cbde2ba"))
-  (wire (pts (xy 193.04 81.28) (xy 193.04 88.9)) (stroke (width 0) (type default)) (uuid "89d553e2-a1d3-5ff8-994f-e7b1b3128d2c"))
-  (wire (pts (xy 205.74 71.12) (xy 205.74 88.9)) (stroke (width 0) (type default)) (uuid "e60bdc12-f191-5e2e-820b-2b8d14f35d0f"))
-  (wire (pts (xy 193.04 88.9) (xy 205.74 88.9)) (stroke (width 0) (type default)) (uuid "02a90a19-9599-5eef-a217-365144eebc59"))
-  (symbol (lib_id "power:GND") (at 205.74 88.9 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "af91b474-556b-58b4-b5ae-fcaf82567403") (property "Reference" "#PWR29" (at 209.55 86.36 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Value" "GND" (at 207.01000000000002 92.71000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 205.74 88.9 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "" (at 205.74 88.9 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (pin "1" (uuid "fecadce4-609a-5a74-a307-f502f1d18bca")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR29") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR29") (unit 1)))))
-  (junction (at 205.74 88.9) (diameter 0) (color 0 0 0 0) (uuid "6ec55fe7-3a69-54d6-98b5-318b35aa9f80"))
-  (wire (pts (xy 205.74 60.96) (xy 205.74 45.72)) (stroke (width 0) (type default)) (uuid "2e8047f7-6c02-5d4d-a3b3-96661554cb7d"))
-  (wire (pts (xy 205.74 45.72) (xy 220.98000000000002 45.72)) (stroke (width 0) (type default)) (uuid "81156632-bdfc-5f2c-9327-dc07c73070e1"))
-  (hierarchical_label "MODEM_OFF_N" (shape output) (at 220.98000000000002 45.72 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d9741a4a-bea2-544e-aee2-c421930305d1"))
-  (text "HIGH input asserts LOW output.\nTarget pull-up / timing is profile-specific." (at 157.48 106.68 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8125046b-2682-5ae5-b157-386a9bcc6978"))
-  (symbol (lib_id "Transistor_BJT:MMBT3904") (at 322.58 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "260e6e78-0365-5b4e-982b-209d9ea5e071") (property "Reference" "Q303" (at 326.39 63.50000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "MMBT3904,215" (at 326.39 66.04 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 322.58 66.04 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf" (at 322.58 66.04 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "MPN" "MMBT3904,215" (at 322.58 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Nexperia" (at 322.58 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "e3634ff0-a740-5b8c-a6e3-7c696db1c03f")) (pin "2" (uuid "af61c218-4c39-5f14-8899-b49faa47f228")) (pin "3" (uuid "fb6d20b2-95c7-5b35-86c0-d14f2f5cd683")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "Q303") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "Q303") (unit 1)))))
-  (symbol (lib_id "Device:R_Small_US") (at 302.26 66.04 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4ccb05b9-490d-5bfa-9fa7-1c9817433a33") (property "Reference" "R305" (at 298.45 59.690000000000005 90) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "10kR" (at 298.45 62.230000000000004 90) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 302.26 66.04 90) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf" (at 302.26 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "15a06518-cbad-5fd8-a273-a3e0a769ca5b")) (pin "2" (uuid "169fceec-0cb3-5d51-941e-f63ac27049a4")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R305") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R305") (unit 1)))) (property "MPN" "RC0603FR-0710KL" (at 302.26 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Yageo" (at 302.26 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "LCSC" "C98220" (at 302.26 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Tolerance" "1%" (at 302.26 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Power Rating" "0.1W" (at 302.26 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Voltage Rating" "75V" (at 302.26 66.04 0) (effects (font (size 1.27 1.27)) (hide yes))))
-  (wire (pts (xy 304.8 66.04) (xy 317.5 66.04)) (stroke (width 0) (type default)) (uuid "86f5c72b-4fda-5477-aaa9-e8c59da7792b"))
-  (hierarchical_label "ETH_RESET_ASSERT" (shape input) (at 276.86 53.34 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ce4f12a7-7fe4-5b57-8611-4c91443a918e"))
-  (wire (pts (xy 276.86 53.34) (xy 276.86 66.04)) (stroke (width 0) (type default)) (uuid "cbb09791-348e-5971-9e2e-19249efbe794"))
-  (wire (pts (xy 276.86 66.04) (xy 299.72 66.04)) (stroke (width 0) (type default)) (uuid "ce230261-47fa-5d1c-896f-7dd6355b7661"))
-  (symbol (lib_id "Device:R_Small_US") (at 312.42 78.74000000000001 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ae574325-b63a-57a9-bee1-8c4b65904a58") (property "Reference" "R306" (at 316.23 76.2 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "100kR" (at 316.23 78.74000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 312.42 78.74000000000001 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf" (at 312.42 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "64decb8c-ddae-5421-8b72-e40cd588fcb1")) (pin "2" (uuid "2eee1911-fc00-5577-ba48-a48d12aeb7bc")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R306") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R306") (unit 1)))) (property "MPN" "RC0603FR-07100KL" (at 312.42 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Yageo" (at 312.42 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "LCSC" "C14675" (at 312.42 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Tolerance" "1%" (at 312.42 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Power Rating" "0.1W" (at 312.42 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Voltage Rating" "75V" (at 312.42 78.74000000000001 0) (effects (font (size 1.27 1.27)) (hide yes))))
-  (wire (pts (xy 312.42 66.04) (xy 317.5 66.04)) (stroke (width 0) (type default)) (uuid "1e48164a-4cae-54d5-82bc-91149dc3ea3c"))
-  (junction (at 312.42 66.04) (diameter 0) (color 0 0 0 0) (uuid "07873510-b3f7-5b3c-a964-fa7f0d1f6947"))
-  (wire (pts (xy 312.42 66.04) (xy 312.42 76.2)) (stroke (width 0) (type default)) (uuid "a74f5d04-3302-5f66-a7b5-bfe74033e8da"))
-  (wire (pts (xy 312.42 81.28) (xy 312.42 88.9)) (stroke (width 0) (type default)) (uuid "80f99dad-35c8-5af9-a8d6-1a32bff9ffd4"))
-  (wire (pts (xy 325.12 71.12) (xy 325.12 88.9)) (stroke (width 0) (type default)) (uuid "97755e6a-23ec-58f6-a4ac-5516314fae08"))
-  (wire (pts (xy 312.42 88.9) (xy 325.12 88.9)) (stroke (width 0) (type default)) (uuid "a23aebd6-9964-50cc-abee-63f902692fb3"))
-  (symbol (lib_id "power:GND") (at 325.12 88.9 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "0428d26e-fef4-5d11-b35f-1925284478ab") (property "Reference" "#PWR45" (at 328.93 86.36 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Value" "GND" (at 326.39 92.71000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 325.12 88.9 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "" (at 325.12 88.9 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (pin "1" (uuid "2450f98d-1cd0-56b5-8f78-ef2a091689c2")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR45") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR45") (unit 1)))))
-  (junction (at 325.12 88.9) (diameter 0) (color 0 0 0 0) (uuid "dd751741-c59a-5e3c-83f9-eaded93b40d1"))
-  (wire (pts (xy 325.12 60.96) (xy 325.12 45.72)) (stroke (width 0) (type default)) (uuid "bc6fbc13-dba2-5971-8eb5-2279c456596a"))
-  (wire (pts (xy 325.12 45.72) (xy 340.36 45.72)) (stroke (width 0) (type default)) (uuid "91c6b2c1-dbac-5166-8e44-0dbf7ec9538b"))
-  (hierarchical_label "ETH_RESET_N" (shape output) (at 340.36 45.72 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3f067d4d-357c-5811-af09-13379ea480eb"))
-  (text "HIGH input asserts LOW output.\nTarget pull-up / timing is profile-specific." (at 276.86 106.68 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ca3589dd-476f-513f-bd71-199c846efa36"))
-  (rectangle (start 20.32 132.08) (end 208.28 226.06) (stroke (width 0.254) (type default) (color 70 100 130 1)) (fill (type none)) (uuid "3f51977e-a11f-58a4-a0f0-80546a11a89c"))
-  (text "POWER ENABLES — DEFAULT OFF ON MCU RESET" (at 24.13 137.16000000000003 0) (effects (font (size 1.524 1.524) (bold yes)) (justify left)) (uuid "6690e660-ded3-53d1-bd07-1ee7ec2220bf"))
-  (hierarchical_label "MODEM_POWER_EN" (shape input) (at 35.56 160.02 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "68da5c91-2fd5-59d6-90a8-cf30366c427d"))
-  (wire (pts (xy 35.56 160.02) (xy 88.9 160.02)) (stroke (width 0) (type default)) (uuid "441096f6-a870-5abd-8d03-cdb1086406ed"))
-  (wire (pts (xy 88.9 160.02) (xy 154.94 160.02)) (stroke (width 0) (type default)) (uuid "1d61bf55-a702-511f-91cc-7379bcba1263"))
-  (label "MODEM_POWER_EN" (at 154.94 160.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "182338d8-0f61-5b1c-b1a2-76f20214a880"))
-  (symbol (lib_id "Device:R_Small_US") (at 88.9 170.18 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c0bf5b5c-f00a-5a68-8fe8-07c917118ad0") (property "Reference" "R307" (at 92.71000000000001 167.64000000000001 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "100kR" (at 92.71000000000001 170.18 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 88.9 170.18 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf" (at 88.9 170.18 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "78f7a98e-dd97-5391-8e77-f6abea91c83f")) (pin "2" (uuid "ea9bcdde-a158-5043-959a-010bd5757cc5")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R307") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R307") (unit 1)))) (property "MPN" "RC0603FR-07100KL" (at 88.9 170.18 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Yageo" (at 88.9 170.18 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "LCSC" "C14675" (at 88.9 170.18 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Tolerance" "1%" (at 88.9 170.18 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Power Rating" "0.1W" (at 88.9 170.18 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Voltage Rating" "75V" (at 88.9 170.18 0) (effects (font (size 1.27 1.27)) (hide yes))))
-  (wire (pts (xy 88.9 160.02) (xy 88.9 167.64000000000001)) (stroke (width 0) (type default)) (uuid "ae4c0bf4-1d01-51f0-a82e-9d2b17a69f2a"))
-  (junction (at 88.9 160.02) (diameter 0) (color 0 0 0 0) (uuid "5e642dce-a9ad-5cbe-9901-2eb0cf9124d7"))
-  (wire (pts (xy 88.9 172.72) (xy 88.9 177.8)) (stroke (width 0) (type default)) (uuid "bf3d1c00-f83c-5279-a5be-2b57645785b4"))
-  (symbol (lib_id "power:GND") (at 88.9 177.8 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "60e0bbbb-8d75-5e72-bb94-8a8145439ee2") (property "Reference" "#PWR60" (at 92.71000000000001 175.26000000000002 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Value" "GND" (at 90.17 181.61 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 88.9 177.8 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "" (at 88.9 177.8 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (pin "1" (uuid "0dc18a25-922e-58e4-86d7-5d5bf002e8f4")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR60") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR60") (unit 1)))))
-  (hierarchical_label "ETH_POWER_EN" (shape input) (at 35.56 190.5 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5bbc5cf7-222b-568a-a9d1-e8310507df51"))
-  (wire (pts (xy 35.56 190.5) (xy 88.9 190.5)) (stroke (width 0) (type default)) (uuid "842b95c2-2af7-5bdf-89f7-8419a2b811c0"))
-  (wire (pts (xy 88.9 190.5) (xy 154.94 190.5)) (stroke (width 0) (type default)) (uuid "752cc7f7-ae8c-5320-9d2b-4a5fbc5640d2"))
-  (label "ETH_POWER_EN" (at 154.94 190.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "334f1fd6-ef60-5eec-93e3-ebae46c563c7"))
-  (symbol (lib_id "Device:R_Small_US") (at 88.9 200.66 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4a718701-eeb3-556b-ac0b-f567be0d8818") (property "Reference" "R308" (at 92.71000000000001 198.12 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "100kR" (at 92.71000000000001 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 88.9 200.66 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf" (at 88.9 200.66 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "86e0ec82-8aaa-5f93-abe8-fd6f0642be4b")) (pin "2" (uuid "a523783f-52d4-5148-861c-f8aa47398db4")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R308") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "R308") (unit 1)))) (property "MPN" "RC0603FR-07100KL" (at 88.9 200.66 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Manufacturer" "Yageo" (at 88.9 200.66 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "LCSC" "C14675" (at 88.9 200.66 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Tolerance" "1%" (at 88.9 200.66 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Power Rating" "0.1W" (at 88.9 200.66 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Voltage Rating" "75V" (at 88.9 200.66 0) (effects (font (size 1.27 1.27)) (hide yes))))
-  (wire (pts (xy 88.9 190.5) (xy 88.9 198.12)) (stroke (width 0) (type default)) (uuid "3cdc25f4-dbc0-50d5-bef4-567281c60019"))
-  (junction (at 88.9 190.5) (diameter 0) (color 0 0 0 0) (uuid "7daaa0b4-964d-573a-a788-34ebedf2c977"))
-  (wire (pts (xy 88.9 203.2) (xy 88.9 208.28)) (stroke (width 0) (type default)) (uuid "c7c03c27-e687-5b4a-93b7-666b99ef05d5"))
-  (symbol (lib_id "power:GND") (at 88.9 208.28 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "e7932422-d3ba-5f09-a19d-51f27ced237b") (property "Reference" "#PWR68" (at 92.71000000000001 205.74 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Value" "GND" (at 90.17 212.09 0) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 88.9 208.28 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (property "Datasheet" "" (at 88.9 208.28 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (pin "1" (uuid "3f34ccab-e721-5a7a-a8f4-a78c0405914d")) (instances (project "recovery" (path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR68") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e" (reference "#PWR68") (unit 1)))))
-  (text "Connect only to documented 3.3V-compatible enable inputs.\nThe regulators / eFuses are NOT captured in this milestone." (at 30.48 215.9 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e42f273b-48b6-55e7-b403-4c0fcdca76eb"))
-  (rectangle (start 220.98 132.08) (end 398.78 226.06) (stroke (width 0.254) (type default) (color 70 100 130 1)) (fill (type none)) (uuid "933d454b-0855-5e65-bdc5-2483b0f7aa08"))
-  (text "INTEGRATION LIMITS" (at 224.79 137.16000000000003 0) (effects (font (size 1.524 1.524) (bold yes)) (justify left)) (uuid "06322a0f-ec30-5080-9115-636a2cd5de66"))
-  (text "Reset outputs tolerate target pull-ups without sourcing\nvoltage into an unpowered target. Maximum target sink\ncurrent allocation: 1mA; verify low threshold with exact load.\n\nMODEM_OFF_N connects to FULL_CARD_POWER_OFF# only\nwith a switched target-rail pull-up. Without that pull-up,\nthe module remains off. Do not drive from an always-on rail.\n\nThis circuit does not implement modem power switching,\nPoE, USB forwarding, Ethernet or SIM. See architecture gate." (at 228.6 162.56 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d90b2e1b-d6ce-50a5-8b0f-081f18026456"))
+	(version 20260830)
+	(generator "eeschema")
+	(generator_version "10.99")
+	(uuid "bb28e328-4da2-5788-8b8f-19f46e1ab14c")
+	(paper "A3")
+	(title_block
+		(title "Recovery outputs — safe control interfaces")
+		(date "2026-09-28")
+		(rev "0.1")
+		(company "sierra-to-usb")
+		(comment 1 "REVIEW ONLY - independent recovery core")
+	)
+	(lib_symbols
+		(symbol "Device:R_Small_US"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0.762 0.508 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_Small_US"
+				(at 0.762 -1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor, small US symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "r resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_Small_US_1_1"
+				(polyline
+					(pts
+						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.016)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.016)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Transistor_BJT:MMBT3904"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "MMBT3904"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "NPN"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=B 2=E 3=C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "NPN Transistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MMBT3904_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 0.635 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MMBT3904_1_1"
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(rectangle
+		(start 20.32 132.08)
+		(end 208.28 226.06)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 70 100 130 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "3f51977e-a11f-58a4-a0f0-80546a11a89c")
+	)
+	(rectangle
+		(start 220.98 132.08)
+		(end 398.78 226.06)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 70 100 130 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "933d454b-0855-5e65-bdc5-2483b0f7aa08")
+	)
+	(rectangle
+		(start 20.32 20.32)
+		(end 398.78 119.38)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 70 100 130 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "f1e3f035-9d9f-58f1-9aeb-8e373db6df50")
+	)
+	(text "INTEGRATION LIMITS"
+		(exclude_from_sim no)
+		(at 224.79 137.16 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "06322a0f-ec30-5080-9115-636a2cd5de66")
+	)
+	(text "OPEN-COLLECTOR RESET / OFF — NO EXTERNAL PULL-UP TO ALWAYS-ON RAIL"
+		(exclude_from_sim no)
+		(at 24.13 25.4 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "52ae4637-25c7-562f-b83d-5c1fe284124b")
+	)
+	(text "POWER ENABLES — DEFAULT OFF ON MCU RESET"
+		(exclude_from_sim no)
+		(at 24.13 137.16 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "6690e660-ded3-53d1-bd07-1ee7ec2220bf")
+	)
+	(text "HIGH input asserts LOW output.\nTarget pull-up / timing is profile-specific."
+		(exclude_from_sim no)
+		(at 157.48 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8125046b-2682-5ae5-b157-386a9bcc6978")
+	)
+	(text "HIGH input asserts LOW output.\nTarget pull-up / timing is profile-specific."
+		(exclude_from_sim no)
+		(at 276.86 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ca3589dd-476f-513f-bd71-199c846efa36")
+	)
+	(text "Reset outputs tolerate target pull-ups without sourcing\nvoltage into an unpowered target. Maximum target sink\ncurrent allocation: 1mA; verify low threshold with exact load.\n\nMODEM_OFF_N connects to FULL_CARD_POWER_OFF# only\nwith a switched target-rail pull-up. Without that pull-up,\nthe module remains off. Do not drive from an always-on rail.\n\nThis circuit does not implement modem power switching,\nPoE, USB forwarding, Ethernet or SIM. See architecture gate."
+		(exclude_from_sim no)
+		(at 228.6 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d90b2e1b-d6ce-50a5-8b0f-081f18026456")
+	)
+	(text "HIGH input asserts LOW output.\nTarget pull-up / timing is profile-specific."
+		(exclude_from_sim no)
+		(at 38.1 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e3bf689e-82d3-581c-82fc-b8b6276a0677")
+	)
+	(text "Connect only to documented 3.3V-compatible enable inputs.\nThe regulators / eFuses are NOT captured in this milestone."
+		(exclude_from_sim no)
+		(at 30.48 215.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e42f273b-48b6-55e7-b403-4c0fcdca76eb")
+	)
+	(junction
+		(at 193.04 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "046fcc4d-a017-5aeb-92ea-b3160c5ceadd")
+	)
+	(junction
+		(at 312.42 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "07873510-b3f7-5b3c-a964-fa7f0d1f6947")
+	)
+	(junction
+		(at 73.66 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0b2703f3-8754-57f2-8901-da871ee15c1f")
+	)
+	(junction
+		(at 88.9 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5e642dce-a9ad-5cbe-9901-2eb0cf9124d7")
+	)
+	(junction
+		(at 86.36 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6c7749d4-5a8e-5097-846e-a2c0d81c4b57")
+	)
+	(junction
+		(at 205.74 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ec55fe7-3a69-54d6-98b5-318b35aa9f80")
+	)
+	(junction
+		(at 88.9 190.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7daaa0b4-964d-573a-a788-34ebedf2c977")
+	)
+	(junction
+		(at 325.12 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dd751741-c59a-5e3c-83f9-eaded93b40d1")
+	)
+	(wire
+		(pts
+			(xy 193.04 88.9) (xy 205.74 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02a90a19-9599-5eef-a217-365144eebc59")
+	)
+	(wire
+		(pts
+			(xy 86.36 71.12) (xy 86.36 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13b28799-922e-508a-9c7d-c0a173ab558b")
+	)
+	(wire
+		(pts
+			(xy 88.9 160.02) (xy 154.94 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d61bf55-a702-511f-91cc-7379bcba1263")
+	)
+	(wire
+		(pts
+			(xy 205.74 60.96) (xy 205.74 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e8047f7-6c02-5d4d-a3b3-96661554cb7d")
+	)
+	(wire
+		(pts
+			(xy 73.66 81.28) (xy 73.66 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f03d7e3-90ec-53a9-8af9-ce8ea04cfe61")
+	)
+	(wire
+		(pts
+			(xy 38.1 53.34) (xy 38.1 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "352e26b4-3d15-5850-b71e-19a16d0d7f48")
+	)
+	(wire
+		(pts
+			(xy 157.48 53.34) (xy 157.48 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b859288-fc73-5b03-859e-31c95cea3d2a")
+	)
+	(wire
+		(pts
+			(xy 88.9 190.5) (xy 88.9 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cdc25f4-dbc0-50d5-bef4-567281c60019")
+	)
+	(wire
+		(pts
+			(xy 35.56 160.02) (xy 88.9 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "441096f6-a870-5abd-8d03-cdb1086406ed")
+	)
+	(wire
+		(pts
+			(xy 73.66 66.04) (xy 73.66 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4de2de76-e754-532b-8324-fef6d2997d47")
+	)
+	(wire
+		(pts
+			(xy 86.36 45.72) (xy 101.6 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4df9b696-fd19-5ac5-ac0a-4d21891c7c61")
+	)
+	(wire
+		(pts
+			(xy 66.04 66.04) (xy 78.74 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ba88fe1-b3fb-559d-b99e-8bea1effb0e8")
+	)
+	(wire
+		(pts
+			(xy 185.42 66.04) (xy 198.12 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63c03089-7a60-527d-96d9-eda187733818")
+	)
+	(wire
+		(pts
+			(xy 38.1 66.04) (xy 60.96 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70be3c9d-aaec-5a16-9c4d-794dfbbe73b2")
+	)
+	(wire
+		(pts
+			(xy 88.9 190.5) (xy 154.94 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "752cc7f7-ae8c-5320-9d2b-4a5fbc5640d2")
+	)
+	(wire
+		(pts
+			(xy 312.42 81.28) (xy 312.42 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80f99dad-35c8-5af9-a8d6-1a32bff9ffd4")
+	)
+	(wire
+		(pts
+			(xy 205.74 45.72) (xy 220.98 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81156632-bdfc-5f2c-9327-dc07c73070e1")
+	)
+	(wire
+		(pts
+			(xy 35.56 190.5) (xy 88.9 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "842b95c2-2af7-5bdf-89f7-8419a2b811c0")
+	)
+	(wire
+		(pts
+			(xy 304.8 66.04) (xy 317.5 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86f5c72b-4fda-5477-aaa9-e8c59da7792b")
+	)
+	(wire
+		(pts
+			(xy 193.04 81.28) (xy 193.04 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89d553e2-a1d3-5ff8-994f-e7b1b3128d2c")
+	)
+	(wire
+		(pts
+			(xy 325.12 45.72) (xy 340.36 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91c6b2c1-dbac-5166-8e44-0dbf7ec9538b")
+	)
+	(wire
+		(pts
+			(xy 325.12 71.12) (xy 325.12 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97755e6a-23ec-58f6-a4ac-5516314fae08")
+	)
+	(wire
+		(pts
+			(xy 157.48 66.04) (xy 180.34 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d175262-7374-5f72-8232-e01b213a22ea")
+	)
+	(wire
+		(pts
+			(xy 312.42 88.9) (xy 325.12 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a23aebd6-9964-50cc-abee-63f902692fb3")
+	)
+	(wire
+		(pts
+			(xy 312.42 66.04) (xy 312.42 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a74f5d04-3302-5f66-a7b5-bfe74033e8da")
+	)
+	(wire
+		(pts
+			(xy 88.9 160.02) (xy 88.9 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae4c0bf4-1d01-51f0-a82e-9d2b17a69f2a")
+	)
+	(wire
+		(pts
+			(xy 325.12 60.96) (xy 325.12 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc6fbc13-dba2-5971-8eb5-2279c456596a")
+	)
+	(wire
+		(pts
+			(xy 88.9 172.72) (xy 88.9 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf3d1c00-f83c-5279-a5be-2b57645785b4")
+	)
+	(wire
+		(pts
+			(xy 88.9 203.2) (xy 88.9 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7c03c27-e687-5b4a-93b7-666b99ef05d5")
+	)
+	(wire
+		(pts
+			(xy 276.86 53.34) (xy 276.86 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbb09791-348e-5971-9e2e-19249efbe794")
+	)
+	(wire
+		(pts
+			(xy 276.86 66.04) (xy 299.72 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce230261-47fa-5d1c-896f-7dd6355b7661")
+	)
+	(wire
+		(pts
+			(xy 205.74 71.12) (xy 205.74 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e60bdc12-f191-5e2e-820b-2b8d14f35d0f")
+	)
+	(wire
+		(pts
+			(xy 73.66 88.9) (xy 86.36 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7b142c7-96cf-591e-816a-a8d368b1c78f")
+	)
+	(wire
+		(pts
+			(xy 193.04 66.04) (xy 193.04 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea41aa55-5b30-5f20-b89d-2a754cbde2ba")
+	)
+	(wire
+		(pts
+			(xy 86.36 60.96) (xy 86.36 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f913afeb-df53-50c8-853f-1f2697965dc0")
+	)
+	(label "MODEM_POWER_EN"
+		(at 154.94 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "182338d8-0f61-5b1c-b1a2-76f20214a880")
+	)
+	(label "ETH_POWER_EN"
+		(at 154.94 190.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "334f1fd6-ef60-5eec-93e3-ebae46c563c7")
+	)
+	(hierarchical_label "MODEM_OFF_ASSERT"
+		(shape input)
+		(at 157.48 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3e78be8b-f160-570b-ab0b-21c8d1cad33d")
+	)
+	(hierarchical_label "ETH_RESET_N"
+		(shape output)
+		(at 340.36 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3f067d4d-357c-5811-af09-13379ea480eb")
+	)
+	(hierarchical_label "ETH_POWER_EN"
+		(shape input)
+		(at 35.56 190.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5bbc5cf7-222b-568a-a9d1-e8310507df51")
+	)
+	(hierarchical_label "MODEM_POWER_EN"
+		(shape input)
+		(at 35.56 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "68da5c91-2fd5-59d6-90a8-cf30366c427d")
+	)
+	(hierarchical_label "MODEM_RESET_ASSERT"
+		(shape input)
+		(at 38.1 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "81a7a34d-e6df-534f-9890-37ba3f2cc2ad")
+	)
+	(hierarchical_label "MODEM_RESET_N"
+		(shape output)
+		(at 101.6 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9971dd9b-fc38-54ea-a60a-5d63f9094a3d")
+	)
+	(hierarchical_label "ETH_RESET_ASSERT"
+		(shape input)
+		(at 276.86 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ce4f12a7-7fe4-5b57-8611-4c91443a918e")
+	)
+	(hierarchical_label "MODEM_OFF_N"
+		(shape output)
+		(at 220.98 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d9741a4a-bea2-544e-aee2-c421930305d1")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 325.12 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0428d26e-fef4-5d11-b35f-1925284478ab")
+		(property "Reference" "#PWR45"
+			(at 328.93 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 326.39 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 325.12 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 325.12 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 325.12 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2450f98d-1cd0-56b5-8f78-ef2a091689c2")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR45")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 73.66 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "07df199b-dae6-51c7-99e9-371dc578ad3f")
+		(property "Reference" "R302"
+			(at 77.47 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100kR"
+			(at 77.47 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 73.66 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 73.66 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 73.66 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 73.66 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 73.66 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14675"
+			(at 73.66 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 73.66 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 73.66 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "75V"
+			(at 73.66 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7cd6f5c1-dd12-57bd-984f-2fb35879a9a8")
+		)
+		(pin "2"
+			(uuid "a8bcee4a-3fd2-5872-94db-fa05e50ec2c4")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R302")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 86.36 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "14b22066-4942-51bb-ada7-35c88ae03838")
+		(property "Reference" "#PWR13"
+			(at 90.17 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 87.63 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "078f3fe8-e426-52f6-84f0-7da24df82a1b")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR13")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBT3904")
+		(at 322.58 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "260e6e78-0365-5b4e-982b-209d9ea5e071")
+		(property "Reference" "Q303"
+			(at 326.39 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT3904,215"
+			(at 326.39 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 322.58 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf"
+			(at 322.58 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 322.58 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MMBT3904,215"
+			(at 322.58 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 322.58 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e3634ff0-a740-5b8c-a6e3-7c696db1c03f")
+		)
+		(pin "2"
+			(uuid "af61c218-4c39-5f14-8899-b49faa47f228")
+		)
+		(pin "3"
+			(uuid "fb6d20b2-95c7-5b35-86c0-d14f2f5cd683")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "Q303")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "Q303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 182.88 66.04 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "31b0b5cd-9981-5dbe-873d-66df88697965")
+		(property "Reference" "R303"
+			(at 179.07 59.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10kR"
+			(at 179.07 62.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 182.88 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 182.88 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 182.88 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0710KL"
+			(at 182.88 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 182.88 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C98220"
+			(at 182.88 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 182.88 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 182.88 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "75V"
+			(at 182.88 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c8661a29-4f80-598f-8b15-6ecbd6919171")
+		)
+		(pin "2"
+			(uuid "f3797299-2c5b-5b48-8af5-aa39f97374a9")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R303")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBT3904")
+		(at 83.82 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4588812f-d397-539f-a3a9-e414a07c361f")
+		(property "Reference" "Q301"
+			(at 87.63 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT3904,215"
+			(at 87.63 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 83.82 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf"
+			(at 83.82 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 83.82 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MMBT3904,215"
+			(at 83.82 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 83.82 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6bc2d88f-5389-5bb9-9785-6c2f95da0d9e")
+		)
+		(pin "2"
+			(uuid "bd09f1d5-4ca4-5ff0-abdf-d55b763ff2f3")
+		)
+		(pin "3"
+			(uuid "9ecc8a84-9d16-5e13-9f1e-ffd72c56f8aa")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "Q301")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "Q301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 193.04 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "464e97a5-5d54-5b8a-a2b0-f5a8f98a19cd")
+		(property "Reference" "R304"
+			(at 196.85 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100kR"
+			(at 196.85 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 193.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 193.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 193.04 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 193.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 193.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14675"
+			(at 193.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 193.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 193.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "75V"
+			(at 193.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eb63e293-1470-59d3-a29f-4c1a6b55532b")
+		)
+		(pin "2"
+			(uuid "f88f35a4-208e-5daa-9e5f-843aa8158f43")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R304")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R304")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 88.9 200.66 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4a718701-eeb3-556b-ac0b-f567be0d8818")
+		(property "Reference" "R308"
+			(at 92.71 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100kR"
+			(at 92.71 200.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 88.9 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 88.9 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 200.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 88.9 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 88.9 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14675"
+			(at 88.9 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 88.9 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 88.9 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "75V"
+			(at 88.9 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "86e0ec82-8aaa-5f93-abe8-fd6f0642be4b")
+		)
+		(pin "2"
+			(uuid "a523783f-52d4-5148-861c-f8aa47398db4")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R308")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R308")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 302.26 66.04 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4ccb05b9-490d-5bfa-9fa7-1c9817433a33")
+		(property "Reference" "R305"
+			(at 298.45 59.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10kR"
+			(at 298.45 62.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 302.26 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 302.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 302.26 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0710KL"
+			(at 302.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 302.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C98220"
+			(at 302.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 302.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 302.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "75V"
+			(at 302.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "15a06518-cbad-5fd8-a273-a3e0a769ca5b")
+		)
+		(pin "2"
+			(uuid "169fceec-0cb3-5d51-941e-f63ac27049a4")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R305")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R305")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 88.9 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "60e0bbbb-8d75-5e72-bb94-8a8145439ee2")
+		(property "Reference" "#PWR60"
+			(at 92.71 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 90.17 181.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 177.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0dc18a25-922e-58e4-86d7-5d5bf002e8f4")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR60")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBT3904")
+		(at 203.2 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9d198787-4788-54ee-8bea-fa375d5cbfe2")
+		(property "Reference" "Q302"
+			(at 207.01 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT3904,215"
+			(at 207.01 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 203.2 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf"
+			(at 203.2 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MMBT3904,215"
+			(at 203.2 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 203.2 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "63013901-672a-5327-846f-f6df54625675")
+		)
+		(pin "2"
+			(uuid "105d6feb-6675-5025-8f10-493645ee847a")
+		)
+		(pin "3"
+			(uuid "74bf29bc-130f-5225-a1fb-c63efbaac932")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "Q302")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "Q302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 63.5 66.04 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ade25baa-ee8a-59ff-b4d8-a21f35e3cc7a")
+		(property "Reference" "R301"
+			(at 59.69 59.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10kR"
+			(at 59.69 62.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 63.5 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 63.5 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0710KL"
+			(at 63.5 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 63.5 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C98220"
+			(at 63.5 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 63.5 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 63.5 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "75V"
+			(at 63.5 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a0557b91-e2e8-5e35-ad5d-63b0fbd333c6")
+		)
+		(pin "2"
+			(uuid "e439434f-6879-57cd-abeb-a5d9f7089a43")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R301")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 312.42 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ae574325-b63a-57a9-bee1-8c4b65904a58")
+		(property "Reference" "R306"
+			(at 316.23 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100kR"
+			(at 316.23 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 312.42 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 312.42 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 312.42 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 312.42 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 312.42 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14675"
+			(at 312.42 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 312.42 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 312.42 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "75V"
+			(at 312.42 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "64decb8c-ddae-5421-8b72-e40cd588fcb1")
+		)
+		(pin "2"
+			(uuid "2eee1911-fc00-5577-ba48-a48d12aeb7bc")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R306")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R306")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 205.74 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "af91b474-556b-58b4-b5ae-fcaf82567403")
+		(property "Reference" "#PWR29"
+			(at 209.55 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 207.01 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 205.74 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 205.74 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fecadce4-609a-5a74-a307-f502f1d18bca")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR29")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 88.9 170.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c0bf5b5c-f00a-5a68-8fe8-07c917118ad0")
+		(property "Reference" "R307"
+			(at 92.71 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100kR"
+			(at 92.71 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 88.9 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 88.9 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 88.9 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 88.9 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14675"
+			(at 88.9 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 88.9 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 88.9 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "75V"
+			(at 88.9 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "78f7a98e-dd97-5391-8e77-f6abea91c83f")
+		)
+		(pin "2"
+			(uuid "ea9bcdde-a158-5043-959a-010bd5757cc5")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R307")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "R307")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 88.9 208.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e7932422-d3ba-5f09-a19d-51f27ced237b")
+		(property "Reference" "#PWR68"
+			(at 92.71 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 90.17 212.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 208.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3f34ccab-e721-5a7a-a8f4-a78c0405914d")
+		)
+		(instances
+			(project "recovery"
+				(path "/37b14702-5d54-5543-b96e-899c36eac351/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR68")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e"
+					(reference "#PWR68")
+					(unit 1)
+				)
+			)
+		)
+	)
 )

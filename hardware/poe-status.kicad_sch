@@ -1,43 +1,1625 @@
-(kicad_sch (version 20250114) (generator eeschema) (uuid "9cf884b7-a2a0-5643-901d-0b251fea518b") (paper "A3") (title_block (title "Isolated PoE allocation — supervisor inputs") (date "2026-10-07")) (lib_symbols (symbol "Appliance:TLP293_GB" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "TLP293_GB" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "TLP293_GB_1_1" (rectangle (start -17.78 7.62) (end 17.78 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "TLP293_GB_1_0" (pin passive line (at -22.86 -0.0 0) (length 5.08) (name "Anode" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -2.54 0) (length 5.08) (name "Cathode" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 22.86 -0.0 180) (length 5.08) (name "Collector" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -2.54 180) (length 5.08) (name "Emitter" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))))(symbol "Device:R_Small_US"
-		(pin_numbers
-			(hide yes)
+(kicad_sch
+	(version 20260830)
+	(generator "eeschema")
+	(generator_version "10.99")
+	(uuid "9cf884b7-a2a0-5643-901d-0b251fea518b")
+	(paper "A3")
+	(title_block
+		(title "Isolated PoE allocation — supervisor inputs")
+		(date "2026-10-07")
+	)
+	(lib_symbols
+		(symbol "Appliance:TLP293_GB"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TLP293_GB"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLP293_GB_1_0"
+				(pin passive line
+					(at -22.86 0 0)
+					(length 5.08)
+					(name "Anode"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -22.86 -2.54 0)
+					(length 5.08)
+					(name "Cathode"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 -2.54 180)
+					(length 5.08)
+					(name "Emitter"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 22.86 0 180)
+					(length 5.08)
+					(name "Collector"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLP293_GB_1_1"
+				(rectangle
+					(start -17.78 7.62)
+					(end 17.78 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
 		)
-		(pin_names
-			(offset 0.254)
-			(hide yes)
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
 		)
+		(symbol "Device:R_Small_US"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0.762 0.508 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_Small_US"
+				(at 0.762 -1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor, small US symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "r resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_Small_US_1_1"
+				(polyline
+					(pts
+						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.016)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.016)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Primary LEDs are driven by TPS2373 open-drain outputs referenced to POE_RTN.\nSecondary outputs: PB10 / PB11 / PB12 (MCU pads 22 / 23 / 24), active low.\nClass 6 grant: TPH_N=0, TPL_N=1, BT_N=0, stable after startup.\nReject all other combinations. Keep MAIN5V, modem and Ethernet power off until grant.\n6.8k limits each LED to <2.3mA at 15V; TPS2373 recommended sink <=3mA.\n12k collector pull-up and 10nF filter. Verify CTR/leakage at -40 to 85C and bias corners.\nAll-high also means unpowered / invalid status. Loss of grant cuts main loads.\nDo not join POE_RTN, POE_VSS or POE_VDD to secondary GND."
+		(exclude_from_sim no)
+		(at 25.4 256.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6f6d44bb-1d4d-5a81-b298-99fecd6b9235")
+	)
+	(wire
+		(pts
+			(xy 167.64 66.04) (xy 157.48 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05733aba-58cb-5ef7-9fbf-af6af4d77fb5")
+	)
+	(wire
+		(pts
+			(xy 353.06 208.28) (xy 353.06 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06265a7d-d15c-5503-b396-5a4651c55d5a")
+	)
+	(wire
+		(pts
+			(xy 284.48 137.16) (xy 284.48 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dec8682-44b1-5670-af47-a12a209ea325")
+	)
+	(wire
+		(pts
+			(xy 83.82 60.96) (xy 83.82 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fbca63e-7e77-5b6b-b2b9-e1a8096100b2")
+	)
+	(wire
+		(pts
+			(xy 213.36 66.04) (xy 223.52 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fd223ed-8fd8-5738-b967-260fe9f6b2b0")
+	)
+	(wire
+		(pts
+			(xy 353.06 66.04) (xy 353.06 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1aa1b32c-c83a-53ea-84c8-11dfcfdee9b5")
+	)
+	(wire
+		(pts
+			(xy 284.48 60.96) (xy 284.48 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "305a122d-d699-571d-b339-d9861c6c110b")
+	)
+	(wire
+		(pts
+			(xy 284.48 132.08) (xy 284.48 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f879ba6-528b-53f7-abf0-288d7cdce5bd")
+	)
+	(wire
+		(pts
+			(xy 83.82 203.2) (xy 83.82 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "466ab7ea-dadf-500e-a270-91336a8fdef4")
+	)
+	(wire
+		(pts
+			(xy 83.82 137.16) (xy 83.82 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4adc4ab2-57fd-50c9-94e6-0e08fe4f8b70")
+	)
+	(wire
+		(pts
+			(xy 167.64 63.5) (xy 157.48 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e72eb2f-4db5-58a8-81d4-5af9c6abda2c")
+	)
+	(wire
+		(pts
+			(xy 213.36 205.74) (xy 223.52 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53604abf-a7fe-54b9-beb7-06721f46a0b3")
+	)
+	(wire
+		(pts
+			(xy 353.06 203.2) (xy 353.06 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56a3c05f-a425-5a79-a4c3-02a0a0c6c532")
+	)
+	(wire
+		(pts
+			(xy 353.06 132.08) (xy 353.06 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62e98336-f9b0-5d12-a30e-e447d6f8ed06")
+	)
+	(wire
+		(pts
+			(xy 213.36 63.5) (xy 223.52 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e404d0b-fa9a-5f2d-8270-102a533c33a7")
+	)
+	(wire
+		(pts
+			(xy 83.82 66.04) (xy 83.82 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f659820-e1f8-53db-8a9e-5060df51e863")
+	)
+	(wire
+		(pts
+			(xy 167.64 208.28) (xy 157.48 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "766dd83d-a7e6-561a-a931-8aaa1a89f9da")
+	)
+	(wire
+		(pts
+			(xy 83.82 208.28) (xy 83.82 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f836c7d-4dc9-52e6-9899-5ae544c30e18")
+	)
+	(wire
+		(pts
+			(xy 167.64 205.74) (xy 157.48 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4af4488-27b6-5bac-9e60-8ce7e0fcd684")
+	)
+	(wire
+		(pts
+			(xy 213.36 137.16) (xy 223.52 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5d1d63b-c02e-5927-941a-1cb15ec85acb")
+	)
+	(wire
+		(pts
+			(xy 213.36 208.28) (xy 223.52 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab19da95-d52f-5f67-8539-8e83dd1a3ced")
+	)
+	(wire
+		(pts
+			(xy 83.82 132.08) (xy 83.82 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc1baf3f-a454-5c6f-9768-de9fd19d13f0")
+	)
+	(wire
+		(pts
+			(xy 167.64 137.16) (xy 157.48 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5064530-3ff9-50df-8fb8-2128a4b68b96")
+	)
+	(wire
+		(pts
+			(xy 284.48 203.2) (xy 284.48 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de5bc408-e1b7-55e4-8317-d07c9d61cb7d")
+	)
+	(wire
+		(pts
+			(xy 284.48 208.28) (xy 284.48 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3cf0fe0-e44d-5e08-ad33-f20c3ff66ee9")
+	)
+	(wire
+		(pts
+			(xy 167.64 134.62) (xy 157.48 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb68314e-cdab-56f1-8baf-4303a36b9803")
+	)
+	(wire
+		(pts
+			(xy 353.06 137.16) (xy 353.06 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f709e9ab-4247-5792-b5f1-10905ae43290")
+	)
+	(wire
+		(pts
+			(xy 353.06 60.96) (xy 353.06 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f959dc1d-c997-5461-92d0-43a5055a6c93")
+	)
+	(wire
+		(pts
+			(xy 213.36 134.62) (xy 223.52 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc2e5b56-f9c6-5ad3-98f1-0a4766e66b8b")
+	)
+	(wire
+		(pts
+			(xy 284.48 66.04) (xy 284.48 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe1148a5-2e01-5d86-8bb2-648b8b601769")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 223.52 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0667094c-db40-5f05-afbb-e797ef792698")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 223.52 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPH_N"
+		(shape passive)
+		(at 353.06 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0cc954ae-951c-5c0c-b70c-5f944e2a9cfb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 353.06 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPH_N"
+		(shape passive)
+		(at 223.52 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "13b983fb-22a6-53ca-9246-2a1fe2a9b704")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 223.52 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 223.52 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2167ecdb-4b4c-5e67-9aed-3005797d5c0b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 223.52 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_BT_N"
+		(shape passive)
+		(at 284.48 218.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "27fc3877-c55d-5c2e-9b11-56e9da95c579")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 284.48 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3"
+		(shape passive)
+		(at 284.48 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2a6bc0df-1973-52c0-bbf8-87604aca2912")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 284.48 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 353.06 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2e5741c3-c7d6-5f69-953d-889f1bb7534a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 353.06 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_VCOUT"
+		(shape passive)
+		(at 83.82 193.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "36c515f1-e175-5453-bd92-16964c62e688")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 353.06 218.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4be09535-a02f-57b9-95a9-6f1008e2c649")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 353.06 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPL_N"
+		(shape passive)
+		(at 353.06 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4c1d78ff-3f00-5f72-91b9-6a3b796bc054")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 353.06 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPL_LED_A"
+		(shape passive)
+		(at 83.82 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "558978df-95b6-5f25-be4b-b564b314df19")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_BT_N"
+		(shape passive)
+		(at 223.52 205.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "60170843-2d7c-5b7b-9db7-fa763e4890ff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 223.52 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPL_LED_A"
+		(shape passive)
+		(at 157.48 134.62 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "63e1db18-5f88-5acf-bb46-bcc184e0410e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 157.48 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPH_N"
+		(shape passive)
+		(at 284.48 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6414232e-7a90-5d5b-9ba9-d2c5cc382155")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 284.48 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPL_N"
+		(shape passive)
+		(at 284.48 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "752474db-da26-5672-a298-33b69aa5a349")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 284.48 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_BT_LED_A"
+		(shape passive)
+		(at 83.82 218.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "84e0e8de-1c87-5857-83da-f85220245f14")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPH_LED_A"
+		(shape passive)
+		(at 157.48 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "87a0738a-e7bb-58b9-b9ac-260902dd9b7f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 157.48 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_VCOUT"
+		(shape passive)
+		(at 83.82 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8ffc0556-5cc1-574c-8dfd-4ba7dded3a96")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 353.06 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a7793215-96e7-5072-8895-986f800a0071")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 353.06 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3"
+		(shape passive)
+		(at 284.48 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ad3a5d3e-2faa-5c2f-bd7d-8308f9d1f384")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 284.48 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPL_N"
+		(shape passive)
+		(at 223.52 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "adb4f4f2-7260-5141-bcf9-ee1a641ce9f5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 223.52 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPH_LED_A"
+		(shape passive)
+		(at 83.82 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b4a333b2-6c8f-53ab-bdc1-00644118e159")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPH"
+		(shape passive)
+		(at 157.48 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dd0d7889-3b07-5967-8381-3532f322fce0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 157.48 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_BT_LED_A"
+		(shape passive)
+		(at 157.48 205.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e84e9b93-ea2f-5e9d-95e4-f5ed35e6b402")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 157.48 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_VCOUT"
+		(shape passive)
+		(at 83.82 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ec3744cf-0948-589b-bc70-ce7123606761")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_TPL"
+		(shape passive)
+		(at 157.48 137.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "edc03157-8e16-52c9-82d6-bd5f2861945a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 157.48 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3"
+		(shape passive)
+		(at 284.48 193.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "efb49a8d-b6c4-5a65-87d5-444726ba01c7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 284.48 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_BT"
+		(shape passive)
+		(at 157.48 208.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f83dc6e1-036b-58d2-b5d4-36af324ec50a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 157.48 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 223.52 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f94e75fc-1b1e-5d1e-90cf-412d86a2748d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 223.52 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POE_BT_N"
+		(shape passive)
+		(at 353.06 193.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fc5e0a75-6091-587a-a2d1-91a51fc79827")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 353.06 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Appliance:TLP293_GB")
+		(at 190.5 63.5 0)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" "R"
-			(at 0.762 0.508 0)
+		(dnp no)
+		(uuid "0c124d21-8dec-5e28-8782-1d8cfeed58a2")
+		(property "Reference" "U1801"
+			(at 190.5 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "R_Small_US"
-			(at 0.762 -1.016 0)
+		(property "Value" "TLP293(GB-TPL,E)"
+			(at 190.5 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
+		(property "Footprint" "Appliance:SOP-4_L4.4-W2.8-P1.27-LS7.0-BR"
+			(at 190.5 63.5 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=14419&prodName=TLP293"
+			(at 190.5 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 190.5 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TLP293(GB-TPL,E)"
+			(at 190.5 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Toshiba"
+			(at 190.5 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C77656"
+			(at 190.5 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "CTR Rank" "GB (100% min at IF=0.5mA, VCE=5V, Ta=25C)"
+			(at 190.5 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Isolation" "3750Vrms component rating; PCB creepage and assembly still require review"
+			(at 190.5 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7b440fc6-943f-43e3-8d77-8fc40a6e6c15")
+		)
+		(pin "2"
+			(uuid "d3fc96a1-80aa-4d35-afff-e7fe7fa25d03")
+		)
+		(pin "3"
+			(uuid "273c57b8-a0d7-4a39-bf6f-b5cb69a45a4a")
+		)
+		(pin "4"
+			(uuid "c58faa0c-861a-4897-8b9e-1bfa605a6f53")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "U1801")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "U1801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 353.06 205.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "48b35021-87ce-55c1-9b27-2794d451872e")
+		(property "Reference" "C1803"
+			(at 361.95 204.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10nF"
+			(at 361.95 207.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 353.06 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45,152 +1627,126 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 353.06 205.74 0)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Description" "Resistor, small US symbol"
-			(at 0 0 0)
+		(property "Description" ""
+			(at 353.06 205.74 0)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "ki_keywords" "r resistor"
-			(at 0 0 0)
+		(property "MPN" "CL10B103KB8NNNC"
+			(at 353.06 205.74 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "ki_fp_filters" "R_*"
-			(at 0 0 0)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 353.06 205.74 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(symbol "R_Small_US_1_1"
-			(polyline
-				(pts
-					(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(pin passive line
-				(at 0 2.54 270)
-				(length 1.016)
-				(name ""
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -2.54 90)
-				(length 1.016)
-				(name ""
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-		)
-		(embedded_fonts no)
-	)(symbol "Device:C_Small"
-		(pin_numbers
+		(property "Voltage Rating" "50V"
+			(at 353.06 205.74 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin_names
-			(offset 0.254)
+		(property "Dielectric" "X7R"
+			(at 353.06 205.74 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
+		(pin "1"
+			(uuid "5b125759-01a7-4113-be58-3544503c87c4")
+		)
+		(pin "2"
+			(uuid "7ff7b4ee-f0ff-469c-828b-070118b21d7f")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "C1803")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "C1803")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 83.82 134.62 0)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" "C"
-			(at 0.254 1.778 0)
+		(dnp no)
+		(uuid "9349cf3e-fcf6-5272-a271-143697b10eb3")
+		(property "Reference" "R1802"
+			(at 92.71 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "C_Small"
-			(at 0.254 -2.032 0)
+		(property "Value" "6.8kR"
+			(at 92.71 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 83.82 134.62 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -198,112 +1754,1267 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 83.82 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 0 -10.16 0)
+		(property "Description" ""
+			(at 83.82 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "ki_keywords" "capacitor cap"
-			(at 0 0 0)
+		(property "MPN" "RC0603FR-076K8L"
+			(at 83.82 134.62 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "ki_fp_filters" "C_*"
-			(at 0 0 0)
+		(property "Manufacturer" "Yageo"
+			(at 83.82 134.62 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(symbol "C_Small_0_1"
-			(polyline
-				(pts
-					(xy -1.524 0.508) (xy 1.524 0.508)
-				)
-				(stroke
-					(width 0.3048)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -1.524 -0.508) (xy 1.524 -0.508)
-				)
-				(stroke
-					(width 0.3048)
-					(type default)
-				)
-				(fill
-					(type none)
+		(property "Tolerance" "1%"
+			(at 83.82 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
-		(symbol "C_Small_1_1"
-			(pin passive line
-				(at 0 2.54 270)
-				(length 2.032)
-				(name ""
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -2.54 90)
-				(length 2.032)
-				(name ""
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+		(property "Power Rating" "0.1W"
+			(at 83.82 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
-		(embedded_fonts no)
-	)) (symbol (lib_id "Appliance:TLP293_GB") (at 190.5 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0c124d21-8dec-5e28-8782-1d8cfeed58a2") (property "Reference" "U1801" (at 190.5 43.18 0) (effects (font (size 1.27 1.27))))(property "Value" "TLP293(GB-TPL,E)" (at 190.5 45.72 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:SOP-4_L4.4-W2.8-P1.27-LS7.0-BR" (at 190.5 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TLP293(GB-TPL,E)" (at 190.5 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Toshiba" (at 190.5 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C77656" (at 190.5 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=14419&prodName=TLP293" (at 190.5 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "CTR Rank" "GB (100% min at IF=0.5mA, VCE=5V, Ta=25C)" (at 190.5 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Isolation" "3750Vrms component rating; PCB creepage and assembly still require review" (at 190.5 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "U1801") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "U1801") (unit 1)))))(wire (pts (xy 167.64 63.5) (xy 157.48 63.5)) (stroke (width 0) (type default)) (uuid "4e72eb2f-4db5-58a8-81d4-5af9c6abda2c"))(global_label "POE_TPH_LED_A" (shape passive) (at 157.48 63.5 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "87a0738a-e7bb-58b9-b9ac-260902dd9b7f"))(wire (pts (xy 167.64 66.04) (xy 157.48 66.04)) (stroke (width 0) (type default)) (uuid "05733aba-58cb-5ef7-9fbf-af6af4d77fb5"))(global_label "POE_TPH" (shape passive) (at 157.48 66.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "dd0d7889-3b07-5967-8381-3532f322fce0"))(wire (pts (xy 213.36 66.04) (xy 223.52 66.04)) (stroke (width 0) (type default)) (uuid "0fd223ed-8fd8-5738-b967-260fe9f6b2b0"))(global_label "GND" (shape passive) (at 223.52 66.04 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0667094c-db40-5f05-afbb-e797ef792698"))(wire (pts (xy 213.36 63.5) (xy 223.52 63.5)) (stroke (width 0) (type default)) (uuid "6e404d0b-fa9a-5f2d-8270-102a533c33a7"))(global_label "POE_TPH_N" (shape passive) (at 223.52 63.5 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "13b983fb-22a6-53ca-9246-2a1fe2a9b704"))(symbol (lib_id "Device:R_Small_US") (at 83.82 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ac70da84-6a96-514e-86a0-723ad7cdfe13") (property "Reference" "R1801" (at 92.71 62.23 0) (effects (font (size 1.27 1.27))))(property "Value" "6.8kR" (at 92.71 64.77 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 83.82 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-076K8L" (at 83.82 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 83.82 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 83.82 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 83.82 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "R1801") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "R1801") (unit 1)))))(wire (pts (xy 83.82 60.96) (xy 83.82 50.8)) (stroke (width 0) (type default)) (uuid "0fbca63e-7e77-5b6b-b2b9-e1a8096100b2"))(global_label "POE_VCOUT" (shape passive) (at 83.82 50.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ec3744cf-0948-589b-bc70-ce7123606761"))(wire (pts (xy 83.82 66.04) (xy 83.82 76.2)) (stroke (width 0) (type default)) (uuid "6f659820-e1f8-53db-8a9e-5060df51e863"))(global_label "POE_TPH_LED_A" (shape passive) (at 83.82 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b4a333b2-6c8f-53ab-bdc1-00644118e159"))(symbol (lib_id "Device:R_Small_US") (at 284.48 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cc91ff26-0781-597a-8e5b-348d4581d009") (property "Reference" "R1811" (at 293.37 62.23 0) (effects (font (size 1.27 1.27))))(property "Value" "12kR" (at 293.37 64.77 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 284.48 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0712KL" (at 284.48 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 284.48 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 284.48 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 284.48 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "R1811") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "R1811") (unit 1)))))(wire (pts (xy 284.48 60.96) (xy 284.48 50.8)) (stroke (width 0) (type default)) (uuid "305a122d-d699-571d-b339-d9861c6c110b"))(global_label "+3V3" (shape passive) (at 284.48 50.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2a6bc0df-1973-52c0-bbf8-87604aca2912"))(wire (pts (xy 284.48 66.04) (xy 284.48 76.2)) (stroke (width 0) (type default)) (uuid "fe1148a5-2e01-5d86-8bb2-648b8b601769"))(global_label "POE_TPH_N" (shape passive) (at 284.48 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6414232e-7a90-5d5b-9ba9-d2c5cc382155"))(symbol (lib_id "Device:C_Small") (at 353.06 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c017fece-5162-5838-92b9-1fb0b091d505") (property "Reference" "C1801" (at 361.95 62.23 0) (effects (font (size 1.27 1.27))))(property "Value" "10nF" (at 361.95 64.77 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 353.06 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B103KB8NNNC" (at 353.06 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 353.06 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 353.06 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X7R" (at 353.06 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "C1801") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "C1801") (unit 1)))))(wire (pts (xy 353.06 60.96) (xy 353.06 50.8)) (stroke (width 0) (type default)) (uuid "f959dc1d-c997-5461-92d0-43a5055a6c93"))(global_label "POE_TPH_N" (shape passive) (at 353.06 50.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0cc954ae-951c-5c0c-b70c-5f944e2a9cfb"))(wire (pts (xy 353.06 66.04) (xy 353.06 76.2)) (stroke (width 0) (type default)) (uuid "1aa1b32c-c83a-53ea-84c8-11dfcfdee9b5"))(global_label "GND" (shape passive) (at 353.06 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a7793215-96e7-5072-8895-986f800a0071"))(symbol (lib_id "Appliance:TLP293_GB") (at 190.5 134.62 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bb4fbf87-dd18-5ec9-8a37-65df2c56934b") (property "Reference" "U1802" (at 190.5 114.3 0) (effects (font (size 1.27 1.27))))(property "Value" "TLP293(GB-TPL,E)" (at 190.5 116.84 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:SOP-4_L4.4-W2.8-P1.27-LS7.0-BR" (at 190.5 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TLP293(GB-TPL,E)" (at 190.5 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Toshiba" (at 190.5 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C77656" (at 190.5 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=14419&prodName=TLP293" (at 190.5 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "CTR Rank" "GB (100% min at IF=0.5mA, VCE=5V, Ta=25C)" (at 190.5 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Isolation" "3750Vrms component rating; PCB creepage and assembly still require review" (at 190.5 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "U1802") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "U1802") (unit 1)))))(wire (pts (xy 167.64 134.62) (xy 157.48 134.62)) (stroke (width 0) (type default)) (uuid "eb68314e-cdab-56f1-8baf-4303a36b9803"))(global_label "POE_TPL_LED_A" (shape passive) (at 157.48 134.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "63e1db18-5f88-5acf-bb46-bcc184e0410e"))(wire (pts (xy 167.64 137.16) (xy 157.48 137.16)) (stroke (width 0) (type default)) (uuid "d5064530-3ff9-50df-8fb8-2128a4b68b96"))(global_label "POE_TPL" (shape passive) (at 157.48 137.16 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "edc03157-8e16-52c9-82d6-bd5f2861945a"))(wire (pts (xy 213.36 137.16) (xy 223.52 137.16)) (stroke (width 0) (type default)) (uuid "a5d1d63b-c02e-5927-941a-1cb15ec85acb"))(global_label "GND" (shape passive) (at 223.52 137.16 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2167ecdb-4b4c-5e67-9aed-3005797d5c0b"))(wire (pts (xy 213.36 134.62) (xy 223.52 134.62)) (stroke (width 0) (type default)) (uuid "fc2e5b56-f9c6-5ad3-98f1-0a4766e66b8b"))(global_label "POE_TPL_N" (shape passive) (at 223.52 134.62 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "adb4f4f2-7260-5141-bcf9-ee1a641ce9f5"))(symbol (lib_id "Device:R_Small_US") (at 83.82 134.62 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9349cf3e-fcf6-5272-a271-143697b10eb3") (property "Reference" "R1802" (at 92.71 133.35 0) (effects (font (size 1.27 1.27))))(property "Value" "6.8kR" (at 92.71 135.89000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 83.82 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-076K8L" (at 83.82 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 83.82 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 83.82 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 83.82 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "R1802") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "R1802") (unit 1)))))(wire (pts (xy 83.82 132.08) (xy 83.82 121.92)) (stroke (width 0) (type default)) (uuid "cc1baf3f-a454-5c6f-9768-de9fd19d13f0"))(global_label "POE_VCOUT" (shape passive) (at 83.82 121.92 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8ffc0556-5cc1-574c-8dfd-4ba7dded3a96"))(wire (pts (xy 83.82 137.16) (xy 83.82 147.32)) (stroke (width 0) (type default)) (uuid "4adc4ab2-57fd-50c9-94e6-0e08fe4f8b70"))(global_label "POE_TPL_LED_A" (shape passive) (at 83.82 147.32 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "558978df-95b6-5f25-be4b-b564b314df19"))(symbol (lib_id "Device:R_Small_US") (at 284.48 134.62 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e6452088-8db6-5484-8277-95a50bfd0dd2") (property "Reference" "R1812" (at 293.37 133.35 0) (effects (font (size 1.27 1.27))))(property "Value" "12kR" (at 293.37 135.89000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 284.48 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0712KL" (at 284.48 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 284.48 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 284.48 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 284.48 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "R1812") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "R1812") (unit 1)))))(wire (pts (xy 284.48 132.08) (xy 284.48 121.92)) (stroke (width 0) (type default)) (uuid "3f879ba6-528b-53f7-abf0-288d7cdce5bd"))(global_label "+3V3" (shape passive) (at 284.48 121.92 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ad3a5d3e-2faa-5c2f-bd7d-8308f9d1f384"))(wire (pts (xy 284.48 137.16) (xy 284.48 147.32)) (stroke (width 0) (type default)) (uuid "0dec8682-44b1-5670-af47-a12a209ea325"))(global_label "POE_TPL_N" (shape passive) (at 284.48 147.32 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "752474db-da26-5672-a298-33b69aa5a349"))(symbol (lib_id "Device:C_Small") (at 353.06 134.62 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "acb74c54-0d21-539d-8eae-73325afc6209") (property "Reference" "C1802" (at 361.95 133.35 0) (effects (font (size 1.27 1.27))))(property "Value" "10nF" (at 361.95 135.89000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 353.06 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B103KB8NNNC" (at 353.06 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 353.06 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 353.06 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X7R" (at 353.06 134.62 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "C1802") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "C1802") (unit 1)))))(wire (pts (xy 353.06 132.08) (xy 353.06 121.92)) (stroke (width 0) (type default)) (uuid "62e98336-f9b0-5d12-a30e-e447d6f8ed06"))(global_label "POE_TPL_N" (shape passive) (at 353.06 121.92 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4c1d78ff-3f00-5f72-91b9-6a3b796bc054"))(wire (pts (xy 353.06 137.16) (xy 353.06 147.32)) (stroke (width 0) (type default)) (uuid "f709e9ab-4247-5792-b5f1-10905ae43290"))(global_label "GND" (shape passive) (at 353.06 147.32 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2e5741c3-c7d6-5f69-953d-889f1bb7534a"))(symbol (lib_id "Appliance:TLP293_GB") (at 190.5 205.74 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b1dc6206-3f39-5876-90c5-96b9c7040139") (property "Reference" "U1803" (at 190.5 185.42000000000002 0) (effects (font (size 1.27 1.27))))(property "Value" "TLP293(GB-TPL,E)" (at 190.5 187.96 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:SOP-4_L4.4-W2.8-P1.27-LS7.0-BR" (at 190.5 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TLP293(GB-TPL,E)" (at 190.5 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Toshiba" (at 190.5 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C77656" (at 190.5 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=14419&prodName=TLP293" (at 190.5 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "CTR Rank" "GB (100% min at IF=0.5mA, VCE=5V, Ta=25C)" (at 190.5 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Isolation" "3750Vrms component rating; PCB creepage and assembly still require review" (at 190.5 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "U1803") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "U1803") (unit 1)))))(wire (pts (xy 167.64 205.74) (xy 157.48 205.74)) (stroke (width 0) (type default)) (uuid "a4af4488-27b6-5bac-9e60-8ce7e0fcd684"))(global_label "POE_BT_LED_A" (shape passive) (at 157.48 205.74 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e84e9b93-ea2f-5e9d-95e4-f5ed35e6b402"))(wire (pts (xy 167.64 208.28) (xy 157.48 208.28)) (stroke (width 0) (type default)) (uuid "766dd83d-a7e6-561a-a931-8aaa1a89f9da"))(global_label "POE_BT" (shape passive) (at 157.48 208.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f83dc6e1-036b-58d2-b5d4-36af324ec50a"))(wire (pts (xy 213.36 208.28) (xy 223.52 208.28)) (stroke (width 0) (type default)) (uuid "ab19da95-d52f-5f67-8539-8e83dd1a3ced"))(global_label "GND" (shape passive) (at 223.52 208.28 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f94e75fc-1b1e-5d1e-90cf-412d86a2748d"))(wire (pts (xy 213.36 205.74) (xy 223.52 205.74)) (stroke (width 0) (type default)) (uuid "53604abf-a7fe-54b9-beb7-06721f46a0b3"))(global_label "POE_BT_N" (shape passive) (at 223.52 205.74 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "60170843-2d7c-5b7b-9db7-fa763e4890ff"))(symbol (lib_id "Device:R_Small_US") (at 83.82 205.74 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b7fe24ba-07a3-5f34-a8d0-92139a4ef413") (property "Reference" "R1803" (at 92.71 204.47 0) (effects (font (size 1.27 1.27))))(property "Value" "6.8kR" (at 92.71 207.01000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 83.82 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-076K8L" (at 83.82 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 83.82 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 83.82 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 83.82 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "R1803") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "R1803") (unit 1)))))(wire (pts (xy 83.82 203.2) (xy 83.82 193.04)) (stroke (width 0) (type default)) (uuid "466ab7ea-dadf-500e-a270-91336a8fdef4"))(global_label "POE_VCOUT" (shape passive) (at 83.82 193.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "36c515f1-e175-5453-bd92-16964c62e688"))(wire (pts (xy 83.82 208.28) (xy 83.82 218.44)) (stroke (width 0) (type default)) (uuid "7f836c7d-4dc9-52e6-9899-5ae544c30e18"))(global_label "POE_BT_LED_A" (shape passive) (at 83.82 218.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "84e0e8de-1c87-5857-83da-f85220245f14"))(symbol (lib_id "Device:R_Small_US") (at 284.48 205.74 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "af95687c-316e-5a4e-acd9-daa33860bc6e") (property "Reference" "R1813" (at 293.37 204.47 0) (effects (font (size 1.27 1.27))))(property "Value" "12kR" (at 293.37 207.01000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 284.48 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0712KL" (at 284.48 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 284.48 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 284.48 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 284.48 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "R1813") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "R1813") (unit 1)))))(wire (pts (xy 284.48 203.2) (xy 284.48 193.04)) (stroke (width 0) (type default)) (uuid "de5bc408-e1b7-55e4-8317-d07c9d61cb7d"))(global_label "+3V3" (shape passive) (at 284.48 193.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "efb49a8d-b6c4-5a65-87d5-444726ba01c7"))(wire (pts (xy 284.48 208.28) (xy 284.48 218.44)) (stroke (width 0) (type default)) (uuid "e3cf0fe0-e44d-5e08-ad33-f20c3ff66ee9"))(global_label "POE_BT_N" (shape passive) (at 284.48 218.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "27fc3877-c55d-5c2e-9b11-56e9da95c579"))(symbol (lib_id "Device:C_Small") (at 353.06 205.74 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "48b35021-87ce-55c1-9b27-2794d451872e") (property "Reference" "C1803" (at 361.95 204.47 0) (effects (font (size 1.27 1.27))))(property "Value" "10nF" (at 361.95 207.01000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 353.06 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B103KB8NNNC" (at 353.06 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 353.06 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 353.06 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X7R" (at 353.06 205.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "poe-status" (path "/9cf884b7-a2a0-5643-901d-0b251fea518b" (reference "C1803") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2" (reference "C1803") (unit 1)))))(wire (pts (xy 353.06 203.2) (xy 353.06 193.04)) (stroke (width 0) (type default)) (uuid "56a3c05f-a425-5a79-a4c3-02a0a0c6c532"))(global_label "POE_BT_N" (shape passive) (at 353.06 193.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fc5e0a75-6091-587a-a2d1-91a51fc79827"))(wire (pts (xy 353.06 208.28) (xy 353.06 218.44)) (stroke (width 0) (type default)) (uuid "06265a7d-d15c-5503-b396-5a4651c55d5a"))(global_label "GND" (shape passive) (at 353.06 218.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4be09535-a02f-57b9-95a9-6f1008e2c649"))(text "Primary LEDs are driven by TPS2373 open-drain outputs referenced to POE_RTN.\nSecondary outputs: PB10 / PB11 / PB12 (MCU pads 22 / 23 / 24), active low.\nClass 6 grant: TPH_N=0, TPL_N=1, BT_N=0, stable after startup.\nReject all other combinations. Keep MAIN5V, modem and Ethernet power off until grant.\n6.8k limits each LED to <2.3mA at 15V; TPS2373 recommended sink <=3mA.\n12k collector pull-up and 10nF filter. Verify CTR/leakage at -40 to 85C and bias corners.\nAll-high also means unpowered / invalid status. Loss of grant cuts main loads.\nDo not join POE_RTN, POE_VSS or POE_VDD to secondary GND." (at 25.4 256.54 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6f6d44bb-1d4d-5a81-b298-99fecd6b9235")))
+		(pin "1"
+			(uuid "f3f1abed-e17a-4969-82af-6ebb02cac5c3")
+		)
+		(pin "2"
+			(uuid "70a02f60-c653-4ba9-b0e4-85b41bfeb8ec")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "R1802")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "R1802")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 83.82 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ac70da84-6a96-514e-86a0-723ad7cdfe13")
+		(property "Reference" "R1801"
+			(at 92.71 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "6.8kR"
+			(at 92.71 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 83.82 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 83.82 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-076K8L"
+			(at 83.82 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 83.82 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 83.82 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 83.82 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b1f90723-b833-4810-aedd-3a1b6bf38891")
+		)
+		(pin "2"
+			(uuid "9daf68c8-af41-48a6-b08f-9172c4b822f6")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "R1801")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "R1801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 353.06 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "acb74c54-0d21-539d-8eae-73325afc6209")
+		(property "Reference" "C1802"
+			(at 361.95 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10nF"
+			(at 361.95 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 353.06 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 353.06 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 353.06 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B103KB8NNNC"
+			(at 353.06 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 353.06 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 353.06 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 353.06 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3857ae68-7ff7-4f9d-87e0-e8c44112cdd0")
+		)
+		(pin "2"
+			(uuid "7cbf8757-2697-4ea6-838d-dd0131246012")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "C1802")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "C1802")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 284.48 205.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "af95687c-316e-5a4e-acd9-daa33860bc6e")
+		(property "Reference" "R1813"
+			(at 293.37 204.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "12kR"
+			(at 293.37 207.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 284.48 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 284.48 205.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 284.48 205.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0712KL"
+			(at 284.48 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 284.48 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 284.48 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 284.48 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "886b4c21-13f7-4210-9a7c-2fc79422d9e9")
+		)
+		(pin "2"
+			(uuid "c9b26954-0212-46aa-a088-73a57b017b99")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "R1813")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "R1813")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Appliance:TLP293_GB")
+		(at 190.5 205.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b1dc6206-3f39-5876-90c5-96b9c7040139")
+		(property "Reference" "U1803"
+			(at 190.5 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP293(GB-TPL,E)"
+			(at 190.5 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Appliance:SOP-4_L4.4-W2.8-P1.27-LS7.0-BR"
+			(at 190.5 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=14419&prodName=TLP293"
+			(at 190.5 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 190.5 205.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TLP293(GB-TPL,E)"
+			(at 190.5 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Toshiba"
+			(at 190.5 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C77656"
+			(at 190.5 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "CTR Rank" "GB (100% min at IF=0.5mA, VCE=5V, Ta=25C)"
+			(at 190.5 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Isolation" "3750Vrms component rating; PCB creepage and assembly still require review"
+			(at 190.5 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "609c2ca6-3272-49e6-9cd2-76e393c20852")
+		)
+		(pin "2"
+			(uuid "34e96d4d-c176-4d99-9c24-c5c297b8c40c")
+		)
+		(pin "3"
+			(uuid "af3ea033-d79b-486f-bbe6-9871b017b597")
+		)
+		(pin "4"
+			(uuid "df05a7b6-b068-49fb-a0ff-e813b6c1fefd")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "U1803")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "U1803")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 83.82 205.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b7fe24ba-07a3-5f34-a8d0-92139a4ef413")
+		(property "Reference" "R1803"
+			(at 92.71 204.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "6.8kR"
+			(at 92.71 207.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 83.82 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 205.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 83.82 205.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-076K8L"
+			(at 83.82 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 83.82 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 83.82 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 83.82 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "acaefc1e-d71c-4323-9487-60c8fe5453bf")
+		)
+		(pin "2"
+			(uuid "2ea80d00-bb26-4464-9429-29ac4ec31940")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "R1803")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "R1803")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Appliance:TLP293_GB")
+		(at 190.5 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bb4fbf87-dd18-5ec9-8a37-65df2c56934b")
+		(property "Reference" "U1802"
+			(at 190.5 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP293(GB-TPL,E)"
+			(at 190.5 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Appliance:SOP-4_L4.4-W2.8-P1.27-LS7.0-BR"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=14419&prodName=TLP293"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 190.5 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TLP293(GB-TPL,E)"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Toshiba"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C77656"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "CTR Rank" "GB (100% min at IF=0.5mA, VCE=5V, Ta=25C)"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Isolation" "3750Vrms component rating; PCB creepage and assembly still require review"
+			(at 190.5 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a4b16008-16a7-4f18-88dc-87851a787f1a")
+		)
+		(pin "2"
+			(uuid "7da10e5f-4c41-4448-b956-585ea4c16d15")
+		)
+		(pin "3"
+			(uuid "8e37bf7e-6889-4d40-a7aa-3f7f054933ea")
+		)
+		(pin "4"
+			(uuid "84dd8144-4d86-4ab0-8d57-bcd7dd104bc3")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "U1802")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "U1802")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 353.06 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c017fece-5162-5838-92b9-1fb0b091d505")
+		(property "Reference" "C1801"
+			(at 361.95 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10nF"
+			(at 361.95 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 353.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 353.06 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 353.06 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B103KB8NNNC"
+			(at 353.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 353.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 353.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 353.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee7b80bc-5331-47b2-b6c3-7a56b0544e8d")
+		)
+		(pin "2"
+			(uuid "0485475f-b722-46cf-8cc2-ec8a0966353d")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "C1801")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "C1801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 284.48 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cc91ff26-0781-597a-8e5b-348d4581d009")
+		(property "Reference" "R1811"
+			(at 293.37 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "12kR"
+			(at 293.37 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 284.48 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 284.48 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 284.48 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0712KL"
+			(at 284.48 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 284.48 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 284.48 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 284.48 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e9bbf0bf-5e92-49fb-99b0-ce31a698f680")
+		)
+		(pin "2"
+			(uuid "e9ca80e0-2dba-4dd1-9773-35db90f60a71")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "R1811")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "R1811")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 284.48 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e6452088-8db6-5484-8277-95a50bfd0dd2")
+		(property "Reference" "R1812"
+			(at 293.37 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "12kR"
+			(at 293.37 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 284.48 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 284.48 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 284.48 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0712KL"
+			(at 284.48 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 284.48 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 284.48 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 284.48 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1a5e0acc-7d06-405f-8af3-c55b45af34a2")
+		)
+		(pin "2"
+			(uuid "7f95b185-767b-4391-97ab-67f8d29a0970")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2"
+					(reference "R1812")
+					(unit 1)
+				)
+			)
+			(project "poe-status"
+				(path "/9cf884b7-a2a0-5643-901d-0b251fea518b"
+					(reference "R1812")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

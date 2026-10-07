@@ -1,42 +1,629 @@
-(kicad_sch (version 20250114) (generator eeschema) (uuid "ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef") (paper "A4") (title_block (title "USB PHY analog filters — engineering capture") (date "2026-10-07")) (lib_symbols (symbol "Device:FerriteBead_Small"
-		(pin_numbers
+(kicad_sch
+	(version 20260830)
+	(generator "eeschema")
+	(generator_version "10.99")
+	(uuid "ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef")
+	(paper "A4")
+	(title_block
+		(title "USB PHY analog filters — engineering capture")
+		(date "2026-10-07")
+	)
+	(lib_symbols
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:FerriteBead_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "FB"
+				(at 1.905 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "FerriteBead_Small"
+				(at 1.905 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Ferrite bead, small symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "L ferrite bead inductor filter"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FerriteBead_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.889) (xy 0 1.2954)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 -0.7874)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "FerriteBead_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "USB ANALOG FILTERS: local pin bypass and processor loads are captured.\n45mOhm maximum DCR differs from 30mOhm reference example.\nRail headroom, thermal limits and bead/capacitor damping remain to verify."
+		(exclude_from_sim no)
+		(at 35.56 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a0498b48-1010-5e3a-9e59-5581e74cb1a2")
+	)
+	(junction
+		(at 101.6 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f4dfd97-3576-5707-8d82-c95a28631f3b")
+	)
+	(junction
+		(at 101.6 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc826a97-0429-57ae-a161-e55b9a0adc16")
+	)
+	(wire
+		(pts
+			(xy 142.24 63.5) (xy 190.5 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "018df0e5-85fb-5fc7-aafd-478bead12596")
+	)
+	(wire
+		(pts
+			(xy 101.6 127) (xy 137.16 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3584c307-d16c-595e-9173-0415247479ae")
+	)
+	(wire
+		(pts
+			(xy 142.24 127) (xy 190.5 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "423c1a44-4392-581c-84ba-56d489a92e73")
+	)
+	(wire
+		(pts
+			(xy 101.6 63.5) (xy 137.16 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60a3ba73-9895-5623-80ab-418ef3b96c2f")
+	)
+	(wire
+		(pts
+			(xy 76.2 127) (xy 101.6 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66bd53d6-052f-51b3-bbd8-34f6c62f7411")
+	)
+	(wire
+		(pts
+			(xy 101.6 149.86) (xy 101.6 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e5dabc5-fa70-5d48-a8e5-0b8b9094ffed")
+	)
+	(wire
+		(pts
+			(xy 101.6 127) (xy 101.6 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f88fd26-b009-56bb-8746-f91a4d253bfd")
+	)
+	(wire
+		(pts
+			(xy 76.2 63.5) (xy 101.6 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6a5544a-d66c-532a-b61e-f6b1e7f074c3")
+	)
+	(wire
+		(pts
+			(xy 101.6 63.5) (xy 101.6 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce580669-3c4d-549c-83bd-6790f64edfd4")
+	)
+	(wire
+		(pts
+			(xy 101.6 86.36) (xy 101.6 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e543fd90-d580-564f-af6e-67e93a80397d")
+	)
+	(global_label "USB_AVDD_0V9"
+		(shape passive)
+		(at 190.5 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2ecdbcd6-cdad-51b5-84d5-fa1fd15a7190")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.5 63.5 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin_names
-			(offset 0)
+	)
+	(global_label "USB_AVDD_1V8"
+		(shape passive)
+		(at 190.5 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
 		)
+		(uuid "7deafe62-3e05-515b-9c9a-fadadf996b42")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.5 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 101.6 157.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c5fdeaa1-7d12-5171-b7c6-53a8143496af")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.6 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 101.6 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "db192c4f-54fa-5820-9c02-7e21da76b33d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.6 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VDDA_0V9"
+		(shape passive)
+		(at 76.2 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f0fa1be2-a81b-5f58-a14f-6103c718c0e6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 76.2 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VCCA_1V8"
+		(shape passive)
+		(at 76.2 127 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fe5c13b1-cf0f-574b-937d-ae17e39be885")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 76.2 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:FerriteBead_Small")
+		(at 139.7 127 90)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" "FB"
-			(at 1.905 1.27 0)
+		(dnp no)
+		(uuid "083fd585-a76f-5f9f-8308-e840f9e65fdb")
+		(property "Reference" "FB802"
+			(at 139.7 118.11 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "FerriteBead_Small"
-			(at 1.905 -1.27 0)
+		(property "Value" "120R @ 100MHz"
+			(at 139.7 120.65 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at -1.778 0 90)
-			(show_name no)
-			(do_not_autoplace no)
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
+			(at 139.7 127 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44,166 +631,148 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 139.7 127 0)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Description" "Ferrite bead, small symbol"
-			(at 0 0 0)
+		(property "Description" ""
+			(at 139.7 127 0)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "ki_keywords" "L ferrite bead inductor filter"
-			(at 0 0 0)
+		(property "MPN" "MPZ1608S121ATAH0"
+			(at 139.7 127 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
-			(at 0 0 0)
+		(property "Manufacturer" "TDK"
+			(at 139.7 127 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(symbol "FerriteBead_Small_0_1"
-			(polyline
-				(pts
-					(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 0.889) (xy 0 1.2954)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0 -1.27) (xy 0 -0.7874)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-		)
-		(symbol "FerriteBead_Small_1_1"
-			(pin passive line
-				(at 0 2.54 270)
-				(length 1.27)
-				(name ""
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -2.54 90)
-				(length 1.27)
-				(name ""
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-		)
-		(embedded_fonts no)
-	)(symbol "Device:C_Small"
-		(pin_numbers
+		(property "LCSC" "C114770"
+			(at 139.7 127 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin_names
-			(offset 0.254)
+		(property "DCR Maximum" "45mOhm"
+			(at 139.7 127 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
+		(property "Current Rating" "2A"
+			(at 139.7 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Draft USB filter; thermal voltage drop and bias impedance pending"
+			(at 139.7 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6835ea5c-444c-5a31-bda7-5495f92da615")
+		)
+		(pin "2"
+			(uuid "08737136-c860-5088-9bc9-28890f137628")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/435cbe0c-b0e5-5b0f-8df1-acadd2eb203f"
+					(reference "FB802")
+					(unit 1)
+				)
+			)
+			(project "phy-power"
+				(path "/ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef"
+					(reference "FB802")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 101.6 83.82 0)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" "C"
-			(at 0.254 1.778 0)
+		(dnp no)
+		(uuid "414a7f54-e177-5122-bee3-af27cf671021")
+		(property "Reference" "C813"
+			(at 114.3 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "C_Small"
-			(at 0.254 -2.032 0)
+		(property "Value" "1uF / 25V"
+			(at 114.3 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 101.6 83.82 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -211,112 +780,369 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 101.6 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 0 -10.16 0)
+		(property "Description" ""
+			(at 101.6 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "ki_keywords" "capacitor cap"
-			(at 0 0 0)
+		(property "MPN" "CL10B105KA8NNNC"
+			(at 101.6 83.82 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "ki_fp_filters" "C_*"
-			(at 0 0 0)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 101.6 83.82 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
-			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(symbol "C_Small_0_1"
-			(polyline
-				(pts
-					(xy -1.524 0.508) (xy 1.524 0.508)
-				)
-				(stroke
-					(width 0.3048)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -1.524 -0.508) (xy 1.524 -0.508)
-				)
-				(stroke
-					(width 0.3048)
-					(type default)
-				)
-				(fill
-					(type none)
+		(property "LCSC" "C29936"
+			(at 101.6 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
-		(symbol "C_Small_1_1"
-			(pin passive line
-				(at 0 2.54 270)
-				(length 2.032)
-				(name ""
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 0 -2.54 90)
-				(length 2.032)
-				(name ""
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+		(property "Qualification" "Source-side bypass per RK3566 guide Figure 2-48"
+			(at 101.6 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
-		(embedded_fonts no)
-	)) (symbol (lib_id "Device:FerriteBead_Small") (at 139.7 63.5 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "50bf814a-a1b8-54dc-86e3-574898a42474") (property "Reference" "FB801" (at 139.7 54.61 90) (effects (font (size 1.27 1.27))))(property "Value" "120R @ 100MHz" (at 139.7 57.15 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 139.7 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MPZ1608S121ATAH0" (at 139.7 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TDK" (at 139.7 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C114770" (at 139.7 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "DCR Maximum" "45mOhm" (at 139.7 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Current Rating" "2A" (at 139.7 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Draft USB filter; thermal voltage drop and bias impedance pending" (at 139.7 63.5 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "af6e4a38-87e1-5b30-804c-98688413ce08"))(pin "2" (uuid "fb75c931-cb02-53d4-8020-c2433a132c59")) (instances (project "phy-power" (path "/ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef" (reference "FB801") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/435cbe0c-b0e5-5b0f-8df1-acadd2eb203f" (reference "FB801") (unit 1))))) (symbol (lib_id "Device:C_Small") (at 101.6 83.82 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "414a7f54-e177-5122-bee3-af27cf671021") (property "Reference" "C813" (at 114.3 82.55 0) (effects (font (size 1.27 1.27))))(property "Value" "1uF / 25V" (at 114.3 85.08999999999999 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 101.6 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B105KA8NNNC" (at 101.6 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 101.6 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C29936" (at 101.6 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Source-side bypass per RK3566 guide Figure 2-48" (at 101.6 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "f39a0d91-134c-5740-8fa0-591fad5ddcc1"))(pin "2" (uuid "1bdfcfce-3f32-5696-985d-c19966928aa1")) (instances (project "phy-power" (path "/ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef" (reference "C813") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/435cbe0c-b0e5-5b0f-8df1-acadd2eb203f" (reference "C813") (unit 1))))) (wire (pts (xy 76.2 63.5) (xy 101.6 63.5)) (stroke (width 0) (type default)) (uuid "a6a5544a-d66c-532a-b61e-f6b1e7f074c3")) (wire (pts (xy 101.6 63.5) (xy 137.16 63.5)) (stroke (width 0) (type default)) (uuid "60a3ba73-9895-5623-80ab-418ef3b96c2f")) (global_label "VDDA_0V9" (shape passive) (at 76.2 63.5 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f0fa1be2-a81b-5f58-a14f-6103c718c0e6")) (wire (pts (xy 101.6 63.5) (xy 101.6 81.28)) (stroke (width 0) (type default)) (uuid "ce580669-3c4d-549c-83bd-6790f64edfd4")) (junction (at 101.6 63.5) (diameter 0) (color 0 0 0 0) (uuid "7f4dfd97-3576-5707-8d82-c95a28631f3b")) (wire (pts (xy 142.24 63.5) (xy 190.5 63.5)) (stroke (width 0) (type default)) (uuid "018df0e5-85fb-5fc7-aafd-478bead12596")) (global_label "USB_AVDD_0V9" (shape passive) (at 190.5 63.5 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2ecdbcd6-cdad-51b5-84d5-fa1fd15a7190")) (wire (pts (xy 101.6 86.36) (xy 101.6 93.98)) (stroke (width 0) (type default)) (uuid "e543fd90-d580-564f-af6e-67e93a80397d")) (global_label "GND" (shape passive) (at 101.6 93.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "db192c4f-54fa-5820-9c02-7e21da76b33d")) (symbol (lib_id "Device:FerriteBead_Small") (at 139.7 127 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "083fd585-a76f-5f9f-8308-e840f9e65fdb") (property "Reference" "FB802" (at 139.7 118.11 90) (effects (font (size 1.27 1.27))))(property "Value" "120R @ 100MHz" (at 139.7 120.65 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 139.7 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MPZ1608S121ATAH0" (at 139.7 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TDK" (at 139.7 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C114770" (at 139.7 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "DCR Maximum" "45mOhm" (at 139.7 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Current Rating" "2A" (at 139.7 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Draft USB filter; thermal voltage drop and bias impedance pending" (at 139.7 127 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "6835ea5c-444c-5a31-bda7-5495f92da615"))(pin "2" (uuid "08737136-c860-5088-9bc9-28890f137628")) (instances (project "phy-power" (path "/ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef" (reference "FB802") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/435cbe0c-b0e5-5b0f-8df1-acadd2eb203f" (reference "FB802") (unit 1))))) (symbol (lib_id "Device:C_Small") (at 101.6 147.32 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5ecc412d-1eb5-5863-be9e-19a26bfff619") (property "Reference" "C814" (at 114.3 146.04999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "1uF / 25V" (at 114.3 148.59 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 101.6 147.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B105KA8NNNC" (at 101.6 147.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 101.6 147.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C29936" (at 101.6 147.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Source-side bypass per RK3566 guide Figure 2-48" (at 101.6 147.32 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "e825cd2b-d711-5de8-8fbc-40d075712704"))(pin "2" (uuid "e87af5e6-8bd9-5c88-8387-e7a873d1b7d4")) (instances (project "phy-power" (path "/ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef" (reference "C814") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/435cbe0c-b0e5-5b0f-8df1-acadd2eb203f" (reference "C814") (unit 1))))) (wire (pts (xy 76.2 127) (xy 101.6 127)) (stroke (width 0) (type default)) (uuid "66bd53d6-052f-51b3-bbd8-34f6c62f7411")) (wire (pts (xy 101.6 127) (xy 137.16 127)) (stroke (width 0) (type default)) (uuid "3584c307-d16c-595e-9173-0415247479ae")) (global_label "VCCA_1V8" (shape passive) (at 76.2 127 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fe5c13b1-cf0f-574b-937d-ae17e39be885")) (wire (pts (xy 101.6 127) (xy 101.6 144.78)) (stroke (width 0) (type default)) (uuid "7f88fd26-b009-56bb-8746-f91a4d253bfd")) (junction (at 101.6 127) (diameter 0) (color 0 0 0 0) (uuid "dc826a97-0429-57ae-a161-e55b9a0adc16")) (wire (pts (xy 142.24 127) (xy 190.5 127)) (stroke (width 0) (type default)) (uuid "423c1a44-4392-581c-84ba-56d489a92e73")) (global_label "USB_AVDD_1V8" (shape passive) (at 190.5 127 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7deafe62-3e05-515b-9c9a-fadadf996b42")) (wire (pts (xy 101.6 149.86) (xy 101.6 157.48)) (stroke (width 0) (type default)) (uuid "6e5dabc5-fa70-5d48-a8e5-0b8b9094ffed")) (global_label "GND" (shape passive) (at 101.6 157.48 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c5fdeaa1-7d12-5171-b7c6-53a8143496af")) (text "USB ANALOG FILTERS: local pin bypass and processor loads are captured.\n45mOhm maximum DCR differs from 30mOhm reference example.\nRail headroom, thermal limits and bead/capacitor damping remain to verify." (at 35.56 25.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a0498b48-1010-5e3a-9e59-5581e74cb1a2")) (sheet_instances (path "/" (page "1"))))
+		(pin "1"
+			(uuid "f39a0d91-134c-5740-8fa0-591fad5ddcc1")
+		)
+		(pin "2"
+			(uuid "1bdfcfce-3f32-5696-985d-c19966928aa1")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/435cbe0c-b0e5-5b0f-8df1-acadd2eb203f"
+					(reference "C813")
+					(unit 1)
+				)
+			)
+			(project "phy-power"
+				(path "/ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef"
+					(reference "C813")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:FerriteBead_Small")
+		(at 139.7 63.5 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "50bf814a-a1b8-54dc-86e3-574898a42474")
+		(property "Reference" "FB801"
+			(at 139.7 54.61 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "120R @ 100MHz"
+			(at 139.7 57.15 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
+			(at 139.7 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MPZ1608S121ATAH0"
+			(at 139.7 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TDK"
+			(at 139.7 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C114770"
+			(at 139.7 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DCR Maximum" "45mOhm"
+			(at 139.7 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Current Rating" "2A"
+			(at 139.7 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Draft USB filter; thermal voltage drop and bias impedance pending"
+			(at 139.7 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "af6e4a38-87e1-5b30-804c-98688413ce08")
+		)
+		(pin "2"
+			(uuid "fb75c931-cb02-53d4-8020-c2433a132c59")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/435cbe0c-b0e5-5b0f-8df1-acadd2eb203f"
+					(reference "FB801")
+					(unit 1)
+				)
+			)
+			(project "phy-power"
+				(path "/ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef"
+					(reference "FB801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 101.6 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5ecc412d-1eb5-5863-be9e-19a26bfff619")
+		(property "Reference" "C814"
+			(at 114.3 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF / 25V"
+			(at 114.3 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 101.6 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B105KA8NNNC"
+			(at 101.6 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 101.6 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C29936"
+			(at 101.6 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Qualification" "Source-side bypass per RK3566 guide Figure 2-48"
+			(at 101.6 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e825cd2b-d711-5de8-8fbc-40d075712704")
+		)
+		(pin "2"
+			(uuid "e87af5e6-8bd9-5c88-8387-e7a873d1b7d4")
+		)
+		(instances
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/435cbe0c-b0e5-5b0f-8df1-acadd2eb203f"
+					(reference "C814")
+					(unit 1)
+				)
+			)
+			(project "phy-power"
+				(path "/ca155a7e-d9ea-59e1-bc36-3f46f6f2a8ef"
+					(reference "C814")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
