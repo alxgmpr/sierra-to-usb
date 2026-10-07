@@ -1,0 +1,309 @@
+(kicad_sch (version 20250114) (generator eeschema) (uuid "9090cb9f-4bdb-58b6-b041-623a4daac7fa") (paper "A2") (title_block (title "PCIe and powered-off-safe Ethernet interfaces") (date "2026-10-07")) (lib_symbols (symbol "Device:C_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.254 1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 0.254 -2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "capacitor cap"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.524 0.508) (xy 1.524 0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.524 -0.508) (xy 1.524 -0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Appliance:SN74LVC1G07_DCK" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "SN74LVC1G07_DCK" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "SN74LVC1G07_DCK_1_1" (rectangle (start -17.78 7.62) (end 17.78 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "SN74LVC1G07_DCK_1_0" (pin input line (at -22.86 -0.0 0) (length 5.08) (name "A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin no_connect line (at -22.86 -2.54 0) (length 5.08) (name "N.C" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 22.86 -0.0 180) (length 5.08) (name "Y" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 12.7 270) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 -12.7 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))))(symbol "Device:R_Small_US"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 0.762 0.508 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_Small_US"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "r resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_Small_US_1_1"
+			(polyline
+				(pts
+					(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 2.54 270)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Appliance:TMUXHS4212_RKS" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "TMUXHS4212_RKS" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "TMUXHS4212_RKS_1_1" (rectangle (start -17.78 12.7) (end 17.78 -12.7) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "TMUXHS4212_RKS_1_0" (pin passive line (at -22.86 5.08 0) (length 5.08) (name "A0p" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 2.54 0) (length 5.08) (name "A0n" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -0.0 0) (length 5.08) (name "OEn" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -2.54 0) (length 5.08) (name "SEL" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -5.08 0) (length 5.08) (name "A1p" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -7.62 0) (length 5.08) (name "A1n" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 7.62 180) (length 5.08) (name "B0P" (effects (font (size 1.27 1.27)))) (number "19" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 5.08 180) (length 5.08) (name "B0N" (effects (font (size 1.27 1.27)))) (number "18" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 2.54 180) (length 5.08) (name "B1P" (effects (font (size 1.27 1.27)))) (number "17" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -0.0 180) (length 5.08) (name "B1N" (effects (font (size 1.27 1.27)))) (number "16" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -2.54 180) (length 5.08) (name "C0P" (effects (font (size 1.27 1.27)))) (number "15" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -5.08 180) (length 5.08) (name "C0N" (effects (font (size 1.27 1.27)))) (number "14" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -7.62 180) (length 5.08) (name "C1P" (effects (font (size 1.27 1.27)))) (number "13" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -10.16 180) (length 5.08) (name "C1N" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))(pin power_in line (at -2.54 17.78 270) (length 5.08) (name "RSVD1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 17.78 270) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin power_in line (at 2.54 17.78 270) (length 5.08) (name "RSVD2" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))(pin power_in line (at -2.54 -17.78 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 -17.78 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))(pin power_in line (at 2.54 -17.78 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "20" (effects (font (size 1.27 1.27)))))(pin power_in line (at 5.08 -17.78 90) (length 5.08) (name "EP" (effects (font (size 1.27 1.27)))) (number "21" (effects (font (size 1.27 1.27)))))))(symbol "Transistor_BJT:MMBT3904" (property "Reference" "Q" (at 5.08 1.905 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "MMBT3904" (at 5.08 0 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 5.08 -1.905 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27) (italic yes)) (justify left))) (property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "NPN Transistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_fp_filters" "SOT?23*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (embedded_fonts no) (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Sim.Device" "NPN" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Sim.Pins" "1=B 2=E 3=C" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "MMBT3904_0_1" (polyline (pts (xy -2.54 0) (xy 0.635 0)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0.635 1.905) (xy 0.635 -1.905)) (stroke (width 0.508) (type default)) (fill (type none))) (circle (center 1.27 0) (radius 2.8194) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "MMBT3904_1_1" (polyline (pts (xy 0.635 0.635) (xy 2.54 2.54)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 0.635 -0.635) (xy 2.54 -2.54)) (stroke (width 0) (type default)) (fill (type none))) (polyline (pts (xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)) (stroke (width 0) (type default)) (fill (type outline))) (pin input line (at -5.08 0 0) (length 2.54) (name "B" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 -5.08 90) (length 2.54) (name "E" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 5.08 270) (length 2.54) (name "C" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))) (embedded_fonts no))) (symbol (lib_id "Device:C_Small") (at 78.74 66.04 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f4bdfd66-c569-5cc0-8615-75543bcb0772") (property "Reference" "C1601" (at 78.74 58.42000000000001 90) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 78.74 60.96000000000001 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 78.74 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "GRM033R60J104KE19D" (at 78.74 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Murata" (at 78.74 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "6.3V" (at 78.74 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "10%" (at 78.74 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X5R" (at 78.74 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement Intent" "at transmitter; Realtek small-package PCIe recommendation" (at 78.74 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "C1601") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "C1601") (unit 1)))))(wire (pts (xy 76.2 66.04) (xy 66.04 66.04)) (stroke (width 0) (type default)) (uuid "ea052be4-6679-54fc-9b8d-b3d2bd13c729"))(global_label "PCIE_TXP_SOC" (shape passive) (at 66.04 66.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0e436546-c647-59cd-9d7b-f4f3e803f441"))(wire (pts (xy 81.28 66.04) (xy 91.44 66.04)) (stroke (width 0) (type default)) (uuid "69c66cc4-1eb2-5cc5-9fa6-9acf942396f5"))(global_label "ETH_PCIE_RXP" (shape passive) (at 91.44 66.04 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c8e077fd-242e-5607-9cb8-247191b248da"))(symbol (lib_id "Device:C_Small") (at 78.74 109.22 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "89df07d4-e0ba-597d-8c83-76d4ca1550a8") (property "Reference" "C1602" (at 78.74 101.6 90) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 78.74 104.14 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 78.74 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "GRM033R60J104KE19D" (at 78.74 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Murata" (at 78.74 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "6.3V" (at 78.74 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "10%" (at 78.74 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X5R" (at 78.74 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement Intent" "at transmitter; Realtek small-package PCIe recommendation" (at 78.74 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "C1602") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "C1602") (unit 1)))))(wire (pts (xy 76.2 109.22) (xy 66.04 109.22)) (stroke (width 0) (type default)) (uuid "1c6a3dcd-db65-5974-a48a-be3b50b765af"))(global_label "PCIE_TXN_SOC" (shape passive) (at 66.04 109.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "95828606-0cf3-5c22-b86f-590f3275163a"))(wire (pts (xy 81.28 109.22) (xy 91.44 109.22)) (stroke (width 0) (type default)) (uuid "2f5fe83a-79a6-5659-a8f9-921f0de002e1"))(global_label "ETH_PCIE_RXN" (shape passive) (at 91.44 109.22 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fa17445f-72e5-540c-88a1-8c818d2ce41a"))(symbol (lib_id "Device:C_Small") (at 78.74 152.4 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7c794ab6-0dc4-585c-a4fa-291ab765f4dd") (property "Reference" "C1603" (at 78.74 144.78 90) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 78.74 147.32 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 78.74 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "GRM033R60J104KE19D" (at 78.74 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Murata" (at 78.74 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "6.3V" (at 78.74 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "10%" (at 78.74 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X5R" (at 78.74 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement Intent" "at transmitter; Realtek small-package PCIe recommendation" (at 78.74 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "C1603") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "C1603") (unit 1)))))(wire (pts (xy 76.2 152.4) (xy 66.04 152.4)) (stroke (width 0) (type default)) (uuid "35d345d7-80c6-5c30-9c6d-eff7b64b4649"))(global_label "ETH_PCIE_TXP" (shape passive) (at 66.04 152.4 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5454399f-628d-5776-a446-de07ae9d6b76"))(wire (pts (xy 81.28 152.4) (xy 91.44 152.4)) (stroke (width 0) (type default)) (uuid "66f5b675-3a71-5c2c-b6a9-882a315acc48"))(global_label "PCIE_RXP_SOC" (shape passive) (at 91.44 152.4 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b67d1490-0158-54f5-9813-37780747f325"))(symbol (lib_id "Device:C_Small") (at 78.74 195.57999999999998 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3a6a5787-9400-580d-9888-a4ca9a481a24") (property "Reference" "C1604" (at 78.74 187.95999999999998 90) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 78.74 190.49999999999997 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 78.74 195.57999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "GRM033R60J104KE19D" (at 78.74 195.57999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Murata" (at 78.74 195.57999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "6.3V" (at 78.74 195.57999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "10%" (at 78.74 195.57999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X5R" (at 78.74 195.57999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement Intent" "at transmitter; Realtek small-package PCIe recommendation" (at 78.74 195.57999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "C1604") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "C1604") (unit 1)))))(wire (pts (xy 76.2 195.58) (xy 66.04 195.58)) (stroke (width 0) (type default)) (uuid "8743d272-5f5d-596a-b44a-6dd3dae3d34d"))(global_label "ETH_PCIE_TXN" (shape passive) (at 66.04 195.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4174f641-74ed-54e0-bf83-fdc34f37f9b4"))(wire (pts (xy 81.28 195.58) (xy 91.44 195.58)) (stroke (width 0) (type default)) (uuid "8cf5d357-2930-501b-abb6-b68a378aa0d7"))(global_label "PCIE_RXN_SOC" (shape passive) (at 91.44 195.58 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "eb812acc-db1e-5832-a089-b4880e9da379"))(text "100-ohm differential pairs; one AC-coupling capacitor per conductor at transmitter.\nSoC TX reaches NIC HSIP/HSIN; NIC HSOP/HSON reaches SoC RX.\nKeep PCIe controller quiescent before Ethernet power removal." (at 25.4 233.68 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "959fb9c6-f8d5-5647-afe2-26f65bb97baf"))(symbol (lib_id "Appliance:SN74LVC1G07_DCK") (at 289.56 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f5420ecb-b1a9-5828-bd51-d3e30829bbc2") (property "Reference" "U1601" (at 289.56 33.02 0) (effects (font (size 1.27 1.27))))(property "Value" "SN74LVC1G07DCKR" (at 289.56 35.56 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 289.56 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SN74LVC1G07DCKR" (at 289.56 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 289.56 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C7830" (at 289.56 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g07.pdf" (at 289.56 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "U1601") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "U1601") (unit 1)))))(no_connect (at 266.7 68.58) (uuid "90e0b368-924f-5fe0-a53f-34e6f62ee7a8"))(wire (pts (xy 266.7 66.04) (xy 256.54 66.04)) (stroke (width 0) (type default)) (uuid "b611cdf3-b9d7-5134-bdc3-ea4c22d9bb61"))(global_label "PCIE_PERST_SOC_N" (shape passive) (at 256.54 66.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a1215cf2-78b3-5dd9-b15a-1ec5aed44808"))(wire (pts (xy 289.56 78.74) (xy 289.56 88.9)) (stroke (width 0) (type default)) (uuid "d1c3b0f1-a655-533c-a94f-7df80ab4bbb0"))(global_label "GND" (shape passive) (at 289.56 88.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8d4ce76f-f34b-5987-abc2-da1136f3e584"))(wire (pts (xy 312.42 66.04) (xy 322.58 66.04)) (stroke (width 0) (type default)) (uuid "d9cc7012-3504-5aa7-94d4-aefbbdd20257"))(global_label "ETH_PERST_N" (shape passive) (at 322.58 66.04 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e20e054b-0696-5d10-9a46-a377dcb78f22"))(wire (pts (xy 289.56 53.34) (xy 289.56 43.18)) (stroke (width 0) (type default)) (uuid "b89fbb6a-394d-540f-82bf-a6342668b455"))(global_label "ETH_3V3" (shape passive) (at 289.56 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ff1e33b2-057f-583f-85ad-9086e4bd16e3"))(symbol (lib_id "Device:C_Small") (at 370.84 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1c02af03-696a-543c-9d66-890c097a086b") (property "Reference" "C1605" (at 379.72999999999996 64.77000000000001 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 379.72999999999996 67.31 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 370.84 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 370.84 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 370.84 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 370.84 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "C1605") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "C1605") (unit 1)))))(wire (pts (xy 370.84 63.5) (xy 370.84 53.34)) (stroke (width 0) (type default)) (uuid "7bb78f6e-2cbf-517a-82d8-5a1c825f17fb"))(global_label "ETH_3V3" (shape passive) (at 370.84 53.34 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a4300a2d-5262-5af4-8de0-15b0b304e80e"))(wire (pts (xy 370.84 68.58) (xy 370.84 78.74)) (stroke (width 0) (type default)) (uuid "df1c18e2-a073-5185-8c9b-13043d8f4dc6"))(global_label "GND" (shape passive) (at 370.84 78.74 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "68e4cc62-0dc7-5979-b6b9-b13857828777"))(symbol (lib_id "Appliance:SN74LVC1G07_DCK") (at 289.56 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "47a75c64-6390-5a89-b7a4-35731508d803") (property "Reference" "U1602" (at 289.56 116.83999999999999 0) (effects (font (size 1.27 1.27))))(property "Value" "SN74LVC1G07DCKR" (at 289.56 119.38 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 289.56 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SN74LVC1G07DCKR" (at 289.56 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 289.56 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C7830" (at 289.56 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g07.pdf" (at 289.56 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "U1602") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "U1602") (unit 1)))))(no_connect (at 266.7 152.4) (uuid "fa0fb13f-b9e7-5049-bd96-d8fb5fb25575"))(wire (pts (xy 266.7 149.86) (xy 256.54 149.86)) (stroke (width 0) (type default)) (uuid "6e7b9d3d-48d3-5d30-8dee-e4a1e7ec5b6f"))(global_label "ETH_CLKREQ_N" (shape passive) (at 256.54 149.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "04244c42-9a11-5f9c-be19-7170e1a826b5"))(wire (pts (xy 289.56 162.56) (xy 289.56 172.72)) (stroke (width 0) (type default)) (uuid "a163a10b-2f6a-5406-88eb-f8088b07c1ae"))(global_label "GND" (shape passive) (at 289.56 172.72 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0bacbd59-a3e1-5a91-aaa8-7b7303a03cb3"))(wire (pts (xy 312.42 149.86) (xy 322.58 149.86)) (stroke (width 0) (type default)) (uuid "eeff9c74-1c47-5285-9239-355ba149fcdc"))(global_label "PCIE_CLKREQ_N" (shape passive) (at 322.58 149.86 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "492f9e7a-a443-5651-9ab6-7e0f5ffe1afd"))(wire (pts (xy 289.56 137.16) (xy 289.56 127.0)) (stroke (width 0) (type default)) (uuid "ec4b9bc4-f415-5479-9239-bd88182c5ff9"))(global_label "VCC3V3_PMU" (shape passive) (at 289.56 127.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2ae5efe0-c308-555b-bb30-bb99047bf135"))(symbol (lib_id "Device:C_Small") (at 370.84 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e30ee93f-3ae2-544e-9def-13daf17ebf32") (property "Reference" "C1606" (at 379.72999999999996 148.59 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 379.72999999999996 151.13000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 370.84 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 370.84 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 370.84 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 370.84 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "C1606") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "C1606") (unit 1)))))(wire (pts (xy 370.84 147.32) (xy 370.84 137.16)) (stroke (width 0) (type default)) (uuid "5991f9df-a5ed-5e17-a911-8427ecdfa5f0"))(global_label "VCC3V3_PMU" (shape passive) (at 370.84 137.16 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9be43a72-6f2c-5e0f-9120-0f35b7f63275"))(wire (pts (xy 370.84 152.4) (xy 370.84 162.56)) (stroke (width 0) (type default)) (uuid "ec7d3f19-75e9-5e8b-ae0c-5ca60f6143ef"))(global_label "GND" (shape passive) (at 370.84 162.56 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7f9be015-7465-588b-a91b-7c5dd7d8fd41"))(symbol (lib_id "Device:R_Small_US") (at 411.48 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "aeb90f91-4ca4-5c9f-ac5a-cea151157082") (property "Reference" "R1602" (at 420.37 148.59 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7kR" (at 420.37 151.13000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 411.48 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-074K7L" (at 411.48 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 411.48 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 411.48 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 411.48 149.86 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "R1602") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "R1602") (unit 1)))))(wire (pts (xy 411.48 147.32) (xy 411.48 137.16)) (stroke (width 0) (type default)) (uuid "039e23c7-05fb-5049-84dc-51366d396af0"))(global_label "VCC3V3_PMU" (shape passive) (at 411.48 137.16 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "79d303ef-5f73-5e90-b1d9-9b654f3860c9"))(wire (pts (xy 411.48 152.4) (xy 411.48 162.56)) (stroke (width 0) (type default)) (uuid "2368312c-4d8c-5aea-9666-5233ff5fcbb1"))(global_label "PCIE_CLKREQ_N" (shape passive) (at 411.48 162.56 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e28ee13d-197e-5b67-8d37-768693b7e279"))(symbol (lib_id "Appliance:SN74LVC1G07_DCK") (at 289.56 233.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a4b06510-a2f2-5ec5-8103-73cf8239444f") (property "Reference" "U1603" (at 289.56 200.66 0) (effects (font (size 1.27 1.27))))(property "Value" "SN74LVC1G07DCKR" (at 289.56 203.2 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 289.56 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SN74LVC1G07DCKR" (at 289.56 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 289.56 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C7830" (at 289.56 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g07.pdf" (at 289.56 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "U1603") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "U1603") (unit 1)))))(no_connect (at 266.7 236.22) (uuid "ac22796b-d293-5f1b-94a6-2ab3f2684e54"))(wire (pts (xy 266.7 233.68) (xy 256.54 233.68)) (stroke (width 0) (type default)) (uuid "38fe1536-afcb-502e-999e-601f540ace74"))(global_label "ETH_WAKE_N" (shape passive) (at 256.54 233.68 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4a8a8d6c-6c6e-5e7d-a3a9-e8da09faa3b2"))(wire (pts (xy 289.56 246.38) (xy 289.56 256.54)) (stroke (width 0) (type default)) (uuid "4a33cba3-a7f3-5b5c-9802-3d8197ef54b5"))(global_label "GND" (shape passive) (at 289.56 256.54 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "918490c0-5cfb-5874-a9be-3b1e3e262ec5"))(wire (pts (xy 312.42 233.68) (xy 322.58 233.68)) (stroke (width 0) (type default)) (uuid "15e86e3a-671a-5c89-95d5-7ba325bb50d4"))(global_label "PCIE_WAKE_N" (shape passive) (at 322.58 233.68 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8d678d96-e552-569a-8d53-27cf49a7cd7a"))(wire (pts (xy 289.56 220.98) (xy 289.56 210.82)) (stroke (width 0) (type default)) (uuid "9e3bf907-f102-5d99-be21-d6faf3f9edcd"))(global_label "VCC3V3_PMU" (shape passive) (at 289.56 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "54a5fcc2-d368-56fd-9c72-e796317eacda"))(symbol (lib_id "Device:C_Small") (at 370.84 233.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bbfc4235-7035-5ba0-ae21-d9ba9062d9f9") (property "Reference" "C1607" (at 379.72999999999996 232.41 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 379.72999999999996 234.95000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 370.84 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 370.84 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 370.84 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 370.84 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "C1607") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "C1607") (unit 1)))))(wire (pts (xy 370.84 231.14) (xy 370.84 220.98)) (stroke (width 0) (type default)) (uuid "79a477c1-5089-5a99-9c3e-975260914693"))(global_label "VCC3V3_PMU" (shape passive) (at 370.84 220.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8b3a1f3d-9ca4-52de-adf0-93215a3ee4e8"))(wire (pts (xy 370.84 236.22) (xy 370.84 246.38)) (stroke (width 0) (type default)) (uuid "f4f3887b-8a52-5bbe-8429-c350d2a5d508"))(global_label "GND" (shape passive) (at 370.84 246.38 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f1ec0393-e0ce-5da3-82d9-d8f654a9731e"))(symbol (lib_id "Device:R_Small_US") (at 411.48 233.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a9291081-edb1-53a0-bac0-16a36c39f489") (property "Reference" "R1603" (at 420.37 232.41 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7kR" (at 420.37 234.95000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 411.48 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-074K7L" (at 411.48 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 411.48 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 411.48 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 411.48 233.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "R1603") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "R1603") (unit 1)))))(wire (pts (xy 411.48 231.14) (xy 411.48 220.98)) (stroke (width 0) (type default)) (uuid "6c67717c-7c68-5c10-8776-95475f7fbcba"))(global_label "VCC3V3_PMU" (shape passive) (at 411.48 220.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "40e37e85-af71-57b7-96c4-dc1277b17453"))(wire (pts (xy 411.48 236.22) (xy 411.48 246.38)) (stroke (width 0) (type default)) (uuid "961336ef-c555-5a14-b42a-4e4deaa1a149"))(global_label "PCIE_WAKE_N" (shape passive) (at 411.48 246.38 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "948b7907-a579-59b9-a157-d250e65a5416"))(text "RESET sinks: SoC U1601, supervisor Q303, core monitor U1505.\nNo push-pull outputs share ETH_PERST_N. CLKREQ and wake outputs use Ioff buffers.\nWhile NIC is off, firmware ignores asserted wake/CLKREQ and disables ASPM." (at 208.28 289.56 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f4b77958-9e21-59e3-8fc5-91e2cab9fb75"))(symbol (lib_id "Appliance:TMUXHS4212_RKS") (at 129.54 332.74 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ae493d25-02e0-5c09-b69e-036476e38221") (property "Reference" "U1604" (at 129.54 294.63999999999993 0) (effects (font (size 1.27 1.27))))(property "Value" "TMUXHS4212IRKSR" (at 129.54 297.17999999999995 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:DHVQFN-20_L4.5-W2.5-P0.50-BL-EP" (at 129.54 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TMUXHS4212IRKSR" (at 129.54 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 129.54 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C3656912" (at 129.54 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tmuxhs4212.pdf" (at 129.54 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "13GHz passive differential mux; HCSL CM/amplitude inside range. Reference-clock SI/jitter must be measured" (at 129.54 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "U1604") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "U1604") (unit 1)))))(wire (pts (xy 134.62 350.52) (xy 134.62 360.68)) (stroke (width 0) (type default)) (uuid "39b575d1-505c-5929-9ef8-8b7123c57af0"))(wire (pts (xy 132.08 350.52) (xy 132.08 360.68)) (stroke (width 0) (type default)) (uuid "127a05fc-e7ee-5cf7-a971-95734a9111e9"))(wire (pts (xy 129.54 350.52) (xy 129.54 360.68)) (stroke (width 0) (type default)) (uuid "20ca5191-df71-5011-8b20-4bd89eb0ec59"))(wire (pts (xy 127.0 350.52) (xy 127.0 360.68)) (stroke (width 0) (type default)) (uuid "cc3b35c0-3f72-505b-b6ad-b10349c69fb7"))(wire (pts (xy 127.0 360.68) (xy 129.54 360.68)) (stroke (width 0) (type default)) (uuid "76174ee6-857d-5387-9765-61f00a0894ec"))(wire (pts (xy 129.54 360.68) (xy 132.08 360.68)) (stroke (width 0) (type default)) (uuid "84b7345b-3176-5133-a6a6-4489f9225a5e"))(wire (pts (xy 132.08 360.68) (xy 134.62 360.68)) (stroke (width 0) (type default)) (uuid "c5bd6f8c-b959-55d6-aab4-75b2bff17193"))(global_label "GND" (shape passive) (at 127.0 360.68 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ea0ebfd7-c6e5-5082-a947-aaad743f364e"))(wire (pts (xy 132.08 314.96) (xy 132.08 304.8)) (stroke (width 0) (type default)) (uuid "e378d832-7ddf-5576-889b-19c23fa80bc4"))(wire (pts (xy 129.54 314.96) (xy 129.54 304.8)) (stroke (width 0) (type default)) (uuid "a243de5c-d7c5-5134-a67f-ca5975d395d3"))(wire (pts (xy 127.0 314.96) (xy 127.0 304.8)) (stroke (width 0) (type default)) (uuid "bedd9d9a-2db8-5949-9171-ae914659a31e"))(wire (pts (xy 127.0 304.8) (xy 129.54 304.8)) (stroke (width 0) (type default)) (uuid "92657951-e8d6-5e7f-aefa-79fdfcd0ff9f"))(wire (pts (xy 129.54 304.8) (xy 132.08 304.8)) (stroke (width 0) (type default)) (uuid "ce97e9cc-c773-5175-8a06-7668ecec563a"))(global_label "VCC3V3_PMU" (shape passive) (at 127.0 304.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f5a4c839-701a-547f-9907-a2524fb41187"))(wire (pts (xy 152.4 325.12) (xy 162.56 325.12)) (stroke (width 0) (type default)) (uuid "f201154d-2f2f-592e-9fb1-b19e7d0b05f8"))(global_label "ETH_REFCLK_P" (shape passive) (at 162.56 325.12 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "186a5197-06bb-5090-abc2-2e093c769a42"))(wire (pts (xy 152.4 327.66) (xy 162.56 327.66)) (stroke (width 0) (type default)) (uuid "5d9cc91a-91fc-5a7a-be9d-3052b0014ce4"))(global_label "ETH_REFCLK_N" (shape passive) (at 162.56 327.66 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "20516762-66f3-5bd1-8d09-41345c5cd000"))(no_connect (at 152.4 330.2) (uuid "817c0cfc-a214-5f35-a16b-49c09c5021d2"))(no_connect (at 152.4 332.74) (uuid "443dc750-6381-5340-8540-c9562900f986"))(no_connect (at 152.4 335.28) (uuid "e1b4f0bd-ef1d-5f20-8921-393c4b5ac621"))(no_connect (at 152.4 337.82) (uuid "5f0a9b06-868f-5549-a694-3a72639862a7"))(no_connect (at 152.4 340.36) (uuid "8c868946-93e5-5d03-840c-ebe83987f654"))(no_connect (at 152.4 342.9) (uuid "d74530e4-c5d4-5691-b6bc-94631804a0c2"))(wire (pts (xy 106.68 335.28) (xy 96.52 335.28)) (stroke (width 0) (type default)) (uuid "0b1d2efb-97cc-59e5-9689-0dfb3817ede0"))(global_label "GND" (shape passive) (at 96.52 335.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "034f7e38-e352-5f7c-a43b-e75f76ca5339"))(no_connect (at 106.68 340.36) (uuid "187da5f6-89a7-5e69-b85d-b09a30dc85cb"))(no_connect (at 106.68 337.82) (uuid "c1e47c17-7a41-52a3-91ae-f391f79486f6"))(wire (pts (xy 106.68 330.2) (xy 96.52 330.2)) (stroke (width 0) (type default)) (uuid "7aea8956-5f95-51b7-b2b7-ed38ed988ad7"))(global_label "PCIE_REFCLK_N" (shape passive) (at 96.52 330.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a39d2e9a-a3b0-5d8d-ba3f-a7ce96cabf9e"))(wire (pts (xy 106.68 327.66) (xy 96.52 327.66)) (stroke (width 0) (type default)) (uuid "e9007428-f7d7-55f7-9ac4-e9daebc2f5e6"))(global_label "PCIE_REFCLK_P" (shape passive) (at 96.52 327.66 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "36914961-e74a-5cc8-8bb2-1642b72bb8c1"))(wire (pts (xy 106.68 332.74) (xy 96.52 332.74)) (stroke (width 0) (type default)) (uuid "ecf1d393-6ee4-5ea3-af5e-4425e2e15007"))(global_label "ETH_CLOCK_OE_N" (shape passive) (at 96.52 332.74 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "11d37e44-7463-55b4-9efb-344abdbf5987"))(symbol (lib_id "Device:C_Small") (at 223.52 332.74 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ab694037-6ed1-5bc8-bae3-2d66630add83") (property "Reference" "C1608" (at 232.41000000000003 331.47 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 232.41000000000003 334.01 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 223.52 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 223.52 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 223.52 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 223.52 332.74 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "C1608") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "C1608") (unit 1)))))(wire (pts (xy 223.52 330.2) (xy 223.52 320.04)) (stroke (width 0) (type default)) (uuid "90a0f824-a6d8-51fc-829a-438b1d7ec72e"))(global_label "VCC3V3_PMU" (shape passive) (at 223.52 320.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8baf07fb-e3e3-5121-93de-0fb88c905edc"))(wire (pts (xy 223.52 335.28) (xy 223.52 345.44)) (stroke (width 0) (type default)) (uuid "91ca8a00-e807-5249-a76c-3b9ec3744028"))(global_label "GND" (shape passive) (at 223.52 345.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b953eec4-6665-51bb-8071-9534bb9ae4f0"))(symbol (lib_id "Transistor_BJT:MMBT3904") (at 388.62 355.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "caf6401b-da9b-5750-baae-35666d977153") (property "Reference" "Q1601" (at 388.62 327.66 0) (effects (font (size 1.27 1.27))))(property "Value" "MMBT3904,215" (at 388.62 330.20000000000005 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 388.62 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MMBT3904,215" (at 388.62 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Nexperia" (at 388.62 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "Q1601") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "Q1601") (unit 1)))))(wire (pts (xy 383.54 355.6) (xy 373.38 355.6)) (stroke (width 0) (type default)) (uuid "64331a49-5ce1-5141-b066-b1cfabcdea2a"))(global_label "ETH_CLOCK_BASE" (shape passive) (at 373.38 355.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d9c06394-da9a-5f71-9526-5a800bda2135"))(wire (pts (xy 391.16 360.68) (xy 391.16 370.84)) (stroke (width 0) (type default)) (uuid "f568c507-e0f1-5cc6-9b6f-99bdf08631a4"))(global_label "GND" (shape passive) (at 391.16 370.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "19771e36-e4be-507e-bca2-937eeab246d2"))(wire (pts (xy 391.16 350.52) (xy 391.16 340.36)) (stroke (width 0) (type default)) (uuid "d9655331-5738-59f7-a22f-1e62ddcdd0b1"))(global_label "ETH_CLOCK_OE_N" (shape passive) (at 391.16 340.36 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a8f017de-3d55-5593-a607-79480720aa64"))(symbol (lib_id "Device:R_Small_US") (at 304.8 355.6 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bf8181ec-871b-5a7e-b8a9-b57d993eed51") (property "Reference" "R1604" (at 304.8 347.98 90) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 304.8 350.52000000000004 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 304.8 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 304.8 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 304.8 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 304.8 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 304.8 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "R1604") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "R1604") (unit 1)))))(wire (pts (xy 302.26 355.6) (xy 292.1 355.6)) (stroke (width 0) (type default)) (uuid "8ed592ae-a266-51fd-a3d3-5e254106cb24"))(global_label "ETH_3V3_GOOD" (shape passive) (at 292.1 355.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1a022490-6d41-5293-81a3-2dce589f4b8d"))(wire (pts (xy 307.34 355.6) (xy 317.5 355.6)) (stroke (width 0) (type default)) (uuid "431459cc-714d-55e0-a89e-2a513f23d659"))(global_label "ETH_CLOCK_BASE" (shape passive) (at 317.5 355.6 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a9aeacd5-49c9-5430-bef7-3b326264456c"))(symbol (lib_id "Device:R_Small_US") (at 474.98 355.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d2507cf4-9b04-5e23-9071-6179c3500987") (property "Reference" "R1605" (at 483.87 354.33000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 483.87 356.87 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 474.98 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 474.98 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 474.98 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 474.98 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 474.98 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "R1605") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "R1605") (unit 1)))))(wire (pts (xy 474.98 353.06) (xy 474.98 342.9)) (stroke (width 0) (type default)) (uuid "4a810b3e-7024-5746-8d6e-e9f7af1b0aea"))(global_label "ETH_CLOCK_BASE" (shape passive) (at 474.98 342.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7415d32c-ece3-5eae-8f0f-7e0d4565ea88"))(wire (pts (xy 474.98 358.14) (xy 474.98 368.3)) (stroke (width 0) (type default)) (uuid "6b675b8c-f846-5880-b96a-ad314d37f640"))(global_label "GND" (shape passive) (at 474.98 368.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "68765868-0fd2-56bc-9e22-4a991f6346da"))(symbol (lib_id "Device:R_Small_US") (at 525.78 355.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "be5f4e50-4852-5d0c-af07-e38604c4552d") (property "Reference" "R1606" (at 534.67 354.33000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 534.67 356.87 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 525.78 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 525.78 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 525.78 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 525.78 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 525.78 355.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic-interface" (path "/9090cb9f-4bdb-58b6-b041-623a4daac7fa" (reference "R1606") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306" (reference "R1606") (unit 1)))))(wire (pts (xy 525.78 353.06) (xy 525.78 342.9)) (stroke (width 0) (type default)) (uuid "f300fede-f049-5967-8dd5-b33036df6a80"))(global_label "VCC3V3_PMU" (shape passive) (at 525.78 342.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f6fe3467-2431-5442-a949-3a207d4708b8"))(wire (pts (xy 525.78 358.14) (xy 525.78 368.3)) (stroke (width 0) (type default)) (uuid "97869c71-de2b-5790-90e8-335915f6080f"))(global_label "ETH_CLOCK_OE_N" (shape passive) (at 525.78 368.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3c550d0b-6947-561f-94c2-2731add42c16"))(text "Clock disconnected by default. Valid switched 3.3V after U1504 delay turns Q1601 on.\nMux stays on the SoC supply; NIC power cycling cannot turn on its clock path.\nCore reset delay ensures >100us clock-before-PERST margin. Validate shutdown transients." (at 269.24 398.78 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ac5be164-bc8b-5531-b499-9c84763261f8")))

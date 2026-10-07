@@ -95,7 +95,7 @@ wire((200.66,96.52),(200.66,sw[1]));wire((185.42,sw[1]),(200.66,sw[1]));junction
 add('Device','R_Small_US','R401','100kR',63.5,109.22,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W'})
 wire((63.5,106.68),(63.5,101.6));power('+3V3',(63.5,101.6),'#PWR412');wire((63.5,111.76),(63.5,116.84));label('AON_POWER_GOOD',(63.5,116.84))
 # Flags describe external isolated input and buck output, not raw PoE.
-add('power','PWR_FLAG','#FLG401','PWR_FLAG',63.5,63.5)
+# Isolated 12V is driven by the flyback source flag, not a bench supply.
 add('power','PWR_FLAG','#FLG402','PWR_FLAG',63.5,86.36)
 add('power','PWR_FLAG','#FLG403','PWR_FLAG',185.42,sw[1])
 note('Independent supervisor supply', (40.64,30.48),2.54)

@@ -1,0 +1,1104 @@
+(kicad_sch (version 20250114) (generator eeschema) (uuid "ef2c0372-fa23-5a28-afcc-3a9112a9cf5b") (paper "A1") (title_block (title "Independent modem power — 3.7V / burst allocation 5A") (date "2026-10-07")) (lib_symbols (symbol "Appliance:TPS54620_RHL" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS54620_RHL" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "TPS54620_RHL_1_1" (rectangle (start -17.78 10.16) (end 17.78 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "TPS54620_RHL_1_0" (pin input line (at -22.86 5.08 0) (length 5.08) (name "EN" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 2.54 0) (length 5.08) (name "RT/CLK" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -0.0 0) (length 5.08) (name "VSENSE" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin output line (at -22.86 -2.54 0) (length 5.08) (name "COMP" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin output line (at -22.86 -5.08 0) (length 5.08) (name "SS/TR" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 2.54 180) (length 5.08) (name "BOOT" (effects (font (size 1.27 1.27)))) (number "13" (effects (font (size 1.27 1.27)))))(pin power_out line (at 22.86 -0.0 180) (length 5.08) (name "PH" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -2.54 180) (length 5.08) (name "PH" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 22.86 -5.08 180) (length 5.08) (name "PWRGD" (effects (font (size 1.27 1.27)))) (number "14" (effects (font (size 1.27 1.27)))))(pin power_in line (at -2.54 15.24 270) (length 5.08) (name "PVIN" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 15.24 270) (length 5.08) (name "PVIN" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin power_in line (at 2.54 15.24 270) (length 5.08) (name "VIN" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin power_in line (at -2.54 -15.24 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 -15.24 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin power_in line (at 2.54 -15.24 90) (length 5.08) (name "EP" (effects (font (size 1.27 1.27)))) (number "15" (effects (font (size 1.27 1.27)))))))(symbol "Device:R_Small_US"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 0.762 0.508 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_Small_US"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "r resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_Small_US_1_1"
+			(polyline
+				(pts
+					(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 2.54 270)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:C_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.254 1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 0.254 -2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "capacitor cap"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.524 0.508) (xy 1.524 0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.524 -0.508) (xy 1.524 -0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:L_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "L"
+			(at 0.762 1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "L_Small"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor, small symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "inductor choke coil reactor magnetic"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "L_Small_0_1"
+			(arc
+				(start 0 2.032)
+				(mid 0.5058 1.524)
+				(end 0 1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 1.016)
+				(mid 0.5058 0.508)
+				(end 0 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 0)
+				(mid 0.5058 -0.508)
+				(end 0 -1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 -1.016)
+				(mid 0.5058 -1.524)
+				(end 0 -2.032)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "L_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 0.508)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 0.508)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "power:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Appliance:TPS259474L_RPW" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS259474L_RPW" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "TPS259474L_RPW_1_1" (rectangle (start -17.78 10.16) (end 17.78 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "TPS259474L_RPW_1_0" (pin input line (at -22.86 5.08 0) (length 5.08) (name "EN/UVLO" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 2.54 0) (length 5.08) (name "OVLO/OVCSEL" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -0.0 0) (length 5.08) (name "PGTH/~{FLT}" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin output line (at -22.86 -2.54 0) (length 5.08) (name "ILM" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin output line (at -22.86 -5.08 0) (length 5.08) (name "DVDT" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin output line (at -22.86 -7.62 0) (length 5.08) (name "ITIMER" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))(pin power_out line (at 22.86 -0.0 180) (length 5.08) (name "OUT" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 22.86 -2.54 180) (length 5.08) (name "PG/AUXOFF" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 15.24 270) (length 5.08) (name "IN" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 -15.24 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))))(symbol "Appliance:TPS3808_DBV" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS3808_DBV" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "TPS3808_DBV_1_1" (rectangle (start -17.78 7.62) (end 17.78 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "TPS3808_DBV_1_0" (pin input line (at -22.86 2.54 0) (length 5.08) (name "MR" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -0.0 0) (length 5.08) (name "CT" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -2.54 0) (length 5.08) (name "SENSE" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 22.86 -0.0 180) (length 5.08) (name "RESET" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 12.7 270) (length 5.08) (name "VDD" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 -12.7 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))(symbol "74xGxx:74LVC1G04"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LVC1G04"
+			(at 5.08 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Single NOT Gate, Low-Voltage CMOS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Single Gate NOT LVC CMOS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOT?23* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "74LVC1G04_0_1"
+			(polyline
+				(pts
+					(xy -7.62 6.35) (xy -7.62 -6.35) (xy 5.08 0) (xy -7.62 6.35)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "74LVC1G04_1_1"
+			(pin no_connect line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 0 0)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -5.08 -10.16 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output inverted
+				(at 12.7 0 180)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -5.08 10.16 270)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Transistor_FET:AO3400A"
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "Q"
+			(at 5.08 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 5.08 -1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+			(at 5.08 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "N-Channel MOSFET"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "AO3400A_0_1"
+			(polyline
+				(pts
+					(xy 0.254 1.905) (xy 0.254 -1.905)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.254 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 2.286) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 0.508) (xy 0.762 -0.508)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.27) (xy 0.762 -2.286)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 1.651 0)
+				(radius 2.794)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 2.54) (xy 2.54 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.54 1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 2.54 -1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.921 0.381) (xy 3.683 0.381)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "AO3400A_1_1"
+			(pin input line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "G"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 5.08 270)
+				(length 2.54)
+				(name "D"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	(property "ki_fp_filters" "SOT?23*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		))) (symbol (lib_id "Appliance:TPS54620_RHL") (at 129.54 86.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ab3c8488-2d53-517c-ade4-f5729dd4cab2") (property "Reference" "U1901" (at 129.54 50.800000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS54620RHLR" (at 129.54 53.34 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:VQFN-14_L3.5-W3.5-P0.50-TL-EP_TPS54622RHLT" (at 129.54 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TPS54620RHLR" (at 129.54 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 129.54 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C263274" (at 129.54 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps54620.pdf" (at 129.54 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "ERC Model" "BOOT floating supply terminal passive; PH pad 12 passive duplicate of power output 11" (at 129.54 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "U1901") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "U1901") (unit 1)))))(wire (pts (xy 127.0 101.6) (xy 127.0 111.76)) (stroke (width 0) (type default)) (uuid "e7b56da7-169f-5f36-850e-7d9f55364ec2"))(wire (pts (xy 129.54 101.6) (xy 129.54 111.76)) (stroke (width 0) (type default)) (uuid "49530e32-5f7e-5d17-82db-fd0de24606a2"))(wire (pts (xy 132.08 101.6) (xy 132.08 111.76)) (stroke (width 0) (type default)) (uuid "c7a9b9c2-26c7-59ea-946b-b658e377a19b"))(wire (pts (xy 127.0 111.76) (xy 129.54 111.76)) (stroke (width 0) (type default)) (uuid "077d1c83-9a62-5d23-82b9-b1eb97fdb7c1"))(wire (pts (xy 129.54 111.76) (xy 132.08 111.76)) (stroke (width 0) (type default)) (uuid "f3ea2d94-3895-57e2-bf8e-eac86e10321c"))(global_label "GND" (shape passive) (at 127.0 111.76 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "84e759b0-3c51-5713-941e-8038e9b6d040"))(wire (pts (xy 127.0 71.12) (xy 127.0 60.96)) (stroke (width 0) (type default)) (uuid "134757f8-1ebc-5f4e-b1c6-5535f2c8cb28"))(wire (pts (xy 129.54 71.12) (xy 129.54 60.96)) (stroke (width 0) (type default)) (uuid "edb090b2-4749-5709-a1d3-50f0fcb0103e"))(wire (pts (xy 132.08 71.12) (xy 132.08 60.96)) (stroke (width 0) (type default)) (uuid "b63644c0-3045-511d-ab55-61b4fdb6f865"))(wire (pts (xy 127.0 60.96) (xy 129.54 60.96)) (stroke (width 0) (type default)) (uuid "a3ab5245-22be-5d8e-89e2-77b1051ab2e6"))(wire (pts (xy 129.54 60.96) (xy 132.08 60.96)) (stroke (width 0) (type default)) (uuid "c0e1450b-ff7b-54f9-85b0-571608c1fbe4"))(global_label "ISO_12V" (shape passive) (at 127.0 60.96 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c0632648-0cf0-5bf1-aa85-44b5cb105e6c"))(wire (pts (xy 106.68 83.82) (xy 96.52 83.82)) (stroke (width 0) (type default)) (uuid "147a4857-cb40-55ea-9989-00e5082fa2f5"))(global_label "MODEM_BUCK_RT" (shape passive) (at 96.52 83.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7fe274b6-a018-5b17-8e7e-32e52522d7e9"))(wire (pts (xy 106.68 86.36) (xy 96.52 86.36)) (stroke (width 0) (type default)) (uuid "284da5c3-3bfe-5654-bf3f-21ee0bdb43b7"))(global_label "MODEM_BUCK_FB" (shape passive) (at 96.52 86.36 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f84fc390-4ba9-519a-add9-4796af236871"))(wire (pts (xy 106.68 88.9) (xy 96.52 88.9)) (stroke (width 0) (type default)) (uuid "afae2f4e-fb70-58ef-83d1-21fd567ba776"))(global_label "MODEM_BUCK_COMP" (shape passive) (at 96.52 88.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "334907b3-85d2-5db1-b0bc-62d79d86dc29"))(wire (pts (xy 106.68 91.44) (xy 96.52 91.44)) (stroke (width 0) (type default)) (uuid "a47ff3fe-91d0-5cc0-8ef8-beabc3e3c483"))(global_label "MODEM_BUCK_SS" (shape passive) (at 96.52 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "82193a2c-5248-5e48-863b-c560f9510890"))(wire (pts (xy 106.68 81.28) (xy 96.52 81.28)) (stroke (width 0) (type default)) (uuid "cec4cde4-0f6b-5e60-b760-62e67ec36f2a"))(global_label "MODEM_BUCK_EN" (shape passive) (at 96.52 81.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "33f23f42-4dd5-540a-907b-a6ea8703bc85"))(wire (pts (xy 152.4 86.36) (xy 162.56 86.36)) (stroke (width 0) (type default)) (uuid "d033446b-ea5f-5b9a-b385-3aedc1707041"))(global_label "MODEM_BUCK_SW" (shape passive) (at 162.56 86.36 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b4407c5e-af85-5d0c-af1b-3a3d572bccb1"))(wire (pts (xy 152.4 88.9) (xy 162.56 88.9)) (stroke (width 0) (type default)) (uuid "d285d352-ac4d-51bd-b72f-417fe649e93c"))(global_label "MODEM_BUCK_SW" (shape passive) (at 162.56 88.9 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3cc1e3c4-8200-5b41-bca9-3a2eb2e66921"))(wire (pts (xy 152.4 83.82) (xy 162.56 83.82)) (stroke (width 0) (type default)) (uuid "d1e91606-542d-59b8-921d-b322749876e4"))(global_label "MODEM_BUCK_BOOT" (shape passive) (at 162.56 83.82 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f3b252ac-0432-5a80-a7d0-96f0634556ec"))(wire (pts (xy 152.4 91.44) (xy 162.56 91.44)) (stroke (width 0) (type default)) (uuid "abf42691-b680-5b22-b175-b6d607ea98ab"))(global_label "MODEM_BUCK_GOOD" (shape passive) (at 162.56 91.44 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9ef651c1-5ca1-51dd-b2ad-48321dd7f37f"))(symbol (lib_id "Device:R_Small_US") (at 284.48 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "714e621d-99ee-5066-bd7e-80501cd9fecf") (property "Reference" "R1901" (at 293.37 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "36.3kR" (at 293.37 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 284.48 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RT0603BRD0736K3L" (at 284.48 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 284.48 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "0.1%" (at 284.48 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 284.48 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1901") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1901") (unit 1)))))(wire (pts (xy 284.48 53.34) (xy 284.48 43.18)) (stroke (width 0) (type default)) (uuid "831d735f-9323-5691-8d9e-965f339b5e4f"))(global_label "MODEM_3V7_RAW" (shape passive) (at 284.48 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a270027d-00d7-564b-bdd3-9092ab7b2f58"))(wire (pts (xy 284.48 58.42) (xy 284.48 68.58)) (stroke (width 0) (type default)) (uuid "3586ad7a-5dd5-5d76-b1a4-e62aa1aaf9fc"))(global_label "MODEM_BUCK_FB" (shape passive) (at 284.48 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9ad42562-7d15-507a-a592-f2be9bb673ed"))(symbol (lib_id "Device:R_Small_US") (at 284.48 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0bcc0bb3-32e6-59e3-b331-b27bb1c9e538") (property "Reference" "R1902" (at 293.37 102.87 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 293.37 105.41 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 284.48 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RT0603BRD0710KL" (at 284.48 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 284.48 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "0.1%" (at 284.48 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 284.48 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1902") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1902") (unit 1)))))(wire (pts (xy 284.48 101.6) (xy 284.48 91.44)) (stroke (width 0) (type default)) (uuid "b20fef6f-752b-5afb-8c81-24e027bb8b09"))(global_label "MODEM_BUCK_FB" (shape passive) (at 284.48 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "122b597d-c84a-5458-82f5-fa80c61e16e3"))(wire (pts (xy 284.48 106.68) (xy 284.48 116.84)) (stroke (width 0) (type default)) (uuid "0ad49107-49b9-5637-a29f-1820f8847862"))(global_label "GND" (shape passive) (at 284.48 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f3090912-3abb-5dfc-b00e-c9812f6c9edc"))(symbol (lib_id "Device:R_Small_US") (at 63.5 162.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7e11feab-df85-57c7-89fe-05829cddc9d9") (property "Reference" "R1903" (at 72.39 161.29 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 72.39 163.83 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 63.5 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 63.5 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 63.5 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 63.5 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 63.5 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1903") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1903") (unit 1)))))(wire (pts (xy 63.5 160.02) (xy 63.5 149.86)) (stroke (width 0) (type default)) (uuid "23fba9c5-2418-56f8-b96c-5834bdc9dcf8"))(global_label "MODEM_BUCK_RT" (shape passive) (at 63.5 149.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "235b6e0e-6258-51d0-a419-2707c1e4ab3f"))(wire (pts (xy 63.5 165.1) (xy 63.5 175.26)) (stroke (width 0) (type default)) (uuid "0a6f7f8a-1dff-5f29-9b9a-b8276b9816d5"))(global_label "GND" (shape passive) (at 63.5 175.26 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "31e3fceb-64ea-5f74-88b4-66ae9776e77b"))(symbol (lib_id "Device:R_Small_US") (at 203.2 162.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c8edb2d3-482f-5f33-a755-ff1d7a734dc9") (property "Reference" "R1904" (at 212.08999999999997 161.29 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 212.08999999999997 163.83 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 203.2 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 203.2 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 203.2 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 203.2 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 203.2 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1904") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1904") (unit 1)))))(wire (pts (xy 203.2 160.02) (xy 203.2 149.86)) (stroke (width 0) (type default)) (uuid "6d25ffc5-5a99-58d0-89a9-fc254d395c4c"))(global_label "MCU_MODEM_POWER_EN" (shape passive) (at 203.2 149.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "deee6d6e-3739-50ca-ba71-3f1d9bc2da39"))(wire (pts (xy 203.2 165.1) (xy 203.2 175.26)) (stroke (width 0) (type default)) (uuid "e86dc6c8-57bf-55d9-83df-382ef1f9e5de"))(global_label "MODEM_BUCK_EN" (shape passive) (at 203.2 175.26 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6ccdb70a-9440-5b56-82a8-ed200500bb64"))(symbol (lib_id "Device:R_Small_US") (at 284.48 162.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "16993f8a-4887-57c0-a0c7-f54c0624aced") (property "Reference" "R1905" (at 293.37 161.29 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 293.37 163.83 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 284.48 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 284.48 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 284.48 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 284.48 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 284.48 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1905") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1905") (unit 1)))))(wire (pts (xy 284.48 160.02) (xy 284.48 149.86)) (stroke (width 0) (type default)) (uuid "b0322907-957c-596a-b61d-445d4573745c"))(global_label "MODEM_BUCK_EN" (shape passive) (at 284.48 149.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9680927c-8037-5047-b9ec-453d0e7c87e1"))(wire (pts (xy 284.48 165.1) (xy 284.48 175.26)) (stroke (width 0) (type default)) (uuid "5738049f-a6c5-5b2d-ad89-5ccfbdf5253e"))(global_label "GND" (shape passive) (at 284.48 175.26 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ea5909ab-0dc8-5fad-b1ae-4273f5d84fac"))(symbol (lib_id "Device:R_Small_US") (at 358.14 162.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "733d0788-4e47-5694-aa39-f4f8d376911d") (property "Reference" "R1906" (at 367.03 161.29 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 367.03 163.83 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 358.14 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 358.14 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 358.14 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 358.14 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 358.14 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1906") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1906") (unit 1)))))(wire (pts (xy 358.14 160.02) (xy 358.14 149.86)) (stroke (width 0) (type default)) (uuid "10003b47-cc20-5448-809c-c3bbea082ea6"))(global_label "+3V3" (shape passive) (at 358.14 149.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1c2d1bfe-cde3-52f6-a37e-329408a631cf"))(wire (pts (xy 358.14 165.1) (xy 358.14 175.26)) (stroke (width 0) (type default)) (uuid "a5f138ee-1fd4-52e9-b62c-345af4865be4"))(global_label "MODEM_BUCK_GOOD" (shape passive) (at 358.14 175.26 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "712e40d8-d3c0-5364-b5db-77058993d4d0"))(symbol (lib_id "Device:C_Small") (at 203.2 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ef177729-e569-5b25-ac09-0c89a9afea10") (property "Reference" "C1901" (at 212.08999999999997 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 212.08999999999997 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 203.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 203.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 203.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 203.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement" "Directly at BOOT and PH" (at 203.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1901") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1901") (unit 1)))))(wire (pts (xy 203.2 53.34) (xy 203.2 43.18)) (stroke (width 0) (type default)) (uuid "333f0588-1348-564c-8f6c-4bc304f09173"))(global_label "MODEM_BUCK_BOOT" (shape passive) (at 203.2 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "12a3cfe4-5422-5ead-b431-04547388aa4a"))(wire (pts (xy 203.2 58.42) (xy 203.2 68.58)) (stroke (width 0) (type default)) (uuid "141095d1-4391-53fa-8c1d-5104470c4786"))(global_label "MODEM_BUCK_SW" (shape passive) (at 203.2 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6256ca05-d4fa-561b-ab51-e5f74f62a9cf"))(symbol (lib_id "Device:L_Small") (at 378.46 55.88 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7526acf0-896c-5a39-9414-f586eac1c2c3") (property "Reference" "L1901" (at 378.46 48.260000000000005 90) (effects (font (size 1.27 1.27))))(property "Value" "3.3uH" (at 378.46 50.800000000000004 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_Coilcraft_XAL7070-XXX" (at 378.46 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "XAL7070-332MEC" (at 378.46 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Coilcraft" (at 378.46 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Source" "Same manufacturer-audited part and land pattern as L701" (at 378.46 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "480kHz ripple and current-limit corners; thermal qualification pending" (at 378.46 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "L1901") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "L1901") (unit 1)))))(wire (pts (xy 375.92 55.88) (xy 365.76 55.88)) (stroke (width 0) (type default)) (uuid "19113120-a301-50b9-a150-2995d989bb2c"))(global_label "MODEM_BUCK_SW" (shape passive) (at 365.76 55.88 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c53a4def-1218-5a00-b29a-440033aabbea"))(wire (pts (xy 381.0 55.88) (xy 391.16 55.88)) (stroke (width 0) (type default)) (uuid "cf203ce2-bb94-5cb1-91de-b9fe7f9eccc5"))(global_label "MODEM_3V7_RAW" (shape passive) (at 391.16 55.88 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "68d4c8cf-dd7a-519b-8f95-415103965d6c"))(symbol (lib_id "Device:C_Small") (at 444.5 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "adebeab4-8639-54c7-b1fb-ec10223e33f6") (property "Reference" "C1902" (at 453.39 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "22uF" (at 453.39 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 444.5 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 444.5 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 444.5 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 444.5 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1902") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1902") (unit 1)))))(wire (pts (xy 444.5 53.34) (xy 444.5 43.18)) (stroke (width 0) (type default)) (uuid "de297197-05af-578e-9221-255082520f52"))(global_label "MODEM_3V7_RAW" (shape passive) (at 444.5 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "41383bd2-cbe9-5bed-ba00-0b307c618375"))(wire (pts (xy 444.5 58.42) (xy 444.5 68.58)) (stroke (width 0) (type default)) (uuid "23719172-5724-53b8-9d93-248b18fa7ca8"))(global_label "GND" (shape passive) (at 444.5 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f6e7782c-06f5-5022-a98d-f9edfc5835f1"))(symbol (lib_id "Device:C_Small") (at 485.14 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1566ee4d-5046-5f32-956a-4729fb39ad5e") (property "Reference" "C1903" (at 494.03 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "22uF" (at 494.03 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 485.14 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 485.14 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 485.14 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 485.14 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1903") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1903") (unit 1)))))(wire (pts (xy 485.14 53.34) (xy 485.14 43.18)) (stroke (width 0) (type default)) (uuid "97225a38-b07c-5ce9-a318-db2c70bf7f00"))(global_label "MODEM_3V7_RAW" (shape passive) (at 485.14 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7497a759-b100-5ea6-b22e-075b0815c982"))(wire (pts (xy 485.14 58.42) (xy 485.14 68.58)) (stroke (width 0) (type default)) (uuid "dcf34c01-351b-5511-a9fc-d5af599b87e1"))(global_label "GND" (shape passive) (at 485.14 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3ea83096-c179-5289-bb71-b61494117955"))(symbol (lib_id "Device:C_Small") (at 525.78 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5f5abc3d-c0fa-52c5-b1f7-037a1c22976b") (property "Reference" "C1904" (at 534.67 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "22uF" (at 534.67 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 525.78 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 525.78 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 525.78 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 525.78 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1904") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1904") (unit 1)))))(wire (pts (xy 525.78 53.34) (xy 525.78 43.18)) (stroke (width 0) (type default)) (uuid "f94051ad-ae19-524f-8554-0a75da54676a"))(global_label "MODEM_3V7_RAW" (shape passive) (at 525.78 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8811bdf2-04ad-5502-b7cf-34c33fd5420f"))(wire (pts (xy 525.78 58.42) (xy 525.78 68.58)) (stroke (width 0) (type default)) (uuid "d2b397ce-109c-5d2e-acfd-59e6ca02b3a1"))(global_label "GND" (shape passive) (at 525.78 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d92e43db-f3ab-5791-b2a7-0040fcdea327"))(symbol (lib_id "Device:C_Small") (at 444.5 127 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9f879260-37d8-5c4e-b932-01c54cd794e1") (property "Reference" "C1905" (at 453.39 125.73 0) (effects (font (size 1.27 1.27))))(property "Value" "10uF" (at 453.39 128.27 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 444.5 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL31B106KAHNNNE" (at 444.5 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 444.5 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 444.5 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1905") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1905") (unit 1)))))(wire (pts (xy 444.5 124.46) (xy 444.5 114.3)) (stroke (width 0) (type default)) (uuid "bfe0ff4e-408c-5045-9999-3e52865d4d93"))(global_label "ISO_12V" (shape passive) (at 444.5 114.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "952c25f0-0893-5c1b-8e48-ce19dc2b5958"))(wire (pts (xy 444.5 129.54) (xy 444.5 139.7)) (stroke (width 0) (type default)) (uuid "51fec982-7d5c-53d7-8011-0abd27c5ad0d"))(global_label "GND" (shape passive) (at 444.5 139.7 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cf397e02-7fcf-5390-ad04-d775ed511665"))(symbol (lib_id "Device:C_Small") (at 485.14 127 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "db27cab2-ded4-5197-9b11-2f50e4679601") (property "Reference" "C1906" (at 494.03 125.73 0) (effects (font (size 1.27 1.27))))(property "Value" "10uF" (at 494.03 128.27 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 485.14 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL31B106KAHNNNE" (at 485.14 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 485.14 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 485.14 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1906") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1906") (unit 1)))))(wire (pts (xy 485.14 124.46) (xy 485.14 114.3)) (stroke (width 0) (type default)) (uuid "2033ad84-6bf0-5b13-8a50-8ca3924e3d36"))(global_label "ISO_12V" (shape passive) (at 485.14 114.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "bacd1c2c-52d1-51a4-88a7-f17b1a7615c4"))(wire (pts (xy 485.14 129.54) (xy 485.14 139.7)) (stroke (width 0) (type default)) (uuid "7ba8ba87-87bd-56d8-8d5e-26e90a92716e"))(global_label "GND" (shape passive) (at 485.14 139.7 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "59ea14c1-1abf-5bf5-ac96-14965afa181e"))(symbol (lib_id "Device:C_Small") (at 525.78 127 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b0c78bed-97f6-5155-a1b3-e8dfb5a84d1c") (property "Reference" "C1907" (at 534.67 125.73 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 534.67 128.27 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 525.78 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 525.78 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 525.78 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 525.78 127 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1907") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1907") (unit 1)))))(wire (pts (xy 525.78 124.46) (xy 525.78 114.3)) (stroke (width 0) (type default)) (uuid "d3234084-60f4-5b9e-9f51-baf81e5bdb8a"))(global_label "ISO_12V" (shape passive) (at 525.78 114.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1eaf00ea-fbef-524d-902d-d6377a83bc8a"))(wire (pts (xy 525.78 129.54) (xy 525.78 139.7)) (stroke (width 0) (type default)) (uuid "02154c04-5923-5c90-b3e2-d564d14ed49d"))(global_label "GND" (shape passive) (at 525.78 139.7 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b0dedd6a-55a1-5eb1-becf-789fcec8cde7"))(symbol (lib_id "Device:C_Small") (at 63.5 228.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a5a91428-dace-5ea3-9b9d-79dbe22571fa") (property "Reference" "C1908" (at 72.39 227.32999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "47nF" (at 72.39 229.87 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 63.5 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B473KB8NNNC" (at 63.5 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 63.5 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 63.5 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X7R" (at 63.5 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1908") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1908") (unit 1)))))(wire (pts (xy 63.5 226.06) (xy 63.5 215.9)) (stroke (width 0) (type default)) (uuid "7ac3059f-5f18-57e7-9d7f-0beb5d75e825"))(global_label "MODEM_BUCK_SS" (shape passive) (at 63.5 215.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "445cc938-2d94-5ac7-b1de-99cf79de5b20"))(wire (pts (xy 63.5 231.14) (xy 63.5 241.3)) (stroke (width 0) (type default)) (uuid "9eb9d1db-fb7f-54b7-804d-d9c8e7910280"))(global_label "GND" (shape passive) (at 63.5 241.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1e6ca648-9ca2-5156-b77a-19cd02e6cd02"))(symbol (lib_id "Device:R_Small_US") (at 152.4 228.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3acce13c-ebb3-5938-8f8f-9e264808b986") (property "Reference" "R1907" (at 161.29000000000002 227.32999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "1kR" (at 161.29000000000002 229.87 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 152.4 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-071KL" (at 152.4 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 152.4 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 152.4 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 152.4 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1907") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1907") (unit 1)))))(wire (pts (xy 152.4 226.06) (xy 152.4 215.9)) (stroke (width 0) (type default)) (uuid "e1c9136c-459b-5d97-a0a4-6cf2b6bd3018"))(global_label "MODEM_BUCK_COMP" (shape passive) (at 152.4 215.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "04811285-c6c6-5e9a-b749-cb827747eaf4"))(wire (pts (xy 152.4 231.14) (xy 152.4 241.3)) (stroke (width 0) (type default)) (uuid "26b2f4db-b3e5-5a66-b47f-b1f1172cf449"))(global_label "MODEM_COMP_RC" (shape passive) (at 152.4 241.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4a06e93f-62d7-5aad-9b21-c13024f0642f"))(symbol (lib_id "Device:C_Small") (at 233.68 228.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c44b0fa7-c35a-5a0a-8330-72439756d1c4") (property "Reference" "C1909" (at 242.57 227.32999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 242.57 229.87 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 233.68 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 233.68 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 233.68 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 233.68 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1909") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1909") (unit 1)))))(wire (pts (xy 233.68 226.06) (xy 233.68 215.9)) (stroke (width 0) (type default)) (uuid "c21244b9-f390-5334-814c-bf09bbfe0528"))(global_label "MODEM_COMP_RC" (shape passive) (at 233.68 215.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ead331ea-a985-5263-afbe-7fc02941712c"))(wire (pts (xy 233.68 231.14) (xy 233.68 241.3)) (stroke (width 0) (type default)) (uuid "34e26b31-55f9-5136-82f1-19f945a58f2d"))(global_label "GND" (shape passive) (at 233.68 241.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e5ff3d99-799a-5ba8-8eef-4a0d6f2fb8de"))(symbol (lib_id "Device:C_Small") (at 314.96 228.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d29e76fe-c0b5-5d6b-b2b2-bee27986dec9") (property "Reference" "C1910" (at 323.84999999999997 227.32999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "1nF" (at 323.84999999999997 229.87 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 314.96 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B102KB8NNNC" (at 314.96 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 314.96 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 314.96 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X7R" (at 314.96 228.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1910") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1910") (unit 1)))))(wire (pts (xy 314.96 226.06) (xy 314.96 215.9)) (stroke (width 0) (type default)) (uuid "b82acdbe-5080-5481-a8e7-2f689224f843"))(global_label "MODEM_BUCK_COMP" (shape passive) (at 314.96 215.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "bbac2c3f-3ae8-5675-9d6c-4fd2a6a0e3e1"))(wire (pts (xy 314.96 231.14) (xy 314.96 241.3)) (stroke (width 0) (type default)) (uuid "3dc833ef-6ff0-5674-a6f1-c92dfe2ecf6e"))(global_label "GND" (shape passive) (at 314.96 241.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f2f8268a-7ca1-5d80-9e48-e72be33a6b93"))(symbol (lib_id "power:PWR_FLAG") (at 444.5 203.2 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "46477647-331f-522f-a319-80d5c15ed883") (property "Reference" "#FLG1901" (at 444.5 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "PWR_FLAG" (at 444.5 199.39 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 444.5 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Source" "TPS54620 PH through L1901" (at 444.5 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "#FLG1901") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "#FLG1901") (unit 1)))))(wire (pts (xy 444.5 203.2) (xy 444.5 213.36)) (stroke (width 0) (type default)) (uuid "31ab6ca9-3883-570c-a0e4-babdfe725466"))(global_label "MODEM_3V7_RAW" (shape passive) (at 444.5 213.36 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0818de53-069e-5913-bec0-9b68f1929ead"))(text "Compensated current-mode regulator supports the downstream 220uF modem bulk bank.\nType II: 1k / 100nF, 1nF high-frequency pole. Include eFuse resistance and both banks\nin loop analysis. Verify loop, burst droop, soft-start and thermal behavior on hardware.\n5A is a provisional burst design allocation. The selected 1A/power-contact M.2 socket permits\n5A total at 25C; sharing, hot derating and module envelope require qualification.\nThis is not a guaranteed current envelope for RM551E-GL or Sierra mmWave accessories." (at 25.4 294.64 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a8c55f9e-69a7-5fe6-966f-a769d019038a"))(symbol (lib_id "Appliance:TPS259474L_RPW") (at 660.4 86.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "718c3c05-12c6-5b90-ae7a-b0cbeb748f17") (property "Reference" "U1902" (at 660.4 50.800000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS259474LRPWR" (at 660.4 53.34 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:VQFN-10_L2.0-W2.0-P0.45-TL" (at 660.4 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TPS259474LRPWR" (at 660.4 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 660.4 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C2864845" (at 660.4 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps25947.pdf" (at 660.4 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Fault Response" "Latch off; EN low/high clears. Reverse-current blocking always." (at 660.4 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "U1902") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "U1902") (unit 1)))))(wire (pts (xy 637.54 81.28) (xy 627.38 81.28)) (stroke (width 0) (type default)) (uuid "c42bd8e2-ea30-56b3-8787-0dea7fd667ad"))(global_label "MODEM_FUSE_EN" (shape passive) (at 627.38 81.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1a57ea60-4338-5121-bb42-2ab804b33409"))(wire (pts (xy 637.54 83.82) (xy 627.38 83.82)) (stroke (width 0) (type default)) (uuid "a27e32cc-445a-5d2a-a8ef-18d346d282c9"))(global_label "MODEM_FUSE_OVLO" (shape passive) (at 627.38 83.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "552b3ddb-e526-55d8-b9d8-00f2ff964977"))(wire (pts (xy 683.26 88.9) (xy 693.42 88.9)) (stroke (width 0) (type default)) (uuid "25681ad9-3fb5-5326-9889-31dd02c780ec"))(global_label "MODEM_SWITCH_GOOD" (shape passive) (at 693.42 88.9 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9d45cbb8-14be-5a1e-bcd4-6918adf013e6"))(wire (pts (xy 637.54 86.36) (xy 627.38 86.36)) (stroke (width 0) (type default)) (uuid "546f3503-f09f-5a9c-b460-15ea725dae0d"))(global_label "MODEM_FUSE_PGTH" (shape passive) (at 627.38 86.36 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7c3595fc-05e3-5383-80fc-78f22f72d79b"))(wire (pts (xy 660.4 71.12) (xy 660.4 60.96)) (stroke (width 0) (type default)) (uuid "a7ce225c-cb96-57c7-8286-18315236b613"))(global_label "MODEM_3V7_RAW" (shape passive) (at 660.4 60.96 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2b43e13c-00cd-5bca-b703-e711227ee41d"))(wire (pts (xy 683.26 86.36) (xy 693.42 86.36)) (stroke (width 0) (type default)) (uuid "ab898a9f-075a-5414-855d-21fec647c034"))(global_label "MODEM_VCC" (shape passive) (at 693.42 86.36 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e6205a76-ce0d-5f82-8282-538eb43d2526"))(wire (pts (xy 637.54 91.44) (xy 627.38 91.44)) (stroke (width 0) (type default)) (uuid "2d16f266-f28a-5dc9-9e8f-d257386af2a0"))(global_label "MODEM_FUSE_DVDT" (shape passive) (at 627.38 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "74a2fe0d-1f2c-5128-b82b-bf22cb959859"))(wire (pts (xy 660.4 101.6) (xy 660.4 111.76)) (stroke (width 0) (type default)) (uuid "266c54b2-bf6e-5f40-bb57-c289e947f83c"))(global_label "GND" (shape passive) (at 660.4 111.76 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "432545f4-d789-5f65-8765-70892911c684"))(wire (pts (xy 637.54 88.9) (xy 627.38 88.9)) (stroke (width 0) (type default)) (uuid "3419e775-94d0-5cad-aa76-9cf92f65f6fb"))(global_label "MODEM_FUSE_ILM" (shape passive) (at 627.38 88.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8310ea39-2308-51fe-8191-4a04f2534423"))(no_connect (at 637.54 93.98) (uuid "fdd8304e-54c2-5361-8da6-e16451acc953"))(symbol (lib_id "Device:R_Small_US") (at 609.6 162.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0cd05c03-92f7-56c1-ba3a-e3efb169408d") (property "Reference" "R1911" (at 618.49 161.29 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 618.49 163.83 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 609.6 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 609.6 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 609.6 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 609.6 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 609.6 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1911") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1911") (unit 1)))))(wire (pts (xy 609.6 160.02) (xy 609.6 149.86)) (stroke (width 0) (type default)) (uuid "70f068ed-eb48-5c0f-b70c-f3da40a62384"))(global_label "MCU_MODEM_POWER_EN" (shape passive) (at 609.6 149.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d1dd33d4-7e07-552d-b2fc-abb02d7bb924"))(wire (pts (xy 609.6 165.1) (xy 609.6 175.26)) (stroke (width 0) (type default)) (uuid "8a1e5621-a178-5a0b-9056-ff98bd6887ee"))(global_label "MODEM_FUSE_EN" (shape passive) (at 609.6 175.26 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c4ffa5fd-28f9-5d9b-840f-7a93d643e5f4"))(symbol (lib_id "Device:R_Small_US") (at 688.34 162.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4627a29f-15ae-56de-8607-cf0bb21e31b6") (property "Reference" "R1912" (at 697.23 161.29 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 697.23 163.83 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 688.34 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 688.34 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 688.34 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 688.34 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 688.34 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1912") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1912") (unit 1)))))(wire (pts (xy 688.34 160.02) (xy 688.34 149.86)) (stroke (width 0) (type default)) (uuid "332a7006-b983-5b01-9fbe-96d0aca0f55d"))(global_label "MODEM_FUSE_EN" (shape passive) (at 688.34 149.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c72a2e8a-a5d7-582c-ac6c-e84195bb63c0"))(wire (pts (xy 688.34 165.1) (xy 688.34 175.26)) (stroke (width 0) (type default)) (uuid "5b9ccad8-b9d5-54e6-9900-e7ecf9d79be0"))(global_label "GND" (shape passive) (at 688.34 175.26 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a38fe151-85b2-5d96-8d80-db1c3bcca2c6"))(symbol (lib_id "Device:R_Small_US") (at 769.62 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9b719695-98e9-5b90-8791-6f8b223d16d0") (property "Reference" "R1913" (at 778.51 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "237kR" (at 778.51 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 769.62 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07237KL" (at 769.62 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 769.62 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 769.62 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 769.62 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1913") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1913") (unit 1)))))(wire (pts (xy 769.62 53.34) (xy 769.62 43.18)) (stroke (width 0) (type default)) (uuid "d12ca81e-9005-54ab-af09-aba2767b09f6"))(global_label "MODEM_3V7_RAW" (shape passive) (at 769.62 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "28db9378-015e-5a61-98fa-16cd4d5a8af3"))(wire (pts (xy 769.62 58.42) (xy 769.62 68.58)) (stroke (width 0) (type default)) (uuid "7998d9d3-5ddf-53d6-b6ff-e72b2a9a171d"))(global_label "MODEM_FUSE_OVLO" (shape passive) (at 769.62 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c2b7a104-b087-5e45-8147-85bda1cda651"))(symbol (lib_id "Device:R_Small_US") (at 769.62 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8f1414b2-dcf2-50fe-b5c9-8098ffaaa0e0") (property "Reference" "R1914" (at 778.51 102.87 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 778.51 105.41 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 769.62 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 769.62 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 769.62 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 769.62 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 769.62 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1914") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1914") (unit 1)))))(wire (pts (xy 769.62 101.6) (xy 769.62 91.44)) (stroke (width 0) (type default)) (uuid "a0d27fcb-0bd2-5499-84b1-a1f92bc45ee8"))(global_label "MODEM_FUSE_OVLO" (shape passive) (at 769.62 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7f0c9335-2ae8-58ec-ab72-3c550d280e3c"))(wire (pts (xy 769.62 106.68) (xy 769.62 116.84)) (stroke (width 0) (type default)) (uuid "4137cc7e-687a-5b7f-8271-c993d05d6834"))(global_label "GND" (shape passive) (at 769.62 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c77a92bf-9794-5137-a32a-c82eb37cdb83"))(symbol (lib_id "Device:R_Small_US") (at 800.1 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a12261d4-02f1-52a1-8822-5258a7179c7c") (property "Reference" "R1915" (at 808.99 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "165kR" (at 808.99 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 800.1 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07165KL" (at 800.1 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 800.1 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 800.1 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 800.1 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1915") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1915") (unit 1)))))(wire (pts (xy 800.1 53.34) (xy 800.1 43.18)) (stroke (width 0) (type default)) (uuid "be089513-9fcf-5d78-9bfb-ec30249d8448"))(global_label "MODEM_VCC" (shape passive) (at 800.1 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "046ef8d1-c706-50aa-9e96-b1c099baa82f"))(wire (pts (xy 800.1 58.42) (xy 800.1 68.58)) (stroke (width 0) (type default)) (uuid "20972509-9559-54ee-90d6-10016480edfa"))(global_label "MODEM_FUSE_PGTH" (shape passive) (at 800.1 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "14a4095b-39e4-558d-af09-2251db2337f9"))(symbol (lib_id "Device:R_Small_US") (at 800.1 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a1d5ea15-b87d-5868-acf0-8bba7bb8890f") (property "Reference" "R1916" (at 808.99 102.87 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 808.99 105.41 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 800.1 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 800.1 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 800.1 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 800.1 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 800.1 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1916") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1916") (unit 1)))))(wire (pts (xy 800.1 101.6) (xy 800.1 91.44)) (stroke (width 0) (type default)) (uuid "de74eaef-f46f-5a9e-92be-797dd08f9101"))(global_label "MODEM_FUSE_PGTH" (shape passive) (at 800.1 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6235fa65-0c73-5c37-ae59-87353e81237a"))(wire (pts (xy 800.1 106.68) (xy 800.1 116.84)) (stroke (width 0) (type default)) (uuid "b8eaff46-3492-5817-a20a-5ab732072150"))(global_label "GND" (shape passive) (at 800.1 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "614af724-731a-5804-a22a-d19f50940888"))(symbol (lib_id "Device:R_Small_US") (at 609.6 223.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5d7087e4-176d-5ea5-b281-f69c4d4ddeef") (property "Reference" "R1917" (at 618.49 222.25 0) (effects (font (size 1.27 1.27))))(property "Value" "562R" (at 618.49 224.79000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 609.6 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RT0603BRD07562RL" (at 609.6 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 609.6 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "0.1%" (at 609.6 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 609.6 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1917") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1917") (unit 1)))))(wire (pts (xy 609.6 220.98) (xy 609.6 210.82)) (stroke (width 0) (type default)) (uuid "edc6fb31-9e99-5886-ac2c-553bba9d514e"))(global_label "MODEM_FUSE_ILM" (shape passive) (at 609.6 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a9d10a44-ac88-56ae-9569-cf7e2ff7c91b"))(wire (pts (xy 609.6 226.06) (xy 609.6 236.22)) (stroke (width 0) (type default)) (uuid "1fdaf468-1d1f-5900-839f-742099d38cd7"))(global_label "GND" (shape passive) (at 609.6 236.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fd166d7b-03e3-5fe9-a8c4-2807e7c145dc"))(symbol (lib_id "Device:R_Small_US") (at 769.62 162.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1dfbd368-7d53-5ad9-a2b5-45714d0098b7") (property "Reference" "R1918" (at 778.51 161.29 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 778.51 163.83 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 769.62 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 769.62 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 769.62 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 769.62 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 769.62 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1918") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1918") (unit 1)))))(wire (pts (xy 769.62 160.02) (xy 769.62 149.86)) (stroke (width 0) (type default)) (uuid "996f48f0-d04c-52db-ac92-e087416aea56"))(global_label "+3V3" (shape passive) (at 769.62 149.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4682bf17-6577-51c9-909a-82f9b4953934"))(wire (pts (xy 769.62 165.1) (xy 769.62 175.26)) (stroke (width 0) (type default)) (uuid "71edb087-5b41-599d-82da-3c96f7c08052"))(global_label "MODEM_SWITCH_GOOD" (shape passive) (at 769.62 175.26 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f9379f95-41d0-5af9-8b1c-07dfef6d0d85"))(symbol (lib_id "Device:C_Small") (at 688.34 223.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9cb1acd3-b176-5931-b497-f76f77f8ad18") (property "Reference" "C1911" (at 697.23 222.25 0) (effects (font (size 1.27 1.27))))(property "Value" "10nF" (at 697.23 224.79000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 688.34 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B103KB8NNNC" (at 688.34 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 688.34 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 688.34 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "X7R" (at 688.34 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Nominal Output Slew" "0.2V/ms, about 18.5ms to 3.7V" (at 688.34 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1911") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1911") (unit 1)))))(wire (pts (xy 688.34 220.98) (xy 688.34 210.82)) (stroke (width 0) (type default)) (uuid "32424243-f3ef-5fba-9156-ed7bcf7a4d80"))(global_label "MODEM_FUSE_DVDT" (shape passive) (at 688.34 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "bc84f0c7-834d-5f16-a5d9-2a94462516b1"))(wire (pts (xy 688.34 226.06) (xy 688.34 236.22)) (stroke (width 0) (type default)) (uuid "6d3fb701-7562-5eca-9de1-c34aed8b8788"))(global_label "GND" (shape passive) (at 688.34 236.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "91d52939-a46e-58e5-8cee-5e120b3bf73b"))(symbol (lib_id "Device:C_Small") (at 769.62 223.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b2228a16-1f20-5fb3-bb4d-25151aae6dc3") (property "Reference" "C1912" (at 778.51 222.25 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 778.51 224.79000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 769.62 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 769.62 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 769.62 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 769.62 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1912") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1912") (unit 1)))))(wire (pts (xy 769.62 220.98) (xy 769.62 210.82)) (stroke (width 0) (type default)) (uuid "d63a865f-051e-5e85-9ab2-f1a1fb3cc6fb"))(global_label "MODEM_3V7_RAW" (shape passive) (at 769.62 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9c5b428a-f189-5ab2-aaea-613209620fb8"))(wire (pts (xy 769.62 226.06) (xy 769.62 236.22)) (stroke (width 0) (type default)) (uuid "a2e73f1f-e459-55d7-9cef-700c04f0a8bb"))(global_label "GND" (shape passive) (at 769.62 236.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fd7ee12d-4129-5a1f-9589-2119884103db"))(text "Latch-off eFuse: 45mOhm maximum RON. 562R/0.1% gives approx. 5.27–6.45A threshold\nusing the 549R guaranteed table, NOT 5A continuous connector qualification. ITIMER open.\nOVLO: 237k/100k, 3.93–4.18V resistor/reference corners, below modem 4.4V limit.\nPGTH: 165k/100k, nominal 3.18V. Use separate always-on output monitor for USB isolation.\nMaximum continuous device current is 5.5A; connector/profile hot limits can be lower.\nNo UL assembly claim: this threshold does not meet the datasheet RILM>=750R recognition condition." (at 591.82 294.64 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ce479527-5a60-5289-99d1-9cc4bd12d00a"))(symbol (lib_id "Appliance:TPS3808_DBV") (at 119.38 401.32 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ecb77cfe-6962-52b4-95e5-9ba8a1955f9f") (property "Reference" "U1903" (at 119.38 368.3 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS3808G01DBVR" (at 119.38 370.84000000000003 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6" (at 119.38 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TPS3808G01DBVR" (at 119.38 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 119.38 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C19653" (at 119.38 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3808.pdf" (at 119.38 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "U1903") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "U1903") (unit 1)))))(wire (pts (xy 142.24 401.32) (xy 152.4 401.32)) (stroke (width 0) (type default)) (uuid "fbc143b3-8f1e-50f9-a621-8d48d1bacd47"))(global_label "MODEM_RAIL_GOOD" (shape passive) (at 152.4 401.32 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5980fc5d-b6f1-5f99-a521-8dc7c715de1b"))(wire (pts (xy 119.38 414.02) (xy 119.38 424.18)) (stroke (width 0) (type default)) (uuid "c39cd0bb-eb7c-5da0-9e7b-9c9a407a4e73"))(global_label "GND" (shape passive) (at 119.38 424.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "83663ef2-a2fc-5423-879d-985da28a1526"))(wire (pts (xy 96.52 398.78) (xy 86.36 398.78)) (stroke (width 0) (type default)) (uuid "3d4669a5-402f-5972-9b34-97bf79fbca21"))(global_label "+3V3" (shape passive) (at 86.36 398.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3e9aacee-8008-5a23-99b1-92f9275f63a8"))(wire (pts (xy 96.52 401.32) (xy 86.36 401.32)) (stroke (width 0) (type default)) (uuid "581d0d46-a731-567a-a47f-531ee6b77db1"))(global_label "MODEM_MON_CT" (shape passive) (at 86.36 401.32 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b5e45081-2062-5fae-beb2-8cbd41ef8004"))(wire (pts (xy 96.52 403.86) (xy 86.36 403.86)) (stroke (width 0) (type default)) (uuid "58223e43-1d98-572b-a076-3d7c37d6e419"))(global_label "MODEM_MON_SENSE" (shape passive) (at 86.36 403.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "af9806de-d441-546e-bdf5-58c158385924"))(wire (pts (xy 119.38 388.62) (xy 119.38 378.46)) (stroke (width 0) (type default)) (uuid "6e342f0f-0693-59d2-8454-71c8238ab0fe"))(global_label "+3V3" (shape passive) (at 119.38 378.46 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0fa63bd0-e5c2-5427-aaa6-2b8ced4ee3d6"))(symbol (lib_id "Device:R_Small_US") (at 332.74 454.66 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "77f27bbb-613e-57d2-ae53-e8dfcc8c1445") (property "Reference" "R1926" (at 341.63 453.39000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 341.63 455.93 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 332.74 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 332.74 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 332.74 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 332.74 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 332.74 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1926") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1926") (unit 1)))))(wire (pts (xy 332.74 452.12) (xy 332.74 441.96)) (stroke (width 0) (type default)) (uuid "d3a6e7df-3801-569f-9316-37c68346cc9f"))(global_label "+3V3" (shape passive) (at 332.74 441.96 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4d28e86e-4a1a-5b4d-a4e0-25a65805f7c3"))(wire (pts (xy 332.74 457.2) (xy 332.74 467.36)) (stroke (width 0) (type default)) (uuid "b8748fd1-a1b7-5fe0-900f-13964c479874"))(global_label "MODEM_MON_CT" (shape passive) (at 332.74 467.36 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2a7bf10e-1cce-5af9-b198-d48f1b603884"))(symbol (lib_id "Device:R_Small_US") (at 251.46 363.22 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1376d283-b7ab-5bfd-9cf5-8742c70e098d") (property "Reference" "R1921" (at 260.35 361.95000000000005 0) (effects (font (size 1.27 1.27))))(property "Value" "330kR" (at 260.35 364.49 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 251.46 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RT0603BRD07330KL" (at 251.46 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 251.46 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "0.1%" (at 251.46 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 251.46 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1921") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1921") (unit 1)))))(wire (pts (xy 251.46 360.68) (xy 251.46 350.52)) (stroke (width 0) (type default)) (uuid "657bcc8e-8b2b-5c22-b342-f162bcf4a3c9"))(global_label "MODEM_VCC" (shape passive) (at 251.46 350.52 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f9a70080-52e2-50a5-91a0-fe7e8f8da288"))(wire (pts (xy 251.46 365.76) (xy 251.46 375.92)) (stroke (width 0) (type default)) (uuid "49fd3861-3548-5040-9db1-8a3280117393"))(global_label "MODEM_MON_SENSE" (shape passive) (at 251.46 375.92 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "57c7d5e0-bcfb-589f-bcb6-bf703d0294ec"))(symbol (lib_id "Device:R_Small_US") (at 251.46 411.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1b0cf9d0-55e8-53ef-b7f7-17f68d1b252c") (property "Reference" "R1922" (at 260.35 410.21000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "47kR" (at 260.35 412.75 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 251.46 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RT0603BRD0747KL" (at 251.46 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 251.46 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "0.1%" (at 251.46 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 251.46 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1922") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1922") (unit 1)))))(wire (pts (xy 251.46 408.94) (xy 251.46 398.78)) (stroke (width 0) (type default)) (uuid "519f2759-7674-50c4-9421-ac3e07cc8cd2"))(global_label "MODEM_MON_SENSE" (shape passive) (at 251.46 398.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "bf8ff5e7-4692-5177-943f-3a336a970689"))(wire (pts (xy 251.46 414.02) (xy 251.46 424.18)) (stroke (width 0) (type default)) (uuid "8c7423d8-bc5a-5f0c-9f0d-858df47b9781"))(global_label "GND" (shape passive) (at 251.46 424.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "edacabfd-e73e-552c-beab-57488740403e"))(symbol (lib_id "Device:R_Small_US") (at 332.74 401.32 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1deaaff2-c03d-5dcc-926a-2ec1550274c4") (property "Reference" "R1923" (at 341.63 400.05 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 341.63 402.59 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 332.74 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 332.74 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 332.74 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 332.74 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 332.74 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1923") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1923") (unit 1)))))(wire (pts (xy 332.74 398.78) (xy 332.74 388.62)) (stroke (width 0) (type default)) (uuid "75e6c77c-f040-537f-9cce-82e1c5238385"))(global_label "+3V3" (shape passive) (at 332.74 388.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "eecf4bc2-eed3-50ab-bb8c-8da75bbbae44"))(wire (pts (xy 332.74 403.86) (xy 332.74 414.02)) (stroke (width 0) (type default)) (uuid "bd8192aa-b885-572e-9980-adf7bfe7f852"))(global_label "MODEM_RAIL_GOOD" (shape passive) (at 332.74 414.02 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b7657b3d-9cd6-53bb-b2fc-f10e851c6d3f"))(symbol (lib_id "Device:C_Small") (at 187.96 401.32 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "af7a22ff-e234-5e36-9dc0-3958564b3200") (property "Reference" "C1913" (at 196.85000000000002 400.05 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 196.85000000000002 402.59 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 187.96 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 187.96 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 187.96 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 187.96 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1913") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1913") (unit 1)))))(wire (pts (xy 187.96 398.78) (xy 187.96 388.62)) (stroke (width 0) (type default)) (uuid "86c5f478-b4e6-5702-bc81-307f11f68857"))(global_label "+3V3" (shape passive) (at 187.96 388.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7f6e9389-5cb6-57b2-b1d3-7ef78eb3dc2e"))(wire (pts (xy 187.96 403.86) (xy 187.96 414.02)) (stroke (width 0) (type default)) (uuid "344659d6-eeb4-5b33-8813-35b77e2eab98"))(global_label "GND" (shape passive) (at 187.96 414.02 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "799abce2-c47d-50ea-b27e-609a10d807b3"))(symbol (lib_id "74xGxx:74LVC1G04") (at 429.26 401.32 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8e4a5383-2f19-5ee6-8732-8e468a0e1a93") (property "Reference" "U1904" (at 429.26 370.84 0) (effects (font (size 1.27 1.27))))(property "Value" "SN74LVC1G04DCKR" (at 429.26 373.38 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 429.26 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SN74LVC1G04DCKR" (at 429.26 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 429.26 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf" (at 429.26 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "U1904") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "U1904") (unit 1)))))(no_connect (at 421.64 398.78) (uuid "9fa3cafb-560f-5cca-9dce-b9222f560a7c"))(wire (pts (xy 414.02 401.32) (xy 403.86 401.32)) (stroke (width 0) (type default)) (uuid "318d9562-325f-5279-9d73-6d2db1f9269c"))(global_label "MCU_MODEM_POWER_EN" (shape passive) (at 403.86 401.32 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8ef36fc8-222b-5254-ba7e-a256801a1242"))(wire (pts (xy 424.18 411.48) (xy 424.18 421.64)) (stroke (width 0) (type default)) (uuid "9e6b941d-06cb-52f8-9d75-54760555faa6"))(global_label "GND" (shape passive) (at 424.18 421.64 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "65208018-94b6-5043-9387-80af672efb66"))(wire (pts (xy 441.96 401.32) (xy 452.12 401.32)) (stroke (width 0) (type default)) (uuid "04679a1b-c937-50dc-b9d3-08e6edde8403"))(global_label "MODEM_DISCHARGE_GATE" (shape passive) (at 452.12 401.32 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "062f797e-8260-51bb-b755-e14125a711f0"))(wire (pts (xy 424.18 391.16) (xy 424.18 381.0)) (stroke (width 0) (type default)) (uuid "ac79704a-90e7-58ad-afad-6841ec9de8db"))(global_label "+3V3" (shape passive) (at 424.18 381.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d04b6967-d00e-5ebc-b1e9-139d2d19e736"))(symbol (lib_id "Device:C_Small") (at 495.3 401.32 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5f6b2ad2-ea73-54cf-8522-86a9122158c9") (property "Reference" "C1914" (at 504.19 400.05 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 504.19 402.59 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 495.3 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 495.3 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 495.3 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 495.3 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "C1914") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "C1914") (unit 1)))))(wire (pts (xy 495.3 398.78) (xy 495.3 388.62)) (stroke (width 0) (type default)) (uuid "a4e78d5c-f74d-5de3-aa1d-062d9562a9f6"))(global_label "+3V3" (shape passive) (at 495.3 388.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cb5c7223-0f06-5626-8a0d-f9594379d61b"))(wire (pts (xy 495.3 403.86) (xy 495.3 414.02)) (stroke (width 0) (type default)) (uuid "fd7c88a4-d559-5f13-a57b-d84d49a6e044"))(global_label "GND" (shape passive) (at 495.3 414.02 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1912dd55-cdce-5bc6-bac0-4f464c0c12ee"))(symbol (lib_id "Transistor_FET:AO3400A") (at 607.06 416.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b125300f-e2fd-5d68-9f04-875fffecedf5") (property "Reference" "Q1901" (at 607.06 388.62 0) (effects (font (size 1.27 1.27))))(property "Value" "AO3400A" (at 607.06 391.16 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 607.06 416.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "AO3400A" (at 607.06 416.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Alpha & Omega Semiconductor" (at 607.06 416.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C20917" (at 607.06 416.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.aosmd.com/res/data_sheets/AO3400A.pdf" (at 607.06 416.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "Q1901") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "Q1901") (unit 1)))))(wire (pts (xy 601.98 416.56) (xy 591.82 416.56)) (stroke (width 0) (type default)) (uuid "f52894f3-a351-555c-b225-c4b4dd3f8457"))(global_label "MODEM_DISCHARGE_GATE" (shape passive) (at 591.82 416.56 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "68d02ed3-00a2-574d-9f75-58404231eda3"))(wire (pts (xy 609.6 421.64) (xy 609.6 431.8)) (stroke (width 0) (type default)) (uuid "b759e898-511d-5757-8aed-faa5c923f753"))(global_label "GND" (shape passive) (at 609.6 431.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "885fc3ed-1411-5fc9-bef3-e7ca23e2e4cf"))(wire (pts (xy 609.6 411.48) (xy 609.6 401.32)) (stroke (width 0) (type default)) (uuid "0209467f-5148-5f9d-9299-a1736ed6a444"))(global_label "MODEM_DISCHARGE_DRAIN" (shape passive) (at 609.6 401.32 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ee6bf01d-4b1b-594f-af5a-c20318f04979"))(symbol (lib_id "Device:R_Small_US") (at 688.34 401.32 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "54c1a393-a795-5b9e-82b1-ea922709e46e") (property "Reference" "R1924" (at 697.23 400.05 0) (effects (font (size 1.27 1.27))))(property "Value" "100R / 0.25W" (at 697.23 402.59 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 688.34 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC1206FR-07100RL" (at 688.34 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 688.34 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.25W" (at 688.34 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 688.34 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Worst on-time <=0.15W at 3.75V; RC discharge must be measured at socket" (at 688.34 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1924") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1924") (unit 1)))))(wire (pts (xy 688.34 398.78) (xy 688.34 388.62)) (stroke (width 0) (type default)) (uuid "c83a2950-c824-50a1-bbd1-1d420b9463e7"))(global_label "MODEM_VCC" (shape passive) (at 688.34 388.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6de47293-617e-53db-9037-223f6e25b915"))(wire (pts (xy 688.34 403.86) (xy 688.34 414.02)) (stroke (width 0) (type default)) (uuid "0ef0a7c5-507f-597e-b2c1-88e4b30327b5"))(global_label "MODEM_DISCHARGE_DRAIN" (shape passive) (at 688.34 414.02 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4dcb223a-46d0-5689-a688-9275dd7e17ec"))(symbol (lib_id "Device:R_Small_US") (at 769.62 401.32 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e7876e97-c940-57cb-8297-3ecdc915cb12") (property "Reference" "R1925" (at 778.51 400.05 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 778.51 402.59 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 769.62 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 769.62 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 769.62 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 769.62 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 769.62 401.32 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-power" (path "/ef2c0372-fa23-5a28-afcc-3a9112a9cf5b" (reference "R1925") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2" (reference "R1925") (unit 1)))))(wire (pts (xy 769.62 398.78) (xy 769.62 388.62)) (stroke (width 0) (type default)) (uuid "0370871f-facf-563f-8da9-134ba2f0fc44"))(global_label "MCU_MODEM_POWER_EN" (shape passive) (at 769.62 388.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "202b8a26-cc27-5a1e-a26c-45a3f2c73e7b"))(wire (pts (xy 769.62 403.86) (xy 769.62 414.02)) (stroke (width 0) (type default)) (uuid "74dc0e78-d15c-56e7-a66f-5e7fc20bbaa9"))(global_label "GND" (shape passive) (at 769.62 414.02 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5935e5fe-efaa-5ea5-ac57-5f8d3748497d"))(text "U1903 is powered from always-on 3.3V; output threshold nominal 3.249V.\nCT via 100k to VDD: 180–420ms delay exceeds Sierra 100ms no-drive interval.\nMODEM_RAIL_GOOD drives data isolation and MCU PB13 (pad25). MCU PA0 controls power.\nLow command enables Q1901 discharge; wait at least 1s and bench-verify socket <0.1V\nbefore restart. MCU default/high-Z command is off. Qualify timing per modem profile.\nClear a latched fault only after determining cause; do not create an autonomous reset loop." (at 25.4 508 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "025cd8d5-150e-57c8-85f7-259ae61f83b7")))

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Capture all native RK3566 units as an explicitly incomplete standalone draft."""
+"""Capture all native RK3566 units and unused contacts for the appliance."""
 from pathlib import Path
 import re
 import uuid
@@ -35,6 +35,39 @@ items = []
 ground_balls = set()
 control_nets = {'AJ37':'PMIC_I2C_SCL','AK38':'PMIC_I2C_SDA','1P19':'PMIC_SLEEP','AG38':'RK_RESET_N','1R19':'PMIC_INT_N','1D17':'SARADC_BOOT_KEY','1F3':'DDR_SOC_RZQ'}
 ddr_map={r['processor_ball']:r['net'] for r in __import__('csv').DictReader((ROOT/'reference/ddr-bus-map.csv').open())}
+# Boot and interface ball selections checked against manufacturer guide and NanoPi
+# reference sheets 8/9. All PCIe sidebands use M0, not mixed mux alternatives.
+control_nets.update({
+ 'AD37':'CLK24_IN','AF38':'FLASH_VOL_SEL','AF37':'SDMMC0_DET',
+ 'A32':'EMMC_D0','B27':'EMMC_D1','B32':'EMMC_D2','B29':'EMMC_D3',
+ 'B33':'EMMC_D4','A30':'EMMC_D5','B30':'EMMC_D6','A33':'EMMC_D7',
+ 'A27':'EMMC_CMD','A29':'EMMC_CLK_SOC','1A16':'EMMC_STROBE','1B16':'EMMC_RESET_N',
+ 'R37':'RECOVERY_USB_DP','R38':'RECOVERY_USB_DM','T38':'RECOVERY_VBUS_DET',
+ '1J19':'MODEM_USB_DP','1J20':'MODEM_USB_DM',
+ 'W37':'MODEM_USB_TXP_SOC','W38':'MODEM_USB_TXN_SOC','V38':'MODEM_USB_RXP','V37':'MODEM_USB_RXN',
+ 'AA37':'PCIE_TXP_SOC','AA38':'PCIE_TXN_SOC','AB37':'PCIE_RXP_SOC','AB38':'PCIE_RXN_SOC',
+ '1K19':'PCIE_REFCLK_P','1K20':'PCIE_REFCLK_N','AG37':'PCIE_CLKREQ_N','1U20':'PCIE_WAKE_N','1R16':'PCIE_PERST_SOC_N',
+ '1V19':'DEBUG_UART_RX','1U18':'DEBUG_UART_TX','AN37':'SOC_HEALTH',
+ '1R20':'TSADC_SHUTDOWN',
+ '1C17':'GND','1B18':'GND','1A19':'GND',
+})
+# Retain reference analog power, even for disabled display/camera blocks.
+# Unused GPIO domains may float per guide 2.1.13.3; this design powers them
+# at the reference voltages to simplify firmware's domain configuration.
+extra_rails = {
+ 'VCCIO1':'3V3_MAIN','VCCIO2':'VCC_1V8','VCCIO3':'VCCIO_SD',
+ 'VCCIO4':'VCC_1V8','VCCIO5_1':'VCC_1V8','VCCIO5_2':'VCC_1V8',
+ 'VCCIO6_1':'VCC_1V8','VCCIO6_2':'VCC_1V8','VCCIO7':'3V3_MAIN',
+ 'MULTI_PHY_AVDD_0V9':'MULTI_AVDD_0V9','MULTI_PHY_AVDD_1V8':'MULTI_AVDD_1V8',
+ 'USB_AVDD2_0V9':'USB2_AVDD_0V9','USB_AVDD2_1V8':'USB2_AVDD_1V8','USB_AVDD2_3V3':'3V3_MAIN',
+}
+for name in ['MIPI_CSI_RX','HDMI_TX','MIPI_DSI_TX0','MIPI_DSI_TX1','EDP_TX']:
+ for suffix,net in [('0V9','VDDA_0V9'),('1V8','VCCA_1V8')]:
+  extra_rails[name+'_AVDD_'+suffix] = net
+extra_rails.update({'HDMI_TX_AVDD_0V9_1':'VDDA_0V9','HDMI_TX_AVDD_0V9_2':'VDDA_0V9'})
+connected_balls = {}
+unused_balls = {}
+
 connected_controls = set()
 rail_balls = {}
 for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),(5,76.2,304.8),(6,279.4,304.8),(7,444.5,228.6),(8,444.5,330.2)]:
@@ -43,10 +76,16 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
     pins = re.findall(r'\(number "([^"]+)"', body)
     for px, py, angle, name, number in re.findall(r'\(pin \w+ \w+.*?\(at ([-\d.]+) ([-\d.]+) ([-\d.]+)\).*?\(name "([^"]+)".*?\(number "([^"]+)"', body, re.S):
         analog = {'OTP_VCC18':'VCCA_1V8','SARADC_AVDD_1V8':'VCCA_1V8','USB_AVDD1_0V9':'USB_AVDD_0V9','USB_AVDD1_1V8':'USB_AVDD_1V8','USB_AVDD1_3V3':'3V3_MAIN','PMU_VDD_LOGIC_0V9':'VDDA0V9_PMU','PMUPLL_AVDD_0V9':'VDDA0V9_PMU','PMUPLL_AVDD_1V8':'VCCA1V8_PMU','SYSPLL_AVDD_0V9':'VDDA_0V9','SYSPLL_AVDD_1V8':'VCCA_1V8'}
-        rail = analog.get(name) or ('VDD_DDR_1V1' if name.startswith('DDRPHY_VDDQ_') else 'VDD_DDR_0V6' if name.startswith('DDRPHY_VDDQL_') else None) or ('VDD_LOGIC' if name.startswith('VDD_LOGIC_') else 'VDD_NPU' if name.startswith('VDD_NPU_') else 'VDD_GPU' if name.startswith('VDD_GPU_') else 'VCC3V3_PMU' if name in {'PMUIO1','PMUIO2'} else None)
+        rail = extra_rails.get(name) or analog.get(name) or ('VDD_CPU' if name.startswith('VDD_CPU_') else None) or ('VDD_DDR_1V1' if name.startswith('DDRPHY_VDDQ_') else 'VDD_DDR_0V6' if name.startswith('DDRPHY_VDDQL_') else None) or ('VDD_LOGIC' if name.startswith('VDD_LOGIC_') else 'VDD_NPU' if name.startswith('VDD_NPU_') else 'VDD_GPU' if name.startswith('VDD_GPU_') else 'VCC3V3_PMU' if name in {'PMUIO1','PMUIO2'} else None)
         if rail:
             rail_balls[number] = rail
         control = control_nets.get(number) or rail or ddr_map.get(number)
+        is_ground = bool(re.fullmatch(r'(?:VSS|AVSS|AVSS1)_\d+', name) or name in {'DDR_AVSS','PMUPLL_AVSS','SYSPLL_AVSS'})
+        if control or is_ground:
+            connected_balls[number] = control or 'GND'
+        else:
+            unused_balls[number] = name
+            items.append(f'(no_connect (at {round(x+float(px),4)} {round(y-float(py),4)}) (uuid "{uid("unused-"+number)}"))')
         if control:
             if number in control_nets:
                 connected_controls.add(number)
@@ -55,9 +94,7 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
             bx = round(ax + (-12.7 if left else 12.7),4)
             items.append(f'(wire (pts (xy {ax} {ay}) (xy {bx} {ay})) (stroke (width 0) (type default)) (uuid "{uid("control-wire-"+number)}"))')
             items.append(f'(global_label "{control}" (shape passive) (at {bx} {ay} {0 if left else 180}) (effects (font (size 1.27 1.27)) (justify {"right" if left else "left"})) (uuid "{uid("control-label-"+number)}"))')
-        if number in {'1H3','1A2','1A4','1A5','1C2','1C3','A3','A10','E2'}:
-            items.append(f'(no_connect (at {round(x+float(px),4)} {round(y-float(py),4)}) (uuid "{uid("ddr-unused-"+number)}"))')
-        if not (re.fullmatch(r'(?:VSS|AVSS|AVSS1)_\d+', name) or name in {'DDR_AVSS','PMUPLL_AVSS','SYSPLL_AVSS'}):
+        if not is_ground:
             continue
         ground_balls.add(number)
         ax, ay = round(x + float(px),4), round(y - float(py),4)
@@ -66,7 +103,7 @@ for unit, x, y in [(1,76.2,76.2),(2,177.8,177.8),(3,279.4,139.7),(4,431.8,76.2),
         items.append(f'(wire (pts (xy {ax} {ay}) (xy {bx} {ay})) (stroke (width 0) (type default)) (uuid "{uid("ground-wire-"+number)}"))')
         items.append(f'(global_label "GND" (shape passive) (at {bx} {ay} {0 if left else 180}) (effects (font (size 1.27 1.27)) (justify {"right" if left else "left"})) (uuid "{uid("ground-label-"+number)}"))')
     fields = prop('Reference','U801',x,y-top-7.62) + prop('Value','RK3566',x,y-top-5.08)
-    for key,value in {'Footprint':'','MPN':'RK3566','Manufacturer':'Rockchip','LCSC':'C2943786','Qualification':'DRAFT: supplies, peripherals, TVSS and land pattern unresolved'}.items():
+    for key,value in {'Footprint':'','MPN':'RK3566','Manufacturer':'Rockchip','LCSC':'C2943786','Qualification':'Ball connections audited; unused GPIOs/analog signals NC, peripherals disabled in firmware. TVSS NC per NanoPi sheet 8. Land pattern pending'}.items():
         fields += prop(key,value,x,y,True)
     items.append(f'(symbol (lib_id "ProcessorDraft:RK3566") (at {x} {y} 0) (unit {unit}) (in_bom yes) (on_board yes) (dnp no) (uuid "{uid(str(unit))}") {fields} ' + ''.join(f'(pin "{n}" (uuid "{uid("pin-"+n)}"))' for n in pins) + f' (instances (project "processor" (path "/{uid("root")}" (reference "U801") (unit {unit})))))')
 # Four processor-local PLL banks; distinct from PMIC output capacitance.
@@ -187,9 +224,15 @@ for key,control,output,qref,rbase,rpull,offset in [('reset','MCU_PROCESSOR_RESET
   # Keep the complete recovery sink clear of the DDR supply labels.
   for i in range(bank_start,len(items)):
    items[i]=re.sub(r'\((at|xy) ([-\d.]+) ([-\d.]+)',lambda m:f'({m[1]} {round(float(m[2])+50.8,4)} {m[3]}',items[i])
-items.append(f'(text "INCOMPLETE PROCESSOR CAPTURE: all 565 balls present; documented grounds, logic/GPU and PMU supplies connected; circuitry incomplete.\\nPMIC controls: AJ37=I2C0 SCL, AK38=I2C0 SDA, 1P19=PMIC_SLEEP.\\n19 alternate roles and TVSS unresolved. No production footprint assigned.\\nIntegrated draft: CPU, DDR, analog/IO supplies and peripheral circuitry remain open." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("note")}"))')
-(ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — INCOMPLETE") (date "2026-10-04")) (lib_symbols {symbol} {cap} {resistor} {switch} {bjt}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
-assert len(rail_balls) == 44
+items.append(f'(text "PROCESSOR: 565 balls captured. CPU/eMMC/PCIe/USB and PMIC controls connected.\\nUnused GPIO/analog signal balls are NC; disabled peripherals must remain disabled in firmware.\\nTVSS and XOUT24M float per reference; 1.8V active oscillator feeds XIN24M.\\n1.8V flash strap, debug strap and thermal-shutdown termination are on host-interface sheet." (at 25.4 20.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid('note')}"))')
+import csv
+with (ROOT/'pinmaps/processor-capture.csv').open('w') as out:
+ writer=csv.writer(out,lineterminator='\n');writer.writerow(['ball','net','unused_function','evidence'])
+ for ball in sorted(set(connected_balls)|set(unused_balls)):
+  writer.writerow([ball,connected_balls.get(ball,''),unused_balls.get(ball,''),'RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9'])
+assert len(connected_balls)+len(unused_balls)==565
+(ROOT / 'processor.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator eeschema) (uuid "{uid("root")}") (paper "A2") (title_block (title "RK3566 processor — interface and power capture") (date "2026-10-07")) (lib_symbols {symbol} {cap} {resistor} {switch} {bjt}) ' + ' '.join(items) + ' (sheet_instances (path "/" (page "1"))))\n')
+assert len(rail_balls) == 80, len(rail_balls)
 assert connected_controls == set(control_nets)
 assert len(ground_balls) == 187 and '1M18' not in ground_balls
-print('Generated standalone eight-unit processor draft, U801; 187 documented ground balls connected.')
+print('Generated eight-unit processor engineering capture, U801; 187 documented ground balls connected.')

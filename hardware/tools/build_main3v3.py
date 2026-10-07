@@ -109,6 +109,8 @@ for ref,value,mpn,lcsc,y in [('R605','10kR','RC0603FR-0710KL','C98220',127),('R6
 wire((254,124.46),(254,116.84));label('5V_MAIN',(254,116.84))
 wire((254,129.54),(254,139.7));label('MAIN3V3_PG_5V',(254,134.62))
 wire((254,144.78),(254,152.4));power('GND',(254,152.4),'#PWR616')
-note('DRAFT: Upstream 5V sequencing, PG translation, capacitance and thermal margins unfinished.',(35.56,172.72))
+note('Main sequencing and PG translation captured; capacitance and thermal margins unqualified.',(35.56,172.72))
+# Switching output is behind a passive filter inductor.
+power('PWR_FLAG',(175.26, 73.66),'#FLG601')
 (ROOT/'main3v3.kicad_sch').write_text('(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A4") (lib_symbols '+''.join(used.values())+') '+''.join(items)+')\n')
 print('Generated main 3.3V draft')

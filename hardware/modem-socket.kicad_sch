@@ -1,0 +1,423 @@
+(kicad_sch (version 20250114) (generator eeschema) (uuid "8d52cbde-7436-51e9-9286-bc7e0a90a1f2") (paper "A1") (title_block (title "Modem socket and SIM — assembly profiles required") (date "2026-10-07")) (lib_symbols (symbol "Appliance:M2_B_67" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "M2_B_67" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "M2_B_67_1_1" (rectangle (start -17.78 17.78) (end 17.78 -17.78) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "M2_B_67_1_0" (pin passive line (at -22.86 12.7 0) (length 5.08) (name "FULL_CARD_POWER_OFF_N" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 10.16 0) (length 5.08) (name "RESET_N" (effects (font (size 1.27 1.27)))) (number "67" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 7.62 0) (length 5.08) (name "PCIE_DIS / RESERVED" (effects (font (size 1.27 1.27)))) (number "20" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 5.08 0) (length 5.08) (name "VBUS_SENSE / RESERVED" (effects (font (size 1.27 1.27)))) (number "22" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 2.54 0) (length 5.08) (name "VCC / 1V8_OUT" (effects (font (size 1.27 1.27)))) (number "24" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -0.0 0) (length 5.08) (name "VCC / WLAN_DISABLE" (effects (font (size 1.27 1.27)))) (number "38" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -2.54 0) (length 5.08) (name "VCC / RESERVED" (effects (font (size 1.27 1.27)))) (number "68" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -5.08 0) (length 5.08) (name "SIM1_RESET" (effects (font (size 1.27 1.27)))) (number "30" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -7.62 0) (length 5.08) (name "SIM1_CLK" (effects (font (size 1.27 1.27)))) (number "32" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -10.16 0) (length 5.08) (name "SIM1_DATA" (effects (font (size 1.27 1.27)))) (number "34" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -12.7 0) (length 5.08) (name "SIM1_VCC" (effects (font (size 1.27 1.27)))) (number "36" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 5.08 180) (length 5.08) (name "USB_DP" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 2.54 180) (length 5.08) (name "USB_DM" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -0.0 180) (length 5.08) (name "USB_TXN" (effects (font (size 1.27 1.27)))) (number "29" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -2.54 180) (length 5.08) (name "USB_TXP" (effects (font (size 1.27 1.27)))) (number "31" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -5.08 180) (length 5.08) (name "USB_RXN" (effects (font (size 1.27 1.27)))) (number "35" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -7.62 180) (length 5.08) (name "USB_RXP" (effects (font (size 1.27 1.27)))) (number "37" (effects (font (size 1.27 1.27)))))(pin passive line (at -5.08 22.86 270) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin passive line (at -2.54 22.86 270) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin passive line (at 0.0 22.86 270) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "70" (effects (font (size 1.27 1.27)))))(pin passive line (at 2.54 22.86 270) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "72" (effects (font (size 1.27 1.27)))))(pin passive line (at 5.08 22.86 270) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "74" (effects (font (size 1.27 1.27)))))(pin passive line (at -12.7 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin passive line (at -10.16 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin passive line (at -7.62 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))(pin passive line (at -5.08 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "27" (effects (font (size 1.27 1.27)))))(pin passive line (at -2.54 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "33" (effects (font (size 1.27 1.27)))))(pin passive line (at 0.0 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "39" (effects (font (size 1.27 1.27)))))(pin passive line (at 2.54 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "45" (effects (font (size 1.27 1.27)))))(pin passive line (at 5.08 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "51" (effects (font (size 1.27 1.27)))))(pin passive line (at 7.62 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "57" (effects (font (size 1.27 1.27)))))(pin passive line (at 10.16 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "71" (effects (font (size 1.27 1.27)))))(pin passive line (at 12.7 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "73" (effects (font (size 1.27 1.27))))))(symbol "M2_B_67_2_1" (rectangle (start -17.78 25.4) (end 17.78 -25.4) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "M2_B_67_2_0" (pin passive line (at -22.86 20.32 0) (length 5.08) (name "1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 17.78 0) (length 5.08) (name "10" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 15.24 0) (length 5.08) (name "23" (effects (font (size 1.27 1.27)))) (number "23" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 12.7 0) (length 5.08) (name "26" (effects (font (size 1.27 1.27)))) (number "26" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 10.16 0) (length 5.08) (name "40" (effects (font (size 1.27 1.27)))) (number "40" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 7.62 0) (length 5.08) (name "42" (effects (font (size 1.27 1.27)))) (number "42" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 5.08 0) (length 5.08) (name "44" (effects (font (size 1.27 1.27)))) (number "44" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 2.54 0) (length 5.08) (name "47" (effects (font (size 1.27 1.27)))) (number "47" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -0.0 0) (length 5.08) (name "49" (effects (font (size 1.27 1.27)))) (number "49" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -2.54 0) (length 5.08) (name "52" (effects (font (size 1.27 1.27)))) (number "52" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -5.08 0) (length 5.08) (name "54" (effects (font (size 1.27 1.27)))) (number "54" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -7.62 0) (length 5.08) (name "56" (effects (font (size 1.27 1.27)))) (number "56" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -10.16 0) (length 5.08) (name "59" (effects (font (size 1.27 1.27)))) (number "59" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -12.7 0) (length 5.08) (name "61" (effects (font (size 1.27 1.27)))) (number "61" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -15.24 0) (length 5.08) (name "63" (effects (font (size 1.27 1.27)))) (number "63" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -17.78 0) (length 5.08) (name "65" (effects (font (size 1.27 1.27)))) (number "65" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -20.32 0) (length 5.08) (name "69" (effects (font (size 1.27 1.27)))) (number "69" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 20.32 180) (length 5.08) (name "8" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 17.78 180) (length 5.08) (name "21" (effects (font (size 1.27 1.27)))) (number "21" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 15.24 180) (length 5.08) (name "25" (effects (font (size 1.27 1.27)))) (number "25" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 12.7 180) (length 5.08) (name "28" (effects (font (size 1.27 1.27)))) (number "28" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 10.16 180) (length 5.08) (name "41" (effects (font (size 1.27 1.27)))) (number "41" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 7.62 180) (length 5.08) (name "43" (effects (font (size 1.27 1.27)))) (number "43" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 5.08 180) (length 5.08) (name "46" (effects (font (size 1.27 1.27)))) (number "46" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 2.54 180) (length 5.08) (name "48" (effects (font (size 1.27 1.27)))) (number "48" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -0.0 180) (length 5.08) (name "50" (effects (font (size 1.27 1.27)))) (number "50" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -2.54 180) (length 5.08) (name "53" (effects (font (size 1.27 1.27)))) (number "53" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -5.08 180) (length 5.08) (name "55" (effects (font (size 1.27 1.27)))) (number "55" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -7.62 180) (length 5.08) (name "58" (effects (font (size 1.27 1.27)))) (number "58" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -10.16 180) (length 5.08) (name "60" (effects (font (size 1.27 1.27)))) (number "60" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -12.7 180) (length 5.08) (name "62" (effects (font (size 1.27 1.27)))) (number "62" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -15.24 180) (length 5.08) (name "64" (effects (font (size 1.27 1.27)))) (number "64" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -17.78 180) (length 5.08) (name "66" (effects (font (size 1.27 1.27)))) (number "66" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -20.32 180) (length 5.08) (name "75" (effects (font (size 1.27 1.27)))) (number "75" (effects (font (size 1.27 1.27)))))))(symbol "Device:R_Small_US"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 0.762 0.508 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_Small_US"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "r resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_Small_US_1_1"
+			(polyline
+				(pts
+					(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 2.54 270)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Appliance:NANO_SIM_1042240820" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "NANO_SIM_1042240820" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "NANO_SIM_1042240820_1_1" (rectangle (start -17.78 12.7) (end 17.78 -12.7) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "NANO_SIM_1042240820_1_0" (pin passive line (at -22.86 7.62 0) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 5.08 0) (length 5.08) (name "RST" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 2.54 0) (length 5.08) (name "CLK" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -0.0 0) (length 5.08) (name "I/O" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -2.54 0) (length 5.08) (name "VPP" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -5.08 0) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -7.62 0) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin passive line (at -5.08 -17.78 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin passive line (at -2.54 -17.78 90) (length 5.08) (name "SHELL" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin passive line (at 0.0 -17.78 90) (length 5.08) (name "SHELL" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))(pin passive line (at 2.54 -17.78 90) (length 5.08) (name "SHELL" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))(pin passive line (at 5.08 -17.78 90) (length 5.08) (name "SHELL" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))))(symbol "Device:C_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.254 1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 0.254 -2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "capacitor cap"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.524 0.508) (xy 1.524 0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.524 -0.508) (xy 1.524 -0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Appliance:TPD4E02B04_DQA" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "TPD4E02B04_DQA" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "TPD4E02B04_DQA_1_1" (rectangle (start -17.78 7.62) (end 17.78 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "TPD4E02B04_DQA_1_0" (pin passive line (at -22.86 2.54 0) (length 5.08) (name "IO1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -0.0 0) (length 5.08) (name "IO2" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -2.54 0) (length 5.08) (name "IO3" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -5.08 0) (length 5.08) (name "IO4" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 2.54 180) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -0.0 180) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -2.54 180) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -5.08 180) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))(pin passive line (at 0.0 -12.7 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin passive line (at 2.54 -12.7 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))))(symbol "power:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)) (symbol (lib_id "Appliance:M2_B_67") (at 137.16 86.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e62c1249-27c3-52da-b9ea-dfc8ce0ae511") (property "Reference" "J2001" (at 137.16 43.18 0) (effects (font (size 1.27 1.27))))(property "Value" "MDT420B01411" (at 137.16 45.72 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 137.16 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MDT420B01411" (at 137.16 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Amphenol Communications Solutions" (at 137.16 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.amphenol-cs.com/product/mdt420b01411.html" (at 137.16 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Contact Rating" "1A/power contact continuous at 25C, <=30C rise; hot derating and sharing require qualification" (at 137.16 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Footprint Hold" "Exact CMDT420X0X411 Rev A land pattern and retention pads required; do not reuse TE 2199119 footprint" (at 137.16 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "J2001") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "J2001") (unit 1)))))(wire (pts (xy 132.08 63.5) (xy 132.08 53.34)) (stroke (width 0) (type default)) (uuid "d7bb75b8-cb08-5606-a4b3-3e6719d62efa"))(wire (pts (xy 134.62 63.5) (xy 134.62 53.34)) (stroke (width 0) (type default)) (uuid "b14e5ba2-cbb9-5fcd-8a37-ebff0f6a9755"))(wire (pts (xy 137.16 63.5) (xy 137.16 53.34)) (stroke (width 0) (type default)) (uuid "b2b0c067-5557-52fb-8ff5-1a8fca56df6e"))(wire (pts (xy 139.7 63.5) (xy 139.7 53.34)) (stroke (width 0) (type default)) (uuid "100927fe-f149-524a-8b62-3144e29c0bd2"))(wire (pts (xy 142.24 63.5) (xy 142.24 53.34)) (stroke (width 0) (type default)) (uuid "8009b7d0-fe0e-521f-a875-f63ab2e21eac"))(wire (pts (xy 132.08 53.34) (xy 134.62 53.34)) (stroke (width 0) (type default)) (uuid "bf4c59e1-e9f5-5807-a29a-4c3af46b6f0a"))(wire (pts (xy 134.62 53.34) (xy 137.16 53.34)) (stroke (width 0) (type default)) (uuid "21b5ba2a-1879-5fb8-aee4-a6e2176a90ff"))(wire (pts (xy 137.16 53.34) (xy 139.7 53.34)) (stroke (width 0) (type default)) (uuid "7056fabb-87c6-5e28-b763-73f982cc3617"))(wire (pts (xy 139.7 53.34) (xy 142.24 53.34)) (stroke (width 0) (type default)) (uuid "bea37389-1102-5840-959f-16bac0edf140"))(global_label "MODEM_VCC" (shape passive) (at 132.08 53.34 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "23475adf-f224-5716-aa4a-b4dec632aa42"))(wire (pts (xy 124.46 109.22) (xy 124.46 119.38)) (stroke (width 0) (type default)) (uuid "c4b3acaa-6468-58dd-9d2d-d706934678c6"))(wire (pts (xy 127.0 109.22) (xy 127.0 119.38)) (stroke (width 0) (type default)) (uuid "e6ab6016-bc49-5caa-8d3e-45a17bdf544d"))(wire (pts (xy 129.54 109.22) (xy 129.54 119.38)) (stroke (width 0) (type default)) (uuid "2ae0c28b-ec6a-572b-b880-776fd545faf8"))(wire (pts (xy 132.08 109.22) (xy 132.08 119.38)) (stroke (width 0) (type default)) (uuid "9dca0ece-f5aa-5c24-91c3-7031087c4bd1"))(wire (pts (xy 134.62 109.22) (xy 134.62 119.38)) (stroke (width 0) (type default)) (uuid "67117d35-a018-53e5-ad81-3a3f53917d64"))(wire (pts (xy 137.16 109.22) (xy 137.16 119.38)) (stroke (width 0) (type default)) (uuid "661ca8d8-e82e-5132-97f6-01b3234d0b98"))(wire (pts (xy 139.7 109.22) (xy 139.7 119.38)) (stroke (width 0) (type default)) (uuid "a7d3f8f8-da2f-50e5-9b99-9613c888f55a"))(wire (pts (xy 142.24 109.22) (xy 142.24 119.38)) (stroke (width 0) (type default)) (uuid "956beb01-a06b-5f1a-82e2-8311b80a478c"))(wire (pts (xy 144.78 109.22) (xy 144.78 119.38)) (stroke (width 0) (type default)) (uuid "e9924440-a276-5476-a596-1483b81da671"))(wire (pts (xy 147.32 109.22) (xy 147.32 119.38)) (stroke (width 0) (type default)) (uuid "771ad230-3b52-50c5-bdc6-4c0738c38206"))(wire (pts (xy 149.86 109.22) (xy 149.86 119.38)) (stroke (width 0) (type default)) (uuid "307e0b47-aa3d-52d1-9160-13c147702512"))(wire (pts (xy 124.46 119.38) (xy 127.0 119.38)) (stroke (width 0) (type default)) (uuid "2f2409c0-4b5e-5acc-9803-620d7e16db96"))(wire (pts (xy 127.0 119.38) (xy 129.54 119.38)) (stroke (width 0) (type default)) (uuid "30cb0947-2a8f-5e19-9465-5677a0b6317b"))(wire (pts (xy 129.54 119.38) (xy 132.08 119.38)) (stroke (width 0) (type default)) (uuid "ec8472e3-4896-52a7-a8ae-fdcfe6d63f18"))(wire (pts (xy 132.08 119.38) (xy 134.62 119.38)) (stroke (width 0) (type default)) (uuid "8b011b7a-8a05-583e-b13c-2619c34a48c0"))(wire (pts (xy 134.62 119.38) (xy 137.16 119.38)) (stroke (width 0) (type default)) (uuid "9d220f34-d659-526f-857d-cd7da781bf15"))(wire (pts (xy 137.16 119.38) (xy 139.7 119.38)) (stroke (width 0) (type default)) (uuid "20862e66-4f3f-560a-a36c-b28f2f46eb86"))(wire (pts (xy 139.7 119.38) (xy 142.24 119.38)) (stroke (width 0) (type default)) (uuid "af2dca8f-17d6-5a26-baf9-e176f70da6af"))(wire (pts (xy 142.24 119.38) (xy 144.78 119.38)) (stroke (width 0) (type default)) (uuid "8b8c7a2a-6f14-5e46-aec3-508db15350fa"))(wire (pts (xy 144.78 119.38) (xy 147.32 119.38)) (stroke (width 0) (type default)) (uuid "b4c5cd62-5535-5e4f-bd40-b3c33b90a3d5"))(wire (pts (xy 147.32 119.38) (xy 149.86 119.38)) (stroke (width 0) (type default)) (uuid "ce6b595a-d6e1-52f6-a025-9c1fdea256bf"))(global_label "GND" (shape passive) (at 124.46 119.38 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "222696a0-3d47-5a8c-bcb1-74fbe99f67b1"))(wire (pts (xy 114.3 73.66) (xy 104.14 73.66)) (stroke (width 0) (type default)) (uuid "13c48c2a-2b49-5081-90fe-4ae8c4257318"))(global_label "MODEM_OFF_N" (shape passive) (at 104.14 73.66 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b3b8b3e7-1e42-5451-b915-6ce475b69303"))(wire (pts (xy 114.3 76.2) (xy 104.14 76.2)) (stroke (width 0) (type default)) (uuid "6d0e0b9e-cd76-5742-bdb3-e10e37990e4f"))(global_label "MODEM_RESET_N" (shape passive) (at 104.14 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a74e1e7a-5d58-5892-b8bd-8749738a8bdb"))(wire (pts (xy 114.3 78.74) (xy 104.14 78.74)) (stroke (width 0) (type default)) (uuid "c10a3b38-572f-5f5b-812a-e7b731b2c53d"))(global_label "M2_PIN20" (shape passive) (at 104.14 78.74 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1f429247-87be-587a-9926-6568aab7447c"))(wire (pts (xy 114.3 81.28) (xy 104.14 81.28)) (stroke (width 0) (type default)) (uuid "8f9c34e9-df0f-5f1e-a476-669e43f9fd15"))(global_label "M2_PIN22" (shape passive) (at 104.14 81.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e1c91990-5ee7-5909-8b0b-05d0e1a064f8"))(wire (pts (xy 114.3 83.82) (xy 104.14 83.82)) (stroke (width 0) (type default)) (uuid "1f8c690c-b998-546b-9358-936a8f0344dc"))(global_label "M2_PIN24" (shape passive) (at 104.14 83.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2a5dab28-d985-5088-9e4e-a6de4aa05037"))(wire (pts (xy 114.3 86.36) (xy 104.14 86.36)) (stroke (width 0) (type default)) (uuid "037968ba-333b-5896-8797-d0545a256bc3"))(global_label "M2_PIN38" (shape passive) (at 104.14 86.36 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b825ebfb-0951-58e3-b49f-962841f19791"))(wire (pts (xy 114.3 88.9) (xy 104.14 88.9)) (stroke (width 0) (type default)) (uuid "85211f41-de15-5480-9d46-9a3c8b953eb5"))(global_label "M2_PIN68" (shape passive) (at 104.14 88.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6a1f1d98-7c0e-5d40-9936-a65e2287a5c9"))(wire (pts (xy 114.3 91.44) (xy 104.14 91.44)) (stroke (width 0) (type default)) (uuid "08d9d113-9bf0-5300-abcf-1c9c3e084972"))(global_label "SIM1_RESET_MODEM" (shape passive) (at 104.14 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "40e7063d-c33a-5665-965d-0c579c19dbda"))(wire (pts (xy 114.3 93.98) (xy 104.14 93.98)) (stroke (width 0) (type default)) (uuid "f54e8ee9-562a-59eb-b64e-af3b3be93a05"))(global_label "SIM1_CLK_MODEM" (shape passive) (at 104.14 93.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fb921237-a22b-5c1f-97c0-1c63e1407d13"))(wire (pts (xy 114.3 96.52) (xy 104.14 96.52)) (stroke (width 0) (type default)) (uuid "22f49dfc-bfba-5280-a3ad-34d6895cd89e"))(global_label "SIM1_DATA_MODEM" (shape passive) (at 104.14 96.52 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "df2e9665-39a9-5f92-9dd6-813318b19053"))(wire (pts (xy 114.3 99.06) (xy 104.14 99.06)) (stroke (width 0) (type default)) (uuid "02518147-ffcc-5e35-942e-34fe380579f0"))(global_label "SIM1_VCC" (shape passive) (at 104.14 99.06 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e98168a7-6862-5caa-8388-8ac6842b8bf3"))(wire (pts (xy 160.02 81.28) (xy 170.18 81.28)) (stroke (width 0) (type default)) (uuid "8906dfc9-f064-5754-9b94-57d832b7c52b"))(global_label "MODEM_USB_DP_PORT" (shape passive) (at 170.18 81.28 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fd61f577-6a33-5782-b2a4-ff7df93a849e"))(wire (pts (xy 160.02 83.82) (xy 170.18 83.82)) (stroke (width 0) (type default)) (uuid "06a5cbe9-7885-505f-a745-9f5038cfe9a3"))(global_label "MODEM_USB_DM_PORT" (shape passive) (at 170.18 83.82 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4fee1e41-283e-5d2c-b714-95ebfa6f7244"))(wire (pts (xy 160.02 86.36) (xy 170.18 86.36)) (stroke (width 0) (type default)) (uuid "85ce5dfa-5aa3-5634-abfc-bb694ee31e9a"))(global_label "MODEM_TXN_PORT" (shape passive) (at 170.18 86.36 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c0f769cb-a399-5c29-9192-9a6963e7a1df"))(wire (pts (xy 160.02 88.9) (xy 170.18 88.9)) (stroke (width 0) (type default)) (uuid "852966fd-ef16-5fbe-ad48-45c27276abdc"))(global_label "MODEM_TXP_PORT" (shape passive) (at 170.18 88.9 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "56d0b196-5a80-5396-855f-7e03f7e06576"))(wire (pts (xy 160.02 91.44) (xy 170.18 91.44)) (stroke (width 0) (type default)) (uuid "7321bdd8-5b64-5524-bb29-ab10d9fb64f2"))(global_label "MODEM_RXN_PORT" (shape passive) (at 170.18 91.44 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6ac0a99e-d5f6-595a-ae64-63e46c6b6a4c"))(wire (pts (xy 160.02 93.98) (xy 170.18 93.98)) (stroke (width 0) (type default)) (uuid "8a28a646-0838-5ee9-b50d-67be937de9ad"))(global_label "MODEM_RXP_PORT" (shape passive) (at 170.18 93.98 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9d080fd5-65d4-5374-a22d-72ac5b2ec717"))(symbol (lib_id "Appliance:M2_B_67") (at 464.82 86.36 0) (unit 2) (in_bom yes) (on_board yes) (dnp no) (uuid "2881d8d4-3158-571b-ad2d-9b6a87736624") (property "Reference" "J2001" (at 464.82 45.720000000000006 0) (effects (font (size 1.27 1.27))))(property "Value" "MDT420B01411" (at 464.82 48.260000000000005 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 464.82 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MDT420B01411" (at 464.82 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Amphenol Communications Solutions" (at 464.82 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.amphenol-cs.com/product/mdt420b01411.html" (at 464.82 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Contact Rating" "1A/power contact continuous at 25C, <=30C rise; hot derating and sharing require qualification" (at 464.82 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Footprint Hold" "Exact CMDT420X0X411 Rev A land pattern and retention pads required; do not reuse TE 2199119 footprint" (at 464.82 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "J2001") (unit 2))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "J2001") (unit 2)))))(no_connect (at 441.96 66.04) (uuid "5253cf3a-ed66-5e0b-b103-0f42e5b23294"))(no_connect (at 441.96 68.58) (uuid "c9330cb7-a154-5c37-b3c2-7b928f61bc8c"))(no_connect (at 441.96 71.12) (uuid "1a1f1acb-cd56-5ef6-bc4b-6dfe5ad8f585"))(no_connect (at 441.96 73.66) (uuid "1fb40caa-d8c1-513c-8078-9eea4e632982"))(no_connect (at 441.96 76.2) (uuid "8e1ae636-65d4-5af3-b8f7-53502754d0a7"))(no_connect (at 441.96 78.74) (uuid "6ed36cfe-0e82-5158-a17a-00bd3c9feaec"))(no_connect (at 441.96 81.28) (uuid "745c7de5-f945-56c6-b1ce-4efeec501ffa"))(no_connect (at 441.96 83.82) (uuid "4f6ee74c-cbe8-5a6c-acb8-0e70f339ae8b"))(no_connect (at 441.96 86.36) (uuid "9923a6a5-6c1a-5858-bd8f-1a4ec19e6d6d"))(no_connect (at 441.96 88.9) (uuid "5c8d78f0-58f8-5445-bfa0-754fc90e155c"))(no_connect (at 441.96 91.44) (uuid "d65a8b4e-b84a-5580-a091-50d5199ccce7"))(no_connect (at 441.96 93.98) (uuid "0b8326ce-41ad-54a7-b0b3-40fc06ffb3f1"))(no_connect (at 441.96 96.52) (uuid "05027f44-be71-5a09-963e-a2624610012f"))(no_connect (at 441.96 99.06) (uuid "f0f4c4d8-5427-5519-aeb5-5f48515825d5"))(no_connect (at 441.96 101.6) (uuid "19db1906-741f-50d7-aa2b-d09c81757d6d"))(no_connect (at 441.96 104.14) (uuid "f202f89a-a10a-5a7f-a47f-ec8e4cf202ae"))(no_connect (at 441.96 106.68) (uuid "0d085d8c-32bf-55e8-a980-87d2a2493094"))(no_connect (at 487.68 66.04) (uuid "d4107644-cfa0-52ae-8bcf-3013980038a1"))(no_connect (at 487.68 68.58) (uuid "cfecff48-0d39-5865-9c08-cd14f8b5b859"))(no_connect (at 487.68 71.12) (uuid "3d101976-6cf5-5872-aa93-333f9756d5bb"))(no_connect (at 487.68 73.66) (uuid "9838b94c-1687-52a4-b62e-22f544c8836e"))(no_connect (at 487.68 76.2) (uuid "7c9285fb-2b06-5659-8da9-225915b529af"))(no_connect (at 487.68 78.74) (uuid "42c42a69-f946-56ae-a681-b822b0ec07c2"))(no_connect (at 487.68 81.28) (uuid "0727073c-278c-5cfc-841b-d3c7cbb8fa8f"))(no_connect (at 487.68 83.82) (uuid "28d5fefe-d1ab-546e-b39f-f08ba562bb43"))(no_connect (at 487.68 86.36) (uuid "5d19d89e-8c90-5375-a807-65b43288d341"))(no_connect (at 487.68 88.9) (uuid "77ecd4fb-9b6a-54e5-bf06-6dc0dc8b2ba5"))(no_connect (at 487.68 91.44) (uuid "22be6c52-49c9-5743-b40b-e66556417f9d"))(no_connect (at 487.68 93.98) (uuid "7a650389-ccd9-50fe-a30b-7cd7a376aea4"))(no_connect (at 487.68 96.52) (uuid "d9671275-5020-58ac-ae64-f646fd7dad2b"))(no_connect (at 487.68 99.06) (uuid "440a6906-670a-5842-a523-a6654b2761ed"))(no_connect (at 487.68 101.6) (uuid "86c8f307-6730-5de3-8885-db4b3f3585c7"))(no_connect (at 487.68 104.14) (uuid "02f1a504-965c-532d-8ed4-45bf965da458"))(no_connect (at 487.68 106.68) (uuid "418391d3-f4b6-5372-92ad-d041105f57dd"))(symbol (lib_id "Device:R_Small_US") (at 241.3 50.8 90) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "0445d7a5-cf84-592d-ba52-d31724fbb55d") (property "Reference" "R2011" (at 241.3 43.18 90) (effects (font (size 1.27 1.27))))(property "Value" "0R SIERRA ONLY / DNP" (at 241.3 45.72 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 241.3 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603JR-070RL" (at 241.3 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 241.3 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 241.3 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 241.3 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly Profile" "Sierra only; OMIT for every Quectel profile" (at 241.3 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2011") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2011") (unit 1)))))(wire (pts (xy 238.76 50.8) (xy 228.6 50.8)) (stroke (width 0) (type default)) (uuid "7c907a12-fb08-5708-b2d6-26d1f8564893"))(global_label "MODEM_VCC" (shape passive) (at 228.6 50.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "00c1da1f-8bde-5b9a-b0e2-cd07b5d27b93"))(wire (pts (xy 243.84 50.8) (xy 254.0 50.8)) (stroke (width 0) (type default)) (uuid "71bcbcce-dc2d-5088-919c-4d0a8df9c24e"))(global_label "M2_PIN24" (shape passive) (at 254.0 50.8 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "da0a366a-b9b3-5498-936d-eb4abf068d2e"))(symbol (lib_id "Device:R_Small_US") (at 241.3 101.6 90) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "65f474fc-ec4d-5f10-af53-5a05cebd18c6") (property "Reference" "R2012" (at 241.3 93.97999999999999 90) (effects (font (size 1.27 1.27))))(property "Value" "0R SIERRA ONLY / DNP" (at 241.3 96.52 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 241.3 101.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603JR-070RL" (at 241.3 101.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 241.3 101.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 241.3 101.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 241.3 101.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly Profile" "Sierra only; OMIT for every Quectel profile" (at 241.3 101.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2012") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2012") (unit 1)))))(wire (pts (xy 238.76 101.6) (xy 228.6 101.6)) (stroke (width 0) (type default)) (uuid "ac86bdc9-e814-5124-8884-159ef6ed2717"))(global_label "MODEM_VCC" (shape passive) (at 228.6 101.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "27c2b862-85e8-545b-8382-26611f428dc5"))(wire (pts (xy 243.84 101.6) (xy 254.0 101.6)) (stroke (width 0) (type default)) (uuid "334a8d8e-7a32-582d-845e-28d27f9f0a3f"))(global_label "M2_PIN38" (shape passive) (at 254.0 101.6 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a5a5c6ea-467b-5b0b-a2b5-b6b1c0d52653"))(symbol (lib_id "Device:R_Small_US") (at 241.3 152.39999999999998 90) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "ad11e51d-8252-5474-bdb0-8b69afea6311") (property "Reference" "R2013" (at 241.3 144.77999999999997 90) (effects (font (size 1.27 1.27))))(property "Value" "0R SIERRA ONLY / DNP" (at 241.3 147.31999999999996 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 241.3 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603JR-070RL" (at 241.3 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 241.3 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 241.3 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 241.3 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly Profile" "Sierra only; OMIT for every Quectel profile" (at 241.3 152.39999999999998 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2013") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2013") (unit 1)))))(wire (pts (xy 238.76 152.4) (xy 228.6 152.4)) (stroke (width 0) (type default)) (uuid "5434547b-1a48-52de-8979-9b529bd45a4b"))(global_label "MODEM_VCC" (shape passive) (at 228.6 152.4 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b84edc6a-528b-5dd5-886b-bd6a53a5766c"))(wire (pts (xy 243.84 152.4) (xy 254.0 152.4)) (stroke (width 0) (type default)) (uuid "5b1488c4-96e8-5698-9ef4-deb6debbb9dc"))(global_label "M2_PIN68" (shape passive) (at 254.0 152.4 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8d8b77de-1075-5fb1-a6ee-74e672fa8c92"))(symbol (lib_id "Device:R_Small_US") (at 370.84 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "32f3f984-c41e-511b-bfb3-22a3bccb937e") (property "Reference" "R2014" (at 379.72999999999996 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 379.72999999999996 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 370.84 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 370.84 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 370.84 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 370.84 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 370.84 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2014") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2014") (unit 1)))))(wire (pts (xy 370.84 53.34) (xy 370.84 43.18)) (stroke (width 0) (type default)) (uuid "ed1a90cc-8f03-52dd-8d90-84933fd79e66"))(global_label "MODEM_VCC" (shape passive) (at 370.84 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7b7da9dd-9751-5417-9bb5-c25f061987bb"))(wire (pts (xy 370.84 58.42) (xy 370.84 68.58)) (stroke (width 0) (type default)) (uuid "5c7a1cf5-70ff-51a3-8c2e-4c560d15f42d"))(global_label "SIERRA_USB_SELECT_1V8" (shape passive) (at 370.84 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b8381e9c-e9e5-5493-b8b6-7fa3769f5b52"))(symbol (lib_id "Device:R_Small_US") (at 370.84 111.76 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "815383aa-8e41-581f-b1e0-93a75d1c92bf") (property "Reference" "R2015" (at 379.72999999999996 110.49000000000001 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 379.72999999999996 113.03 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 370.84 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 370.84 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 370.84 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 370.84 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 370.84 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2015") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2015") (unit 1)))))(wire (pts (xy 370.84 109.22) (xy 370.84 99.06)) (stroke (width 0) (type default)) (uuid "3b25e56c-1a18-5df5-bd1a-e1bc980a8cc6"))(global_label "SIERRA_USB_SELECT_1V8" (shape passive) (at 370.84 99.06 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7fcc5997-34c4-5e5c-926b-f8d59578d12c"))(wire (pts (xy 370.84 114.3) (xy 370.84 124.46)) (stroke (width 0) (type default)) (uuid "726a46bf-1b5d-5f18-9fbd-0dd1064ea70e"))(global_label "GND" (shape passive) (at 370.84 124.46 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5135e3ea-aa18-5fce-a556-3e889b3eba41"))(symbol (lib_id "Device:R_Small_US") (at 241.3 203.2 90) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "27e8037c-b9b2-5489-b902-6959dbccc395") (property "Reference" "R2016" (at 241.3 195.57999999999998 90) (effects (font (size 1.27 1.27))))(property "Value" "0R SIERRA ONLY / DNP" (at 241.3 198.11999999999998 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 241.3 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603JR-070RL" (at 241.3 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 241.3 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 241.3 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly Profile" "Sierra USB: populate. Quectel: omit; reserved pins stay floating" (at 241.3 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2016") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2016") (unit 1)))))(wire (pts (xy 238.76 203.2) (xy 228.6 203.2)) (stroke (width 0) (type default)) (uuid "d3c2452f-1035-5088-bf69-6edd7144956f"))(global_label "SIERRA_USB_SELECT_1V8" (shape passive) (at 228.6 203.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d77cb91a-2def-5a65-ad38-c193d4e8da79"))(wire (pts (xy 243.84 203.2) (xy 254.0 203.2)) (stroke (width 0) (type default)) (uuid "f10a6c79-6f86-5ec0-8bde-29d376456475"))(global_label "M2_PIN20" (shape passive) (at 254.0 203.2 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a502ef97-e636-56e4-9293-1f4e18b21c6a"))(symbol (lib_id "Device:R_Small_US") (at 241.3 254 90) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "93a5ffa0-412a-5163-8ff6-748b6f527185") (property "Reference" "R2017" (at 241.3 246.38 90) (effects (font (size 1.27 1.27))))(property "Value" "0R SIERRA ONLY / DNP" (at 241.3 248.92 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 241.3 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603JR-070RL" (at 241.3 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 241.3 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 241.3 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly Profile" "Sierra USB: populate. Quectel: omit; reserved pins stay floating" (at 241.3 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2017") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2017") (unit 1)))))(wire (pts (xy 238.76 254.0) (xy 228.6 254.0)) (stroke (width 0) (type default)) (uuid "c0ba1f02-23be-54f2-9f63-7e2d5f491064"))(global_label "MODEM_VCC" (shape passive) (at 228.6 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a7618a85-0b0b-5fb4-8b75-974c3d1897f1"))(wire (pts (xy 243.84 254.0) (xy 254.0 254.0)) (stroke (width 0) (type default)) (uuid "b9a1c51f-0d1b-529d-a123-d1ecd4066d96"))(global_label "M2_PIN22" (shape passive) (at 254.0 254.0 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a049ce2d-a4ae-5c8b-ac13-7987f1085372"))(symbol (lib_id "Device:R_Small_US") (at 53.34 203.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3a06cdc6-b930-5625-af15-c2c6f430b7cd") (property "Reference" "R2018" (at 62.230000000000004 201.92999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 62.230000000000004 204.47 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 53.34 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 53.34 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 53.34 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 53.34 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 53.34 203.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2018") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2018") (unit 1)))))(wire (pts (xy 53.34 200.66) (xy 53.34 190.5)) (stroke (width 0) (type default)) (uuid "bead2223-9c22-5cb8-a697-7fcca05b0fc2"))(global_label "MODEM_VCC" (shape passive) (at 53.34 190.5 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c33e5161-85c5-5a00-ac82-e78c777cd6a2"))(wire (pts (xy 53.34 205.74) (xy 53.34 215.9)) (stroke (width 0) (type default)) (uuid "794d278d-e1a9-56e2-a590-eac02e895731"))(global_label "MODEM_OFF_N" (shape passive) (at 53.34 215.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "212183cd-4316-50d6-8db3-436d9d257564"))(text "Default assembly: R2011/12/13/16/17 DNP (Quectel). NEVER feed Quectel pins 24,38,68.\nSierra USB profile: fit all five links; pins 24/38/68 add VCC, 20 selects USB, 22 detects VBUS.\nPin 20 divider is powered by modem VCC; include module pulldown in level verification.\nRESET uses module internal 1.8V pull-up; Q301/Q302 only sink reset/power-off signals.\nAll unused PCIe, coexistence, SIM2, antenna control and configuration contacts float.\nNo host drive before valid rail delay. No mmWave antenna power hardware is captured.\nEvery profile remains on release hold pending current controlled module guide and power envelope." (at 25.4 335.28 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1e6ad520-7805-511b-856f-b99e9a008100"))(symbol (lib_id "Appliance:NANO_SIM_1042240820") (at 421.64 238.76 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "40bff44e-d710-5932-be16-509686570cd5") (property "Reference" "J2002" (at 421.64 210.82 0) (effects (font (size 1.27 1.27))))(property "Value" "1042240820" (at 421.64 213.35999999999999 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:SIM-SMD_1042240820" (at 421.64 238.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "1042240820" (at 421.64 238.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Molex" (at 421.64 238.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C585349" (at 421.64 238.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/104/104224/1042240820_sd.pdf" (at 421.64 238.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Temperature Range" "-25 to +85C; broader product range requires alternate connector" (at 421.64 238.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Usage" "Insert/remove only with modem off; SIM detect disabled; auxiliary contacts 7/8 unused" (at 421.64 238.76 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "J2002") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "J2002") (unit 1)))))(wire (pts (xy 416.56 256.54) (xy 416.56 266.7)) (stroke (width 0) (type default)) (uuid "22a362e8-86bf-5f77-82bb-b25a07cee5b0"))(wire (pts (xy 419.1 256.54) (xy 419.1 266.7)) (stroke (width 0) (type default)) (uuid "6f52ddf0-b3a3-5a64-bd8e-889610d31c9b"))(wire (pts (xy 421.64 256.54) (xy 421.64 266.7)) (stroke (width 0) (type default)) (uuid "bc43098a-afa3-5e91-8b9e-2e303ab9ec12"))(wire (pts (xy 424.18 256.54) (xy 424.18 266.7)) (stroke (width 0) (type default)) (uuid "82b67519-9f2f-5e72-9e13-f2c5ea92afef"))(wire (pts (xy 426.72 256.54) (xy 426.72 266.7)) (stroke (width 0) (type default)) (uuid "7e6c7372-8b87-5ebf-bfc6-ad9d4807dfb6"))(wire (pts (xy 416.56 266.7) (xy 419.1 266.7)) (stroke (width 0) (type default)) (uuid "a328f151-074a-53e4-bd15-e66affbc9e90"))(wire (pts (xy 419.1 266.7) (xy 421.64 266.7)) (stroke (width 0) (type default)) (uuid "9e9c127e-5963-5dca-8346-0cdb83f8e0a3"))(wire (pts (xy 421.64 266.7) (xy 424.18 266.7)) (stroke (width 0) (type default)) (uuid "212822e6-6fc7-5bac-9532-b50c43142392"))(wire (pts (xy 424.18 266.7) (xy 426.72 266.7)) (stroke (width 0) (type default)) (uuid "5a4b77d2-be17-5f3e-bb5f-d497c687bf0a"))(global_label "GND" (shape passive) (at 416.56 266.7 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5f6700a5-b903-5486-9fb1-388927a85652"))(wire (pts (xy 398.78 231.14) (xy 388.62 231.14)) (stroke (width 0) (type default)) (uuid "b86e7910-b3c4-51f4-b99f-1817d6a93955"))(global_label "SIM1_VCC" (shape passive) (at 388.62 231.14 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0bac5d5b-85bf-5f66-9760-16b2d5608b15"))(wire (pts (xy 398.78 233.68) (xy 388.62 233.68)) (stroke (width 0) (type default)) (uuid "4c5ce016-2a83-5971-af32-9274e97d575a"))(global_label "SIM1_RESET" (shape passive) (at 388.62 233.68 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "397193cc-2722-5322-b392-c1f5b0176e81"))(wire (pts (xy 398.78 236.22) (xy 388.62 236.22)) (stroke (width 0) (type default)) (uuid "f89ee189-26b7-5b17-8f0c-390b779e2f38"))(global_label "SIM1_CLK" (shape passive) (at 388.62 236.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "643f845b-2053-5412-b279-bc570f5fe95c"))(no_connect (at 398.78 241.3) (uuid "2d4100a3-9b40-5951-84fb-402f789c27f0"))(wire (pts (xy 398.78 238.76) (xy 388.62 238.76)) (stroke (width 0) (type default)) (uuid "87b28693-d3c1-59db-8d8c-0aafea9b4815"))(global_label "SIM1_DATA" (shape passive) (at 388.62 238.76 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c86f8626-1a4c-5491-b665-af6f04ff3ef5"))(no_connect (at 398.78 243.84) (uuid "ad988c3e-33f7-5434-9fb7-54b7508a8f67"))(no_connect (at 398.78 246.38) (uuid "5e8dcdf2-05c6-58be-a0db-5f51561e16b6"))(symbol (lib_id "Device:R_Small_US") (at 63.5 411.48 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7aa66b1f-6cc9-5bf3-8a12-91188a55d2ed") (property "Reference" "R2021" (at 63.5 403.86 90) (effects (font (size 1.27 1.27))))(property "Value" "22R" (at 63.5 406.40000000000003 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 63.5 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0722RL" (at 63.5 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 63.5 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 63.5 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 63.5 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2021") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2021") (unit 1)))))(wire (pts (xy 60.96 411.48) (xy 50.8 411.48)) (stroke (width 0) (type default)) (uuid "ba6b8e50-fe2a-5a45-8ec8-973cdf91fc41"))(global_label "SIM1_RESET_MODEM" (shape passive) (at 50.8 411.48 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "620dbeda-2fab-5ae5-bf00-dcf621d4840f"))(wire (pts (xy 66.04 411.48) (xy 76.2 411.48)) (stroke (width 0) (type default)) (uuid "e069239d-4682-5ac8-8549-bbbc4ae1411e"))(global_label "SIM1_RESET" (shape passive) (at 76.2 411.48 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "771c1c84-776a-565f-9273-bcc32e8809c6"))(symbol (lib_id "Device:C_Small") (at 223.52 411.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "772aeb3e-4c9e-5d30-83ad-946b1bbcac45") (property "Reference" "C2021" (at 232.41000000000003 410.21000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "10pF" (at 232.41000000000003 412.75 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 223.52 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10C100JB8NNNC" (at 223.52 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 223.52 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 223.52 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "C0G" (at 223.52 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "C2021") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "C2021") (unit 1)))))(wire (pts (xy 223.52 408.94) (xy 223.52 398.78)) (stroke (width 0) (type default)) (uuid "b08fc7ad-9a32-5bfa-8a96-b807fb060a05"))(global_label "SIM1_RESET" (shape passive) (at 223.52 398.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6a32a824-d508-5665-ba92-40a46305a283"))(wire (pts (xy 223.52 414.02) (xy 223.52 424.18)) (stroke (width 0) (type default)) (uuid "bf16430c-1b83-5245-ba7d-fb3c7a8fa0d1"))(global_label "GND" (shape passive) (at 223.52 424.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a8798b95-f126-51c4-b207-cf47da8a08b6"))(symbol (lib_id "Device:R_Small_US") (at 63.5 462.28 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2295ee89-e8bd-50f7-8dfa-f8a1e01ce10b") (property "Reference" "R2022" (at 63.5 454.65999999999997 90) (effects (font (size 1.27 1.27))))(property "Value" "22R" (at 63.5 457.2 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 63.5 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0722RL" (at 63.5 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 63.5 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 63.5 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 63.5 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2022") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2022") (unit 1)))))(wire (pts (xy 60.96 462.28) (xy 50.8 462.28)) (stroke (width 0) (type default)) (uuid "1a480f27-a020-543c-ad16-fa6b536d600a"))(global_label "SIM1_CLK_MODEM" (shape passive) (at 50.8 462.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1d718f86-055a-5f44-8e60-5441c1b848eb"))(wire (pts (xy 66.04 462.28) (xy 76.2 462.28)) (stroke (width 0) (type default)) (uuid "08e71ca0-5039-590b-a6f2-6472524c792d"))(global_label "SIM1_CLK" (shape passive) (at 76.2 462.28 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "66a19e3c-b082-5bef-9ae5-ead2c954d6e2"))(symbol (lib_id "Device:C_Small") (at 223.52 462.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e475f153-304c-5fdc-a2a4-da0cb32f848c") (property "Reference" "C2022" (at 232.41000000000003 461.01 0) (effects (font (size 1.27 1.27))))(property "Value" "10pF" (at 232.41000000000003 463.54999999999995 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 223.52 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10C100JB8NNNC" (at 223.52 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 223.52 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 223.52 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "C0G" (at 223.52 462.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "C2022") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "C2022") (unit 1)))))(wire (pts (xy 223.52 459.74) (xy 223.52 449.58)) (stroke (width 0) (type default)) (uuid "f59c2a78-0e48-55de-9ab5-58009d93d060"))(global_label "SIM1_CLK" (shape passive) (at 223.52 449.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b362bc80-b498-5c43-804b-5d012dd11e65"))(wire (pts (xy 223.52 464.82) (xy 223.52 474.98)) (stroke (width 0) (type default)) (uuid "7c8180ff-a17e-5150-88d0-fb967ef46c50"))(global_label "GND" (shape passive) (at 223.52 474.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4861b40a-4e6d-563a-94df-f9a67768846b"))(symbol (lib_id "Device:R_Small_US") (at 63.5 513.08 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "34e1a2a5-1b71-5c7b-b1ef-50bd79c4a58f") (property "Reference" "R2023" (at 63.5 505.46000000000004 90) (effects (font (size 1.27 1.27))))(property "Value" "22R" (at 63.5 508.00000000000006 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 63.5 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0722RL" (at 63.5 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 63.5 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 63.5 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 63.5 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2023") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2023") (unit 1)))))(wire (pts (xy 60.96 513.08) (xy 50.8 513.08)) (stroke (width 0) (type default)) (uuid "fbbe6e23-5dcb-5a3d-82d1-082ab61bf6b7"))(global_label "SIM1_DATA_MODEM" (shape passive) (at 50.8 513.08 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c84fc396-77a4-5c01-b3af-4f3d19449f90"))(wire (pts (xy 66.04 513.08) (xy 76.2 513.08)) (stroke (width 0) (type default)) (uuid "a28c651c-f790-570c-9570-985e55541a08"))(global_label "SIM1_DATA" (shape passive) (at 76.2 513.08 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "eb21487f-f17b-5fa4-b408-f7036f776089"))(symbol (lib_id "Device:C_Small") (at 223.52 513.08 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "43935565-b1fb-5ced-8b06-2847246c8d2e") (property "Reference" "C2023" (at 232.41000000000003 511.81000000000006 0) (effects (font (size 1.27 1.27))))(property "Value" "10pF" (at 232.41000000000003 514.35 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 223.52 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10C100JB8NNNC" (at 223.52 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 223.52 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 223.52 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "C0G" (at 223.52 513.08 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "C2023") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "C2023") (unit 1)))))(wire (pts (xy 223.52 510.54) (xy 223.52 500.38)) (stroke (width 0) (type default)) (uuid "5bbd0479-5b83-5d53-8959-186933085dcf"))(global_label "SIM1_DATA" (shape passive) (at 223.52 500.38 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "28a0e111-888f-57d4-acc3-5b4b0de84abb"))(wire (pts (xy 223.52 515.62) (xy 223.52 525.78)) (stroke (width 0) (type default)) (uuid "c1399eae-0eef-56cf-9701-e7abf359bc33"))(global_label "GND" (shape passive) (at 223.52 525.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "646e4a72-7082-5943-bd05-adde9874149c"))(symbol (lib_id "Device:R_Small_US") (at 142.24 411.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "af5886c9-29a4-5d70-bce1-eac84246edee") (property "Reference" "R2024" (at 151.13 410.21000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "15kR" (at 151.13 412.75 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 142.24 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0715KL" (at 142.24 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 142.24 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 142.24 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 142.24 411.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "R2024") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "R2024") (unit 1)))))(wire (pts (xy 142.24 408.94) (xy 142.24 398.78)) (stroke (width 0) (type default)) (uuid "34e4bf05-a3c6-5014-8e59-f09523f6d2cf"))(global_label "SIM1_VCC" (shape passive) (at 142.24 398.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b9f111a2-d5da-52aa-8f16-11174ed22224"))(wire (pts (xy 142.24 414.02) (xy 142.24 424.18)) (stroke (width 0) (type default)) (uuid "a045b321-205d-5d71-b766-88d644a09a1b"))(global_label "SIM1_DATA" (shape passive) (at 142.24 424.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8af07c04-0abf-5bc0-818d-3165c0774e93"))(symbol (lib_id "Device:C_Small") (at 142.24 482.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b900cffb-1259-5f6d-a400-fbae0a083b3e") (property "Reference" "C2024" (at 151.13 481.33000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 151.13 483.87 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 142.24 482.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 142.24 482.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 142.24 482.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 142.24 482.6 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "C2024") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "C2024") (unit 1)))))(wire (pts (xy 142.24 480.06) (xy 142.24 469.9)) (stroke (width 0) (type default)) (uuid "c202017b-2936-50a4-b003-38ad98507272"))(global_label "SIM1_VCC" (shape passive) (at 142.24 469.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6f811224-4092-5323-9f4b-dfdcbcb9e5e0"))(wire (pts (xy 142.24 485.14) (xy 142.24 495.3)) (stroke (width 0) (type default)) (uuid "918dd391-094a-58c9-962e-0a83e64146eb"))(global_label "GND" (shape passive) (at 142.24 495.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1f8c8bcb-f297-5dfd-bc9e-a73e6276511f"))(symbol (lib_id "Appliance:TPD4E02B04_DQA") (at 421.64 454.66 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "58098792-9f70-58cb-b100-27d1e10739cc") (property "Reference" "D2001" (at 421.64 426.72 0) (effects (font (size 1.27 1.27))))(property "Value" "TPD4E02B04DQAR" (at 421.64 429.26000000000005 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:USON-10_L2.5-W1.0-P0.50-BL" (at 421.64 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TPD4E02B04DQAR" (at 421.64 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 421.64 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C106794" (at 421.64 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf" (at 421.64 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement" "At SIM contacts, short ground return" (at 421.64 454.66 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "D2001") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "D2001") (unit 1)))))(wire (pts (xy 421.64 467.36) (xy 421.64 477.52)) (stroke (width 0) (type default)) (uuid "11a55562-f759-5d28-bda6-4ac0c2e72852"))(wire (pts (xy 424.18 467.36) (xy 424.18 477.52)) (stroke (width 0) (type default)) (uuid "822f9d1b-379b-5cc4-9ca8-6eb14f51e157"))(wire (pts (xy 421.64 477.52) (xy 424.18 477.52)) (stroke (width 0) (type default)) (uuid "96645a18-f846-52c3-87cb-77ba07bdbf07"))(global_label "GND" (shape passive) (at 421.64 477.52 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8353e096-4c54-5273-a6d7-e48064e9091c"))(wire (pts (xy 398.78 452.12) (xy 388.62 452.12)) (stroke (width 0) (type default)) (uuid "2d146bab-12d1-5cac-81c5-fcf9c47122a1"))(global_label "SIM1_RESET" (shape passive) (at 388.62 452.12 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "dbc03d0e-d41e-547d-80bd-b177956192bd"))(wire (pts (xy 398.78 454.66) (xy 388.62 454.66)) (stroke (width 0) (type default)) (uuid "a5daef3a-0cb4-50e0-a84a-3224def4d68c"))(global_label "SIM1_CLK" (shape passive) (at 388.62 454.66 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f574c1a5-d424-58a0-8c0e-fbe5dc52f239"))(wire (pts (xy 398.78 457.2) (xy 388.62 457.2)) (stroke (width 0) (type default)) (uuid "b2728a87-ec85-5976-8671-275408fd4d70"))(global_label "SIM1_DATA" (shape passive) (at 388.62 457.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e3e6d99a-f285-5fe7-b161-0f3617e2f7c0"))(wire (pts (xy 398.78 459.74) (xy 388.62 459.74)) (stroke (width 0) (type default)) (uuid "a25c9051-2499-541e-a5ec-f6af94edc4ef"))(global_label "SIM1_VCC" (shape passive) (at 388.62 459.74 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1021ca8f-448e-5987-927f-3a9f98391795"))(no_connect (at 444.5 452.12) (uuid "7fb4952e-5ed1-55b9-802d-138a02f92d00"))(no_connect (at 444.5 454.66) (uuid "168f04a3-52f3-5f6b-9f90-475a26e576bb"))(no_connect (at 444.5 457.2) (uuid "0a16703a-ce2c-5226-8369-e963ee620efb"))(no_connect (at 444.5 459.74) (uuid "f4dbd95b-b77a-50df-8337-9144e096cb04"))(symbol (lib_id "power:PWR_FLAG") (at 330.2 381 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "73496eb8-7883-5f35-968f-3dc3d6a0e8f7") (property "Reference" "#FLG2001" (at 330.2 381 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "PWR_FLAG" (at 330.2 377.19 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 330.2 381 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Source" "Modem internal SIM regulator through socket contact 36" (at 330.2 381 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "#FLG2001") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "#FLG2001") (unit 1)))))(wire (pts (xy 330.2 381.0) (xy 330.2 391.16)) (stroke (width 0) (type default)) (uuid "aa40ad4e-8aa1-595a-898e-ad4075c55871"))(global_label "SIM1_VCC" (shape passive) (at 330.2 391.16 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e4775adb-fe05-5c99-a781-5ec839e37292"))(text "SIM routing <=200mm and away from RF/SW; 22R/10pF and 15k follow RM520 reference.\nDisable AT+QSIMDET; keep modem SIM-detect contact 66 open. Sierra open means card present.\nValidate SIM ATR/retry behavior with card present/absent and each profile." (at 317.5 533.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0754f74b-ebc2-5e79-8610-69f6a7f5212d")))

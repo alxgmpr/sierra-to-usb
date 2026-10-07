@@ -205,4 +205,4 @@ Other profile-dependent contacts include USB VBUS sensing, PCIe disable, reset,
 SIM detect and coexistence lines. Manufacturer reference circuits and the current
 hardware revision must establish voltage levels, default pulls and sequencing.
 The shared USB and SIM pin locations alone do not qualify the full socket.
-No modem socket, SIM circuit or universal profile switching is implemented yet.
+The full engineering schematic now captures the modem socket, SIM and assembly-selectable profiles. See [schematic-completion.md](schematic-completion.md) for current pin/profile verification and release holds. No profile is qualified for hot interchange.

@@ -1,127 +1,157 @@
 #!/usr/bin/env python3
-"""Check appliance restart integration only; not full ERC or completion."""
+"""Validate full native appliance connectivity; report explicit release holds."""
+import argparse, csv, json, re, subprocess, tempfile
 from pathlib import Path
-import subprocess, tempfile, xml.etree.ElementTree as E
-root=Path(__file__).resolve().parents[1]
-with tempfile.TemporaryDirectory() as tmp:
-    path=Path(tmp)/'appliance.xml'
-    subprocess.run(['/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli','sch','export','netlist','--format','kicadxml','--output',str(path),str(root/'appliance.kicad_sch')],check=True)
-    tree=E.parse(path).getroot()
-    net=next(n for n in tree.findall('./nets/net') if n.get('name')=='MCU_PWRON_KICK')
-    pins={(n.get('ref'),n.get('pin')) for n in net.findall('node')}
-    assert pins=={('U201','43'),('R508','1')},pins
-    nets={n.get('name'):{(v.get('ref'),v.get('pin')) for v in n.findall('node')} for n in tree.findall('./nets/net')}
-    assert nets['3V3_MAIN']=={('C602','1'),('C603','1'),('L601','2'),('R601','1'),('U601','5'),('U501','22'),('U501','4'),('C519','1'),('C524','1'),('U501','57'),('C538','1'),('U801','1H18'),('C817','1'),('U902','4'),('C955','1')},nets['3V3_MAIN']
-    recovery=next(p for p in nets.values() if ('U201','4') in p)
-    assert not recovery & nets['3V3_MAIN']
-    assert ('U601','2') in nets['5V_MAIN'] and ('U501','66') in nets['5V_MAIN']
-    en=next(p for name,p in nets.items() if name.endswith('/MAIN3V3_EN'))
-    assert en=={('U601','8'),('R603','2'),('R604','1')},en
-    assert ('R603','1') in nets['5V_MAIN']
-    pg=next(p for name,p in nets.items() if name.endswith('/MAIN3V3_PG_5V'))
-    assert pg=={('U601','1'),('U602','2'),('R605','2'),('R606','1')},pg
-    assert ('U602','5') in recovery and ('C604','1') in recovery
-    assert nets['MAIN3V3_GOOD']=={('U602','4'),('U201','44')},nets['MAIN3V3_GOOD']
-    fb=next(p for name,p in nets.items() if name.endswith('/MAIN5V_FB'))
-    assert fb=={('U701','2'),('R702','2'),('R703','1')},fb
-    mode=next(p for name,p in nets.items() if name.endswith('/MAIN5V_MODE'))
-    assert mode=={('U701','10'),('R701','1')},mode
-    assert ('R702','1') in nets['5V_MAIN']
-    assert {('U701','3'),('U701','9'),('R701','2'),('R703','2')} <= nets['GND']
-    sw=next(p for name,p in nets.items() if name.endswith('/MAIN5V_SW'))
-    assert sw=={('U701','6'),('C701','2'),('L701','1')},sw
-    boot=next(p for p in nets.values() if ('U701','7') in p)
-    assert boot=={('U701','7'),('C701','1')},boot
-    ss=next(p for p in nets.values() if ('U701','5') in p)
-    assert ss=={('U701','5'),('C702','1')},ss
-    assert ('C702','2') in nets['GND']
-    assert nets['ISO_12V']=={('U701','8'),('C703','1'),('C704','1'),('C705','1'),('U401','2'),('U401','3'),('C401','1')},nets['ISO_12V']
-    assert {('C703','2'),('C704','2'),('C705','2')} <= nets['GND']
-    assert nets['MCU_MAIN5V_EN']=={('U201','45'),('R704','1')},nets['MCU_MAIN5V_EN']
-    main5en=next(p for p in nets.values() if ('U701','1') in p)
-    assert main5en=={('U701','1'),('R704','2'),('R705','1')},main5en
-    assert ('R705','2') in nets['GND']
-    assert nets['MAIN5V_GOOD']=={('U701','4'),('R706','2'),('U201','46')},nets['MAIN5V_GOOD']
-    assert ('R706','1') in recovery
-    assert {('L701','2'),('C706','1'),('C707','1')} <= nets['5V_MAIN']
-    assert {('C706','2'),('C707','2')} <= nets['GND']
-    assert nets['PMIC_I2C_SCL']=={('U501','1'),('R502','2'),('U801','AJ37')}
-    assert nets['PMIC_I2C_SDA']=={('U501','2'),('R503','2'),('U801','AK38')}
-    assert nets['PMIC_INT_N']=={('U501','7'),('R504','2'),('U801','1R19')}
-    assert nets['RK_RESET_N']=={('U501','67'),('R501','2'),('C513','1'),('U801','AG38'),('SW802','1'),('Q801','3')}
-    assert nets['PMIC_SLEEP']=={('U501','49'),('R505','1'),('U801','1P19')}
-    assert len({p for r,p in nets['GND'] if r=='U801'})==187
-    assert nets['VDD_LOGIC']=={('U501','13'),('L501','2'),('C501','1'),('C502','1'),('C503','1')}|{('U801',b) for b in ['1H7','1H8','1H9','1H10','1J7','1J10','1K7','1K10','1L7']}|{(f'C{n}','1') for n in range(825,832)}
-    assert nets['VDD_GPU']=={('U501','8'),('L502','2'),('C505','1'),('C506','1'),('C507','1')}|{('U801',b) for b in ['1L8','1L9','1M7','1M8','1M9']}|{(f'C{n}','1') for n in range(832,837)}
-    assert nets['VCC3V3_PMU']=={('R501','1'),('U501','31'),('C517','1'),('C518','1'),('R502','1'),('R503','1'),('R504','1'),('U801','1P16'),('U801','1N15'),('C811','1'),('C812','1')}
-    assert nets['VDDA0V9_PMU']=={('U501','20'),('C522','1'),('C523','1'),('U801','1N16'),('U801','1P17')}|{(f'C{n}','1') for n in [801, 802, 809, 810]}
-    assert nets['VCCA1V8_PMU']=={('U501','3'),('C525','1'),('C526','1'),('U801','1N18')}|{(f'C{n}','1') for n in [803, 804]}
-    assert nets['VDDA_0V9']=={('U501','21'),('C520','1'),('C521','1'),('U801','1H5')}|{(f'C{n}','1') for n in [805, 806]}|{('FB801','1'),('C813','1')}
-    assert nets['VCCA_1V8']=={('U501','5'),('C527','1'),('C528','1'),('U801','1H4')}|{(f'C{n}','1') for n in [807, 808]}|{('FB802','1'),('C814','1'),('U801','1D15'),('U801','1D16'),('C818','1'),('C819','1'),('R801','1')}
-    assert {(f'C{n}','2') for n in range(801,813)} <= nets['GND']
-    assert nets['USB_AVDD_0V9']=={('FB801','2'),('U801','1J17'),('C815','1')}
-    assert nets['USB_AVDD_1V8']=={('FB802','2'),('U801','1H16'),('C816','1')}
-    assert {('C813','2'),('C814','2'),('C815','2'),('C816','2'),('C817','2'),('C818','2'),('C819','2'),('C820','2')} <= nets['GND']
-    for ref in ['FB801','FB802']:
-        comp=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
-        fields={f.get('name'):f.text for f in comp.findall('./fields/field')}
-        assert fields['MPN']=='MPZ1608S121ATAH0' and fields['DCR Maximum']=='45mOhm'
-    assert {('SW801','2'),('SW802','2')} <= nets['GND']
-    assert nets['SARADC_BOOT_KEY']=={('U801','1D17'),('R801','2'),('C820','1'),('SW801','1'),('Q802','3')}
-    assert nets['MCU_PROCESSOR_RESET_ASSERT']=={('U201','21'),('R802','1')}
-    base=next(v for v in nets.values() if ('Q801','1') in v)
-    assert base=={('Q801','1'),('R802','2'),('R803','1')}
-    assert {('Q801','2'),('R803','2')} <= nets['GND']
-    assert nets['MCU_PROCESSOR_RECOVERY_ASSERT']=={('U201','42'),('R804','1')}
-    recovery_base=next(v for v in nets.values() if ('Q802','1') in v)
-    assert recovery_base=={('Q802','1'),('R804','2'),('R805','1')}
-    assert {('Q802','2'),('R805','2')} <= nets['GND']
-    assert nets['VDD_NPU']=={('L504','2'),('C541','1'),('C542','1'),('R512','1')}|{(f'C{n}','1') for n in range(821,825)}|{('U801',b) for b in ['1G15','1H14','1H15','1J14','1J15']}
-    assert {('C541','2'),('C542','2')}|{(f'C{n}','2') for n in range(821,825)} <= nets['GND']
-    assert {(f'C{n}','2') for n in range(825,847)} <= nets['GND']
-    core_ids=__import__('re').findall(r'\(uuid "([^\"]+)"\)',(root/'core-power.kicad_sch').read_text())
-    assert len(core_ids)==len(set(core_ids))
-    for ref,mpn in {**{f'C{n}':'CL10A475KA8NQNC' for n in [826,827,828,833,840,845,846]},**{f'C{n}':'CL10B104KA8NNNC' for n in [825,832,837,838,839,842,843,844]},**{f'C{n}':'CL32B226KAJNNNE' for n in [829,831,834,836]},**{f'C{n}':'CL31B106KAHNNNE' for n in [830,835,841]}}.items():
-        component=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
-        fields={f.get('name'):f.text for f in component.findall('./fields/field')}
-        assert fields['MPN']==mpn and fields['Voltage Rating']=='25V'
-    assert len(tree.findall('./components/comp'))==245
-    assert {('U901',r['ball']) for r in __import__('csv').DictReader((root/'reference/micron-ddr-electrical-review.csv').open()) if r['resolved_name']=='VSS'} <= nets['GND']
-    ram_rows=list(__import__('csv').DictReader((root/'reference/micron-ddr-electrical-review.csv').open()))
-    assert {p for p in nets['VCC_1V8'] if p[0]=='U901'}=={('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD1'}
-    assert {('U901','G2'),('U901','T2')} <= nets['GND']
-    assert nets['PMIC_SW3']=={('U501','25'),('L901','1')}
-    assert nets['DDR_FB']=={('U501','27'),('R901','2'),('R902','1')}
-    assert nets['VDD_DDR_1V1']=={('U501','26'),('L901','2'),('C901','1'),('C902','1'),('R901','1'),('R904','2')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDD2'}|{('U801',b) for b in ['1D5','1D6','1D7','1D8','1D9','1E4','1F4','1G4']}|{(f'C{n}','1') for n in range(837,842)}|{(f'C{n}','1') for n in range(913,933)}
-    assert {('C901','2'),('C902','2'),('C903','2'),('R902','2')} <= nets['GND']
-    assert {('U501','24'),('C903','1')} <= nets['5V_MAIN']
-    assert nets['VDD_DDR_0V6']=={('R903','1'),('R905','1'),('C959','1')}|{('U901',r['ball']) for r in ram_rows if r['resolved_name']=='VDDQ'}|{('U801',b) for b in ['1E6','1E7','1E9','1F5','1G5']}|{(f'C{n}','1') for n in range(842,847)}|{(f'C{n}','1') for n in range(933,955)}
-    bypass=list(__import__('csv').DictReader((root/'reference/ram-local-bypass-plan.csv').open()))
-    for row in bypass:
-        ref=row['reference'];assert (ref,'1') in nets[row['rail']] and (ref,'2') in nets['GND']
-        component=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
-        fields={f.get('name'):f.text for f in component.findall('./fields/field')}
-        assert component.findtext('value')==row['value']
-        assert fields['MPN']=={'100nF':'CL10B104KA8NNNC','10uF':'CL31B106KAHNNNE','22uF':'CL32B226KAJNNNE'}[row['value']]
-        assert fields['Voltage Rating']=='25V'
-    zq=next(p for p in nets.values() if ('U901','A5') in p)
-    assert zq=={('U901','A5'),('R903','2')}
-    assert nets['DDR_SOC_RZQ']=={('U801','1F3'),('R904','1')}
-    r904=next(c for c in tree.findall('./components/comp') if c.get('ref')=='R904')
-    assert {f.get('name'):f.text for f in r904.findall('./fields/field')}['MPN']=='RC0603FR-07120RL'
-    assert ('U902','2') in nets['GND'] and ('C955','2') in nets['GND']
-    for name,pin in [('DDR_VDDQ_SW','3')]:
-        assert nets[name]=={('U902',pin)}
-    assert nets['DDR_VDDQ_EN']=={('U902','1'),('R907','2'),('C960','1'),('R908','1')}
-    assert ('R907','1') in nets['VCC_1V8']
-    assert {('C960','2'),('R908','2')} <= nets['GND']
-    assert nets['DDR_VDDQ_FB']=={('U902','5'),('R905','2'),('R906','1'),('C959','2')}
-    assert ('R906','2') in nets['GND']
-    for ref,mpn in {'R905':'RC0603FR-072KL','R906':'RC0603FR-07100KL','C959':'CL10C101JB8NNNC','R907':'RC0603FR-0720KL','R908':'RC0603FR-071ML','C960':'CL10B104KA8NNNC'}.items():
-        comp=next(c for c in tree.findall('./components/comp') if c.get('ref')==ref)
-        assert {f.get('name'):f.text for f in comp.findall('./fields/field')}['MPN']==mpn
-    bus=list(__import__('csv').DictReader((root/'reference/ddr-bus-map.csv').open()))
-    assert len(bus)==65
-    for r in bus:
-        assert nets[r['net']]=={('U801',r['processor_ball']),('U901',r['ram_ball'])},(r,nets.get(r['net']))
-print('PASS: appliance restart GPIO connection and 245-component capture; not full ERC.')
+import xml.etree.ElementTree as E
+from capture import ROOT
+CLI='/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli'
+def export(path, output):
+ subprocess.run([CLI,'sch','export','netlist','--format','kicadxml','--output',str(output),str(path)],check=True,capture_output=True)
+ return E.parse(output).getroot()
+def validate(tree,directory):
+ C={c.get('ref'):c for c in tree.findall('./components/comp')}
+ N={n.get('name'):{(v.get('ref'),v.get('pin')) for v in n.findall('node')} for n in tree.findall('./nets/net')}
+ B={p:n for n,ps in N.items() for p in ps}
+ F=lambda ref:{f.get('name'):f.text for f in C[ref].findall('./fields/field')}
+ def on(ref,pin,net):assert B[(ref,pin)]==net,(ref,pin,B.get((ref,pin)),net)
+ def exact(net,*pins):assert N[net]=={tuple(p.split(':')) for p in pins},(net,N[net],pins)
+ def subset(net,*pins):assert {tuple(p.split(':')) for p in pins}<=N[net],(net,N[net],pins)
+ def nc(ref,pin):
+  name=B[(ref,pin)];assert name.startswith('unconnected-') and N[name]=={(ref,pin)},(ref,pin,name)
+ def connected(ref,mapping):
+  for net,pins in mapping.items():
+   for pin in pins.split():on(ref,pin,net)
+ assert len(C)==663,len(C)
+ assert len(B)==sum(len(p) for p in N.values()),'Physical pin appears in two nets'
+ for ref in C:
+  if ref in ['TP1101','TP1102','TP1103']:assert C[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
+  else:assert F(ref).get('MPN') and F(ref).get('Manufacturer'),ref
+ libs={(p.get('lib'),p.get('part')):{v.get('num') for v in p.findall('./pins/pin')} for p in tree.findall('./libparts/libpart')}
+ counts={'U801':565,'U901':200,'U1101':153,'U501':69,'U1001':20,'U1301':49,'U201':48,'U1701':21,'U1901':15,'U1902':10,'J2001':67,'J2002':12}
+ for ref,count in counts.items():
+  src=C[ref].find('libsource');numbers=libs[(src.get('lib'),src.get('part'))]
+  assert len(numbers)==count,(ref,len(numbers),count)
+  assert {p for r,p in B if r==ref}==numbers,(ref,'Unaccounted native contacts')
+ rows=list(csv.DictReader((ROOT/'pinmaps/processor-capture.csv').open()));assert len(rows)==565
+ for row in rows:
+  if row['net']:on('U801',row['ball'],row['net'])
+  else:nc('U801',row['ball'])
+ manufacturer=list(csv.DictReader((ROOT/'pinmaps/rk3566.csv').open()))
+ grounds={r['ball'] for r in manufacturer if re.fullmatch(r'(?:VSS|AVSS|AVSS1)_\d+',r['manufacturer_name']) or r['manufacturer_name'] in {'DDR_AVSS','PMUPLL_AVSS','SYSPLL_AVSS'}}
+ assert len(grounds)==187
+ assert {p for r,p in N['GND'] if r=='U801'}==grounds|{'1C17','1B18','1A19'}
+ ram=list(csv.DictReader((ROOT/'reference/micron-ddr-electrical-review.csv').open()));assert len(ram)==200
+ for name,net in [('VDD1','VCC_1V8'),('VDD2','VDD_DDR_1V1'),('VDDQ','VDD_DDR_0V6'),('VSS','GND')]:
+  for row in ram:
+   if row['resolved_name']==name:on('U901',row['ball'],net)
+ bus=list(csv.DictReader((ROOT/'reference/ddr-bus-map.csv').open()));assert len(bus)==65
+ for row in bus:exact(row['net'],f"U801:{row['processor_ball']}",f"U901:{row['ram_ball']}")
+ for row in csv.DictReader((ROOT/'reference/ram-local-bypass-plan.csv').open()):
+  on(row['reference'],'1',row['rail']);on(row['reference'],'2','GND')
+  assert C[row['reference']].findtext('value')==row['value']
+  assert F(row['reference'])['Voltage Rating']=='25V'
+ exact('DDR_VDDQ_SW','U902:3','L902:1');exact('DDR_VDDQ_FB','U902:5','R905:2','R906:1','C959:2')
+ subset('VDD_DDR_0V6','L902:2','C956:1','C957:1','C958:1','R903:1','R905:1','C959:1')
+ exact('DDR_VDDQ_EN','U902:1','R907:2','R908:1','C960:1')
+ exact('PMIC_SW3','U501:25','L901:1');exact('DDR_FB','U501:27','R901:2','R902:1')
+ on('U501','26','VDD_DDR_1V1');exact('DDR_SOC_RZQ','U801:1F3','R904:1')
+ connected('U501',{'5V_MAIN':'10 11 24 30 33 45 54 66','3V3_MAIN':'4 22 57','GND':'16 17 40 47 56 62 63 69','LOGIC_FB':'13','GPU_FB':'8','NPU_FB':'64','PMIC_CPU_EN':'60','VCC_1V8':'59','VCCA1V8_PMU':'3','VCCIO_SD':'29','VCC3V3_PMU':'31','VDDA0V9_PMU':'20','VCCA_1V8':'5','VDDA_0V9':'21'})
+ for pin in ['6','23','28','55','58']:
+  ps=N[B[('U501',pin)]];assert len(ps)==2 and any(r.startswith('C') and p=='1' for r,p in ps)
+ exact('MCU_PWRON_KICK','U201:43','R508:1')
+ subset('RK_RESET_N','U501:67','U801:AG38','Q801:3','Q1201:3','SW802:1','R501:2','C513:1')
+ exact('PMIC_I2C_SCL','U501:1','U801:AJ37','R502:2','U1001:A3');exact('PMIC_I2C_SDA','U501:2','U801:AK38','R503:2','U1001:B1')
+ connected('U1001',{'5V_MAIN':'D1 D2 E1 E2','GND':'A1 B2 B3 B4 C1 C2 C3 C4','CPU_SW':'D3 D4 E3 E4','CPU_FB':'A4','PMIC_CPU_EN':'A2'})
+ exact('CPU_FB','U1001:A4','R1401:2','C1441:2','R1411:2');on('R1411','1','VDD_CPU');on('L1001','2','VDD_CPU')
+ exact('MCU_MAIN5V_EN','U201:45','R704:1');exact('MAIN5V_GOOD','U701:4','R706:2','U201:46')
+ subset('MAIN3V3_GOOD','U602:4','U201:44','U2003:1');on('U602','5','+3V3')
+ exact(B[('U701','7')],'U701:7','C701:1');exact(B[('U701','6')],'U701:6','C701:2','L701:1')
+ connected('U701',{'ISO_12V':'8','GND':'3 9'});connected('U401',{'ISO_12V':'2 3'});on('U201','4','+3V3');on('U601','5','3V3_MAIN')
+ # Memory and host interfaces checked against manufacturer pin tables and reference.
+ for net,pin in {'EMMC_D0':'A3','EMMC_D1':'A4','EMMC_D2':'A5','EMMC_D3':'B2','EMMC_D4':'B3','EMMC_D5':'B4','EMMC_D6':'B5','EMMC_D7':'B6','EMMC_CMD':'M5','EMMC_CLK':'M6','EMMC_STROBE':'H5','EMMC_RESET_N':'K5'}.items():on('U1101',pin,net)
+ exact('EMMC_CLK_SOC','U801:A29','R1103:1');subset('EMMC_CLK','R1103:2','TP1101:1')
+ connected('J1201',{'GND':'5 6','RECOVERY_VBUS':'1','RECOVERY_DP_PORT':'3','RECOVERY_DM_PORT':'2'});nc('J1201','4')
+ assert not any(r in ['U401','U701'] for r,p in N['RECOVERY_VBUS'])
+ connected('U1301',{'GND':'40 49','ETH_0V95':'8 28 47','ETH_PCIE_0V95':'37','ETH_3V3':'29 43 46','ETH_ANALOG_0V95':'11 16 22','ETH_ANALOG_3V3':'15 19 33','ETH_XTAL_3V3':'34','ETH_CORE_EN':'6','ETH_PERST_N':'36','ETH_PCIE_RXP':'41','ETH_PCIE_RXN':'42','ETH_PCIE_TXP':'38','ETH_PCIE_TXN':'39','ETH_REFCLK_P':'44','ETH_REFCLK_N':'45'})
+ for pin in ['4','5','7']:nc('U1301',pin)
+ for ref,src,dst in [('C1601','PCIE_TXP_SOC','ETH_PCIE_RXP'),('C1602','PCIE_TXN_SOC','ETH_PCIE_RXN'),('C1603','ETH_PCIE_TXP','PCIE_RXP_SOC'),('C1604','ETH_PCIE_TXN','PCIE_RXN_SOC')]:on(ref,'1',src);on(ref,'2',dst)
+ for i,(ct,p,n,cp,cc,cn,rp,rn) in enumerate([('1','2','3','23','24','22','1','2'),('4','5','6','20','21','19','3','6'),('7','8','9','17','18','16','4','5'),('10','11','12','14','15','13','7','8')]):
+  connected('T1701',{f'ETH_CT{i}':ct,f'ETH_MDI{i}_P':p,f'ETH_MDI{i}_N':n,f'CABLE_MDI{i}_P':cp,f'CABLE_MDI{i}_N':cn,'POE_PAIR'+['12','36','45','78'][i]:cc})
+  on('J1701',rp,f'CABLE_MDI{i}_P');on('J1701',rn,f'CABLE_MDI{i}_N')
+ on('J1701','SH','CHASSIS')
+ connected('U1701',{'POE_VDD':'1','POE_VSS':'4 5 21','POE_RTN':'10 11 12','POE_VCIN':'15','POE_VCOUT':'14','POE_UVLO':'13'})
+ on('R1723','1','POE_VDD');on('R1723','2','POE_DEN');assert F('R1723')['MPN']=='CRCW060324K9FKEA'
+ for ref,pin,net in [('R1724','3','POE_CLSA'),('R1727','6','POE_CLSB'),('R1732','7','POE_REF')]:on(ref,'1',net);on(ref,'2','POE_VSS');on('U1701',pin,net)
+ for i,sig in enumerate(['TPH','TPL','BT']):
+  ref=f'U{1801+i}';on(ref,'2',f'POE_{sig}');on(ref,'3','GND');on(ref,'4',f'POE_{sig}_N');on('U201',str(22+i),f'POE_{sig}_N')
+ connected('U1901',{'ISO_12V':'4 5 6','GND':'2 3 15','MODEM_BUCK_SW':'11 12','MODEM_BUCK_FB':'7','MODEM_BUCK_BOOT':'13','MODEM_BUCK_COMP':'8','MODEM_BUCK_SS':'9','MODEM_BUCK_EN':'10','MODEM_BUCK_RT':'1','MODEM_BUCK_GOOD':'14'})
+ exact('MODEM_BUCK_SW','U1901:11','U1901:12','L1901:1','C1901:2');exact('MODEM_BUCK_BOOT','U1901:13','C1901:1')
+ exact('MODEM_BUCK_FB','U1901:7','R1901:2','R1902:1');on('R1901','1','MODEM_3V7_RAW');on('R1902','2','GND')
+ connected('U1902',{'MODEM_3V7_RAW':'5','MODEM_VCC':'6','GND':'8','MODEM_FUSE_EN':'1','MODEM_FUSE_OVLO':'2','MODEM_SWITCH_GOOD':'3','MODEM_FUSE_PGTH':'4','MODEM_FUSE_DVDT':'7','MODEM_FUSE_ILM':'9'});nc('U1902','10')
+ connected('U1903',{'MODEM_RAIL_GOOD':'1','GND':'2','+3V3':'3 6','MODEM_MON_CT':'4','MODEM_MON_SENSE':'5'})
+ exact('MODEM_MON_CT','U1903:4','R1926:2');on('R1926','1','+3V3')
+ connected('U1904',{'MCU_MODEM_POWER_EN':'2','GND':'3','MODEM_DISCHARGE_GATE':'4','+3V3':'5'})
+ connected('Q1901',{'MODEM_DISCHARGE_GATE':'1','GND':'2','MODEM_DISCHARGE_DRAIN':'3'});on('R1924','1','MODEM_VCC');on('R1924','2','MODEM_DISCHARGE_DRAIN')
+ connected('U201',{'MCU_MODEM_POWER_EN':'11','MODEM_RAIL_GOOD':'25','MODEM_SWITCH_GOOD':'26','MODEM_BUCK_GOOD':'27'})
+ connected('U2001',{'+3V3':'1 6 10','GND':'5 9 11 20 21','MODEM_USB_OE_N':'2','MODEM_TXP_AC':'3','MODEM_TXN_AC':'4','MODEM_USB_RXP':'7','MODEM_USB_RXN':'8','MODEM_TXP_PORT':'17','MODEM_TXN_PORT':'16','MODEM_RXP_PORT':'19','MODEM_RXN_PORT':'18'})
+ connected('U2002',{'+3V3':'10','GND':'5 9','MODEM_USB_OE_N':'6','MODEM_USB_DP':'8','MODEM_USB_DM':'7','MODEM_USB_DP_PORT':'1','MODEM_USB_DM_PORT':'2'})
+ connected('U2003',{'MAIN3V3_GOOD':'1','MODEM_RAIL_GOOD':'2','GND':'3','MODEM_USB_VALID':'4','+3V3':'5'})
+ for i,pol in enumerate(['P','N']):on(f'C{2001+i}','1',f'MODEM_USB_TX{pol}_SOC');on(f'C{2001+i}','2',f'MODEM_TX{pol}_AC')
+ connected('J2001',{'MODEM_VCC':'2 4 70 72 74','GND':'3 5 11 27 33 39 45 51 57 71 73','MODEM_OFF_N':'6','MODEM_RESET_N':'67','MODEM_USB_DP_PORT':'7','MODEM_USB_DM_PORT':'9','MODEM_TXN_PORT':'29','MODEM_TXP_PORT':'31','MODEM_RXN_PORT':'35','MODEM_RXP_PORT':'37','SIM1_RESET_MODEM':'30','SIM1_CLK_MODEM':'32','SIM1_DATA_MODEM':'34','SIM1_VCC':'36','M2_PIN20':'20','M2_PIN22':'22','M2_PIN24':'24','M2_PIN38':'38','M2_PIN68':'68'})
+ nc('J2001','66');connected('J2002',{'SIM1_VCC':'1','SIM1_RESET':'2','SIM1_CLK':'3','SIM1_DATA':'6','GND':'4 9 10 11 12'})
+ for pin in ['5','7','8']:nc('J2002',pin)
+ for pin,ref in [('24','R2011'),('38','R2012'),('68','R2013'),('20','R2016'),('22','R2017')]:
+  assert C[ref].find('property[@name="dnp"]') is not None,ref
+  on(ref,'2',f'M2_PIN{pin}')
+ exact('MODEM_RESET_N','Q301:3','J102:3','J2001:67');subset('MODEM_OFF_N','Q302:3','J102:4','J2001:6','R2018:2');on('R2018','1','MODEM_VCC')
+ default_dnp={r for r,c in C.items() if c.find('property[@name="dnp"]') is not None}
+ profiles=json.loads((ROOT/'reference/modem-assembly-profiles.json').read_text())
+ for profile in profiles:
+  populated=set(profile['populate_optional']);assert not profile['released'];graph={}
+  for ref,c in C.items():
+   if ref in default_dnp and ref not in populated:continue
+   if c.findtext('value').split()[0]!='0R':continue
+   aa,bb=B[(ref,'1')],B[(ref,'2')];graph.setdefault(aa,set()).add(bb);graph.setdefault(bb,set()).add(aa)
+  reachable={'MODEM_VCC'};pending=['MODEM_VCC']
+  while pending:
+   for nxt in graph.get(pending.pop(),set())-reachable:reachable.add(nxt);pending.append(nxt)
+  actual={pin for pin in ['2','4','24','38','68','70','72','74'] if B[('J2001',pin)] in reachable}
+  assert actual==set(profile['VCC_contacts']),(profile['model'],actual)
+  if profile['vendor']=='Quectel':assert not populated & {'R2011','R2012','R2013','R2016','R2017','C2036','C2037','C2038'}
+ # Prove TI retained net partitions; intentional deleted evaluation hardware is excluded.
+ golden=[]
+ for source in ['input','flyback']:
+  old=export(ROOT/f'reference/tida-import/{source}.kicad_sch',directory/f'poe-{source}.xml')
+  removed=({'T1','J1','J2','TP1','TP2','TP3','TP4','TP5'}|{f'{k}{n}' for k in 'RC' for n in range(1,7)}|{'R7','R8'}) if source=='input' else set()
+  rename=lambda r:re.sub(r'\d+$',lambda m:str(1700+int(m[0])),r)
+  live={c.get('ref') for c in old.findall('./components/comp') if c.get('ref') not in removed and rename(c.get('ref')) in C}
+  groups={frozenset((rename(n.get('ref')),n.get('pin')) for n in net.findall('node') if n.get('ref') in live) for net in old.findall('./nets/net')}-{frozenset()}
+  allpins=set().union(*groups);projected={frozenset(ps & allpins) for ps in N.values() if ps & allpins}
+  assert projected==groups,(source,'Native TI net partition changed',groups-projected,projected-groups)
+  golden.append({'source':source,'retained_components':len(live),'pins':len(allpins),'net_groups':len(groups)})
+ # Every assigned footprint must contain exactly the model's electrical pads.
+ holds={'U701','U801','U901','J1701','T1701','J2001'}
+ assert {r for r,c in C.items() if not c.findtext('footprint')}==holds
+ for ref,c in C.items():
+  fp=c.findtext('footprint')
+  if not fp:continue
+  lib,name=fp.split(':');base=ROOT if lib in ['Recovery','Appliance','PoE'] else Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints')
+  text=(base/(lib+'.pretty')/(name+'.kicad_mod')).read_text();pads={aa or bb for aa,bb in re.findall(r'\(pad (?:"([^\"]*)"|([^\s)]+))',text)}-{''}
+  src=c.find('libsource');assert pads==libs[(src.get('lib'),src.get('part'))],(ref,fp,'Pad identities differ')
+ for path in ROOT.glob('*.kicad_sch'):
+  ids=re.findall(r'\(uuid "([^\"]+)"\)',path.read_text());assert len(ids)==len(set(ids)),path
+ return {'date':'2026-10-07','scope':'Full appliance native connectivity. No PCB, manufacturing release or physical qualification.','components':len(C),'nets':len(N),'accounted_major_native_pins':counts,'manufacturer_DDR_pairs':len(bus),'TI_golden_topology':golden,'default_DNP':sorted(default_dnp),'footprint_release_holds':sorted(holds),'modem_profiles_released':0,'assigned_footprints_with_exact_pad_parity':len(C)-len(holds)}
+def main():
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path);p.add_argument('--kicad-cli',default=CLI);a=p.parse_args()
+ global_cli=a.kicad_cli
+ globals()['CLI']=global_cli
+ with tempfile.TemporaryDirectory() as temp:
+  directory=a.output or Path(temp);directory.mkdir(parents=True,exist_ok=True)
+  project=json.loads((ROOT/'appliance.kicad_pro').read_text());assert not project.get('erc',{}).get('erc_exclusions')
+  subprocess.run([CLI,'sch','erc','--severity-all','--exit-code-violations','--format','json','--output',str(directory/'erc.json'),str(ROOT/'appliance.kicad_sch')],check=True,capture_output=True)
+  erc=json.loads((directory/'erc.json').read_text());assert not any(sh.get('violations') for sh in erc['sheets'])
+  report=validate(export(ROOT/'appliance.kicad_sch',directory/'appliance.xml'),directory);report['ERC_violations']=0
+  (directory/'capture-report.json').write_text(json.dumps(report,indent=2)+'\n')
+  print(f"PASS: {report['components']} components, {report['nets']} nets, zero full ERC violations, native pin coverage, DDR map, TI topology, modem assembly isolation and assigned-footprint pad parity.")
+  print('Engineering capture complete. Six footprint release holds; four modem profiles and physical hardware remain unqualified.')
+if __name__=='__main__':main()

@@ -1,10 +1,16 @@
 # Block diagram and BOM qualification status
 
-Checked 2026-09-29 against the active three-sheet KiCad recovery schematic and
-the architecture requirements. **The block diagram is a feasibility map, not a
-qualified full-appliance circuit. The 27-component recovery BOM is a capture
-inventory, not a released procurement BOM.** No modem, PoE, NIC, power tree or
-packet processor is present in KiCad.
+Updated 2026-10-07: the [full engineering schematic](../hardware/appliance.kicad_sch)
+has 30 sheets / 663 components / 823 nets and zero full ERC violations. See the
+[current capture and release holds](schematic-completion.md) and
+[engineering BOM inventory](../hardware/review/2026-10-07/bom.csv).
+All major circuit blocks are captured. Six footprint reviews, current controlled
+modem guides, exact software tuples and physical validation remain open.
+No PCB exists; no modem or forwarding/recovery tuple is qualified.
+
+The dated feasibility and recovery-only BOM tables below are historical context,
+not the current capture inventory. Current native files and the completion page
+supersede descriptions of absent circuit blocks.
 
 ## Block diagram decision gates
 

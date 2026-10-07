@@ -1,0 +1,59 @@
+{
+  "basis": "TPS54620 SLVS949F sections 7.3.17/18 and 8.2.2.10; simplified current-mode model. Independent component network with eFuse and polymer branch.",
+  "limitations": [
+    "No slope compensation, parasitic L, capacitor aging, unknown modem capacitance, control-loop mode changes or nonlinear eFuse dynamics.",
+    "Raw MLCC 20\u201372.6uF is a sensitivity assumption; confirm minimum effective bank capacitance from vendor curves and bench.",
+    "Nominal transconductance values are not guaranteed process/temperature bounds.",
+    "Positive analytical margin does not establish physical stability, burst droop or thermal suitability."
+  ],
+  "compensation": {
+    "R_ohm": 1000,
+    "C_series_F": 1e-07,
+    "C_parallel_F": 1e-09
+  },
+  "corner_count": 576,
+  "worst_phase_corner": {
+    "gm_A_per_V": 12,
+    "raw_uF": 72.60000000000001,
+    "bulk_uF": 264.0,
+    "efuse_ohm": 0,
+    "bulk_ESR_ohm": 0,
+    "load_A": 0.05,
+    "switch_Hz": 400000.0,
+    "efuse_on": true,
+    "crossover_Hz": 2011.294414617533,
+    "phase_margin_deg": 50.20505243639187
+  },
+  "crossover_range_Hz": [
+    1897.8063026199247,
+    34637.85765860003
+  ],
+  "regulator_V_nominal": 3.704,
+  "regulator_resistor_reference_corners_V": [
+    3.6612158241758244,
+    3.746911951951952
+  ],
+  "efuse_OVLO_corners_V_excluding_input_leakage": [
+    3.9311909900990103,
+    4.180065757575758
+  ],
+  "rail_monitor_falling_corners_V_excluding_25nA_leakage": [
+    3.1780767594108026,
+    3.319396147211041
+  ],
+  "efuse_trip_corners_A_scaled_from_549R_table": [
+    5.269819148822709,
+    6.453784745599692
+  ],
+  "5A_efuse_max_drop_V": 0.22499999999999998,
+  "5A_efuse_max_loss_W": 1.125,
+  "connector": "MDT420B01411: 1A/power contact continuous at 25C in still air with <=30C rise. Hot/current-sharing qualification required.",
+  "discharge_100R_initial_W": 0.13719616,
+  "discharge_220uF_nominal_time_to_0V1_s": 0.07946396501511553,
+  "release_holds": [
+    "Current EM919x/EM92xx/RM551E controlled guides and model-specific peak/RF accessory budgets",
+    "Measure regulator loop with eFuse on/off and all fitted cap banks",
+    "Measure VCC at module contacts under RF burst, startup, fault and shutdown",
+    "Qualify connector and eFuse thermals; enforce negotiated PoE budget in firmware"
+  ]
+}

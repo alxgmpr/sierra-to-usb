@@ -1,30 +1,97 @@
-# Complete appliance schematic — in progress
+# Complete appliance schematic — engineering capture complete
 
-Authorized 2026-10-03. Work branch: `codex/complete-appliance-schematic`.
-The original dirty checkout was copied to the isolated worktree without changing
-its files. Prior recovery circuitry is retained. No procurement or fabrication.
+Updated 2026-10-07 on `codex/complete-appliance-schematic`. The original dirty
+checkout is preserved. The full native hierarchy has **30 sheets, 663 components,
+823 nets and zero all-severity ERC violations, with no ERC exclusions**.
+This completes the remaining connectivity capture. PCB layout, manufacturing
+release, modem profile release and physical qualification remain open.
 
-## Scope and completion evidence
+[KiCad root](../hardware/appliance.kicad_sch) ·
+[Review PDF](../hardware/review/2026-10-07/appliance.pdf) ·
+[BOM inventory](../hardware/review/2026-10-07/bom.csv) ·
+[Native validation report](../hardware/review/2026-10-07/capture-report.json)
 
-| Required block | Current authoritative state | Required before schematic completion |
-|---|---|---|
-| Recovery MCU, watchdog, SWD and reset outputs | 26-component recovery circuitry in four-sheet, 32-component supply-integrated capture; native connectivity verified; standalone recovery ERC now reports boundary labels for appliance-only signals | MCU pin audit closure; physical startup/reset behavior; target-domain interface integration |
-| Independent always-on supply | `hardware/always-on.kicad_sch`, 6 components, TPS62177DQCR, LPS4018-103MRC; integrated recovery hierarchy and PG fault net; typical capacitor bias reviewed | Guaranteed capacitor corners/aging and loop behavior; rail load; complete appliance hierarchy |
-| RK3566 / DDR / PMIC | RK809-5 registered 69-pin symbol; 56-component PMIC draft with native captured-net checks; 565-ball RK3566 table awaits user review | Complete PMIC capture/sequence/thermal budget; exact supported RAM and training route; processor symbol approval and complete capture/decoupling/clocks |
-| Main 5 V and 3.3 V supplies | Native 15-part TPS56837 main 5 V draft and 13-part MP2143 3.3 V draft; MCU enable/PG and shared ISO_12V captured | TPS56837 footprint approval, combined capacitor/compensation and startup/current/thermal budget closure; reviewed interface states |
-| External CPU supply | Missing; NanoPi reference uses I²C-controlled TCS4525 | Exact programmable regulator, boot voltage/OPP/driver compatibility, RK809 EXT_EN sequence, input/output bank and complete capture |
-| Boot storage and recovery | 16 GB native-mode A/B sizing proposal; Kingston exact candidate has lifecycle hold; storage not selected | Capacity budget, exact eMMC, SD/USB recovery circuit and boot strap audit |
-| 2.5GbE | RTL8125BG-CG remains candidate | Exact pin/reference circuit, clocks/rails/reset/PCIe coupling and 2.5G PoE-rated magnetics; symbol and footprint checks |
-| Isolated PoE | Archived TI TIDA-050023 schematic and BOM as candidate reference | Whole-appliance peak and startup budget, exact class, transformer/protection/feedback/MPS/allocation integration; isolation boundary audit |
-| Modem power | Requirements only | Voltage/current envelope per model, switch/eFuse/ramp/discharge, default-off controls and fault sensing |
-| EM9190 / EM9293 sockets and SIM | Older manufacturer PTS research; contacts 24/38/68 conflict with Quectel | Current controlled pin tables, complete per-model profile and power/control/SIM/USB3 capture |
-| RM520N-GL / RM551E-GL sockets and SIM | RM520 guide exists; current RM551 production guide still missing | Current controlled hardware guides and per-model pin/voltage/control/SIM/USB3 capture |
-| Full hierarchy and BOM | Draft appliance root exports 116 annotated components; major subsystem sheets remain absent | One integrated appliance root; exact MPN/manufacturer/footprint for every fitted component; BOM exported from native netlist |
-| Visual and electrical review | Always-on draft rendered and corrected; recovery tests rerun | All sheets and circuit crops inspected, native ERC and complete critical-net assertions, manufacturer pin fidelity, footprint pad parity |
+## Completed capture
 
-No PCB file exists. Do not start placement until the integrated schematic and
-exact parts meet the criteria above. Physical throughput, thermal/EMC/isolation,
-power interruption and unattended recovery remain separate qualification work.
+| Block | Captured behavior and evidence |
+|---|---|
+| Processor / DDR / PMIC | All 565 RK3566, 200 Micron RAM and 69 RK809 pins accounted for; 65 DDR nets independently checked; 187 documented processor grounds plus three unused SARADC inputs grounded. CPU, DDR/VDDQ, IO/analog filters, Kelvin feedback, local bypass, unused PMIC output capacitors and control interfaces connected. |
+| CPU / boot / recovery | Native 20-ball TCS4525 DVS supply, 16 GB ISSI eMMC with all 153 balls, 24 MHz SiTime oscillator, boot straps, physical MaskROM test pads, protected device-only recovery USB, health/UART isolation and thermal shutdown. |
+| Ethernet | RTL8125BG external-core variant, all 49 pads; independent 3.3/0.95 V rails, clock/reset/wake sequencing, 25 MHz crystal, 93LC46B EEPROM, PCIe coupling and separate filtered domains. HX4110NLT four-pair 2.5G/PoE magnetics, CAT6 RJ45, PHY ESD and DC-blocked Bob Smith termination. |
+| Isolated PoE | TI TIDA-050023 native input bridge and flyback preserved: 30 retained bridge parts / 66 pins / 14 net groups and 78 flyback parts / 180 pins / 38 groups match the original net partitions exactly. Adapted TPS2373 Class 6 PD, detection/MPS/primary bias, isolated 12 V output and optocoupled grant inputs. |
+| Modem / SIM | 3.704 V TPS54620 regulator, latched TPS259474 eFuse, independent delayed TPS3808 monitor, explicit discharge, 1 A/contact B-key socket selection, switched-domain open-collector reset/off, four assembly-profile maps, nano-SIM with protection, bulk/RF bypass and always-on USB2/USB3 isolation. |
+| Supervisor | Existing watchdog/SWD and default-off recovery controls retained. New GPIOs monitor PoE grant and three modem power states. Host and modem data connect only with valid supplies. |
+
+The default assembly has 13 DNP parts and 650 fitted component/PCB-feature rows.
+The BOM contains exact MPN/manufacturer fields for all 660 purchasable parts;
+three bare test pads are PCB features. All 657 assigned footprints have exact
+symbol-to-pad identity parity, including exposed and shell pads. This does not
+qualify land geometry, sourcing, temperature or physical performance.
+
+## Release holds and proof boundary
+
+1. **Six footprint assignments deliberately remain open**: U701 TPS56837 RPA,
+   U801 RK3566, U901 Micron RAM, T1701 HX4110NLT, J1701 RJE491881401 and J2001
+   MDT420B01411. Validate exact manufacturer lands, orientation, mask/paste and
+   retention before transferring to PCB. Existing BGA candidates only prove ball
+   identifiers/centers; substituting an unchecked footprint would hide the hold.
+2. **No modem profile is released.** Current EM919x Rev11 and EM92xx Rev7.2 downloads
+   require manufacturer login; RM551E-GL production hardware guidance is missing.
+   EM919x Rev5, EM92xx Rev1 and RM520N V1.0 support provisional capture. Confirm
+   exact hardware/firmware, all changed pins, timing, USB-mode selection, current
+   demand and RF accessories. mmWave antenna power hardware is outside this capture.
+3. **Voltage / current / physical qualification**: 5 A is a provisional modem burst
+   allocation, not a guaranteed demand envelope for all four models. The selected
+   socket is rated 1 A per power contact at 25 C; hot derating, contact sharing,
+   voltage drop and RF burst transients must be measured. The eFuse can dissipate
+   1.125 W at 5 A / maximum RON; thermal qualification is essential.
+4. **Isolation and software**: verify PoE load/MPS/startup/class grant, creepage,
+   dielectric/EMC, all regulator loops and effective capacitance, USB/PCIe SI,
+   actual Linux boot/DDR/DVS/storage/NIC drivers, unique MAC provisioning,
+   forwarding throughput and unattended recovery with every exact module tuple.
+   Cross-barrier HV MLCCs are not evidence of a certified safety assembly.
+
+Sierra stuffing adds R2011/12/13 (VCC to 24/38/68), R2016 (USB selection), R2017
+(VBUS sense), and C2036/37/38. Every Quectel profile omits all eight. The checker
+computes active zero-ohm reachability rather than trusting ERC's DNP netlist, and
+proves Sierra has eight VCC contacts while Quectel has five. SIM detection is
+unused; change the card only with modem power off.
+
+[Modem power analysis](../hardware/reference/modem-power-analysis.json) evaluates
+576 simplified current-mode sensitivity corners with eFuse on/off. The selected
+1k / 100nF / 1nF compensation has at least 50.2 degrees analytical phase margin
+in that model. It includes both conflicting nominal gmPS values in TI's document.
+It excludes slope compensation, actual process bounds, parasitics, unknown module
+capacitance and nonlinear eFuse behavior. The 20–72.6 uF raw MLCC range is an
+assumption for sensitivity, not a guaranteed capacitor specification. Bench loop,
+soft-start, burst droop and thermal tests remain required.
+
+The independent MCU must enforce Class 6 grant 0/1/0 before enabling high-current
+loads and cut them on loss of grant. USB muxes use always-on power and a hardware
+AND of valid host power and delayed modem power. The delayed release is 180–420 ms;
+firmware must apply profile-specific reset/off timing, wait at least one second
+between power cycles and bench-verify rail discharge. Do not automatically retry
+latched faults without diagnosing them.
+
+## Reproduction and review
+
+```sh
+python3 hardware/tools/build_capture.py
+python3 hardware/check.py --output /tmp/sierra-appliance-check
+python3 hardware/tools/review_modem_power.py --output /tmp/modem-power-analysis.json
+python3 hardware/tools/export_appliance.py --output /tmp/sierra-appliance-review
+```
+
+All 30 PDF sheets were rendered and inspected, including new modem/SIM circuitry.
+Deterministic regeneration and native manufacturer-symbol/ball-center checks are
+part of the recorded validation. No PCB/DRC/Gerber or physical test result is
+implied. The native source archive and document hashes are retained.
+
+## Dated research history
+
+The sections below preserve earlier decisions and incomplete snapshots. Counts,
+missing-block descriptions and ERC results below are historical; the engineering
+capture and release holds above are authoritative.
 
 ## Current verification snapshot — 2026-10-04
 

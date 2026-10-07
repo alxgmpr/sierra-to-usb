@@ -68,7 +68,7 @@ def note(text,p,size=1.27):items.append(f'(text "{text}" (at {p[0]} {p[1]} 0) (e
 
 raw=(ROOT/'Recovery.kicad_sym').read_text()
 used['Recovery:TPS56837RPAR']=block(raw,raw.index('(symbol "TPS56837RPAR"')).replace('(symbol "TPS56837RPAR"','(symbol "Recovery:TPS56837RPAR"',1)
-add('Recovery','TPS56837RPAR','U701','TPS56837RPAR',101.6,76.2,fields={'MPN':'TPS56837RPAR','Manufacturer':'Texas Instruments','LCSC':'C22428366','Qualification':'Footprint pending review; incomplete power path'})
+add('Recovery','TPS56837RPAR','U701','TPS56837RPAR',101.6,76.2,fields={'MPN':'TPS56837RPAR','Manufacturer':'Texas Instruments','LCSC':'C22428366','Qualification':'Power path captured; RPA land pattern and electrical qualification pending'})
 items[-1]=items[-1].replace('(at 101.6 61.2 0)','(at 88.9 53.34 0)').replace('(at 101.6 64.2 0)','(at 88.9 56.388 0)')
 # MODE resistor directly below the control pin.
 wire((88.9,81.28),(66.04,81.28));wire((66.04,81.28),(66.04,101.6))
@@ -121,9 +121,11 @@ for ref,x in [('C706',175.26),('C707',205.74)]:
  items[-1]=re.sub(r'(\(property "Value" "22uF / 25V" \(at )[^)]*',rf'\g<1>{x} 86.36 0',items[-1])
  wire((x,45.72),(x,55.88));wire((x,60.96),(x,73.66))
 junction((175.26,45.72));wire((175.26,73.66),(205.74,73.66));power('GND',(190.5,73.66),'#PWR708');junction((190.5,73.66))
-note('MAIN 5 V CONTROL DRAFT — INCOMPLETE',(35.56,25.4),1.524)
+note('MAIN 5 V CONTROL — ENGINEERING CAPTURE',(35.56,25.4),1.524)
 note('MODE: 500 kHz; high valley current limit option. Feedback: 4.992 V nominal.',(35.56,132.08))
 note('DRAFT: hot current margin, startup, input/output capacitance and loop stability unqualified.',(35.56,139.7))
-note('Power path captured. Regulator footprint awaits review; isolated PoE source unfinished.',(35.56,147.32))
+note('Power path captured. Regulator footprint, stability and thermal release remain pending.',(35.56,147.32))
+# Switching output is behind a passive filter inductor.
+power('PWR_FLAG',(205.74, 45.72),'#FLG701')
 (ROOT/'main5v.kicad_sch').write_text('(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A4") (lib_symbols '+''.join(used.values())+') '+''.join(items)+')\n')
 print('Generated main 5 V control draft with fifteen exact-MPN components.')

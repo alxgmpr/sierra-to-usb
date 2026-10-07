@@ -3,7 +3,7 @@
 Multi-gigabit WAN design study for **EM9190, EM9293, RM520N-GL and
 RM551E-GL**. No CM4/CM5. **RK3566 is the selected Linux packet-processor
 candidate for evaluation**, with an independent STM32 recovery MCU. The exact
-modem tuples and complete appliance remain unqualified. Work is on `master`.
+modem tuples and complete appliance remain unqualified. The complete engineering capture is on `codex/complete-appliance-schematic`.
 
 **Feasibility gate remains open.** Manufacturer documentation establishes Sierra
 PCIe endpoint/USB-device operation, not modem-hosted Ethernet. A switch does not
@@ -20,18 +20,18 @@ exact firmware and NIC qualification. No modem combination is qualified.
 - [Actual KiCad recovery schematic](hardware/recovery.kicad_sch)
 - [Implemented circuit, checks and outstanding qualification](hardware/README.md)
 
-The three-sheet schematic implements an independent MCU/watchdog/reset subsystem.
-It is **not the complete appliance**: PoE, modem socket/SIM, high-current power and
-Ethernet capture remain gated by architecture and exact manufacturer evidence.
-Native ERC and critical-net checks pass; no firmware or hardware qualification.
-No PCB layout, procurement or fabrication outputs are included.
+The full [30-sheet appliance schematic](hardware/appliance.kicad_sch) now captures
+processor/RAM/eMMC, all supplies, 2.5GbE, isolated PoE, modem/SIM and recovery
+interfaces: 663 components, 823 nets, **zero full ERC violations**.
+[Review PDF](hardware/review/2026-10-07/appliance.pdf) and
+[completion / release holds](docs/schematic-completion.md) are available.
+Six footprint reviews, current modem guides and physical/software qualification
+remain open. There is no PCB layout or manufacturing release.
 
 Previous designs remain only in Git history; none were restored for this work.
 
-## Full schematic work — 2026-10-03
+## Full schematic work — 2026-10-07
 
-Complete appliance capture and exact parts selection are now authorized and in
-progress on `codex/complete-appliance-schematic`. See
-[completion criteria and live progress](docs/schematic-completion.md). The new
-[always-on supply draft](hardware/always-on.kicad_sch) passes native ERC and
-exact-net checks. It is not yet integrated into a complete appliance hierarchy.
+Complete appliance capture is saved on `codex/complete-appliance-schematic`,
+including the independent always-on supply and full recovery hierarchy. See
+[completion evidence and release holds](docs/schematic-completion.md).

@@ -60,7 +60,7 @@ def wire(a,b):
  items.append(f'(wire (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0) (type default)) (uuid "{uid("wire"+str(counter))}"))')
 def junction(p):items.append(f'(junction (at {p[0]} {p[1]}) (diameter 0) (color 0 0 0 0) (uuid "{uid("junction"+str(p))}"))')
 def label(name,p):
- if name in {'PMIC_I2C_SCL','PMIC_I2C_SDA','PMIC_SLEEP','VDD_LOGIC','VDD_GPU','VDD_NPU','VCC3V3_PMU','RK_RESET_N','VDDA0V9_PMU','VCCA1V8_PMU','VDDA_0V9','VCCA_1V8','PMIC_INT_N','PMIC_SW3','DDR_FB','VDD_DDR_1V1'}:
+ if name in {'VCC_1V8','VCCIO_SD','PMIC_CPU_EN','PMIC_I2C_SCL','PMIC_I2C_SDA','PMIC_SLEEP','VDD_LOGIC','VDD_GPU','VDD_NPU','VCC3V3_PMU','RK_RESET_N','VDDA0V9_PMU','VCCA1V8_PMU','VDDA_0V9','VCCA_1V8','PMIC_INT_N','NPU_FB','PMIC_SW3','LOGIC_FB','GPU_FB','DDR_FB','VDD_DDR_1V1'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "{uid("global"+name+str(p))}"))');return
  if name in {'5V_MAIN','3V3_MAIN','GND'}:
   items.append(f'(global_label "{name}" (shape passive) (at {p[0]} {p[1]} 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("global"+name+str(p))}"))');return
@@ -86,7 +86,7 @@ def terminal(n,net,direction):
  a=units[1][str(n)];b=(round(a[0]+direction*7.62,4),a[1]);wire(a,b);label(net,b)
  # Left-side label text must extend away from the body.
  if direction<0:items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
-for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1',1),(8,'VDD_GPU',-1),(13,'VDD_LOGIC',-1),(53,'PMIC_SW5',1),(59,'VCC_1V8',-1),(25,'PMIC_SW3',1),(27,'DDR_FB',-1),(65,'PMIC_SW4',1),(64,'NPU_FB',-1)]:
+for n,net,d in [(10,'5V_MAIN',0),(11,'5V_MAIN',0),(9,'PMIC_SW2',1),(12,'PMIC_SW1',1),(8,'GPU_FB',-1),(13,'LOGIC_FB',-1),(53,'PMIC_SW5',1),(59,'VCC_1V8',-1),(25,'PMIC_SW3',1),(27,'DDR_FB',-1),(65,'PMIC_SW4',1),(64,'NPU_FB',-1)]:
  if d:terminal(n,net,d)
  else:
   a=units[1][str(n)];b=(a[0],40.64);wire(a,b)
@@ -110,15 +110,15 @@ for channel,y,out,sense,cref in [(1,63.5,'VDD_LOGIC','VDD_LOGIC',501),(2,129.54,
  note(f'BUCK{channel}: '+('1.8V' if channel==5 else '0.9V')+' startup / 2.5A rated; 3 x 22uF output bank',(223.52 if channel==5 else 175.26,y-12.7))
 # NPU BUCK4: off at boot; software must program the intended voltage before enabling.
 a=units[1]['66'];wire(a,(a[0],33.02));label('5V_MAIN',(a[0],33.02))
-add('Device','C_Small','C533','22uF / 25V',365.76,47.32,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
-wire((365.76,44.78),(365.76,35.56));label('5V_MAIN',(365.76,35.56));wire((365.76,49.86),(365.76,58.42));power('GND',(365.76,58.42),'#PWR540')
+add('Device','C_Small','C533','22uF / 25V',365.76,48.26,fp='Capacitor_SMD:C_1210_3225Metric',fields=capfields)
+wire((365.76,45.72),(365.76,35.56));label('5V_MAIN',(365.76,35.56));wire((365.76,50.8),(365.76,58.42));power('GND',(365.76,58.42),'#PWR540')
 add('Device','L_Small','L504','0.47uH',398.78,35.56,90,fp='Inductor_SMD:L_Coilcraft_XxL4020',fields={'MPN':'XGL4020-471MEC','Manufacturer':'Coilcraft','LCSC':'C5837785'})
 wire((383.54,35.56),(396.24,35.56));label('PMIC_SW4',(383.54,35.56))
-wire((401.32,35.56),(492.76,35.56));label('VDD_NPU',(461.26,35.56))
-for ref,x,value,fp,fields in [('C541',430.78,'22uF / 25V','Capacitor_SMD:C_1210_3225Metric',capfields),('C542',461.26,'10uF / 25V','Capacitor_SMD:C_1206_3216Metric',{'MPN':'CL31B106KAHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C14860','Qualification':'NPU output bank; effective capacitance and loop stability pending'})]:
+wire((401.32,35.56),(492.76,35.56));label('VDD_NPU',(462.28,35.56))
+for ref,x,value,fp,fields in [('C541',431.8,'22uF / 25V','Capacitor_SMD:C_1210_3225Metric',capfields),('C542',462.28,'10uF / 25V','Capacitor_SMD:C_1206_3216Metric',{'MPN':'CL31B106KAHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C14860','Qualification':'NPU output bank; effective capacitance and loop stability pending'})]:
  add('Device','C_Small',ref,value,x,48.26,fp=fp,fields=fields)
  wire((x,35.56),(x,45.72));wire((x,50.8),(x,58.42));junction((x,35.56))
-wire((430.78,58.42),(461.26,58.42));power('GND',(430.78,58.42),'#PWR566')
+wire((431.8,58.42),(462.28,58.42));power('GND',(431.8,58.42),'#PWR566')
 add('Device','R_Small_US','R512','100R',492.76,48.26,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100RL','Manufacturer':'Yageo','LCSC':'C105588','Tolerance':'1%','Power Rating':'0.1W','Qualification':'NPU remote sense series resistor; NanoPi R3S reference sheet 14'})
 wire((492.76,35.56),(492.76,45.72));wire((492.76,50.8),(492.76,58.42));label('NPU_FB',(492.76,58.42))
 note('NPU BUCK4: 1.5A; startup OFF. Program 0.9V before enable. Local load bypass captured; qualification pending.',(360.68,22.86))
@@ -189,11 +189,11 @@ wire((185.42,317.5),(185.42,309.88));label('PMIC_SLEEP',(185.42,309.88));wire((1
 # VDC rising-edge startup sensing, referenced to main 5 V rather than raw PoE.
 a=units[3]['61'];b=(a[0]-7.62,a[1]);wire(a,b);label('PMIC_VDC',b);items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
 for ref,y in [('R506',307.34),('R507',330.2)]:
- add('Device','R_Small_US',ref,'100kR',260.35,y,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
-wire((260.35,304.8),(260.35,294.64));label('5V_MAIN',(260.35,294.64))
-wire((260.35,309.88),(260.35,327.66));junction((260.35,320.04));wire((260.35,320.04),(335.28,320.04));label('PMIC_VDC',(335.28,320.04))
+ add('Device','R_Small_US',ref,'100kR',259.08,y,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W','Voltage Rating':'75V'})
+wire((259.08,304.8),(259.08,294.64));label('5V_MAIN',(259.08,294.64))
+wire((259.08,309.88),(259.08,327.66));junction((259.08,320.04));wire((259.08,320.04),(335.28,320.04));label('PMIC_VDC',(335.28,320.04))
 add('Device','C_Small','C531','100nF / 25V',335.28,330.2,fp='Capacitor_SMD:C_0603_1608Metric',fields={'MPN':'CL10B104KA8NNNC','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C1590','Qualification':'VDC filter and startup ramp verification pending'})
-wire((335.28,320.04),(335.28,327.66));wire((335.28,332.74),(335.28,340.36));wire((260.35,332.74),(260.35,340.36));wire((260.35,340.36),(335.28,340.36));power('GND',(279.4,340.36),'#PWR551')
+wire((335.28,320.04),(335.28,327.66));wire((335.28,332.74),(335.28,340.36));wire((259.08,332.74),(259.08,340.36));wire((259.08,340.36),(335.28,340.36));power('GND',(279.4,340.36),'#PWR551')
 note('VDC: 100kR / 100kR, 100nF; nominal 2.5V at main 5V. Startup timing pending.',(241.3,355.6))
 # PWRON has its own internal pull-up to 5 V RTC; external control must sink only.
 a=units[3]['52'];b=(a[0]-7.62,a[1]);wire(a,b);label('PMIC_PWRON_N',b);items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
@@ -212,17 +212,12 @@ items[-1]=re.sub(r'(\(property "Value" "10kR" \(at )[^)]+',r'\g<1>101.6 363.22 9
 wire((86.36,368.3),(99.06,368.3));items.append(f'(global_label "MCU_PWRON_KICK" (shape input) (at 86.36 368.3 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "{uid("kick-global")}"))');wire((104.14,368.3),(121.92,368.3))
 add('Device','R_Small_US','R509','100kR',114.3,386.08,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-07100KL','Manufacturer':'Yageo','LCSC':'C14675','Tolerance':'1%','Power Rating':'0.1W'})
 wire((114.3,368.3),(114.3,383.54));junction((114.3,368.3));wire((114.3,388.62),(114.3,393.7));power('GND',(114.3,393.7),'#PWR554')
-# Internal headphone supply bypass, following RK809 Figure 1-2.
-add('Device','C_Small','C534','1uF / 25V',330.2,290.83,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
-a=units[4]['38'];b=(a[0],a[1]-7.62);wire(a,b);label('PMIC_INTERNAL_CPVDD',b)
-wire((330.2,288.29),(330.2,278.13));label('PMIC_INTERNAL_CPVDD',(330.2,278.13))
-wire((330.2,293.37),(330.2,300.99));power('GND',(330.2,300.99),'#PWR555')
 # Internal analog/digital 1.8 V LDO outputs: individual bypasses, never external feeds.
 for pin,ref,name,x,pwr in [('44','C535','PMIC_INTERNAL_1V8A',330.2,'#PWR556'),('48','C536','PMIC_INTERNAL_1V8D',358.14,'#PWR557')]:
  a=units[4][pin];b=(a[0]+12.7,a[1]);wire(a,b);label(name,b)
- add('Device','C_Small',ref,'1uF / 25V',x,250.19,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
- wire((x,247.65),(x,237.49));label(name,(x,237.49))
- wire((x,252.73),(x,260.35));power('GND',(x,260.35),pwr)
+ add('Device','C_Small',ref,'1uF / 25V',x,248.92,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
+ wire((x,246.38),(x,236.22));label(name,(x,236.22))
+ wire((x,251.46),(x,259.08));power('GND',(x,259.08),pwr)
 # No-battery reference: unused current-sense inputs share ground (Figure 1-2).
 for pin in ['62','63']:
  a=units[3][pin];wire(a,(60.96,a[1]))
@@ -233,26 +228,14 @@ a=units[4]['40'];wire(a,(a[0],279.4));power('GND',(a[0],279.4),'#PWR559')
 # Preserve the manufacturer's speaker/charge-pump input supply and bypass.
 a=units[4]['33'];b=(a[0],213.36);wire(a,b);label('5V_MAIN',b)
 items[-1]=items[-1].replace('(justify left)','(justify right)')
-add('Device','C_Small','C537','10uF / 50V',358.14,290.83,fp='Capacitor_SMD:C_1206_3216Metric',fields={'MPN':'CL31B106KBHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C89632','Dielectric':'X7R','Qualification':'Speaker/charge-pump supply bypass; unused audio policy pending'})
-wire((358.14,288.29),(358.14,278.13));label('5V_MAIN',(358.14,278.13))
-wire((358.14,293.37),(358.14,300.99));power('GND',(358.14,300.99),'#PWR560')
+add('Device','C_Small','C537','10uF / 50V',358.14,289.56,fp='Capacitor_SMD:C_1206_3216Metric',fields={'MPN':'CL31B106KBHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C89632','Dielectric':'X7R','Qualification':'Speaker/charge-pump supply bypass; unused audio policy pending'})
+wire((358.14,287.02),(358.14,276.86));label('5V_MAIN',(358.14,276.86))
+wire((358.14,292.1),(358.14,299.72));power('GND',(358.14,299.72),'#PWR560')
 # Switch2 electrical range is 2.7–5 V: use main 3.3 V, not our 1.8 V BUCK5.
 a=units[1]['57'];wire(a,(a[0],50.8));wire((a[0],50.8),(134.62,50.8));label('3V3_MAIN',(134.62,50.8))
 add('Device','C_Small','C538','1uF / 25V',154.94,104.14,fp='Capacitor_SMD:C_0603_1608Metric',fields=oneuf)
 wire((154.94,101.6),(154.94,93.98));label('3V3_MAIN',(154.94,93.98))
 wire((154.94,106.68),(154.94,114.3));power('GND',(154.94,114.3),'#PWR561')
-# RK809 Figure 1-2: 2.2 uF flying capacitor and negative-rail bypass.
-for pin,name in [('36','PMIC_CPN'),('37','PMIC_CPP')]:
- a=units[4][pin];b=(a[0]-7.62,a[1]);wire(a,b);label(name,b)
- items[-1]=items[-1].replace('(justify left bottom)','(justify right bottom)')
-a=units[4]['35'];b=(a[0]+12.7,a[1]);wire(a,b);label('PMIC_INTERNAL_CPVSS',b)
-cpfields={'MPN':'CL31B225KBHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C50254','Dielectric':'X7R','Tolerance':'10%','Qualification':'Reference nominal charge-pump capacitance; effective corner and startup pending'}
-add('Device','C_Small','C539','2.2uF / 50V',500.38,250.19,fp='Capacitor_SMD:C_1206_3216Metric',fields=cpfields)
-wire((500.38,247.65),(500.38,237.49));label('PMIC_CPP',(500.38,237.49))
-wire((500.38,252.73),(500.38,262.89));label('PMIC_CPN',(500.38,262.89))
-add('Device','C_Small','C540','2.2uF / 50V',500.38,290.83,fp='Capacitor_SMD:C_1206_3216Metric',fields=cpfields)
-wire((500.38,288.29),(500.38,278.13));label('PMIC_INTERNAL_CPVSS',(500.38,278.13))
-wire((500.38,293.37),(500.38,300.99));power('GND',(500.38,300.99),'#PWR562')
 # Unused codec: fixed inputs MCLK/SDI grounded; mode-dependent clocks weakly held low.
 for pin in ['16','17']:
  a=units[4][pin];b=(a[0]-7.62,a[1]);wire(a,b);label('GND',b)
@@ -264,10 +247,35 @@ for pin,ref,name,x,pwr in [('14','R510','UNUSED_CODEC_LRCLK',457.2,'#PWR564'),('
  add('Device','R_Small_US',ref,'10kR',x,355.6,fp='Resistor_SMD:R_0603_1608Metric',fields={'MPN':'RC0603FR-0710KL','Manufacturer':'Yageo','LCSC':'C98220','Tolerance':'1%','Power Rating':'0.1W'})
  wire((x,353.06),(x,345.44));label(name,(x,345.44))
  wire((x,358.14),(x,365.76));power('GND',(x,365.76),pwr)
-for pin in ['18','19','32','34','39','41','42','43']:
+for pin in ['18','19','32','34','35','36','37','38','39','41','42','43']:
  a=units[4][pin];items.append(f'(no_connect (at {a[0]} {a[1]}) (uuid "{uid("unused-codec-"+pin)}"))')
-note('PMIC capture in progress — buck / analog / IO rails',(35.56,22.86),2.54)
-note('DRAFT: other rails and management/audio pins are deliberately unwired.\\nNo complete ERC or appliance BOM claim. Do not use for fabrication.\\nFeedback sense must route to processor load; verify ground return and placement.',(241.3,375.92))
-text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "PMIC capture draft") (date "2026-10-03") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
+note('PMIC — buck / analog / IO rails',(35.56,22.86),2.54)
+
+# No-battery BATDIV termination: NanoPi R3S sheet 14 management block.
+a=units[3]['56'];b=(a[0]-7.62,a[1]);wire(a,b);label('GND',b)
+# External CPU enable is independent of software I2C writes.
+a=units[3]['60'];b=(a[0]+7.62,a[1]);wire(a,b);label('PMIC_CPU_EN',b)
+# Deliberately unused rails and clock output. Retain output bypass for each
+# disabled LDO and unloaded switch per RK809 typical application.
+for unit,pin,net,ref,x,y,value in [
+ (1,'55','UNUSED_SWITCH1','C543',370.84,391.16,'10uF'),
+ (1,'58','UNUSED_SWITCH2','C544',421.64,391.16,'10uF'),
+ (2,'23','UNUSED_LDO1','C545',238.76,391.16,'1uF'),
+ (2,'28','UNUSED_LDO4','C546',284.48,391.16,'1uF'),
+ (2,'6','UNUSED_LDO9','C547',330.2,391.16,'1uF'),
+]:
+ a=units[unit][pin];b=(a[0]+7.62,a[1]);wire(a,b);label(net,b)
+ fields=oneuf if value=='1uF' else {'MPN':'CL31B106KAHNNNE','Manufacturer':'Samsung Electro-Mechanics','LCSC':'C14860'}
+ add('Device','C_Small',ref,value,x,y,fp='Capacitor_SMD:'+('C_0603_1608Metric' if value=='1uF' else 'C_1206_3216Metric'),fields=fields)
+ wire((x,y-2.54),(x,y-10.16));label(net,(x,y-10.16))
+ wire((x,y+2.54),(x,y+10.16));power('GND',(x,y+10.16),'#PWR'+ref[1:])
+for pin in ['50','51']:
+ a=units[3][pin];items.append(f'(no_connect (at {a[0]} {a[1]}) (uuid "{uid("internal-rc-"+pin)}"))')
+a=units[3]['68'];items.append(f'(no_connect (at {a[0]} {a[1]}) (uuid "{uid('clk32-unused')}"))')
+note('CPU EXT_EN connected. BATDIV/SNSP/SNSN grounded in no-battery configuration.\\nUnused LDO1/4/9 and SWOUT1/2 terminate in output bypasses; disable unused rails in firmware.\\nInternal RC oscillator per RK809 4.4.6; network time required. RTC accuracy not provided.\\nRemote feedback, load budgets, rail sequence and brownout recovery require bench qualification.',(241.3,365.76))
+
+for net,x,y,ref in [('VDD_LOGIC',327.66,63.5,'#FLG501'),('VDD_GPU',327.66,129.54,'#FLG502'),('VCC_1V8',327.66,195.58,'#FLG505'),('VDD_NPU',462.28,35.56,'#FLG504')]:
+ power('PWR_FLAG',(x,y),ref)
+text='(kicad_sch (version 20250114) (generator eeschema) (uuid "'+uid('root')+'") (paper "A2") (title_block (title "RK809-5 power and control") (date "2026-10-07") (rev "0.1-draft")) (lib_symbols '+'\n'.join(used.values())+')\n'+'\n'.join(items)+'\n(sheet_instances (path "/" (page "1"))))\n'
 (ROOT/'pmic.kicad_sch').write_text(text)
-print('Generated PMIC draft; all 69 pins retained, unfinished pins intentionally visible.')
+print('Generated PMIC capture; all 69 pins retained, unused channels terminated.')

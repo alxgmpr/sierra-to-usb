@@ -58,12 +58,12 @@
   (no_connect (at 78.74 137.16) (uuid "87cc1624-46ae-5ff4-a630-67707e59cf81"))
   (no_connect (at 78.74 104.14) (uuid "afb69f1e-5b3d-52fe-b679-4788f66fec2b"))
   (no_connect (at 78.74 106.68) (uuid "192af8e8-1d83-5fbe-83c4-b33478da5547"))
-  (no_connect (at 134.62 167.64) (uuid "77f51701-5609-5e05-abb9-37ca6b8ee205"))
-  (no_connect (at 134.62 170.18) (uuid "d5caaf15-b987-5eaf-afd8-19f0956b1027"))
-  (no_connect (at 134.62 172.72) (uuid "acc1b92e-3ea8-505d-821a-7519bf4484a8"))
-  (no_connect (at 134.62 175.26) (uuid "e24f733e-ab21-59e9-ac0d-4f582596af64"))
-  (no_connect (at 134.62 177.8) (uuid "cc73ce76-d1d2-562d-ab01-d52ef2b77239"))
-  (no_connect (at 134.62 180.34) (uuid "c56485e4-9ea2-5cdf-b93a-82c02e387a0d"))
+
+
+
+
+
+
   (no_connect (at 134.62 119.38) (uuid "3d164cdc-ff99-5f70-97fd-f4c2f983e855"))
   (no_connect (at 134.62 124.46) (uuid "31b57d63-e5e2-5d11-9773-06ca4cea8d6b"))
   (no_connect (at 78.74 127.0) (uuid "dc9b0ace-9090-5b64-87f2-ac1d2dd7ec00"))
@@ -165,4 +165,4 @@
   (global_label "MCU_PROCESSOR_RESET_ASSERT" (shape passive) (at 142.24 147.32 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "029c84ea-0068-55b1-8fa4-7646acaea517"))
   (wire (pts (xy 134.62 149.86) (xy 142.24 149.86)) (stroke (width 0) (type default)) (uuid "bb85d5e7-7625-58c3-bd44-6e8ce0502264"))
   (global_label "MCU_PROCESSOR_RECOVERY_ASSERT" (shape passive) (at 142.24 149.86 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "cdf84172-b781-5f6b-ad3d-5cfc3440b3d9"))
-)
+(wire (pts (xy 134.62 167.64) (xy 147.32 167.64)) (stroke (width 0) (type default)) (uuid "bd75a4dd-13c2-53d4-8457-1ff9678ac399"))(global_label "POE_TPH_N" (shape passive) (at 147.32 167.64 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "bdb48ab4-34f8-59a0-9741-142918303a77"))(wire (pts (xy 134.62 170.18) (xy 147.32 170.18)) (stroke (width 0) (type default)) (uuid "cf704520-a406-511e-8a9c-a531b3e974b2"))(global_label "POE_TPL_N" (shape passive) (at 147.32 170.18 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "cbade763-6fc6-51da-8619-8b19e85782ec"))(wire (pts (xy 134.62 172.72) (xy 147.32 172.72)) (stroke (width 0) (type default)) (uuid "e33aa58f-a86f-53de-b018-28af72015e14"))(global_label "POE_BT_N" (shape passive) (at 147.32 172.72 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1aecc11c-f5da-5b69-a6e6-5d582dd24176"))(wire (pts (xy 134.62 175.26) (xy 147.32 175.26)) (stroke (width 0) (type default)) (uuid "2aa2203c-7116-5cf1-9571-aaa0604ac254"))(global_label "MODEM_RAIL_GOOD" (shape passive) (at 147.32 175.26 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "db4f1d6c-db39-5cee-aba2-948a4a817107"))(wire (pts (xy 134.62 177.8) (xy 147.32 177.8)) (stroke (width 0) (type default)) (uuid "1a6c6b24-9a4a-529d-9f2c-50514ec0b490"))(global_label "MODEM_SWITCH_GOOD" (shape passive) (at 147.32 177.8 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f5ea8b0c-f9e7-5fde-bc2d-92ed95495981"))(wire (pts (xy 134.62 180.34) (xy 147.32 180.34)) (stroke (width 0) (type default)) (uuid "6f0f107b-8a8e-5aff-9148-614a13c9d3e5"))(global_label "MODEM_BUCK_GOOD" (shape passive) (at 147.32 180.34 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "21a289aa-e445-5205-978a-c2ffbc8687b2")))

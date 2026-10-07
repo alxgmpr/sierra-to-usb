@@ -1,0 +1,602 @@
+(kicad_sch (version 20250114) (generator eeschema) (uuid "aa2dc6e7-830d-5c9e-a095-46e161504eee") (paper "A3") (title_block (title "CPU supply — reference DVS implementation") (date "2026-10-07")) (lib_symbols (symbol "Appliance:TCS4525_WT" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "TCS4525_WT" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "TCS4525_WT_1_1" (rectangle (start -17.78 10.16) (end 17.78 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "TCS4525_WT_1_0" (pin input line (at -22.86 2.54 0) (length 5.08) (name "EN" (effects (font (size 1.27 1.27)))) (number "A2" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -0.0 0) (length 5.08) (name "VSEL" (effects (font (size 1.27 1.27)))) (number "A1" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 -2.54 0) (length 5.08) (name "SCL" (effects (font (size 1.27 1.27)))) (number "A3" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 -5.08 0) (length 5.08) (name "SDA" (effects (font (size 1.27 1.27)))) (number "B1" (effects (font (size 1.27 1.27)))))(pin power_out line (at 22.86 5.08 180) (length 5.08) (name "SW" (effects (font (size 1.27 1.27)))) (number "D3" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 2.54 180) (length 5.08) (name "SW" (effects (font (size 1.27 1.27)))) (number "D4" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -0.0 180) (length 5.08) (name "SW" (effects (font (size 1.27 1.27)))) (number "E3" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -2.54 180) (length 5.08) (name "SW" (effects (font (size 1.27 1.27)))) (number "E4" (effects (font (size 1.27 1.27)))))(pin input line (at 22.86 -5.08 180) (length 5.08) (name "FB" (effects (font (size 1.27 1.27)))) (number "A4" (effects (font (size 1.27 1.27)))))(pin power_in line (at -2.54 15.24 270) (length 5.08) (name "AVIN" (effects (font (size 1.27 1.27)))) (number "D1" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 15.24 270) (length 5.08) (name "PVIN" (effects (font (size 1.27 1.27)))) (number "D2" (effects (font (size 1.27 1.27)))))(pin power_in line (at 2.54 15.24 270) (length 5.08) (name "PVIN" (effects (font (size 1.27 1.27)))) (number "E1" (effects (font (size 1.27 1.27)))))(pin power_in line (at 5.08 15.24 270) (length 5.08) (name "PVIN" (effects (font (size 1.27 1.27)))) (number "E2" (effects (font (size 1.27 1.27)))))(pin power_in line (at -7.62 -15.24 90) (length 5.08) (name "PGND" (effects (font (size 1.27 1.27)))) (number "B2" (effects (font (size 1.27 1.27)))))(pin power_in line (at -5.08 -15.24 90) (length 5.08) (name "PGND/PG" (effects (font (size 1.27 1.27)))) (number "B3" (effects (font (size 1.27 1.27)))))(pin power_in line (at -2.54 -15.24 90) (length 5.08) (name "AGND" (effects (font (size 1.27 1.27)))) (number "B4" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 -15.24 90) (length 5.08) (name "PGND" (effects (font (size 1.27 1.27)))) (number "C1" (effects (font (size 1.27 1.27)))))(pin power_in line (at 2.54 -15.24 90) (length 5.08) (name "PGND" (effects (font (size 1.27 1.27)))) (number "C2" (effects (font (size 1.27 1.27)))))(pin power_in line (at 5.08 -15.24 90) (length 5.08) (name "PGND" (effects (font (size 1.27 1.27)))) (number "C3" (effects (font (size 1.27 1.27)))))(pin power_in line (at 7.62 -15.24 90) (length 5.08) (name "PGND" (effects (font (size 1.27 1.27)))) (number "C4" (effects (font (size 1.27 1.27)))))))(symbol "Device:L_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "L"
+			(at 0.762 1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "L_Small"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor, small symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "inductor choke coil reactor magnetic"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "L_Small_0_1"
+			(arc
+				(start 0 2.032)
+				(mid 0.5058 1.524)
+				(end 0 1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 1.016)
+				(mid 0.5058 0.508)
+				(end 0 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 0)
+				(mid 0.5058 -0.508)
+				(end 0 -1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 -1.016)
+				(mid 0.5058 -1.524)
+				(end 0 -2.032)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "L_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 0.508)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 0.508)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:C_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.254 1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 0.254 -2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "capacitor cap"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.524 0.508) (xy 1.524 0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.524 -0.508) (xy 1.524 -0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:R_Small_US"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 0.762 0.508 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_Small_US"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "r resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_Small_US_1_1"
+			(polyline
+				(pts
+					(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 2.54 270)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "power:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)) (rectangle (start 20.32 20.32) (end 396.24 243.84) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "df59ace7-6bcb-5240-b12b-4531cb45f461"))(text "CPU DYNAMIC VOLTAGE SCALING" (at 22.86 24.13 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "dd95d19c-8edc-52ba-9ca5-b4d2704a04fb"))(symbol (lib_id "Appliance:TCS4525_WT") (at 96.52 91.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "079182ba-26e6-513f-84a9-07d425e5f7ec") (property "Reference" "U1001" (at 96.52 55.88 0) (effects (font (size 1.27 1.27))))(property "Value" "TCS4525_WT" (at 96.52 58.42 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:WLCSP-20_L2.0-W1.6-R5-C4-P0.40-TL" (at 96.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TCS4525_WT" (at 96.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Torch-Chip" (at 96.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C7501359" (at 96.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://datasheet4u.com/pdf/1549392/TCS4525.pdf" (at 96.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Public v1.0 5A limits; current 6A revision and supplier lifecycle unresolved" (at 96.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "U1001") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "U1001") (unit 1)))))(wire (pts (xy 101.6 76.2) (xy 101.6 66.04)) (stroke (width 0) (type default)) (uuid "b339e5cc-3f7f-59c5-8c60-051c933102ba"))(wire (pts (xy 99.06 76.2) (xy 99.06 66.04)) (stroke (width 0) (type default)) (uuid "a901c43f-6877-5f0c-9420-f825ce503273"))(wire (pts (xy 96.52 76.2) (xy 96.52 66.04)) (stroke (width 0) (type default)) (uuid "25bdd37b-772e-5e06-8fb0-735d23d1d882"))(wire (pts (xy 93.98 76.2) (xy 93.98 66.04)) (stroke (width 0) (type default)) (uuid "a9159ca4-5220-578d-8f5f-31a511120332"))(wire (pts (xy 93.98 66.04) (xy 96.52 66.04)) (stroke (width 0) (type default)) (uuid "22c099a5-16cd-5631-8d36-bf3a54007c26"))(wire (pts (xy 96.52 66.04) (xy 99.06 66.04)) (stroke (width 0) (type default)) (uuid "2627b0a3-596c-58e9-ae06-eb6ba478cf19"))(wire (pts (xy 99.06 66.04) (xy 101.6 66.04)) (stroke (width 0) (type default)) (uuid "25340553-9f37-5118-bc6a-e9ccb9b26960"))(global_label "5V_MAIN" (shape passive) (at 93.98 66.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "634ed1e7-3458-5a24-aecb-f2339ceb6f20"))(wire (pts (xy 104.14 106.68) (xy 104.14 116.84)) (stroke (width 0) (type default)) (uuid "2fd48a41-e24b-5866-8e60-14152b2ebc06"))(wire (pts (xy 101.6 106.68) (xy 101.6 116.84)) (stroke (width 0) (type default)) (uuid "99be6678-8f8a-5d72-a8c7-4026e6e45a92"))(wire (pts (xy 99.06 106.68) (xy 99.06 116.84)) (stroke (width 0) (type default)) (uuid "ab9a6755-8eee-5da4-81c4-05dba19c4395"))(wire (pts (xy 96.52 106.68) (xy 96.52 116.84)) (stroke (width 0) (type default)) (uuid "f4f15068-211d-530f-976f-3997bedf541f"))(wire (pts (xy 93.98 106.68) (xy 93.98 116.84)) (stroke (width 0) (type default)) (uuid "fca1f8a2-74ec-541d-991e-1a9274783f38"))(wire (pts (xy 91.44 106.68) (xy 91.44 116.84)) (stroke (width 0) (type default)) (uuid "1376ec98-82bc-5e93-affc-ab398ff53742"))(wire (pts (xy 88.9 106.68) (xy 88.9 116.84)) (stroke (width 0) (type default)) (uuid "d34a5ef3-4a83-5372-bfe8-a139e8ff58b5"))(wire (pts (xy 88.9 116.84) (xy 91.44 116.84)) (stroke (width 0) (type default)) (uuid "0a6f322d-2c71-5bfe-a372-b612a17baabc"))(wire (pts (xy 91.44 116.84) (xy 93.98 116.84)) (stroke (width 0) (type default)) (uuid "60c31a61-8f4b-5cfe-94a4-4f723a1c2457"))(wire (pts (xy 93.98 116.84) (xy 96.52 116.84)) (stroke (width 0) (type default)) (uuid "856b83f0-2b22-54f3-904e-776d5efdf198"))(wire (pts (xy 96.52 116.84) (xy 99.06 116.84)) (stroke (width 0) (type default)) (uuid "7235bc9d-46e0-5c84-b5d7-a87c95aa32b7"))(wire (pts (xy 99.06 116.84) (xy 101.6 116.84)) (stroke (width 0) (type default)) (uuid "85ee9ff7-f607-5ccc-b11c-8644a8798354"))(wire (pts (xy 101.6 116.84) (xy 104.14 116.84)) (stroke (width 0) (type default)) (uuid "f6e78272-f897-5944-b151-58a72679209f"))(global_label "GND" (shape passive) (at 88.9 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "62e19e20-6a98-5d9e-94c8-763e1ce152c7"))(wire (pts (xy 119.38 93.98) (xy 129.54 93.98)) (stroke (width 0) (type default)) (uuid "72fbe738-766e-54d6-bc82-9e220de5512b"))(global_label "CPU_SW" (shape passive) (at 129.54 93.98 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9475a15c-a4ac-5b1a-8239-b9472ccf6b68"))(wire (pts (xy 119.38 91.44) (xy 129.54 91.44)) (stroke (width 0) (type default)) (uuid "70dde5d9-6e41-57ca-8ff0-61b32906e435"))(global_label "CPU_SW" (shape passive) (at 129.54 91.44 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2da7a475-b47c-5c2d-bb81-b7cc3557db80"))(wire (pts (xy 119.38 88.9) (xy 129.54 88.9)) (stroke (width 0) (type default)) (uuid "590dae39-eded-5aec-b2ec-a7240dce2ce2"))(global_label "CPU_SW" (shape passive) (at 129.54 88.9 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "89cf0e08-c372-514c-b7d6-b6253f736968"))(wire (pts (xy 119.38 86.36) (xy 129.54 86.36)) (stroke (width 0) (type default)) (uuid "65d021e5-3fff-596b-95f6-45124799b07b"))(global_label "CPU_SW" (shape passive) (at 129.54 86.36 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8f4acd83-6e9d-5954-9220-f5e8e09638c4"))(wire (pts (xy 73.66 96.52) (xy 63.5 96.52)) (stroke (width 0) (type default)) (uuid "d29f5dfc-6e61-524a-85a9-8f4e99d9fab6"))(global_label "PMIC_I2C_SDA" (shape passive) (at 63.5 96.52 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4c38ae3c-1cc4-5af9-9fc6-b07eb577ad5a"))(wire (pts (xy 119.38 96.52) (xy 129.54 96.52)) (stroke (width 0) (type default)) (uuid "094b8719-757a-5f46-93bc-3a1a6ff86adf"))(global_label "CPU_FB" (shape passive) (at 129.54 96.52 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3e4e4c89-da38-5822-8da9-87bbf7aa4549"))(wire (pts (xy 73.66 93.98) (xy 63.5 93.98)) (stroke (width 0) (type default)) (uuid "97589f7c-6efa-5d71-a17b-0f344a59e0c8"))(global_label "PMIC_I2C_SCL" (shape passive) (at 63.5 93.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d7076169-0633-5408-961b-23b79270e305"))(wire (pts (xy 73.66 88.9) (xy 63.5 88.9)) (stroke (width 0) (type default)) (uuid "53a9be72-2040-5cf9-a3dc-b89d9856ca35"))(global_label "PMIC_CPU_EN" (shape passive) (at 63.5 88.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d61e88ff-5b9a-5228-b635-cc514c9e02b4"))(wire (pts (xy 73.66 91.44) (xy 63.5 91.44)) (stroke (width 0) (type default)) (uuid "1a520692-d98d-55fd-9fc3-561d42c1dfd3"))(global_label "GND" (shape passive) (at 63.5 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1fdcc563-e9da-5bed-a372-2b28aedb7c4f"))(symbol (lib_id "Device:L_Small") (at 228.6 71.12 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e99452ab-fda4-549f-bfd8-1e917c16859a") (property "Reference" "L1001" (at 228.6 63.50000000000001 90) (effects (font (size 1.27 1.27))))(property "Value" "0.47uH" (at 228.6 66.04 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_Coilcraft_XxL4020" (at 228.6 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "XGL4020-471MEC" (at 228.6 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Coilcraft" (at 228.6 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Saturation Current 10% Drop" "6.1A" (at 228.6 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "DCR Maximum" "5.1mOhm" (at 228.6 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "L1001") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "L1001") (unit 1)))))(wire (pts (xy 226.06 71.12) (xy 215.9 71.12)) (stroke (width 0) (type default)) (uuid "e4c965cf-0938-54d7-ac24-c0b329a35f29"))(global_label "CPU_SW" (shape passive) (at 215.9 71.12 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7021297e-4cb6-568f-98c4-1216375a91c3"))(wire (pts (xy 231.14 71.12) (xy 241.3 71.12)) (stroke (width 0) (type default)) (uuid "129353fb-da9b-5f33-a843-9a5317d171ae"))(global_label "VDD_CPU" (shape passive) (at 241.3 71.12 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e7998647-d05e-5d3a-b26a-78ffe8a11cbe"))(symbol (lib_id "Device:C_Small") (at 43.18 165.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5cf5ff66-b57a-56ba-b32f-9e6db5a98210") (property "Reference" "C1001" (at 52.07 163.82999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "10uF" (at 52.07 166.37 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 43.18 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL31B106KAHNNNE" (at 43.18 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 43.18 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 43.18 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "C1001") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "C1001") (unit 1)))))(wire (pts (xy 43.18 162.56) (xy 43.18 152.4)) (stroke (width 0) (type default)) (uuid "ea72ce0f-f2f3-5ff8-b557-987f1c00b5aa"))(global_label "5V_MAIN" (shape passive) (at 43.18 152.4 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "45aa66b7-3e3e-5600-85eb-ac89f174e7a5"))(wire (pts (xy 43.18 167.64) (xy 43.18 177.8)) (stroke (width 0) (type default)) (uuid "606597c5-32be-5522-9766-e18af7e08b1b"))(global_label "GND" (shape passive) (at 43.18 177.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c98f1c56-de37-525a-b405-5129f3ad2d89"))(symbol (lib_id "Device:C_Small") (at 81.28 165.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "48154064-ae1b-51ed-bcc7-c412cc45659d") (property "Reference" "C1002" (at 90.17 163.82999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 90.17 166.37 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 81.28 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 81.28 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 81.28 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 81.28 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "C1002") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "C1002") (unit 1)))))(wire (pts (xy 81.28 162.56) (xy 81.28 152.4)) (stroke (width 0) (type default)) (uuid "0d90ca6b-7068-599b-af7d-25bdfee656d0"))(global_label "5V_MAIN" (shape passive) (at 81.28 152.4 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0a9885bc-e314-584d-9df2-30f4f105aaab"))(wire (pts (xy 81.28 167.64) (xy 81.28 177.8)) (stroke (width 0) (type default)) (uuid "a62e39da-6ac3-5f58-85e4-03c728e40591"))(global_label "GND" (shape passive) (at 81.28 177.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d5b2d75d-ecc1-57ea-ac34-ce8c50f8cf71"))(symbol (lib_id "Device:C_Small") (at 203.2 121.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ed8fcbf1-1241-57ac-ab64-da1894ab48ef") (property "Reference" "C1003" (at 212.08999999999997 120.65 0) (effects (font (size 1.27 1.27))))(property "Value" "22uF" (at 212.08999999999997 123.19 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 203.2 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 203.2 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 203.2 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 203.2 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "C1003") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "C1003") (unit 1)))))(wire (pts (xy 203.2 119.38) (xy 203.2 109.22)) (stroke (width 0) (type default)) (uuid "4bb72186-f68a-531f-8de9-a68bc3f17f85"))(global_label "VDD_CPU" (shape passive) (at 203.2 109.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "bcf60977-2e9b-54ba-bcbb-720be164d597"))(wire (pts (xy 203.2 124.46) (xy 203.2 134.62)) (stroke (width 0) (type default)) (uuid "ea77c4d4-1771-5165-ab9b-29254286b2d5"))(global_label "GND" (shape passive) (at 203.2 134.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ac1edd93-5962-5d50-9ed7-684ac5deb588"))(symbol (lib_id "Device:C_Small") (at 241.3 121.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "895a6d02-8bbc-5dab-8b0d-848407c7bc2f") (property "Reference" "C1004" (at 250.19 120.65 0) (effects (font (size 1.27 1.27))))(property "Value" "22uF" (at 250.19 123.19 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 241.3 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 241.3 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 241.3 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 241.3 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "C1004") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "C1004") (unit 1)))))(wire (pts (xy 241.3 119.38) (xy 241.3 109.22)) (stroke (width 0) (type default)) (uuid "495fd05e-e9d2-5346-a938-168116c28158"))(global_label "VDD_CPU" (shape passive) (at 241.3 109.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b8bf9ee8-5e0b-56f6-aecc-8bb80a55953f"))(wire (pts (xy 241.3 124.46) (xy 241.3 134.62)) (stroke (width 0) (type default)) (uuid "282a6314-137f-5116-9c12-a9e10d21d026"))(global_label "GND" (shape passive) (at 241.3 134.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b37b2e1d-b227-5003-aa81-430344b9b896"))(symbol (lib_id "Device:C_Small") (at 190.5 190.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5dd9230a-f0af-54a1-af3d-bf43ab1ff412") (property "Reference" "C1005" (at 199.39 189.23 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7uF" (at 199.39 191.77 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 190.5 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10A475KA8NQNC" (at 190.5 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 190.5 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 190.5 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "C1005") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "C1005") (unit 1)))))(wire (pts (xy 190.5 187.96) (xy 190.5 177.8)) (stroke (width 0) (type default)) (uuid "4e092a80-579c-5833-a40a-b51f142270db"))(global_label "VDD_CPU" (shape passive) (at 190.5 177.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9ae5d290-4591-5061-ba11-e3d4a3f2aed8"))(wire (pts (xy 190.5 193.04) (xy 190.5 203.2)) (stroke (width 0) (type default)) (uuid "67de8008-12ae-5507-be07-140dcb65d64b"))(global_label "GND" (shape passive) (at 190.5 203.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "60518d2d-1a2d-586c-b6e6-c85ef063739f"))(symbol (lib_id "Device:C_Small") (at 228.6 190.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "027e3219-d7df-52bd-8107-f51752f931a5") (property "Reference" "C1006" (at 237.49 189.23 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7uF" (at 237.49 191.77 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 228.6 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10A475KA8NQNC" (at 228.6 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 228.6 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 228.6 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "C1006") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "C1006") (unit 1)))))(wire (pts (xy 228.6 187.96) (xy 228.6 177.8)) (stroke (width 0) (type default)) (uuid "7f19357c-23e7-53a8-83c5-7b7a4d5b0394"))(global_label "VDD_CPU" (shape passive) (at 228.6 177.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ba94f5cd-213d-5549-9ae7-de3128eb73f4"))(wire (pts (xy 228.6 193.04) (xy 228.6 203.2)) (stroke (width 0) (type default)) (uuid "d150a1f2-c5ce-51f2-a3c7-35e7464109da"))(global_label "GND" (shape passive) (at 228.6 203.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fc321cb7-5151-58ca-89af-a755cab35e18"))(symbol (lib_id "Device:C_Small") (at 266.7 190.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "90113ee3-2bff-59bd-9389-b4bf07c248d3") (property "Reference" "C1007" (at 275.59 189.23 0) (effects (font (size 1.27 1.27))))(property "Value" "22uF" (at 275.59 191.77 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 266.7 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 266.7 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 266.7 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 266.7 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "C1007") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "C1007") (unit 1)))))(wire (pts (xy 266.7 187.96) (xy 266.7 177.8)) (stroke (width 0) (type default)) (uuid "b2ca069a-5e16-5433-aa5f-e1fa23354138"))(global_label "VDD_CPU" (shape passive) (at 266.7 177.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "23ffae78-6a2e-52cc-855f-a2b3555e1df8"))(wire (pts (xy 266.7 193.04) (xy 266.7 203.2)) (stroke (width 0) (type default)) (uuid "2ee3a3ee-04fb-55b7-99e6-d3810290c2a2"))(global_label "GND" (shape passive) (at 266.7 203.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3f6f6c78-8e6b-5690-ac62-6b7ee7bf8652"))(symbol (lib_id "Device:C_Small") (at 304.8 190.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c0ff3b6c-9629-53bb-ad02-60bee6ddade5") (property "Reference" "C1008" (at 313.69 189.23 0) (effects (font (size 1.27 1.27))))(property "Value" "22uF" (at 313.69 191.77 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 304.8 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 304.8 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 304.8 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 304.8 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "C1008") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "C1008") (unit 1)))))(wire (pts (xy 304.8 187.96) (xy 304.8 177.8)) (stroke (width 0) (type default)) (uuid "67d2a7ba-72c4-53d5-91de-7d3859ed18cc"))(global_label "VDD_CPU" (shape passive) (at 304.8 177.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "79422ab6-db29-53f8-9fa2-42753bd39c30"))(wire (pts (xy 304.8 193.04) (xy 304.8 203.2)) (stroke (width 0) (type default)) (uuid "eb39efa1-3191-5935-823e-f90892a6c7d5"))(global_label "GND" (shape passive) (at 304.8 203.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "822950ab-15e1-5f0b-aada-9deced243502"))(symbol (lib_id "Device:C_Small") (at 342.9 190.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "875f8dcd-af39-544e-ae42-0196db96a873") (property "Reference" "C1009" (at 351.78999999999996 189.23 0) (effects (font (size 1.27 1.27))))(property "Value" "22uF" (at 351.78999999999996 191.77 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 342.9 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL32B226KAJNNNE" (at 342.9 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 342.9 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 342.9 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "C1009") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "C1009") (unit 1)))))(wire (pts (xy 342.9 187.96) (xy 342.9 177.8)) (stroke (width 0) (type default)) (uuid "e16ada5a-4b53-5f96-bf2b-da2a2c39343a"))(global_label "VDD_CPU" (shape passive) (at 342.9 177.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "60f23a45-7275-5e3f-8a66-9eaaa01422c7"))(wire (pts (xy 342.9 193.04) (xy 342.9 203.2)) (stroke (width 0) (type default)) (uuid "6fa1257b-8c7c-5fcd-9e27-b66b2f327c26"))(global_label "GND" (shape passive) (at 342.9 203.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d6d0e259-97f2-5b33-828a-6618a9539b35"))(symbol (lib_id "Device:R_Small_US") (at 134.62 165.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d617f844-3ccd-55b1-9946-2cc456dbd11f") (property "Reference" "R1001" (at 143.51 163.82999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 143.51 166.37 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 134.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 134.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 134.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 134.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 134.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "R1001") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "R1001") (unit 1)))))(wire (pts (xy 134.62 162.56) (xy 134.62 152.4)) (stroke (width 0) (type default)) (uuid "b436554c-38da-5aae-822e-fad9b15e37a9"))(global_label "PMIC_CPU_EN" (shape passive) (at 134.62 152.4 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f38b5937-e836-5a31-842f-f0abd8c48e30"))(wire (pts (xy 134.62 167.64) (xy 134.62 177.8)) (stroke (width 0) (type default)) (uuid "470031e7-63b3-513d-ac25-125bc21fa6e4"))(global_label "GND" (shape passive) (at 134.62 177.8 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "55d55acc-8322-5207-b923-1b3dc3ed7e51"))(text "VSEL strapped low: 1.025V reset value; I2C address 0x1C.\nRK809 EXT_EN controls startup. Retain DVS via fan53555 driver.\nFive local bypass capacitors follow NanoPi R3S power sheet.\nRoute FB separately to processor load; CPU worst-case load and current revision require closure." (at 30.48 223.52 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "09170b82-9883-5150-a44c-ec65a4eb2718"))(symbol (lib_id "power:PWR_FLAG") (at 289.56 121.92 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "49f9aafa-2a85-5316-a92d-854c120d8462") (property "Reference" "#FLG1001" (at 289.56 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "PWR_FLAG" (at 289.56 118.11 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 289.56 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Source" "U1001 D3 switching output through L1001" (at 289.56 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "cpu-power" (path "/aa2dc6e7-830d-5c9e-a095-46e161504eee" (reference "#FLG1001") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55" (reference "#FLG1001") (unit 1)))))(wire (pts (xy 289.56 121.92) (xy 289.56 132.08)) (stroke (width 0) (type default)) (uuid "8431395c-63ac-50a2-a5ac-3fab5251fbef"))(global_label "VDD_CPU" (shape passive) (at 289.56 132.08 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a9869fff-6d19-583a-b70a-26dee997a58f")))

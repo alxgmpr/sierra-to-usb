@@ -1,0 +1,871 @@
+(kicad_sch (version 20250114) (generator eeschema) (uuid "94aa89ef-a27c-529a-bb64-18b115fcf9db") (paper "A2") (title_block (title "2.5GbE controller — RTL8125BG external-core variant") (date "2026-10-07")) (lib_symbols (symbol "Appliance:RTL8125BG_CG" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "RTL8125BG_CG" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "RTL8125BG_CG_1_1" (rectangle (start -17.78 10.16) (end 17.78 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "RTL8125BG_CG_1_0" (pin input line (at -22.86 5.08 0) (length 5.08) (name "ISOLATEB" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 2.54 0) (length 5.08) (name "PERSTB" (effects (font (size 1.27 1.27)))) (number "36" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -0.0 0) (length 5.08) (name "REFCLK_P" (effects (font (size 1.27 1.27)))) (number "44" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -2.54 0) (length 5.08) (name "REFCLK_N" (effects (font (size 1.27 1.27)))) (number "45" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -5.08 0) (length 5.08) (name "HSIP" (effects (font (size 1.27 1.27)))) (number "41" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -7.62 0) (length 5.08) (name "HSIN" (effects (font (size 1.27 1.27)))) (number "42" (effects (font (size 1.27 1.27)))))(pin output line (at 22.86 5.08 180) (length 5.08) (name "HSOP" (effects (font (size 1.27 1.27)))) (number "38" (effects (font (size 1.27 1.27)))))(pin output line (at 22.86 2.54 180) (length 5.08) (name "HSON" (effects (font (size 1.27 1.27)))) (number "39" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 22.86 -0.0 180) (length 5.08) (name "LANWAKEB" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 22.86 -2.54 180) (length 5.08) (name "CLKREQB" (effects (font (size 1.27 1.27)))) (number "48" (effects (font (size 1.27 1.27)))))(pin output line (at 22.86 -5.08 180) (length 5.08) (name "POW_EXT_SWR" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin power_in line (at -7.62 15.24 270) (length 5.08) (name "DVDD09" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin power_in line (at -5.08 15.24 270) (length 5.08) (name "DVDD09" (effects (font (size 1.27 1.27)))) (number "28" (effects (font (size 1.27 1.27)))))(pin power_in line (at -2.54 15.24 270) (length 5.08) (name "DVDD09" (effects (font (size 1.27 1.27)))) (number "47" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 15.24 270) (length 5.08) (name "EVDD09" (effects (font (size 1.27 1.27)))) (number "37" (effects (font (size 1.27 1.27)))))(pin power_in line (at 2.54 15.24 270) (length 5.08) (name "DVDD33" (effects (font (size 1.27 1.27)))) (number "29" (effects (font (size 1.27 1.27)))))(pin power_in line (at 5.08 15.24 270) (length 5.08) (name "DVDD33" (effects (font (size 1.27 1.27)))) (number "46" (effects (font (size 1.27 1.27)))))(pin power_in line (at 7.62 15.24 270) (length 5.08) (name "EVDD33" (effects (font (size 1.27 1.27)))) (number "43" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 -15.24 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "40" (effects (font (size 1.27 1.27)))))(pin power_in line (at 2.54 -15.24 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "49" (effects (font (size 1.27 1.27))))))(symbol "RTL8125BG_CG_2_1" (rectangle (start -17.78 15.24) (end 17.78 -15.24) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "RTL8125BG_CG_2_0" (pin input line (at -22.86 10.16 0) (length 5.08) (name "CKXTAL1" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 7.62 0) (length 5.08) (name "MDIP0" (effects (font (size 1.27 1.27)))) (number "13" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 5.08 0) (length 5.08) (name "MDIN0" (effects (font (size 1.27 1.27)))) (number "14" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 2.54 0) (length 5.08) (name "MDIP1" (effects (font (size 1.27 1.27)))) (number "17" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 -0.0 0) (length 5.08) (name "MDIN1" (effects (font (size 1.27 1.27)))) (number "18" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 -2.54 0) (length 5.08) (name "MDIP2" (effects (font (size 1.27 1.27)))) (number "20" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 -5.08 0) (length 5.08) (name "MDIN2" (effects (font (size 1.27 1.27)))) (number "21" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 -7.62 0) (length 5.08) (name "MDIP3" (effects (font (size 1.27 1.27)))) (number "23" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 -10.16 0) (length 5.08) (name "MDIN3" (effects (font (size 1.27 1.27)))) (number "24" (effects (font (size 1.27 1.27)))))(pin output line (at 22.86 -0.0 180) (length 5.08) (name "CKXTAL2" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin input line (at 22.86 -2.54 180) (length 5.08) (name "RSET" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))(pin power_in line (at -7.62 20.32 270) (length 5.08) (name "AVDD09" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))(pin power_in line (at -5.08 20.32 270) (length 5.08) (name "AVDD09" (effects (font (size 1.27 1.27)))) (number "16" (effects (font (size 1.27 1.27)))))(pin power_in line (at -2.54 20.32 270) (length 5.08) (name "AVDD09" (effects (font (size 1.27 1.27)))) (number "22" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 20.32 270) (length 5.08) (name "AVDD33" (effects (font (size 1.27 1.27)))) (number "15" (effects (font (size 1.27 1.27)))))(pin power_in line (at 2.54 20.32 270) (length 5.08) (name "AVDD33" (effects (font (size 1.27 1.27)))) (number "19" (effects (font (size 1.27 1.27)))))(pin power_in line (at 5.08 20.32 270) (length 5.08) (name "AVDD33" (effects (font (size 1.27 1.27)))) (number "33" (effects (font (size 1.27 1.27)))))(pin power_in line (at 7.62 20.32 270) (length 5.08) (name "AVDD33_XTAL" (effects (font (size 1.27 1.27)))) (number "34" (effects (font (size 1.27 1.27))))))(symbol "RTL8125BG_CG_3_1" (rectangle (start -17.78 10.16) (end 17.78 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "RTL8125BG_CG_3_0" (pin input line (at -22.86 5.08 0) (length 5.08) (name "EEPROM_SEL/PPS_PIN" (effects (font (size 1.27 1.27)))) (number "32" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 2.54 0) (length 5.08) (name "LED2/EEDO/SPIS0" (effects (font (size 1.27 1.27)))) (number "25" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 -0.0 0) (length 5.08) (name "GPI" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -2.54 0) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -5.08 0) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin passive line (at -22.86 -7.62 0) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin output line (at 22.86 5.08 180) (length 5.08) (name "LED1/EESK/SPISC" (effects (font (size 1.27 1.27)))) (number "27" (effects (font (size 1.27 1.27)))))(pin output line (at 22.86 2.54 180) (length 5.08) (name "LED0/EEDI/SPISI/SDA" (effects (font (size 1.27 1.27)))) (number "30" (effects (font (size 1.27 1.27)))))(pin output line (at 22.86 -0.0 180) (length 5.08) (name "EECS/SCL" (effects (font (size 1.27 1.27)))) (number "31" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -2.54 180) (length 5.08) (name "SPICSB" (effects (font (size 1.27 1.27)))) (number "26" (effects (font (size 1.27 1.27)))))(pin output line (at 22.86 -5.08 180) (length 5.08) (name "LED3" (effects (font (size 1.27 1.27)))) (number "35" (effects (font (size 1.27 1.27)))))))(symbol "Device:R_Small_US"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 0.762 0.508 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_Small_US"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "r resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_Small_US_1_1"
+			(polyline
+				(pts
+					(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 2.54 270)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Appliance:93LC46B_SN" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "93LC46B_SN" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "93LC46B_SN_1_1" (rectangle (start -17.78 7.62) (end 17.78 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "93LC46B_SN_1_0" (pin input line (at -22.86 2.54 0) (length 5.08) (name "CS" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -0.0 0) (length 5.08) (name "CLK" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -2.54 0) (length 5.08) (name "DI" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin output line (at 22.86 2.54 180) (length 5.08) (name "DO" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -0.0 180) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin passive line (at 22.86 -2.54 180) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 12.7 270) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 -12.7 90) (length 5.08) (name "VSS" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))))(symbol "Device:C_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.254 1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 0.254 -2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "capacitor cap"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.524 0.508) (xy 1.524 0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.524 -0.508) (xy 1.524 -0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:Crystal_GND24"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "Y"
+			(at 3.175 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Crystal_GND24"
+			(at 3.175 3.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Four pin crystal, GND on pins 2 and 4"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property private "KLC_S3.3" "The rectangle is not a symbol body but a graphical element"
+			(at 0 -12.7 0)
+			(show_name yes)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property private "KLC_S4.1" "Some pins are on 50mil grid to make the symbol small"
+			(at 0 -15.24 0)
+			(show_name yes)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "quartz ceramic resonator oscillator"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Crystal*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Crystal_GND24_0_1"
+			(polyline
+				(pts
+					(xy -2.54 2.286) (xy -2.54 3.556) (xy 2.54 3.556) (xy 2.54 2.286)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 0) (xy -2.032 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -2.286) (xy -2.54 -3.556) (xy 2.54 -3.556) (xy 2.54 -2.286)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -1.27) (xy -2.032 1.27)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.143 2.54)
+				(end 1.143 -2.54)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -3.81) (xy 0 -3.556)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 0) (xy 2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 -1.27) (xy 2.032 1.27)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Crystal_GND24_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -5.08 90)
+				(length 1.27)
+				(name "G"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 1.27)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -5.08 90)
+				(length 1.27)
+				(hide yes)
+				(name "G"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:FerriteBead_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "FB"
+			(at 1.905 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FerriteBead_Small"
+			(at 1.905 -1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ferrite bead, small symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "L ferrite bead inductor filter"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "FerriteBead_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0.889) (xy 0 1.2954)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -1.27) (xy 0 -0.7874)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "FerriteBead_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "power:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)) (symbol (lib_id "Appliance:RTL8125BG_CG") (at 114.3 106.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8323dfd7-9237-5add-8bc9-32118ae707c9") (property "Reference" "U1301" (at 114.3 71.11999999999999 0) (effects (font (size 1.27 1.27))))(property "Value" "RTL8125BG-CG" (at 114.3 73.66 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:TQFN-48_L6.0-W6.0-P0.40-BL-EP4.5" (at 114.3 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RTL8125BG-CG" (at 114.3 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Realtek" (at 114.3 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C3013605" (at 114.3 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://gzhls.at/blob/ldb/4/2/8/6/7a314000645b287070e0d89fb96ceb1faf4a.pdf" (at 114.3 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "BG variant: external 0.95V supply; no BGS substitution" (at 114.3 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "U1301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "U1301") (unit 1)))))(wire (pts (xy 106.68 91.44) (xy 106.68 81.28)) (stroke (width 0) (type default)) (uuid "b0196f9b-0136-5800-a85c-f1cb47ecb622"))(wire (pts (xy 109.22 91.44) (xy 109.22 81.28)) (stroke (width 0) (type default)) (uuid "13710a47-85e1-547c-866c-81d4198a735b"))(wire (pts (xy 111.76 91.44) (xy 111.76 81.28)) (stroke (width 0) (type default)) (uuid "72eda346-121d-5a11-85c2-579bb1b18f9b"))(wire (pts (xy 106.68 81.28) (xy 109.22 81.28)) (stroke (width 0) (type default)) (uuid "4a5e8a2f-7143-5ba7-acd5-0abdb62e2ab8"))(wire (pts (xy 109.22 81.28) (xy 111.76 81.28)) (stroke (width 0) (type default)) (uuid "b14f35cc-68ad-51f7-b385-bd6c280c515c"))(global_label "ETH_0V95" (shape passive) (at 106.68 81.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "86212b56-581c-5ed4-afe5-418620215f7e"))(wire (pts (xy 116.84 91.44) (xy 116.84 81.28)) (stroke (width 0) (type default)) (uuid "308b9394-45c7-511a-b8e9-03db795661dd"))(wire (pts (xy 119.38 91.44) (xy 119.38 81.28)) (stroke (width 0) (type default)) (uuid "17bc0c6d-cb88-5b88-b1a6-bab43db799e6"))(wire (pts (xy 121.92 91.44) (xy 121.92 81.28)) (stroke (width 0) (type default)) (uuid "88f022b5-4bea-54e5-9cd0-3f0029a51d7e"))(wire (pts (xy 116.84 81.28) (xy 119.38 81.28)) (stroke (width 0) (type default)) (uuid "e82d91e5-2730-5e20-a8c6-7f3a7d280b23"))(wire (pts (xy 119.38 81.28) (xy 121.92 81.28)) (stroke (width 0) (type default)) (uuid "239ecb5c-2b84-5d68-8d83-2080af73c361"))(global_label "ETH_3V3" (shape passive) (at 116.84 81.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c5ad6501-d64c-52e8-8416-fb22eecb6c37"))(wire (pts (xy 114.3 121.92) (xy 114.3 132.08)) (stroke (width 0) (type default)) (uuid "1c082a5f-7935-519b-a5fa-b2cd0c2f2de8"))(wire (pts (xy 116.84 121.92) (xy 116.84 132.08)) (stroke (width 0) (type default)) (uuid "242bd00f-fa8c-58c0-ba57-16120dcde467"))(wire (pts (xy 114.3 132.08) (xy 116.84 132.08)) (stroke (width 0) (type default)) (uuid "39d9a0d3-e147-5bd9-a959-65ad842431ba"))(global_label "GND" (shape passive) (at 114.3 132.08 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ccefda0e-8395-56f5-9cff-95d61906ad02"))(wire (pts (xy 91.44 101.6) (xy 81.28 101.6)) (stroke (width 0) (type default)) (uuid "bb485535-9069-5479-9f71-5024281bbc74"))(global_label "ETH_ISOLATE_N" (shape passive) (at 81.28 101.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8024adcd-66d2-5071-a35a-fe7919969536"))(wire (pts (xy 91.44 104.14) (xy 81.28 104.14)) (stroke (width 0) (type default)) (uuid "5bd4d732-1b63-5396-ba4d-0fd82d7b4c41"))(global_label "ETH_PERST_N" (shape passive) (at 81.28 104.14 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "612cb3f3-441d-5a51-a9fb-1358c27812b2"))(wire (pts (xy 91.44 106.68) (xy 81.28 106.68)) (stroke (width 0) (type default)) (uuid "b9e7868e-1e45-53ef-9fdb-b1ce1b5c8394"))(global_label "ETH_REFCLK_P" (shape passive) (at 81.28 106.68 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6b149ff0-3ce9-5d1a-8566-b395ef8772d5"))(wire (pts (xy 91.44 109.22) (xy 81.28 109.22)) (stroke (width 0) (type default)) (uuid "2d293581-d522-5155-94ac-51ea0b70c579"))(global_label "ETH_REFCLK_N" (shape passive) (at 81.28 109.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1176eb0e-3882-5cb4-946a-a592a9486eaa"))(wire (pts (xy 91.44 111.76) (xy 81.28 111.76)) (stroke (width 0) (type default)) (uuid "1593baa1-b547-50a7-a4d9-9f69dde870ac"))(global_label "ETH_PCIE_RXP" (shape passive) (at 81.28 111.76 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cf25f01f-585c-57d1-b127-ec3a687ceb61"))(wire (pts (xy 91.44 114.3) (xy 81.28 114.3)) (stroke (width 0) (type default)) (uuid "1a39a8b6-abf1-53d3-a432-f4c0aec8002d"))(global_label "ETH_PCIE_RXN" (shape passive) (at 81.28 114.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e716f8eb-5fae-5cec-adfc-e1afcee533b5"))(wire (pts (xy 137.16 101.6) (xy 147.32 101.6)) (stroke (width 0) (type default)) (uuid "4260cae3-b02e-5d0f-a29d-6ba6496d537e"))(global_label "ETH_PCIE_TXP" (shape passive) (at 147.32 101.6 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "03e15b42-a03b-5f8f-b373-7f1c9b838348"))(wire (pts (xy 137.16 104.14) (xy 147.32 104.14)) (stroke (width 0) (type default)) (uuid "6efc42ca-18ce-5cf9-8310-6facaf93c939"))(global_label "ETH_PCIE_TXN" (shape passive) (at 147.32 104.14 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7f003179-818a-590d-959e-851b6d88a6df"))(wire (pts (xy 137.16 106.68) (xy 147.32 106.68)) (stroke (width 0) (type default)) (uuid "32125d4b-9919-5bc6-aec7-fa8097e45211"))(global_label "ETH_WAKE_N" (shape passive) (at 147.32 106.68 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "cfc94e25-e19a-578e-aa54-9445c9b84580"))(wire (pts (xy 137.16 109.22) (xy 147.32 109.22)) (stroke (width 0) (type default)) (uuid "a7ff35c8-8b7d-585e-b59a-627662836494"))(global_label "ETH_CLKREQ_N" (shape passive) (at 147.32 109.22 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b5cdf5a7-18ed-599f-940b-189fc4d5333f"))(wire (pts (xy 137.16 111.76) (xy 147.32 111.76)) (stroke (width 0) (type default)) (uuid "8400a287-2a4f-5e34-b1a8-0adf961a4659"))(global_label "ETH_CORE_EN" (shape passive) (at 147.32 111.76 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6ed07473-2956-55ce-aebe-d6beeb2a960f"))(wire (pts (xy 114.3 91.44) (xy 114.3 81.28)) (stroke (width 0) (type default)) (uuid "f4933a43-8f08-543a-8bb1-080261dd8646"))(global_label "ETH_PCIE_0V95" (shape passive) (at 114.3 81.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f0980966-410e-50c0-8b57-845b960f410f"))(symbol (lib_id "Appliance:RTL8125BG_CG") (at 408.94 106.68 0) (unit 2) (in_bom yes) (on_board yes) (dnp no) (uuid "132263b2-685d-5088-b39f-ab82aff0526f") (property "Reference" "U1301" (at 408.94 66.03999999999999 0) (effects (font (size 1.27 1.27))))(property "Value" "RTL8125BG-CG" (at 408.94 68.58 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:TQFN-48_L6.0-W6.0-P0.40-BL-EP4.5" (at 408.94 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RTL8125BG-CG" (at 408.94 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Realtek" (at 408.94 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C3013605" (at 408.94 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://gzhls.at/blob/ldb/4/2/8/6/7a314000645b287070e0d89fb96ceb1faf4a.pdf" (at 408.94 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "BG variant: external 0.95V supply; no BGS substitution" (at 408.94 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "U1301") (unit 2))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "U1301") (unit 2)))))(wire (pts (xy 401.32 86.36) (xy 401.32 76.2)) (stroke (width 0) (type default)) (uuid "c329705f-ee81-55a0-b7bd-442b21079960"))(wire (pts (xy 403.86 86.36) (xy 403.86 76.2)) (stroke (width 0) (type default)) (uuid "74373c09-b40a-59ac-b04f-2334aa44bacb"))(wire (pts (xy 406.4 86.36) (xy 406.4 76.2)) (stroke (width 0) (type default)) (uuid "f2d70e9a-32ff-52cb-b1c3-63d8b038eefd"))(wire (pts (xy 401.32 76.2) (xy 403.86 76.2)) (stroke (width 0) (type default)) (uuid "10ad57de-b240-52d8-b669-73d8c7c230a9"))(wire (pts (xy 403.86 76.2) (xy 406.4 76.2)) (stroke (width 0) (type default)) (uuid "bd4a38e2-1734-590d-8116-17b780085715"))(global_label "ETH_ANALOG_0V95" (shape passive) (at 401.32 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4ca0ae6a-1737-5486-aa8a-1cac44f10b5d"))(wire (pts (xy 408.94 86.36) (xy 408.94 76.2)) (stroke (width 0) (type default)) (uuid "950f9d37-8a2a-5518-bbb2-cdba59cedd71"))(wire (pts (xy 411.48 86.36) (xy 411.48 76.2)) (stroke (width 0) (type default)) (uuid "6489a865-7eae-52f3-8259-446c9abde18c"))(wire (pts (xy 414.02 86.36) (xy 414.02 76.2)) (stroke (width 0) (type default)) (uuid "2fe12a84-ee89-58d4-9be7-becbbd6e17ad"))(wire (pts (xy 408.94 76.2) (xy 411.48 76.2)) (stroke (width 0) (type default)) (uuid "5750f80d-6f6b-5422-8262-2221458cae74"))(wire (pts (xy 411.48 76.2) (xy 414.02 76.2)) (stroke (width 0) (type default)) (uuid "f209d989-7dd6-54af-be5f-c60f94ede250"))(global_label "ETH_ANALOG_3V3" (shape passive) (at 408.94 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7bf898a9-2d0d-5c56-832a-9bcce952f150"))(wire (pts (xy 386.08 96.52) (xy 375.92 96.52)) (stroke (width 0) (type default)) (uuid "5ec74087-02c1-59a2-964e-d558ebb5744c"))(global_label "ETH_XTAL_IN" (shape passive) (at 375.92 96.52 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d55909f1-247a-54a1-b340-ed7daaf937da"))(wire (pts (xy 386.08 99.06) (xy 375.92 99.06)) (stroke (width 0) (type default)) (uuid "6e7ff134-4246-5d00-a4cd-bac5a7c02281"))(global_label "ETH_MDI0_P" (shape passive) (at 375.92 99.06 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fadf385c-56d6-589e-9449-a542860d8d84"))(wire (pts (xy 386.08 101.6) (xy 375.92 101.6)) (stroke (width 0) (type default)) (uuid "2f240726-6499-5084-b351-1c0d2cc63ff0"))(global_label "ETH_MDI0_N" (shape passive) (at 375.92 101.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a1ad8181-34a1-5558-a580-9c45bdb461a3"))(wire (pts (xy 386.08 104.14) (xy 375.92 104.14)) (stroke (width 0) (type default)) (uuid "f3f13e6b-7d9f-5915-a964-85f6760ff346"))(global_label "ETH_MDI1_P" (shape passive) (at 375.92 104.14 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "911eec04-66e1-536d-b63d-7b388d6ad97d"))(wire (pts (xy 386.08 106.68) (xy 375.92 106.68)) (stroke (width 0) (type default)) (uuid "f7661b81-b4f7-5c08-bf33-308443aee347"))(global_label "ETH_MDI1_N" (shape passive) (at 375.92 106.68 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a1bd2d00-e5ca-5e6e-b6a8-35100cbce29b"))(wire (pts (xy 386.08 109.22) (xy 375.92 109.22)) (stroke (width 0) (type default)) (uuid "5963084b-2cbd-58f7-9487-ab7b5f15954e"))(global_label "ETH_MDI2_P" (shape passive) (at 375.92 109.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8dc30ae2-5c81-5510-aa93-e7884e1a8d4f"))(wire (pts (xy 386.08 111.76) (xy 375.92 111.76)) (stroke (width 0) (type default)) (uuid "43df46f5-af87-5195-b6b8-2e7ee36ac893"))(global_label "ETH_MDI2_N" (shape passive) (at 375.92 111.76 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a10df460-5f93-5bfc-9722-4d6cf43f0b93"))(wire (pts (xy 386.08 114.3) (xy 375.92 114.3)) (stroke (width 0) (type default)) (uuid "acb8b479-bd35-5dfe-b789-59004e5e6435"))(global_label "ETH_MDI3_P" (shape passive) (at 375.92 114.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "67eb9ddb-af69-53f1-ab70-7627a882a77e"))(wire (pts (xy 386.08 116.84) (xy 375.92 116.84)) (stroke (width 0) (type default)) (uuid "60aff062-d58c-54ec-8c59-3487f25b0ee3"))(global_label "ETH_MDI3_N" (shape passive) (at 375.92 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "17448574-38b0-51a5-98cf-852f10e66523"))(wire (pts (xy 431.8 106.68) (xy 441.96 106.68)) (stroke (width 0) (type default)) (uuid "c9876d23-4b1a-5e97-99d6-2dc3e61d01c0"))(global_label "ETH_XTAL_OUT" (shape passive) (at 441.96 106.68 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5c4380a0-dcc4-573a-9044-5e9b6f066dac"))(wire (pts (xy 431.8 109.22) (xy 441.96 109.22)) (stroke (width 0) (type default)) (uuid "4f9b658c-19e1-564b-acdd-c0c1a8a55e7c"))(global_label "ETH_RSET" (shape passive) (at 441.96 109.22 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "252c4eda-cb0b-52dc-a723-bbc67185aea2"))(wire (pts (xy 416.56 86.36) (xy 416.56 76.2)) (stroke (width 0) (type default)) (uuid "4799f123-d17f-5305-9521-81acbec2eed5"))(global_label "ETH_XTAL_3V3" (shape passive) (at 416.56 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d5bf051c-9668-5e6e-bb74-1a7a9a725db8"))(symbol (lib_id "Appliance:RTL8125BG_CG") (at 106.68 246.38 0) (unit 3) (in_bom yes) (on_board yes) (dnp no) (uuid "9393590d-e3da-5f17-a7c7-fb1155d869f3") (property "Reference" "U1301" (at 106.68 220.98000000000002 0) (effects (font (size 1.27 1.27))))(property "Value" "RTL8125BG-CG" (at 106.68 223.52 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Appliance:TQFN-48_L6.0-W6.0-P0.40-BL-EP4.5" (at 106.68 246.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RTL8125BG-CG" (at 106.68 246.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Realtek" (at 106.68 246.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C3013605" (at 106.68 246.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://gzhls.at/blob/ldb/4/2/8/6/7a314000645b287070e0d89fb96ceb1faf4a.pdf" (at 106.68 246.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "BG variant: external 0.95V supply; no BGS substitution" (at 106.68 246.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "U1301") (unit 3))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "U1301") (unit 3)))))(wire (pts (xy 83.82 241.3) (xy 73.66 241.3)) (stroke (width 0) (type default)) (uuid "8e431da7-a9aa-5b41-a51d-c2520627be7e"))(global_label "ETH_EE_SEL" (shape passive) (at 73.66 241.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5b9b31f2-373e-58e8-b240-74a82bd9f097"))(wire (pts (xy 83.82 243.84) (xy 73.66 243.84)) (stroke (width 0) (type default)) (uuid "8330b493-9e31-5418-9319-12d65b66bb9c"))(global_label "ETH_EE_DO" (shape passive) (at 73.66 243.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d732fbb2-dd19-5c5c-b54f-6647df2a26b9"))(no_connect (at 83.82 246.38) (uuid "c8246f6a-65d9-5381-9c0f-173d22acc9e8"))(no_connect (at 83.82 248.92) (uuid "d4a4bc39-aca9-5eec-b341-44decc026859"))(no_connect (at 83.82 251.46) (uuid "f3cf7e0a-a1bf-5791-8857-e942da691f75"))(no_connect (at 83.82 254.0) (uuid "da79b829-a1bd-5be5-8651-9d4116ed33fc"))(wire (pts (xy 129.54 241.3) (xy 139.7 241.3)) (stroke (width 0) (type default)) (uuid "3be4e8ab-d9b5-56ac-a2da-6c0fed8e9b79"))(global_label "ETH_EE_CLK" (shape passive) (at 139.7 241.3 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0df2f358-1eb4-5728-91e9-55346d67d6b0"))(wire (pts (xy 129.54 243.84) (xy 139.7 243.84)) (stroke (width 0) (type default)) (uuid "cc0a9f5c-45e2-5460-b223-8210811f86a1"))(global_label "ETH_EE_DI" (shape passive) (at 139.7 243.84 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2c0b8f39-de2b-58a7-a333-e1314e579bcd"))(wire (pts (xy 129.54 246.38) (xy 139.7 246.38)) (stroke (width 0) (type default)) (uuid "221179ae-5f2d-5b38-a8a0-806a7111850a"))(global_label "ETH_EE_CS" (shape passive) (at 139.7 246.38 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d8a47c8b-e22b-579a-9ae8-4893c329b709"))(no_connect (at 129.54 248.92) (uuid "ebf74109-0d3a-52a7-94ed-7a6a688f6802"))(no_connect (at 129.54 251.46) (uuid "7a23b066-ceca-5420-a04c-9b101c53c446"))(symbol (lib_id "Device:R_Small_US") (at 215.9 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "85b084fa-9471-5e26-8b71-56cd4505ab0e") (property "Reference" "R1301" (at 224.79000000000002 64.77000000000001 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 224.79000000000002 67.31 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 215.9 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 215.9 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 215.9 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 215.9 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 215.9 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "R1301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "R1301") (unit 1)))))(wire (pts (xy 215.9 63.5) (xy 215.9 53.34)) (stroke (width 0) (type default)) (uuid "191949ee-d3d6-5608-804b-d51e62a9bfca"))(global_label "ETH_3V3" (shape passive) (at 215.9 53.34 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "59a4b851-93c0-50a9-a41b-e66ae3aa7746"))(wire (pts (xy 215.9 68.58) (xy 215.9 78.74)) (stroke (width 0) (type default)) (uuid "3eab9570-2f0e-5f3d-a1ba-97b36adea366"))(global_label "ETH_ISOLATE_N" (shape passive) (at 215.9 78.74 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "375a6aa0-389f-51ba-8853-6643eff77afe"))(symbol (lib_id "Device:R_Small_US") (at 215.9 114.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4ebd6d20-f318-5b7d-bd73-d80bcf71c150") (property "Reference" "R1302" (at 224.79000000000002 113.03 0) (effects (font (size 1.27 1.27))))(property "Value" "1kR" (at 224.79000000000002 115.57 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 215.9 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-071KL" (at 215.9 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 215.9 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 215.9 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 215.9 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "R1302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "R1302") (unit 1)))))(wire (pts (xy 215.9 111.76) (xy 215.9 101.6)) (stroke (width 0) (type default)) (uuid "58f611dc-2cbd-501c-beb2-afbb4ba6980f"))(global_label "ETH_3V3" (shape passive) (at 215.9 101.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1e047adf-6900-5f09-91e7-b4c0c28d0c2a"))(wire (pts (xy 215.9 116.84) (xy 215.9 127.0)) (stroke (width 0) (type default)) (uuid "0328b8dc-e4a5-5b40-b8e5-bd953b3fbead"))(global_label "ETH_WAKE_N" (shape passive) (at 215.9 127.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b7521ddf-7baf-503f-866c-4f8dd40b5acf"))(symbol (lib_id "Device:R_Small_US") (at 215.9 162.56 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ddc47fb4-26fe-5a3f-a71d-de2b3108a14f") (property "Reference" "R1303" (at 224.79000000000002 161.29 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7kR" (at 224.79000000000002 163.83 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 215.9 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-074K7L" (at 215.9 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 215.9 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 215.9 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 215.9 162.56 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "R1303") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "R1303") (unit 1)))))(wire (pts (xy 215.9 160.02) (xy 215.9 149.86)) (stroke (width 0) (type default)) (uuid "b6ec8f35-f637-5999-83db-f1757f0e6ad7"))(global_label "ETH_3V3" (shape passive) (at 215.9 149.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "143093fe-f4e9-525e-b16b-d34ac2e1b64c"))(wire (pts (xy 215.9 165.1) (xy 215.9 175.26)) (stroke (width 0) (type default)) (uuid "69bb776b-105a-5c14-98ae-64c8cd8cc8ce"))(global_label "ETH_CLKREQ_N" (shape passive) (at 215.9 175.26 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ee2a003f-75fa-573a-a6a2-b174c4a0947d"))(symbol (lib_id "Device:R_Small_US") (at 215.9 215.9 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "47d92afe-18a4-5b80-b118-b6a482208d6f") (property "Reference" "R1304" (at 224.79000000000002 214.63 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7kR" (at 224.79000000000002 217.17000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 215.9 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-074K7L" (at 215.9 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 215.9 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 215.9 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 215.9 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "R1304") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "R1304") (unit 1)))))(wire (pts (xy 215.9 213.36) (xy 215.9 203.2)) (stroke (width 0) (type default)) (uuid "8c22f7d9-818b-5a35-862d-922cd99182e3"))(global_label "ETH_3V3" (shape passive) (at 215.9 203.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "819a799f-799d-5937-959f-cd3d47ceb206"))(wire (pts (xy 215.9 218.44) (xy 215.9 228.6)) (stroke (width 0) (type default)) (uuid "c7ef6301-613b-5bf2-ba8d-6e18585ca3e6"))(global_label "ETH_EE_CLK" (shape passive) (at 215.9 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e247a138-79ab-503a-bf64-17b0ca512600"))(symbol (lib_id "Device:R_Small_US") (at 215.9 264.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7767aa0a-ef61-5afd-ac3c-3bca568357e4") (property "Reference" "R1305" (at 224.79000000000002 262.89000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7kR" (at 224.79000000000002 265.43 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 215.9 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-074K7L" (at 215.9 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 215.9 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 215.9 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 215.9 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "R1305") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "R1305") (unit 1)))))(wire (pts (xy 215.9 261.62) (xy 215.9 251.46)) (stroke (width 0) (type default)) (uuid "7cac9a28-b33e-53a7-97d1-a02c6be8cbbd"))(global_label "ETH_EE_DI" (shape passive) (at 215.9 251.46 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e5d89dad-2fbc-57c8-b951-c178ae318a6e"))(wire (pts (xy 215.9 266.7) (xy 215.9 276.86)) (stroke (width 0) (type default)) (uuid "bc96b596-2290-529b-91fb-9ab199851648"))(global_label "GND" (shape passive) (at 215.9 276.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2826135f-e1a3-5b4e-abcf-185de9eda0d6"))(symbol (lib_id "Device:R_Small_US") (at 215.9 312.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ed6fb6e5-b6d7-5322-8884-654003b7af4c") (property "Reference" "R1306" (at 224.79000000000002 311.15000000000003 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 224.79000000000002 313.69 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 215.9 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 215.9 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 215.9 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 215.9 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 215.9 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "R1306") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "R1306") (unit 1)))))(wire (pts (xy 215.9 309.88) (xy 215.9 299.72)) (stroke (width 0) (type default)) (uuid "cdfcd10e-5593-508f-a69c-82fa6d8751fb"))(global_label "ETH_EE_SEL" (shape passive) (at 215.9 299.72 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9f1b8c07-9215-5fb7-b217-d014f16bc43c"))(wire (pts (xy 215.9 314.96) (xy 215.9 325.12)) (stroke (width 0) (type default)) (uuid "c1b83f86-5f45-535c-a685-dee1ec7a0748"))(global_label "GND" (shape passive) (at 215.9 325.12 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "24983c08-20ed-52ba-9a00-7a617fd7b9a1"))(symbol (lib_id "Device:R_Small_US") (at 508 180.34 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7c5a8cec-ba1b-5c18-872c-1c79be0400cb") (property "Reference" "R1307" (at 516.89 179.07 0) (effects (font (size 1.27 1.27))))(property "Value" "2.49kR" (at 516.89 181.61 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 508 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-072K49L" (at 508 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 508 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 508 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 508 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "R1307") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "R1307") (unit 1)))))(wire (pts (xy 508.0 177.8) (xy 508.0 167.64)) (stroke (width 0) (type default)) (uuid "9925ea9a-e402-52b3-9bcd-dfed89d96563"))(global_label "ETH_RSET" (shape passive) (at 508.0 167.64 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fd760a5d-b16d-56b9-bb48-868f86d7325f"))(wire (pts (xy 508.0 182.88) (xy 508.0 193.04)) (stroke (width 0) (type default)) (uuid "dcdcfc7b-dfab-5681-b058-956a1aa7448b"))(global_label "GND" (shape passive) (at 508.0 193.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4463a961-6507-5808-915e-6947e7ac1b22"))(symbol (lib_id "Appliance:93LC46B_SN") (at 342.9 254 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "408bbb12-56e6-517f-841a-e913aee3dc85") (property "Reference" "U1302" (at 342.9 220.98000000000002 0) (effects (font (size 1.27 1.27))))(property "Value" "93LC46BT-I/SN" (at 342.9 223.52 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 342.9 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "93LC46BT-I/SN" (at 342.9 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Microchip Technology" (at 342.9 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C16253" (at 342.9 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/21749H.pdf" (at 342.9 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Programming" "Provision unique MAC and validated Realtek 93C46 image before release" (at 342.9 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "U1302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "U1302") (unit 1)))))(wire (pts (xy 320.04 251.46) (xy 309.88 251.46)) (stroke (width 0) (type default)) (uuid "6e98411e-3c1d-5868-a8f9-8ab5b7f6e7f1"))(global_label "ETH_EE_CS" (shape passive) (at 309.88 251.46 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "44b7058c-df30-5d01-ab90-8b02e7dd26bb"))(wire (pts (xy 320.04 254.0) (xy 309.88 254.0)) (stroke (width 0) (type default)) (uuid "ea7c1435-bbf6-5975-bca7-8ccbf8b5c493"))(global_label "ETH_EE_CLK" (shape passive) (at 309.88 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d12f3338-8ecb-57fe-8df2-fea5eaef82ec"))(wire (pts (xy 320.04 256.54) (xy 309.88 256.54)) (stroke (width 0) (type default)) (uuid "085f75d1-c2df-5d0b-894b-ebfa5aa77b25"))(global_label "ETH_EE_DI" (shape passive) (at 309.88 256.54 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9a9f6fd5-8888-5d6b-94e6-b6375eb947c2"))(wire (pts (xy 365.76 251.46) (xy 375.92 251.46)) (stroke (width 0) (type default)) (uuid "0a21c565-cfa9-5e64-9b21-9bda6a5a0236"))(global_label "ETH_EE_DO" (shape passive) (at 375.92 251.46 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7c300e2e-d483-5d9d-a6c6-9e3462e014c9"))(wire (pts (xy 342.9 266.7) (xy 342.9 276.86)) (stroke (width 0) (type default)) (uuid "401db9b3-cca5-55cf-adf0-30555da56414"))(global_label "GND" (shape passive) (at 342.9 276.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "07934c1a-dc66-58a0-8ab5-1bccf2f017ff"))(no_connect (at 365.76 254.0) (uuid "0df79e79-d9a4-5187-b63e-ee7c38ef5b94"))(no_connect (at 365.76 256.54) (uuid "ff5a82ab-ae7b-5a1f-8f39-9cd3629f2802"))(wire (pts (xy 342.9 241.3) (xy 342.9 231.14)) (stroke (width 0) (type default)) (uuid "095d74f6-398b-55ab-8a58-5b0acc598caf"))(global_label "ETH_3V3" (shape passive) (at 342.9 231.14 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cf14b618-dd9f-5d21-b2b4-5066e70fa6ef"))(symbol (lib_id "Device:C_Small") (at 434.34 254 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0ec826ee-3daa-5906-a1a8-236d2729bc77") (property "Reference" "C1301" (at 443.22999999999996 252.73 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 443.22999999999996 255.27 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 434.34 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 434.34 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 434.34 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 434.34 254 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "C1301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "C1301") (unit 1)))))(wire (pts (xy 434.34 251.46) (xy 434.34 241.3)) (stroke (width 0) (type default)) (uuid "23117901-96d2-533f-92b3-da91f3b008d1"))(global_label "ETH_3V3" (shape passive) (at 434.34 241.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "11a8a6af-5014-506f-badd-304537506c34"))(wire (pts (xy 434.34 256.54) (xy 434.34 266.7)) (stroke (width 0) (type default)) (uuid "f4448c9f-6dfd-5e19-a627-b0586a5966c6"))(global_label "GND" (shape passive) (at 434.34 266.7 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b9d822fc-acf4-5793-8ba6-b98d9bfc7d02"))(symbol (lib_id "Device:Crystal_GND24") (at 406.4 312.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5f2c234c-4e0a-5873-b850-93ec84e69a5e") (property "Reference" "Y1301" (at 406.4 292.09999999999997 0) (effects (font (size 1.27 1.27))))(property "Value" "25MHz, 18pF" (at 406.4 294.64 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" (at 406.4 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "7M-25.000MEIJ-T" (at 406.4 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TXC Corporation" (at 406.4 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Frequency" "25MHz" (at 406.4 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Load Capacitance" "18pF" (at 406.4 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Frequency Tolerance" "10ppm" (at 406.4 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Temperature Stability" "20ppm (-40 to 85C)" (at 406.4 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Aging" "3ppm first year" (at 406.4 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "33ppm initial/temp/aging sum; loading budget <=17ppm; trim and phase noise bench check" (at 406.4 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "Y1301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "Y1301") (unit 1)))))(wire (pts (xy 406.4 317.5) (xy 406.4 327.66)) (stroke (width 0) (type default)) (uuid "7e069dd7-cf3a-5139-8f93-52a45385116a"))(global_label "GND" (shape passive) (at 406.4 327.66 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "91bcc217-2bd4-5423-8884-a80df226258d"))(wire (pts (xy 402.59 312.42) (xy 392.43 312.42)) (stroke (width 0) (type default)) (uuid "5542f91d-07c2-55e6-bbc7-3db7e7be620d"))(global_label "ETH_XTAL_IN" (shape passive) (at 392.43 312.42 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d4a6b352-f089-5cef-b669-2bf030e2c281"))(wire (pts (xy 410.21 312.42) (xy 420.37 312.42)) (stroke (width 0) (type default)) (uuid "460e9fcd-d198-589d-95cc-8c9fa1151704"))(global_label "ETH_XTAL_OUT" (shape passive) (at 420.37 312.42 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ad236e5a-4d77-5e9d-a920-56cee8b6c9a2"))(symbol (lib_id "Device:C_Small") (at 332.74 312.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5cfbd9c8-263e-596c-89fa-6cee11c739d0") (property "Reference" "C1302" (at 341.63 311.15000000000003 0) (effects (font (size 1.27 1.27))))(property "Value" "27pF" (at 341.63 313.69 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 332.74 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10C270JB8NNNC" (at 332.74 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 332.74 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 332.74 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "C0G" (at 332.74 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 332.74 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "C1302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "C1302") (unit 1)))))(wire (pts (xy 332.74 309.88) (xy 332.74 299.72)) (stroke (width 0) (type default)) (uuid "e02279e9-d851-5595-869a-bfb493c29878"))(global_label "ETH_XTAL_IN" (shape passive) (at 332.74 299.72 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d1ec0b83-b1e1-5cf5-a93e-165dc14538a9"))(wire (pts (xy 332.74 314.96) (xy 332.74 325.12)) (stroke (width 0) (type default)) (uuid "19f6a939-cdb1-54a5-a8a1-cb37a95353de"))(global_label "GND" (shape passive) (at 332.74 325.12 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "786d5762-5189-5888-b16d-94a0c095cc38"))(symbol (lib_id "Device:C_Small") (at 482.6 312.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0a3c539b-5b4e-5916-8aee-fd1d97ff82ce") (property "Reference" "C1303" (at 491.49 311.15000000000003 0) (effects (font (size 1.27 1.27))))(property "Value" "27pF" (at 491.49 313.69 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 482.6 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10C270JB8NNNC" (at 482.6 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 482.6 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "50V" (at 482.6 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Dielectric" "C0G" (at 482.6 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 482.6 312.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "C1303") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "C1303") (unit 1)))))(wire (pts (xy 482.6 309.88) (xy 482.6 299.72)) (stroke (width 0) (type default)) (uuid "8861fd0f-09d1-5003-8148-2905ddd88b1f"))(global_label "ETH_XTAL_OUT" (shape passive) (at 482.6 299.72 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a704f26e-d178-55ed-95a0-50200a382321"))(wire (pts (xy 482.6 314.96) (xy 482.6 325.12)) (stroke (width 0) (type default)) (uuid "173c9395-59e3-5152-8952-8e87620512ad"))(global_label "GND" (shape passive) (at 482.6 325.12 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3b61ef0a-2261-599a-bca8-64bffc81a7b5"))(symbol (lib_id "Device:FerriteBead_Small") (at 63.5 363.22 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c2acb0b7-3041-5a26-b960-81612d852676") (property "Reference" "FB1301" (at 63.5 355.6 90) (effects (font (size 1.27 1.27))))(property "Value" "120R @ 100MHz" (at 63.5 358.14000000000004 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 63.5 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MPZ1608S121ATAH0" (at 63.5 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TDK" (at 63.5 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "DCR Maximum" "45mOhm" (at 63.5 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Current Rating" "2A" (at 63.5 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "FB1301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "FB1301") (unit 1)))))(wire (pts (xy 60.96 363.22) (xy 50.8 363.22)) (stroke (width 0) (type default)) (uuid "88874b01-f48e-50d7-a421-4b5409be2385"))(global_label "ETH_3V3" (shape passive) (at 50.8 363.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e4f47231-efca-5400-aa23-a91499835f76"))(wire (pts (xy 66.04 363.22) (xy 76.2 363.22)) (stroke (width 0) (type default)) (uuid "29cbceb3-3dd7-520d-a339-a5f42efbdf6f"))(global_label "ETH_ANALOG_3V3" (shape passive) (at 76.2 363.22 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "53b16ee1-0e44-5527-96a6-ac2b2e9b03a6"))(symbol (lib_id "power:PWR_FLAG") (at 63.5 396.24 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "c970248a-e597-59db-a64d-7279a68ce198") (property "Reference" "#FLG1301" (at 63.5 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "PWR_FLAG" (at 63.5 392.43 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 63.5 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Source" "ETH supply through FB1301" (at 63.5 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "#FLG1301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "#FLG1301") (unit 1)))))(wire (pts (xy 63.5 396.24) (xy 63.5 406.4)) (stroke (width 0) (type default)) (uuid "4e0da578-d9de-5c3e-ab7f-9d1c83cd46d7"))(global_label "ETH_ANALOG_3V3" (shape passive) (at 63.5 406.4 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "546cb953-2afe-5195-a215-a08e499b2528"))(symbol (lib_id "Device:FerriteBead_Small") (at 187.95999999999998 363.22 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4a3f1884-f53f-5f68-b98b-a7866993986a") (property "Reference" "FB1302" (at 187.95999999999998 355.6 90) (effects (font (size 1.27 1.27))))(property "Value" "120R @ 100MHz" (at 187.95999999999998 358.14000000000004 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 187.95999999999998 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MPZ1608S121ATAH0" (at 187.95999999999998 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TDK" (at 187.95999999999998 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "DCR Maximum" "45mOhm" (at 187.95999999999998 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Current Rating" "2A" (at 187.95999999999998 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "FB1302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "FB1302") (unit 1)))))(wire (pts (xy 185.42 363.22) (xy 175.26 363.22)) (stroke (width 0) (type default)) (uuid "946ee41c-0236-5a9e-bda6-d2ce114aad4f"))(global_label "ETH_3V3" (shape passive) (at 175.26 363.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "960117b2-84f7-5d82-b14a-a935d9cc702c"))(wire (pts (xy 190.5 363.22) (xy 200.66 363.22)) (stroke (width 0) (type default)) (uuid "2f2555de-9f79-5740-a385-d4b4ea53540a"))(global_label "ETH_XTAL_3V3" (shape passive) (at 200.66 363.22 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d6e7ec45-a1d7-5308-a6be-08562dd5faba"))(symbol (lib_id "power:PWR_FLAG") (at 187.95999999999998 396.24 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "fb245113-23bd-598e-a415-eb212ae8fd68") (property "Reference" "#FLG1302" (at 187.95999999999998 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "PWR_FLAG" (at 187.95999999999998 392.43 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 187.95999999999998 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Source" "ETH supply through FB1302" (at 187.95999999999998 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "#FLG1302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "#FLG1302") (unit 1)))))(wire (pts (xy 187.96 396.24) (xy 187.96 406.4)) (stroke (width 0) (type default)) (uuid "4eda8517-6ab9-5fcc-90ef-729aa16f1cb2"))(global_label "ETH_XTAL_3V3" (shape passive) (at 187.96 406.4 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "481691c0-5393-56eb-95af-5cb67ddc0670"))(symbol (lib_id "Device:FerriteBead_Small") (at 312.41999999999996 363.22 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ae5af0a0-9ace-5768-984b-74c55dc5fec5") (property "Reference" "FB1303" (at 312.41999999999996 355.6 90) (effects (font (size 1.27 1.27))))(property "Value" "30R @ 100MHz" (at 312.41999999999996 358.14000000000004 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_0805_2012Metric" (at 312.41999999999996 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MPZ2012S300AT000" (at 312.41999999999996 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TDK" (at 312.41999999999996 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "DCR Maximum" "10mOhm" (at 312.41999999999996 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Current Rating" "6A" (at 312.41999999999996 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "FB1303") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "FB1303") (unit 1)))))(wire (pts (xy 309.88 363.22) (xy 299.72 363.22)) (stroke (width 0) (type default)) (uuid "f39060f5-a615-59db-902d-6c21c2ec6e7d"))(global_label "ETH_0V95" (shape passive) (at 299.72 363.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b0a45ae5-26d4-5f5a-99d5-3c95ab7e6081"))(wire (pts (xy 314.96 363.22) (xy 325.12 363.22)) (stroke (width 0) (type default)) (uuid "a56f8a74-bd3d-529a-aa61-2382e1d84873"))(global_label "ETH_ANALOG_0V95" (shape passive) (at 325.12 363.22 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "30a27dcd-d0c7-5bde-bd5b-48a114c172c6"))(symbol (lib_id "power:PWR_FLAG") (at 312.41999999999996 396.24 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "61aae641-0583-508d-ab5a-6c81869c6386") (property "Reference" "#FLG1303" (at 312.41999999999996 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "PWR_FLAG" (at 312.41999999999996 392.43 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 312.41999999999996 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Source" "ETH supply through FB1303" (at 312.41999999999996 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "#FLG1303") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "#FLG1303") (unit 1)))))(wire (pts (xy 312.42 396.24) (xy 312.42 406.4)) (stroke (width 0) (type default)) (uuid "23ffa9a7-148a-54d1-b62e-dc8123e4b699"))(global_label "ETH_ANALOG_0V95" (shape passive) (at 312.42 406.4 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8d9704b1-8026-51aa-bce0-1dc48ae8d9ec"))(symbol (lib_id "Device:FerriteBead_Small") (at 436.88 363.22 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "71c23d5e-6300-5bff-9def-a7d53cd590f5") (property "Reference" "FB1304" (at 436.88 355.6 90) (effects (font (size 1.27 1.27))))(property "Value" "30R @ 100MHz" (at 436.88 358.14000000000004 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Inductor_SMD:L_0805_2012Metric" (at 436.88 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MPZ2012S300AT000" (at 436.88 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TDK" (at 436.88 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "DCR Maximum" "10mOhm" (at 436.88 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Current Rating" "6A" (at 436.88 363.22 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "FB1304") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "FB1304") (unit 1)))))(wire (pts (xy 434.34 363.22) (xy 424.18 363.22)) (stroke (width 0) (type default)) (uuid "95ee2c35-35e3-5ba6-a9a1-31e99fae4e70"))(global_label "ETH_0V95" (shape passive) (at 424.18 363.22 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cfc05f57-6f30-573c-bef7-305f7b28e1de"))(wire (pts (xy 439.42 363.22) (xy 449.58 363.22)) (stroke (width 0) (type default)) (uuid "99c0e83e-aa40-5e17-8844-8a5b726522e5"))(global_label "ETH_PCIE_0V95" (shape passive) (at 449.58 363.22 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "17ace286-7bf4-52f3-b4cf-da13ead4355b"))(symbol (lib_id "power:PWR_FLAG") (at 436.88 396.24 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "d2121050-6c9d-5b75-a054-1becbc0e7c85") (property "Reference" "#FLG1304" (at 436.88 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "PWR_FLAG" (at 436.88 392.43 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 436.88 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Source" "ETH supply through FB1304" (at 436.88 396.24 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "nic" (path "/94aa89ef-a27c-529a-bb64-18b115fcf9db" (reference "#FLG1304") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2" (reference "#FLG1304") (unit 1)))))(wire (pts (xy 436.88 396.24) (xy 436.88 406.4)) (stroke (width 0) (type default)) (uuid "58f9f310-a758-5cef-8111-3cd9d3baf169"))(global_label "ETH_PCIE_0V95" (shape passive) (at 436.88 406.4 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fdcfa71e-9fc3-5dc0-829e-3e8174989137"))(text "LANWAKE requires 1–4.7k pull-up. EESK requires 4.7k pull-up; low enters test mode.\nEEDI low selects Microwire, EEPROM_SEL low selects 93C46. All strap levels at power-on.\nBG pins 4/5/7 float; all 49 pads audited. 2.5G magnetics and four-pair PoE attached; qualify hardware." (at 25.4 401.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "430ad90f-0934-5ce1-a9a6-c4dfefb5ed5f")))
