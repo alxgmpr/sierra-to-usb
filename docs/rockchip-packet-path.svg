@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="800" viewBox="0 0 1500 800">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6" fill="none" stroke="#284e68" stroke-width="1.5"/></marker>
+  </defs>
+  <style>
+    text{font-family:Arial,sans-serif;fill:#17354a}.title{font-size:29px;font-weight:bold}.head{font-size:19px;font-weight:bold}.body{font-size:16px}.small{font-size:14px}.data{stroke:#284e68;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.control{stroke:#9a6731;stroke-width:2;fill:none;stroke-dasharray:8 6;marker-end:url(#arrow)}.power{stroke:#3d8267;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+  </style>
+  <rect width="1500" height="800" fill="#f7f9fb"/>
+  <text x="40" y="48" class="title">RK3566 Linux host — selected evaluation topology</text>
+  <text x="40" y="78" class="body">Interface path documented; no four-modem, throughput, PoE or production BOM qualification yet.</text>
+  <text x="40" y="128" class="head">Packet path</text>
+  <rect x="35" y="155" width="270" height="155" rx="10" fill="#e8eff8" stroke="#73899b"/>
+  <text x="52" y="184" class="head">One exact modem</text>
+  <text x="52" y="212" class="body">EM9190 / EM9293</text>
+  <text x="52" y="236" class="body">RM520N-GL / RM551E-GL</text>
+  <text x="52" y="263" class="small">USB3 device; tuple pending</text>
+  <text x="52" y="286" class="small">Profile-specific M.2 supply</text>
+  <rect x="390" y="155" width="345" height="155" rx="10" fill="#d9ede8" stroke="#54836f"/>
+  <text x="408" y="184" class="head">RK3566 + Linux</text>
+  <text x="408" y="212" class="body">USB3 host: Multi-PHY1</text>
+  <text x="408" y="236" class="body">PCIe RC: Multi-PHY2</text>
+  <text x="408" y="263" class="small">RAM / boot storage / PMIC pending</text>
+  <text x="408" y="286" class="small">Routing, NAT, DHCP, modem driver</text>
+  <rect x="820" y="155" width="280" height="155" rx="10" fill="#e8eff8" stroke="#73899b"/>
+  <text x="838" y="184" class="head">RTL8125BG-CG</text>
+  <text x="838" y="212" class="body">PCIe endpoint</text>
+  <text x="838" y="236" class="body">2.5GbE MAC + PHY</text>
+  <text x="838" y="263" class="small">Exact circuit/driver pending</text>
+  <rect x="1185" y="155" width="280" height="155" rx="10" fill="#e8eff8" stroke="#73899b"/>
+  <text x="1203" y="184" class="head">Magnetics + RJ45</text>
+  <text x="1203" y="212" class="body">2.5GBASE-T data</text>
+  <text x="1203" y="236" class="body">PoE-rated isolation</text>
+  <text x="1203" y="263" class="small">Exact parts/class pending</text>
+  <path d="M305 226 H390" class="data"/><text x="310" y="215" class="small">USB3</text>
+  <path d="M735 226 H820" class="data"/><text x="740" y="215" class="small">PCIe x1</text>
+  <path d="M1100 226 H1185" class="data"/><text x="1107" y="215" class="small">2.5G</text>
+  <text x="40" y="375" class="head">Independent recovery and power domains</text>
+  <rect x="35" y="405" width="340" height="150" rx="10" fill="#e4f1e7" stroke="#609073"/>
+  <text x="53" y="434" class="head">Cable-side PoE</text>
+  <text x="53" y="462" class="body">Detection / class / inrush</text>
+  <text x="53" y="486" class="body">Isolated DC/DC barrier</text>
+  <text x="53" y="521" class="small">Peak budget and PD class pending</text>
+  <rect x="470" y="405" width="390" height="150" rx="10" fill="#e4f1e7" stroke="#609073"/>
+  <text x="488" y="434" class="head">System-side rails</text>
+  <text x="488" y="462" class="body">Always-on MCU rail</text>
+  <text x="488" y="486" class="body">Switched host / NIC / modem rails</text>
+  <text x="488" y="521" class="small">Sequencing, discharge and faults pending</text>
+  <rect x="960" y="405" width="505" height="150" rx="10" fill="#fff0d9" stroke="#a9854e"/>
+  <text x="978" y="434" class="head">STM32G0B1 + external watchdog</text>
+  <text x="978" y="462" class="body">Reset and enable outputs captured in KiCad</text>
+  <text x="978" y="486" class="body">Host heartbeat and recovery firmware pending</text>
+  <text x="978" y="521" class="small">Target-domain pull-ups and level safety pending</text>
+  <path d="M375 480 H470" class="power"/>
+  <path d="M860 480 H960" class="power"/>
+  <path d="M1210 405 V355 H560 V310" class="control"/>
+  <path d="M1320 405 V340 H170 V310" class="control"/>
+  <text x="40" y="625" class="head">Qualification boundary</text>
+  <text x="40" y="657" class="body">Each modem needs exact SKU + hardware + firmware + carrier + USB composition + Linux driver testing.</text>
+  <text x="40" y="684" class="body">USB3/PCIe signaling rates do not prove routed WAN throughput. Target ≥2.0 Gb/s downstream where RF permits.</text>
+  <text x="40" y="711" class="body">Sierra and Quectel M.2 VCC pins conflict; do not connect a universal supply plane.</text>
+  <text x="40" y="757" class="small">Solid blue: packet data. Green: power. Dashed amber: recovery control. Sources and gate matrix: rockchip-qualification.md.</text>
+</svg>

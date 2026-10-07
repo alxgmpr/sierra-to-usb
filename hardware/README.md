@@ -63,6 +63,8 @@ capacitance are not a released BOM. Headers, RUN shunt and switch need exact
 orderable parts and mechanical review. MCU update partition sizing, signed
 bootloader, BOR/option bytes, recovery firmware and watchdog startup timing are
 not implemented or tested. The RUN jumper must not be omitted in production.
+The grouped native-netlist inventory and block-level gates are recorded in
+[qualification-status.md](../docs/qualification-status.md).
 
 External reset pull-ups must come from the relevant switched target domain;
 `MODEM_OFF_N` needs the profile-specific FULL_CARD_POWER_OFF# pull-up. Without
