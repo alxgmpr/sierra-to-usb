@@ -1,0 +1,305 @@
+{
+  "reviewed": "2026-10-21",
+  "generator_revision": "4115da4a5f1165c8ddf33d1e29d8f19234b6971d",
+  "scope": "Generated package envelopes with reviewed orientation. Not vendor-exact geometry, full tolerance envelopes, mating or assembly qualification. Capacitor marking extends 0.01mm above specified maximum body height.",
+  "source_hashes": {
+    "Appliance.pretty/sierra-inductor-models.yaml": "a38c0c11f28b018ef671b3b7f0dfbfad005b365de41fca14a2078cd62cb1ec15",
+    "Appliance.pretty/sierra-models.csv": "c537b0b3d984a842eadc28ce852e71c36cb406647f7da307f69afe89627cdadb",
+    "Appliance.pretty/sierra-opto-model.yaml": "f7122e85fabd4168e96460ac7c87bc923d46dec22221be593acf662d58291096",
+    "Appliance.pretty/sierra-cap-models.yaml": "9909836ae9c0becd420e8ff6c490d6e730f158a84d21d6c83d93f52909ebb74a",
+    "Appliance.pretty/sierra-wson-model.yaml": "a4f395c7f9632ea4c876f0b2f8e1eb7ffb2b20143c8c17c11d16d0197f4a4e3a",
+    "reference/nichicon-cv.pdf": "951868be9bc548f873e011f0be400c71e03e96100da5276b9f11f2cf0dc191fc",
+    "reference/lm51551.pdf": "e65e47f61e64e3c3dc9cc1905f53bf014713abf562c0c6138b32db26a4b6f466",
+    "reference/xgl4030.pdf": "34bb1c739914fc2114653d5b3d5893e90501129d5c2af8a152e546b8068b72e5",
+    "reference/xfl4020.pdf": "6dca915ac1daa47210f7708a7540221ffef4f34a88a8621c94bd50cdf48647e6",
+    "reference/xgl4030-dimensions.gif": "1be073613c0039eb18de10d755af07b5590346dc28966c0ef6f577cf065fb599",
+    "reference/xgl4020.pdf": "1e050d7e4f44f7e1f3ae3be38de87b15e4d72b2ef463c7b1f4edc292f83ad2c0",
+    "reference/tlp293.pdf": "61652cfa24751a311aaf382755cca9fee955329258917a14e8e9b733541e5684"
+  },
+  "source_urls": {
+    "reference/nichicon-cv.pdf": "https://www.nichicon.co.jp/english/products/pdf/e-cv.pdf",
+    "reference/lm51551.pdf": "https://www.ti.com/lit/ds/symlink/lm51551.pdf",
+    "reference/xgl4030.pdf": "https://www.coilcraft.com/getmedia/032d9c73-4222-482f-b6bc-7808590e27c9/xgl4030.pdf",
+    "reference/xfl4020.pdf": "https://www.coilcraft.com/getmedia/50632d43-da1b-4cdb-8ab4-3029cab51df3/xfl4020.pdf",
+    "reference/xgl4030-dimensions.gif": "https://www.coilcraft.com/getattachment/7914338e-f23b-45de-aa1d-e782ba7e954b/xgl4030d.gif?lang=en-US",
+    "C1717_manufacturer_page": "https://na.industrial.panasonic.com/products/capacitors/aluminum-electrolytic-capacitors/series/88994/model/89545"
+  },
+  "attached": [
+    {
+      "file": "Appliance.3dshapes/Sierra_XxL4020.step",
+      "sha256": "89c8c700d2ed91ea83f2e6a7aca7becc062adce191ab0f734b69e552f53e205a",
+      "references": [
+        "L1001",
+        "L1501",
+        "L1707",
+        "L501",
+        "L502",
+        "L504",
+        "L505",
+        "L901",
+        "L902"
+      ],
+      "rotation_xyz_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "offset_xyz_mm": [
+        0,
+        0,
+        0
+      ],
+      "size_xyz_mm": [
+        4.3,
+        4.3,
+        2.1
+      ],
+      "z_min_mm": 0
+    },
+    {
+      "file": "Appliance.3dshapes/Sierra_XGL4030.step",
+      "sha256": "fd439d1b01be108a45d43608165bbbe998333b4a15257964fed043086d150c1b",
+      "references": [
+        "L601"
+      ],
+      "rotation_xyz_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "offset_xyz_mm": [
+        0,
+        0,
+        0
+      ],
+      "size_xyz_mm": [
+        4.3,
+        4.3,
+        3.1
+      ],
+      "z_min_mm": 0
+    },
+    {
+      "file": "Appliance.3dshapes/Sierra_TLP293.step",
+      "sha256": "5ab6a55349ea1ea0525a7aebdbd84844c76337ba6f92dc24f054ed86d35345a3",
+      "references": [
+        "U1801",
+        "U1802",
+        "U1803"
+      ],
+      "rotation_xyz_degrees": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "offset_xyz_mm": [
+        0,
+        0,
+        0
+      ],
+      "size_xyz_mm": [
+        7,
+        2.6,
+        2.2
+      ],
+      "z_min_mm": 0
+    },
+    {
+      "file": "Appliance.3dshapes/Sierra_EEEFK1J470P.step",
+      "sha256": "584e11e17138ebd8222b33c8502089fe61bf4042dfffe4f1fd3340a7c2eeacc2",
+      "references": [
+        "C1717"
+      ],
+      "rotation_xyz_degrees": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "offset_xyz_mm": [
+        0,
+        0,
+        0
+      ],
+      "size_xyz_mm": [
+        10,
+        8.3,
+        10.21
+      ],
+      "z_min_mm": 0
+    },
+    {
+      "file": "Appliance.3dshapes/Sierra_PCV1E271MCL1GS.step",
+      "sha256": "f3944a874cd4f64ff4ed7738457193a4eb03ceaea778985044c7f6345308d9bc",
+      "references": [
+        "C1727"
+      ],
+      "rotation_xyz_degrees": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "offset_xyz_mm": [
+        0,
+        0,
+        0
+      ],
+      "size_xyz_mm": [
+        11,
+        10.3,
+        12.71
+      ],
+      "z_min_mm": 0
+    },
+    {
+      "file": "Appliance.3dshapes/Sierra_LM51551_DSS0012B.step",
+      "sha256": "2e9aae0c7a4f5f5343a990a45bbd79f31fb382927c04c6c05525c543cadb28a7",
+      "references": [
+        "U1702"
+      ],
+      "rotation_xyz_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "offset_xyz_mm": [
+        0,
+        0,
+        0
+      ],
+      "size_xyz_mm": [
+        2,
+        3,
+        0.8
+      ],
+      "z_min_mm": 0
+    }
+  ],
+  "remaining_holds": [
+    {
+      "footprint": "Appliance:Diodes_PowerDI-5_3Pin_Derived",
+      "references": [
+        "D1718"
+      ],
+      "blocker": "Exact Diodes SP5 body/terminal underside and pin-1 orientation need a sourced model; a generic three-pin diode would conceal the split terminals."
+    },
+    {
+      "footprint": "Appliance:SIM-SMD_1042240820",
+      "references": [
+        "J2002"
+      ],
+      "blocker": "Molex 1042240820 hinged/cover geometry and insertion clearance require exact vendor CAD and seating datum; no verified asset obtained."
+    },
+    {
+      "footprint": "Appliance:Sierra_HX4110NL_2x12_P1.27mm",
+      "references": [
+        "T1701"
+      ],
+      "blocker": "Pulse HX4110NL drawing is archived; transformer body, stand-off and lead bend need a matching model; installed stock path is absent."
+    },
+    {
+      "footprint": "Appliance:Sierra_MDT420B01411_2x38-1MP_P0.5mm",
+      "references": [
+        "J2001"
+      ],
+      "blocker": "Exact Amphenol STEP archived; candidate X rotations align either seating height or contact row, not both. Resolve contact/locating-hole datum against drawing before attachment."
+    },
+    {
+      "footprint": "Appliance:Sierra_RJE491881401_1x08-1MP_P1.02mm",
+      "references": [
+        "J1701"
+      ],
+      "blocker": "Amphenol RJE49 drawing archived; no exact CAD obtained. RJ45 substitutes have different panel, shield-tab and LED geometry."
+    },
+    {
+      "footprint": "Appliance:TQFN-48_L6.0-W6.0-P0.40-BL-EP4.5",
+      "references": [
+        "U1301"
+      ],
+      "blocker": "Realtek drawing archived; installed 6x6 QFN has a different 4.45mm exposed pad. Exact terminal, height and pin-1 datum remain to be modeled."
+    },
+    {
+      "footprint": "Appliance:Texas_RPA0010A_TPS56837",
+      "references": [
+        "U701"
+      ],
+      "blocker": "TI RPA0010A drawing archived. Existing generic no-lead generator does not describe the split VIN fingers and long internal switch/ground terminals. CSE lists a model but did not provide a STEP asset."
+    },
+    {
+      "footprint": "Appliance:UQFN-10_L2.0-W1.5-P0.50-BL",
+      "references": [
+        "U2002"
+      ],
+      "blocker": "TI RSE0010A drawing archived; two end terminals differ from the eight side terminals. Uniform QFN substitution would misrepresent contacts."
+    },
+    {
+      "footprint": "Appliance:VQFN-10_L2.0-W2.0-P0.45-TL",
+      "references": [
+        "U1902"
+      ],
+      "blocker": "TI TPS25947 drawing archived; asymmetric long/corner terminals require a matching underside model, not a uniform 10-pin QFN."
+    },
+    {
+      "footprint": "Appliance:VQFN-14_L3.5-W3.5-P0.50-TL-EP_TPS54622RHLT",
+      "references": [
+        "U1901"
+      ],
+      "blocker": "TI RHL0014A drawing archived; asymmetric corner lead placement and thermal-pad profile require an exact terminal definition."
+    },
+    {
+      "footprint": "Appliance:WLCSP-20_L2.0-W1.6-R5-C4-P0.40-TL",
+      "references": [
+        "U1001"
+      ],
+      "blocker": "Full TCS4525 v1.0 p21 gives 1.60-1.66 by 2.00-2.06mm, 0.60mm max height and 0.15-0.23mm ball stand-off, but no ball diameter. Archived v1.1 is only the first page. Do not infer ball diameter from PCB copper."
+    },
+    {
+      "footprint": "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal",
+      "references": [
+        "J1201"
+      ],
+      "blocker": "No exact matching Amphenol shell/retention-tab CAD obtained; installed model path absent. Mating-face and board-edge datum must be checked."
+    },
+    {
+      "footprint": "Inductor_SMD:L_Coilcraft_LPS4018",
+      "references": [
+        "L401"
+      ],
+      "blocker": "LPS4018 drawing archived; ferrite drum, base/chamfer and wraparound terminals differ from the modeled XGL molded-body geometry."
+    },
+    {
+      "footprint": "Oscillator:Oscillator_SMD_SiT_PQFN-4Pin_3.2x2.5mm",
+      "references": [
+        "Y1101"
+      ],
+      "blocker": "SiT8008B p11 package drawing archived; existing crystal model generator has a different ceramic/metal stack. Exact PQFN underside and pin-1 treatment remain."
+    },
+    {
+      "footprint": "Package_BGA:LFBGA-153_11.5x13mm_Layout14x14_P0.5mm",
+      "references": [
+        "U1101"
+      ],
+      "blocker": "Stock generator has JEDEC AN 153-ball XY but lacks body stand-off for 3D. Current archived ISSI sheet covers the 100-ball package; exact JCLI 153-ball package dimensions must be archived before generation."
+    },
+    {
+      "footprint": "PoE:TI_Molex_87898-0204",
+      "references": [
+        "J1712"
+      ],
+      "blocker": "Molex 87898-0204 exact shroud, latch and mating envelope not verified; a generic 2-pin header would hide connector clearance."
+    },
+    {
+      "footprint": "PoE:TI_TRANS_Fairchild_PQFN08A",
+      "references": [
+        "Q1705"
+      ],
+      "blocker": "FDMS86252 exact Power56/PQFN terminal arrangement and seating geometry need vendor package CAD; generic eight-pin QFN is not sufficient."
+    },
+    {
+      "footprint": "PoE:TI_WE-SL5",
+      "references": [
+        "L1702"
+      ],
+      "blocker": "Wurth publishes exact 744272251 STEP (rev1), but automated retrieval returned HTTP 403. Archived 744272222 is wrong MPN and has invalid solids; remains detached."
+    }
+  ]
+}

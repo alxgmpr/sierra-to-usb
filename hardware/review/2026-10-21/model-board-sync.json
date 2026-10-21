@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-21",
+  "PCB_footprints": 663,
+  "schematic_parity_issues": 0,
+  "default_library_footprints": 626,
+  "hand_solder_footprints": 572,
+  "components_with_resolved_models": 642,
+  "model_release_hold_components": [
+    "D1718",
+    "J1201",
+    "J1701",
+    "J1712",
+    "J2001",
+    "J2002",
+    "L1702",
+    "L401",
+    "Q1705",
+    "T1701",
+    "U1001",
+    "U1101",
+    "U1301",
+    "U1901",
+    "U1902",
+    "U2002",
+    "U701",
+    "Y1101"
+  ],
+  "physical_DRC_violations": {
+    "clearance": 334,
+    "courtyards_overlap": 19,
+    "drill_out_of_range": 19,
+    "invalid_outline": 1,
+    "silk_over_copper": 199,
+    "silk_overlap": 199
+  },
+  "unconnected_items": 499,
+  "manufacturing_ready": false,
+  "scope": "Native component, field, attribute and net synchronization. Full DRC is reported without exclusions; zero parity does not establish manufacturing readiness."
+}

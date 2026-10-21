@@ -1,0 +1,31 @@
+Sierra_EEEFK1J470P:
+  L: 10.2
+  D: 8.0
+  A: 8.3
+  H: 10.0
+  P: 3.1
+  W: 0.9
+  PM: true
+  rotation: -90
+  body_color_key: metal grey pins
+  base_color_key: black body
+  mark_color_key: black body
+  pin_color_key: metal grey pins
+  destination_dir: Capacitor_SMD.3dshapes
+  source: https://na.industrial.panasonic.com/products/capacitors/aluminum-electrolytic-capacitors/series/88994/model/89545
+Sierra_PCV1E271MCL1GS:
+  L: 12.7
+  D: 10.0
+  A: 10.3
+  H: 11.0
+  P: 4.6
+  W: 0.95
+  PM: true
+  rotation: -90
+  body_color_key: metal grey pins
+  base_color_key: black body
+  mark_color_key: black body
+  pin_color_key: metal grey pins
+  destination_dir: Capacitor_SMD.3dshapes
+  source: https://www.nichicon.co.jp/english/products/pdf/e-cv.pdf
+  include_in_qa: true

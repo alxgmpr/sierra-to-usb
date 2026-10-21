@@ -3,17 +3,29 @@
   "generated_models": [
     "Appliance.3dshapes/Sierra_RK3566_BGA565.step",
     "Appliance.3dshapes/Sierra_Micron_ZW_TFBGA200.step",
-    "Appliance.3dshapes/DHVQFN-20-1EP_2.5x4.5mm_P0.5mm_EP1x3mm.step"
+    "Appliance.3dshapes/DHVQFN-20-1EP_2.5x4.5mm_P0.5mm_EP1x3mm.step",
+    "Appliance.3dshapes/Sierra_XxL4020.step",
+    "Appliance.3dshapes/Sierra_XGL4030.step",
+    "Appliance.3dshapes/Sierra_TLP293.step",
+    "Appliance.3dshapes/Sierra_EEEFK1J470P.step",
+    "Appliance.3dshapes/Sierra_PCV1E271MCL1GS.step",
+    "Appliance.3dshapes/Sierra_LM51551_DSS0012B.step"
   ],
   "definition_files": [
     "Appliance.pretty/sierra-bga.yaml",
     "Appliance.pretty/sierra-connectors.yaml",
-    "Appliance.pretty/sierra-dhvqfn-model.yaml"
+    "Appliance.pretty/sierra-dhvqfn-model.yaml",
+    "Appliance.pretty/sierra-inductor-models.yaml",
+    "Appliance.pretty/sierra-models.csv",
+    "Appliance.pretty/sierra-opto-model.yaml",
+    "Appliance.pretty/sierra-cap-models.yaml",
+    "Appliance.pretty/sierra-wson-model.yaml"
   ],
   "scope": "BGA models use nominal XY and maximum package height (RK3566 0.889mm, Micron ZW 1.05mm); not full tolerance or mating-clearance certification",
   "imported_RPA_source": {
     "file": "reference/tps56a37-rpa0010a-cse.kicad_mod",
     "source": "Component Search Engine TPS56A37RPAR same TI RPA0010A package; independent ten-pin TPS56837 symbol retained",
     "sha256": "3dc22f5c123fc60fee5fc6584d3c3d92cdf89d9589affb1e75790cf060191c45"
-  }
+  },
+  "model_review": "reference/model-reviews-2026-10-21.json"
 }

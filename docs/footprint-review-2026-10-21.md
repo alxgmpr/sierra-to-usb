@@ -52,7 +52,9 @@ archived Rev A drawings, with hashes retained. The Micron-authored document is
 an archived distributor copy, not a newly obtained controlled revision. These
 freshness limits remain part of the review and must survive a manufacturing handoff.
 
-The existing missing-model holds remain. In particular, the M.2 STEP's native
+The [subsequent model follow-up](bga-model-review-2026-10-21.md) resolves six
+missing-model types covering 16 components and records all 18 remaining holds.
+The M.2 STEP's native
 bounding box is X ±10.95, Y 1.93…6.63, Z −3.95…4.45 mm. Reading this shape does
 not resolve the PCB solder plane and both contact rows. No guessed transform
 was attached to make the viewer appear complete.

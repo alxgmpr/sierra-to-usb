@@ -1,0 +1,26 @@
+Sierra_TLP293:
+  size_source: Project archived tlp293.pdf, package 11-4C5S, page 14
+  device_type: SOIC
+  body_size_x:
+    minimum: 4.4
+    nominal: 4.55
+    maximum: 4.8
+  body_size_y:
+    minimum: 2.45
+    nominal: 2.6
+    maximum: 2.85
+  overall_size_x:
+    minimum: 6.6
+    nominal: 7.0
+    maximum: 7.4
+  lead_width: 0.38
+  lead_len:
+    nominal: 0.5
+  pitch: 1.27
+  num_pins_x: 0
+  num_pins_y: 2
+  body_height: 2.1
+  body_pcb_gap: 0.1
+  lead_height: 0.15
+default_parameters:
+  library_Suffix: SO

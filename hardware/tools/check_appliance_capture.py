@@ -6,6 +6,8 @@ import xml.etree.ElementTree as E
 from capture import ROOT
 from check_footprint_reviews import check as check_footprint_reviews
 from check_modem_documentation import check as check_modem_documentation
+from check_bga_process import check as check_bga_process
+from check_model_reviews import check as check_model_reviews
 CLI='/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli'
 def export(path, output):
  subprocess.run([CLI,'sch','export','netlist','--format','kicadxml','--output',str(output),str(path)],check=True,capture_output=True)
@@ -13,6 +15,8 @@ def export(path, output):
 def validate(tree,directory):
  check_footprint_reviews()
  check_modem_documentation()
+ check_bga_process()
+ check_model_reviews()
  C={c.get('ref'):c for c in tree.findall('./components/comp')}
  N={n.get('name'):{(v.get('ref'),v.get('pin')) for v in n.findall('node')} for n in tree.findall('./nets/net')}
  B={p:n for n,ps in N.items() for p in ps}

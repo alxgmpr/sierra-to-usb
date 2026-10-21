@@ -1,0 +1,11 @@
+default_parameters:
+  manufacturer: Coilcraft
+  library_name: Inductor_SMD
+series_Sierra:
+  default_parameters:
+    3d:
+      type: 1
+      bodyColor: black body
+      pinColor: metal grey pins
+      padThickness: 0.05
+  csv: sierra-models.csv

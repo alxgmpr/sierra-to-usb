@@ -41,6 +41,13 @@ missing or mechanically unverified models are explicitly recorded in
 [footprint-policy.json](footprint-policy.json). Imported TI embedded STEP assets
 are now stored in the project.
 
+The [BGA/model follow-up](../docs/bga-model-review-2026-10-21.md) records six new
+package-envelope models covering 16 components, all 18 remaining missing-model
+holds, and measured mask/stencil limits for the two unreleased BGAs. The full
+checker validates model source hashes, attachment rotations and these holds;
+`tools/check_model_reviews.py --geometry` additionally checks the six STEP solids
+and sourced bounds with CadQuery.
+
 Use the native Update PCB / Update Schematic dialogs for normal edits, with
 reference relinking off. `build_capture.py` regenerates the original capture and
 applies the footprint policy; it overwrites manual schematic graphics. Preserve

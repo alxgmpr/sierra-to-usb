@@ -33,6 +33,10 @@ reviews, remaining model holds, current modem guides and physical/software
 qualification remain open. Placement, routing and manufacturing release remain
 pending.
 
+The [October 21 BGA/model follow-up](docs/bga-model-review-2026-10-21.md)
+adds six package-envelope models for 16 components (54 attached STEP assets total).
+Eighteen missing-model holds and both BGA assembly-process holds remain explicit.
+
 Previous designs remain only in Git history; none were restored for this work.
 
 ## Full schematic work — 2026-10-07

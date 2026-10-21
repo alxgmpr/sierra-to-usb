@@ -1,0 +1,27 @@
+{
+  "changed_references": [
+    "L601",
+    "U1802",
+    "L504",
+    "L902",
+    "U1702",
+    "U1803",
+    "L501",
+    "L1501",
+    "L1707",
+    "L1001",
+    "L505",
+    "C1727",
+    "U1801",
+    "L901",
+    "C1717",
+    "L502"
+  ],
+  "all_other_PCB_children_byte_identical": true,
+  "all_non_model_footprint_children_byte_identical": true,
+  "negative_checks": [
+    "reversed capacitor rotation rejected",
+    "unsupported BGA release rejected",
+    "STEP asset drift rejected"
+  ]
+}

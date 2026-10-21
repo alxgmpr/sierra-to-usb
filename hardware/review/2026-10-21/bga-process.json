@@ -1,0 +1,43 @@
+{
+  "scope": "Geometry and circular-aperture screening only; no process approval",
+  "screening_criteria": {
+    "minimum_area_ratio": 0.66,
+    "minimum_aspect_ratio": 3
+  },
+  "required_evidence": [
+    "Manufacturer or assembler-approved copper and mask design",
+    "Fabricator mask registration and minimum web capability",
+    "Assembler stencil thickness, aperture, paste and reflow approval",
+    "Escape/via strategy and assembly inspection acceptance"
+  ],
+  "packages": {
+    "U801": {
+      "land_count": 565,
+      "copper_diameter_mm": 0.22,
+      "mask_opening_mm": 0.22,
+      "paste_opening_mm": 0.22,
+      "minimum_center_distance_mm": 0.4,
+      "minimum_copper_gap_mm": 0.18,
+      "minimum_mask_web_mm": 0.18,
+      "radial_mask_clearance_mm": 0.0,
+      "screening_max_foil_thickness_mm": 0.073333,
+      "area_ratio_at_100um": 0.55,
+      "aspect_ratio_at_100um": 2.2,
+      "released": false
+    },
+    "U901": {
+      "land_count": 200,
+      "copper_diameter_mm": 0.45,
+      "mask_opening_mm": 0.4,
+      "paste_opening_mm": 0.4,
+      "minimum_center_distance_mm": 0.65,
+      "minimum_copper_gap_mm": 0.2,
+      "minimum_mask_web_mm": 0.25,
+      "radial_mask_clearance_mm": -0.025,
+      "screening_max_foil_thickness_mm": 0.133333,
+      "area_ratio_at_100um": 1.0,
+      "aspect_ratio_at_100um": 4.0,
+      "released": false
+    }
+  }
+}

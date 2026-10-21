@@ -1,0 +1,1457 @@
+{
+  "scope": "STEP parsing, shape validity and bounds; package-envelope identification does not qualify assembly tolerances or mating clearances",
+  "models": [
+    {
+      "model": "${KIPRJMOD}/Appliance.3dshapes/DHVQFN-20-1EP_2.5x4.5mm_P0.5mm_EP1x3mm.step",
+      "references": [
+        "U1604",
+        "U2001"
+      ],
+      "sha256": "d2c4b81774b2c4da43e40b86d108ea25e61bb8fb28b68fe88f155fe8c8ecd8a3",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.25,
+        "x_max": 1.25,
+        "y_min": -2.25,
+        "y_max": 2.25,
+        "z_min": 0.0,
+        "z_max": 1.0
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+      "references": [
+        "C1851",
+        "C1406",
+        "C2043",
+        "C532",
+        "C1910",
+        "C705",
+        "C538",
+        "C1501",
+        "C1606",
+        "C1911",
+        "C1802",
+        "C945",
+        "C923",
+        "C911",
+        "C1643",
+        "C938",
+        "C832",
+        "C545",
+        "C2023",
+        "C1422",
+        "C1430",
+        "C940",
+        "C922",
+        "C520",
+        "C1202",
+        "C2002",
+        "C2003",
+        "C1644",
+        "C926",
+        "C1301",
+        "C954",
+        "C701",
+        "C1853",
+        "C1914",
+        "C1627",
+        "C1504",
+        "C2021",
+        "C2033",
+        "C1852",
+        "C1427",
+        "C1420",
+        "C946",
+        "C826",
+        "C924",
+        "C1405",
+        "C1622",
+        "C201",
+        "C1104",
+        "C1625",
+        "C1302",
+        "C204",
+        "C920",
+        "C1707",
+        "C1409",
+        "C1862",
+        "C937",
+        "C702",
+        "C810",
+        "C939",
+        "C1711",
+        "C523",
+        "C1631",
+        "C2004",
+        "C1006",
+        "C931",
+        "C1402",
+        "C943",
+        "C820",
+        "C942",
+        "C1209",
+        "C1854",
+        "C930",
+        "C547",
+        "C1208",
+        "C959",
+        "C1908",
+        "C960",
+        "C1709",
+        "C908",
+        "C2024",
+        "C1212",
+        "C1912",
+        "C2042",
+        "C1509",
+        "C1708",
+        "C1710",
+        "C927",
+        "C1407",
+        "C953",
+        "C912",
+        "C531",
+        "C1401",
+        "C814",
+        "C827",
+        "C844",
+        "C1640",
+        "C514",
+        "C1210",
+        "C819",
+        "C925",
+        "C1404",
+        "C1403",
+        "C1426",
+        "C845",
+        "C2041",
+        "C1201",
+        "C1712",
+        "C949",
+        "C2037",
+        "C1102",
+        "C1443",
+        "C817",
+        "C812",
+        "C806",
+        "C1803",
+        "C1207",
+        "C1433",
+        "C1005",
+        "C839",
+        "C842",
+        "C1442",
+        "C1632",
+        "C1408",
+        "C1744",
+        "C947",
+        "C948",
+        "C1628",
+        "C816",
+        "C2045",
+        "C522",
+        "C833",
+        "C1733",
+        "C1002",
+        "C1863",
+        "C952",
+        "C1907",
+        "C1901",
+        "C808",
+        "C1444",
+        "C918",
+        "C529",
+        "C2038",
+        "C1423",
+        "C2005",
+        "C1864",
+        "C840",
+        "C530",
+        "C951",
+        "C1429",
+        "C1626",
+        "C1737",
+        "C801",
+        "C1428",
+        "C1741",
+        "C526",
+        "C604",
+        "C527",
+        "C2034",
+        "C2044",
+        "C1608",
+        "C1629",
+        "C1425",
+        "C815",
+        "C813",
+        "C1735",
+        "C525",
+        "C1605",
+        "C1718",
+        "C1801",
+        "C205",
+        "C1734",
+        "C1432",
+        "C929",
+        "C1738",
+        "C1607",
+        "C1105",
+        "C1633",
+        "C2031",
+        "C950",
+        "C921",
+        "C1745",
+        "C1913",
+        "C932",
+        "C1739",
+        "C517",
+        "C2032",
+        "C1303",
+        "C2001",
+        "C1621",
+        "C2036",
+        "C944",
+        "C825",
+        "C202",
+        "C1424",
+        "C803",
+        "C1502",
+        "C1412",
+        "C821",
+        "C807",
+        "C2035",
+        "C536",
+        "C837",
+        "C1203",
+        "C818",
+        "C907",
+        "C1204",
+        "C1441",
+        "C521",
+        "C1508",
+        "C919",
+        "C828",
+        "C1206",
+        "C1909",
+        "C1630",
+        "C843",
+        "C910",
+        "C846",
+        "C546",
+        "C1411",
+        "C513",
+        "C2022",
+        "C1620",
+        "C1642",
+        "C809",
+        "C811",
+        "C1103",
+        "C802",
+        "C535",
+        "C1410",
+        "C1861",
+        "C515",
+        "C906",
+        "C928",
+        "C1623",
+        "C518",
+        "C838",
+        "C1716",
+        "C1434",
+        "C528",
+        "C1205",
+        "C1431",
+        "C1743",
+        "C1421",
+        "C941",
+        "C1211",
+        "C805",
+        "C917",
+        "C804",
+        "C1624",
+        "C1641"
+      ],
+      "sha256": "4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -0.8,
+        "x_max": 0.8,
+        "y_min": -0.4,
+        "y_max": 0.4,
+        "z_min": 0.0,
+        "z_max": 0.8
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+      "references": [
+        "R701",
+        "R306",
+        "R1913",
+        "R908",
+        "R1742",
+        "R1754",
+        "R1926",
+        "R1506",
+        "R2001",
+        "R1918",
+        "R1761",
+        "R1102",
+        "R1863",
+        "R1001",
+        "R1914",
+        "R2016",
+        "R401",
+        "R705",
+        "R505",
+        "R1712",
+        "R804",
+        "R1412",
+        "R1606",
+        "R1864",
+        "R2015",
+        "R1753",
+        "R512",
+        "R303",
+        "R1713",
+        "R510",
+        "R1209",
+        "R507",
+        "R1737",
+        "R604",
+        "R906",
+        "R1734",
+        "R602",
+        "R1604",
+        "R1509",
+        "R704",
+        "R1905",
+        "R1745",
+        "R1401",
+        "R307",
+        "R1741",
+        "R1207",
+        "R1802",
+        "R1403",
+        "R202",
+        "R907",
+        "R1743",
+        "R903",
+        "R702",
+        "R2012",
+        "R1203",
+        "R1205",
+        "R2014",
+        "R1925",
+        "R703",
+        "R2022",
+        "R1709",
+        "R603",
+        "R503",
+        "R1746",
+        "R1911",
+        "R1763",
+        "R1716",
+        "R1210",
+        "R304",
+        "R1732",
+        "R508",
+        "R706",
+        "R1715",
+        "R1724",
+        "R1306",
+        "R1861",
+        "R2011",
+        "R601",
+        "R1711",
+        "R1502",
+        "R511",
+        "R805",
+        "R1903",
+        "R1862",
+        "R1603",
+        "R2018",
+        "R1904",
+        "R1411",
+        "R308",
+        "R1602",
+        "R1727",
+        "R801",
+        "R1922",
+        "R1301",
+        "R1906",
+        "R1923",
+        "R1916",
+        "R2003",
+        "R501",
+        "R1504",
+        "R2017",
+        "R301",
+        "R302",
+        "R1307",
+        "R2013",
+        "R1915",
+        "R201",
+        "R803",
+        "R1303",
+        "R901",
+        "R1921",
+        "R504",
+        "R1510",
+        "R1714",
+        "R1759",
+        "R1304",
+        "R509",
+        "R1902",
+        "R1744",
+        "R1505",
+        "R905",
+        "R1103",
+        "R1757",
+        "R1204",
+        "R1710",
+        "R1104",
+        "R1760",
+        "R1208",
+        "R1302",
+        "R506",
+        "R1413",
+        "R1740",
+        "R1101",
+        "R1756",
+        "R1917",
+        "R1811",
+        "R1206",
+        "R1755",
+        "R1723",
+        "R1803",
+        "R902",
+        "R1106",
+        "R1201",
+        "R305",
+        "R802",
+        "R1605",
+        "R1735",
+        "R1507",
+        "R1801",
+        "R1912",
+        "R2021",
+        "R1503",
+        "R1501",
+        "R203",
+        "R1508",
+        "R1813",
+        "R1762",
+        "R1812",
+        "R1105",
+        "R502",
+        "R2023",
+        "R1211",
+        "R1414",
+        "R1305",
+        "R2002",
+        "R1901",
+        "R606",
+        "R1202",
+        "R1907",
+        "R605",
+        "R904",
+        "R2024",
+        "R1402"
+      ],
+      "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -0.8,
+        "x_max": 0.8,
+        "y_min": -0.4,
+        "y_max": 0.4,
+        "z_min": -2.775557561563e-17,
+        "z_max": 0.45
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_0805_2012Metric.step",
+      "references": [
+        "FB1303",
+        "FB1304"
+      ],
+      "sha256": "751a8ae26d20698bfe8303aa2fc7ec986a8b9a7154699b94bf2a13d4ad401425",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.0,
+        "x_max": 1.0,
+        "y_min": -0.625,
+        "y_max": 0.625,
+        "z_min": 0.0,
+        "z_max": 1.25
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Appliance.3dshapes/Sierra_XGL4030.step",
+      "references": [
+        "L601"
+      ],
+      "sha256": "fd439d1b01be108a45d43608165bbbe998333b4a15257964fed043086d150c1b",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -2.15,
+        "x_max": 2.15,
+        "y_min": -2.15,
+        "y_max": 2.15,
+        "z_min": 0.0,
+        "z_max": 3.1
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Appliance.3dshapes/Sierra_TLP293.step",
+      "references": [
+        "U1802",
+        "U1803",
+        "U1801"
+      ],
+      "sha256": "5ab6a55349ea1ea0525a7aebdbd84844c76337ba6f92dc24f054ed86d35345a3",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -3.5,
+        "x_max": 3.5,
+        "y_min": -1.3000001,
+        "y_max": 1.3000001,
+        "z_min": -5.551115123126e-17,
+        "z_max": 2.2000001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+      "references": [
+        "C1902",
+        "C505",
+        "C1506",
+        "C541",
+        "C402",
+        "C507",
+        "C1724",
+        "C511",
+        "C831",
+        "C516",
+        "C1007",
+        "C913",
+        "C1004",
+        "C512",
+        "C603",
+        "C602",
+        "C1722",
+        "C933",
+        "C1723",
+        "C502",
+        "C834",
+        "C822",
+        "C706",
+        "C403",
+        "C504",
+        "C506",
+        "C824",
+        "C1725",
+        "C501",
+        "C901",
+        "C1730",
+        "C519",
+        "C836",
+        "C1003",
+        "C1904",
+        "C957",
+        "C533",
+        "C524",
+        "C601",
+        "C956",
+        "C1728",
+        "C1729",
+        "C1903",
+        "C1009",
+        "C508",
+        "C503",
+        "C1008",
+        "C829",
+        "C509",
+        "C707",
+        "C510"
+      ],
+      "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.6,
+        "x_max": 1.6,
+        "y_min": -1.25,
+        "y_max": 1.25,
+        "z_min": 0.0,
+        "z_max": 2.5
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step",
+      "references": [
+        "C936",
+        "C542",
+        "C703",
+        "C544",
+        "C1001",
+        "C830",
+        "C915",
+        "C1503",
+        "C902",
+        "C1906",
+        "C835",
+        "C203",
+        "C1507",
+        "C823",
+        "C916",
+        "C537",
+        "C543",
+        "C841",
+        "C955",
+        "C909",
+        "C905",
+        "C1905",
+        "C958",
+        "C1101",
+        "C934",
+        "C935",
+        "C401",
+        "C914",
+        "C903",
+        "C704",
+        "C1505"
+      ],
+      "sha256": "11e948c72c90e2b6322436b72745f40ff4e8ba0da64fb2a0df943dfa61e89c1a",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.6,
+        "x_max": 1.6,
+        "y_min": -0.8,
+        "y_max": 0.8,
+        "z_min": 0.0,
+        "z_max": 1.6
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1812_4532Metric.step",
+      "references": [
+        "C1736",
+        "C1720"
+      ],
+      "sha256": "be9e130425233dd580e42f23cf98ed84335b8e1671ef374a8d185999ab4c2d93",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -2.25,
+        "x_max": 2.25,
+        "y_min": -1.6,
+        "y_max": 1.6,
+        "z_min": 0.0,
+        "z_max": 2.5
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
+      "references": [
+        "R1739"
+      ],
+      "sha256": "ded342cdb394fb45395227beaaa75cc390613cf2581b29cd6d22c12abd6103b2",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.0,
+        "x_max": 1.0,
+        "y_min": -0.6,
+        "y_max": 0.6,
+        "z_min": -2.775557561563e-17,
+        "z_max": 0.45
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMB.step",
+      "references": [
+        "D1706",
+        "D1705",
+        "D1704",
+        "D1701",
+        "D1702",
+        "D1703",
+        "D1708",
+        "D1709",
+        "D1707"
+      ],
+      "sha256": "029466277d91e9f5492556be93e46611049e07115c7913880c547afa96058ed4",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -2.6500000999999997,
+        "x_max": 2.6500000999999997,
+        "y_min": -1.775000100000001,
+        "y_max": 1.775000100000001,
+        "z_min": -1e-07,
+        "z_max": 2.1500000999999997
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-353_SC-70-5.step",
+      "references": [
+        "U1603",
+        "U1501",
+        "U2003",
+        "U1201",
+        "U1904",
+        "U1202",
+        "U1601",
+        "U1203",
+        "U1602"
+      ],
+      "sha256": "2860de5b7b085919ff6e952148353f928798588d9f544dc69430545aff2ba908",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.05,
+        "x_max": 1.05,
+        "y_min": -1.0000001,
+        "y_max": 1.0000001,
+        "z_min": 0.0,
+        "z_max": 1.1000001000000001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+      "references": [
+        "U1903",
+        "U1504",
+        "U1505"
+      ],
+      "sha256": "c9fe686b4d1b56927a41fa84a9bc1efb61d8a45a123a3db43bcaa05c2891d635",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.4,
+        "x_max": 1.4,
+        "y_min": -1.4500001000000002,
+        "y_max": 1.4500001000000002,
+        "z_min": 0.0,
+        "z_max": 1.5500001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMA.step",
+      "references": [
+        "D1714"
+      ],
+      "sha256": "1cfddd4e3b1bf22b8fc6ee3258c2aade882ed7b85b528e23b9db42437775a1db",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -2.5000001,
+        "x_max": 2.5000001,
+        "y_min": -1.3500001000000013,
+        "y_max": 1.3500001000000013,
+        "z_min": -1e-07,
+        "z_max": 2.2200001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step",
+      "references": [
+        "R1733",
+        "R1924"
+      ],
+      "sha256": "f5d1ea5c47935091292bd1c6c698e0df88d3d4bbf92bf66b4c97e49df5be9ebc",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.6,
+        "x_max": 1.6,
+        "y_min": -0.8,
+        "y_max": 0.8,
+        "z_min": 0.0,
+        "z_max": 0.55
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1808_4520Metric.step",
+      "references": [
+        "C1865"
+      ],
+      "sha256": "229af50a03a786ab452737c600ec2c4cbdf700cd1e7530bab69a8e9fffba4a94",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -2.25,
+        "x_max": 2.25,
+        "y_min": -1.0,
+        "y_max": 1.0,
+        "z_min": 0.0,
+        "z_max": 1.3
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/USON-10_2.5x1.0mm_P0.5mm.step",
+      "references": [
+        "D1852",
+        "D2001",
+        "D1851"
+      ],
+      "sha256": "d9d0628ead2ac2bab888344afbd0ef8b0f5a4ba37641ccc66dcbe300e3a74ac0",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -0.5,
+        "x_max": 0.5,
+        "y_min": -1.24,
+        "y_max": 1.2400000000000002,
+        "z_min": 0.0,
+        "z_max": 0.52
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/PoE.3dshapes/5019.stp",
+      "references": [
+        "TP1722",
+        "TP1723",
+        "TP1720",
+        "TP1721",
+        "TP1719",
+        "TP1724",
+        "TP1727",
+        "TP1725",
+        "TP1726"
+      ],
+      "sha256": "753a4ed4c9a21adcf39e6e7ad77a3a51532f1345374f1a02215183397a2ae7b3",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.9050000000000002,
+        "x_max": 1.9050000000000025,
+        "y_min": -0.12700000000000866,
+        "y_max": 2.158999999999995,
+        "z_min": -1.016,
+        "z_max": 1.016
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_0603_1608Metric.step",
+      "references": [
+        "FB1404",
+        "FB802",
+        "FB1402",
+        "FB801",
+        "L1703",
+        "FB1301",
+        "FB1401",
+        "L1701",
+        "FB1403",
+        "FB1302"
+      ],
+      "sha256": "b0136ad7160588d2f5dac8c85da84a35646db656b5bc54bbb873b6b548eedbb3",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -0.8,
+        "x_max": 0.8,
+        "y_min": -0.4,
+        "y_max": 0.4,
+        "z_min": 0.0,
+        "z_max": 0.8
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Appliance.3dshapes/Sierra_XxL4020.step",
+      "references": [
+        "L504",
+        "L902",
+        "L501",
+        "L1501",
+        "L1707",
+        "L1001",
+        "L505",
+        "L901",
+        "L502"
+      ],
+      "sha256": "89c8c700d2ed91ea83f2e6a7aca7becc062adce191ab0f734b69e552f53e205a",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -2.15,
+        "x_max": 2.15,
+        "y_min": -2.15,
+        "y_max": 2.15,
+        "z_min": 0.0,
+        "z_max": 2.1
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+      "references": [
+        "C1740",
+        "C1719",
+        "C1731",
+        "C1746",
+        "C1726",
+        "C1732",
+        "C1721"
+      ],
+      "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.0,
+        "x_max": 1.0,
+        "y_min": -0.625,
+        "y_max": 0.625,
+        "z_min": 0.0,
+        "z_max": 1.25
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.step",
+      "references": [
+        "D1721",
+        "Q303",
+        "Q1707",
+        "Q2001",
+        "Q801",
+        "Q302",
+        "Q501",
+        "Q1201",
+        "Q1901",
+        "Q301",
+        "Q1601",
+        "U1704",
+        "Q802"
+      ],
+      "sha256": "dd5d1711204e1d8d26cd11490923bd84340820baa69538c385a4300ec2539bc0",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.25,
+        "x_max": 1.25,
+        "y_min": -1.5000001000000003,
+        "y_max": 1.5000001000000003,
+        "z_min": 0.0,
+        "z_max": 1.2000001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+      "references": [
+        "U202",
+        "U602",
+        "U1503",
+        "U902"
+      ],
+      "sha256": "720a6eab0024069bbee68e7cb4c3ff1149468a34611225cdc852662c5d0ec2b7",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.4,
+        "x_max": 1.4,
+        "y_min": -1.4500001000000002,
+        "y_max": 1.4500001000000002,
+        "z_min": 0.0,
+        "z_max": 1.5500001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step",
+      "references": [
+        "D1715",
+        "D1719",
+        "D1717"
+      ],
+      "sha256": "b3dc4065573abc72e3d5b4cca0e908f72a24205a41b6284b1f75ccacbe99adf8",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.9,
+        "x_max": 1.9,
+        "y_min": -0.8000001,
+        "y_max": 0.8000001,
+        "z_min": -5.551115123126e-17,
+        "z_max": 1.26
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/CP_Elec_6.3x5.9.step",
+      "references": [
+        "C2030"
+      ],
+      "sha256": "db9f56772f8759b93f4ba0b274e293a14bbd3c7d5f2de835feeabb78b0c02d76",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -3.9,
+        "x_max": 3.9,
+        "y_min": -3.3000000000000003,
+        "y_max": 3.3000000000000007,
+        "z_min": 0.0,
+        "z_max": 5.900000100000001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SuperSOT-3.step",
+      "references": [
+        "Q1703",
+        "Q1704",
+        "Q1702",
+        "Q1701"
+      ],
+      "sha256": "b646058efaefda6d95061b1be7034fd166649be1c87cbdc38f92fb9dae2cd218",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.255,
+        "x_max": 1.255,
+        "y_min": -1.4600001000000002,
+        "y_max": 1.4600001000000002,
+        "z_min": 0.0,
+        "z_max": 1.0400001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_2010_5025Metric.step",
+      "references": [
+        "R1730",
+        "R1738",
+        "R1736"
+      ],
+      "sha256": "6f990878f55f2458c0263e55075c72360fd33db78dbf5aa5c5ba731c9bca560b",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -2.5,
+        "x_max": 2.5,
+        "y_min": -1.25,
+        "y_max": 1.25,
+        "z_min": 0.0,
+        "z_max": 0.6000000000000001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Coilcraft_XAL7070-XXX.step",
+      "references": [
+        "L1901",
+        "L701"
+      ],
+      "sha256": "5e7dc37afe061c360cdf2609f506edb1b16befaa5bfbcd9b75b26649c42d1df4",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -3.85,
+        "x_max": 3.85,
+        "y_min": -4.0,
+        "y_max": 4.0,
+        "z_min": 0.0,
+        "z_max": 7.0
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Appliance.3dshapes/Sierra_RK3566_BGA565.step",
+      "references": [
+        "U801"
+      ],
+      "sha256": "33542023ad7b90474c11159ee835aca99c09b4f860fe5d590d9786a6f8bc52b3",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -7.75,
+        "x_max": 7.75,
+        "y_min": -7.2,
+        "y_max": 7.2,
+        "z_min": -0.006749999999999978,
+        "z_max": 0.891
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_2512_6332Metric.step",
+      "references": [
+        "R1747",
+        "R1748"
+      ],
+      "sha256": "76b2052a3c120193de7cdc0af99157b6f375e9a4af7721e3e3d012968c877f27",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -3.15,
+        "x_max": 3.15,
+        "y_min": -1.6,
+        "y_max": 1.6,
+        "z_min": 0.0,
+        "z_max": 0.6000000000000001
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Recovery.3dshapes/Wuerth_61301011121_1x10_P2.54mm_Vertical.step",
+      "references": [
+        "J102"
+      ],
+      "sha256": "d1e8396c9bd227c06ab2ba356b9a2cedc98878dbc46e12a64ca5cbc86a4d8af7",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.2700000000000007,
+        "x_max": 1.2700000000000007,
+        "y_min": -24.13,
+        "y_max": 1.27,
+        "z_min": -3.000000000002443,
+        "z_max": 8.540000000002443
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm.step",
+      "references": [
+        "U401"
+      ],
+      "sha256": "ee0ea2d02e2bc495a86d9517d59dcd84d7dd64d201b4cc13b427e56f792207e6",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.0,
+        "x_max": 1.0,
+        "y_min": -1.4875,
+        "y_max": 1.4875000000000003,
+        "z_min": 0.0,
+        "z_max": 0.75
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Recovery.3dshapes/Wuerth_61300211121_1x02_P2.54mm_Vertical.step",
+      "references": [
+        "J101",
+        "J202"
+      ],
+      "sha256": "1015a6c655d327ce167862d989f5f32be2eb60548ebe2375847677a84ac229c1",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.27,
+        "x_max": 1.27,
+        "y_min": -3.81,
+        "y_max": 1.27,
+        "z_min": -3.00000000000022,
+        "z_max": 8.54000000000022
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/Texas_DRT-3.step",
+      "references": [
+        "D1201"
+      ],
+      "sha256": "826a53de4a90e738d560e4a906235ba95541b3da40b62f22d8f9e30fd9f39744",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -0.5000001,
+        "x_max": 0.5000001,
+        "y_min": -0.5000001,
+        "y_max": 0.5000001,
+        "z_min": -1e-07,
+        "z_max": 0.5000001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm.step",
+      "references": [
+        "U1502"
+      ],
+      "sha256": "7672cac8d88d8679800ef3bf90954e7996ea74e8ddb1f157f2d82bca6b2015e4",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.0,
+        "x_max": 1.0,
+        "y_min": -0.99,
+        "y_max": 0.9900000000000004,
+        "z_min": 0.0,
+        "z_max": 0.82
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/PoE.3dshapes/Fairchild_N04C.stp",
+      "references": [
+        "U1703"
+      ],
+      "sha256": "84b59876260c97ce6dcd1a8b543b11dd0e701148a4e32f59ba1ccfbbf590248c",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": 1.2700000000684188e-05,
+        "x_max": 10.1600127,
+        "y_min": -3.564991683659373,
+        "y_max": 1.0250069236596435,
+        "z_min": -1.1102230246251565e-16,
+        "z_max": 3.8500000200000004
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0603_1608Metric.step",
+      "references": [
+        "D1716"
+      ],
+      "sha256": "98343205ec260ec165026ba2d44329a23096779ac36c553ea84aa7b370242e6d",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -0.8,
+        "x_max": 0.8,
+        "y_min": -0.4,
+        "y_max": 0.4,
+        "z_min": -3.469446951954e-18,
+        "z_max": 1.1
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/ArtInChip_QFN-68-1EP_7x7mm_P0.35mm_EP5.49x5.49mm.step",
+      "references": [
+        "U501"
+      ],
+      "sha256": "93fd3eaf63d3501af963dfb801c37a6f6e5c0b03df6678956ed871d14fa0bd2f",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -3.5,
+        "x_max": 3.5,
+        "y_min": -3.5,
+        "y_max": 3.5,
+        "z_min": 0.0,
+        "z_max": 0.9
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Appliance.3dshapes/Sierra_LM51551_DSS0012B.step",
+      "references": [
+        "U1702"
+      ],
+      "sha256": "2e9aae0c7a4f5f5343a990a45bbd79f31fb382927c04c6c05525c543cadb28a7",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.0,
+        "x_max": 1.0,
+        "y_min": -1.5,
+        "y_max": 1.5,
+        "z_min": 0.0,
+        "z_max": 0.8
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/TSOT-23-8.step",
+      "references": [
+        "U601"
+      ],
+      "sha256": "dc644a91883054d8f75e38542e63c2050dc8f2e8b7f12e1c57dcd93245fbd473",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.4,
+        "x_max": 1.4,
+        "y_min": -1.4500001000000002,
+        "y_max": 1.4500001000000002,
+        "z_min": 0.0,
+        "z_max": 0.9500000999999999
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0201_0603Metric.step",
+      "references": [
+        "C1602",
+        "C1601",
+        "C1604",
+        "C1603"
+      ],
+      "sha256": "453afba1c6e8ad718c79c3b370606cdf345221d24ac8202778236e8b3bfb19c7",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -0.3,
+        "x_max": 0.3,
+        "y_min": -0.15000000000000002,
+        "y_max": 0.15000000000000002,
+        "z_min": -2.775557561563e-17,
+        "z_max": 0.3
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_TL3342.step",
+      "references": [
+        "SW801",
+        "SW201",
+        "SW802"
+      ],
+      "sha256": "23b1770b921df25f489d37b5636ad4a292f966c00638da7b5cb4b7f97d11c639",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -3.2,
+        "x_max": 3.2,
+        "y_min": -2.599999999984462,
+        "y_max": 2.599999999984462,
+        "z_min": -1.665334536938e-16,
+        "z_max": 1.5400001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step",
+      "references": [
+        "J1202"
+      ],
+      "sha256": "b91b4ac5acf1a0d28a676703db972d17b8f11ef26a85b58d60786a69246b921b",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.27,
+        "x_max": 1.27,
+        "y_min": -6.35,
+        "y_max": 1.27,
+        "z_min": -3.00000000000022,
+        "z_max": 8.54000000000022
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/Texas_RGW0020A_VQFN-20-1EP_5x5mm_P0.65mm_EP3.15x3.15mm.step",
+      "references": [
+        "U1701"
+      ],
+      "sha256": "3c818a8f5f9c8858b301208fbc97c6f4839f0019e61020154aa963b62e2d9c76",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -2.5,
+        "x_max": 2.5,
+        "y_min": -2.5,
+        "y_max": 2.5,
+        "z_min": 0.0,
+        "z_max": 0.8
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_QFP.3dshapes/LQFP-48_7x7mm_P0.5mm.step",
+      "references": [
+        "U201"
+      ],
+      "sha256": "9dea352d93177c2904afd7d7b68ea8855ce1ab691f69f8b3e13655600514b6bf",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -4.5,
+        "x_max": 4.5,
+        "y_min": -4.5,
+        "y_max": 4.5,
+        "z_min": -2.22044604925e-16,
+        "z_max": 1.5000001
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Appliance.3dshapes/Sierra_Micron_ZW_TFBGA200.step",
+      "references": [
+        "U901"
+      ],
+      "sha256": "cd0ff39b7ddb9c2dc83cff27d1a298e2249f35f4cf942182c72312bc2dde0b49",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -7.25,
+        "x_max": 7.25,
+        "y_min": -5.0,
+        "y_max": 5.0,
+        "z_min": -0.010899999999999993,
+        "z_max": 1.052
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Recovery.3dshapes/Wuerth_61300611121_1x06_P2.54mm_Vertical.step",
+      "references": [
+        "J201"
+      ],
+      "sha256": "64c8d3ed335b241a7f2439c18cfe1d75c7e13138a7cbcd4d66453f42cfda8acc",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.2700000000000002,
+        "x_max": 1.2700000000000007,
+        "y_min": -13.97,
+        "y_max": 1.27,
+        "z_min": -3.000000000002443,
+        "z_max": 8.540000000002443
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+      "references": [
+        "U1302"
+      ],
+      "sha256": "07f46cff378d30e6c27dfd5a03092c795323f86d91c71fc7e743f4f418dc553a",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -3.0,
+        "x_max": 3.0,
+        "y_min": -2.4500001000000005,
+        "y_max": 2.4500001000000005,
+        "z_min": -1.665334536938e-16,
+        "z_max": 1.7500001
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Crystal.3dshapes/Crystal_SMD_TXC_7M-4Pin_3.2x2.5mm.step",
+      "references": [
+        "Y1301"
+      ],
+      "sha256": "f6cd96384815a6116d5cc3d6abe9622d862fe252cfd38dbe9c6892ce2fc785d3",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.599300724757002,
+        "x_max": 1.601127668277006,
+        "y_min": -1.251333075338006,
+        "y_max": 1.2495061318180012,
+        "z_min": 0.0,
+        "z_max": 0.64
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/PoE.3dshapes/EFD25_4476.stp",
+      "references": [
+        "T1702"
+      ],
+      "sha256": "1e14918ef2d3d2b1b30406baf6b76cc4be55f65f7a08f96a5063673d4b25706d",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -32.34311830282212,
+        "x_max": -0.03311830282210133,
+        "y_min": 0.23352521240711166,
+        "y_max": 13.305400100000014,
+        "z_min": -26.51500010000012,
+        "z_max": -0.5149999000002209
+      }
+    },
+    {
+      "model": "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Coilcraft_XAL5030-XXX.step",
+      "references": [
+        "L1708"
+      ],
+      "sha256": "2422d17d23b0901ef6ec22efd68f29db821753e6e7e8cd66f7dcd75da9816462",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -2.74,
+        "x_max": 2.74,
+        "y_min": -2.84,
+        "y_max": 2.84,
+        "z_min": 0.0,
+        "z_max": 3.1
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/PoE.3dshapes/On-Shore_ED555_2DS.stp",
+      "references": [
+        "J1711"
+      ],
+      "sha256": "e454d4aba8b351d85477dafe32aae1898ab150e72234c8f7832b8e229b3bb519",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -1.75,
+        "x_max": 5.25,
+        "y_min": -2.7000000000000006,
+        "y_max": 3.8000000999999997,
+        "z_min": -2.05832057462463,
+        "z_max": 9.64167962537537
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Appliance.3dshapes/Sierra_PCV1E271MCL1GS.step",
+      "references": [
+        "C1727"
+      ],
+      "sha256": "f3944a874cd4f64ff4ed7738457193a4eb03ceaea778985044c7f6345308d9bc",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -5.5,
+        "x_max": 5.5,
+        "y_min": -5.15,
+        "y_max": 5.15,
+        "z_min": 0.0,
+        "z_max": 12.7100001
+      }
+    },
+    {
+      "model": "${KIPRJMOD}/Appliance.3dshapes/Sierra_EEEFK1J470P.step",
+      "references": [
+        "C1717"
+      ],
+      "sha256": "584e11e17138ebd8222b33c8502089fe61bf4042dfffe4f1fd3340a7c2eeacc2",
+      "valid_STEP_shape": true,
+      "bounding_box_mm": {
+        "x_min": -5.0,
+        "x_max": 5.0,
+        "y_min": -4.150000000000001,
+        "y_max": 4.150000000000001,
+        "z_min": 0.0,
+        "z_max": 10.2100001
+      }
+    }
+  ]
+}
