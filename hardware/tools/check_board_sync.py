@@ -62,7 +62,7 @@ def audit(output):
                  'lib_footprint_mismatch', 'solder_mask_bridge']:
         assert not counts[kind], (kind, counts[kind])
     report = {
-        'date': '2026-10-07', 'PCB_footprints': len(footprints),
+        'date': '2026-10-21', 'PCB_footprints': len(footprints),
         'schematic_parity_issues': 0,
         'default_library_footprints': sum(not v.startswith(('Appliance:', 'Recovery:', 'PoE:'))
                                           for v in footprints.values()),

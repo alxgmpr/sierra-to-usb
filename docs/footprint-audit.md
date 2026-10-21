@@ -1,5 +1,12 @@
 # Footprint, model and native synchronization audit
 
+Current follow-up: [2026-10-21 six-footprint review](footprint-review-2026-10-21.md).
+Four drawing geometry holds are closed; U801/U901 retain land/mask/paste process
+holds. TPS56837 geometry, BGA centers and model heights are corrected.
+The October 7 results below are historical, including their six-hold count.
+
+## Historical audit — 2026-10-07
+
 2026-10-07, KiCad 10.99.0. The pre-audit project was sweep-committed before edits.
 The canonical project is `hardware/appliance.kicad_pro`, with 30 sheets,
 663 components, 823 nets and 663 PCB footprints. The PCB is a footprint staging
@@ -47,7 +54,7 @@ exposed-pad dimensions do not match the closest stock alternative.
 | T1701 Pulse HX4110NLT | 24 pads, 1.27 mm pitch, 0.75 × 1.65 mm lands at y = ±4.51 mm. Top row is 24…13, bottom row 1…12 from left to right. 16.51 × 9.14 mm nominal outline follows the Pulse drawing; no verified model attached. |
 | J1701 Amphenol RJE491881401 | Manufacturer top-view pin order: 8/6/4/2 at y = 0 and 7/5/3/1 at y = 1.78 mm, left to right. 0.90 mm signal drills; shell slots 1.0 × 2.6 mm at x = ±7.95, y = 5.05 mm. Pin-1 silk/fab markers follow the reflected pad map. Final housing/board-edge clearance needs mechanical review. |
 | J2001 Amphenol MDT420B01411 | B-key: 67 electrical contacts, pins 12–19 and 76 absent. Odd lands 0.30 × 1.50 mm at y = −5.25; even lands 0.30 × 1.55 mm at y = +2.275. Retention lands and asymmetric 1.1/1.6 mm NPTHs follow drawing Rev A. Exact STEP is archived, but model seating/row datums need reconciliation before attachment. |
-| U701 TPS56837 RPA0010A | Same-package TPS56A37RPAR import corrected to ten electrical identities: VIN fingers 11/12/13 become pin 8. The independent TPS56837 symbol is retained. Imported lands differ from the TI nominal drawing by up to 0.02 mm; right fingers are 0.56 mm versus 0.60 mm. Stencil/assembly review remains open; no model attached. |
+| U701 TPS56837 RPA0010A | Same-package TPS56A37RPAR import corrected to ten electrical identities: VIN fingers 11/12/13 become pin 8. The independent TPS56837 symbol is retained. Imported lands differ from the TI nominal drawing by up to 0.02 mm; right fingers are 0.56 mm (the original 0.60 mm comparison was incorrect; see the October 21 review). Stencil/assembly review remains open; no model attached. |
 
 The six rows remain explicit land-pattern release holds. Assigning them closes
 native synchronization; it does not silently qualify their assembly processes.

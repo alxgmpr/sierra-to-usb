@@ -1,0 +1,182 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-21T12:38:33",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.99.0",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985",
+            "violations": []
+        },
+        {
+            "path": "/Recovery and always-on supply/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa",
+            "violations": []
+        },
+        {
+            "path": "/Recovery and always-on supply/Recovery outputs/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/d45041a0-3f06-5984-8ad2-586a5176f20e",
+            "violations": []
+        },
+        {
+            "path": "/Recovery and always-on supply/Always-on supply/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/f59113a4-3e20-583a-958d-73838cc73e76",
+            "violations": []
+        },
+        {
+            "path": "/Recovery and always-on supply/Supervisor/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/ecaae96a-d952-55db-8fd2-e06cc742f8aa/3d1f41aa-40e8-59ac-82e1-1b8621dcb8ce",
+            "violations": []
+        },
+        {
+            "path": "/Processor PMIC/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/16de2a6d-0634-5541-b3a4-9dd791ff3173",
+            "violations": []
+        },
+        {
+            "path": "/Main 3.3V/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/3d73e509-5a58-5f21-a2d5-46156f7b4f0b",
+            "violations": []
+        },
+        {
+            "path": "/Main 5V control/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/76042cd1-72e9-552d-b46c-4e8681f723dc",
+            "violations": []
+        },
+        {
+            "path": "/RK3566 processor/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/d807afb5-0ba7-54f9-b977-e145eb99adab",
+            "violations": []
+        },
+        {
+            "path": "/USB analog filters/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/435cbe0c-b0e5-5b0f-8df1-acadd2eb203f",
+            "violations": []
+        },
+        {
+            "path": "/Core local bypass/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/c37ed3a2-e11f-5801-b052-784de8f9ef84",
+            "violations": []
+        },
+        {
+            "path": "/Micron RAM/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/c52ab0a1-5233-5470-998b-9af0eda89c30",
+            "violations": []
+        },
+        {
+            "path": "/DDR BUCK3/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/19535908-3292-5a77-aa46-dd02a9622c57",
+            "violations": []
+        },
+        {
+            "path": "/CPU dynamic voltage supply/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/2e8f587d-e45b-5dae-91f1-8cc85594cc55",
+            "violations": []
+        },
+        {
+            "path": "/Boot storage and clock/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/12adbf3d-95db-5185-851b-e66a94feec2f",
+            "violations": []
+        },
+        {
+            "path": "/Host recovery interfaces/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/267a3cab-d941-544f-a8cc-2a9d0af95195",
+            "violations": []
+        },
+        {
+            "path": "/Peripheral supply and feedback/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/4c92019a-763e-5943-9dc7-e8a7ade0fdc5",
+            "violations": []
+        },
+        {
+            "path": "/2.5GbE controller/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/a274ff3d-d983-5c2e-b904-3ff26eb8f2f2",
+            "violations": []
+        },
+        {
+            "path": "/Ethernet power sequencing/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/cdaf67f5-a801-5da0-9794-1c3162da6202",
+            "violations": []
+        },
+        {
+            "path": "/PCIe and power-cycle interfaces/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/619e7371-4e83-50a5-a376-3a6968391306",
+            "violations": []
+        },
+        {
+            "path": "/Ethernet local bypass/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/28b81926-fdde-5b0a-ace9-5f66739c1cbb",
+            "violations": []
+        },
+        {
+            "path": "/PoE active input bridge/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/d141ea62-a75e-563e-b360-af2f82564db9",
+            "violations": []
+        },
+        {
+            "path": "/PoE PD / Class 6/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/a5cfd84a-3f34-536b-8366-238e726dec2f",
+            "violations": []
+        },
+        {
+            "path": "/Isolated 12V flyback/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/09654a72-b250-5725-8eb9-71b50392f44d",
+            "violations": []
+        },
+        {
+            "path": "/Isolated PoE allocation/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/2a52fe17-c1a6-5f87-9414-95f980acecf2",
+            "violations": []
+        },
+        {
+            "path": "/Ethernet cable ingress/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/fe37f02d-cf76-54ac-92de-667207397af2",
+            "violations": []
+        },
+        {
+            "path": "/Modem independent power/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/809a6bc5-4e43-5535-bcdc-02983cd794a2",
+            "violations": []
+        },
+        {
+            "path": "/Modem and SIM sockets/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae",
+            "violations": []
+        },
+        {
+            "path": "/Modem USB isolation/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/32f2f75d-b8ee-5fdf-b94f-fec3d37fea9c",
+            "violations": []
+        },
+        {
+            "path": "/Modem local bypass/",
+            "uuid_path": "/4be0941e-e923-51bb-85b8-e69833501985/9f31f64b-6123-588d-98bd-8a4fb6a978dc",
+            "violations": []
+        }
+    ],
+    "source": "appliance.kicad_sch"
+}

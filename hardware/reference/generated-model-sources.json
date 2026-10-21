@@ -10,7 +10,7 @@
     "Appliance.pretty/sierra-connectors.yaml",
     "Appliance.pretty/sierra-dhvqfn-model.yaml"
   ],
-  "scope": "Manufacturer/package nominal envelope models, not tolerance or mating-clearance certification",
+  "scope": "BGA models use nominal XY and maximum package height (RK3566 0.889mm, Micron ZW 1.05mm); not full tolerance or mating-clearance certification",
   "imported_RPA_source": {
     "file": "reference/tps56a37-rpa0010a-cse.kicad_mod",
     "source": "Component Search Engine TPS56A37RPAR same TI RPA0010A package; independent ten-pin TPS56837 symbol retained",

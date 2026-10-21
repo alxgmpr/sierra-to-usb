@@ -1,14 +1,16 @@
 # Block diagram and BOM qualification status
 
-Updated 2026-10-07: the [full engineering schematic](../hardware/appliance.kicad_sch)
+Updated 2026-10-21: the [full engineering schematic](../hardware/appliance.kicad_sch)
 has 30 sheets / 663 components / 823 nets and zero full ERC violations. See the
 [current capture and release holds](schematic-completion.md) and
 [engineering BOM inventory](../hardware/review/2026-10-07/bom.csv).
-All major circuit blocks are captured. Six footprint reviews, current controlled
-modem guides, exact software tuples and physical validation remain open.
+All major circuit blocks are captured. Two BGA land/process reviews, remaining model
+holds, current controlled modem guides, exact software tuples and physical validation
+remain open. See [six-footprint disposition](footprint-review-2026-10-21.md) and
+[modem documentation blockers](modem-documentation.md).
 All 663 PCB footprints are assigned, including 572 stock hand-solder choices.
-Both native synchronization directions are clean; the board is still unrouted
-and unreleased. See the [footprint/model audit](footprint-audit.md). No modem or
+Current CLI parity is clean; the October 7 native bidirectional update checks
+are retained. The board is still unrouted and unreleased. See the [footprint/model audit](footprint-audit.md). No modem or
 forwarding/recovery tuple is qualified.
 
 The dated feasibility and recovery-only BOM tables below are historical context,

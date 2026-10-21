@@ -668,12 +668,8 @@
   },
   "board_rotation": {},
   "land_pattern_release_holds": [
-    "U701",
     "U801",
-    "U901",
-    "J1701",
-    "T1701",
-    "J2001"
+    "U901"
   ],
   "model_overrides": {
     "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_PowerDI-5.step": null,
@@ -716,5 +712,6 @@
     "PoE:TI_SM_RADIAL_F": "No verified mechanical model attached",
     "PoE:TI_TRANS_Fairchild_PQFN08A": "No verified mechanical model attached",
     "PoE:TI_WE-SL5": "TI embedded 744272222 STEP has invalid solids and is a different MPN from 744272251; retain archived source but do not attach"
-  }
+  },
+  "drawing_review": "reference/footprint-reviews-2026-10-21.json"
 }

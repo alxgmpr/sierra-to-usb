@@ -8,8 +8,8 @@ with native schematic links; placement and routing are still pending.
 The remaining processor, boot storage, CPU power, Ethernet, isolated PoE,
 modem power, M.2, SIM and USB isolation circuits are now captured. The engineering
 capture passes full ERC at all severities, with **zero violations and no exclusions**.
-Native schematic-to-PCB and PCB-to-schematic updates both report zero errors and
-warnings and propose no changes. This is not a manufacturing or four-modem release.
+Current CLI schematic/PCB parity is clean. The October 7 bidirectional native
+update-dialog checks reported zero errors/warnings and no proposed changes. This is not a manufacturing or four-modem release.
 
 [Review PDF](review/2026-10-07/appliance.pdf) ·
 [Native BOM inventory](review/2026-10-07/bom.csv) ·
@@ -71,15 +71,18 @@ USB isolation, off-time and per-model timing remain required.
 
 ## Release holds
 
-- Six assigned engineering land patterns still require release review: U701 TPS56837 RPA, U801 RK3566,
-  U901 Micron RAM, T1701 HX4110NLT, J1701 RJE491881401 and J2001 MDT420B01411.
+- Two BGA PCB land/mask/paste process holds remain: U801 RK3566 and U901 Micron RAM.
+  The [October 21 review](../docs/footprint-review-2026-10-21.md) closes the other four
+  drawing geometry holds and records the corrected native geometry.
   Exact land patterns, copper/mask/paste, orientation and retention need review.
   RK/RAM retain the audited ball centers; connector lands follow archived vendor
   drawings. The detailed audit records mask, stencil and mechanical limitations.
 - The staged board has no routing or outline. All-severity physical DRC remains
   open; the native synchronization check reports the actual counts without
   suppressing rules. Do not export it for fabrication.
-- Current controlled EM919x and EM92xx technical specifications and the RM551E-GL
+- [Current modem access and order-code gates](../docs/modem-documentation.md) remain open.
+  RM520N Series V1.4 is login-gated; the archived V1.0 remains provisional.
+  Current controlled EM919x and EM92xx technical specifications and the RM551E-GL
   production hardware guide remain unavailable. Older manufacturer guides and the
   RM520N V1.0 guide support provisional capture. Current pin/timing differences,
   exact firmware/composition and power envelopes must be closed per module.

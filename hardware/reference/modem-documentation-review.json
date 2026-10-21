@@ -1,0 +1,115 @@
+{
+  "reviewed": "2026-10-21",
+  "access_scope": "Unauthenticated manufacturer downloads and public listings. No sign-in, vendor contact, firmware flashing or bench tests performed.",
+  "models": {
+    "EM9190": {
+      "hardware_guide": {
+        "title": "AirPrime EM919x/EM7690 Product Technical Specification",
+        "listed_version": "11",
+        "url": "https://source.sierrawireless.com/resources/airprime/minicard/airprime_em919x-7690_product_technical_specification",
+        "status": "login_required",
+        "access_check": {
+          "url": "https://source.sierrawireless.com/-/media/support_downloads/airprime/hardware_specs_user_guides/41113174-em919x-em7690-product-technical-specification-r11.ashx",
+          "final_url": "https://source.sierrawireless.com/login?callbackUrl=https%3A%2F%2Fsource.sierrawireless.com%2F&download=%2F-%2Fmedia%2Fsupport_downloads%2Fairprime%2Fhardware_specs_user_guides%2F41113174-em919x-em7690-product-technical-specification-r11.ashx",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "sha256": "93277802916212e5f499b993b497ee229086c238542337ea136000dfa13dfc39"
+        }
+      },
+      "archived_provisional_guide": {
+        "file": "em919x-r5.pdf",
+        "sha256": "27f89b07f6e512965960e65a09de9bad1904217f3c48071ab474ef34ee54863a"
+      },
+      "current_guide_reviewed": false,
+      "exact_order_code": null,
+      "hardware_revision": null,
+      "bench_evidence": null
+    },
+    "EM9293": {
+      "hardware_guide": {
+        "title": "AirPrime EM92xx Product Technical Specification",
+        "listed_version": "7.2",
+        "url": "https://source.sierrawireless.com/resources/airprime/minicard/airprime_em92xx_product_technical_specification",
+        "status": "login_required",
+        "access_check": {
+          "url": "https://source.sierrawireless.com/-/media/support_downloads/airprime/hardware_specs_user_guides/41114313-em92-product-technical-specification-r7%2C-d-%2C2.ashx",
+          "final_url": "https://source.sierrawireless.com/login?callbackUrl=https%3A%2F%2Fsource.sierrawireless.com%2F&download=%2F-%2Fmedia%2Fsupport_downloads%2Fairprime%2Fhardware_specs_user_guides%2F41114313-em92-product-technical-specification-r7%252C-d-%252C2.ashx",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "sha256": "9efd0dbe4acf19cc74e57c25b56e892eeb50541003567999c37b65d14e074f4c"
+        }
+      },
+      "archived_provisional_guide": {
+        "file": "em92xx-r1.pdf",
+        "sha256": "635197935036f0a9afc4aca0473cc9eb9cc78d2a9aa2776b0f631a27dcc722ab"
+      },
+      "current_guide_reviewed": false,
+      "exact_order_code": null,
+      "hardware_revision": null,
+      "bench_evidence": null
+    },
+    "RM520N-GL": {
+      "hardware_guide": {
+        "title": "Quectel RM520N Series Hardware Design",
+        "listed_version": "1.4",
+        "url": "https://www.quectel.com/product/5g-rm520n-series/",
+        "status": "login_required",
+        "access_check": {
+          "url": "https://www.quectel.com/product/5g-rm520n-series/",
+          "final_url": "https://www.quectel.com/product/5g-rm520n-series/",
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "sha256": "2992b330b0cc74222974d6cd8ff2389b8eb29dba17c18158bd11459138efca41"
+        }
+      },
+      "archived_provisional_guide": {
+        "file": "rm520n-gl-v1.pdf",
+        "sha256": "139583b38ce1fd47be76d73d47e44902bfd152510dd486956fc54022be0ec179"
+      },
+      "current_guide_reviewed": false,
+      "exact_order_code": null,
+      "hardware_revision": null,
+      "bench_evidence": null,
+      "excluded_order_codes": [
+        "RM520NGLAP-M20-HP"
+      ],
+      "order_code_source": "https://forums.quectel.com/t/rm520n-gl-vs-rm520n-eu/39629",
+      "order_code_note": "Quectel staff identify this customer-specific order code as PCIe-only; do not infer USB support from RM520N-GL family name. Other order codes still require supplier confirmation."
+    },
+    "RM551E-GL": {
+      "hardware_guide": {
+        "status": "not_located",
+        "listed_version": null,
+        "url": "https://www.quectel.com/product/5g-mmwave-evb-kit/",
+        "note": "Manufacturer EVB listing confirms module identity, not production pinout/timing. No controlled production Hardware Design obtained. A third-party indexed V0.1 draft is not accepted as production evidence."
+      },
+      "archived_provisional_guide": null,
+      "current_guide_reviewed": false,
+      "exact_order_code": null,
+      "hardware_revision": null,
+      "bench_evidence": null,
+      "scope_hold": "mmWave antenna/power integration is outside the captured board; production hardware and firmware identity must be established separately."
+    }
+  },
+  "required_tuple_fields": [
+    "order_code",
+    "hardware_revision",
+    "firmware",
+    "carrier_PRI",
+    "SIM_APN",
+    "USB_VID_PID_composition",
+    "host_kernel_driver",
+    "image_hash",
+    "bench_results"
+  ],
+  "required_guide_comparison": [
+    "All 67 socket contacts: name, direction, voltage domain and unused-pin termination",
+    "Sierra-only 24/38/68 VCC stuffing versus Quectel 1.8V output/control/reserved assignments",
+    "USB host/device roles, composition, VBUS sense and boot USB selection",
+    "FULL_CARD_POWER_OFF and RESET pulls, voltage tolerance, boot/off/reset timing and minimum power-cycle interval",
+    "Supply minimum/maximum, burst demand, ripple and RF/MMWave accessory envelope",
+    "SIM voltage, reset/clock/data series parts, detect polarity and power-off card changes",
+    "USB2/USB3 coupling, ESD, layout and external component limits"
+  ],
+  "release_rule": "Every model remains released:false until its current controlled guide is compared, its exact order code/hardware/firmware tuple is known, and physical boot/traffic/power/recovery evidence is recorded."
+}

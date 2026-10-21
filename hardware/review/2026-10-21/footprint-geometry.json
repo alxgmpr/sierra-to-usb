@@ -1,0 +1,39 @@
+{
+  "scope": "Drawing geometry review; not manufacturing or physical qualification",
+  "reviews": {
+    "U701": {
+      "footprint": "Texas_RPA0010A_TPS56837",
+      "sha256": "ebe792893a5f571f63ae256a158957497f60d7c49629d7900dabc1f4899d77d9",
+      "review": "TI copper, NSMD and split 0.1mm-stencil example checked"
+    },
+    "U801": {
+      "footprint": "Sierra_RK3566_BGA565",
+      "sha256": "d78ba24e3e556598b2d47dcae37adcbfbd4d16e02b8b91d719215a951894262c",
+      "review": "565 exact ball centers; 0.22mm PCB copper/mask/paste still provisional"
+    },
+    "U901": {
+      "footprint": "Sierra_Micron_ZW_TFBGA200",
+      "sha256": "17637e610549f21624f3d188cc62ee4a8dce8942635911e5d6cd1ba6ab76a8df",
+      "review": "200 exact ball centers; 0.45/0.40mm PCB copper/mask and stencil still provisional"
+    },
+    "T1701": {
+      "footprint": "Sierra_HX4110NL_2x12_P1.27mm",
+      "sha256": "9359a25da23dfc58d5286def81fc8c55280a7e2af392c2d10e788aa74f105b72",
+      "review": "24 lands, pitch, row separation and top-view numbering checked"
+    },
+    "J1701": {
+      "footprint": "Sierra_RJE491881401_1x08-1MP_P1.02mm",
+      "sha256": "f5cfcf5efe0b0a68f58129e97b5cedaabda9af9b8b782abeed8c19bb158cae8a",
+      "review": "8 signal drills and 2 shell slots match drawing top view"
+    },
+    "J2001": {
+      "footprint": "Sierra_MDT420B01411_2x38-1MP_P0.5mm",
+      "sha256": "aa932700c04c82168f6e51552c8476d84e9604b595c4e21e53240de562b4dd28",
+      "review": "67 contacts, B-key gap, retention lands and asymmetric NPTHs checked; model remains detached"
+    }
+  },
+  "land_pattern_release_holds": [
+    "U801",
+    "U901"
+  ]
+}

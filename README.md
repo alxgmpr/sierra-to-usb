@@ -27,8 +27,8 @@ interfaces: 663 components, 823 nets, **zero full ERC violations**.
 [Review PDF](hardware/review/2026-10-07/appliance.pdf) and
 [completion / release holds](docs/schematic-completion.md) are available.
 All 663 PCB footprints are assigned, including 572 stock hand-solder variants.
-Native updates in both directions report zero errors/warnings and no changes;
-see the [footprint and model audit](docs/footprint-audit.md). Six land-pattern
+Current CLI schematic/PCB parity is clean. October 7 native update-dialog
+results are retained in the [footprint and model audit](docs/footprint-audit.md). Two BGA land-pattern/process
 reviews, remaining model holds, current modem guides and physical/software
 qualification remain open. Placement, routing and manufacturing release remain
 pending.
@@ -40,3 +40,11 @@ Previous designs remain only in Git history; none were restored for this work.
 Complete appliance capture is saved in the canonical `hardware/appliance` project,
 including the independent always-on supply and full recovery hierarchy. See
 [completion evidence and release holds](docs/schematic-completion.md).
+
+## Footprint and modem review — 2026-10-21
+
+[Six-footprint review](docs/footprint-review-2026-10-21.md) closes four drawing
+geometry holds and fixes TPS56837 paste/mask geometry and BGA grid rounding.
+The two BGA PCB land/process holds remain. [Modem documentation gates](docs/modem-documentation.md)
+record current download blockers and a PCIe-only RM520N order-code exclusion.
+All four modem profiles remain unreleased. Full ERC and native parity still pass.

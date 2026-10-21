@@ -1,0 +1,122 @@
+{
+  "scope": "Drawing geometry review; not manufacturing or physical qualification",
+  "reviews": {
+    "U701": {
+      "footprint": "Texas_RPA0010A_TPS56837",
+      "sha256": "ebe792893a5f571f63ae256a158957497f60d7c49629d7900dabc1f4899d77d9",
+      "review": "TI copper, NSMD and split 0.1mm-stencil example checked",
+      "drawing_review_complete": true,
+      "land_pattern_released": true
+    },
+    "U801": {
+      "footprint": "Sierra_RK3566_BGA565",
+      "sha256": "d78ba24e3e556598b2d47dcae37adcbfbd4d16e02b8b91d719215a951894262c",
+      "review": "565 exact ball centers; 0.22mm PCB copper/mask/paste still provisional",
+      "drawing_review_complete": true,
+      "land_pattern_released": false
+    },
+    "U901": {
+      "footprint": "Sierra_Micron_ZW_TFBGA200",
+      "sha256": "17637e610549f21624f3d188cc62ee4a8dce8942635911e5d6cd1ba6ab76a8df",
+      "review": "200 exact ball centers; 0.45/0.40mm PCB copper/mask and stencil still provisional",
+      "drawing_review_complete": true,
+      "land_pattern_released": false
+    },
+    "T1701": {
+      "footprint": "Sierra_HX4110NL_2x12_P1.27mm",
+      "sha256": "9359a25da23dfc58d5286def81fc8c55280a7e2af392c2d10e788aa74f105b72",
+      "review": "24 lands, pitch, row separation and top-view numbering checked",
+      "drawing_review_complete": true,
+      "land_pattern_released": true
+    },
+    "J1701": {
+      "footprint": "Sierra_RJE491881401_1x08-1MP_P1.02mm",
+      "sha256": "f5cfcf5efe0b0a68f58129e97b5cedaabda9af9b8b782abeed8c19bb158cae8a",
+      "review": "8 signal drills and 2 shell slots match drawing top view",
+      "drawing_review_complete": true,
+      "land_pattern_released": true
+    },
+    "J2001": {
+      "footprint": "Sierra_MDT420B01411_2x38-1MP_P0.5mm",
+      "sha256": "aa932700c04c82168f6e51552c8476d84e9604b595c4e21e53240de562b4dd28",
+      "review": "67 contacts, B-key gap, retention lands and asymmetric NPTHs checked; model remains detached",
+      "drawing_review_complete": true,
+      "land_pattern_released": true
+    }
+  },
+  "land_pattern_release_holds": [
+    "U801",
+    "U901"
+  ],
+  "reviewed": "2026-10-21",
+  "sources": {
+    "rk3566-datasheet-v1.2.pdf": {
+      "file": "rk3566-datasheet-v1.2.pdf",
+      "url": "https://wiki.friendlyelec.com/wiki/images/8/89/Rockchip_RK3566_Datasheet_V1.2-20220930.pdf",
+      "sha256": "9b39d5aacc80c8f2034285c7d37f12248f57b58314c22ba7685d87230e865d3d",
+      "retrieved": "2026-10-03"
+    },
+    "tps56837.pdf": {
+      "file": "tps56837.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tps56837.pdf",
+      "sha256": "5f165ad5393448edd3f8216001f0ba2f0be84cb62d29914512b66435a7fd4bc2",
+      "retrieved": "2026-10-03"
+    },
+    "micron-z42m-rev-i.pdf": {
+      "file": "micron-z42m-rev-i.pdf",
+      "url": "https://docs.rs-online.com/a381/A700000015750630.pdf?download=1",
+      "sha256": "c5ac282e6d4bceb3669285c35e5cb1eb22585987c56703bc1c47ffc37586554e",
+      "retrieved": "2026-10-04",
+      "note": "Micron-authored Rev I April 2023, RS mirror; not verified latest controlled revision"
+    },
+    "hx4110nl.pdf": {
+      "file": "hx4110nl.pdf",
+      "url": "https://productfinder.pulseeng.com/doc_type/WEB301/doc_num/HX4110NL/doc_part/HX4110NL.pdf",
+      "sha256": "793c973df130ee266c55feb6db276d5c4baf9b59112c41ef7180e02197e77e18",
+      "retrieved": "2026-10-07"
+    },
+    "amphenol-rje49-drawing.pdf": {
+      "file": "amphenol-rje49-drawing.pdf",
+      "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/rje491881x01.pdf?download=1",
+      "sha256": "efc578775ec773f45a76d84bd76aa51363c000ad38297035cb8edf4e57096e84",
+      "retrieved": "2026-10-07"
+    },
+    "amphenol-mdt420-drawing.pdf": {
+      "file": "amphenol-mdt420-drawing.pdf",
+      "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/cmdt420x0x411.pdf?download=1",
+      "sha256": "dd1d569bf0c597ac1e2d7d52e83a4362b877724f1171ca4d388037abd646a9d8",
+      "retrieved": "2026-10-07"
+    }
+  },
+  "manufacturer_refresh": [
+    {
+      "file": "tps56837.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tps56837.pdf",
+      "retrieved": "2026-10-21",
+      "status": 200,
+      "sha256": "5f165ad5393448edd3f8216001f0ba2f0be84cb62d29914512b66435a7fd4bc2",
+      "matches_archived": true,
+      "pdf": true
+    },
+    {
+      "file": "hx4110nl.pdf",
+      "url": "https://productfinder.pulseeng.com/doc_type/WEB301/doc_num/HX4110NL/doc_part/HX4110NL.pdf",
+      "retrieved": "2026-10-21",
+      "status": 200,
+      "sha256": "793c973df130ee266c55feb6db276d5c4baf9b59112c41ef7180e02197e77e18",
+      "matches_archived": true,
+      "pdf": true
+    },
+    {
+      "file": "amphenol-rje49-drawing.pdf",
+      "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/rje491881x01.pdf?download=1",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "amphenol-mdt420-drawing.pdf",
+      "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/cmdt420x0x411.pdf?download=1",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "release_scope": "Four archived-drawing geometry holds closed. BGA land/mask/paste process approval, model holds, board placement/routing/DRC, mechanics and physical qualification remain separate. Amphenol CDN refresh returned 403; source revision comparison uses archived Rev A drawings."
+}

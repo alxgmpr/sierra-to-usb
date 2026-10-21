@@ -4,11 +4,15 @@ import argparse, csv, json, re, subprocess, tempfile
 from pathlib import Path
 import xml.etree.ElementTree as E
 from capture import ROOT
+from check_footprint_reviews import check as check_footprint_reviews
+from check_modem_documentation import check as check_modem_documentation
 CLI='/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli'
 def export(path, output):
  subprocess.run([CLI,'sch','export','netlist','--format','kicadxml','--output',str(output),str(path)],check=True,capture_output=True)
  return E.parse(output).getroot()
 def validate(tree,directory):
+ check_footprint_reviews()
+ check_modem_documentation()
  C={c.get('ref'):c for c in tree.findall('./components/comp')}
  N={n.get('name'):{(v.get('ref'),v.get('pin')) for v in n.findall('node')} for n in tree.findall('./nets/net')}
  B={p:n for n,ps in N.items() for p in ps}
@@ -142,7 +146,7 @@ def validate(tree,directory):
   src=c.find('libsource');assert pads==libs[(src.get('lib'),src.get('part'))],(ref,fp,'Pad identities differ')
  for path in ROOT.glob('*.kicad_sch'):
   ids=re.findall(r'\(uuid "([^\"]+)"\)',path.read_text());assert len(ids)==len(set(ids)),path
- return {'date':'2026-10-07','scope':'Full appliance native connectivity and footprint identities; PCB is unrouted. No manufacturing release or physical qualification.','components':len(C),'nets':len(N),'accounted_major_native_pins':counts,'manufacturer_DDR_pairs':len(bus),'TI_golden_topology':golden,'default_DNP':sorted(default_dnp),'footprint_release_holds':sorted(holds),'modem_profiles_released':0,'assigned_footprints_with_exact_pad_parity':len(C)}
+ return {'date':'2026-10-21','scope':'Full appliance native connectivity and footprint identities; PCB is unrouted. No manufacturing release or physical qualification.','components':len(C),'nets':len(N),'accounted_major_native_pins':counts,'manufacturer_DDR_pairs':len(bus),'TI_golden_topology':golden,'default_DNP':sorted(default_dnp),'footprint_release_holds':sorted(holds),'modem_profiles_released':0,'assigned_footprints_with_exact_pad_parity':len(C)}
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path);p.add_argument('--kicad-cli',default=CLI);a=p.parse_args()
  global_cli=a.kicad_cli
@@ -155,5 +159,5 @@ def main():
   report=validate(export(ROOT/'appliance.kicad_sch',directory/'appliance.xml'),directory);report['ERC_violations']=0
   (directory/'capture-report.json').write_text(json.dumps(report,indent=2)+'\n')
   print(f"PASS: {report['components']} components, {report['nets']} nets, zero full ERC violations, native pin coverage, DDR map, TI topology, modem assembly isolation and assigned-footprint pad parity.")
-  print('Engineering capture complete. Six footprint release holds; four modem profiles and physical hardware remain unqualified.')
+  print(f"Engineering capture complete. {len(report['footprint_release_holds'])} BGA footprint release holds; four modem profiles and physical hardware remain unqualified.")
 if __name__=='__main__':main()

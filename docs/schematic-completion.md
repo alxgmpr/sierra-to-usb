@@ -30,15 +30,18 @@ qualify land geometry, sourcing, temperature or physical performance.
 
 ## Release holds and proof boundary
 
-1. **Six assigned engineering land patterns need release review**: U701 TPS56837 RPA,
-   U801 RK3566, U901 Micron RAM, T1701 HX4110NLT, J1701 RJE491881401 and J2001
-   MDT420B01411. Validate exact manufacturer lands, orientation, mask/paste and
-   retention before manufacturing. All are on the unrouted PCB with exact pad
-   identities. The [footprint audit](footprint-audit.md) records vendor sources,
+1. **Two BGA land-pattern/process holds remain**: U801 RK3566 and U901 Micron RAM.
+   The [2026-10-21 six-footprint review](footprint-review-2026-10-21.md) closes the
+   U701, T1701, J1701 and J2001 drawing geometry holds. BGA PCB land/mask/paste,
+   assembler process approval and board-level mechanical/retention review remain.
+   All are on the unrouted PCB with exact pad identities. The [footprint audit](footprint-audit.md) records vendor sources,
    generated BGA geometry, model availability and remaining stencil/mechanical
-   work. Native updates in both directions propose no changes, with zero errors
-   and warnings. This does not establish placement, routing or full DRC readiness.
-2. **No modem profile is released.** Current EM919x Rev11 and EM92xx Rev7.2 downloads
+   work. October 7 native bidirectional update checks had zero errors/warnings
+   and no changes; October 21 CLI parity checks are clean. This does not establish placement, routing or full DRC readiness.
+2. **No modem profile is released.** The [current documentation review](modem-documentation.md)
+   records access blockers, exact-module requirements and the PCIe-only RM520NGLAP
+   exclusion. RM520N Series Hardware Design V1.4 is listed behind login but has not
+   been compared with the archived V1.0. EM919x Rev11 and EM92xx Rev7.2 downloads
    require manufacturer login; RM551E-GL production hardware guidance is missing.
    EM919x Rev5, EM92xx Rev1 and RM520N V1.0 support provisional capture. Confirm
    exact hardware/firmware, all changed pins, timing, USB-mode selection, current

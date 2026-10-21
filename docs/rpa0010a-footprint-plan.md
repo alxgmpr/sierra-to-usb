@@ -17,8 +17,8 @@ View is from top; origin at package center, +x right, +y down. Body
 | 10 MODE | -0.93 | -1.40 | 0.25 | 0.60 |
 
 Pad 8 VIN is continuous asymmetric copper: a 0.40 x 2.10 mm vertical
-bar centered x=0.95, y=-0.65, joined to three 0.60 x 0.25 mm right-side
-fingers centered x=1.40, y=-0.75/-0.25/+0.25. These are one electrical
+bar centered x=0.95, y=-0.65, joined to three 0.56 x 0.25 mm right-side
+fingers centered x=1.42, y=-0.75/-0.25/+0.25. These are one electrical
 pin, not an added exposed pad. The manufacturer's curved corners use
 R0.05 typical. Copper union must preserve overlap and mask continuity.
 
@@ -34,8 +34,11 @@ archived as `hardware/reference/tps56a37-rpa0010a-cse.kicad_mod`. Its three righ
 VIN fingers were incorrectly numbered 11/12/13; all now use electrical pin 8.
 The project retains its independently audited ten-pin TPS56837 symbol.
 
-Imported land coordinates differ from the table above by at most 0.02 mm, and
-right VIN fingers are 0.56 mm long rather than 0.60 mm. Copper overlaps the VIN
-bar. These differences and the source's separate paste openings require stencil
-and assembly review; this is an engineering assignment, not a released land
-pattern. No unverified 3D model is attached.
+The [October 21 drawing review](footprint-review-2026-10-21.md) corrects the
+previous interpretation: the right-side fingers were already the specified
+0.56 mm long. The common −0.01 mm X displacement is now removed. Copper uses
+R0.05 corners and explicit 0.07 mm mask clearance; pins 6 and 9 have split
+paste-only openings per TI's 0.1 mm stencil example. The independent dimensional
+checker verifies these against pp32–33. The drawing geometry hold is closed;
+stencil/assembly process and board-level verification remain open. No unverified
+3D model is attached.

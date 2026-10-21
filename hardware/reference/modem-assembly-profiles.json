@@ -25,7 +25,8 @@
       "C2038"
     ],
     "power_envelope": "3.704V nominal regulator; 5A provisional burst allocation, not verified module demand",
-    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope"
+    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope",
+    "documentation_review": "modem-documentation-review.json"
   },
   {
     "model": "EM9293",
@@ -53,13 +54,14 @@
       "C2038"
     ],
     "power_envelope": "3.704V nominal regulator; 5A provisional burst allocation, not verified module demand",
-    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope"
+    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope",
+    "documentation_review": "modem-documentation-review.json"
   },
   {
     "model": "RM520N-GL",
     "vendor": "Quectel",
     "released": false,
-    "evidence": "Hardware Design V1.0; current exact module revision confirmation required",
+    "evidence": "Archived RM520N-GL Hardware Design V1.0; manufacturer now lists Series V1.4 behind login, not compared",
     "VCC_contacts": [
       "2",
       "4",
@@ -69,7 +71,8 @@
     ],
     "populate_optional": [],
     "power_envelope": "3.704V nominal regulator; 5A provisional burst allocation, not verified module demand",
-    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope"
+    "hold": "Obtain and compare V1.4 for exact order code; exclude PCIe-only RM520NGLAP-M20-HP; qualify firmware/USB, power, connector temperature and RF burst envelope",
+    "documentation_review": "modem-documentation-review.json"
   },
   {
     "model": "RM551E-GL",
@@ -85,6 +88,7 @@
     ],
     "populate_optional": [],
     "power_envelope": "3.704V nominal regulator; 5A provisional burst allocation, not verified module demand",
-    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope"
+    "hold": "Current controlled guide, exact firmware, USB-mode selection, connector drop/temperature and RF burst envelope",
+    "documentation_review": "modem-documentation-review.json"
   }
 ]
