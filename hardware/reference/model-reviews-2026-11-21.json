@@ -1,0 +1,344 @@
+{
+ "reviewed": "2026-11-21",
+ "scope": "Closes 2026-10-21 model holds. Vendor STEPs are attached with a verified datum transform. Envelopes use nominal XY, package-maximum height and drawing terminal geometry; they are not vendor-exact solids or tolerance envelopes, and do not qualify mating, assembly or clearance.",
+ "source_hashes": {},
+ "attached": [
+  {
+   "footprint": "Appliance:Sierra_MDT420B01411_2x38-1MP_P0.5mm",
+   "file": "Appliance.3dshapes/MDT420B01411.step",
+   "sha256": "7e802d17dedfb43006eba2093bdbc170126a46fbda51b4f07cbbb7f2b6f92f28",
+   "references": [
+    "J2001"
+   ],
+   "offset_xyz_mm": [
+    0,
+    1.9,
+    -2.43
+   ],
+   "rotation_xyz_degrees": [
+    -90,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    21.9,
+    4.7,
+    8.4
+   ],
+   "z_min_mm": -3.95,
+   "kind": "vendor",
+   "source": "Amphenol MDT420B0X411 Rev A vendor STEP (reference/amphenol-mdt420-3d.zip). Native X row axis, Y height, Z depth; all contact/retention feet bottom at Y=2.43 (pegs 0.5 lower into the NPTH), housing 4.20 above (drawing p1). Foot centres odd Z=-3.615, even Z=+4.171, retention Z=-3.0 vs lands -5.25/+2.275/-4.9 -> footprint y = Z - 1.9. Key gaps at the same -X: no mirror. KiCad (rotate (xyz -90 0 0)) offset (0 1.9 -2.43) verified against a pre-rotated copy via board STEP export."
+  },
+  {
+   "footprint": "Appliance:Diodes_PowerDI-5_3Pin_Derived",
+   "file": "Appliance.3dshapes/Sierra_PowerDI-5_SBRT20U60SP5.step",
+   "sha256": "009d8f8c7d743e25a9d68e1eda4a06bd282124ad6d397040e51e648a7457ac9b",
+   "references": [
+    "D1718"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    6.6,
+    4.05,
+    1.15
+   ],
+   "z_min_mm": -0.0004,
+   "kind": "vendor",
+   "source": "Diodes PowerDI-5 (SBRT20U60SP5-7, D1718): STEP embedded in TI TIDA-050023 PSIL024A_PCB.\n\nNative: length along Z, height along Y (body 1.15 mm, seating Y=-7.976), body width\n4.05 mm along X centred at -9.568. Cathode tab Z -3.3..1.2 (3.05 wide), two anode leads\nat X -10.488/-8.648 (1.84 apart) and Z 2.4..3.3. Footprint: pad 3 (cathode) at x=-1.12,\npads 1/2 at x=2.862, y=+-0.92 (1.84 apart); Fab body 5.45 x 4.05 centred.\nMap: X = z, Y = x + 9.568, Z = y + 7.976 (a proper rotation: 120 deg about (1,1,1))."
+  },
+  {
+   "footprint": "Appliance:TQFN-48_L6.0-W6.0-P0.40-BL-EP4.5",
+   "file": "Appliance.3dshapes/Sierra_RTL8125BG_TQFN48.step",
+   "sha256": "0e8f303e05b38c0ec9bcda06be58ba3bfd9b4032dfdb552d212f3910be302be6",
+   "references": [
+    "U1301"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    6.0,
+    6.0,
+    1.01
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "RTL8125BG-CG TQFN-48 6x6: rtl8125bg-v1.5.pdf p53 (DS p45, Table 38). D/E 6.0 BSC, A 1.0 max,\nb 0.20, L 0.40, e 0.40 (12/side at +-2.2 (d)), EP 4.30 sq; footprint = datasheet view turned 90 deg,\npin 1 at bottom-left (-2.2, +2.8 (d))."
+  },
+  {
+   "footprint": "Appliance:Texas_RPA0010A_TPS56837",
+   "file": "Appliance.3dshapes/Sierra_TPS56837_RPA0010A.step",
+   "sha256": "fca9001a33797116d53a69c955ede1273740470ad246ce134d9c200197a72aff",
+   "references": [
+    "U701"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    3.0,
+    3.0,
+    1.01
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "TPS56837 RPA0010A: tps56837.pdf p31, drawing 4224047/A. 3.0 nom sq, A 1.00 max; terminal\nsizes/centres per drawing (pins 1-4 at x=-1.30; 5/10 at (-0.93,+-1.30); 7 at (+0.87,+1.30);\n6 at (+0.37,+0.75) 0.25x1.5; 9 bar 0.40x1.9 at (-0.205,-0.55); 8 bar at (+0.945,-0.55) + three\n0.25 fingers to the +x edge at y=-0.75/-0.25/+0.25). Pin 1 top-left."
+  },
+  {
+   "footprint": "Appliance:UQFN-10_L2.0-W1.5-P0.50-BL",
+   "file": "Appliance.3dshapes/Sierra_TS3USB221A_RSE0010A.step",
+   "sha256": "3cb369d6648f2dfb7ce464066c7445b9f9c38cbc48d961fe7b3e842391128bf3",
+   "references": [
+    "U2002"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    2.0,
+    1.5,
+    0.61
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "TS3USB221A RSE0010A UQFN-10: ts3usb221a.pdf p24, drawing 4220307/A. 2.0 (x) x 1.5 (y), A 0.6 max;\nside terminals 0.35 deep, 0.25 (corner) / 0.20 (inner) wide at x=+-0.75/+-0.25, y=+-0.575 (d);\nend terminals 5/10 at (+-0.80, 0) 0.40 x 0.30. Footprint = datasheet turned 90 deg; pin 1 bottom-left."
+  },
+  {
+   "footprint": "Appliance:VQFN-10_L2.0-W2.0-P0.45-TL",
+   "file": "Appliance.3dshapes/Sierra_TPS259474L_RPW0010A.step",
+   "sha256": "c458849e6be5d0968ca82ca903a25c3418317f7d06d97ed37b0596d1480aef5c",
+   "references": [
+    "U1902"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    2.0,
+    2.0,
+    1.01
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "TPS259474L RPW0010A VQFN-10 2x2: tps25947.pdf p72, drawing 4225183/A. 2.0 nom sq, A 1.0 max;\npins 5/6 full-length 0.30 strips at x=+-0.25; pins 2/3/8/9 0.40 x 0.25 at (+-0.80 (d), +-0.225);\ncorner pins 1/4/7/10 occupy |x| 0.6..1.0, |y| 0.55..1.0 (corner square simplified). Pin 1 top-left."
+  },
+  {
+   "footprint": "Appliance:VQFN-14_L3.5-W3.5-P0.50-TL-EP_TPS54622RHLT",
+   "file": "Appliance.3dshapes/Sierra_TPS54620_RHL0014A.step",
+   "sha256": "bb3bc826aedac4488db76418d78ddc15fdd559a41a4246eba773e3f4f318a2b5",
+   "references": [
+    "U1901"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    3.5,
+    3.5,
+    1.01
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "TPS54620 RHL0014A VQFN-14 3.5x3.5: tps54620.pdf p44, drawing 4228405/A. 3.5 nom sq, A 1.0 max;\nterminals 0.24 x 0.40 (pins 1/14/7/8 at (+-0.75, +-1.55); 2-6 / 9-13 at x=+-1.55, y=-1..1 step 0.5);\nthermal pad 2.05 sq + 0.75-wide tabs (d) to the +-y edges. Pin 1 at (-0.75, -1.55)."
+  },
+  {
+   "footprint": "Appliance:WLCSP-20_L2.0-W1.6-R5-C4-P0.40-TL",
+   "file": "Appliance.3dshapes/Sierra_TCS4525_WLCSP20.step",
+   "sha256": "2f736985d44a6f430fb5b6be251c9ccef47e40ec12e7a3a08a3a232b711a7fe6",
+   "references": [
+    "U1001"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    1.63,
+    2.03,
+    0.42
+   ],
+   "z_min_mm": 0.19,
+   "kind": "envelope",
+   "source": "TCS4525 WLCSP-20: tcs4525-v1.0-mirror.pdf p21. D 1.60-1.66 (x) x E 2.00-2.06 (y) -> 1.63 x 2.03 (d),\nA 0.60 max, ball height 0.15-0.23. Ball diameter is NOT given, so balls are not modelled: the body\nfloats at the 0.19 (d) mid ball height. A1 top-left."
+  },
+  {
+   "footprint": "Inductor_SMD:L_Coilcraft_LPS4018",
+   "file": "Appliance.3dshapes/Sierra_LPS4018.step",
+   "sha256": "6bf37abc8a3b82d2c811b61394d1e1e1cd8694ac4e70fcd1d7b20051b6d1bcc5",
+   "references": [
+    "L401"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    4.03,
+    3.9,
+    1.81
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "Coilcraft LPS4018: lps4018.pdf p2. Octagonal case 3.90 sq, flats 2.4 (0.75 chamfer legs (d)),\ncase height 1.70 +-0.10 -> 1.80; terminations wrap the +-x sides, 1.52 gap along the +-y edges,\n+0.13 overall per note 7 (0.065 per side (d)). Marking dot on the -x side."
+  },
+  {
+   "footprint": "Oscillator:Oscillator_SMD_SiT_PQFN-4Pin_3.2x2.5mm",
+   "file": "Appliance.3dshapes/Sierra_SiT8008_PQFN4_3.2x2.5.step",
+   "sha256": "20552efcbd8982206d07e1313c900a7495fbf03ca95e3e2b6ba985a363d214f6",
+   "references": [
+    "Y1101"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    3.2,
+    2.5,
+    0.81
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "SiTime SiT8008 PQFN-4 3.2x2.5: sit8008.pdf p11 (POD-PQFN-004-X03225-002 A04). 3.2 (x) x 2.5 (y),\nA 0.80 max; pads 0.90 (x) x 0.80 (y) at (+-1.05, +-0.75) (d); pin 1 bottom-left (-1.05, +0.75)."
+  },
+  {
+   "footprint": "Package_BGA:LFBGA-153_11.5x13mm_Layout14x14_P0.5mm",
+   "file": "Appliance.3dshapes/Sierra_IS21TF16G_VFBGA153.step",
+   "sha256": "94a4bef7ebf79d8720ce50ae63be9b0231eaa3bb6228e9005adb5f09a5ab41bd",
+   "references": [
+    "U1101"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    11.5,
+    13.0,
+    1.01
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "ISSI IS21TF16G-JCLI 153-ball VFBGA 11.5 x 13 x 1.0: issi-emmc-tf.pdf p34 (Rev A, MO-276).\nE 11.5 (x) x D 13.0 (y), A 1.00 max, A1 0.15 min, ball b 0.30 nom at the footprint's 0.5 mm\n14x14 grid positions (A1 at (-3.25, -3.25)). Balls modelled as 0.30 spheres, body from 0.20 (d)."
+  }
+ ],
+ "remaining_holds": [
+  {
+   "footprint": "Appliance:SIM-SMD_1042240820",
+   "references": [
+    "J2002"
+   ],
+   "blocker": "Molex 1042240820 hinged/cover geometry and insertion clearance require exact vendor CAD and seating datum; no verified asset obtained."
+  },
+  {
+   "footprint": "Appliance:Sierra_HX4110NL_2x12_P1.27mm",
+   "references": [
+    "T1701"
+   ],
+   "blocker": "Pulse HX4110NL drawing is archived; transformer body, stand-off and lead bend need a matching model; installed stock path is absent."
+  },
+  {
+   "footprint": "Appliance:Sierra_RJE491881401_1x08-1MP_P1.02mm",
+   "references": [
+    "J1701"
+   ],
+   "blocker": "Amphenol RJE49 drawing archived; no exact CAD obtained. RJ45 substitutes have different panel, shield-tab and LED geometry."
+  },
+  {
+   "footprint": "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal",
+   "references": [
+    "J1201"
+   ],
+   "blocker": "No exact matching Amphenol shell/retention-tab CAD obtained; installed model path absent. Mating-face and board-edge datum must be checked."
+  },
+  {
+   "footprint": "PoE:TI_Molex_87898-0204",
+   "references": [
+    "J1712"
+   ],
+   "blocker": "Molex 87898-0204 exact shroud, latch and mating envelope not verified; a generic 2-pin header would hide connector clearance."
+  },
+  {
+   "footprint": "PoE:TI_TRANS_Fairchild_PQFN08A",
+   "references": [
+    "Q1705"
+   ],
+   "blocker": "FDMS86252 exact Power56/PQFN terminal arrangement and seating geometry need vendor package CAD; generic eight-pin QFN is not sufficient."
+  },
+  {
+   "footprint": "PoE:TI_WE-SL5",
+   "references": [
+    "L1702"
+   ],
+   "blocker": "Wurth publishes exact 744272251 STEP (rev1), but automated retrieval returned HTTP 403. Archived 744272222 is wrong MPN and has invalid solids; remains detached."
+  }
+ ]
+}

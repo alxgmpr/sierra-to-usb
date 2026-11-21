@@ -565,4 +565,15 @@
 		(uuid "f87b1505-7ebf-4c7b-915a-fd96ace02bdb")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_TCS4525_WLCSP20.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

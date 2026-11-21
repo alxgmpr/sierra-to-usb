@@ -11014,7 +11014,18 @@
 			(uuid "51cc393a-8734-5edf-bdf8-be1bcde5b3ae")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_LPS4018.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+)
 	(footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "0dc7ef6c-fece-446d-88c8-3f726a8c05a3")
@@ -20208,7 +20219,18 @@
 			(uuid "861a13b4-9d38-504c-ade4-a7c3a3df4289")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_TS3USB221A_RSE0010A.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+)
 	(footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "194be66d-d544-4062-b1a6-4d2712520f38")
@@ -86161,7 +86183,18 @@
 			(uuid "82bab7f5-a3b8-5925-a558-4b84c4cfec8c")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_RTL8125BG_TQFN48.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+)
 	(footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "69132649-4239-40ee-b0c2-3090be9f4f23")
@@ -105189,7 +105222,18 @@
 			(uuid "0ca6c61c-481e-501e-b432-9f1ab893b75f")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/MDT420B01411.step"
+			(offset
+				(xyz 0 1.9 -2.43)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 0)
+			)
+		)
+)
 	(footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "8126b025-9edc-454e-b8d4-13f5118a0d6a")
@@ -124491,7 +124535,18 @@
 			(uuid "ef7ad800-9ba5-5015-acfa-eb45aac1acd3")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_PowerDI-5_SBRT20U60SP5.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+)
 	(footprint "Capacitor_SMD:C_0201_0603Metric_Pad0.64x0.40mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "9be8f23e-b454-4e56-a4e3-10cc913eeadb")
@@ -126726,7 +126781,18 @@
 			(uuid "536c4903-293a-5b33-85dd-8452d9c9108e")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_TCS4525_WLCSP20.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+)
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "9db4e775-4d84-4a78-b525-599adcc7227d")
@@ -192746,7 +192812,18 @@
 			(uuid "e0ac34da-ec61-55ea-a336-9a6f6c134f54")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_IS21TF16G_VFBGA153.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+)
 	(footprint "Package_TO_SOT_SMD:SOT-23_Handsoldering"
 		(layer "F.Cu")
 		(uuid "e243af5a-0e7b-4cb9-8486-2e4af278bf53")
@@ -196772,7 +196849,18 @@
 			(uuid "3a611e85-6212-5eb5-be59-a3c2feade9d6")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_SiT8008_PQFN4_3.2x2.5.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+)
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "e7f67b90-76b3-4c13-a4d0-7dc9c09aef24")
@@ -197742,6 +197830,17 @@
 			(unit
 				(name "A")
 				(pins "1" "2" "10" "8" "9" "7" "3" "6" "4" "5")
+			)
+		)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_TPS56837_RPA0010A.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
 			)
 		)
 )
@@ -199226,7 +199325,18 @@
 			(uuid "c2f6fea5-2db9-5bbd-b334-a6254e8a4e68")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_TPS54620_RHL0014A.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 	(layer "B.Cu")
 	(uuid "eb327aaa-2cc1-40b2-9d36-4ccbde55687f")
@@ -201527,7 +201637,18 @@
 			(uuid "a35a6724-bbcc-57c1-abf1-03a8fe6e04b3")
 		)
 		(embedded_fonts no)
-	)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_TPS259474L_RPW0010A.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+)
 	(footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "ee4b1501-dfc9-42f3-88b9-dfbd7ac41452")

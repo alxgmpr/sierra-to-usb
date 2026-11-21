@@ -362,4 +362,15 @@
  (pad "" smd roundrect (at -0.21 -1.225) (size 0.4 0.95) (layers "F.Paste") (roundrect_rratio 0.125))
 
  (pad "" smd roundrect (at -0.21 -0.075) (size 0.4 0.95) (layers "F.Paste") (roundrect_rratio 0.125))
+	(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_TPS56837_RPA0010A.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

@@ -48,6 +48,13 @@ checker validates model source hashes, attachment rotations and these holds;
 `tools/check_model_reviews.py --geometry` additionally checks the six STEP solids
 and sourced bounds with CadQuery.
 
+The [2026-11-21 model follow-up](reference/model-reviews-2026-11-21.json) closes 11
+more holds with `tools/build_models.py`: the archived Amphenol M.2 STEP attached
+with a measured datum transform, the TI-embedded PowerDI-5 STEP re-oriented to its
+lands, and nine envelopes (nominal XY, maximum height, drawing terminals) for U1301,
+U701, U2002, U1902, U1901, U1001, L401, Y1101 and U1101. Every envelope terminal is
+cross-checked against its footprint copper. Remaining holds stay in the policy.
+
 Use the native Update PCB / Update Schematic dialogs for normal edits, with
 reference relinking off. `build_capture.py` regenerates the original capture and
 applies the footprint policy; it overwrites manual schematic graphics. Preserve

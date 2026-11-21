@@ -15,14 +15,15 @@ def vector(block, field):
 
 
 def check(root=ROOT, geometry=False):
-    record = json.loads((root / 'reference/model-reviews-2026-10-21.json').read_text())
+    records = [json.loads(p.read_text()) for p in sorted((root / 'reference').glob('model-reviews-*.json'))]
+    record = records[-1]   # newest record owns the remaining holds; every record's attachments must still hold
     policy = json.loads((root / 'footprint-policy.json').read_text())
-    for name, digest in record['source_hashes'].items():
+    for name, digest in (h for r in records for h in r['source_hashes'].items()):
         assert hashlib.sha256((root / name).read_bytes()).hexdigest() == digest, name
     board = {re.search(r'\(property "Reference" "([^"]+)"', f)[1]: f
              for f in children((root / 'appliance.kicad_pcb').read_text())
              if f.startswith('(footprint ')}
-    for entry in record['attached']:
+    for entry in (e for r in records for e in r['attached']):
         path = root / entry['file']
         assert hashlib.sha256(path.read_bytes()).hexdigest() == entry['sha256'], path
         attached = []
@@ -56,4 +57,5 @@ if __name__ == '__main__':
     parser.add_argument('--geometry', action='store_true', help='Also validate STEP solids and sourced bounds; requires CadQuery')
     args = parser.parse_args()
     record = check(geometry=args.geometry)
-    print(f"PASS: {len(record['attached'])} model reviews, 16 attachments; 18 documented remaining model holds.")
+    print(f"PASS: newest model review {record['reviewed']}: {len(record['attached'])} attachments; "
+          f"{len(record['remaining_holds'])} documented remaining model holds.")

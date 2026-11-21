@@ -15,6 +15,11 @@ import re
 from capture import ROOT, children
 
 
+def strip_models(text):
+    """Footprint text without its 3D model blocks: model attachment is reviewed in model-reviews-*.json."""
+    return re.sub(r'\t\(model "[^"]*"\n(?:\t\t.*\n)*?\t\)\n', '', text)
+
+
 def number(item, field):
     match = re.search(r'\(' + field + r' ([^()]*)\)', item)
     return tuple(float(v) for v in match[1].split()) if match else ()
@@ -45,7 +50,9 @@ def check(root=ROOT):
         name = policy['assignments'][ref].split(':')[1]
         path = root / 'Appliance.pretty' / (name + '.kicad_mod')
         data[ref] = pads(path.read_text())
-        report[ref] = {'footprint': name, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+        text = path.read_text()   # reviewed copper may since have gained a model block (model-reviews-*.json)
+        report[ref] = {'footprint': name, 'sha256': hashlib.sha256(text.encode()).hexdigest(),
+                       'sha256_without_models': hashlib.sha256(strip_models(text).encode()).hexdigest()}
 
     # TI 4224047/A, board layout p32. Seven 0.60mm lands; three VIN fingers
     # are explicitly 0.56mm long at x=1.42, not 0.60mm at x=1.40.
@@ -146,7 +153,7 @@ def check(root=ROOT):
     record = json.loads((root / 'reference/footprint-reviews-2026-10-21.json').read_text())
     assert set(record['reviews']) == set(report)
     for ref, item in report.items():
-        assert record['reviews'][ref]['sha256'] == item['sha256'], (ref, 'Review evidence is stale')
+        assert record['reviews'][ref]['sha256'] in (item['sha256'], item['sha256_without_models']), (ref, 'Review evidence is stale')
         assert record['reviews'][ref]['land_pattern_released'] == (ref not in policy['land_pattern_release_holds'])
     for name, source in record['sources'].items():
         assert hashlib.sha256((root / 'reference' / name).read_bytes()).hexdigest() == source['sha256'], name
