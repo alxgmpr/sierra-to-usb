@@ -37,9 +37,9 @@ def parse(s):
         pads=[]
         for pm in re.finditer(r'\(pad "([^"]*)" (\w+) (\w+)\s*\(at '+NUM+' '+NUM+r'(?: '+NUM+r')?\)\s*\(size '+NUM+' '+NUM+r'\)(.*?)\(uuid',t,re.S):
             net=re.search(r'\(net "([^"]*)"\)',pm[9]);
-            pads.append(dict(num=pm[1],x=float(pm[4]),y=float(pm[5]),w=float(pm[7]),h=float(pm[8]),net=net[1] if net else ''))
+            pads.append(dict(num=pm[1],kind=pm[2],x=float(pm[4]),y=float(pm[5]),w=float(pm[7]),h=float(pm[8]),net=net[1] if net else ''))
         xs=[];ys=[]
-        for cm in re.finditer(r'\((fp_line|fp_rect|fp_poly|fp_circle|fp_arc)(.*?)\(layer "F\.(?:CrtYd|Fab)"\)',t,re.S):
+        for cm in re.finditer(r'\((fp_line|fp_rect|fp_poly|fp_circle|fp_arc)(.*?)\(layer "[FB]\.(?:CrtYd|Fab)"\)',t,re.S):
             pts=[(float(p[1]),float(p[2])) for p in re.finditer(r'\((?:start|end|xy|center|mid) '+NUM+' '+NUM+r'\)',cm[2])]
             if cm[1]=='fp_circle':
                 (cx,cy),(ex,ey)=pts[:2]; rr=math.hypot(ex-cx,ey-cy); pts=[(cx-rr,cy-rr),(cx+rr,cy+rr)]
@@ -47,7 +47,11 @@ def parse(s):
         for p in pads:   # pads always inside the keep-out (some courtyards omit tabs)
             e=max(p['w'],p['h'])/2+.15; xs+= [p['x']-e,p['x']+e]; ys+=[p['y']-e,p['y']+e]
         sh=re.search(r'\(sheetfile "([^"]+)"',t)
-        fps[ref]=dict(ref=ref,lib=re.match(r'\(footprint "([^"]+)"',t)[1],x=float(m[1]),y=float(m[2]),rot=float(m[3]),
+        side=re.search(r'\(layer "([^"]+)"',t)[1][0]
+        if side=='B':   # store bottom parts in their top-side (unflipped) shape
+            for p in pads: p['y']=-p['y']
+            ys=[-y for y in ys]
+        fps[ref]=dict(side=side,ref=ref,lib=re.match(r'\(footprint "([^"]+)"',t)[1],x=float(m[1]),y=float(m[2]),rot=float(m[3]),
             layer=re.search(r'\(layer "([^"]+)"',t)[1],sheet=sh[1] if sh else '',
             val=re.search(r'\(property "Value" "([^"]*)"',t)[1],pads=pads,
             crt=(min(xs),min(ys),max(xs),max(ys)),span=(a,b))
@@ -121,31 +125,46 @@ for f in fps.values():
 BARRIER |= {r for r, d in domain.items() if d == 'B'}
 block = {r: 'PRIM' if domain[r] == 'P' else None if domain[r] == 'B' else sheet_block[f['sheet']] for r, f in fps.items()}
 
+# Local bypass caps of the SoC, RAM and eMMC go on the bottom, under or beside their package.
+BGAS = ('U801', 'U901', 'U1101')
+def bottom_cap(f):
+    if not re.match(r'C\d', f['ref']) or '0603' not in f['lib'] or len(f['pads']) != 2: return False
+    if f['sheet'] not in ('processor.kicad_sch', 'core-power.kicad_sch', 'peripheral-power.kicad_sch', 'ram.kicad_sch', 'boot.kicad_sch'): return False
+    m = re.match(r'([\d.]+)\s*([pnu])', f['val'])
+    if not m or float(m[1]) * {'p': 1e-12, 'n': 1e-9, 'u': 1e-6}[m[2]] > 4.7e-6: return False
+    nets = [p['net'] for p in f['pads']]
+    return any(short(n) == 'GND' for n in nets) and any(r in BGAS for n in nets for r, _ in netpads.get(n, ()))
+BOTTOM = {r for r, f in fps.items() if bottom_cap(f)}
+side = {r: ('B' if r in BOTTOM else 'F') for r in fps}
+
 # ============================================================== geometry and legality
 def rot_pt(x, y, r):
     a = math.radians(r); return x*math.cos(a) + y*math.sin(a), -x*math.sin(a) + y*math.cos(a)
-def rect(f, u, v, r, infl=0.0):
-    x0, y0, x1, y1 = f['crt']; pts = [rot_pt(x, y, r) for x in (x0, x1) for y in (y0, y1)]
+def rect(f, u, v, r, infl=0.0, flip=None):
+    x0, y0, x1, y1 = f['crt']
+    if flip if flip is not None else side[f['ref']] == 'B': y0, y1 = -y1, -y0
+    pts = [rot_pt(x, y, r) for x in (x0, x1) for y in (y0, y1)]
     return (u + min(p[0] for p in pts) - infl, v + min(p[1] for p in pts) - infl,
             u + max(p[0] for p in pts) + infl, v + max(p[1] for p in pts) + infl)
 placed = {}
 def pad_abs(ref, i, pos=None):
     u, v, r = pos or placed[ref]; p = fps[ref]['pads'][i]
-    dx, dy = rot_pt(p['x'], p['y'], r); return u + dx, v + dy
+    dx, dy = rot_pt(p['x'], -p['y'] if side[ref] == 'B' else p['y'], r); return u + dx, v + dy
 
 CELL = 4.0
 grid = defaultdict(list)
 def cells(R):
     for i in range(int(R[0]//CELL), int(R[2]//CELL) + 1):
         for j in range(int(R[1]//CELL), int(R[3]//CELL) + 1): yield i, j
-def collide(R):
+grid_b = defaultdict(list)   # bottom side: bottom parts + through-hole pins
+def collide(R, g=None):
     for c in cells(R):
-        for Q in grid[c]:
+        for Q in (grid if g is None else g)[c]:
             if R[0] < Q[2] and Q[0] < R[2] and R[1] < Q[3] and Q[1] < R[3]: return True
     return False
 def commit(ref, u, v, r, R):
     placed[ref] = (u, v, r)
-    for c in cells(R): grid[c].append(R)
+    for c in cells(R): (grid_b if side[ref] == 'B' else grid)[c].append(R)
 def inside(R, box, m): return R[0] >= box[0] + m and R[1] >= box[1] + m and R[2] <= box[2] - m and R[3] <= box[3] - m
 def legal(ref, R):
     """R is the courtyard grown by GAP/2 on each side."""
@@ -154,8 +173,9 @@ def legal(ref, R):
     if d == 'P' and R[2] > XB - MOAT + GAP/2: return False
     if d == 'S' and R[0] < XB + MOAT - GAP/2: return False
     if d != 'B':
-        if R[0] < CARD[2] and CARD[0] < R[2] and R[1] < CARD[3] and CARD[1] < R[3]: return False
+        if side[ref] == 'F' and R[0] < CARD[2] and CARD[0] < R[2] and R[1] < CARD[3] and CARD[1] < R[3]: return False
         if block[ref] and not any(inside(R, b, INSET - GAP/2) for b in BLOCKS[block[ref]][1]): return False
+    if side[ref] == 'B': return not collide(R, grid_b)
     return not collide(R)
 
 # ============================================================== phase 1: anchors
@@ -257,6 +277,8 @@ def target_for(ref, defer):
         if others: cands.append((net in RAIL, i, same or others))
     if not cands: return None
     rail, i, pool = min(cands, key=lambda c: c[0])
+    if ref in BOTTOM:   # bottom bypass caps serve the BGA balls on their rail
+        pool = [(r, j) for r, j in netpads[f['pads'][i]['net']] if r in BGAS] or pool
     if rail:
         bigs = [(r, j) for r, j in pool if not is_small(fps[r])] or pool
         r, j = min(bigs, key=lambda t: (load[t], t[1]))
@@ -275,7 +297,7 @@ def place_small(ref, own_pad, tgt):
         for du, dv in offs:
             if best and math.hypot(du, dv) > best[0] - base + 2.0: break
             u, v = c[0] + du, c[1] + dv
-            for r in (0, 90, 180, 270):
+            for r in ((0, 180) if side[ref] == 'B' else (0, 90, 180, 270)):   # bottom caps: one axis, clean rows
                 R = rect(f, u, v, r, GAP/2)
                 if not legal(ref, R): continue
                 a = pad_abs(ref, own_pad, (u, v, r))
@@ -287,7 +309,7 @@ def place_small(ref, own_pad, tgt):
 def prio(ref):
     k = 0 if ref.startswith('L') else 1 if ref.startswith('C') else 2 if ref.startswith(('R', 'FB')) else 3
     return (k, val(fps[ref]) if k == 1 else 0, ref)
-pending = sorted([r for r in fps if r not in placed], key=prio)
+pending = sorted([r for r in fps if r not in placed and r not in BOTTOM], key=prio)
 for it in range(16):
     nxt = []
     for ref in pending:
@@ -298,6 +320,16 @@ for it in range(16):
     pending = sorted(nxt, key=prio)
 for ref in pending:
     if not place_small(ref, 0, target_of(ref)): raise SystemExit(f'no room for {ref}')
+
+for ref in placed:   # through-hole pins also occupy the bottom side
+    for i, p in enumerate(fps[ref]['pads']):
+        if 'thru_hole' in p['kind']:
+            x, y = pad_abs(ref, i); e = max(p['w'], p['h'])/2 + 0.25
+            for c in cells((x-e, y-e, x+e, y+e)): grid_b[c].append((x-e, y-e, x+e, y+e))
+load.clear()
+for ref in sorted(BOTTOM, key=prio):
+    t = target_for(ref, defer=False)
+    if not t or not place_small(ref, *t): raise SystemExit(f'no bottom room for {ref}')
 
 # ============================================================== trim outline to the parts
 ext = [rect(fps[r], *placed[r]) for r in placed if r not in OVERHANG]
@@ -312,7 +344,21 @@ for ref, f in sorted(fps.items(), key=lambda kv: kv[1]['span'][0]):
     u, v, r = placed[ref]
     t = re.sub(r'\(translate [-\d.]+ [-\d.]+\)', f'(translate {X0+u:.4f} {Y0+v:.4f})', t, count=1)
     t = re.sub(r'\(rotate [-\d.]+\)', f'(rotate {r % 360:g})', t, count=1)
-    delta = (r - f['rot']) % 360
+    if side[ref] != f['side']:   # flip: mirror local y, swap F/B layers, mirror text, reflect angles
+        old = f['rot']
+        def flip_at(m):
+            a = (r - (float(m[3] or 0) - old)) % 360
+            return f'(at {m[1]} {-float(m[2]):g}' + (f' {a:g})' if a else ')')
+        t = re.sub(r'\(at (-?[\d.]+) (-?[\d.]+)(?: (-?[\d.]+))?\)', flip_at, t)
+        t = re.sub(r'\((start|end|mid|center|xy) (-?[\d.]+) (-?[\d.]+)\)', lambda m: f'({m[1]} {m[2]} {-float(m[3]):g})', t)
+        t = re.sub(r'"([FB])\.(Cu|Paste|Mask|SilkS|Fab|CrtYd|Adhes)"', lambda m: f'"{"B" if m[1] == "F" else "F"}.{m[2]}"', t)
+        def mirror(m):
+            flags = sorted(set((m[3] or '').split()) ^ {'mirror'})
+            return '(effects' + m[1] + (' (justify ' + ' '.join(flags) + ')' if flags else '')
+        t = re.sub(r'\(effects(\s*\(font(?:[^()]|\([^()]*\))*\))(\s*\(justify ([^)]*)\))?', mirror, t)
+        delta = 0
+    else:
+        delta = (r - f['rot']) % 360
     if delta:
         def fix(m):
             a = (float(m[3] or 0) + delta) % 360
