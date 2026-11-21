@@ -3305,12 +3305,12 @@
 	)
 	(global_label "5V_MAIN"
 		(shape passive)
-		(at 241.3 53.34 180)
+		(at 241.3 53.34 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "bf789c8c-3d67-5176-b37a-ab45e9883350")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -3613,12 +3613,12 @@
 	)
 	(global_label "3V3_MAIN"
 		(shape passive)
-		(at 236.22 53.34 180)
+		(at 236.22 53.34 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "efa7c20b-61b9-57ee-ad96-bd7769d1fe02")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -5255,7 +5255,7 @@
 		(dnp no)
 		(uuid "6ace1795-4151-5592-bf1b-cae79c22a747")
 		(property "Reference" "U1502"
-			(at 238.76 43.18 0)
+			(at 238.76 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5265,7 +5265,7 @@
 			)
 		)
 		(property "Value" "TPS22965DSGR"
-			(at 238.76 45.72 0)
+			(at 238.76 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

@@ -6237,12 +6237,12 @@
 	)
 	(global_label "3V3_MAIN"
 		(shape passive)
-		(at 50.8 78.74 0)
+		(at 50.8 78.74 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "c334d5b2-3b3a-5095-8568-164dba72a63d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"

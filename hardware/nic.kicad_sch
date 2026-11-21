@@ -2096,7 +2096,7 @@
 	)
 	(text "LANWAKE requires 1–4.7k pull-up. EESK requires 4.7k pull-up; low enters test mode.\nEEDI low selects Microwire, EEPROM_SEL low selects 93C46. All strap levels at power-on.\nBG pins 4/5/7 float; all 49 pads audited. 2.5G magnetics and four-pair PoE attached; qualify hardware."
 		(exclude_from_sim no)
-		(at 25.4 401.32 0)
+		(at 71.12 401.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3511,12 +3511,12 @@
 	)
 	(global_label "ETH_ANALOG_0V95"
 		(shape passive)
-		(at 401.32 76.2 180)
+		(at 401.32 76.2 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "4ca0ae6a-1737-5486-aa8a-1cac44f10b5d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -3753,12 +3753,12 @@
 	)
 	(global_label "ETH_ANALOG_3V3"
 		(shape passive)
-		(at 408.94 76.2 180)
+		(at 408.94 76.2 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "7bf898a9-2d0d-5c56-832a-9bcce952f150")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -3863,12 +3863,12 @@
 	)
 	(global_label "ETH_0V95"
 		(shape passive)
-		(at 106.68 81.28 180)
+		(at 106.68 81.28 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "86212b56-581c-5ed4-afe5-418620215f7e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -4237,12 +4237,12 @@
 	)
 	(global_label "ETH_3V3"
 		(shape passive)
-		(at 116.84 81.28 180)
+		(at 116.84 81.28 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "c5ad6501-d64c-52e8-8416-fb22eecb6c37")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -4457,12 +4457,12 @@
 	)
 	(global_label "ETH_XTAL_3V3"
 		(shape passive)
-		(at 416.56 76.2 180)
+		(at 416.56 76.2 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "d5bf051c-9668-5e6e-bb74-1a7a9a725db8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -4655,12 +4655,12 @@
 	)
 	(global_label "ETH_PCIE_0V95"
 		(shape passive)
-		(at 114.3 81.28 180)
+		(at 114.3 81.28 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "f0980966-410e-50c0-8b57-845b960f410f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
@@ -5007,7 +5007,7 @@
 		(dnp no)
 		(uuid "132263b2-685d-5088-b39f-ab82aff0526f")
 		(property "Reference" "U1301"
-			(at 408.94 66.04 0)
+			(at 408.94 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5017,7 +5017,7 @@
 			)
 		)
 		(property "Value" "RTL8125BG-CG"
-			(at 408.94 68.58 0)
+			(at 408.94 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6591,7 +6591,7 @@
 		(dnp no)
 		(uuid "8323dfd7-9237-5add-8bc9-32118ae707c9")
 		(property "Reference" "U1301"
-			(at 114.3 71.12 0)
+			(at 114.3 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6601,7 +6601,7 @@
 			)
 		)
 		(property "Value" "RTL8125BG-CG"
-			(at 114.3 73.66 0)
+			(at 114.3 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
