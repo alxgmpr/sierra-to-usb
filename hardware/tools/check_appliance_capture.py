@@ -57,7 +57,7 @@ def validate(tree,directory):
  for row in csv.DictReader((ROOT/'reference/ram-local-bypass-plan.csv').open()):
   on(row['reference'],'1',row['rail']);on(row['reference'],'2','GND')
   assert C[row['reference']].findtext('value')==row['value']
-  assert F(row['reference'])['Voltage Rating']=='25V'
+  assert float(F(row['reference'])['Voltage Rating'].rstrip('V'))>=25
  exact('DDR_VDDQ_SW','U902:3','L902:1');exact('DDR_VDDQ_FB','U902:5','R905:2','R906:1','C959:2')
  subset('VDD_DDR_0V6','L902:2','C956:1','C957:1','C958:1','R903:1','R905:1','C959:1')
  exact('DDR_VDDQ_EN','U902:1','R907:2','R908:1','C960:1')

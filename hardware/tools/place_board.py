@@ -128,7 +128,7 @@ block = {r: 'PRIM' if domain[r] == 'P' else None if domain[r] == 'B' else sheet_
 # Local bypass caps of the SoC, RAM and eMMC go on the bottom, under or beside their package.
 BGAS = ('U801', 'U901', 'U1101')
 def bottom_cap(f):
-    if not re.match(r'C\d', f['ref']) or '0603' not in f['lib'] or len(f['pads']) != 2: return False
+    if not re.match(r'C\d', f['ref']) or not re.search(r'C_0(603|402)_', f['lib']) or len(f['pads']) != 2: return False
     if f['sheet'] not in ('processor.kicad_sch', 'core-power.kicad_sch', 'peripheral-power.kicad_sch', 'ram.kicad_sch', 'boot.kicad_sch'): return False
     m = re.match(r'([\d.]+)\s*([pnu])', f['val'])
     if not m or float(m[1]) * {'p': 1e-12, 'n': 1e-9, 'u': 1e-6}[m[2]] > 4.7e-6: return False
