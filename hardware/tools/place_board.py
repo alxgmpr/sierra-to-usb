@@ -1,7 +1,11 @@
-"""Netlist-driven floorplan placement for hardware/appliance.kicad_pcb (top side only).
+"""Block floorplan placement for hardware/appliance.kicad_pcb (top side only).
 
-Phases: fixed anchors -> barrier parts on the PoE isolation line -> other ICs by
-ratsnest minimisation -> small parts packed next to the pad they serve.
+Each schematic block gets its own region with routing channels between blocks.
+Phases: anchors (core first, then edge connectors and magnetics) -> parts that
+straddle the PoE isolation line -> remaining ICs by ratsnest -> passives packed
+next to the pad they serve. The outline is trimmed to the placed parts.
+
+usage: uv run python hardware/tools/place_board.py IN.kicad_pcb OUT.kicad_pcb
 """
 import math, re, sys
 from collections import defaultdict
@@ -35,7 +39,7 @@ def parse(s):
             net=re.search(r'\(net "([^"]*)"\)',pm[9]);
             pads.append(dict(num=pm[1],x=float(pm[4]),y=float(pm[5]),w=float(pm[7]),h=float(pm[8]),net=net[1] if net else ''))
         xs=[];ys=[]
-        for cm in re.finditer(r'\((fp_line|fp_rect|fp_poly|fp_circle|fp_arc)(.*?)\(layer "F\.CrtYd"\)',t,re.S):
+        for cm in re.finditer(r'\((fp_line|fp_rect|fp_poly|fp_circle|fp_arc)(.*?)\(layer "F\.(?:CrtYd|Fab)"\)',t,re.S):
             pts=[(float(p[1]),float(p[2])) for p in re.finditer(r'\((?:start|end|xy|center|mid) '+NUM+' '+NUM+r'\)',cm[2])]
             if cm[1]=='fp_circle':
                 (cx,cy),(ex,ey)=pts[:2]; rr=math.hypot(ex-cx,ey-cy); pts=[(cx-rr,cy-rr),(cx+rr,cy+rr)]
@@ -48,44 +52,50 @@ def parse(s):
             val=re.search(r'\(property "Value" "([^"]*)"',t)[1],pads=pads,
             crt=(min(xs),min(ys),max(xs),max(ys)),span=(a,b))
     return fps
-def xf(fp,x,y,rot=None,cx=None,cy=None):
-    r=math.radians(fp['rot'] if rot is None else rot)
-    cx=fp['x'] if cx is None else cx; cy=fp['y'] if cy is None else cy
-    # KiCad: y down, rotation CCW on screen => x' = x cos + y sin ; y' = -x sin + y cos
-    return cx+x*math.cos(r)+y*math.sin(r), cy-x*math.sin(r)+y*math.cos(r)
 
 
+# ============================================================== floorplan (board-local mm, x right, y down)
 SRC, DST = sys.argv[1], sys.argv[2]   # input board, output board
 s = open(SRC).read()
 fps = parse(s)
-X0, Y0, W, H = 333.8, 38.05, 172.1, 185.3
-VB = 44.0            # PoE isolation boundary (board-local v), for u < UB
-UB = 100.0
-MOAT = 1.25          # half of the 2.5 mm moat
-GAP = 0.1            # courtyard spacing
+X0, Y0 = 333.8, 38.05      # outline top-left stays put
+W, H = 200.0, 100.0        # placement sandbox; outline is trimmed to fit afterwards
+XB, MOAT = 40.0, 1.25      # vertical PoE isolation line, half of the 2.5 mm moat
+GAP = 0.25                 # minimum courtyard-to-courtyard spacing
+INSET = 1.0                # keep parts this far inside their block -> 2 mm channels between blocks
+EDGE = 1.0
 
-def short(n): return re.sub(r'^/.*/', '', n)
-# ---------------------------------------------------------------- anchors (u, v, rot)
-ANCH = {
-    'J1701': (88, 17.5, 180),   # RJ45, opening on top edge
-    'T1701': (88, VB, 0),       # cable side up, PHY side down
-    'T1702': (32, VB, 270),     # flyback: primary up, secondary down
-    'U1301': (88, 61, 90),      # NIC, MDI side up
-    'U801':  (82, 112, 0),      # RK3566
-    'J2001': (126, 112, 90),    # M.2, card extends to +u
-    'J1711': (5.5, 70, 90),     # ISO_12V terminal, left edge
-    'J1712': (4, 84, 90),
-    'U701':  (16, 82, 0), 'U1901': (140, 78, 0), 'U401': (44, 78, 0), 'U601': (18, 112, 0),
-    'U201':  (40, 162, 0),
-    'J101': (6, 182, 90), 'J102': (16, 182, 90), 'J201': (46, 182, 90), 'J202': (66, 182, 90),
-    'SW201': (84, 180, 0), 'SW801': (96, 180, 0), 'SW802': (108, 180, 0),
-    'J1201': (124, 182, 0), 'J1202': (140, 181, 90),
-    'J2002': (145, 140, 0),
+BLOCKS = {   # block: (sheets, region rectangles)
+    'PRIM':  ((), [(0, 0, XB, 100)]),
+    'NIC':   (('nic', 'nic-power', 'nic-bypass', 'nic-interface', 'phy-power', 'ethernet-ingress'), [(XB, 0, 83, 42)]),
+    'PSEC':  (('poe-input', 'poe-pd', 'poe-flyback', 'poe-status', 'main5v', 'main3v3', 'always-on'), [(XB, 42, 83, 100)]),
+    'CORE':  (('processor', 'ram', 'boot', 'pmic', 'cpu-power', 'ddr-power', 'core-power', 'peripheral-power'), [(83, 0, 140, 91)]),
+    'MODEM': (('modem-socket', 'modem-power', 'modem-bypass', 'modem-interface'), [(140, 0, 200, 70), (121, 30, 141, 66)]),
+    'CTRL':  (('supervisor', 'controls', 'host-interface', 'recovery'), [(140, 70, 200, 100), (83, 91, 140, 100)]),
 }
-CARD = (127.5, 96.5, 171.5, 127.5)   # M.2 3042/3052 card footprint keep-out
+ANCH = {   # most important first: core, then the connectors and magnetics that fix the edges
+    'U801':  (111, 46, 0),      # RK3566; DDR balls top-left, USB3/PCIe on the right
+    'J2001': (144, 50, 90),     # M.2 Key-B; card extends to +x towards the right edge
+    'J1701': (17.5, 14, 270),   # RJ45, opening on the left edge
+    'T1701': (XB, 14, 90),      # magnetics straddle the isolation line, cable side left
+    'U1301': (51, 13, 180),     # NIC, MDI pins facing the magnetics
+    'T1702': (XB, 78, 0),       # flyback transformer, primary left
+    'U1901': (160, 14, 0),      # modem buck
+    'J2002': (184, 13, 0),      # SIM
+    'U201':  (166, 82, 0),      # supervisor MCU
+    'J1711': (58, 94.9, 0), 'J1712': (68, 95.5, 90),
+    'J1201': (152, 96.6, 0), 'SW201': (163, 96, 0), 'SW801': (173, 96, 0), 'SW802': (183, 96, 0),
+    'J1202': (190.5, 97.2, 90),
+    'J101': (87, 97.2, 90), 'J102': (93.5, 97.2, 90), 'J201': (122, 97.2, 90), 'J202': (141, 97.2, 90),
+}
+OVERHANG = {'J1701', 'J1201'}             # connectors allowed to sit on/over the board edge
+CARD = (146.0, 34.5, 199.5, 65.5)         # M.2 3042/3052 card: keep clear
 BARRIER = {'T1701', 'T1702', 'U1703', 'U1801', 'U1802', 'U1803'}
 
-# ---------------------------------------------------------------- nets
+def short(n): return re.sub(r'^/.*/', '', n)
+sheet_block = {sh + '.kicad_sch': b for b, (shs, _) in BLOCKS.items() for sh in shs}
+
+# ============================================================== nets and PoE domains
 netpads = defaultdict(list)
 for f in fps.values():
     for i, p in enumerate(f['pads']):
@@ -94,7 +104,6 @@ for f in fps.values():
 RAIL = {n for n, v in netpads.items() if len({r for r, _ in v}) > 8 or short(n) == 'GND'}
 def is_small(f): return len(f['pads']) <= 3 or bool(re.match(r'^(C|R|FB|TP|L|D)\d', f['ref']))
 
-# ---------------------------------------------------------------- PoE primary domain
 prim_nets = {n for n in netpads if re.fullmatch(r'CABLE_MDI\d_[NP]|POE_PAIR\d+|POE_(VDD|VSS|RTN|VCIN|VCOUT|DEN|CLSA|CLSB|REF|UVLO|TPH|TPL|BT|AMPS_CTL)|CHASSIS', short(n))}
 stop = {n for n in netpads if short(n) in ('GND', 'ISO_12V', '+3V3')}
 changed = True
@@ -103,33 +112,29 @@ while changed:
     for f in fps.values():
         if f['ref'] in BARRIER: continue
         ns = {p['net'] for p in f['pads'] if p['net'] in netpads}
-        if ns & prim_nets and not ns & stop:
-            new = ns - prim_nets
-            if new: prim_nets |= new; changed = True
+        if ns & prim_nets and not ns & stop and ns - prim_nets:
+            prim_nets |= ns; changed = True
 domain = {}
 for f in fps.values():
     ns = {p['net'] for p in f['pads'] if p['net'] in netpads}
-    if f['ref'] in BARRIER: domain[f['ref']] = 'B'
-    elif ns & prim_nets and ns & stop: domain[f['ref']] = 'B'
-    elif ns & prim_nets: domain[f['ref']] = 'P'
-    else: domain[f['ref']] = 'S'
-for r, d in domain.items():
-    if d == 'B' and r not in BARRIER: BARRIER.add(r)
+    domain[f['ref']] = 'B' if f['ref'] in BARRIER or (ns & prim_nets and ns & stop) else 'P' if ns & prim_nets else 'S'
+BARRIER |= {r for r, d in domain.items() if d == 'B'}
+block = {r: 'PRIM' if domain[r] == 'P' else None if domain[r] == 'B' else sheet_block[f['sheet']] for r, f in fps.items()}
 
-# ---------------------------------------------------------------- geometry
+# ============================================================== geometry and legality
 def rot_pt(x, y, r):
     a = math.radians(r); return x*math.cos(a) + y*math.sin(a), -x*math.sin(a) + y*math.cos(a)
 def rect(f, u, v, r, infl=0.0):
     x0, y0, x1, y1 = f['crt']; pts = [rot_pt(x, y, r) for x in (x0, x1) for y in (y0, y1)]
     return (u + min(p[0] for p in pts) - infl, v + min(p[1] for p in pts) - infl,
             u + max(p[0] for p in pts) + infl, v + max(p[1] for p in pts) + infl)
+placed = {}
 def pad_abs(ref, i, pos=None):
-    f = fps[ref]; u, v, r = pos or placed[ref]; p = f['pads'][i]
+    u, v, r = pos or placed[ref]; p = fps[ref]['pads'][i]
     dx, dy = rot_pt(p['x'], p['y'], r); return u + dx, v + dy
 
 CELL = 4.0
 grid = defaultdict(list)
-placed = {}
 def cells(R):
     for i in range(int(R[0]//CELL), int(R[2]//CELL) + 1):
         for j in range(int(R[1]//CELL), int(R[3]//CELL) + 1): yield i, j
@@ -141,136 +146,117 @@ def collide(R):
 def commit(ref, u, v, r, R):
     placed[ref] = (u, v, r)
     for c in cells(R): grid[c].append(R)
+def inside(R, box, m): return R[0] >= box[0] + m and R[1] >= box[1] + m and R[2] <= box[2] - m and R[3] <= box[3] - m
 def legal(ref, R):
-    if R[0] < 1.0 or R[1] < 1.0 or R[2] > W - 1.0 or R[3] > H - 1.0: return False
+    """R is the courtyard grown by GAP/2 on each side."""
+    if ref not in OVERHANG and not inside(R, (0, 0, W, H), EDGE - GAP/2): return False
     d = domain[ref]
-    in_prim_zone = R[0] < UB
-    if d == 'P' and not (R[3] <= VB - MOAT and R[2] <= UB): return False
-    if d == 'S' and in_prim_zone and R[1] < VB + MOAT: return False
-    if d != 'B' and R[0] < CARD[2] and CARD[0] < R[2] and R[1] < CARD[3] and CARD[1] < R[3]: return False
+    if d == 'P' and R[2] > XB - MOAT + GAP/2: return False
+    if d == 'S' and R[0] < XB + MOAT - GAP/2: return False
+    if d != 'B':
+        if R[0] < CARD[2] and CARD[0] < R[2] and R[1] < CARD[3] and CARD[1] < R[3]: return False
+        if block[ref] and not any(inside(R, b, INSET - GAP/2) for b in BLOCKS[block[ref]][1]): return False
     return not collide(R)
 
-# ---------------------------------------------------------------- phase 1: anchors
-HALO = {'U801': 3.5, 'U901': 2.5, 'U1101': 2.0, 'U501': 2.5, 'U1301': 2.0}
-for ref, (u, v, r) in list(ANCH.items()):
-    R = rect(fps[ref], u, v, r)
-    u += max(0, 1.0 - R[0]) - max(0, R[2] - (W - 1.0)); v += max(0, 1.0 - R[1]) - max(0, R[3] - (H - 1.0))
-    ANCH[ref] = (u, v, r)
-    commit(ref, u, v, r, rect(fps[ref], u, v, r, GAP + HALO.get(ref, 0)))
+# ============================================================== phase 1: anchors
+for ref, (u, v, r) in ANCH.items():
+    commit(ref, u, v, r, rect(fps[ref], u, v, r, GAP/2))
 
-# ---------------------------------------------------------------- scoring helpers
-def ratsnest(ref, pos, rails=False):
-    f = fps[ref]; tot = 0.0; n = 0
+# ============================================================== scoring
+def ratsnest(ref, pos):
+    f = fps[ref]; tot = 0.0
     for i, p in enumerate(f['pads']):
         net = p['net']
-        if net not in netpads or (net in RAIL and not rails): continue
+        if net not in netpads or net in RAIL: continue
         best = None
         for r2, j in netpads[net]:
             if r2 == ref or r2 not in placed: continue
             a = pad_abs(ref, i, pos); b = pad_abs(r2, j)
             d = math.hypot(a[0]-b[0], a[1]-b[1]) * (1.0 if fps[r2]['sheet'] == f['sheet'] else 0.25)
             best = d if best is None else min(best, d)
-        if best is not None: tot += best; n += 1
-    return tot, n
+        if best is not None: tot += best
+    return tot
 def neighbours(ref):
     out = set()
     for p in fps[ref]['pads']:
-        if p['net'] in netpads and p['net'] not in RAIL:
-            out |= {r for r, _ in netpads[p['net']]}
+        if p['net'] in netpads and p['net'] not in RAIL: out |= {r for r, _ in netpads[p['net']]}
     out.discard(ref); return out
-
 def offsets(rmax, step):
-    k = int(rmax/step); o = [(i*step, j*step) for i in range(-k, k+1) for j in range(-k, k+1) if (i*i+j*j)*step*step <= rmax*rmax]
-    return sorted(o, key=lambda t: t[0]**2 + t[1]**2)
-OFF_FINE = offsets(14, 0.25); OFF_COARSE = offsets(70, 1.0)
+    k = int(rmax/step)
+    return sorted([(i*step, j*step) for i in range(-k, k+1) for j in range(-k, k+1) if (i*i+j*j)*step*step <= rmax*rmax],
+                  key=lambda t: t[0]**2 + t[1]**2)
+OFF_FINE, OFF_COARSE = offsets(16, 0.5), offsets(80, 1.0)
+SNAP = 0.5   # passives on a 0.5 mm grid -> aligned rows and columns
 
-DW = 0.05
-def place_ic(ref, target, rmax=45, step=1.0, halo=0.0):
+def place_ic(ref, target, halo, dist_w, rmax=60):
     best = None
-    for du, dv in offsets(rmax, step):
-        u, v = target[0] + du, target[1] + dv
+    for du, dv in offsets(rmax, 1.0):
+        u, v = round(target[0] + du), round(target[1] + dv)
         for r in (0, 90, 180, 270):
-            R = rect(fps[ref], u, v, r, GAP + halo)
+            R = rect(fps[ref], u, v, r, GAP/2 + halo)
             if not legal(ref, R): continue
-            sc, n = ratsnest(ref, (u, v, r))
-            sc += DW * math.hypot(du, dv)
+            sc = ratsnest(ref, (u, v, r)) + dist_w * math.hypot(du, dv)
             if best is None or sc < best[0]: best = (sc, u, v, r, R)
-    if best is None:
-        print('no spot', ref, domain[ref], [round(x,1) for x in rect(fps[ref],0,0,0)], {r: [round(x) for x in placed[r]] for r in placed if domain[r] in 'PB'}); raise SystemExit
-    commit(ref, *best[1:4], best[4]); return best
+    if best is None: raise SystemExit(f'no spot for {ref} ({block[ref]})')
+    commit(ref, *best[1:4], best[4])
+def target_of(ref):
+    f = fps[ref]; nb = [r for r in neighbours(ref) if r in placed]
+    nb = [r for r in nb if fps[r]['sheet'] == f['sheet']] or [r for r in placed if fps[r]['sheet'] == f['sheet']] \
+        or [r for r in nb if block[r] == block[ref]] or [r for r in placed if block[r] == block[ref]] or nb
+    if nb: return sum(placed[r][0] for r in nb)/len(nb), sum(placed[r][1] for r in nb)/len(nb)
+    b = BLOCKS[block[ref]][1][0]; return (b[0]+b[2])/2, (b[1]+b[3])/2
 
-# ---------------------------------------------------------------- phase 2: barrier parts on the boundary
-for ref in sorted(BARRIER - set(ANCH), key=lambda r: -len(fps[r]['pads'])):
-    f = fps[ref]; best = None
-    nb = [r for r in neighbours(ref) if r in placed]
-    cu = sum(placed[r][0] for r in nb)/len(nb) if nb else 50
-    for u in [x*0.5 for x in range(4, int(UB*2) - 4)]:
+# ============================================================== phase 2: barrier parts on the line
+for ref in sorted(BARRIER - set(ANCH), key=lambda r: (-len(fps[r]['pads']), r)):
+    f = fps[ref]; best = None; cv = target_of(ref)[1]
+    for v in [y*0.5 for y in range(4, int(H*2) - 4)]:
         for r in (0, 90, 180, 270):
-            # primary pads must sit above the line, secondary below
             ok = True
             for p in f['pads']:
                 if p['net'] not in netpads: continue
-                y = rot_pt(p['x'], p['y'], r)[1]
-                if p['net'] in prim_nets and y > -0.2: ok = False
-                if p['net'] not in prim_nets and y < 0.2: ok = False
+                x = rot_pt(p['x'], p['y'], r)[0]
+                if (p['net'] in prim_nets) != (x < 0) or abs(x) < 0.2: ok = False
             if not ok: continue
-            R = rect(f, u, VB, r, GAP)
-            if not legal(ref, R): continue
-            sc = abs(u - cu)
-            if best is None or sc < best[0]: best = (sc, u, r, R)
-    if best is None: print('barrier unplaced', ref); continue
-    commit(ref, best[1], VB, best[2], best[3])
+            R = rect(f, XB, v, r, GAP/2)
+            if legal(ref, R) and (best is None or abs(v - cv) < best[0]): best = (abs(v - cv), v, r, R)
+    if best is None: raise SystemExit(f'barrier unplaced {ref}')
+    commit(ref, XB, best[1], best[2], best[3])
 
-# ---------------------------------------------------------------- phase 3: remaining big parts by ratsnest
-ICS = ['U901', 'U1101', 'U501', 'U1001', 'U2001', 'U2002', 'U1604', 'U1701', 'U1702', 'Q1705', 'U1302', 'Y1301', 'U1503', 'U902']
-def big_order():
-    rest = [r for r, f in fps.items() if r not in placed and not is_small(f)]
-    return rest
-for ref in ICS:
-    nb = [r for r in neighbours(ref) if r in placed]
-    nb = [r for r in nb if fps[r]['sheet'] == fps[ref]['sheet']] or [r for r in placed if fps[r]['sheet'] == fps[ref]['sheet']] or nb
-    if not nb: nb = [r for r in placed if fps[r]['sheet'] == fps[ref]['sheet']] or list(placed)
-    tgt = (sum(placed[r][0] for r in nb)/len(nb), sum(placed[r][1] for r in nb)/len(nb))
-    place_ic(ref, tgt, halo=HALO.get(ref, 0.8))
+# ============================================================== phase 3: other ICs, most important first
+ORDER = ['U901', 'U1101', 'U2001', 'U2002', 'U1604', 'U501', 'U1001', 'U902', 'U1302', 'Y1301', 'U1503',
+         'U1701', 'U1702', 'Q1705', 'U701', 'U601', 'U401']
+HALO = {'U901': 3.0, 'U1101': 2.0, 'U501': 3.0}
+TARGET = {'U2001': (130, 49), 'U2002': (130, 41), 'U501': (100, 74)}   # keep SoC->M.2 lane corridor for the muxes
+for ref in ORDER:
+    place_ic(ref, TARGET.get(ref) or target_of(ref), HALO.get(ref, 1.5), 1.0 if ref in TARGET else 0.1)
 while True:
-    rest = [r for r in big_order()]
+    rest = [r for r, f in fps.items() if r not in placed and not is_small(f)]
     if not rest: break
-    rest.sort(key=lambda r: -len([n for n in neighbours(r) if n in placed]))
-    ref = rest[0]
-    nb = [r for r in neighbours(ref) if r in placed]
-    nb = [r for r in nb if fps[r]['sheet'] == fps[ref]['sheet']] or [r for r in placed if fps[r]['sheet'] == fps[ref]['sheet']] or nb or list(placed)
-    tgt = (sum(placed[r][0] for r in nb)/len(nb), sum(placed[r][1] for r in nb)/len(nb))
-    DW = 0.5
-    place_ic(ref, tgt, rmax=30, halo=0.8)
+    ref = max(rest, key=lambda r: (len([n for n in neighbours(r) if n in placed]), len(fps[r]['pads'])))
+    place_ic(ref, target_of(ref), 1.0, 0.5)
 
-# Rebuild the grid with real (un-haloed) courtyards for passive packing.
-grid.clear()
+grid.clear()   # passives may use the IC halos
 for ref, (u, v, r) in placed.items():
-    for c in cells(rect(fps[ref], u, v, r, GAP)): grid[c].append(rect(fps[ref], u, v, r, GAP))
+    for c in cells(rect(fps[ref], u, v, r, GAP/2)): grid[c].append(rect(fps[ref], u, v, r, GAP/2))
 
-# ---------------------------------------------------------------- phase 4: small parts next to their pad
+# ============================================================== phase 4: passives next to the pad they serve
 def val(f):
     m = re.match(r'([\d.]+)\s*([pnuµm]?)', f['val'])
-    if not m: return 1.0
-    return float(m[1]) * {'p': 1e-12, 'n': 1e-9, 'u': 1e-6, 'µ': 1e-6, 'm': 1e-3, '': 1}[m[2]]
+    return float(m[1]) * {'p': 1e-12, 'n': 1e-9, 'u': 1e-6, 'µ': 1e-6, 'm': 1e-3, '': 1}[m[2]] if m else 1.0
 load = defaultdict(int)
-def target_for(ref, defer=False):
+def target_for(ref, defer):
     f = fps[ref]; cands = []
     for i, p in enumerate(f['pads']):
         net = p['net']
         if net not in netpads or short(net) == 'GND': continue
-        others = [(r, j) for r, j in netpads[net] if r != ref and r in placed and not re.match(r'^C\d', r)]
-        if not others: others = [(r, j) for r, j in netpads[net] if r != ref and r in placed]
-        if not others: continue
+        others = [(r, j) for r, j in netpads[net] if r != ref and r in placed and not re.match(r'^C\d', r)] \
+            or [(r, j) for r, j in netpads[net] if r != ref and r in placed]
         same = [(r, j) for r, j in others if fps[r]['sheet'] == f['sheet']]
         if defer and not same and net not in RAIL and any(fps[r]['sheet'] == f['sheet'] and r not in placed and r != ref for r, _ in netpads[net]):
             return None
-        pool = same or others
-        rail = net in RAIL
-        cands.append((rail, i, pool))
+        if others: cands.append((net in RAIL, i, same or others))
     if not cands: return None
-    cands.sort(key=lambda c: c[0])        # signal nets first
-    rail, i, pool = cands[0]
+    rail, i, pool = min(cands, key=lambda c: c[0])
     if rail:
         bigs = [(r, j) for r, j in pool if not is_small(fps[r])] or pool
         r, j = min(bigs, key=lambda t: (load[t], t[1]))
@@ -278,59 +264,66 @@ def target_for(ref, defer=False):
         r, j = min(pool, key=lambda t: (is_small(fps[t[0]]), t[1]))
     load[(r, j)] += 1
     return i, pad_abs(r, j)
-
 def place_small(ref, own_pad, tgt):
-    f = fps[ref]; best = None
+    f = fps[ref]; best = None; c = tgt
+    if block[ref]:   # start the search inside the part's own block
+        c = min(((min(max(tgt[0], b[0]+3), b[2]-3), min(max(tgt[1], b[1]+3), b[3]-3)) for b in BLOCKS[block[ref]][1]),
+                key=lambda q: math.dist(q, tgt))
+    c = (round(c[0] / SNAP) * SNAP, round(c[1] / SNAP) * SNAP)
+    base = math.dist(c, tgt)
     for offs in (OFF_FINE, OFF_COARSE):
         for du, dv in offs:
-            if best and math.hypot(du, dv) > best[0] + 2.0: break
-            u, v = tgt[0] + du, tgt[1] + dv
+            if best and math.hypot(du, dv) > best[0] - base + 2.0: break
+            u, v = c[0] + du, c[1] + dv
             for r in (0, 90, 180, 270):
-                R = rect(f, u, v, r, GAP)
+                R = rect(f, u, v, r, GAP/2)
                 if not legal(ref, R): continue
                 a = pad_abs(ref, own_pad, (u, v, r))
-                sc = math.hypot(a[0]-tgt[0], a[1]-tgt[1])
+                sc = math.hypot(a[0]-tgt[0], a[1]-tgt[1]) + (0.15 if r >= 180 else 0)   # prefer 0/90 for tidy silk
                 if best is None or sc < best[0]: best = (sc, u, v, r, R)
         if best: break
     if best is None: return False
     commit(ref, *best[1:4], best[4]); return True
-
 def prio(ref):
-    f = fps[ref]; k = 0 if ref.startswith('L') else 1 if ref.startswith('C') else 2 if ref.startswith(('R', 'FB')) else 3
-    return (k, val(f) if k == 1 else 0, ref)
+    k = 0 if ref.startswith('L') else 1 if ref.startswith('C') else 2 if ref.startswith(('R', 'FB')) else 3
+    return (k, val(fps[ref]) if k == 1 else 0, ref)
 pending = sorted([r for r in fps if r not in placed], key=prio)
 for it in range(16):
     nxt = []
     for ref in pending:
         t = target_for(ref, defer=it < 8)
-        if t is None: nxt.append(ref); continue
-        if not place_small(ref, *t): print('no room', ref)
+        if t is None: nxt.append(ref)
+        elif not place_small(ref, *t): raise SystemExit(f'no room for {ref} ({block[ref]})')
     if not nxt or (nxt == pending and it >= 8): pending = nxt; break
     pending = sorted(nxt, key=prio)
-for ref in pending:   # isolated parts: drop near their sheet-mates
-    mates = [placed[r] for r in placed if fps[r]['sheet'] == fps[ref]['sheet']] or [(W/2, H/2, 0)]
-    tgt = (sum(m[0] for m in mates)/len(mates), sum(m[1] for m in mates)/len(mates))
-    place_small(ref, 0, tgt)
+for ref in pending:
+    if not place_small(ref, 0, target_of(ref)): raise SystemExit(f'no room for {ref}')
 
-missing = [r for r in fps if r not in placed]
-print('placed', len(placed), 'missing', missing)
+# ============================================================== trim outline to the parts
+ext = [rect(fps[r], *placed[r]) for r in placed if r not in OVERHANG]
+TW = min(W, math.ceil(max(max(R[2] for R in ext), CARD[2]) + 0.5))
+TH = min(H, math.ceil(max(R[3] for R in ext) + 0.5))
+print(f'placed {len(placed)}/{len(fps)}  outline {TW} x {TH} mm')
 
-# ---------------------------------------------------------------- write back (translate + rotate only)
+# ============================================================== write back (pose + absolute pad/text angles)
 out = []; last = 0
 for ref, f in sorted(fps.items(), key=lambda kv: kv[1]['span'][0]):
     a, b = f['span']; t = s[a:b]
-    if ref in placed:
-        u, v, r = placed[ref]
-        t = re.sub(r'\(translate [-\d.]+ [-\d.]+\)', f'(translate {X0+u:.4f} {Y0+v:.4f})', t, count=1)
-        t = re.sub(r'\(rotate [-\d.]+\)', f'(rotate {r % 360:g})', t, count=1)
-        delta = (r - f['rot']) % 360
-        if delta:
-            def fix(m):
-                a = (float(m[3] or 0) + delta) % 360
-                return f'(at {m[1]} {m[2]}' + (f' {a:g})' if a else ')')
-            t = re.sub(r'\(at (-?[\d.]+) (-?[\d.]+)(?: (-?[\d.]+))?\)', fix, t)
+    u, v, r = placed[ref]
+    t = re.sub(r'\(translate [-\d.]+ [-\d.]+\)', f'(translate {X0+u:.4f} {Y0+v:.4f})', t, count=1)
+    t = re.sub(r'\(rotate [-\d.]+\)', f'(rotate {r % 360:g})', t, count=1)
+    delta = (r - f['rot']) % 360
+    if delta:
+        def fix(m):
+            a = (float(m[3] or 0) + delta) % 360
+            return f'(at {m[1]} {m[2]}' + (f' {a:g})' if a else ')')
+        t = re.sub(r'\(at (-?[\d.]+) (-?[\d.]+)(?: (-?[\d.]+))?\)', fix, t)
+    if re.match(r'^(C|R|L|FB|TP|D|Q)\d', ref) and len(f['pads']) <= 4:   # passive refs to assembly drawing
+        t = re.sub(r'(\(property "Reference" "[^"]*"\s*\(at [^)]*\)\s*\(layer )"F\.SilkS"', r'\1"F.Fab"', t, count=1)
     out.append(s[last:a]); out.append(t); last = b
 out.append(s[last:])
-open(DST, 'w').write(''.join(out))
-
-print('domains', {d: sum(1 for x in domain.values() if x == d) for d in 'PSB'}, 'barrier', sorted(BARRIER))
+board = ''.join(out)
+board, n = re.subn(r'(\(gr_rect\s*\(start )[-\d.]+ [-\d.]+(\)\s*\(end )[-\d.]+ [-\d.]+(\)(?:(?!\(gr_rect).)*?\(layer "Edge\.Cuts"\))',
+                   lambda m: f'{m[1]}{X0:g} {Y0:g}{m[2]}{X0+TW:g} {Y0+TH:g}{m[3]}', board, count=1, flags=re.S)
+assert n == 1, 'outline rectangle not found'
+open(DST, 'w').write(board)
