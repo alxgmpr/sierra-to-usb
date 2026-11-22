@@ -3267,14 +3267,14 @@
 		(layer "F.Cu")
 		(uuid "068461dc-d6dd-4a61-b094-0dbeddda2c44")
 		(transform
-			(translate 339.3000 119.5500)
-			(rotate 180)
+			(translate 336.8000 128.0500)
+			(rotate 90)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1742"
-			(at 0 -1.43 180)
+			(at 0 -1.43 90)
 			(layer "F.Fab")
 			(uuid "5a303175-948b-5047-a26c-2dbe72798195")
 			(effects
@@ -3285,7 +3285,7 @@
 			)
 		)
 		(property "Value" "499"
-			(at 0 1.43 180)
+			(at 0 1.43 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1b1a2e15-c78d-5048-9090-bdd2ee759992")
@@ -3297,7 +3297,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.yageo.com/pdf/PYu-RT_1-to-0.05_RoHS_L_3.pdf"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "70075815-de36-5ba2-b7d8-61d38050563b")
@@ -3309,7 +3309,7 @@
 			)
 		)
 		(property "Description" "RES, 499, 0.5%, 0.1 W, 0603"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d82d4749-8537-5a2e-8999-cda251bf057d")
@@ -3321,7 +3321,7 @@
 			)
 		)
 		(property "POWER_W" "100mW"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1080b742-be76-45c8-a3ac-121bfb2534bb")
@@ -3333,7 +3333,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3bb68e2b-836f-41d3-9ee6-e646e8285557")
@@ -3345,7 +3345,7 @@
 			)
 		)
 		(property "TEMPCO" "50 ppm/C"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a8180aee-23a4-4504-be5b-2ca8c8603d2c")
@@ -3357,7 +3357,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-26"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2fdfa4e4-e985-4f91-a70e-5a34f6a484fb")
@@ -3369,7 +3369,7 @@
 			)
 		)
 		(property "VALUE_CODE" "499R"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ab0c5988-9f3d-4a90-9e35-d1c2dd9ab06d")
@@ -3381,7 +3381,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4a8d28f1-d7f6-4122-aba9-59a9181f4f7b")
@@ -3393,7 +3393,7 @@
 			)
 		)
 		(property "VALUE1" "0.5%"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dc1afc17-6e51-4855-8566-1c103a2ccfa3")
@@ -3405,7 +3405,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a6d37946-e222-4af8-b6b5-6b7046f755d7")
@@ -3417,7 +3417,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "955b312e-89cd-47ba-8086-6157984c1d3e")
@@ -3429,7 +3429,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "499"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9c50d21e-33a2-450b-aaa4-76893e6764ae")
@@ -3441,7 +3441,7 @@
 			)
 		)
 		(property "EIA_CODE" "E192"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a34f8d38-3cc0-4675-954d-878f9e8ff1f2")
@@ -3453,7 +3453,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Yageo America"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4d54fe1d-a47e-4dbf-9ba0-9e3d966fd0c7")
@@ -3465,7 +3465,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "0603"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "27ea78be-33c7-4387-93fb-5e19da482b08")
@@ -3477,7 +3477,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "0.5%"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a75e17c3-c4c7-45ef-bda6-1672b83c5783")
@@ -3489,7 +3489,7 @@
 			)
 		)
 		(property "RES_OHM" "499"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dd6edfa5-b437-4485-8c49-f7fbb52ed200")
@@ -3501,7 +3501,7 @@
 			)
 		)
 		(property "SIZEX_MM" "1.6"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ab03d77a-f6e3-4b1e-ac4f-69c935de11f0")
@@ -3513,7 +3513,7 @@
 			)
 		)
 		(property "SIZEY_MM" "0.8"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d924aba1-31f0-4f99-9012-b3f68ffc1d42")
@@ -3525,7 +3525,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "1"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f29cbb0d-4e94-4047-8382-a0ab7962678f")
@@ -3537,7 +3537,7 @@
 			)
 		)
 		(property "VALUE2" "0.1W"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7f0c0c4d-7157-4649-882e-8661dacb576f")
@@ -3549,7 +3549,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "1.28"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "48813993-8e91-4619-855d-fbaed5041e24")
@@ -3561,7 +3561,7 @@
 			)
 		)
 		(property "COMPTYPE" "Resistor"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1ffc8053-5fe0-4e67-a1be-d6e186560d88")
@@ -3573,7 +3573,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2017-03-09"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "960311d4-96a7-4af9-b009-caf8107d8324")
@@ -3585,7 +3585,7 @@
 			)
 		)
 		(property "PARTNUMBER" "RT0603DRE07499RL"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bd75b746-d76b-4aef-afc8-2a950d4da6ea")
@@ -3597,7 +3597,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "?"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ec11f924-56d1-4718-b118-de05787707cc")
@@ -3609,7 +3609,7 @@
 			)
 		)
 		(property "VDC_V" "75V"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "20d22792-1596-45d7-8741-52a459f844bd")
@@ -3621,7 +3621,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "578c1d17-8693-43d9-aa08-bf212afa2de7")
@@ -3633,7 +3633,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cedac01d-fa24-483c-b6d7-a7d763a2ce49")
@@ -3645,7 +3645,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Thin Film"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3a0387f2-011e-4fa9-b335-6736a141ef2a")
@@ -3657,7 +3657,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "499"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9498529a-b3a5-4045-86ed-8f757e12b837")
@@ -3669,7 +3669,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.yageo.com/pdf/PYu-RT_1-to-0.05_RoHS_L_3.pdf"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bc4dc960-33ca-46f6-bad1-a71f773cd617")
@@ -3681,7 +3681,7 @@
 			)
 		)
 		(property "AEC GRADE" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4c277079-e5b0-406c-b70e-3db253096427")
@@ -3693,7 +3693,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "995aea26-1a3e-4553-a49e-cc259322b77a")
@@ -3705,7 +3705,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "41eea2c6-2e25-46b5-a88a-3b0354ab085c")
@@ -3717,7 +3717,7 @@
 			)
 		)
 		(property "SUPPLIER 1" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2a23c4b9-f2c3-4e4d-8179-d809bd1de2de")
@@ -3729,7 +3729,7 @@
 			)
 		)
 		(property "SUPPLIER 2" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ac8ac355-9794-43b7-89f8-c18353a78669")
@@ -3741,7 +3741,7 @@
 			)
 		)
 		(property "SUPPLIER 3" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6702e7bc-1198-43bc-a252-e2e620a0a01f")
@@ -3753,7 +3753,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e01f7d12-ca61-4684-83ef-bc2cd5488630")
@@ -3765,7 +3765,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6ebc6327-8721-45f5-a1a9-9988cf8935f8")
@@ -3777,7 +3777,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1b31ccfa-2115-4833-bcde-dc7aa6b7d569")
@@ -3789,7 +3789,7 @@
 			)
 		)
 		(property "MPN" "RT0603DRE07499RL"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4f45afa5-7670-4ca1-afca-132756a9e00e")
@@ -3801,7 +3801,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo America"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "27cbad18-ec98-4bf3-899d-8dfc9c2fff70")
@@ -3867,7 +3867,7 @@
 			(uuid "cfc7dd6d-4d87-4eb8-b68e-4198e30a2d18")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "d54be9a2-f272-434e-bb7c-7642d39a9434")
 			(effects
@@ -3878,7 +3878,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 180)
+			(at -0.9125 0 90)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -3888,7 +3888,7 @@
 			(uuid "a2a09c71-eac2-5867-88a6-ff8d4b986950")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 180)
+			(at 0.9125 0 90)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -7025,7 +7025,7 @@
 		(layer "F.Cu")
 		(uuid "0adb6dfa-2173-4ca3-977d-45690cc23495")
 		(transform
-			(translate 345.3000 130.5500)
+			(translate 339.8000 124.5500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -11451,14 +11451,14 @@
 		(layer "F.Cu")
 		(uuid "0e2d9511-333a-4bfe-bd01-374611e657a4")
 		(transform
-			(translate 354.8000 108.5500)
-			(rotate 270)
+			(translate 345.3000 111.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Diode SMA (DO-214AC) Handsoldering")
 		(tags "Diode SMA (DO-214AC) Handsoldering")
 		(property "Reference" "D1714"
-			(at 0 -2.5 270)
+			(at 0 -2.5)
 			(layer "F.Fab")
 			(uuid "5c3b87bb-d4ed-547f-9ecd-03ef27d7ea32")
 			(effects
@@ -11469,7 +11469,7 @@
 			)
 		)
 		(property "Value" "200V"
-			(at 0 2.6 270)
+			(at 0 2.6)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3e3a721b-150e-514e-953d-91d11075d323")
@@ -11481,7 +11481,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.diodes.com/datasheets/ds14002.pdf"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b3ded263-c442-51b2-be6a-7c9da70df0e9")
@@ -11493,7 +11493,7 @@
 			)
 		)
 		(property "Description" "Diode, Superfast Rectifier, 200 V, 2 A, SMA"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cd14f35b-14c1-5c41-929c-9142ce402572")
@@ -11505,7 +11505,7 @@
 			)
 		)
 		(property "SYMBOLVERSION" "2008-12-08"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c822051a-9bb8-4939-87d3-7b4fa4302973")
@@ -11517,7 +11517,7 @@
 			)
 		)
 		(property "PARTNUMBER" "ES2DA-13-F"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f051093a-4648-4596-b15e-ec34d698a564")
@@ -11529,7 +11529,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Diodes Inc."
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eb2511f0-74d7-4d6a-ad5a-1ef722b38186")
@@ -11541,7 +11541,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "SMA"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eb17a923-83c0-4ae8-9f37-cbff9a54d475")
@@ -11553,7 +11553,7 @@
 			)
 		)
 		(property "COMPTYPE" "Diode"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1eda758f-dad6-43e4-9c0d-49dc4c2faf8c")
@@ -11565,7 +11565,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6a63a167-3848-4297-a916-f371ca6e7548")
@@ -11577,7 +11577,7 @@
 			)
 		)
 		(property "VF_V" "0.92"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fa9ecfa4-6cd9-4718-9c50-678a2bbbcb35")
@@ -11589,7 +11589,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "200V"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e6111db5-3867-4b0f-8760-0f345ff343cc")
@@ -11601,7 +11601,7 @@
 			)
 		)
 		(property "VALUE1" "2A"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "99c813c1-0cf4-4df5-ba27-76da5d06d123")
@@ -11613,7 +11613,7 @@
 			)
 		)
 		(property "VALUE2" "0.92V"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "acb1c724-2383-4682-a67c-685deec3c61f")
@@ -11625,7 +11625,7 @@
 			)
 		)
 		(property "IO_A" "2"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bd7a7181-78ff-402a-b123-5e117f432dbf")
@@ -11637,7 +11637,7 @@
 			)
 		)
 		(property "VR_V" "200"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bcb84f61-e740-4cb0-b273-deb37727cab5")
@@ -11649,7 +11649,7 @@
 			)
 		)
 		(property "TJMAX_C" "150"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "37d40182-ac5c-4c14-b0c5-9d24317da7a9")
@@ -11661,7 +11661,7 @@
 			)
 		)
 		(property "RJC_CPERW" "20"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "78f17cd9-9dcf-4609-b818-52389d4c4225")
@@ -11673,7 +11673,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "854ae919-03da-4ea8-b7e1-efd5f7a061c7")
@@ -11685,7 +11685,7 @@
 			)
 		)
 		(property "TYPE" "Superfast Rectifier"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d8c6e8c8-75cd-4472-9656-4c5bc7c7d7e4")
@@ -11697,7 +11697,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e7e815d6-e370-44d3-92e5-e0bb5356b2ef")
@@ -11709,7 +11709,7 @@
 			)
 		)
 		(property "SIZEAREAWB_MM2" "37.3428"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "05516d7a-32ce-4b4a-b0e9-9d8b4251cf37")
@@ -11721,7 +11721,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "16.3228"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ac35db56-ff47-4db4-817d-2b1cfcf9ef9c")
@@ -11733,7 +11733,7 @@
 			)
 		)
 		(property "SIZEX_MM" "5.59"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d38e4a05-2e7a-4d75-8219-8b7ad814d604")
@@ -11745,7 +11745,7 @@
 			)
 		)
 		(property "SIZEY_MM" "2.92"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5eacf9ce-aace-43b6-8a39-bed79657b0bf")
@@ -11757,7 +11757,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "2.87"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "03723d41-817b-4013-a675-42822de48d79")
@@ -11769,7 +11769,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-26"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eddb665e-dd31-4ccd-a384-388dd93f4259")
@@ -11781,7 +11781,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8feaeb2b-9133-425a-8ae5-5edd2c735536")
@@ -11793,7 +11793,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2016-06-18"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4d471358-7146-4aa1-a2aa-1fab548d280a")
@@ -11805,7 +11805,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3910ad25-dd52-4b3a-bc06-e76661317f2e")
@@ -11817,7 +11817,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.diodes.com/datasheets/ds14002.pdf"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c5315281-a01b-48ef-ac99-a9be3a130dc2")
@@ -11829,7 +11829,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9805d9d9-56f5-4665-9e04-fb3395b715ec")
@@ -11841,7 +11841,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "377db517-f501-422c-acd8-1a329e1793ff")
@@ -11853,7 +11853,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e0f61264-864f-4869-853b-32a4278de618")
@@ -11865,7 +11865,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "ES2DA-FDICT-ND"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "967766df-9b49-4983-8d84-350e6d53c3ec")
@@ -11877,7 +11877,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Mouser"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "061d7daf-5ef0-4397-a639-7179083faeb9")
@@ -11889,7 +11889,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "621-ES2DA-13-F"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "99c8db50-2147-41ad-bc31-faddab8cd1c9")
@@ -11901,7 +11901,7 @@
 			)
 		)
 		(property "SUPPLIER 3" "Newark"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "45587e75-69dc-4e0e-b6f5-acb213ee3077")
@@ -11913,7 +11913,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" "65W8574"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c916fcba-b637-4d05-b1ae-0c57ecb377b7")
@@ -11925,7 +11925,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q101"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "88fb898b-31ca-41f6-b0c5-53888f6f1343")
@@ -11937,7 +11937,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "?"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e8238ebb-6d6f-4059-a46f-a81734303ff4")
@@ -11949,7 +11949,7 @@
 			)
 		)
 		(property "MPN" "ES2DA-13-F"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "46e56b61-6a97-4c5d-8be9-7a1a6f6b8ce6")
@@ -11961,7 +11961,7 @@
 			)
 		)
 		(property "Manufacturer" "Diodes Inc."
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d80e2b47-cda8-41be-aec2-1b7aae6ece70")
@@ -12155,7 +12155,7 @@
 			(uuid "bf0bb825-8e72-44a9-93ef-32a705106744")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -2.5 270)
+			(at 0 -2.5)
 			(layer "F.Fab")
 			(uuid "aa96bb22-52f9-4c1c-b04b-1101abfc19c0")
 			(effects
@@ -12166,7 +12166,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -2.5 0 270)
+			(at -2.5 0)
 			(size 3.5 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.1388888889)
@@ -12176,7 +12176,7 @@
 			(uuid "9d6dc305-6a7e-5d40-9ca1-2ec025c305dc")
 		)
 		(pad "2" smd roundrect
-			(at 2.5 0 270)
+			(at 2.5 0)
 			(size 3.5 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.1388888889)
@@ -16715,7 +16715,7 @@
 		(layer "F.Cu")
 		(uuid "16196647-b98a-4be6-915d-ea7f53a28d64")
 		(transform
-			(translate 343.3000 109.5500)
+			(translate 337.8000 113.5500)
 			(rotate 180)
 			(scale 1 1)
 		)
@@ -17776,7 +17776,7 @@
 		(layer "F.Cu")
 		(uuid "17efc4f9-bb4d-4fe8-b90b-7152bca28df1")
 		(transform
-			(translate 392.8000 86.5500)
+			(translate 394.8000 86.5500)
 			(rotate 180)
 			(scale 1 1)
 		)
@@ -22120,7 +22120,7 @@
 		(layer "F.Cu")
 		(uuid "1b26ed92-7da5-4d1a-a629-9f94ebd5a99b")
 		(transform
-			(translate 383.8000 99.5500)
+			(translate 381.3000 99.5500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -36170,7 +36170,7 @@
 		(layer "F.Cu")
 		(uuid "28a8ac5f-38c0-466f-aee3-35d0c25b16a4")
 		(transform
-			(translate 349.3000 111.0500)
+			(translate 353.3000 106.0500)
 			(rotate 180)
 			(scale 1 1)
 		)
@@ -37078,7 +37078,7 @@
 		(layer "F.Cu")
 		(uuid "2aa44ebd-31b7-4e96-b79a-3acfc123c7f6")
 		(transform
-			(translate 370.8000 71.5500)
+			(translate 367.8000 71.5500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -38499,14 +38499,14 @@
 		(layer "F.Cu")
 		(uuid "2c515f4b-2058-472b-95e8-993f4c706eb4")
 		(transform
-			(translate 342.8000 116.5500)
-			(rotate 90)
+			(translate 345.3000 116.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 2010 (5025 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1738"
-			(at 0 -2.28 90)
+			(at 0 -2.28)
 			(layer "F.Fab")
 			(uuid "43eb33c5-7150-5929-9b6b-a6e8b5b5f891")
 			(effects
@@ -38517,7 +38517,7 @@
 			)
 		)
 		(property "Value" "0.02"
-			(at 0 2.28 90)
+			(at 0 2.28)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e77f1db8-cd48-516b-871d-d3020ca50433")
@@ -38529,7 +38529,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.seielect.com/Catalog/SEI-csr.pdf"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6dc3d155-0aa5-5057-867e-b77fbb617ef6")
@@ -38541,7 +38541,7 @@
 			)
 		)
 		(property "Description" "RES, 0.02, 1%, 1 W, 2010"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "117bc8ac-69ec-59c2-ab9b-56912f1ad378")
@@ -38553,7 +38553,7 @@
 			)
 		)
 		(property "COMPTYPE" "Resistor"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2020e1f6-2028-4833-acf9-3daf3d5bc173")
@@ -38565,7 +38565,7 @@
 			)
 		)
 		(property "SYMBOLVERSION" "2009-05-29"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b3b7acaf-a9e8-4368-829a-c6b81f3016cc")
@@ -38577,7 +38577,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "0.02"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "323a570c-d257-4fa7-bd1d-d195bda490ba")
@@ -38589,7 +38589,7 @@
 			)
 		)
 		(property "PARTNUMBER" "CSRN2010FK20L0"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b9337e53-7fe1-441b-8586-79d3895bd6f1")
@@ -38601,7 +38601,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "0.02"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fa74dd70-6eab-44fa-8f3a-ae8aeba143b0")
@@ -38613,7 +38613,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Stackpole Electronics Inc"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1b8103c7-01cf-44cf-9055-626756467c38")
@@ -38625,7 +38625,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "2010"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e01a186d-0ba8-4d74-9288-cc34952e2f50")
@@ -38637,7 +38637,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d304a1c5-2eac-4f61-a962-6c15172fe8ad")
@@ -38649,7 +38649,7 @@
 			)
 		)
 		(property "RES_OHM" "0.02"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6c9699ee-0c9e-4eba-b263-a16837f670ac")
@@ -38661,7 +38661,7 @@
 			)
 		)
 		(property "VALUE_CODE" "R020"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8fdfd1eb-0ed8-4820-a925-e857f78c67db")
@@ -38673,7 +38673,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "1"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bd6fc365-9735-440d-a8b2-2041b013d837")
@@ -38685,7 +38685,7 @@
 			)
 		)
 		(property "VALUE1" "1%"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7cd6eeaa-f86b-44af-a644-4371cd591c38")
@@ -38697,7 +38697,7 @@
 			)
 		)
 		(property "POWER_W" "1"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6193d081-78b8-424a-96bb-c40d27b27ea1")
@@ -38709,7 +38709,7 @@
 			)
 		)
 		(property "VALUE2" "1W"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "095b29e6-0950-4b82-8522-d8898c7205ce")
@@ -38721,7 +38721,7 @@
 			)
 		)
 		(property "VDC_V" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eeb84585-6b28-4807-be79-b0d9947fc288")
@@ -38733,7 +38733,7 @@
 			)
 		)
 		(property "TEMPCO" "250 ppm/C"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1b05e469-4dc3-4fe5-ae1d-974257e565ef")
@@ -38745,7 +38745,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3b2b3795-bb76-4921-b715-10a7e9986c2e")
@@ -38757,7 +38757,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Thick Film"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b669ede3-b944-44db-be9e-867b6faf992f")
@@ -38769,7 +38769,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "12.5"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3529b1ab-00e2-48b4-a5a7-ef2b3b23bec3")
@@ -38781,7 +38781,7 @@
 			)
 		)
 		(property "SIZEX_MM" "5"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "71470cb3-4fe5-4bbf-8fcf-d2c3e3a7ffb6")
@@ -38793,7 +38793,7 @@
 			)
 		)
 		(property "SIZEY_MM" "2.5"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "74b0b7dd-c31a-4314-b8de-2f9b03c3cb7e")
@@ -38805,7 +38805,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "1.66"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e03d7769-dab3-4918-b74a-c8f4f7baa82d")
@@ -38817,7 +38817,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-26"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9280ecb7-2674-45f4-890a-752eb098160c")
@@ -38829,7 +38829,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3e594ef0-8d87-472a-bd77-217abaf59354")
@@ -38841,7 +38841,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2017-04-20"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e7ffd40b-1c32-4b4f-b27d-2393e59ef457")
@@ -38853,7 +38853,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2b9afaf5-9a2e-4263-8292-a3f152fa6530")
@@ -38865,7 +38865,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.seielect.com/Catalog/SEI-csr.pdf"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f4e17b88-82a6-424a-a6f9-d377d735dc30")
@@ -38877,7 +38877,7 @@
 			)
 		)
 		(property "EIA_CODE" "E96"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d4b993e1-f31e-4ddf-9c0e-6099fe095c0c")
@@ -38889,7 +38889,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "99bab92b-5565-4a03-aae9-6843cea9fc13")
@@ -38901,7 +38901,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ae661b42-0ab9-43df-af98-d3e8d02d1c56")
@@ -38913,7 +38913,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dc531e8b-5431-459d-bf0b-27d37543eae8")
@@ -38925,7 +38925,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8ce38c1a-6fd4-4c2d-a483-72063af9e9ba")
@@ -38937,7 +38937,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "CSRN2010FK20L0CT-ND"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a2bb2432-f8fe-4265-abd6-6b606b9f77b7")
@@ -38949,7 +38949,7 @@
 			)
 		)
 		(property "SUPPLIER 2" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f4b2065b-7274-40c6-8277-fcc54f2a0069")
@@ -38961,7 +38961,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5a7adadc-f4e0-458c-9817-056a4893c657")
@@ -38973,7 +38973,7 @@
 			)
 		)
 		(property "SUPPLIER 3" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4c2f183b-f871-4e63-a9a2-3713854c0722")
@@ -38985,7 +38985,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e99c3e13-806e-4303-8cef-af09b607da53")
@@ -38997,7 +38997,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9558ea47-5f8f-4aaa-8c34-b5e532e3d0fd")
@@ -39009,7 +39009,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "?"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ee18b74e-bbd3-4646-9e31-abfdf433b2d4")
@@ -39021,7 +39021,7 @@
 			)
 		)
 		(property "AEC GRADE" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a2f30234-7479-485c-9613-46e82647497a")
@@ -39033,7 +39033,7 @@
 			)
 		)
 		(property "MPN" "CSRN2010FK20L0"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2ea31f83-846a-4ed8-8e5d-f92bdb41ba55")
@@ -39045,7 +39045,7 @@
 			)
 		)
 		(property "Manufacturer" "Stackpole Electronics Inc"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d273f7a8-62d6-4ec7-b832-8958ec78b2fb")
@@ -39111,7 +39111,7 @@
 			(uuid "e2703bf1-46aa-402d-a488-26711e95bfa1")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "98d884c5-c3ef-46e5-950a-a2258cddea92")
 			(effects
@@ -39122,7 +39122,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -2.4 0 90)
+			(at -2.4 0)
 			(size 1.4 2.65)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.178571)
@@ -39132,7 +39132,7 @@
 			(uuid "76505380-40ab-57b9-9600-32ea70b58d46")
 		)
 		(pad "2" smd roundrect
-			(at 2.4 0 90)
+			(at 2.4 0)
 			(size 1.4 2.65)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.178571)
@@ -42032,14 +42032,14 @@
 		(layer "F.Cu")
 		(uuid "31cc1c47-86aa-4922-b8b0-d1b28a1cb2d5")
 		(transform
-			(translate 337.8000 129.5500)
-			(rotate 180)
+			(translate 336.8000 124.0500)
+			(rotate 90)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1745"
-			(at 0 -1.43 180)
+			(at 0 -1.43 90)
 			(layer "F.Fab")
 			(uuid "d76a844a-fa59-5a90-9ded-e61a518b19eb")
 			(effects
@@ -42050,7 +42050,7 @@
 			)
 		)
 		(property "Value" "2.61k"
-			(at 0 1.43 180)
+			(at 0 1.43 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7c752e4b-1a63-5f77-96be-8ca72a037635")
@@ -42062,7 +42062,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.vishay.com/docs/20035/dcrcwe3.pdf"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7539f86c-db0d-5280-ac4c-5fafc6e280ee")
@@ -42074,7 +42074,7 @@
 			)
 		)
 		(property "Description" "RES, 2.61 k, 1%, 0.1 W, AEC-Q200 Grade 0, 0603"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "294c267e-92fe-5b1b-b3df-ba4bf1aaca63")
@@ -42086,7 +42086,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "52K8239"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f33e8d0d-1019-49bf-a5a9-3cbee80641cd")
@@ -42098,7 +42098,7 @@
 			)
 		)
 		(property "POWER_W" "100mW"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b78bf345-00be-4e48-b85a-c117333c14c3")
@@ -42110,7 +42110,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Newark"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ed2d394f-b537-4625-be0c-dfba48eec05b")
@@ -42122,7 +42122,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" "71-CRCW0603-2.61K-E3"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5b58f540-cfc0-4965-b148-808f395bf0cd")
@@ -42134,7 +42134,7 @@
 			)
 		)
 		(property "TEMPCO" "100 ppm/C"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5d266cbe-a75d-4635-baa3-da5c8a74ef40")
@@ -42146,7 +42146,7 @@
 			)
 		)
 		(property "SUPPLIER 3" "Mouser"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "348f37d8-f28d-4ad7-921c-53d0749a39ae")
@@ -42158,7 +42158,7 @@
 			)
 		)
 		(property "VALUE_CODE" "2k61"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3ae006c7-3648-4d16-94af-0e754bc0cb85")
@@ -42170,7 +42170,7 @@
 			)
 		)
 		(property "ROHS" "E"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7e61f8f5-5eb9-418c-83e9-0c001313e583")
@@ -42182,7 +42182,7 @@
 			)
 		)
 		(property "VALUE1" "1%"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "51828fed-a6bf-4bea-81ba-d781cf96cc78")
@@ -42194,7 +42194,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0218b1ed-453f-44c1-8322-4ea1d77f1b88")
@@ -42206,7 +42206,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "2.61k"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ca05ccc4-d10d-4932-9fc3-bb50d137ea68")
@@ -42218,7 +42218,7 @@
 			)
 		)
 		(property "EIA_CODE" "E96"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "272bb42e-52f6-493e-9dc3-92a765b69d3b")
@@ -42230,7 +42230,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8a4f4722-ebda-4082-885b-3494aa33d8d9")
@@ -42242,7 +42242,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Vishay-Dale"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7d2c4fde-85ff-4310-8b9f-164cba65a99c")
@@ -42254,7 +42254,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "0603"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a9e267a8-a4bb-43f3-b71c-2539cf85d525")
@@ -42266,7 +42266,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "1%"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fb9c012a-749a-4b6f-b921-a2cea5a4336e")
@@ -42278,7 +42278,7 @@
 			)
 		)
 		(property "RES_OHM" "2.61k"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a72aca49-9d58-49d0-ac0e-6b1d09a89dcd")
@@ -42290,7 +42290,7 @@
 			)
 		)
 		(property "SIZEX_MM" "1.6"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a08cb040-8c99-42ca-83b5-ddd8514803ec")
@@ -42302,7 +42302,7 @@
 			)
 		)
 		(property "SIZEY_MM" "0.8"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9c0f03d6-e378-4d31-ba17-f3ed9ecf510f")
@@ -42314,7 +42314,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "1"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "755c2b56-e23d-428d-a316-35e83ddc726a")
@@ -42326,7 +42326,7 @@
 			)
 		)
 		(property "VALUE2" "0.1W"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d38c4c9f-277f-44cc-84f9-6b7ba210a5a2")
@@ -42338,7 +42338,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "1.28"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c26d1dd9-1260-422c-a312-76298efe55c9")
@@ -42350,7 +42350,7 @@
 			)
 		)
 		(property "COMPTYPE" "Resistor"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cbe390de-ad42-47f4-abdc-efd2c065917d")
@@ -42362,7 +42362,7 @@
 			)
 		)
 		(property "PARTNUMBER" "CRCW06032K61FKEA"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "84ba6401-4c41-44b4-9104-472247709966")
@@ -42374,7 +42374,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "Y"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "038f86d0-0283-4bf3-bf20-ca053f64a38c")
@@ -42386,7 +42386,7 @@
 			)
 		)
 		(property "VDC_V" "75V"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dc77c45b-aee1-4159-96a3-266261de812f")
@@ -42398,7 +42398,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1ca70df2-a801-4c5a-a1da-67dd8f00717d")
@@ -42410,7 +42410,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "541-2.61KHCT-ND"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f4e45e93-e565-4775-afda-7a4823031848")
@@ -42422,7 +42422,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0f0b9789-c764-4683-a11d-d48cb922f7dc")
@@ -42434,7 +42434,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Thick Film"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "542b8006-1456-4d96-b7e3-0a08bb096a07")
@@ -42446,7 +42446,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "2.61k"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e0e7e20c-ac7e-4d87-ae3e-23433b1f8eca")
@@ -42458,7 +42458,7 @@
 			)
 		)
 		(property "AEC GRADE" "0"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "89b9ea6d-2b01-40a3-882b-e49d16b7dea6")
@@ -42470,7 +42470,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "305f1091-d25b-4ecb-bdfb-37a04758fe49")
@@ -42482,7 +42482,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2334d601-e380-4d92-a863-1e383050d1c7")
@@ -42494,7 +42494,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.vishay.com/docs/20035/dcrcwe3.pdf"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ee328d09-52fd-4802-89d8-e73b942340b8")
@@ -42506,7 +42506,7 @@
 			)
 		)
 		(property "GREEN_EU ROHS" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3c24abea-d973-49bf-963a-a7d677edfb43")
@@ -42518,7 +42518,7 @@
 			)
 		)
 		(property "GREEN_EU ROHS-2" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c9985e8c-02ef-45a2-8c2f-1727e25ad2c0")
@@ -42530,7 +42530,7 @@
 			)
 		)
 		(property "GREEN_LIFECYCLE" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "295777e8-848a-4812-894a-2165773d5e06")
@@ -42542,7 +42542,7 @@
 			)
 		)
 		(property "GREEN_REACH" ""
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5acdcdb1-dbb6-4151-ad83-54e7954e4a5d")
@@ -42554,7 +42554,7 @@
 			)
 		)
 		(property "MPN" "CRCW06032K61FKEA"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2cd2af5f-3eea-4d00-b16d-460f72f774fb")
@@ -42566,7 +42566,7 @@
 			)
 		)
 		(property "Manufacturer" "Vishay-Dale"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "df229126-b9e1-4e8f-8b9c-ce5919eb23dc")
@@ -42632,7 +42632,7 @@
 			(uuid "321cca42-b26e-475e-8ab0-2314ce001e1f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "6701dd2d-ec6f-4aae-b816-75cab6e372db")
 			(effects
@@ -42643,7 +42643,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 180)
+			(at -0.9125 0 90)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -42653,7 +42653,7 @@
 			(uuid "c2f7ce8f-49ec-58f3-b41c-7fbd36edae29")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 180)
+			(at 0.9125 0 90)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -43105,7 +43105,7 @@
 		(layer "F.Cu")
 		(uuid "336a31be-dd89-40f5-9777-126ace8a41f3")
 		(transform
-			(translate 340.8000 125.0500)
+			(translate 338.8000 130.0500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -44533,7 +44533,7 @@
 		(layer "F.Cu")
 		(uuid "355d924f-b626-4762-bb9d-21e09aeae15d")
 		(transform
-			(translate 367.3000 70.5500)
+			(translate 371.3000 68.5500)
 			(rotate 270)
 			(scale 1 1)
 		)
@@ -51838,7 +51838,7 @@
 		(layer "F.Cu")
 		(uuid "3b89b52f-709d-45fa-ae6a-6d315bf1c05d")
 		(transform
-			(translate 344.8000 127.0500)
+			(translate 344.8000 129.0500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -56430,12 +56430,12 @@
 		(layer "F.Cu")
 		(uuid "42945289-b7c4-4c4f-a044-b808b37b0b56")
 		(transform
-			(translate 351.3000 121.5500)
-			(rotate 90)
+			(translate 351.8000 121.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(property "Reference" "TP1720"
-			(at 0 -3 90)
+			(at 0 -3)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "6c6f6d96-1b6f-57d5-9dfc-02c1dba9b2cd")
@@ -56448,7 +56448,7 @@
 			)
 		)
 		(property "Value" "5019"
-			(at 0 3 90)
+			(at 0 3)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(hide yes)
@@ -56462,7 +56462,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.keyelco.com/product-pdf.cfm?p=1357"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3c15c1fa-249e-516b-926b-0ec19837615f")
@@ -56474,7 +56474,7 @@
 			)
 		)
 		(property "Description" "Test Point, Miniature, SMT"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a0827ea4-a6ca-55cc-a6fc-f5e100cbfefb")
@@ -56486,7 +56486,7 @@
 			)
 		)
 		(property "SYMBOLVERSION" "2010-10-20"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "34cfff0b-81e3-4e3a-9738-e2060642680b")
@@ -56498,7 +56498,7 @@
 			)
 		)
 		(property "COMPTYPE" "Test Point Loop"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "016244ed-5147-4f3b-a714-f54bc4d0d929")
@@ -56510,7 +56510,7 @@
 			)
 		)
 		(property "PARTNUMBER" "5019"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6f0bf406-281b-4b10-a5d5-c6746b90cb0d")
@@ -56522,7 +56522,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Keystone"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7a336184-a0f2-4c4d-8557-fb1108424019")
@@ -56534,7 +56534,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "Test Point, Miniature, SMT"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6c94b43b-fd1c-48c9-b6ba-fad81e186d14")
@@ -56546,7 +56546,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c26cc8b8-f448-4937-abca-c1f077c03bba")
@@ -56558,7 +56558,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e430e177-2278-4985-9c6b-2bdd6fe889ab")
@@ -56570,7 +56570,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d325e058-a2c1-4c6b-aeb1-aa324da3721a")
@@ -56582,7 +56582,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet Link"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5e6ea2d9-d7cd-49b4-9cce-4ff6f67106d8")
@@ -56594,7 +56594,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.keyelco.com/product-pdf.cfm?p=1357"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1a35d323-dd5f-4f0c-8642-57022e2ad989")
@@ -56606,7 +56606,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "14ec7378-96a9-46fb-83d6-70ec20b15979")
@@ -56618,7 +56618,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5f41cef5-bf2b-4404-8c11-e0f80d669e87")
@@ -56630,7 +56630,7 @@
 			)
 		)
 		(property "NOTE" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "622feaa6-a98d-4c3c-a9eb-46c4c7dfa55a")
@@ -56642,7 +56642,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "edff8b38-b00b-4a25-8e7d-c404bbab38fb")
@@ -56654,7 +56654,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2015-08-25"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2e9357a0-484b-4f58-94bc-7de1ddfa65e6")
@@ -56666,7 +56666,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ffab8484-4011-4128-91bc-c6f05505dfd3")
@@ -56678,7 +56678,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f739ca90-03ca-404d-a2bd-87dadefbad75")
@@ -56690,7 +56690,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "39dccb22-4f61-4cdd-b5e6-f620fe463601")
@@ -56702,7 +56702,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "36-5019TR-ND"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6101ec3e-ff5f-4b28-9afc-0cb0f019dc27")
@@ -56714,7 +56714,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Mouser"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d978933c-0f27-4904-a6b2-4606436c4904")
@@ -56726,7 +56726,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "534-5019"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4a32ff5d-c05b-488f-a96b-f52742b4c885")
@@ -56738,7 +56738,7 @@
 			)
 		)
 		(property "SUPPLIER 3" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1b99db38-b277-48a9-8ad0-4ac120cec54a")
@@ -56750,7 +56750,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d8375bc3-01d4-4f9b-990d-cb7f90295d9b")
@@ -56762,7 +56762,7 @@
 			)
 		)
 		(property "MPN" "5019"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0dc183f4-4b00-44c3-93a6-35326e6bcee6")
@@ -56774,7 +56774,7 @@
 			)
 		)
 		(property "Manufacturer" "Keystone"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8200c6a0-ede0-45da-9c28-7e7efd1581df")
@@ -56878,7 +56878,7 @@
 			(uuid "6e944d40-2621-4497-a024-92aa0e2f9d2c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at -1.7252 0.493475 90)
+			(at -1.7252 0.493475)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "5dab32c1-6c7a-46c8-9a36-a7ff4fe02962")
@@ -56891,7 +56891,7 @@
 			)
 		)
 		(pad "1" smd rect
-			(at 0 0 90)
+			(at 0 0)
 			(size 3.8 2.03)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net "Net-(D1714-A)")
@@ -60314,7 +60314,7 @@
 		(layer "F.Cu")
 		(uuid "48e8db53-d153-4e77-97ad-9ff290d6d749")
 		(transform
-			(translate 396.8000 86.5500)
+			(translate 385.8000 100.0500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -63367,12 +63367,12 @@
 		(layer "F.Cu")
 		(uuid "4e415285-43e5-458e-8c3a-b296e9451e23")
 		(transform
-			(translate 346.8000 122.0500)
-			(rotate 90)
+			(translate 344.8000 124.5500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(property "Reference" "TP1721"
-			(at 0 -3 90)
+			(at 0 -3)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "71ad0db0-199b-5f9e-bf2a-c6ddf6f30dd6")
@@ -63385,7 +63385,7 @@
 			)
 		)
 		(property "Value" "5019"
-			(at 0 3 90)
+			(at 0 3)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(hide yes)
@@ -63399,7 +63399,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.keyelco.com/product-pdf.cfm?p=1357"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "375b61e7-3f7d-5f53-b8a4-cb2317a3176a")
@@ -63411,7 +63411,7 @@
 			)
 		)
 		(property "Description" "Test Point, Miniature, SMT"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ac6e8e22-56ab-5ae3-95d9-bc9eb31d440b")
@@ -63423,7 +63423,7 @@
 			)
 		)
 		(property "SYMBOLVERSION" "2010-10-20"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "de389f05-fc6a-4f09-b003-d34eb4d8865e")
@@ -63435,7 +63435,7 @@
 			)
 		)
 		(property "COMPTYPE" "Test Point Loop"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3752ac57-c315-4a5d-bf2d-482822ec0411")
@@ -63447,7 +63447,7 @@
 			)
 		)
 		(property "PARTNUMBER" "5019"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5ac08ea3-2938-41a3-94be-473330f37574")
@@ -63459,7 +63459,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Keystone"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2a89521c-7865-415f-bb3b-37a12e9ee94d")
@@ -63471,7 +63471,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "Test Point, Miniature, SMT"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "63972fff-bf95-4994-ac52-7fdc75bad243")
@@ -63483,7 +63483,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7f71b0c0-4ce0-409a-9544-dc22f9a185dc")
@@ -63495,7 +63495,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cd1a21ee-64ec-465c-94e0-3d16ce8f2ceb")
@@ -63507,7 +63507,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "779abe13-c042-4bf2-9e0b-3e954c1c7849")
@@ -63519,7 +63519,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet Link"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e3545e9e-3778-4b72-a6bc-8c5547b76607")
@@ -63531,7 +63531,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.keyelco.com/product-pdf.cfm?p=1357"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c9116bc1-6a35-4558-a655-e6944e3c5a95")
@@ -63543,7 +63543,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8cabccb3-2b51-4732-8137-089d5f9ea95c")
@@ -63555,7 +63555,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d4fa9308-9487-4577-827e-414f901873d9")
@@ -63567,7 +63567,7 @@
 			)
 		)
 		(property "NOTE" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "338cd2b5-47af-4f3e-9302-046ed6c6d7cb")
@@ -63579,7 +63579,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "417bf1bb-600b-42f2-8df8-2891595713e7")
@@ -63591,7 +63591,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2015-08-25"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2940bb6b-5abf-4f25-aecc-8aa454914c07")
@@ -63603,7 +63603,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4be18151-79dc-400c-8d6f-835faa4d4f42")
@@ -63615,7 +63615,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6936641c-1b93-4af8-847a-ae42c89faead")
@@ -63627,7 +63627,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5ad8a398-f01c-4c30-8b44-e97630cdbd69")
@@ -63639,7 +63639,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "36-5019TR-ND"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d5e08d0e-756c-4538-8a6d-5c6063cc8388")
@@ -63651,7 +63651,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Mouser"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7a31da4b-26b8-4928-8464-14616f9a8701")
@@ -63663,7 +63663,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "534-5019"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "49e30069-26b4-49e3-b6ce-9a6a544fd77e")
@@ -63675,7 +63675,7 @@
 			)
 		)
 		(property "SUPPLIER 3" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "614dcb88-681a-4b27-b073-a355b13cdc54")
@@ -63687,7 +63687,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "082eee66-1564-45d0-86ae-a1ec694e3775")
@@ -63699,7 +63699,7 @@
 			)
 		)
 		(property "MPN" "5019"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dd9e3898-cadc-4e95-8acd-dac89199b62d")
@@ -63711,7 +63711,7 @@
 			)
 		)
 		(property "Manufacturer" "Keystone"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7d5d821f-4e10-4aff-94b9-18e5f3001664")
@@ -63815,7 +63815,7 @@
 			(uuid "efb1c58d-876f-4bc6-80b6-30adde2e3046")
 		)
 		(fp_text user "${REFERENCE}"
-			(at -1.7252 0.493475 90)
+			(at -1.7252 0.493475)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "96a514d8-fd90-4201-a815-4646876a30b2")
@@ -63828,7 +63828,7 @@
 			)
 		)
 		(pad "1" smd rect
-			(at 0 0 90)
+			(at 0 0)
 			(size 3.8 2.03)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net "Net-(D1715-A)")
@@ -71081,14 +71081,14 @@
 		(layer "F.Cu")
 		(uuid "5bdfbe3a-1c0a-4776-b522-1267f022c8dd")
 		(transform
-			(translate 344.3000 105.0500)
-			(rotate 90)
+			(translate 339.3000 104.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C1722"
-			(at 0 -2.3 90)
+			(at 0 -2.3)
 			(layer "F.Fab")
 			(uuid "4a8aefa3-e3ff-5a87-9e26-c4d9db86d970")
 			(effects
@@ -71099,7 +71099,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 0 2.3 90)
+			(at 0 2.3)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b4e5c678-1763-5875-98ac-946a31d44d2b")
@@ -71111,7 +71111,7 @@
 			)
 		)
 		(property "Datasheet" "http://search.murata.co.jp/Ceramy/PnsearchViewAction.do?HnOFG=ON&HnNFG=ON&SEL_CNT=50&sLang=en&sKey=GRM32ER72A225KA35L&x=9&y=9&search=startwith"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dafdfc81-2a01-5938-8550-8207ecedd9a0")
@@ -71123,7 +71123,7 @@
 			)
 		)
 		(property "Description" "CAP, CERM, 2.2 µF, 100 V, +/- 10%, X7R, 1210"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cabf9c6c-0a66-5bd6-97c1-8591bc95c406")
@@ -71135,7 +71135,7 @@
 			)
 		)
 		(property "POLARIZED" "N"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7d6ddd27-2a7e-429e-ba24-9d189d5da087")
@@ -71147,7 +71147,7 @@
 			)
 		)
 		(property "COMPTYPE" "Capacitor"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d2faf2ed-21c7-469b-a5cd-4a87faa0ad35")
@@ -71159,7 +71159,7 @@
 			)
 		)
 		(property "SYMBOLVERSION" "2008-07-09"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "45e28ea8-2a22-43f9-97df-b25325286396")
@@ -71171,7 +71171,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "2.2uF"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5d0a0c22-b71e-458a-9e64-6ddf8c950574")
@@ -71183,7 +71183,7 @@
 			)
 		)
 		(property "PARTNUMBER" "GRM32ER72A225KA35L"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "97d818a0-7f02-4729-8462-6b7d61db28ed")
@@ -71195,7 +71195,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "2.2µF"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1c4f5fa8-0c5f-4471-8aa6-72addcd0cc5e")
@@ -71207,7 +71207,7 @@
 			)
 		)
 		(property "MANUFACTURER" "MuRata"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f47ea95e-7b7e-4003-bde1-1f799ac207ab")
@@ -71219,7 +71219,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "1210"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8c1c5983-b162-4a79-8630-2e229e47d555")
@@ -71231,7 +71231,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fb3cba40-872d-4d13-8cad-41686ad174e1")
@@ -71243,7 +71243,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0a6fa4b6-6e76-4ffb-89c1-1fc2642048c0")
@@ -71255,7 +71255,7 @@
 			)
 		)
 		(property "CAP_F" "0.0000022"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ca96de3f-8324-40f5-aa3f-07bc45204481")
@@ -71267,7 +71267,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "10"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dd863548-1a71-446b-b968-f73861ea4286")
@@ -71279,7 +71279,7 @@
 			)
 		)
 		(property "ESR_OHM" "0.007"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4a6814ff-81fd-4d1b-9a09-33620e0a165d")
@@ -71291,7 +71291,7 @@
 			)
 		)
 		(property "VALUE1" "0.007 ohm"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e84c402e-0d47-406c-8a8e-68a4d7f54260")
@@ -71303,7 +71303,7 @@
 			)
 		)
 		(property "VDC_V" "100"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "abcd7a1c-d149-4b09-814a-0f2c1994aab3")
@@ -71315,7 +71315,7 @@
 			)
 		)
 		(property "VALUE2" "100V"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "993b978d-a854-47e5-b1bd-7dd81936d80f")
@@ -71327,7 +71327,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ce806c86-4d3e-479d-ab74-0c6a170fb300")
@@ -71339,7 +71339,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Ceramic"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "30352c16-d655-441d-9e31-a161806c071f")
@@ -71351,7 +71351,7 @@
 			)
 		)
 		(property "TEMPCO" "X7R"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7b47712b-853c-4723-b659-0e87f3fd6b39")
@@ -71363,7 +71363,7 @@
 			)
 		)
 		(property "IRMS_A" "4.4"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "deabd997-5502-473f-843a-1ba057d20ab3")
@@ -71375,7 +71375,7 @@
 			)
 		)
 		(property "TAMIN_C" "-55"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c0e66ef5-71bf-4b4b-822a-36992376a2fa")
@@ -71387,7 +71387,7 @@
 			)
 		)
 		(property "TAMAX_C" "125"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9b6cd463-bac0-4a58-a72f-8adbf4adaa58")
@@ -71399,7 +71399,7 @@
 			)
 		)
 		(property "CAP_CASE" "1210"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "685f3219-1771-4742-b424-30e081cd0756")
@@ -71411,7 +71411,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "8"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "033e1e99-30ae-4ec1-a478-a4babb5ec2f3")
@@ -71423,7 +71423,7 @@
 			)
 		)
 		(property "SIZEAREAWB_MM2" "14.7"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "42bd6521-928f-47b7-a1f4-bc56b904f9f1")
@@ -71435,7 +71435,7 @@
 			)
 		)
 		(property "SIZEX_MM" "3.2"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c0e88808-7564-4dad-b4a7-315abc9318eb")
@@ -71447,7 +71447,7 @@
 			)
 		)
 		(property "SIZEY_MM" "2.5"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c94f043f-04bb-4d1d-8daf-f54762a5389d")
@@ -71459,7 +71459,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "2.7"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c7c1ad25-e739-4dbd-bda2-c530f00c5808")
@@ -71471,7 +71471,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-19"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b273fda5-017d-48a2-a1a7-d512dc9f1395")
@@ -71483,7 +71483,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4e71b70a-c438-48d6-8232-7c5aba7ac203")
@@ -71495,7 +71495,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2016-06-28"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "caabee19-824b-4b8b-8f9a-e06275a8a9e0")
@@ -71507,7 +71507,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "82382fda-5430-47a7-abe2-bb7d35fc0af7")
@@ -71519,7 +71519,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://search.murata.co.jp/Ceramy/PnsearchViewAction.do?HnOFG=ON&HnNFG=ON&SEL_CNT=50&sLang=en&sKey=GRM32ER72A225KA35L&x=9&y=9&search=startwith"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c50f5ed1-42a9-43ed-b980-509b70186458")
@@ -71531,7 +71531,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "01e7b98d-1210-45a5-8164-d57fdf982b78")
@@ -71543,7 +71543,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "78091665-8bd0-4354-ae46-000b6d0d80bb")
@@ -71555,7 +71555,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f24bd05f-c30e-4766-b8a0-70905ac2e7d8")
@@ -71567,7 +71567,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "490-3385-1-ND"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2c8aeb90-7c19-4aa3-8dbf-71a48f5489d4")
@@ -71579,7 +71579,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Mouser"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "452704f3-7b64-4928-8125-9865c0867a94")
@@ -71591,7 +71591,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "81-GRM32ER72A225KA35"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4f61c85e-0949-4a59-a08c-3c84735fd71e")
@@ -71603,7 +71603,7 @@
 			)
 		)
 		(property "SUPPLIER 3" "Farnell"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c7af0265-b241-48d9-82fe-66279c3d77d4")
@@ -71615,7 +71615,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" "1735547"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2a46f9d3-94d2-4cdb-b4dc-df148a7ff12b")
@@ -71627,7 +71627,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e19e5ecd-dff1-40ef-8062-e7cc52c23853")
@@ -71639,7 +71639,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "?"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e4b062d7-912d-4f62-8319-bf2efd07667e")
@@ -71651,7 +71651,7 @@
 			)
 		)
 		(property "AEC GRADE" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1c34929c-5767-4412-b8df-5b19e891980c")
@@ -71663,7 +71663,7 @@
 			)
 		)
 		(property "MPN" "GRM32ER72A225KA35L"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6d29a12f-c4b4-4e83-9391-c46749acd469")
@@ -71675,7 +71675,7 @@
 			)
 		)
 		(property "Manufacturer" "MuRata"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ab468661-dfde-40cc-a2e3-7493c44cf6e9")
@@ -71741,7 +71741,7 @@
 			(uuid "84411211-e3bb-4eaf-b566-ebbc29b029be")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "4300103f-b3d6-4763-b5a9-d5651e12020a")
 			(effects
@@ -71752,7 +71752,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5625 0 90)
+			(at -1.5625 0)
 			(size 1.325 2.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -71762,7 +71762,7 @@
 			(uuid "2b17e21b-ef45-538d-9054-6eea0581f1c5")
 		)
 		(pad "2" smd roundrect
-			(at 1.5625 0 90)
+			(at 1.5625 0)
 			(size 1.325 2.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -72563,7 +72563,7 @@
 		(layer "F.Cu")
 		(uuid "5d9cb52c-b42f-478b-940b-25c12cfd79e1")
 		(transform
-			(translate 397.8000 83.5500)
+			(translate 397.8000 85.5500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -80792,7 +80792,7 @@
 		(layer "F.Cu")
 		(uuid "63a73f38-a009-40ba-8f54-a8ebf3c2194d")
 		(transform
-			(translate 337.3000 133.0500)
+			(translate 348.3000 124.0500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -83038,7 +83038,7 @@
 		(layer "F.Cu")
 		(uuid "6479b52c-9f84-43cf-bd0a-d3057d6fb52b")
 		(transform
-			(translate 350.3000 102.0500)
+			(translate 353.3000 102.5500)
 			(rotate 180)
 			(scale 1 1)
 		)
@@ -84557,7 +84557,7 @@
 		(layer "F.Cu")
 		(uuid "66d7bd01-94a5-4bde-b368-5fffa8745963")
 		(transform
-			(translate 338.8000 114.0500)
+			(translate 339.3000 120.5500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -87223,7 +87223,7 @@
 		(layer "F.Cu")
 		(uuid "6b72ab27-85ae-4647-bdfd-96a141fd282b")
 		(transform
-			(translate 351.3000 74.5500)
+			(translate 359.3000 74.5500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -91068,7 +91068,7 @@
 		(layer "F.Cu")
 		(uuid "71007ecf-5e16-4f08-8780-91c3fea7d95e")
 		(transform
-			(translate 359.3000 74.0500)
+			(translate 371.3000 77.0500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -109717,14 +109717,14 @@
 		(layer "F.Cu")
 		(uuid "8ad6ea35-5094-4e57-a888-4dadfb3208b3")
 		(transform
-			(translate 367.3000 74.5500)
-			(rotate 90)
+			(translate 348.3000 107.5500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1727"
-			(at 0 -1.43 90)
+			(at 0 -1.43 180)
 			(layer "F.Fab")
 			(uuid "b531fdb9-4730-594d-a598-506b2ad54d5c")
 			(effects
@@ -109735,7 +109735,7 @@
 			)
 		)
 		(property "Value" "249R"
-			(at 0 1.43 90)
+			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f98f8567-cede-5501-869b-8092b50a2b16")
@@ -109747,7 +109747,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ccee1fd5-5dbb-5e8b-81e5-439c051ca507")
@@ -109759,7 +109759,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a1de2932-c77d-528d-9a47-664e53ff6048")
@@ -109771,7 +109771,7 @@
 			)
 		)
 		(property "MPN" "CRCW0603249RFKEA"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ebacc58e-bcfb-45a3-8b09-c55e96b5b7ad")
@@ -109783,7 +109783,7 @@
 			)
 		)
 		(property "Manufacturer" "Vishay"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a5cea77f-887d-4c25-835d-294338609ad0")
@@ -109795,7 +109795,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "91410c5c-de27-4e16-8417-1126efe4e9fc")
@@ -109807,7 +109807,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3d8ee57b-e412-4669-878a-19b2a78c7e6c")
@@ -109873,7 +109873,7 @@
 			(uuid "835e5062-2b93-455b-b7da-aa9d80709626")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "c5777407-d787-4640-8fdb-2cb059e5f489")
 			(effects
@@ -109884,7 +109884,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 90)
+			(at -0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -109893,7 +109893,7 @@
 			(uuid "5e27432e-4a7b-5630-9e04-41265a1ac029")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 90)
+			(at 0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -122020,14 +122020,14 @@
 		(layer "F.Cu")
 		(uuid "9a94046a-c175-44af-85c5-fe9c8a236f1e")
 		(transform
-			(translate 346.3000 116.0500)
-			(rotate 270)
+			(translate 353.3000 109.5500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C1725"
-			(at 0 -2.3 270)
+			(at 0 -2.3 180)
 			(layer "F.Fab")
 			(uuid "4065c250-33cf-562b-bfef-e7392f592b10")
 			(effects
@@ -122038,7 +122038,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 0 2.3 270)
+			(at 0 2.3 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ba3beb4f-212f-5dd1-8aa3-092fb20107e2")
@@ -122050,7 +122050,7 @@
 			)
 		)
 		(property "Datasheet" "http://search.murata.co.jp/Ceramy/PnsearchViewAction.do?HnOFG=ON&HnNFG=ON&SEL_CNT=50&sLang=en&sKey=GRM32ER72A225KA35L&x=9&y=9&search=startwith"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d8a18fa4-c8bc-5a38-a092-74150a87f8c1")
@@ -122062,7 +122062,7 @@
 			)
 		)
 		(property "Description" "CAP, CERM, 2.2 µF, 100 V, +/- 10%, X7R, 1210"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9a7aba3f-d813-5029-bda8-8a68c2b58fa4")
@@ -122074,7 +122074,7 @@
 			)
 		)
 		(property "POLARIZED" "N"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2526b240-9c7b-441e-bfd5-519605f962e0")
@@ -122086,7 +122086,7 @@
 			)
 		)
 		(property "COMPTYPE" "Capacitor"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fd3ccf97-e0af-4a86-aea7-b9996d9ead44")
@@ -122098,7 +122098,7 @@
 			)
 		)
 		(property "SYMBOLVERSION" "2008-07-09"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ba4da2e2-589d-4290-a277-850c69e220c8")
@@ -122110,7 +122110,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "2.2uF"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e336b755-4f3e-4d48-a2af-c4eb8e781a19")
@@ -122122,7 +122122,7 @@
 			)
 		)
 		(property "PARTNUMBER" "GRM32ER72A225KA35L"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fd9c3cab-23c7-4642-93f5-3144e1bb03db")
@@ -122134,7 +122134,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "2.2µF"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b7a6e631-9a7c-43a9-b108-8bdf6d345de6")
@@ -122146,7 +122146,7 @@
 			)
 		)
 		(property "MANUFACTURER" "MuRata"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "997b227c-eff4-4d83-a6f7-961214c7da18")
@@ -122158,7 +122158,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "1210"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8911c69c-da83-4f82-bf81-f07e0402254f")
@@ -122170,7 +122170,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6f0c2fec-5ede-45db-89b7-4900c3d9bedc")
@@ -122182,7 +122182,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "478c3855-9e91-4de0-88dd-4ac0b9147321")
@@ -122194,7 +122194,7 @@
 			)
 		)
 		(property "CAP_F" "0.0000022"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4d1d6b48-bf72-473b-a135-8ea404028cf3")
@@ -122206,7 +122206,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "10"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "07501f25-9081-42ac-8939-73d133e16409")
@@ -122218,7 +122218,7 @@
 			)
 		)
 		(property "ESR_OHM" "0.007"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6c0b1653-8e40-42e3-8ca8-2c4d88a68342")
@@ -122230,7 +122230,7 @@
 			)
 		)
 		(property "VALUE1" "0.007 ohm"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0d8ffb8e-82cc-46cd-bd8a-28888b0ec23b")
@@ -122242,7 +122242,7 @@
 			)
 		)
 		(property "VDC_V" "100"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "73015818-98e1-4554-becd-8e651896fb62")
@@ -122254,7 +122254,7 @@
 			)
 		)
 		(property "VALUE2" "100V"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9419c70d-594f-4fa7-a27e-67a7135f4c1d")
@@ -122266,7 +122266,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ccd34434-4b77-4cff-91d1-d872227e430e")
@@ -122278,7 +122278,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Ceramic"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5f30ca3e-af38-4b6f-8e08-861c9405b3a9")
@@ -122290,7 +122290,7 @@
 			)
 		)
 		(property "TEMPCO" "X7R"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c289006b-f817-4c87-91f4-b8eb64e38b52")
@@ -122302,7 +122302,7 @@
 			)
 		)
 		(property "IRMS_A" "4.4"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "774be290-967a-4dce-a5eb-5b11bd6c9d96")
@@ -122314,7 +122314,7 @@
 			)
 		)
 		(property "TAMIN_C" "-55"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6218aff6-8636-4407-a4c6-bfa965dd029b")
@@ -122326,7 +122326,7 @@
 			)
 		)
 		(property "TAMAX_C" "125"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9329f184-d694-4e44-b448-ae46ea6f7fd5")
@@ -122338,7 +122338,7 @@
 			)
 		)
 		(property "CAP_CASE" "1210"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "edb15ae0-e30d-4f82-9e34-badb15ed85b9")
@@ -122350,7 +122350,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "8"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "63267564-f29b-461a-8ef6-ac6f3afcf1b5")
@@ -122362,7 +122362,7 @@
 			)
 		)
 		(property "SIZEAREAWB_MM2" "14.7"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b81d9b96-bf84-432f-9e00-c1e9a02f3186")
@@ -122374,7 +122374,7 @@
 			)
 		)
 		(property "SIZEX_MM" "3.2"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3eebf4d2-adc5-4114-aeef-6af3b8c3b2dd")
@@ -122386,7 +122386,7 @@
 			)
 		)
 		(property "SIZEY_MM" "2.5"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "89a89983-c2e9-40f8-b292-5692725f1896")
@@ -122398,7 +122398,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "2.7"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f6f034c5-426a-422f-8b1e-eb67a8e29669")
@@ -122410,7 +122410,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-19"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "db04b786-eb33-4e58-a62e-fe40ba8b3247")
@@ -122422,7 +122422,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a4f55557-d063-45d6-8e54-a3e151a1b845")
@@ -122434,7 +122434,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2016-06-28"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6e4d3280-64bf-42bd-abbc-b2b9880402fa")
@@ -122446,7 +122446,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "16fc58f1-a4da-4b75-987b-6122b3ec9562")
@@ -122458,7 +122458,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://search.murata.co.jp/Ceramy/PnsearchViewAction.do?HnOFG=ON&HnNFG=ON&SEL_CNT=50&sLang=en&sKey=GRM32ER72A225KA35L&x=9&y=9&search=startwith"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e921cfe3-2fad-4797-9bc6-60c990f88db7")
@@ -122470,7 +122470,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0f296cd9-8a78-4b6a-ac90-c04cbf06f914")
@@ -122482,7 +122482,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "615cb352-baa7-4141-83a3-3f19a9f15376")
@@ -122494,7 +122494,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "aba7f63d-4cad-4c87-9d87-aee40afbc887")
@@ -122506,7 +122506,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "490-3385-1-ND"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "07c01d8a-f876-42ef-b5e0-0eacd039e176")
@@ -122518,7 +122518,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Mouser"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ac6b2841-1290-4f6c-b63b-7fca9bb58683")
@@ -122530,7 +122530,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "81-GRM32ER72A225KA35"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cb1e69a2-b6fe-4c82-9596-ffd75dd0d580")
@@ -122542,7 +122542,7 @@
 			)
 		)
 		(property "SUPPLIER 3" "Farnell"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3407ce41-2e17-42c0-b9a8-34fdd1d93116")
@@ -122554,7 +122554,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" "1735547"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3feb52c6-16e4-4066-a85f-63ad17e69d5e")
@@ -122566,7 +122566,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "00798be7-a874-42be-9f22-898a0bb60ea9")
@@ -122578,7 +122578,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "?"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8717bba8-1912-4953-89c8-19019762776b")
@@ -122590,7 +122590,7 @@
 			)
 		)
 		(property "AEC GRADE" ""
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "db0456db-f46a-4c9d-ac89-6acec93cbc30")
@@ -122602,7 +122602,7 @@
 			)
 		)
 		(property "MPN" "GRM32ER72A225KA35L"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "26fa08dd-d64e-42f8-a99d-0e594840f9eb")
@@ -122614,7 +122614,7 @@
 			)
 		)
 		(property "Manufacturer" "MuRata"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "678ecfc5-d05c-4f4b-b71d-a81fc6d409a0")
@@ -122680,7 +122680,7 @@
 			(uuid "f60abb15-699f-41e7-af9e-53e7b75d7e2a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "30d30e18-9803-4f28-a8c4-d65e73f78ee3")
 			(effects
@@ -122691,7 +122691,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5625 0 270)
+			(at -1.5625 0 180)
 			(size 1.325 2.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -122701,7 +122701,7 @@
 			(uuid "53f09bd7-d09d-5017-bb90-cf9abeaeff14")
 		)
 		(pad "2" smd roundrect
-			(at 1.5625 0 270)
+			(at 1.5625 0 180)
 			(size 1.325 2.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -125409,14 +125409,14 @@
 		(layer "F.Cu")
 		(uuid "9d7efb78-80bf-475b-9b1e-881daee83949")
 		(transform
-			(translate 340.8000 129.0500)
-			(rotate 270)
+			(translate 339.8000 127.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C1741"
-			(at 0 -1.43 270)
+			(at 0 -1.43)
 			(layer "F.Fab")
 			(uuid "0342326c-b121-5b2c-920d-36a763fd84a0")
 			(effects
@@ -125427,7 +125427,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 0 1.43 270)
+			(at 0 1.43)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0a6ea6ea-b037-5b83-899f-c78bc30f9453")
@@ -125439,7 +125439,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.yuden.co.jp/productdata/catalog/en/mlcc_all_e.pdf"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f11e9a07-c431-5319-a785-5817faa4280c")
@@ -125451,7 +125451,7 @@
 			)
 		)
 		(property "Description" "CAP, CERM, 2.2 uF, 16 V, +/- 10%, X7R, 0603"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ae9b5841-0c5e-5d8d-80f5-34afa7f13bcc")
@@ -125463,7 +125463,7 @@
 			)
 		)
 		(property "TAMIN_C" "-55°C"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "26b5af5f-7fc0-4bf0-8642-c51bd35580e1")
@@ -125475,7 +125475,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "68X1300"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3758eb07-4ab9-42a6-bc72-d246079039f2")
@@ -125487,7 +125487,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "35b59189-ef13-4dd0-80fd-251fce06fd72")
@@ -125499,7 +125499,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Newark"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5d43abbf-e4e2-4b78-a236-67c97a4f54ba")
@@ -125511,7 +125511,7 @@
 			)
 		)
 		(property "POLARIZED" "N"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6d75bc34-9281-4a93-83cf-1d053c3766d2")
@@ -125523,7 +125523,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" "963-EMK107BB7225KA-T"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "48718bf4-6afa-4d43-85ff-d567a5289b50")
@@ -125535,7 +125535,7 @@
 			)
 		)
 		(property "TEMPCO" "X7R"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fc9df456-c394-472d-8cb6-69f552e3793e")
@@ -125547,7 +125547,7 @@
 			)
 		)
 		(property "SIZEAREAWB_MM2" "4.68"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "32d5738e-07c8-4920-a5f0-fa2234aa0afd")
@@ -125559,7 +125559,7 @@
 			)
 		)
 		(property "SUPPLIER 3" "Mouser"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e3d84877-865c-4905-8f01-cddec53173a6")
@@ -125571,7 +125571,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-19"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3b81c94f-e5dc-4fa5-9349-a782b0c66997")
@@ -125583,7 +125583,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8cdb3901-b0e3-48fa-853e-8fbf1589f063")
@@ -125595,7 +125595,7 @@
 			)
 		)
 		(property "VALUE1" "Unknown"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c29ab97f-3f9b-46cb-93bb-58770d682f90")
@@ -125607,7 +125607,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1ddafb96-cbb3-4a2c-98be-355228dc577e")
@@ -125619,7 +125619,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fb62eaf5-0d90-4215-883e-c10921bd529f")
@@ -125631,7 +125631,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "2.2uF"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "54304ff8-f38f-4370-bcf2-e0b1e8618063")
@@ -125643,7 +125643,7 @@
 			)
 		)
 		(property "TAMAX_C" "125°C"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2ad31e9e-dbf9-40b7-8ad0-ed9ca5e04eb6")
@@ -125655,7 +125655,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f3fce327-6af9-4583-8d08-450c71bcf5cc")
@@ -125667,7 +125667,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Taiyo Yuden"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1543d1aa-e881-4ef4-ab8c-07f627c87a1d")
@@ -125679,7 +125679,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "0603"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c55bf21e-4f6b-4138-9a65-f756a10d08cb")
@@ -125691,7 +125691,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "10%"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "80b607c5-9410-4c51-a425-4a1352c1cb0c")
@@ -125703,7 +125703,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "1"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9a9fa51e-e628-419a-babb-1b03e89bb616")
@@ -125715,7 +125715,7 @@
 			)
 		)
 		(property "SIZEX_MM" "1.6"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "57c21e65-918d-4a75-9c22-751d0abf6dbb")
@@ -125727,7 +125727,7 @@
 			)
 		)
 		(property "SIZEY_MM" "0.8"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eb048f07-24b9-414d-b305-68c271b8e1c4")
@@ -125739,7 +125739,7 @@
 			)
 		)
 		(property "CAP_CASE" "0603"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4d0ed35a-c6d0-42ee-b6d8-db7a725999c6")
@@ -125751,7 +125751,7 @@
 			)
 		)
 		(property "VALUE2" "16V"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ea691761-1922-485b-b9dd-c90a1ba03c33")
@@ -125763,7 +125763,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "1.28"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b71196cc-752c-4e1a-85b7-65cf6bff18b5")
@@ -125775,7 +125775,7 @@
 			)
 		)
 		(property "COMPTYPE" "Capacitor"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4ea43baf-9c05-4708-b9f8-0ed6bcf5a26a")
@@ -125787,7 +125787,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2017-03-09"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "49b65ba4-1cc6-4ee0-8a56-21034fe598bd")
@@ -125799,7 +125799,7 @@
 			)
 		)
 		(property "PARTNUMBER" "EMK107BB7225KA-T"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "47d239bd-9d6a-4e27-90c9-173ca6167450")
@@ -125811,7 +125811,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "N"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "daa04289-b205-4c10-8996-ebf035c742cd")
@@ -125823,7 +125823,7 @@
 			)
 		)
 		(property "CAP_F" "2.2µF"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c9132534-a66f-47e7-b9f8-ccb84661a6b3")
@@ -125835,7 +125835,7 @@
 			)
 		)
 		(property "VDC_V" "16V"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5d1cb8ef-79d9-4b29-9767-a9ba7c964cba")
@@ -125847,7 +125847,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "18a8d507-9265-403c-b751-09b6e7ac886b")
@@ -125859,7 +125859,7 @@
 			)
 		)
 		(property "AEC GRADE" "N/A"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9e9e9c8e-2ac1-4d3c-8dfb-89cc59b88813")
@@ -125871,7 +125871,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "EMK107BB7225KA-T-ND"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a6016cb6-ff19-4f53-8777-26d0ae9753ec")
@@ -125883,7 +125883,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9afc4809-3396-4cfb-a7d4-1b7d78ec67d8")
@@ -125895,7 +125895,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Ceramic"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fa5a1aa4-a3bc-4414-89b9-3215130d0f98")
@@ -125907,7 +125907,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "2.2uF"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b20e8090-e99a-4f31-96a6-014ab495dece")
@@ -125919,7 +125919,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.yuden.co.jp/productdata/catalog/en/mlcc_all_e.pdf"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0a577e8c-9349-4dd7-b99b-b5417c134587")
@@ -125931,7 +125931,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9830c595-e2dd-47a0-be1b-8b4a88d65c2b")
@@ -125943,7 +125943,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2d565696-2854-493c-82e6-6c88caeaa25a")
@@ -125955,7 +125955,7 @@
 			)
 		)
 		(property "ESR_OHM" ""
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7eded63c-8c57-4eeb-bf90-8ed2de76d6b6")
@@ -125967,7 +125967,7 @@
 			)
 		)
 		(property "IRMS_A" ""
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f6e0797e-a33a-401a-be99-491187d842e8")
@@ -125979,7 +125979,7 @@
 			)
 		)
 		(property "MPN" "EMK107BB7225KA-T"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d4ba7092-50d5-4c80-ad10-6c6e66640758")
@@ -125991,7 +125991,7 @@
 			)
 		)
 		(property "Manufacturer" "Taiyo Yuden"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "661d51d3-be7a-48ee-98a7-2f1ccbff4178")
@@ -126057,7 +126057,7 @@
 			(uuid "64735eed-e643-4517-b3ff-4044d364266b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "8813262d-009f-4f43-a754-e1df027fa66b")
 			(effects
@@ -126068,7 +126068,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8625 0 270)
+			(at -0.8625 0)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -126078,7 +126078,7 @@
 			(uuid "02dd3701-c14f-52ae-8543-fd038956fedd")
 		)
 		(pad "2" smd roundrect
-			(at 0.8625 0 270)
+			(at 0.8625 0)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -126797,7 +126797,7 @@
 		(layer "F.Cu")
 		(uuid "9db4e775-4d84-4a78-b525-599adcc7227d")
 		(transform
-			(translate 354.8000 101.5500)
+			(translate 339.3000 110.0500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -137047,7 +137047,7 @@
 		(layer "F.Cu")
 		(uuid "a6a6dcb7-e3af-40d7-acb6-2db22ed42e2c")
 		(transform
-			(translate 355.3000 123.0500)
+			(translate 351.3000 125.0500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -137754,14 +137754,14 @@
 		(layer "F.Cu")
 		(uuid "a6d1a591-ecc6-4a32-b886-7f695fdc692c")
 		(transform
-			(translate 341.8000 122.0500)
-			(rotate 180)
+			(translate 355.8000 121.0500)
+			(rotate 270)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C1732"
-			(at 0 -1.68 180)
+			(at 0 -1.68 270)
 			(layer "F.Fab")
 			(uuid "66b0be03-e254-58c6-85c2-e400609457ec")
 			(effects
@@ -137772,7 +137772,7 @@
 			)
 		)
 		(property "Value" "100pF"
-			(at 0 1.68 180)
+			(at 0 1.68 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e5487724-a3be-50f4-99ea-ed7c9b6363a8")
@@ -137784,7 +137784,7 @@
 			)
 		)
 		(property "Datasheet" "http://search.murata.co.jp/Ceramy/PnsearchViewAction.do?HnOFG=ON&HnNFG=ON&SEL_CNT=50&sLang=en&sKey=GRM21A5C2E101JW01D&x=9&y=9&search=startwith"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f828422c-d01a-507b-85b2-215fbfe68726")
@@ -137796,7 +137796,7 @@
 			)
 		)
 		(property "Description" "CAP, CERM, 100 pF, 250 V, +/- 5%, C0G/NP0, 0805"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a1697ec2-5ff1-5438-9c8f-490ed1774236")
@@ -137808,7 +137808,7 @@
 			)
 		)
 		(property "POLARIZED" "N"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "57226de0-2769-4906-8207-33eb1ac2a3bd")
@@ -137820,7 +137820,7 @@
 			)
 		)
 		(property "COMPTYPE" "Capacitor"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "de82d7f8-e407-4741-98a0-5574d0267765")
@@ -137832,7 +137832,7 @@
 			)
 		)
 		(property "SYMBOLVERSION" "2008-07-09"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7038878a-03cc-45dd-b48e-c337f79d7911")
@@ -137844,7 +137844,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "100pF"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9f6b259f-306b-4269-931f-d8e1ada5ce25")
@@ -137856,7 +137856,7 @@
 			)
 		)
 		(property "PARTNUMBER" "GRM21A5C2E101JW01D"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "49cd2e11-6984-4933-af69-bef5e2fa525b")
@@ -137868,7 +137868,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "100pF"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "57e0107c-55b7-4b36-a483-0f788c9afe9c")
@@ -137880,7 +137880,7 @@
 			)
 		)
 		(property "MANUFACTURER" "MuRata"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fdb900b6-cdc8-4951-8dbf-e63c84e504dc")
@@ -137892,7 +137892,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "0805"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6befbfe3-bd1c-4af0-b740-7de1d440a2b3")
@@ -137904,7 +137904,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "55e4c6a7-1bba-47eb-b4b1-409cc6426c3b")
@@ -137916,7 +137916,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "34b0dd43-8a2a-4703-bfa2-6a23f8aaf390")
@@ -137928,7 +137928,7 @@
 			)
 		)
 		(property "CAP_F" "0.0000000001"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "981fbccc-0fc4-450d-be38-7aca530f0861")
@@ -137940,7 +137940,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "5"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c5dc4383-44b8-4e93-8405-a87632deea76")
@@ -137952,7 +137952,7 @@
 			)
 		)
 		(property "ESR_OHM" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "13cbdce8-fc5e-4b56-94a9-57b75796fc85")
@@ -137964,7 +137964,7 @@
 			)
 		)
 		(property "VALUE1" "Unknown"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f699485e-fc83-4ddb-a3fc-663c4517bfa0")
@@ -137976,7 +137976,7 @@
 			)
 		)
 		(property "VDC_V" "250"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ec5b32b6-cbdd-4d58-a11e-5b89cb1eb921")
@@ -137988,7 +137988,7 @@
 			)
 		)
 		(property "VALUE2" "250V"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c9938243-878e-4bab-8925-b7f3acd843bf")
@@ -138000,7 +138000,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9a2ecfa0-43cd-4ca5-afdd-64dbefd82569")
@@ -138012,7 +138012,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Ceramic"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d393891f-85a2-47f4-bad9-a860539e6e40")
@@ -138024,7 +138024,7 @@
 			)
 		)
 		(property "TEMPCO" "C0G/NP0"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fdcf8327-7026-46d5-9e01-4ed1218f5830")
@@ -138036,7 +138036,7 @@
 			)
 		)
 		(property "IRMS_A" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7f94f01a-c1f1-4852-b1bb-fa260ae68610")
@@ -138048,7 +138048,7 @@
 			)
 		)
 		(property "TAMIN_C" "-55"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9ebb8f26-5090-4723-97cf-28876a71e8c5")
@@ -138060,7 +138060,7 @@
 			)
 		)
 		(property "TAMAX_C" "125"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b633fda4-017a-44d3-b0d8-91d285275581")
@@ -138072,7 +138072,7 @@
 			)
 		)
 		(property "CAP_CASE" "0805"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b2363fad-e246-4392-a99c-2a9f60d49eb1")
@@ -138084,7 +138084,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "2.5"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "81c6ee7d-7d86-49f4-bc91-4e61f34a85fe")
@@ -138096,7 +138096,7 @@
 			)
 		)
 		(property "SIZEAREAWB_MM2" "6.75"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "091b425a-248b-4521-8c17-75a57b1ea9cb")
@@ -138108,7 +138108,7 @@
 			)
 		)
 		(property "SIZEX_MM" "2"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6e70b0a7-2226-497b-9489-4b2f75d6c64b")
@@ -138120,7 +138120,7 @@
 			)
 		)
 		(property "SIZEY_MM" "1.25"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b6087536-f7de-405c-9e01-d8aacc82228b")
@@ -138132,7 +138132,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "1.45"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b2624f09-3521-4266-8435-df4ba7eccaf1")
@@ -138144,7 +138144,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-19"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7d9746f2-3b50-4222-814d-db9740afe3b1")
@@ -138156,7 +138156,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c1f74e9c-2c83-4e9a-97fc-33e657ba0d44")
@@ -138168,7 +138168,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2016-07-02"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ce011d61-0a7e-48f0-9b4a-0446ef43dccf")
@@ -138180,7 +138180,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c583dd40-f3a6-46d9-9e07-3d5978075b18")
@@ -138192,7 +138192,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://search.murata.co.jp/Ceramy/PnsearchViewAction.do?HnOFG=ON&HnNFG=ON&SEL_CNT=50&sLang=en&sKey=GRM21A5C2E101JW01D&x=9&y=9&search=startwith"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "516e779f-ee99-477d-87c5-7e27fbc83543")
@@ -138204,7 +138204,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7e0bbffa-84fb-488e-bc75-da0a3397aa63")
@@ -138216,7 +138216,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "992038cc-a75a-4955-942e-44b7ce44aa6b")
@@ -138228,7 +138228,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5806f430-a7b2-461b-b666-6c2655750465")
@@ -138240,7 +138240,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "490-5542-1-ND"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9a515817-80a9-44be-acb2-81f805331d1c")
@@ -138252,7 +138252,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Mouser"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d793708c-8e83-440d-9a7d-32c140fe7bc2")
@@ -138264,7 +138264,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "81-GRM21A5C2E101JW1D"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fbf7ce19-cff7-467d-bb97-9f889a16a9b5")
@@ -138276,7 +138276,7 @@
 			)
 		)
 		(property "SUPPLIER 3" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "955d084b-5aea-451c-b9ec-21a541180bbf")
@@ -138288,7 +138288,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "626eae80-adf0-4cfd-8c1c-2f2c7127b370")
@@ -138300,7 +138300,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "debe2fcf-62ff-40a3-a916-98489cab1e3e")
@@ -138312,7 +138312,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "?"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "33a467f1-a57a-41b0-a6d4-317572ed6fa8")
@@ -138324,7 +138324,7 @@
 			)
 		)
 		(property "AEC GRADE" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "614679c5-ba8a-4fe7-bc7f-3071d116f572")
@@ -138336,7 +138336,7 @@
 			)
 		)
 		(property "MPN" "GRM21A5C2E101JW01D"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3ce3e1fa-9393-4e05-8875-a89cbddcaab2")
@@ -138348,7 +138348,7 @@
 			)
 		)
 		(property "Manufacturer" "MuRata"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "693cfaf4-7290-4ec3-866a-00f1047e6bc2")
@@ -138414,7 +138414,7 @@
 			(uuid "7ad403c5-87b5-4c57-95c3-73ef1ae3a002")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "a4827f14-61cd-4e86-93a7-c5451e2eb364")
 			(effects
@@ -138425,7 +138425,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.0375 0 180)
+			(at -1.0375 0 270)
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
@@ -138435,7 +138435,7 @@
 			(uuid "d8672fd5-d512-5274-bdd6-4ca1ff92efd3")
 		)
 		(pad "2" smd roundrect
-			(at 1.0375 0 180)
+			(at 1.0375 0 270)
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
@@ -142105,14 +142105,14 @@
 		(layer "F.Cu")
 		(uuid "ac285d9c-6948-41ae-a9a8-3da1d56799a8")
 		(transform
-			(translate 339.3000 117.5500)
-			(rotate 180)
+			(translate 336.8000 132.0500)
+			(rotate 270)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1757"
-			(at 0 -1.43 180)
+			(at 0 -1.43 270)
 			(layer "F.Fab")
 			(uuid "d866bf64-4670-5222-addc-412324a4fffd")
 			(effects
@@ -142123,7 +142123,7 @@
 			)
 		)
 		(property "Value" "887"
-			(at 0 1.43 180)
+			(at 0 1.43 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7e527c4f-66cf-5253-b08a-85298d1e2ef0")
@@ -142135,7 +142135,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.vishay.com/docs/20035/dcrcwe3.pdf"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "47649bab-964a-5358-9be0-f184f7e75564")
@@ -142147,7 +142147,7 @@
 			)
 		)
 		(property "Description" "RES, 887, 1%, 0.1 W, AEC-Q200 Grade 0, 0603"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "24b33573-1e04-5d8d-9d28-97094154a079")
@@ -142159,7 +142159,7 @@
 			)
 		)
 		(property "COMPTYPE" "Resistor"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2472d4d1-832c-42de-9fb6-0f8fdca90070")
@@ -142171,7 +142171,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "887"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7741e1a0-1ab7-442e-b782-43088f694c87")
@@ -142183,7 +142183,7 @@
 			)
 		)
 		(property "PARTNUMBER" "CRCW0603887RFKEA"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3d420937-0e33-4cdb-83e5-e2419e005431")
@@ -142195,7 +142195,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "887"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7bbf2fb5-249d-4089-818e-b9a695f3cf44")
@@ -142207,7 +142207,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Vishay-Dale"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "91aa547d-6e33-4b4a-b8bf-a60580f8eff0")
@@ -142219,7 +142219,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "0603"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e33474c4-00c8-48e0-9403-ecf34d808afa")
@@ -142231,7 +142231,7 @@
 			)
 		)
 		(property "ROHS" "E"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a7a4899d-7ca9-4c57-9e59-4fa3d5cfd5be")
@@ -142243,7 +142243,7 @@
 			)
 		)
 		(property "RES_OHM" "887"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ab007047-a14b-4f86-a715-1cc74f46cae6")
@@ -142255,7 +142255,7 @@
 			)
 		)
 		(property "VALUE_CODE" "887R"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2e1acfe2-4cd3-4d3a-a9ce-1b25afd4fa53")
@@ -142267,7 +142267,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "1%"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8843a8ea-f30c-4748-8a81-ecfe1d57fd89")
@@ -142279,7 +142279,7 @@
 			)
 		)
 		(property "VALUE1" "1%"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "20508730-dedc-4299-93aa-1e3ab3071554")
@@ -142291,7 +142291,7 @@
 			)
 		)
 		(property "POWER_W" "100mW"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0744441a-5740-42a0-9159-062f5c5222de")
@@ -142303,7 +142303,7 @@
 			)
 		)
 		(property "VALUE2" "0.1W"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c014cc4c-7d93-46e0-9fc0-016f3b256975")
@@ -142315,7 +142315,7 @@
 			)
 		)
 		(property "VDC_V" "75V"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cde3861b-0b12-42c4-880b-883747bfa476")
@@ -142327,7 +142327,7 @@
 			)
 		)
 		(property "TEMPCO" "100 ppm/C"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8bafa82e-dcb9-49b1-a668-9ccd95e24889")
@@ -142339,7 +142339,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f68eb9cb-aa54-4ca4-9418-2f70d884bd1b")
@@ -142351,7 +142351,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Thick Film"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "10a412a2-c16e-4560-9ad4-0abc68216945")
@@ -142363,7 +142363,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "1.28"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e5347644-78f4-41c5-a59f-67ded5fb00b3")
@@ -142375,7 +142375,7 @@
 			)
 		)
 		(property "SIZEX_MM" "1.6"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "281c497d-8bc3-4e58-920a-49d3f2532b1d")
@@ -142387,7 +142387,7 @@
 			)
 		)
 		(property "SIZEY_MM" "0.8"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ccc83624-d7fc-49e1-b0b0-92c1bee405c9")
@@ -142399,7 +142399,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "1"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3f215c05-8e19-48ea-ac15-fdb2e01e1892")
@@ -142411,7 +142411,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9b94997d-d9e5-47b3-b8d5-18af563e56d4")
@@ -142423,7 +142423,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.vishay.com/docs/20035/dcrcwe3.pdf"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "83dbca8c-db30-4bd0-8693-ddebff924d08")
@@ -142435,7 +142435,7 @@
 			)
 		)
 		(property "EIA_CODE" "E96"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6aeb2bee-5c48-4c1c-9fa1-4489f51d8f53")
@@ -142447,7 +142447,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6cd8e32f-8504-4cc1-aa16-0c8beb3dc30f")
@@ -142459,7 +142459,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cffd245b-2ccf-4c43-96a6-334a7ae4fe04")
@@ -142471,7 +142471,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8c1686c6-0ef9-428a-88dd-5d9520479ff4")
@@ -142483,7 +142483,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "541-887HCT-ND"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1498905d-57cd-4e0e-9387-1dffd6c36751")
@@ -142495,7 +142495,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Mouser"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "450edfad-2c5b-4beb-8f03-28ac3768524f")
@@ -142507,7 +142507,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "71-CRCW0603-887-E3"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a471112d-0c18-4644-97a7-9791d727cb63")
@@ -142519,7 +142519,7 @@
 			)
 		)
 		(property "SUPPLIER 3" "Farnell"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c0905401-08b2-4294-9044-2004a73aa515")
@@ -142531,7 +142531,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" "1878638"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2440fc3e-d0b8-4133-b882-b57b2f7e4279")
@@ -142543,7 +142543,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1fea287b-a3bf-465b-9b17-814f6d88dba3")
@@ -142555,7 +142555,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "Y"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cc81fc4c-2f56-4123-9d1f-843c459a5525")
@@ -142567,7 +142567,7 @@
 			)
 		)
 		(property "AEC GRADE" "0"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5f5d14c9-02dc-4efa-9431-2ce965d5b6c7")
@@ -142579,7 +142579,7 @@
 			)
 		)
 		(property "GREEN_EU ROHS" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2c9bbfe1-85d7-4477-ba94-223560bda0b9")
@@ -142591,7 +142591,7 @@
 			)
 		)
 		(property "GREEN_EU ROHS-2" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5fbee5af-b3f4-4d42-a81f-245f50b57abd")
@@ -142603,7 +142603,7 @@
 			)
 		)
 		(property "GREEN_LIFECYCLE" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c0d3691d-418b-4d4d-895e-c218baff89b8")
@@ -142615,7 +142615,7 @@
 			)
 		)
 		(property "GREEN_REACH" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3f1de15f-2c4a-43fe-a892-05c90f468419")
@@ -142627,7 +142627,7 @@
 			)
 		)
 		(property "MPN" "CRCW0603887RFKEA"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5641a7de-e1bf-4243-9e34-31900a8036b6")
@@ -142639,7 +142639,7 @@
 			)
 		)
 		(property "Manufacturer" "Vishay-Dale"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d314cbb8-b641-4eff-beb2-4a242e7fdb14")
@@ -142705,7 +142705,7 @@
 			(uuid "7e3284cc-ef60-4097-9476-54fa5cd6a46d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "4339fa88-e872-437b-8b0e-f7672e27361e")
 			(effects
@@ -142716,7 +142716,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 180)
+			(at -0.9125 0 270)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -142726,7 +142726,7 @@
 			(uuid "2ccb8239-7d02-5847-976f-6d53a656c45c")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 180)
+			(at 0.9125 0 270)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -154670,7 +154670,7 @@
 		(layer "F.Cu")
 		(uuid "b6304ec2-5456-4dd5-8c0a-30be2e999d8b")
 		(transform
-			(translate 351.8000 116.0500)
+			(translate 353.3000 116.0500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -161597,7 +161597,7 @@
 		(layer "F.Cu")
 		(uuid "bd57211a-6f17-42a0-921b-86232696e720")
 		(transform
-			(translate 349.3000 106.5500)
+			(translate 346.3000 104.0500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -164578,14 +164578,14 @@
 		(layer "F.Cu")
 		(uuid "c0d6fc5a-f267-4c1b-bcc6-68e86536cfa8")
 		(transform
-			(translate 379.8000 86.0500)
-			(rotate 270)
+			(translate 385.8000 98.0500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1811"
-			(at 0 -1.43 270)
+			(at 0 -1.43 180)
 			(layer "F.Fab")
 			(uuid "fe283d13-41b4-5b1c-b57a-a2b9abd90868")
 			(effects
@@ -164596,7 +164596,7 @@
 			)
 		)
 		(property "Value" "12kR"
-			(at 0 1.43 270)
+			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "64b79f51-b94e-5831-ab37-ff97be0b6e1d")
@@ -164608,7 +164608,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "11620dff-c7f0-56a2-a0d5-1ec443d103f2")
@@ -164620,7 +164620,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "af2c6ec2-3980-5638-aeb3-19b0f72660f0")
@@ -164632,7 +164632,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-0712KL"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8b6fd8b6-c564-47ff-8f59-dd718d48619a")
@@ -164644,7 +164644,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "721e2650-e173-4188-8a95-c4dac7c95506")
@@ -164656,7 +164656,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a256918c-93db-45d7-a3db-70a7f5576f0c")
@@ -164668,7 +164668,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "df4acba0-b8cb-436f-babf-04fe1b54f4b4")
@@ -164734,7 +164734,7 @@
 			(uuid "9adaa567-1a91-4ae3-a08a-c5aa6de5bd74")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "cd2cf79d-1ecd-47f0-8207-da5577597c03")
 			(effects
@@ -164745,7 +164745,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 270)
+			(at -0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -164754,7 +164754,7 @@
 			(uuid "e497de8e-3b84-5ccf-aa0d-567c90577e74")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 270)
+			(at 0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -167636,14 +167636,14 @@
 		(layer "F.Cu")
 		(uuid "c4b433af-d9f2-484c-8d91-76ea18882ffc")
 		(transform
-			(translate 371.3000 77.5500)
-			(rotate 270)
+			(translate 348.3000 100.5500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1723"
-			(at 0 -1.43 270)
+			(at 0 -1.43)
 			(layer "F.Fab")
 			(uuid "f6675181-c8b6-5e9e-a6dc-e9cc6f6619ba")
 			(effects
@@ -167654,7 +167654,7 @@
 			)
 		)
 		(property "Value" "24.9kR"
-			(at 0 1.43 270)
+			(at 0 1.43)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "32c68628-a884-58d5-bd46-ce3bc37eb2a6")
@@ -167666,7 +167666,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e9d85059-cf81-5a04-b97d-86347df99c51")
@@ -167678,7 +167678,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "046a4a1b-0aab-5e1a-a85e-649228329262")
@@ -167690,7 +167690,7 @@
 			)
 		)
 		(property "MPN" "CRCW060324K9FKEA"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d8a19715-bd01-475b-a1c7-3abb9bc1845c")
@@ -167702,7 +167702,7 @@
 			)
 		)
 		(property "Manufacturer" "Vishay"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ab8163b8-6629-41ef-a044-a6ca01779002")
@@ -167714,7 +167714,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fdb210c1-9df1-4b2c-8e22-005d784a861a")
@@ -167726,7 +167726,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7d8cf82f-48b1-4f99-827c-1ab67effc9ea")
@@ -167792,7 +167792,7 @@
 			(uuid "2fe93284-8d78-45ff-95ea-272bb0c15711")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "ef6a661f-5d67-4196-b81b-c32fcaf9e327")
 			(effects
@@ -167803,7 +167803,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 270)
+			(at -0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -167812,7 +167812,7 @@
 			(uuid "3a65ad03-d319-591f-9a30-48fab8443cf3")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 270)
+			(at 0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -175021,14 +175021,14 @@
 		(layer "F.Cu")
 		(uuid "cfc22e14-331c-4db5-952b-d828a50aa000")
 		(transform
-			(translate 337.8000 124.5500)
-			(rotate 90)
+			(translate 345.3000 120.5500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 2010 (5025 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1736"
-			(at 0 -2.28 90)
+			(at 0 -2.28)
 			(layer "F.Fab")
 			(uuid "b3aee1da-d722-5b3e-9864-76ed20359bd0")
 			(effects
@@ -175039,7 +175039,7 @@
 			)
 		)
 		(property "Value" "75"
-			(at 0 2.28 90)
+			(at 0 2.28)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "043a877c-d528-5123-a3be-aac37a26e23b")
@@ -175051,7 +175051,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.vishay.com/doc?20035"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0e8cf904-0edf-5fc3-9561-bbe4de2cfa4b")
@@ -175063,7 +175063,7 @@
 			)
 		)
 		(property "Description" "RES, 75, 5%, 0.75 W, AEC-Q200 Grade 0, 2010"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a748a8d6-48ab-52f1-b737-18c1d1fbcf28")
@@ -175075,7 +175075,7 @@
 			)
 		)
 		(property "COMPTYPE" "Resistor"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8aabeb79-8b65-45e7-8e03-2b524a116c72")
@@ -175087,7 +175087,7 @@
 			)
 		)
 		(property "SYMBOLVERSION" "2009-05-29"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "207aabf7-c6b9-4687-bf4d-58329cb45324")
@@ -175099,7 +175099,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "75"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "be08428a-cae0-4911-bcb8-1bfb513a8f58")
@@ -175111,7 +175111,7 @@
 			)
 		)
 		(property "PARTNUMBER" "CRCW201075R0JNEF"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "44ea7f2f-e5c6-45f5-834c-4bdcf7c1de1f")
@@ -175123,7 +175123,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "75"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b9a875fc-adea-4afc-b106-183dd36866f6")
@@ -175135,7 +175135,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Vishay-Dale"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7ff2283f-7b55-4130-8e09-1291b1b0a6f5")
@@ -175147,7 +175147,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "2010"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5219f069-ae72-47f7-818c-a4cdd59d2caa")
@@ -175159,7 +175159,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "43cf186c-fe3e-4ce1-93f9-c64a6af97aaf")
@@ -175171,7 +175171,7 @@
 			)
 		)
 		(property "RES_OHM" "75"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "20919d4f-3829-42fc-a93b-eb93f48a1e8d")
@@ -175183,7 +175183,7 @@
 			)
 		)
 		(property "VALUE_CODE" "75R0"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "62e8259b-bc43-4260-8bb2-f6688f8ac448")
@@ -175195,7 +175195,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "5"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "95159066-fbb1-43a4-bd6a-96f5c1f11f1f")
@@ -175207,7 +175207,7 @@
 			)
 		)
 		(property "VALUE1" "5%"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0c7ecd34-c0f0-4a71-92eb-c0060f825e67")
@@ -175219,7 +175219,7 @@
 			)
 		)
 		(property "POWER_W" "0.75"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4ccf3432-8b71-4e2b-b854-96513178263b")
@@ -175231,7 +175231,7 @@
 			)
 		)
 		(property "VALUE2" "0.75W"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4cfbaa09-ce55-4595-909a-94eba71012a0")
@@ -175243,7 +175243,7 @@
 			)
 		)
 		(property "VDC_V" "400"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "877bf21d-8c8c-47e4-b355-1f9e4c57ddd3")
@@ -175255,7 +175255,7 @@
 			)
 		)
 		(property "TEMPCO" "200 ppm/C"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "16849349-27d9-4601-ae22-6574dc4639ac")
@@ -175267,7 +175267,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bf8a975c-fb24-4232-8199-a76cf6b85d1b")
@@ -175279,7 +175279,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Thick Film"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "646586f4-6f10-4ba3-b639-553fffabd0aa")
@@ -175291,7 +175291,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "12.5"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "83d3ff7f-14a4-4a18-bdcb-ed21dd7ecf8a")
@@ -175303,7 +175303,7 @@
 			)
 		)
 		(property "SIZEX_MM" "5"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "34267912-96d8-4e03-8f16-1cc19bf16991")
@@ -175315,7 +175315,7 @@
 			)
 		)
 		(property "SIZEY_MM" "2.5"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "efa75494-29c7-483f-828e-2b09ceac440d")
@@ -175327,7 +175327,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "1.66"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9898d11b-ad1b-436f-b939-4c503fdff25b")
@@ -175339,7 +175339,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-26"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "47aa5ac7-9cb3-47fe-b4a9-33c1b2e242c3")
@@ -175351,7 +175351,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e0ca7bba-4399-46bd-8106-5c04c661e669")
@@ -175363,7 +175363,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2016-06-10"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e40cbf30-791e-4c56-b91d-cc2f03c4020d")
@@ -175375,7 +175375,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7353174b-2d64-4cf4-9f6a-0b1dbce92cb1")
@@ -175387,7 +175387,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.vishay.com/doc?20035"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ab74708f-bab3-416b-9380-a037364c9451")
@@ -175399,7 +175399,7 @@
 			)
 		)
 		(property "EIA_CODE" "E24"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c2c337f2-ed6f-4c4f-a1e2-cd16e7052258")
@@ -175411,7 +175411,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "626c7c11-bbeb-44ac-9a47-87a5e4da35d1")
@@ -175423,7 +175423,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e1b54630-369d-4084-9bb3-e090e2f2d2fc")
@@ -175435,7 +175435,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "627ebb72-9087-4789-879b-27df1e5a1d23")
@@ -175447,7 +175447,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f1973da2-63ed-441f-9b83-4efa7a1b83dd")
@@ -175459,7 +175459,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "541-75.0WCT-ND"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9d7632e9-e08a-4beb-8f30-92370b8c7560")
@@ -175471,7 +175471,7 @@
 			)
 		)
 		(property "SUPPLIER 2" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "541dbdc7-57b9-4b8e-8f0b-78ee406a5348")
@@ -175483,7 +175483,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c237789e-ab55-4247-a911-8f01f07a9ec3")
@@ -175495,7 +175495,7 @@
 			)
 		)
 		(property "SUPPLIER 3" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f93415c1-faf0-439b-b6aa-71b241961a17")
@@ -175507,7 +175507,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "391bfb51-fe8d-4f3c-9a1a-d3487c7353b2")
@@ -175519,7 +175519,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "80d0e472-9423-48b2-b5b2-060e29842e57")
@@ -175531,7 +175531,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "Y"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "22ff4f92-20bf-4f5c-9871-e54ad408b11d")
@@ -175543,7 +175543,7 @@
 			)
 		)
 		(property "AEC GRADE" "0"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a90d20df-da4f-4d06-b009-7b06e3f06e9b")
@@ -175555,7 +175555,7 @@
 			)
 		)
 		(property "MPN" "CRCW201075R0JNEF"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2df455ca-8ce0-46e3-9b71-067073ccf642")
@@ -175567,7 +175567,7 @@
 			)
 		)
 		(property "Manufacturer" "Vishay-Dale"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ea3f1cb8-e47d-476c-8695-f06aee204617")
@@ -175633,7 +175633,7 @@
 			(uuid "e36ebb54-08bc-4118-b44e-95cef98bdccc")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "fc789d2e-7a1b-4c23-b8f8-1d16b457b0c2")
 			(effects
@@ -175644,7 +175644,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -2.4 0 90)
+			(at -2.4 0)
 			(size 1.4 2.65)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.178571)
@@ -175654,7 +175654,7 @@
 			(uuid "ee0b220d-fa7f-5b70-9479-2d975a232195")
 		)
 		(pad "2" smd roundrect
-			(at 2.4 0 90)
+			(at 2.4 0)
 			(size 1.4 2.65)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.178571)
@@ -183688,14 +183688,14 @@
 		(layer "F.Cu")
 		(uuid "d8365612-8923-499e-8c5d-475997284c06")
 		(transform
-			(translate 355.3000 120.0500)
-			(rotate 0)
+			(translate 371.3000 73.0500)
+			(rotate 270)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1801"
-			(at 0 -1.43)
+			(at 0 -1.43 270)
 			(layer "F.Fab")
 			(uuid "8e17803a-d940-5d77-adfb-7cd5ffbe03b8")
 			(effects
@@ -183706,7 +183706,7 @@
 			)
 		)
 		(property "Value" "6.8kR"
-			(at 0 1.43)
+			(at 0 1.43 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "be5e3129-e8ca-5b9c-8a41-37a22467ca4e")
@@ -183718,7 +183718,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ee1d4280-52dc-50e5-8744-070f577472f3")
@@ -183730,7 +183730,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9a3a8d07-ca98-55b8-9eda-77e47f5ca030")
@@ -183742,7 +183742,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-076K8L"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "520c6f1f-fb16-4197-a1b0-5f500b83b562")
@@ -183754,7 +183754,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8ca7de7d-bd62-4bf5-9962-a6eda6eb7fec")
@@ -183766,7 +183766,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a20d7fb3-d0fa-4121-b843-ca16ea54b5cd")
@@ -183778,7 +183778,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e220df6e-010a-4680-8d9c-84b82d5a3daf")
@@ -183844,7 +183844,7 @@
 			(uuid "e532ff9b-2457-4b49-abe6-06f1238cbc7e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "db478c6b-d21b-4fc9-82f6-51906e689f8b")
 			(effects
@@ -183855,7 +183855,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0)
+			(at -0.9125 0 270)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -183864,7 +183864,7 @@
 			(uuid "2f7d16f7-4e41-5473-8ab1-3a3ce44a9b21")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0)
+			(at 0.9125 0 270)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -184339,14 +184339,14 @@
 		(layer "F.Cu")
 		(uuid "d8517216-5a44-47a0-816c-0d3d8f0fa2a0")
 		(transform
-			(translate 341.3000 103.5500)
-			(rotate 270)
+			(translate 350.3000 73.5500)
+			(rotate 90)
 			(scale 1 1)
 		)
 		(descr "SOD-123")
 		(tags "SOD-123")
 		(property "Reference" "D1717"
-			(at 0 -2 270)
+			(at 0 -2 90)
 			(layer "F.Fab")
 			(uuid "07ec994d-ac95-5f5a-a354-e89161da61b6")
 			(effects
@@ -184357,7 +184357,7 @@
 			)
 		)
 		(property "Value" "100V"
-			(at 0 2.1 270)
+			(at 0 2.1 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c4e62615-ccf8-5b27-a733-c7aaaa710add")
@@ -184369,7 +184369,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MMSD4148T1-D.PDF"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bc7c1da0-30ea-5cb6-84ce-63a64fd05540")
@@ -184381,7 +184381,7 @@
 			)
 		)
 		(property "Description" "Diode, Switching, 100 V, 0.2 A, SOD-123"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0b0b322e-40a1-5bb4-86c7-d33e95226784")
@@ -184393,7 +184393,7 @@
 			)
 		)
 		(property "SYMBOLVERSION" "2008-12-08"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6e0be037-d22a-4f35-aac8-310adf4d418d")
@@ -184405,7 +184405,7 @@
 			)
 		)
 		(property "PARTNUMBER" "MMSD4148T1G"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a861f978-2d58-4f39-9f3b-d6c150961ff0")
@@ -184417,7 +184417,7 @@
 			)
 		)
 		(property "MANUFACTURER" "ON Semiconductor"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9ec0c8ef-0b36-47c1-881c-67df5a651cde")
@@ -184429,7 +184429,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "SOD-123"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cf1b0f23-a866-4ea6-91d0-ead2145a5366")
@@ -184441,7 +184441,7 @@
 			)
 		)
 		(property "COMPTYPE" "Diode"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "878967ec-f07d-4e90-b9c2-8fbd021e8239")
@@ -184453,7 +184453,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4dac03fa-5b29-4dee-ab1b-782b024d3ca3")
@@ -184465,7 +184465,7 @@
 			)
 		)
 		(property "VF_V" "1"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8c42b7a7-2099-4903-9868-a60e5ef00e62")
@@ -184477,7 +184477,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "100V"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e68cb641-c348-440a-b6d1-8c3fb76e6143")
@@ -184489,7 +184489,7 @@
 			)
 		)
 		(property "VALUE1" "0.2A"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7eeb887d-54d7-48ec-8d00-7fa2dc5e5cac")
@@ -184501,7 +184501,7 @@
 			)
 		)
 		(property "VALUE2" "1V"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "56a60a1e-6dda-4334-8465-ef8df78870f2")
@@ -184513,7 +184513,7 @@
 			)
 		)
 		(property "IO_A" "0.2"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "69f76e5d-54cf-4993-b50a-63a499c3f2af")
@@ -184525,7 +184525,7 @@
 			)
 		)
 		(property "VR_V" "100"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b3c63382-e325-49ba-aa8b-231427382848")
@@ -184537,7 +184537,7 @@
 			)
 		)
 		(property "TJMAX_C" "150"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0453d326-43e9-43a2-af73-daf2a7f88927")
@@ -184549,7 +184549,7 @@
 			)
 		)
 		(property "RJC_CPERW" ""
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d0e9d7be-beb6-4f65-b37b-d4ec494ded8f")
@@ -184561,7 +184561,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cf286d7f-3042-435e-a6ec-b760ec9a5b92")
@@ -184573,7 +184573,7 @@
 			)
 		)
 		(property "TYPE" "Switching"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f18ccc6c-7b42-4d0e-b7aa-4883f34c61ae")
@@ -184585,7 +184585,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9e4589ae-0c7b-41bb-be80-0a90a6da6ed0")
@@ -184597,7 +184597,7 @@
 			)
 		)
 		(property "SIZEAREAWB_MM2" "13.095"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d240709f-2c17-4732-81a9-80d550a6911c")
@@ -184609,7 +184609,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "6.545"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1b4e1062-37a4-45c8-8ec8-1fb507df98c4")
@@ -184621,7 +184621,7 @@
 			)
 		)
 		(property "SIZEX_MM" "3.85"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0c173404-326d-4347-88bb-c5fd70ba50b4")
@@ -184633,7 +184633,7 @@
 			)
 		)
 		(property "SIZEY_MM" "1.7"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1055d44e-3f87-44d7-979c-4100d1065080")
@@ -184645,7 +184645,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "1.35"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c740bd33-7a19-4110-8fa6-ba72b0337b31")
@@ -184657,7 +184657,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-26"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a32ba915-fbff-479b-85a0-3d6880ee5f9f")
@@ -184669,7 +184669,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f77817bd-8e2e-403c-9459-381addd9be5d")
@@ -184681,7 +184681,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2016-06-18"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6d074036-408a-4a60-bc69-5ed210ce5ab1")
@@ -184693,7 +184693,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b200eb20-b8fd-44ce-9243-99a3ed93f3b2")
@@ -184705,7 +184705,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://www.onsemi.com/pub_link/Collateral/MMSD4148T1-D.PDF"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "68576bf3-a00d-4b4c-bf4d-58488ab27e9c")
@@ -184717,7 +184717,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ff37bd14-a571-4a09-8695-1e80261fb97b")
@@ -184729,7 +184729,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "518b9058-a6e8-4e24-8ad0-9412929b99b7")
@@ -184741,7 +184741,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "44d4754d-58a0-4948-a0d2-d7c5da734aa7")
@@ -184753,7 +184753,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "MMSD4148T1GOSCT-ND"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d01841bf-1090-4bd7-9ea2-e446e7405bc4")
@@ -184765,7 +184765,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Mouser"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7e0ad228-bde3-4aad-9247-1bb31821fe81")
@@ -184777,7 +184777,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "863-MMSD4148T1G"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fecd25d3-557c-4134-b2b1-ff8249553118")
@@ -184789,7 +184789,7 @@
 			)
 		)
 		(property "SUPPLIER 3" "Farnell"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3a343826-272a-4d1f-91a9-6ce2817f8efd")
@@ -184801,7 +184801,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" "9556079"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c07fb8d7-0343-4151-87aa-ff6244911a81")
@@ -184813,7 +184813,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q101"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7a953777-f777-4084-8364-cea2cfd72238")
@@ -184825,7 +184825,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "?"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "64531778-bc09-41ab-b394-2379e292edae")
@@ -184837,7 +184837,7 @@
 			)
 		)
 		(property "MPN" "MMSD4148T1G"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "724918ec-d41b-4510-bc65-9e5f1ae5a224")
@@ -184849,7 +184849,7 @@
 			)
 		)
 		(property "Manufacturer" "ON Semiconductor"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e7ccea0a-403e-4e7b-bed4-92efeb7f3186")
@@ -185053,7 +185053,7 @@
 			(uuid "19de5a43-0798-4271-896c-d5873300a07d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -2 270)
+			(at 0 -2 90)
 			(layer "F.Fab")
 			(uuid "bb2a3d5f-04ff-4ffd-939f-07d992ad126e")
 			(effects
@@ -185064,7 +185064,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.65 0 270)
+			(at -1.65 0 90)
 			(size 0.9 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -185074,7 +185074,7 @@
 			(uuid "6e8db160-c949-5dc8-b5a9-5c38bae6f640")
 		)
 		(pad "2" smd roundrect
-			(at 1.65 0 270)
+			(at 1.65 0 90)
 			(size 0.9 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -197848,14 +197848,14 @@
 		(layer "F.Cu")
 		(uuid "e95d7221-a11b-472e-8b4c-5066bc8b4b1c")
 		(transform
-			(translate 379.8000 83.0500)
-			(rotate 180)
+			(translate 379.8000 86.0500)
+			(rotate 270)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1813"
-			(at 0 -1.43 180)
+			(at 0 -1.43 270)
 			(layer "F.Fab")
 			(uuid "e5592f74-3060-5277-b60e-d433d62442c1")
 			(effects
@@ -197866,7 +197866,7 @@
 			)
 		)
 		(property "Value" "12kR"
-			(at 0 1.43 180)
+			(at 0 1.43 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0a504562-8acd-596b-8993-f785a32d8b41")
@@ -197878,7 +197878,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bf5e0e9b-ba4b-5080-8e1f-0c34d3cc9b1d")
@@ -197890,7 +197890,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9b07e241-6130-565d-8622-2f982d6f9001")
@@ -197902,7 +197902,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-0712KL"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b3f89f3f-fc79-4bc8-a2b2-47d1422aa6da")
@@ -197914,7 +197914,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2a61e283-e3cb-48cd-80d9-a1952cbdb2ae")
@@ -197926,7 +197926,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fe0021cb-2b9d-4138-8068-ccb18f36a291")
@@ -197938,7 +197938,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "de510a3e-3442-427d-9c8d-fa8d30ba5891")
@@ -198004,7 +198004,7 @@
 			(uuid "1b2d6b03-c35d-4f2c-8de3-91ee7209fa65")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "3a37a253-53d1-452f-8353-2b80901d86c0")
 			(effects
@@ -198015,7 +198015,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 180)
+			(at -0.9125 0 270)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -198024,7 +198024,7 @@
 			(uuid "1653f283-90b0-512b-9e9d-30806fd569e6")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 180)
+			(at 0.9125 0 270)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -203405,14 +203405,14 @@
 		(layer "F.Cu")
 		(uuid "f09f42b3-f692-44ac-ab7e-c21fe3f25e0c")
 		(transform
-			(translate 351.3000 125.0500)
-			(rotate 0)
+			(translate 340.8000 130.0500)
+			(rotate 270)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C1743"
-			(at 0 -1.43)
+			(at 0 -1.43 270)
 			(layer "F.Fab")
 			(uuid "4b8611b7-539e-57ed-b213-dc16852bc5df")
 			(effects
@@ -203423,7 +203423,7 @@
 			)
 		)
 		(property "Value" "0.047uF"
-			(at 0 1.43)
+			(at 0 1.43 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "87175fe4-ea3f-542b-824c-9ea9a11148b7")
@@ -203435,7 +203435,7 @@
 			)
 		)
 		(property "Datasheet" "http://datasheets.avx.com/X7RDielectric.pdf"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a7fedec6-090e-514e-baef-36852db637fa")
@@ -203447,7 +203447,7 @@
 			)
 		)
 		(property "Description" "CAP, CERM, 0.047 uF, 25 V, +/- 5%, X7R, 0603"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "967fb2c4-3097-58a0-b19a-683e418e1c28")
@@ -203459,7 +203459,7 @@
 			)
 		)
 		(property "POLARIZED" "N"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "701d07a2-b8cf-494d-a7e3-4fab615ef4d9")
@@ -203471,7 +203471,7 @@
 			)
 		)
 		(property "COMPTYPE" "Capacitor"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4e189b93-6497-4b7c-8129-5d057ed49c88")
@@ -203483,7 +203483,7 @@
 			)
 		)
 		(property "ALTIUM_VALUE" "0.047uF"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "28832e99-a734-4b1d-a710-a0493044926a")
@@ -203495,7 +203495,7 @@
 			)
 		)
 		(property "PARTNUMBER" "06033C473JAT2A"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0df9a235-a525-47cb-b252-8771e9e76438")
@@ -203507,7 +203507,7 @@
 			)
 		)
 		(property "VALUEDISPLAYED" "0.047uF"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f6989bc0-6192-4d2e-b2bc-25eaa19c8ccc")
@@ -203519,7 +203519,7 @@
 			)
 		)
 		(property "MANUFACTURER" "AVX"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "df29da2c-80fb-4a3f-a523-58fd44ce2c5b")
@@ -203531,7 +203531,7 @@
 			)
 		)
 		(property "PACKAGEREFERENCE" "0603"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0fd571ed-db75-48c8-bf41-e7ab7dee3505")
@@ -203543,7 +203543,7 @@
 			)
 		)
 		(property "ROHS" "Y"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "87d1865d-c5f6-4716-adae-8b809b4dce28")
@@ -203555,7 +203555,7 @@
 			)
 		)
 		(property "U/M" "EA"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7c8ce581-b72e-4218-b672-0552deb0a869")
@@ -203567,7 +203567,7 @@
 			)
 		)
 		(property "CAP_F" "47nF"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "93d2c933-a30a-49ac-9718-0e019542b5d5")
@@ -203579,7 +203579,7 @@
 			)
 		)
 		(property "TOLERANCE_%" "5%"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "78591a2c-c630-4e47-80c6-0a7f1dee3fb5")
@@ -203591,7 +203591,7 @@
 			)
 		)
 		(property "ESR_OHM" "0.052"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "62aeba1b-8e37-462e-a358-9d675dac4447")
@@ -203603,7 +203603,7 @@
 			)
 		)
 		(property "VALUE1" "0.052 ohm"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9335efaa-e900-4848-ae00-5b29f7a55719")
@@ -203615,7 +203615,7 @@
 			)
 		)
 		(property "VDC_V" "25V"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e430ace2-0c5e-4aa0-ad06-9e7076c1a6c5")
@@ -203627,7 +203627,7 @@
 			)
 		)
 		(property "VALUE2" "25V"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "41240e2c-2f1f-4da7-b8ec-8b3ae34eadae")
@@ -203639,7 +203639,7 @@
 			)
 		)
 		(property "MOUNTTYPE" "SMT"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "40a8f6f5-7e45-4b04-a1e3-8496f5e77079")
@@ -203651,7 +203651,7 @@
 			)
 		)
 		(property "TECHNOLOGY" "Ceramic"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f46165e0-d754-426e-8e8e-682416752579")
@@ -203663,7 +203663,7 @@
 			)
 		)
 		(property "TEMPCO" "X7R"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2ae33964-2889-4073-855e-22547aafa607")
@@ -203675,7 +203675,7 @@
 			)
 		)
 		(property "IRMS_A" ""
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7db25e7b-e731-42d1-b11c-ac889a105f00")
@@ -203687,7 +203687,7 @@
 			)
 		)
 		(property "TAMIN_C" "-55°C"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b909ff95-7c3a-488b-8749-a687f4eb9fff")
@@ -203699,7 +203699,7 @@
 			)
 		)
 		(property "TAMAX_C" "125°C"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bd53b6ca-6d59-439a-8097-251ac6bc3581")
@@ -203711,7 +203711,7 @@
 			)
 		)
 		(property "CAP_CASE" "0603"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9f557936-56e2-4a27-9239-ee8dd13503e2")
@@ -203723,7 +203723,7 @@
 			)
 		)
 		(property "SIZEAREA_MM2" "1.28"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e909571e-8d82-4e20-9b7d-6428615d8966")
@@ -203735,7 +203735,7 @@
 			)
 		)
 		(property "SIZEAREAWB_MM2" "4.68"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9b942ff6-096d-4207-886f-32cfdbc023f4")
@@ -203747,7 +203747,7 @@
 			)
 		)
 		(property "SIZEX_MM" "1.6"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cb9a9545-6004-4ae8-a0a1-53221196ac47")
@@ -203759,7 +203759,7 @@
 			)
 		)
 		(property "SIZEY_MM" "0.8"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "be68bb91-fdec-4e5d-8f52-c26deb4836b6")
@@ -203771,7 +203771,7 @@
 			)
 		)
 		(property "SIZEZ_MM" "1"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1e44cc24-deda-4f0c-9250-e6614c83be23")
@@ -203783,7 +203783,7 @@
 			)
 		)
 		(property "PUBLISHED" "2008-06-19"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8fbefdfd-2876-441f-ab00-e3731fdce0e7")
@@ -203795,7 +203795,7 @@
 			)
 		)
 		(property "PUBLISHER" "Texas Instruments"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4084ca0b-af9c-4b0b-896f-1173dd666560")
@@ -203807,7 +203807,7 @@
 			)
 		)
 		(property "LATESTREVISIONDATE" "2017-03-09"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9fbffef0-0e0b-4687-8327-2f946dd44914")
@@ -203819,7 +203819,7 @@
 			)
 		)
 		(property "COMPONENTLINK1DESCRIPTION" "Datasheet link"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7d375f7d-8f37-4906-a3d7-5ac2cd878bc2")
@@ -203831,7 +203831,7 @@
 			)
 		)
 		(property "COMPONENTLINK1URL" "http://datasheets.avx.com/X7RDielectric.pdf"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3eec3b54-8312-4076-9b9e-00f796c48f48")
@@ -203843,7 +203843,7 @@
 			)
 		)
 		(property "ALTERNATE PARTNUMBER" ""
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2cbd4b70-545f-4c0d-8fad-b7d2688568db")
@@ -203855,7 +203855,7 @@
 			)
 		)
 		(property "ALTERNATE MANUFACTURER" ""
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5eb2fef5-a278-4092-8969-ca4911050c38")
@@ -203867,7 +203867,7 @@
 			)
 		)
 		(property "SUPPLIER 1" "Digi-Key"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d244addc-9d24-4000-9e44-4d1e53537bcc")
@@ -203879,7 +203879,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 1" "478-3716-1-ND"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d2658f9e-94eb-4766-a314-8ded730a8660")
@@ -203891,7 +203891,7 @@
 			)
 		)
 		(property "SUPPLIER 2" "Newark"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2b1cbdab-e419-4066-8ae9-c90faa58fc9d")
@@ -203903,7 +203903,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 2" "96M1264"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "87116445-d445-477d-9bf2-7874a8026169")
@@ -203915,7 +203915,7 @@
 			)
 		)
 		(property "SUPPLIER 3" "Mouser"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2f06bd4b-d1e9-4c46-9dc0-d98479d1be80")
@@ -203927,7 +203927,7 @@
 			)
 		)
 		(property "SUPPLIER PART NUMBER 3" "581-06033C473J"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b280f78e-3522-48eb-9ba1-fc19d4ee2d8c")
@@ -203939,7 +203939,7 @@
 			)
 		)
 		(property "AEC CATEGORY" "Q200"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4522bb49-fad3-4f65-b0c9-062c136a06c6")
@@ -203951,7 +203951,7 @@
 			)
 		)
 		(property "AEC QUALIFIED" "N"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e86637b9-e02b-453e-8a83-16e8e56ca4d9")
@@ -203963,7 +203963,7 @@
 			)
 		)
 		(property "AEC GRADE" "N/A"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ce3b94db-75d0-4888-ae32-5676db059f44")
@@ -203975,7 +203975,7 @@
 			)
 		)
 		(property "MPN" "06033C473JAT2A"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "82369b8d-bb07-4796-af16-9405e92fb9c2")
@@ -203987,7 +203987,7 @@
 			)
 		)
 		(property "Manufacturer" "AVX"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "94a6db02-9fca-4794-9664-2333cdab36c8")
@@ -204053,7 +204053,7 @@
 			(uuid "e24c1e9a-3ccb-41af-9632-00c2b0d8e534")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "73e51bdc-6f69-455e-a3c2-7342887d9598")
 			(effects
@@ -204064,7 +204064,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8625 0)
+			(at -0.8625 0 270)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -204074,7 +204074,7 @@
 			(uuid "7703757a-d0e7-5152-a6b6-772651f89c83")
 		)
 		(pad "2" smd roundrect
-			(at 0.8625 0)
+			(at 0.8625 0 270)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -208314,7 +208314,7 @@
 		(layer "F.Cu")
 		(uuid "fb893845-b009-47fe-b867-199a970d57f5")
 		(transform
-			(translate 340.8000 133.0500)
+			(translate 340.8000 134.0500)
 			(rotate 0)
 			(scale 1 1)
 		)

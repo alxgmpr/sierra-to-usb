@@ -112,6 +112,12 @@ ANCH.update({'L1702': (6, 55, 180), 'D1705': (14, 54.5, 270), 'C1717': (22, 55, 
 ANCH.update({'D1718': (61, 70.5, 0), 'R1747': (62.5, 65.5, 0), 'R1748': (62.5, 61.5, 0),
              'C1728': (60, 78, 0), 'C1729': (60, 81.5, 0), 'C1730': (60, 85, 0),
              'L1708': (66.5, 81.5, 270), 'C1727': (76, 81.5, 90)})
+# Flyback primary at T1702's primary pins: input filter (inductor, then the cap column at the Vin pins), switch
+# FET at the drain pins with its sense resistor behind it, clamp diode between them, snubber below.
+ANCH.update({'C1722': (5.5, 66, 0), 'L1707': (12.5, 66, 0), 'C1723': (19.5, 64.5, 180), 'C1724': (19.5, 68, 180),
+             'C1725': (19.5, 71.5, 180), 'D1714': (11.5, 73, 0), 'Q1705': (19.5, 78, 0), 'R1738': (11.5, 78, 0),
+             'R1736': (11.5, 82.5, 0),
+             'U1703': (XB, 94.5, 180), 'U1702': (30, 96, 270)})   # feedback opto and controller below T1702, opposite the TL431
 BARRIER = {'T1701', 'T1702', 'U1703', 'U1801', 'U1802', 'U1803'}
 
 def short(n): return re.sub(r'^/.*/', '', n)
