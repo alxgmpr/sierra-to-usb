@@ -30,7 +30,7 @@ def validate(tree,directory):
  def connected(ref,mapping):
   for net,pins in mapping.items():
    for pin in pins.split():on(ref,pin,net)
- assert len(C)==827,len(C)
+ assert len(C)==843,len(C)
  assert len(B)==sum(len(p) for p in N.values()),'Physical pin appears in two nets'
  for ref in C:
   if ref in ['TP1101','TP1102','TP1103'] or ref.startswith('TP24'):assert C[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'

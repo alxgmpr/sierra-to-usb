@@ -13,6 +13,7 @@ Rail fixes:
 - MODEM_VCC: C2031–C2035, 100 nF → 1 uF 0603.
 - ETH_0V95: C1620–C1622, 100 nF → 1 uF 0603.
 - VDD_CPU: eight new 1 uF 0402 caps (C847–C854) on the bottom at the CPU balls.
+- VDD_LOGIC, VDD_GPU, VDD_NPU: 4, 6 and 6 new 1 uF 0402 caps (C855–C870) at their balls.
 
 Value text and the Voltage Rating, Dielectric, Tolerance and LCSC fields are now normalized for every
 instance of the kept MPNs. The RAM bypass plan now holds 1 uF. Its check requires a voltage rating of at
@@ -30,12 +31,12 @@ Model on the consolidated netlist (377 caps), worst |Z| in the valid band above 
 | ETH_0V95 | 71 mΩ | 77.2* | 31.7 |
 | VDD_DDR_1V1 | 66 mΩ | 22.6 | 12.5 |
 | VDD_DDR_0V6 | 60 mΩ | 16.9 | 10.5 |
-| VDD_LOGIC | 36 mΩ | 46.4* | 46.7* |
-| VDD_GPU | 36 mΩ | 69.2* | 69.9* |
-| VDD_NPU | 45 mΩ | 102* | 104* |
+| VDD_LOGIC | 36 mΩ | 46.4* | 28.1 (+4× 1 uF 0402, C855–C858) |
+| VDD_GPU | 36 mΩ | 69.2* | 28.1 (+6×, C859–C864) |
+| VDD_NPU | 45 mΩ | 102* | 32.3 (+6×, C865–C870) |
 
-LOGIC, GPU and NPU are still over target above about 10 MHz. Adding about four 1 uF 0402 caps
-per rail brings them to 35, 40 and 49 mΩ. Load steps are still assumed (section 6).
+Counts were chosen from a sweep, for about 20% margin under each target. All 24 added 0402s are
+on the bottom side at their rail's balls. Load steps are still assumed (section 6).
 
 ## Review of the 023fd93 netlist
 

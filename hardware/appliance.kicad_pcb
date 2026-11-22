@@ -229549,4 +229549,1812 @@
 (sheetname "/Core local bypass/")
 (sheetfile "core-power.kicad_sch")
 )
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "ddafaade-18d5-5d2e-a363-e923a64d86c3")
+(transform (translate 438.8000 89.5500) (rotate 180) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C855"
+		(at 0 1.16 180)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "23aa0248-730f-544b-8d57-0c2480a5f1d5"))
+(property "Value" "1uF"
+		(at 0 -1.16 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "b08134e7-4ee1-5660-8899-635e7e6d1546") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_LOGIC") (pintype "passive") (uuid "4ecffba5-cf54-5806-a4b4-476ecb961a13"))
+(pad "2" smd roundrect
+		(at 0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "1380de11-a59f-5c19-a06c-543bb5314a1d"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "a75bce6f-b012-5ab4-bcef-3e43e23861b0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "a88f8f85-c48b-5d60-98a2-5c8860969a01") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "ec6e0877-69c7-5d4d-b45f-212c33a79596") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "5a14037e-3dd6-54c7-8958-73a9e229683c") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "6eece216-1060-5e55-942d-c77696c9fa89") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "ede8cf72-1f71-5b8f-b205-91b386fd664b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_LOGIC balls" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "a924589d-c95f-5ca4-bb9c-fdb25abffcdd") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "e4f9ad5e-88f3-5e8f-bfe7-32368c358fdf") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "4eb124ac-746e-5ada-83b9-6269391061f0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/6c66b792-072b-553b-963a-c6b05ab9cd70")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "9fab4c01-0c64-5fbd-bac0-287b4a3c1d0a")
+(transform (translate 441.3000 91.0500) (rotate 180) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C856"
+		(at 0 1.16 180)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "c21428e3-703a-5dc8-a2c8-fbea935f7556"))
+(property "Value" "1uF"
+		(at 0 -1.16 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "ee45065c-e287-5936-86a1-34005125ac0b") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_LOGIC") (pintype "passive") (uuid "9a48d1f3-d606-5edf-ba4f-6b338e197fb4"))
+(pad "2" smd roundrect
+		(at 0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "8d8bc5a0-e32e-5ee7-9d45-66abc3406ae1"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "004d9913-c4dc-58e2-852d-31677413cf34") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "63b0dba8-024f-587a-a3c6-6d33741a882f") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "81f27820-3e52-574e-b95c-3b60d04054e6") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "8c5976a6-f72b-5b19-956b-97d113e7d80e") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "46c4aa32-7b26-58c6-9180-118e059d6456") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "3e10d14f-0056-5c81-b42e-ebefd1b44f52") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_LOGIC balls" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "a2f1e2a7-f162-5970-b1a9-24ee5c135127") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "0d5a6239-f3f2-57cc-9901-dd30020933fb") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "5b0dcda7-65f5-59b2-aa8b-49822cadeb2b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/858ff1bf-ded6-534b-ab54-e48cf3d6f621")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "4129469c-b2e4-5903-a94b-b9872ef795f7")
+(transform (translate 436.3000 88.5500) (rotate 180) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C857"
+		(at 0 1.16 180)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "d598d313-da17-5226-b08a-e55f6126b4ab"))
+(property "Value" "1uF"
+		(at 0 -1.16 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "d5290882-d675-530d-9299-e20bf9ddd5a2") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_LOGIC") (pintype "passive") (uuid "321577d4-598c-58e6-a467-7ba1448626f7"))
+(pad "2" smd roundrect
+		(at 0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "56313fa8-5ed7-5f12-a794-246e9886ef34"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "fc42c598-39c2-55d6-99bc-808af008033b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "53464019-b1af-5e89-8385-93b09cd9bd2b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "93e85ea9-bd2d-525e-bfe5-8ce3edcb6551") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "62104bad-958b-5f9f-b8d8-46afed108a15") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "808d28f0-c89a-5432-aeb9-1e7ec141f4fa") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "e172e1a5-874f-5126-aee9-5413acc7f9fe") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_LOGIC balls" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "67e25ac6-30d3-53d6-a332-654caa1306c3") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "de4f3a17-a968-5bdf-96cb-2f3195ed2091") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "ff4820b5-2169-5aad-aa15-0a3f27d060b0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/80858e65-a823-574f-9bc8-d6ebd6f948c8")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "9249c612-4c51-5ddb-81d5-4c0d0c2f1706")
+(transform (translate 444.8000 92.5500) (rotate 0) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C858"
+		(at 0 1.16)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "3b804b5a-427e-5af6-8b93-b0ce332fce3c"))
+(property "Value" "1uF"
+		(at 0 -1.16)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "d2abdd29-ce58-55c0-a717-3ab986a079f0") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_LOGIC") (pintype "passive") (uuid "e57fffbe-73ed-51cd-b27f-a4ac569e1d35"))
+(pad "2" smd roundrect
+		(at 0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "82ef8558-8ace-5acd-89e5-d0c05c340c9d"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "0a7d0dfd-8f26-532a-a273-d7300e09eeec") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "ad2addcb-73d5-53aa-ae52-c2e8f86c3fc0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "c1d32923-2660-55e0-b858-373e97f949a0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "390565ec-ee1c-5dbc-9a6d-ebb3beb32711") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "59a8a8ef-5597-5f2f-a83b-884e3de9e1d9") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "79df0044-4b17-5bcd-bc70-6fe2dc9964b1") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_LOGIC balls" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "8d240c76-c4dd-5f3b-9528-fdf02bd8d2bb") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "944bb1e4-c6be-5f1a-a847-0b61ef2bc424") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "c35bf057-fe71-5b9b-ab88-d7d31d17dca9") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/4270fb76-a0e5-591e-8c3e-84717f2dfcbc")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "d5895ca3-914a-5ad5-bbe0-7e3329de3050")
+(transform (translate 438.8000 91.0500) (rotate 180) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C859"
+		(at 0 1.16 180)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "f52d7120-9ccc-517a-83eb-c71e8cf88da9"))
+(property "Value" "1uF"
+		(at 0 -1.16 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "2dbd890c-cb5e-52ca-adaa-66a5cbf78760") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_GPU") (pintype "passive") (uuid "60a63495-b8a9-5c06-8f05-1aa4c3eeca06"))
+(pad "2" smd roundrect
+		(at 0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "d46fdcaf-1949-55a9-8a23-296351c79374"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "1a7b0d77-8ee9-5f8c-b4a9-5aef74f879dc") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "c05d40a7-9953-5c70-b3d4-a2915de711e6") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "ad08f63f-6d22-5cdc-8df9-faea60a5d5a0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "c5282f5a-3e9f-5d29-858d-7c8c98a5522a") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "3a2d0ffe-7e8b-5211-8438-81fb739c55c1") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "7f3bce45-23b1-58ff-8c54-31315e5fc07e") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_GPU balls" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "59fafbcc-1131-57e1-9f98-16736005d58b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "045b1b8c-8715-5d4b-8fff-4b0eaa94a9ca") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "0994cdc6-ec6b-5e3c-aea6-4846ce101af1") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/9678a954-04e6-5979-b0f5-9fcc370f4c4f")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "9adc789f-3d9f-5f37-9321-cf07668ffb6e")
+(transform (translate 442.3000 92.5500) (rotate 180) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C860"
+		(at 0 1.16 180)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "812a217e-97d4-5d17-a31e-939063192663"))
+(property "Value" "1uF"
+		(at 0 -1.16 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "12c4c1b0-d965-533e-9ded-d1eb4b4b2ecb") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_GPU") (pintype "passive") (uuid "77c46ccf-988b-551d-910c-f22cfd851a5a"))
+(pad "2" smd roundrect
+		(at 0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "f8d02554-b6bf-5ce6-85db-7954ba0321a0"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "980d8ed4-0efe-5653-9ca8-12d5b2aec984") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "315e7bb4-7002-5c26-8f1e-ff13201e7b1c") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "799959d2-ee03-5276-b04e-378501de66d3") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "c5f3ec5c-f515-5780-acd0-568bc0442908") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "437018d0-6c36-509f-8e43-e4b60d17f6a0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "2394a9e6-f055-569c-b10f-a8668c3db29f") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_GPU balls" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "3dcc8ddc-54df-5c70-8841-7a4585e3f6ca") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "414590c2-407c-5d72-bdae-dc51b465e6f3") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "42d81aa2-7ae9-5a86-8982-c48e32051760") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/56d97e53-2d31-5135-8714-9c0c4b3c453e")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "ff52fe5d-ade9-5f94-9ed6-e2f6cc35c023")
+(transform (translate 436.3000 90.0500) (rotate 180) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C861"
+		(at 0 1.16 180)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "8c27e087-d8b9-5f42-92cf-22452dd360d1"))
+(property "Value" "1uF"
+		(at 0 -1.16 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "b46d694c-d691-53b7-8c36-5f2fbf277c20") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_GPU") (pintype "passive") (uuid "91af5f79-3ad2-5c10-9d99-9da9437babe7"))
+(pad "2" smd roundrect
+		(at 0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "84ea0ae0-cf08-5624-a773-9fd00d8cb3e7"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "90833fc5-a007-5923-be29-a39a75a80bc1") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "5904c7b8-1185-52df-bf86-61a2fe154e12") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "03013818-9016-50a3-8387-7fefc07902de") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "8d4ab7fa-757e-5fb0-8f4b-e4b63f03cab0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "b8f480c9-bf51-5e4a-906e-15fff4e44dfe") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "7b868b75-ded1-57fe-b5bf-5d3f94e76fa0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_GPU balls" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "0c515060-95a2-5b0d-8674-2a91d3d8fd1f") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "cf7bfda7-c735-5d6a-b5c2-b88a4a0767ff") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "bfa76df9-0b4f-5548-b0f3-7916c5b4546e") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/23a00b00-64e0-5728-bbbf-4c40a4a0c8b1")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "7f00b0d5-4d80-5436-b9a7-b13395e3f6a7")
+(transform (translate 439.8000 92.5500) (rotate 180) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C862"
+		(at 0 1.16 180)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "d655c58a-fe39-5e75-b7aa-6b3d0c11d83b"))
+(property "Value" "1uF"
+		(at 0 -1.16 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "6c31f6fa-3970-58fe-8ef5-7cfdc1649b28") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_GPU") (pintype "passive") (uuid "70217cf9-94b5-5f01-b453-2f482fa15085"))
+(pad "2" smd roundrect
+		(at 0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "9221d74b-6495-5154-8047-b34bfe441cc3"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "4c98eec8-628b-53d5-b2c7-8a5f4f1cef5d") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "f3397473-841e-5125-a9b1-e71c900806eb") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "86d2bdf2-8df4-522c-8aa7-917a240a9e82") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "6272d621-2a84-5f41-af6f-5aaf5e545158") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "3a76bcc8-f500-5f2c-8208-40ca0b53bb98") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "a5553b06-cbdb-5ca3-93f5-cee19c66289b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_GPU balls" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "545ed5de-fd1a-529a-be63-4ff5f9418c57") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "fe30d211-e55e-5f5d-9a75-b3f61b180a4f") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "9a4c03ce-8561-57f5-9537-c80dd9de54b0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/286928fa-f318-5260-9bd9-c888c5efea43")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "d638c68b-9efb-5313-94d2-3893d1be4bb5")
+(transform (translate 447.3000 92.5500) (rotate 0) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C863"
+		(at 0 1.16)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "2bd00d03-7f6f-5fbb-884d-f41ca58e683f"))
+(property "Value" "1uF"
+		(at 0 -1.16)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "a174e1e7-24be-5bce-9b16-8f65194a1496") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_GPU") (pintype "passive") (uuid "62610ca8-be04-529b-808f-6a7279371a65"))
+(pad "2" smd roundrect
+		(at 0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "62751b31-0cd0-5f41-b2ec-34b46cd45e6f"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "89720001-e982-53d0-ac53-27a22726523e") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "ac59d5e6-3b1d-5701-bc22-3626e6c0613e") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "b1556565-0640-59c8-9b02-c708f6166969") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "39c72c5d-94a3-5005-a145-3977a528aacb") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "19eaa2a9-baab-5555-8a62-0d9f8280e047") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "f4d7a09d-a6bc-5404-8b4d-b0b26de48ab7") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_GPU balls" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "1afe5d36-ff8e-557e-aef3-c1b15649cd9e") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "c1b40b9c-5749-598e-8a91-dd2d6ccaf5cd") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "87bb729f-9087-5c57-b46b-40f4434018b0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/4357b738-f4cc-5b3a-8b93-0f7d5ecc7d0b")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "02adaa3c-b3fd-5769-971d-efe0025ef18a")
+(transform (translate 434.3000 87.0500) (rotate 180) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C864"
+		(at 0 1.16 180)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "591f8faa-8509-5d35-bc37-415b94924100"))
+(property "Value" "1uF"
+		(at 0 -1.16 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "799f1a4d-fe23-5888-a469-0e6494e0d797") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0 180)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_GPU") (pintype "passive") (uuid "4b301a64-6525-5622-84d3-2c8e4a4e0343"))
+(pad "2" smd roundrect
+		(at 0.48 -0 180)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "9ca5cc68-622b-5671-8e60-4e077354ecc8"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "ab4b2263-9ea2-5682-80cf-0989e7f75e55") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "b8c226bf-d3e7-5049-b43a-49e93c5fad5a") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "38f2f19f-19bc-5afc-9ce5-9d11fbcbadb3") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "0f3017c1-ceb7-58a0-97b6-5795dbbe59f5") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "3b84e3c8-ad7e-51bd-b825-eb3479fcd823") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "8e474419-7587-57ef-9597-d344f5d9e80c") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_GPU balls" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "4dfc8143-56fa-5c4d-b45d-c55f9ddf4c6a") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "e9216079-93ac-5417-bfdb-ca9d2aa3f20d") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0 180) (layer "B.Fab") (hide yes) (uuid "d029434e-d9ea-5188-9136-0fc640be602c") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/3272d583-00f4-509a-ad3f-cf7e7220d73e")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "a1304a06-c12d-5a99-bc9d-f5904014b073")
+(transform (translate 454.3000 78.0500) (rotate 0) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C865"
+		(at 0 1.16)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "829ff058-0800-567a-8a55-d727ba3c7ab0"))
+(property "Value" "1uF"
+		(at 0 -1.16)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "de8314da-7cea-56e9-8a98-e29067da7c24") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_NPU") (pintype "passive") (uuid "1049925d-b70a-574e-96c7-fc2c828465d1"))
+(pad "2" smd roundrect
+		(at 0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "7c85125b-1ea5-5788-81b0-73fbbacc177d"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "9b584854-90ec-5b38-87c6-c9e95d8206a2") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "65482ce5-dde2-5655-ae9c-c8d6b7b480a2") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "cc49a4f3-9291-5f73-a54d-8f8070e384eb") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "c7e9f169-d607-59c8-ad5b-652f9cb1bd44") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "fb0b2cc8-5112-5197-abd3-4b879bd59181") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "1906772b-1cb3-533b-a426-23c5b4b7183b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_NPU balls" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "e843c0f2-9efc-50e6-9a86-06cc1f7eabae") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "01ffeb1f-c2f5-5063-a149-fcc4a125a57c") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "5cbbee8c-feed-579e-bc30-8cfacf271ff5") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/7ffdd184-f4d4-5ff8-909c-0afb47b93d2d")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "2eb1e7bc-42ce-54e1-92a4-bd53ec5ad6ae")
+(transform (translate 455.3000 86.0500) (rotate 0) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C866"
+		(at 0 1.16)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "ff38d43b-0172-5223-8010-fcfe910ab4dc"))
+(property "Value" "1uF"
+		(at 0 -1.16)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "b4b262dc-e375-59da-bc77-13bbcc9a95ef") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_NPU") (pintype "passive") (uuid "b768056e-5efa-5edd-b828-9f6157cf805c"))
+(pad "2" smd roundrect
+		(at 0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "eb9d2888-f561-5008-b0b1-2b15b97c3b0f"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "9553ca05-b56d-5911-b4b1-9ca1276f390f") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "cc0d6187-456b-5517-8f23-82453df89b38") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "23a1c02b-d0fa-5249-9754-4be8a370a7d4") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "908eca87-bfc8-51b4-8754-b356893b9c24") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "f7b665d6-a666-5a5f-a98e-f094b13ded7b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "2b955c30-c1df-5b48-93de-5595358db641") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_NPU balls" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "49acdfe7-a68f-5806-aaa9-1c88056b96ea") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "0164e44e-ba56-5e45-960e-f14a34ab580f") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "70830b86-b27f-53bd-b7a6-e3faf50516c3") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/454c5198-f223-5875-8dd0-3b76ac92c2d5")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "c8ce802c-f2d2-5921-95c6-16b657799926")
+(transform (translate 456.3000 84.5500) (rotate 0) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C867"
+		(at 0 1.16)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "a59325a4-3f2b-59a2-a4b2-1a30f5b72b6c"))
+(property "Value" "1uF"
+		(at 0 -1.16)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "dc51d979-6064-5c59-a3a5-f3fd2de0d412") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_NPU") (pintype "passive") (uuid "b6c03327-2f4a-5151-bc43-1e087cfaa978"))
+(pad "2" smd roundrect
+		(at 0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "f298d87d-971e-5f5d-91e7-d6e1057694ca"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "ca4b7145-9428-5871-8286-e36bb8a4d5b3") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "c3e8233f-3b12-5927-bfaf-920eb6d6684e") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "7896ec17-59c8-5867-b6a8-781dab5e3f6b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "1a00b196-c46e-5019-906d-83b7ebe13687") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "5fd1bb67-be4d-5765-8a59-0c878c07b4a0") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "de00d8ee-3b43-5307-b7bb-8d372eee1f61") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_NPU balls" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "0b1a6af1-9c1e-5df7-a359-965e797071c4") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "896d2083-4c98-553a-a25a-9c1f0e1d5871") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "c828a5b6-55dd-53c6-9cb2-cf3be9e0b215") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/c5851c73-46b6-52dd-b354-833fa5841e36")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "58e5cfa1-47ea-59ca-a611-a76fa3dd00cd")
+(transform (translate 453.8000 89.5500) (rotate 0) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C868"
+		(at 0 1.16)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "e92d7ee2-b0fe-576c-b95e-935b51b58cce"))
+(property "Value" "1uF"
+		(at 0 -1.16)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "a8760e11-a4e3-5ac8-83e1-cfcf45f4c975") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_NPU") (pintype "passive") (uuid "1e7c2e92-1c38-5c32-b849-4b0d57378497"))
+(pad "2" smd roundrect
+		(at 0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "250a830f-c3bc-564a-9428-91c8d1d14c2d"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "39abb69d-0a8d-521f-8131-ebc35602c3a9") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "7cf8b9b8-4fd3-5e34-8fbb-8260f539723f") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "33134bd9-2851-5116-bb22-517f55c61c04") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "165964b1-1968-53ed-b5af-b38f60e3dea1") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "d468e36c-ae4d-5d1b-838a-6e53480ff50b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "2913d8f8-95e2-5e8c-adf2-27433c265f2b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_NPU balls" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "a09a1778-c652-5a2b-8c18-5d41469f2d82") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "2017b17d-94c6-5f7b-9da5-0f4b959312be") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "1b7ed8ea-d410-55aa-93c6-b3ec63d221db") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/c5584aa7-2b61-5a04-ae54-d2d823c729cc")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "a96905f4-f17b-5f45-bca1-a6a94fd12c5d")
+(transform (translate 455.3000 87.5500) (rotate 0) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C869"
+		(at 0 1.16)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "a3b0b29d-1ade-5617-b7f4-60c791e8bcbf"))
+(property "Value" "1uF"
+		(at 0 -1.16)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "054aa051-569a-5ab9-8054-92e22bb69307") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_NPU") (pintype "passive") (uuid "bc6772af-7888-5b47-8259-36f1a2976ae6"))
+(pad "2" smd roundrect
+		(at 0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "f4427b53-d29f-56fd-8d30-59e4fdac6e2a"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "89a0827f-3313-5dc9-a3c3-039da73a49ce") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "eac3860a-369e-5ff1-911d-a120b3b00547") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "f0b90d15-8b82-5ad3-8950-c8813b3b054d") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "df9e9619-e759-50ef-a5fd-822084549c49") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "a7a793da-dc82-5cff-a461-55c74f1364f7") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "c81b6100-c691-5529-a2dc-0d99d8d278b6") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_NPU balls" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "2c4d90fa-6c40-5085-a55f-3d2f877bcec8") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "de249d17-d9c4-54f7-96ab-2d4b2a140d93") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "3d3c33fd-58dc-572b-96f0-bade41737d9e") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/3ddde0ed-f122-53a6-9bbc-d7a7cdd644a4")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
+(layer "B.Cu")
+(uuid "ceb7fb7e-1e94-537c-836c-1e373501d3df")
+(transform (translate 456.3000 80.0500) (rotate 0) (scale 1 1))
+(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+(tags "capacitor")
+(property "Reference" "C870"
+		(at 0 1.16)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "75cec037-9d9a-5e8c-92f1-04c26b292d8b"))
+(property "Value" "1uF"
+		(at 0 -1.16)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			) (justify mirror)
+		)
+	 (uuid "1be5817c-88d4-5510-b104-de3a18a33e0d") (hide yes))
+(attr smd)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "B.SilkS")
+	)
+(fp_rect
+		(start -0.91 0.46)
+		(end 0.91 -0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+(fp_rect
+		(start -0.5 0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.Fab")
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 -0)
+		(layer "B.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			) (justify mirror)
+		)
+	)
+(pad "1" smd roundrect
+		(at -0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "VDD_NPU") (pintype "passive") (uuid "226f1b48-e9aa-55de-bf47-f6e18da661b4"))
+(pad "2" smd roundrect
+		(at 0.48 -0)
+		(size 0.56 0.62)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+	 (net "GND") (pintype "passive") (uuid "3d2536b7-b8d6-5101-b342-95ccdfff95e4"))
+(embedded_fonts no)
+(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+(property "MPN" "CL05B105KQ5NNNC" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "027742e9-3ddb-5bce-8983-2394d642dcb4") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "72867f89-5518-5dd5-a7b9-463752a9a3c9") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "LCSC" "C307426" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "ca33fdc8-e3b1-5e16-9959-b8c49b252ccf") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Voltage Rating" "6.3V" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "ab096909-9fec-5e00-8627-889f4d29c044") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Dielectric" "X7R" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "81ae4da5-613b-5b59-b9f5-4606e13a595c") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Tolerance" "10%" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "d5fdbe9a-e3bb-547a-9a42-da762df35a9b") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Placement Intent" "bottom side at the VDD_NPU balls" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "2e4d5983-fe11-57a7-bbb2-ffb5b09d4dae") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Datasheet" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "70061908-c70d-58e9-a612-e147adc07737") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(property "Description" "" (at 0 -0) (layer "B.Fab") (hide yes) (uuid "00024f95-e9e2-532e-9acd-2f78e4c637a8") (effects (font (size 1 1) (thickness 0.15)) (justify mirror)))
+(path "/c37ed3a2-e11f-5801-b052-784de8f9ef84/2365a0cb-ba73-5ed9-9fb5-b787dbcf4e48")
+(sheetname "/Core local bypass/")
+(sheetfile "core-power.kicad_sch")
+)
 )

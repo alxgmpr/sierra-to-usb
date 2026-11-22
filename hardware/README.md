@@ -1,8 +1,8 @@
 # Appliance schematic
 
 The complete engineering capture is [appliance.kicad_sch](appliance.kicad_sch), with
-34 sheets, 827 components and 856 native nets. Open [appliance.kicad_pro](appliance.kicad_pro)
-in KiCad. [appliance.kicad_pcb](appliance.kicad_pcb) contains all 827 footprints
+34 sheets, 843 components and 856 native nets. Open [appliance.kicad_pro](appliance.kicad_pro)
+in KiCad. [appliance.kicad_pcb](appliance.kicad_pcb) contains all 843 footprints
 with native schematic links; placement and routing are still pending.
 
 The remaining processor, boot storage, CPU power, Ethernet, isolated PoE,
@@ -33,9 +33,9 @@ The checker validates the native netlist and all-severity ERC; all 565 RK3566,
 200 RAM, 153 eMMC and other major-device contacts are accounted for. It checks
 65 manufacturer DDR pair mappings, the complete retained TI bridge/flyback net
 partitions, critical rail/reset/interface connections, four assembly-profile power
-maps, deterministic identities and exact pad-number parity for all 827 assigned
+maps, deterministic identities and exact pad-number parity for all 843 assigned
 footprints. Pad parity establishes identity, not a fabrication land-pattern review.
-789 components use default KiCad footprints, including 531 stock hand-solder
+805 components use default KiCad footprints, including 531 stock hand-solder
 variants. Existing package sizes are retained. All attached model paths resolve;
 missing or mechanically unverified models are explicitly recorded in
 [footprint-policy.json](footprint-policy.json). Imported TI embedded STEP assets
