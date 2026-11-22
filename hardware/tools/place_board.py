@@ -264,6 +264,26 @@ def val(f):
     m = re.match(r'([\d.]+)\s*([pnuµm]?)', f['val'])
     return float(m[1]) * {'p': 1e-12, 'n': 1e-9, 'u': 1e-6, 'µ': 1e-6, 'm': 1e-3, '': 1}[m[2]] if m else 1.0
 load = defaultdict(int)
+host = {}                  # passive -> the IC (or connector) it is laid out around
+TIDY = {'CORE'}            # blocks whose passives are fanned around their host in rows
+def q(x, step, up): return (math.ceil(x/step - 1e-6) if up else math.floor(x/step + 1e-6)) * step
+def fan(ref, u, v):
+    """Fan lattice around the host: two-pad parts stand radially (pads pointing at the host) in rows
+    along each host edge. Along a row the pitch is the part width on the SNAP grid, centred on the host;
+    rings start at the host courtyard and step by the part length. Yields the poses (u, v, r) that grid point (u, v) maps to, none if it is off the lattice."""
+    f = fps[ref]; hx, hy, hr = placed[host[ref]]; h = rect(fps[host[ref]], hx, hy, hr, flip=False)
+    ox, oy = max(h[0]-u, u-h[2], 0), max(h[1]-v, v-h[3], 0)
+    if not ox and not oy: return
+    vert = oy >= ox            # above or below the host: rows run along x
+    a, t, t0, lo, hi = (v, u, hx, h[1], h[3]) if vert else (u, v, hy, h[0], h[2])
+    for r in ((90, 270) if vert else (0, 180)):
+        p = rect(f, 0, 0, r, GAP/2); p = (p[1], p[3], p[2]-p[0]) if vert else (p[0], p[2], p[3]-p[1])
+        k = (t-t0) / q(p[2], SNAP, True); pr = q(p[1]-p[0], SNAP/2, True)
+        if abs(k - round(k)) > 1e-6: continue
+        if a < (lo+hi)/2: base = q(lo - GAP/2 - p[1], SNAP/2, False); m = round((base-a)/pr); aa = base - m*pr
+        else: base = q(hi + GAP/2 - p[0], SNAP/2, True); m = round((a-base)/pr); aa = base + m*pr
+        if m < 0 or abs(aa-a) > SNAP/2 + 1e-6: continue
+        yield (t, aa, r) if vert else (aa, t, r)
 def target_for(ref, defer):
     f = fps[ref]; cands = []
     for i, p in enumerate(f['pads']):
@@ -285,9 +305,12 @@ def target_for(ref, defer):
     else:
         r, j = min(pool, key=lambda t: (is_small(fps[t[0]]), t[1]))
     load[(r, j)] += 1
+    host[ref] = host.get(r, r) if is_small(fps[r]) else r
     return i, pad_abs(r, j)
-def place_small(ref, own_pad, tgt):
-    f = fps[ref]; best = None; c = tgt
+def place_small(ref, own_pad, tgt, lattice=True):
+    f = fps[ref]; best = None; c = tgt; H = host.get(ref)
+    one = lattice and side[ref] == 'F' and block[ref] in TIDY and len(f['pads']) != 2
+    tidy = lattice and side[ref] == 'F' and len(f['pads']) == 2 and block[ref] in TIDY and H in placed and block[H] in (block[ref], None)
     if block[ref]:   # start the search inside the part's own block
         c = min(((min(max(tgt[0], b[0]+3), b[2]-3), min(max(tgt[1], b[1]+3), b[3]-3)) for b in BLOCKS[block[ref]][1]),
                 key=lambda q: math.dist(q, tgt))
@@ -297,13 +320,19 @@ def place_small(ref, own_pad, tgt):
         for du, dv in offs:
             if best and math.hypot(du, dv) > best[0] - base + 2.0: break
             u, v = c[0] + du, c[1] + dv
-            for r in ((0, 180) if side[ref] == 'B' else (0, 90, 180, 270)):   # bottom caps: one axis, clean rows
+            if tidy: poses = fan(ref, u, v)
+            elif side[ref] == 'B': poses = [(u, v, r) for r in (0, 180)]   # bottom caps: one axis, clean rows
+            elif one: poses = [(u, v, 0)]   # SOT-23s and the like: one orientation
+            else: poses = [(u, v, r) for r in (0, 90, 180, 270)]
+            for u, v, r in poses:
                 R = rect(f, u, v, r, GAP/2)
                 if not legal(ref, R): continue
                 a = pad_abs(ref, own_pad, (u, v, r))
                 sc = math.hypot(a[0]-tgt[0], a[1]-tgt[1]) + (0.15 if r >= 180 else 0)   # prefer 0/90 for tidy silk
                 if best is None or sc < best[0]: best = (sc, u, v, r, R)
         if best: break
+    if (tidy and best is None) or (one and (best is None or best[0] > 10)):
+        return place_small(ref, own_pad, tgt, False)   # lattice full, or no room nearby at 0 deg: free placement
     if best is None: return False
     commit(ref, *best[1:4], best[4]); return True
 def prio(ref):
