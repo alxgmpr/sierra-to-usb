@@ -1144,7 +1144,7 @@
 		(layer "F.Cu")
 		(uuid "01e9f581-f9dd-4a63-a852-0290626f96db")
 		(transform
-			(translate 509.3000 127.5500)
+			(translate 485.8000 112.0500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -23251,14 +23251,14 @@
 		(layer "F.Cu")
 		(uuid "1d1239b0-033d-44e6-b8fe-c092290beddd")
 		(transform
-			(translate 506.3000 123.5500)
-			(rotate 90)
+			(translate 507.0500 126.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R303"
-			(at 0 -1.43 90)
+			(at 0 -1.43)
 			(layer "F.Fab")
 			(uuid "b6231550-e48a-5ce9-8526-2f6baa9aacc8")
 			(effects
@@ -23269,7 +23269,7 @@
 			)
 		)
 		(property "Value" "10kR"
-			(at 0 1.43 90)
+			(at 0 1.43)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fe564f65-8118-50b0-98af-79af4604212e")
@@ -23281,7 +23281,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e01c9b1b-4982-559b-8dca-bb46068f748b")
@@ -23293,7 +23293,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a7bca544-10e3-5c4e-a7e7-75ad7fd53e74")
@@ -23305,7 +23305,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-0710KL"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7eea7562-a04a-449f-8199-8ee5757e7d1e")
@@ -23317,7 +23317,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1d550de5-99a1-420b-9931-aab2fdacb8ab")
@@ -23329,7 +23329,7 @@
 			)
 		)
 		(property "LCSC" "C98220"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "de8ff301-8208-4091-bd34-20e2d595c2e6")
@@ -23341,7 +23341,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "55386f8c-273d-4f71-b7ab-b03d69c12e21")
@@ -23353,7 +23353,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "532f84bb-7ac7-4478-8053-d6277d577321")
@@ -23365,7 +23365,7 @@
 			)
 		)
 		(property "Voltage Rating" "75V"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "52bbf4ce-90d2-4a14-b711-75f4ba3334fa")
@@ -23431,7 +23431,7 @@
 			(uuid "838cd15c-fe13-46a7-9173-a923e4186c2f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "eb50fafb-9dc2-4ce0-99f0-de37cc52acc7")
 			(effects
@@ -23442,7 +23442,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 90)
+			(at -0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -23451,7 +23451,7 @@
 			(uuid "dbd524d2-b930-5de9-9478-9c94549ba456")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 90)
+			(at 0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -28180,14 +28180,14 @@
 		(layer "F.Cu")
 		(uuid "20562b5e-b561-4b43-99bd-d02026c8631a")
 		(transform
-			(translate 513.3000 128.5500)
-			(rotate 0)
+			(translate 483.8000 116.0500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "SOT-23, Handsoldering")
 		(tags "SOT-23")
 		(property "Reference" "Q303"
-			(at 0 -2.75 0)
+			(at 0 -2.75 180)
 			(layer "F.Fab")
 			(uuid "e6ebcd5a-0173-565c-b6f1-a4495b01774a")
 			(effects
@@ -28198,7 +28198,7 @@
 			)
 		)
 		(property "Value" "MMBT3904,215"
-			(at 0 2.5 0)
+			(at 0 2.5 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2be611a1-9d04-5ccd-898b-049ec7f68f6f")
@@ -28210,7 +28210,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf"
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6d3838d7-8142-5826-a68e-b4624e00cfe2")
@@ -28222,7 +28222,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8ca27799-f2ba-5435-8f26-827c6d640a5d")
@@ -28234,7 +28234,7 @@
 			)
 		)
 		(property "MPN" "MMBT3904,215"
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "693679bc-c3ad-4ffc-820a-a5d6c8ee0518")
@@ -28246,7 +28246,7 @@
 			)
 		)
 		(property "Manufacturer" "Nexperia"
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "edc8a9f1-31f2-4d46-9673-b3a6dbe7485a")
@@ -28422,7 +28422,7 @@
 			(uuid "2b257c23-2c57-455b-ac7b-0f2e4421077a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "2a6c8dca-1922-4332-8a71-7b400d2fc1fd")
 			(effects
@@ -28433,7 +28433,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5 -0.95)
+			(at -1.5 -0.95 180)
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -28443,7 +28443,7 @@
 			(uuid "ecd66712-6f56-57b9-9ee2-3d22c143f9f6")
 		)
 		(pad "2" smd roundrect
-			(at -1.5 0.95)
+			(at -1.5 0.95 180)
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -28453,7 +28453,7 @@
 			(uuid "fdc69673-2fd5-50fb-b8a2-e955ddf1ed6d")
 		)
 		(pad "3" smd roundrect
-			(at 1.5 0)
+			(at 1.5 0 180)
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -30245,14 +30245,14 @@
 		(layer "F.Cu")
 		(uuid "22b7cb5a-5b90-4c30-b4f0-bf7eabeb122f")
 		(transform
-			(translate 530.8000 125.5500)
-			(rotate 0)
+			(translate 527.8000 126.0500)
+			(rotate 90)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1209"
-			(at 0 -1.43)
+			(at 0 -1.43 90)
 			(layer "F.Fab")
 			(uuid "16119416-6aca-5ced-b7bf-a76f8104cf51")
 			(effects
@@ -30263,7 +30263,7 @@
 			)
 		)
 		(property "Value" "100kR"
-			(at 0 1.43)
+			(at 0 1.43 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "df445899-80ad-5013-a44a-a207b7c4423b")
@@ -30275,7 +30275,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6444163c-a743-5777-a60f-ae3c0a33c1d8")
@@ -30287,7 +30287,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "864fbd86-765e-5a44-8ebf-c1ff30c8379a")
@@ -30299,7 +30299,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-07100KL"
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b1996974-829d-449f-ab66-ac773443f0af")
@@ -30311,7 +30311,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1f0f10b2-5338-437f-ad82-4fd3d872d17c")
@@ -30323,7 +30323,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "44fd3a09-fca0-47ca-bd4e-74a881d56dd3")
@@ -30335,7 +30335,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6bd6fe4f-c1db-4745-aec9-f8adb9366279")
@@ -30401,7 +30401,7 @@
 			(uuid "f73b9c46-d6b8-42b3-8aac-6bf391f967ce")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "4c50f3ed-a040-4e05-8e7b-7c7873455af0")
 			(effects
@@ -30412,7 +30412,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0)
+			(at -0.9125 0 90)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -30421,7 +30421,7 @@
 			(uuid "305cddd9-bd1f-5162-b902-b7209c980513")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0)
+			(at 0.9125 0 90)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -38286,14 +38286,14 @@
 		(layer "F.Cu")
 		(uuid "2bedd26b-2055-43bb-9c44-b4d7cae380ea")
 		(transform
-			(translate 456.8000 132.0500)
-			(rotate 0)
+			(translate 449.8000 132.0500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C201"
-			(at 0 -1.43)
+			(at 0 -1.43 180)
 			(layer "F.Fab")
 			(uuid "6b9b7b22-806e-5518-bf66-191e60c02dc9")
 			(effects
@@ -38304,7 +38304,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.43)
+			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bccca40b-3158-51d1-b1a5-c4fe93eed873")
@@ -38316,7 +38316,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL10B104KA8NNN.do"
-			(at 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "06b80e8d-ae70-5ca0-8c46-eae7677b4fca")
@@ -38328,7 +38328,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fe57b6f1-c96d-5c46-b0a1-18a00a68d841")
@@ -38340,7 +38340,7 @@
 			)
 		)
 		(property "Rating" "25V X7R +/-10%; 0603"
-			(at 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e63d63db-04de-4c26-822c-e82daaa7e5ad")
@@ -38352,7 +38352,7 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
-			(at 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0f5df741-def7-480f-a795-4c5ac34b3f60")
@@ -38364,7 +38364,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ee1e1255-0788-4683-a902-704a52824590")
@@ -38376,7 +38376,7 @@
 			)
 		)
 		(property "LCSC" "C1590"
-			(at 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8afaa444-ec1d-4e06-b678-58c0a9e3879c")
@@ -38388,7 +38388,7 @@
 			)
 		)
 		(property "DC Bias Review" "Typical +0.94% at 3.3V, 25C; not guaranteed corner data"
-			(at 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d64a68b8-9357-4115-b95d-98d8c013f6a9")
@@ -38454,7 +38454,7 @@
 			(uuid "de6a1757-7e56-45c1-985e-6361fe5d10a5")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "b206354b-afe7-4656-b12b-c1b1bce8ce46")
 			(effects
@@ -38465,7 +38465,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8625 0)
+			(at -0.8625 0 180)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -38474,7 +38474,7 @@
 			(uuid "d75288bd-d189-5dcc-b675-d289e43e3570")
 		)
 		(pad "2" smd roundrect
-			(at 0.8625 0)
+			(at 0.8625 0 180)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -39732,14 +39732,14 @@
 		(layer "F.Cu")
 		(uuid "2e7f6c9c-41a6-40e7-b583-e9e5b21a90fe")
 		(transform
-			(translate 485.3000 128.0500)
-			(rotate 90)
+			(translate 481.8000 128.0500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C204"
-			(at 0 -1.43 90)
+			(at 0 -1.43 180)
 			(layer "F.Fab")
 			(uuid "86daa3bc-1d86-5d87-a297-ed73d5df7bc4")
 			(effects
@@ -39750,7 +39750,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.43 90)
+			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4c83d032-9e25-5a5f-bf81-8350166529cf")
@@ -39762,7 +39762,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL10B104KA8NNN.do"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5a9a4e5a-8b59-50ba-aa55-85af6407eab2")
@@ -39774,7 +39774,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3873352b-55e1-5b4f-a8ea-a21d4c3d7a18")
@@ -39786,7 +39786,7 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8f2d0582-d6d7-4b50-9dfd-ab61645168d0")
@@ -39798,7 +39798,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9e283226-a24b-438d-bce3-b424a04aba1d")
@@ -39810,7 +39810,7 @@
 			)
 		)
 		(property "LCSC" "C1590"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b5eac1f5-f300-456d-bd5d-a8a8be46c0fa")
@@ -39822,7 +39822,7 @@
 			)
 		)
 		(property "Rating" "25V X7R +/-10%; 0603"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "32fb6e9d-1ea6-4d48-80c7-16e7a8742b68")
@@ -39834,7 +39834,7 @@
 			)
 		)
 		(property "DC Bias Review" "Typical +0.94% at 3.3V, 25C; not guaranteed corner data"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "417057a2-4a0b-4c4f-99e8-e95395ec6228")
@@ -39900,7 +39900,7 @@
 			(uuid "261c1689-cbca-4aee-993b-7d202873aa76")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "3b4c17c0-6f9d-4a8f-8e44-a8ad8f146eb4")
 			(effects
@@ -39911,7 +39911,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8625 0 90)
+			(at -0.8625 0 180)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -39920,7 +39920,7 @@
 			(uuid "6d974e91-5a84-5102-bb88-070ee2a2dd66")
 		)
 		(pad "2" smd roundrect
-			(at 0.8625 0 90)
+			(at 0.8625 0 180)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -44033,14 +44033,14 @@
 		(layer "F.Cu")
 		(uuid "349bcc5f-f7f8-471a-94bb-34d4469cac23")
 		(transform
-			(translate 503.3000 127.5500)
-			(rotate 90)
+			(translate 493.8000 130.0500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1207"
-			(at 0 -1.43 90)
+			(at 0 -1.43 180)
 			(layer "F.Fab")
 			(uuid "11b20927-e181-519a-b9a9-9fb74dc7b7d2")
 			(effects
@@ -44051,7 +44051,7 @@
 			)
 		)
 		(property "Value" "100kR"
-			(at 0 1.43 90)
+			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e2ed88a0-f4a7-59dd-b62c-6aec291d3ce4")
@@ -44063,7 +44063,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eb566402-98f2-5067-b118-fb874256fdaa")
@@ -44075,7 +44075,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ed5f5b77-74f4-5712-8091-d06bbe35dd37")
@@ -44087,7 +44087,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-07100KL"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fa9b88f8-170f-416d-aacc-6cfbf2f61400")
@@ -44099,7 +44099,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "301d818f-26f4-45a0-a3ce-b7d6d2c26a15")
@@ -44111,7 +44111,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3024fc1e-4ea3-45a4-ada6-d5c57682416f")
@@ -44123,7 +44123,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e427cc0c-702e-420d-842e-b22b506d262a")
@@ -44189,7 +44189,7 @@
 			(uuid "bd451d44-6ab8-4a20-8940-cebda32cc070")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "3b7c172a-c216-40df-82a6-a27b34c53732")
 			(effects
@@ -44200,7 +44200,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 90)
+			(at -0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -44209,7 +44209,7 @@
 			(uuid "e338e06d-93bd-502f-a84f-224eede0912d")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 90)
+			(at 0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -45409,7 +45409,7 @@
 		(layer "F.Cu")
 		(uuid "380d37c8-b93d-432d-bc71-a214e3c5c901")
 		(transform
-			(translate 506.3000 126.5500)
+			(translate 507.0500 124.0500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -63852,14 +63852,14 @@
 		(layer "F.Cu")
 		(uuid "4e9b9448-fce1-4327-bd19-539154883905")
 		(transform
-			(translate 529.8000 127.5500)
-			(rotate 0)
+			(translate 529.8000 126.0500)
+			(rotate 90)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C1212"
-			(at 0 -1.43)
+			(at 0 -1.43 90)
 			(layer "F.Fab")
 			(uuid "f84c9e55-261f-59ba-a823-1ee8355efd06")
 			(effects
@@ -63870,7 +63870,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.43)
+			(at 0 1.43 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7923b1de-a7d9-5c67-8057-77d05129114b")
@@ -63882,7 +63882,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6cafb359-c430-5ee9-9a52-a8eee87fea04")
@@ -63894,7 +63894,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c03a54a2-0765-5b36-9b96-d6d7c5beb639")
@@ -63906,7 +63906,7 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "15037273-ab3d-475b-b0f1-60623bb085f2")
@@ -63918,7 +63918,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f371673c-f6f7-4638-b1b4-7f8f3b911927")
@@ -63930,7 +63930,7 @@
 			)
 		)
 		(property "Voltage Rating" "25V"
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "24a2d6e5-700c-41c0-9ae3-6e371232c52f")
@@ -63996,7 +63996,7 @@
 			(uuid "16bf5a89-14c1-421c-815a-0bb031e392e8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "783e51a3-17f5-4c1c-ac8e-88852bcf18cd")
 			(effects
@@ -64007,7 +64007,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8625 0)
+			(at -0.8625 0 90)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -64016,7 +64016,7 @@
 			(uuid "8506495f-8034-5ee7-a78f-2031e736bebe")
 		)
 		(pad "2" smd roundrect
-			(at 0.8625 0)
+			(at 0.8625 0 90)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -66150,14 +66150,14 @@
 		(layer "F.Cu")
 		(uuid "54834b80-1bc9-4622-ae5e-e8de3b0413d2")
 		(transform
-			(translate 483.3000 129.0500)
-			(rotate 90)
+			(translate 477.8000 132.0500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1203"
-			(at 0 -1.43 90)
+			(at 0 -1.43 180)
 			(layer "F.Fab")
 			(uuid "56651dee-beaf-566d-8371-03eb8383dd8d")
 			(effects
@@ -66168,7 +66168,7 @@
 			)
 		)
 		(property "Value" "2.2R"
-			(at 0 1.43 90)
+			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "250c7764-fbeb-5d1d-a19c-553e9b834f99")
@@ -66180,7 +66180,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4a017db5-321e-58fa-9a84-3065009237fa")
@@ -66192,7 +66192,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "720486f2-eea1-5a39-be1a-b1acf8703395")
@@ -66204,7 +66204,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-072R2L"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "28c71713-33db-4ed0-96d4-336d76de4aea")
@@ -66216,7 +66216,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "69aa9b4f-39d3-4f79-9fd2-8b7a13faf595")
@@ -66228,7 +66228,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ae52cea2-17a5-47dc-a811-8ffeb749393a")
@@ -66240,7 +66240,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7dda5b01-a9b0-4fdc-8361-abd70609b223")
@@ -66306,7 +66306,7 @@
 			(uuid "e8a02df6-c90e-42b0-8639-52a00921a385")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "4367be62-c72c-43f4-adba-3b7cb04757b7")
 			(effects
@@ -66317,7 +66317,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 90)
+			(at -0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -66326,7 +66326,7 @@
 			(uuid "080037a4-6d4b-5c92-aaf5-9c161a4152ef")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 90)
+			(at 0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -66987,7 +66987,7 @@
 		(layer "F.Cu")
 		(uuid "55e20eac-042c-4293-8c42-26e3c10f10d3")
 		(transform
-			(translate 479.3000 129.5500)
+			(translate 485.8000 122.0500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -69508,14 +69508,14 @@
 		(layer "F.Cu")
 		(uuid "591db4ec-b6c4-4ac2-bc13-f3d020d975f4")
 		(transform
-			(translate 480.3000 132.5500)
-			(rotate 90)
+			(translate 485.3000 130.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Texas Instrument DRT-3 1x0.8mm Pitch 0.7mm http://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf")
 		(tags "DRT-3 1x0.8mm Pitch 0.7mm")
 		(property "Reference" "D1201"
-			(at 0 -1.5 90)
+			(at 0 -1.5)
 			(layer "F.Fab")
 			(uuid "a6f92f8a-4ff5-5ecd-a69d-04aff136be8b")
 			(effects
@@ -69526,7 +69526,7 @@
 			)
 		)
 		(property "Value" "TPD2EUSB30DRTR"
-			(at 0 1.5 90)
+			(at 0 1.5)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7cf994ee-e85f-5eaa-8794-cab5d67da6f6")
@@ -69538,7 +69538,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dea1f579-75f4-51e8-86a6-b7eb03cfd501")
@@ -69550,7 +69550,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "71af1ee8-3634-5f97-ade4-eb1fae943955")
@@ -69562,7 +69562,7 @@
 			)
 		)
 		(property "MPN" "TPD2EUSB30DRTR"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d641ba7f-55ea-4a78-8094-71a2e214ab60")
@@ -69574,7 +69574,7 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5fda9a8d-bd40-4d31-afa8-7826a9577b58")
@@ -69586,7 +69586,7 @@
 			)
 		)
 		(property "LCSC" "C97502"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4c877481-e53c-4883-927f-1daa100d67ee")
@@ -69752,7 +69752,7 @@
 			(uuid "8b8873e1-44c8-4ad4-8e99-b66d001d05ad")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -1.5 90)
+			(at 0 -1.5)
 			(layer "F.Fab")
 			(uuid "15fc43d1-e97d-47cc-8a07-1104690ad714")
 			(effects
@@ -69763,7 +69763,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.35 0.425 90)
+			(at -0.35 0.425)
 			(size 0.3 0.3)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -69773,7 +69773,7 @@
 			(uuid "d9e8ad2b-58d4-505b-b8dd-4e62f54fcedb")
 		)
 		(pad "2" smd roundrect
-			(at 0.35 0.425 90)
+			(at 0.35 0.425)
 			(size 0.3 0.3)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -69783,7 +69783,7 @@
 			(uuid "1b854572-581b-500a-ba56-5568ac334e54")
 		)
 		(pad "3" smd roundrect
-			(at 0 -0.425 90)
+			(at 0 -0.425)
 			(size 0.3 0.3)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -69809,14 +69809,14 @@
 		(layer "F.Cu")
 		(uuid "59305792-9df6-498d-b43c-67b1d14f5de4")
 		(transform
-			(translate 500.8000 128.0500)
-			(rotate 180)
+			(translate 499.8000 128.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "SOT, 5 Pin (https://home.jeita.or.jp/tsc/std-pdf/ED-7500A.pdf#page=171, JEDEC MO-203, variant AA, https://www.jedec.org/document_search?search_api_views_fulltext=MO-203)")
 		(tags "SOT TO_SOT_SMD SC-88A SOT-353 SC-70-5")
 		(property "Reference" "U1201"
-			(at 0 -1.8 180)
+			(at 0 -1.8)
 			(layer "F.SilkS")
 			(uuid "3a80961e-464f-55f0-803f-4ae6b41be0d0")
 			(effects
@@ -69827,7 +69827,7 @@
 			)
 		)
 		(property "Value" "SN74LVC1G125DCKR"
-			(at 0 1.8 180)
+			(at 0 1.8)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b5027503-1208-5cba-957c-109d073d036d")
@@ -69839,7 +69839,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g125.pdf"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e5714ad4-6745-571e-8422-b4e99ae9f88c")
@@ -69851,7 +69851,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "84db7947-4572-58e1-b599-532eb4c9b75d")
@@ -69863,7 +69863,7 @@
 			)
 		)
 		(property "MPN" "SN74LVC1G125DCKR"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "83bf0226-f5d1-4428-bb3c-d0b0d195df13")
@@ -69875,7 +69875,7 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "825b5de6-3208-4c8c-a110-984bf0d8c602")
@@ -69887,7 +69887,7 @@
 			)
 		)
 		(property "LCSC" "C7833"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8963be6f-7aec-4a05-ad38-8e48755195be")
@@ -69899,7 +69899,7 @@
 			)
 		)
 		(property "Qualification" "Ioff; inputs tolerate 5.5V. Debug is 3.3V TTL, not RS232"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0ab09c90-7971-4bd3-a4ea-c55c7a9b18ad")
@@ -70177,7 +70177,7 @@
 			(uuid "028672e0-ec94-450a-8c40-5ad0107ac9f0")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "ff69c5ef-fafc-4687-820d-05b1b41e00f4")
 			(effects
@@ -70188,7 +70188,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8375 -0.65 180)
+			(at -0.8375 -0.65)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -70197,7 +70197,7 @@
 			(uuid "17058bce-c47c-5bcd-a8b6-496fe1ef1a23")
 		)
 		(pad "2" smd roundrect
-			(at -0.8375 0 180)
+			(at -0.8375 0)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -70206,7 +70206,7 @@
 			(uuid "bbe0e866-0932-5560-972e-154364121026")
 		)
 		(pad "3" smd roundrect
-			(at -0.8375 0.65 180)
+			(at -0.8375 0.65)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -70216,7 +70216,7 @@
 			(uuid "43f399f9-c087-5d9b-92d6-5053e244f60b")
 		)
 		(pad "4" smd roundrect
-			(at 0.8375 0.65 180)
+			(at 0.8375 0.65)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -70225,7 +70225,7 @@
 			(uuid "546cf7f0-0bd5-5fad-900f-37298e002256")
 		)
 		(pad "5" smd roundrect
-			(at 0.8375 -0.65 180)
+			(at 0.8375 -0.65)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -72178,14 +72178,14 @@
 		(layer "F.Cu")
 		(uuid "5d26fee6-f61f-4028-b7b2-207095e80aa7")
 		(transform
-			(translate 498.3000 128.0500)
-			(rotate 90)
+			(translate 505.8000 128.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C1210"
-			(at 0 -1.43 90)
+			(at 0 -1.43)
 			(layer "F.Fab")
 			(uuid "8b0c6915-6d70-5f68-b385-886135c29d90")
 			(effects
@@ -72196,7 +72196,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.43 90)
+			(at 0 1.43)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3af06177-cc24-5369-bedc-d6479a34b4a8")
@@ -72208,7 +72208,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4b299bc7-0c9f-530e-b4b1-12f55eddeca2")
@@ -72220,7 +72220,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "874ed4db-5fbe-5d12-996d-03cfea5ef893")
@@ -72232,7 +72232,7 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f5006b3c-28fb-442f-a6c1-ab2d4fdea274")
@@ -72244,7 +72244,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c4720356-909c-4c1b-a61b-1fb325557ea9")
@@ -72256,7 +72256,7 @@
 			)
 		)
 		(property "Voltage Rating" "25V"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c82238fd-a4e0-424d-9188-6dcc4616c4c4")
@@ -72322,7 +72322,7 @@
 			(uuid "1256e6ac-b319-4a30-8d4e-fdc3395a1756")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "2d8fcfe2-5db7-4b5c-8049-55af8374c57a")
 			(effects
@@ -72333,7 +72333,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8625 0 90)
+			(at -0.8625 0)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -72342,7 +72342,7 @@
 			(uuid "9073e34a-ee5b-5d54-8252-2541a3b3b418")
 		)
 		(pad "2" smd roundrect
-			(at 0.8625 0 90)
+			(at 0.8625 0)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -86560,14 +86560,14 @@
 		(layer "F.Cu")
 		(uuid "6a030463-7960-4ea4-8bf8-7aa6c9cc97a6")
 		(transform
-			(translate 508.3000 121.5500)
-			(rotate 90)
+			(translate 489.8000 114.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R304"
-			(at 0 -1.43 90)
+			(at 0 -1.43)
 			(layer "F.Fab")
 			(uuid "24f14989-6514-5959-ad76-a517cabc8822")
 			(effects
@@ -86578,7 +86578,7 @@
 			)
 		)
 		(property "Value" "100kR"
-			(at 0 1.43 90)
+			(at 0 1.43)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "60fd5a66-a29a-57b7-ad8a-dd9e669ed277")
@@ -86590,7 +86590,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9cba2339-ce0c-55cb-9923-26fb5246c654")
@@ -86602,7 +86602,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "24a10210-a581-5148-aae4-da900f5349f1")
@@ -86614,7 +86614,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-07100KL"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fec82b82-5d69-42f1-bcd8-fb2d1d6856a7")
@@ -86626,7 +86626,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d6a6a443-9936-4e41-a22b-0dfef3d3d426")
@@ -86638,7 +86638,7 @@
 			)
 		)
 		(property "LCSC" "C14675"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "80b4c904-f709-4663-8d6f-80bf063732d9")
@@ -86650,7 +86650,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b793c56b-66eb-4431-81f8-98305ed8da5f")
@@ -86662,7 +86662,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7a868661-a2d4-4177-8230-5642b4c94dd4")
@@ -86674,7 +86674,7 @@
 			)
 		)
 		(property "Voltage Rating" "75V"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "73acff16-434a-417f-abfe-3a0bb918dc4c")
@@ -86740,7 +86740,7 @@
 			(uuid "f606ba1c-18b0-42f9-b912-9736af0c732f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "5631a348-5c5a-40fb-bc40-3458d579b90a")
 			(effects
@@ -86751,7 +86751,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 90)
+			(at -0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -86760,7 +86760,7 @@
 			(uuid "d2f3280e-8375-5977-afc9-75550128e201")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 90)
+			(at 0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -99763,7 +99763,7 @@
 		(layer "F.Cu")
 		(uuid "7ad48d3e-f014-497f-83a6-7d921808bbdb")
 		(transform
-			(translate 491.3000 121.5500)
+			(translate 491.5500 123.0500)
 			(rotate 180)
 			(scale 1 1)
 		)
@@ -111474,13 +111474,13 @@
 		(uuid "8d3a1d70-2cb6-4eac-8bc8-d7f318cbbd07")
 		(transform
 			(translate 529.8000 130.0500)
-			(rotate 90)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "SOT, 5 Pin (https://home.jeita.or.jp/tsc/std-pdf/ED-7500A.pdf#page=171, JEDEC MO-203, variant AA, https://www.jedec.org/document_search?search_api_views_fulltext=MO-203)")
 		(tags "SOT TO_SOT_SMD SC-88A SOT-353 SC-70-5")
 		(property "Reference" "U1203"
-			(at 0 -1.8 90)
+			(at 0 -1.8)
 			(layer "F.SilkS")
 			(uuid "d389c26d-1149-5526-be49-a1cd81315dba")
 			(effects
@@ -111491,7 +111491,7 @@
 			)
 		)
 		(property "Value" "SN74LVC1G125DCKR"
-			(at 0 1.8 90)
+			(at 0 1.8)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "79e691c0-5db4-5966-af3d-55218550e134")
@@ -111503,7 +111503,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g125.pdf"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "915bada2-5eed-53ed-be4e-b526ba91a447")
@@ -111515,7 +111515,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fb99049d-b7f8-5ef3-9904-da896479bd94")
@@ -111527,7 +111527,7 @@
 			)
 		)
 		(property "MPN" "SN74LVC1G125DCKR"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4220fcfa-9079-4688-9ca3-4e44ef0c28ee")
@@ -111539,7 +111539,7 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dc1ded2b-423b-4d5d-95e9-610fff8d7b55")
@@ -111551,7 +111551,7 @@
 			)
 		)
 		(property "LCSC" "C7833"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "877ff99d-cd3f-4ccc-a919-52df3575958e")
@@ -111563,7 +111563,7 @@
 			)
 		)
 		(property "Qualification" "Ioff; inputs tolerate 5.5V. Debug is 3.3V TTL, not RS232"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bc228511-4ed1-47f5-9623-f4afea998236")
@@ -111841,7 +111841,7 @@
 			(uuid "fff9892d-09ac-45cd-8ed5-a9b3ceca0e3d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 180)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "fb954c60-9541-4ea2-b3a6-b986cd6c89d2")
 			(effects
@@ -111852,7 +111852,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8375 -0.65 90)
+			(at -0.8375 -0.65)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -111861,7 +111861,7 @@
 			(uuid "b456fade-9f15-5402-8c38-5fe9bb676200")
 		)
 		(pad "2" smd roundrect
-			(at -0.8375 0 90)
+			(at -0.8375 0)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -111870,7 +111870,7 @@
 			(uuid "584b24fe-fd75-5920-ae07-23166fcea3de")
 		)
 		(pad "3" smd roundrect
-			(at -0.8375 0.65 90)
+			(at -0.8375 0.65)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -111880,7 +111880,7 @@
 			(uuid "1e35c66f-99b9-5c94-9048-33f186476908")
 		)
 		(pad "4" smd roundrect
-			(at 0.8375 0.65 90)
+			(at 0.8375 0.65)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -111889,7 +111889,7 @@
 			(uuid "ac2daeba-d9ba-5497-8ed1-bb68de8b39ce")
 		)
 		(pad "5" smd roundrect
-			(at 0.8375 -0.65 90)
+			(at 0.8375 -0.65)
 			(size 1.025 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -112600,14 +112600,14 @@
 		(layer "F.Cu")
 		(uuid "8e235e6c-8422-4c89-abf4-f8be6e40b221")
 		(transform
-			(translate 512.3000 123.5500)
-			(rotate 0)
+			(translate 481.8000 121.0500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "SOT-23, Handsoldering")
 		(tags "SOT-23")
 		(property "Reference" "Q302"
-			(at 0 -2.75 0)
+			(at 0 -2.75 180)
 			(layer "F.Fab")
 			(uuid "d60b7731-57bd-5beb-974a-1b3dda7e5f58")
 			(effects
@@ -112618,7 +112618,7 @@
 			)
 		)
 		(property "Value" "MMBT3904,215"
-			(at 0 2.5 0)
+			(at 0 2.5 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "83772ea7-5509-524d-8659-430097e18acc")
@@ -112630,7 +112630,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf"
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4926c3e1-a3db-5597-bdae-2eda871a0c1b")
@@ -112642,7 +112642,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5ab29171-bdba-5230-8bc1-ec6284004763")
@@ -112654,7 +112654,7 @@
 			)
 		)
 		(property "MPN" "MMBT3904,215"
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5f9bb401-6376-4474-a3ce-e650a21ae759")
@@ -112666,7 +112666,7 @@
 			)
 		)
 		(property "Manufacturer" "Nexperia"
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "251cd811-d1da-493b-a2d5-4bc43aa3c01f")
@@ -112842,7 +112842,7 @@
 			(uuid "c1c14e1b-58a6-4bd8-9060-b13a50db8f1b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "104b2403-d2b4-4f09-9614-fd153271bcfd")
 			(effects
@@ -112853,7 +112853,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5 -0.95)
+			(at -1.5 -0.95 180)
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -112863,7 +112863,7 @@
 			(uuid "9f78a465-4caf-57b8-8c83-961c6a3101bb")
 		)
 		(pad "2" smd roundrect
-			(at -1.5 0.95)
+			(at -1.5 0.95 180)
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -112873,7 +112873,7 @@
 			(uuid "82274c52-7faa-5b61-b113-fb7f5d804b26")
 		)
 		(pad "3" smd roundrect
-			(at 1.5 0)
+			(at 1.5 0 180)
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -119855,7 +119855,7 @@
 		(layer "F.Cu")
 		(uuid "97a62347-71a2-4c32-822f-73fa7b185fbb")
 		(transform
-			(translate 492.3000 124.0500)
+			(translate 492.5500 120.0500)
 			(rotate 180)
 			(scale 1 1)
 		)
@@ -120080,14 +120080,14 @@
 		(layer "F.Cu")
 		(uuid "97a9854e-986b-42da-9983-1e77f5601b1e")
 		(transform
-			(translate 488.3000 124.0500)
-			(rotate 180)
+			(translate 481.8000 126.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R302"
-			(at 0 -1.43 180)
+			(at 0 -1.43)
 			(layer "F.Fab")
 			(uuid "4ee89cf3-72a9-5c05-b42f-66b33038dfb8")
 			(effects
@@ -120098,7 +120098,7 @@
 			)
 		)
 		(property "Value" "100kR"
-			(at 0 1.43 180)
+			(at 0 1.43)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3dc73d16-5f6f-5394-8490-cf8474bdf73a")
@@ -120110,7 +120110,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dcc49a1c-07f7-5ba0-a9c8-06acb176ea95")
@@ -120122,7 +120122,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4c692079-9457-5f0e-98d4-3c511f8b3bb0")
@@ -120134,7 +120134,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-07100KL"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6af9f3d6-e7b9-405f-ae41-3a393bcbe909")
@@ -120146,7 +120146,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4bb75c5a-8b92-4a3c-a3ba-bc310af8db21")
@@ -120158,7 +120158,7 @@
 			)
 		)
 		(property "LCSC" "C14675"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7e760392-7d36-428b-b5aa-67bd9648d4a3")
@@ -120170,7 +120170,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "81cb8086-2bf9-4790-8da9-7c8205b51188")
@@ -120182,7 +120182,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c15cdb60-780f-4ba7-88bc-dde62d9dd395")
@@ -120194,7 +120194,7 @@
 			)
 		)
 		(property "Voltage Rating" "75V"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fba2c276-9132-4a66-80d6-968246129567")
@@ -120260,7 +120260,7 @@
 			(uuid "59d14a1f-8704-48a3-b423-4cbf025c84c2")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 180)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "460c79e4-f7cd-4b4c-b761-4ababc88c0df")
 			(effects
@@ -120271,7 +120271,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 180)
+			(at -0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -120280,7 +120280,7 @@
 			(uuid "66bdfc01-494d-5bb5-a9e4-6b40253fd258")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 180)
+			(at 0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -122899,14 +122899,14 @@
 		(layer "F.Cu")
 		(uuid "9acc1934-312f-4e47-b46a-32c8b7e2ace1")
 		(transform
-			(translate 491.3000 132.0500)
-			(rotate 90)
+			(translate 487.8000 122.0500)
+			(rotate 270)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R201"
-			(at 0 -1.43 90)
+			(at 0 -1.43 270)
 			(layer "F.Fab")
 			(uuid "624777d5-d7bc-5be8-b746-fac68db5c0e6")
 			(effects
@@ -122917,7 +122917,7 @@
 			)
 		)
 		(property "Value" "10kR"
-			(at 0 1.43 90)
+			(at 0 1.43 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2ce324cb-6f75-524d-ba5c-e8f11ab32883")
@@ -122929,7 +122929,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ada2eb20-7156-5899-ac60-17fb2966ef43")
@@ -122941,7 +122941,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9afeb2e3-4ee6-55ae-bb52-62a7da24236b")
@@ -122953,7 +122953,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-0710KL"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c512d138-4f54-4b6e-aae7-207fd35b0150")
@@ -122965,7 +122965,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "69e4bea9-78a2-41ad-99ef-769877bdf90c")
@@ -122977,7 +122977,7 @@
 			)
 		)
 		(property "LCSC" "C98220"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "62b204f9-5847-4a66-bc01-0ff4f1be2e3d")
@@ -122989,7 +122989,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "83d7fe22-7c0f-4d67-9443-23cbf97b1a7d")
@@ -123001,7 +123001,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b43e04e3-1a1c-44f6-b957-920243865077")
@@ -123013,7 +123013,7 @@
 			)
 		)
 		(property "Voltage Rating" "75V"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "02ad2141-588f-44c4-a598-2ed6fdd92de4")
@@ -123079,7 +123079,7 @@
 			(uuid "a1b3475a-e3e8-453e-b7eb-f253d3452fde")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "52103ade-f0ca-468d-8ae0-79575b52d110")
 			(effects
@@ -123090,7 +123090,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 90)
+			(at -0.9125 0 270)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -123099,7 +123099,7 @@
 			(uuid "e46eba6e-09b9-527f-abb1-8a71aecbc760")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 90)
+			(at 0.9125 0 270)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -141101,14 +141101,14 @@
 		(layer "F.Cu")
 		(uuid "aba58b41-7746-4f71-8346-93446ee8eccb")
 		(transform
-			(translate 492.3000 128.0500)
-			(rotate 90)
+			(translate 493.8000 128.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C205"
-			(at 0 -1.43 90)
+			(at 0 -1.43)
 			(layer "F.Fab")
 			(uuid "63efd37d-7dd4-57f0-8e63-f27e2e14f5a1")
 			(effects
@@ -141119,7 +141119,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.43 90)
+			(at 0 1.43)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2e1b5403-9b8c-5620-9ecf-114e85e8bf7f")
@@ -141131,7 +141131,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL10B104KA8NNN.do"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "abee1004-5b7f-5447-b47e-5d4e991afc2a")
@@ -141143,7 +141143,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e4f27db3-e6b4-5ed8-812f-cbf211dc02ee")
@@ -141155,7 +141155,7 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "87c1b78a-4789-481d-b44d-9c9ab71d9c81")
@@ -141167,7 +141167,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6650a77f-95cb-4038-b167-5ff949d9f50d")
@@ -141179,7 +141179,7 @@
 			)
 		)
 		(property "LCSC" "C1590"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6374f60d-b86c-4c22-b620-f73e64912b29")
@@ -141191,7 +141191,7 @@
 			)
 		)
 		(property "Rating" "25V X7R +/-10%; 0603"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1dbe888c-3da5-44f9-bae2-0bb5ec4affa6")
@@ -141203,7 +141203,7 @@
 			)
 		)
 		(property "DC Bias Review" "Typical +0.94% at 3.3V, 25C; not guaranteed corner data"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "33721aa8-9a79-4621-a8b7-9887af6cc055")
@@ -141269,7 +141269,7 @@
 			(uuid "06b4cfb5-df51-41ca-ae74-c0516f3bb716")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "6c0dc5d3-7d86-48b6-9b57-6c5755387c7e")
 			(effects
@@ -141280,7 +141280,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8625 0 90)
+			(at -0.8625 0)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -141289,7 +141289,7 @@
 			(uuid "6da1bd69-fe8b-5217-b10b-815b1ffce11d")
 		)
 		(pad "2" smd roundrect
-			(at 0.8625 0 90)
+			(at 0.8625 0)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -142924,14 +142924,14 @@
 		(layer "F.Cu")
 		(uuid "ac6c3418-7854-4d9f-a18e-9d54ae5986f9")
 		(transform
-			(translate 481.3000 129.0500)
-			(rotate 90)
+			(translate 477.8000 130.0500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1204"
-			(at 0 -1.43 90)
+			(at 0 -1.43 180)
 			(layer "F.Fab")
 			(uuid "7e1f341e-4727-56cd-b6c0-1fcb353f3949")
 			(effects
@@ -142942,7 +142942,7 @@
 			)
 		)
 		(property "Value" "2.2R"
-			(at 0 1.43 90)
+			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6f0859c6-9a87-53fc-bdec-9517569798f0")
@@ -142954,7 +142954,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b059b352-f497-5585-97e8-9019b7a01827")
@@ -142966,7 +142966,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2dd74310-2ae8-5254-9a26-6aa97582b23f")
@@ -142978,7 +142978,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-072R2L"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "04f30e2b-356f-4fcd-8ed7-2d98c2793fd2")
@@ -142990,7 +142990,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7599de41-f970-4daf-a84a-dfe643bfbee3")
@@ -143002,7 +143002,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cdc97d40-1aa8-40f1-b7c2-56979f5d8c1f")
@@ -143014,7 +143014,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "65eeba76-aa65-4cce-b01a-60ca7232feed")
@@ -143080,7 +143080,7 @@
 			(uuid "3bc00370-4afe-47e6-8461-c29728f365e2")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "975dc346-b67f-4546-8ba4-14059303d3a7")
 			(effects
@@ -143091,7 +143091,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 90)
+			(at -0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -143100,7 +143100,7 @@
 			(uuid "63848f6b-476b-5c0a-b0a6-e117fc0b7a6a")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 90)
+			(at 0.9125 0 180)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -147618,14 +147618,14 @@
 		(layer "F.Cu")
 		(uuid "b1505ece-49fb-440a-a2cd-54515f911be9")
 		(transform
-			(translate 496.3000 127.5500)
-			(rotate 90)
+			(translate 505.8000 130.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R1208"
-			(at 0 -1.43 90)
+			(at 0 -1.43)
 			(layer "F.Fab")
 			(uuid "e1bfb949-3372-51f0-b4f2-1fb559c8c8b8")
 			(effects
@@ -147636,7 +147636,7 @@
 			)
 		)
 		(property "Value" "100kR"
-			(at 0 1.43 90)
+			(at 0 1.43)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "748c56c4-15c8-573b-adf1-fc0e4acebaa5")
@@ -147648,7 +147648,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "42a622ab-f0ed-5ca8-a67e-b3e5085c37b8")
@@ -147660,7 +147660,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "27a6b48f-6304-5e2f-9ac3-5a1aeb272a78")
@@ -147672,7 +147672,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-07100KL"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "da891016-c258-4943-89d6-ae7ce6ccceee")
@@ -147684,7 +147684,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "107115af-011a-45bf-bbc9-4d783314735b")
@@ -147696,7 +147696,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "53dd9ef7-c3e3-47da-a615-ce2cf6b2d4f0")
@@ -147708,7 +147708,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5a4b31d6-a215-4bf4-bfe8-d645b5a8c524")
@@ -147774,7 +147774,7 @@
 			(uuid "b09b4cb1-b39f-4040-8bd1-b9cadd040c48")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "95e3bc8e-19b8-49b9-809e-343396b5dddd")
 			(effects
@@ -147785,7 +147785,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 90)
+			(at -0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -147794,7 +147794,7 @@
 			(uuid "e5573b61-09bc-59a9-97d9-61776245987c")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 90)
+			(at 0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -149265,7 +149265,7 @@
 		(layer "F.Cu")
 		(uuid "b305b3dd-4627-43f0-b589-ffb3852db0b6")
 		(transform
-			(translate 487.3000 115.0500)
+			(translate 512.3000 128.5500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -162441,14 +162441,14 @@
 		(layer "F.Cu")
 		(uuid "bdae597f-431e-4403-ae77-45d8b74e2804")
 		(transform
-			(translate 493.3000 118.0500)
-			(rotate 90)
+			(translate 492.5500 118.0500)
+			(rotate 180)
 			(scale 1 1)
 		)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C202"
-			(at 0 -1.43 90)
+			(at 0 -1.43 180)
 			(layer "F.Fab")
 			(uuid "d7ac8f8f-2f83-59f5-bac5-e749e6f316b2")
 			(effects
@@ -162459,7 +162459,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.43 90)
+			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ac2870a9-f573-5c0f-b1e6-5ec18d3500f0")
@@ -162471,7 +162471,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL10B104KA8NNN.do"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e0e6bb59-ec60-5cbd-af7d-615347ec2eec")
@@ -162483,7 +162483,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6b04b9ea-de4c-5d52-9c90-1245ecb5954e")
@@ -162495,7 +162495,7 @@
 			)
 		)
 		(property "Rating" "25V X7R +/-10%; 0603"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6bb17190-82ae-4415-96c6-3053fafde83b")
@@ -162507,7 +162507,7 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f8a72d92-8d66-4291-94ec-789053419113")
@@ -162519,7 +162519,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0a60949a-5392-4033-b2d9-492cfbb91655")
@@ -162531,7 +162531,7 @@
 			)
 		)
 		(property "LCSC" "C1590"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "828c5143-9c55-4f00-86dd-c0a6e10abdde")
@@ -162543,7 +162543,7 @@
 			)
 		)
 		(property "DC Bias Review" "Typical +0.94% at 3.3V, 25C; not guaranteed corner data"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "931bbed0-eec6-42d4-9e04-5f83997a8e7b")
@@ -162609,7 +162609,7 @@
 			(uuid "8fc1ee28-6ed8-477b-9a81-e43a39ffdf43")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "d997a130-4b37-426c-973e-5022ad9be236")
 			(effects
@@ -162620,7 +162620,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.8625 0 90)
+			(at -0.8625 0 180)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -162629,7 +162629,7 @@
 			(uuid "cd220d9b-553d-5caf-b3c7-a2614b4072c1")
 		)
 		(pad "2" smd roundrect
-			(at 0.8625 0 90)
+			(at 0.8625 0 180)
 			(size 1.075 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -165610,7 +165610,7 @@
 		(layer "F.Cu")
 		(uuid "c1aec1c3-eaa5-41b3-8044-1b83228edd33")
 		(transform
-			(translate 477.3000 127.5500)
+			(translate 487.8000 118.0500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -166666,14 +166666,14 @@
 		(layer "F.Cu")
 		(uuid "c26360f0-4077-4db7-aebb-3939e8f3c3a3")
 		(transform
-			(translate 485.3000 120.5500)
-			(rotate 180)
+			(translate 477.3000 126.0500)
+			(rotate 270)
 			(scale 1 1)
 		)
 		(descr "SOT-23, Handsoldering")
 		(tags "SOT-23")
 		(property "Reference" "Q301"
-			(at 0 -2.75 180)
+			(at 0 -2.75 270)
 			(layer "F.Fab")
 			(uuid "93441840-8b26-5200-8fd6-f2ed5454608d")
 			(effects
@@ -166684,7 +166684,7 @@
 			)
 		)
 		(property "Value" "MMBT3904,215"
-			(at 0 2.5 180)
+			(at 0 2.5 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9d57c4d9-d239-540f-b082-d9f3680351c7")
@@ -166696,7 +166696,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "690ef073-6bce-59eb-90f1-ebe8180856ed")
@@ -166708,7 +166708,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "81620c7b-509c-5f3d-af72-7eeb2edeefbd")
@@ -166720,7 +166720,7 @@
 			)
 		)
 		(property "MPN" "MMBT3904,215"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a312a89c-4109-44e3-bb8e-05fe9361ac1a")
@@ -166732,7 +166732,7 @@
 			)
 		)
 		(property "Manufacturer" "Nexperia"
-			(at 0 0 180)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "402a3fbb-a8db-4cee-b61a-9efb8a6e262d")
@@ -166908,7 +166908,7 @@
 			(uuid "0f41adc9-6ba5-4ad0-ba1f-475fcbc390c7")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "8286d8c4-d392-459a-904e-b9b40437f3e2")
 			(effects
@@ -166919,7 +166919,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5 -0.95 180)
+			(at -1.5 -0.95 270)
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -166929,7 +166929,7 @@
 			(uuid "5a45f719-7530-572a-86c2-e22b720a6ba2")
 		)
 		(pad "2" smd roundrect
-			(at -1.5 0.95 180)
+			(at -1.5 0.95 270)
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -166939,7 +166939,7 @@
 			(uuid "af7927e7-b961-5a51-b8e2-a64f9e38a1ba")
 		)
 		(pad "3" smd roundrect
-			(at 1.5 0 180)
+			(at 1.5 0 270)
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -173564,7 +173564,7 @@
 		(layer "F.Cu")
 		(uuid "ccf447f4-4dac-400a-a7b7-a36ee5e1ad45")
 		(transform
-			(translate 506.3000 128.5500)
+			(translate 507.0500 122.0500)
 			(rotate 0)
 			(scale 1 1)
 		)
@@ -190598,14 +190598,14 @@
 		(layer "F.Cu")
 		(uuid "e1e7a568-32f4-43de-b809-e49f0a1a95d9")
 		(transform
-			(translate 494.3000 129.0500)
-			(rotate 270)
+			(translate 481.8000 130.0500)
+			(rotate 0)
 			(scale 1 1)
 		)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor handsolder")
 		(property "Reference" "R203"
-			(at 0 -1.43 270)
+			(at 0 -1.43)
 			(layer "F.Fab")
 			(uuid "882d8982-fea6-53d7-865d-f84dc096fa34")
 			(effects
@@ -190616,7 +190616,7 @@
 			)
 		)
 		(property "Value" "10kR"
-			(at 0 1.43 270)
+			(at 0 1.43)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0999855d-8b64-5d2a-939f-48c9c8467d9d")
@@ -190628,7 +190628,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d8f614aa-eac6-5ed6-9f5c-de6aa53bd428")
@@ -190640,7 +190640,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8a8011be-7a28-5750-be47-00d74d963515")
@@ -190652,7 +190652,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-0710KL"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1d176fdb-b4ab-45eb-9fd1-fbef66a20acd")
@@ -190664,7 +190664,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "93b593e5-6989-4f61-b6b0-9a7fe64284c5")
@@ -190676,7 +190676,7 @@
 			)
 		)
 		(property "LCSC" "C98220"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1fe63e03-107d-4afe-b63a-7accbc938e8c")
@@ -190688,7 +190688,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3d3c15d2-c7a7-4f78-b5af-3d4b6ad1ebed")
@@ -190700,7 +190700,7 @@
 			)
 		)
 		(property "Power Rating" "0.1W"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4b0098ba-53a0-4697-9732-11acc3cf1bb4")
@@ -190712,7 +190712,7 @@
 			)
 		)
 		(property "Voltage Rating" "75V"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9b00789a-ba8d-4b6d-9d50-55baee885c3e")
@@ -190778,7 +190778,7 @@
 			(uuid "875303bc-f709-47ad-84f9-27a8c90154e3")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0)
 			(layer "F.Fab")
 			(uuid "ff25dbd3-8650-4fb8-9c4f-bac06c0fd0ca")
 			(effects
@@ -190789,7 +190789,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0 270)
+			(at -0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -190798,7 +190798,7 @@
 			(uuid "5912eb3c-ba34-5e09-84ad-20664ec079b0")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0 270)
+			(at 0.9125 0)
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -202991,7 +202991,7 @@
 		(layer "F.Cu")
 		(uuid "f0145127-b1ff-4fbb-88ca-ef63ac3c29cf")
 		(transform
-			(translate 485.8000 111.0500)
+			(translate 510.8000 124.5500)
 			(rotate 90)
 			(scale 1 1)
 		)
@@ -205015,7 +205015,7 @@
 		(layer "F.Cu")
 		(uuid "f5c21d65-cf43-492d-a0b5-cda750e4d8ea")
 		(transform
-			(translate 526.3000 128.5500)
+			(translate 523.8000 126.0500)
 			(rotate 90)
 			(scale 1 1)
 		)

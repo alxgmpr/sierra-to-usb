@@ -94,8 +94,8 @@ ANCH = {   # most important first: core, then the connectors and magnetics that 
 }
 OVERHANG = {'J1701', 'J1201'}             # connectors allowed to sit on/over the board edge
 CARD = (146.0, 34.5, 199.5, 65.5)         # M.2 3042/3052 card: keep clear
-TIDY = {'CORE', 'PSEC', 'NIC', 'MODEM'} # blocks whose passives are fanned around their host in rows
-STAGE = {'PSEC', 'NIC', 'MODEM'} # blocks of discrete regulators: ICs keep pin 1 one way and get their inductor placed with them
+TIDY = {'CORE', 'PSEC', 'NIC', 'MODEM', 'CTRL'} # blocks whose passives are fanned around their host in rows
+STAGE = {'PSEC', 'NIC', 'MODEM', 'CTRL'} # blocks of discrete regulators: ICs keep pin 1 one way and get their inductor placed with them
 BARRIER = {'T1701', 'T1702', 'U1703', 'U1801', 'U1802', 'U1803'}
 
 def short(n): return re.sub(r'^/.*/', '', n)
