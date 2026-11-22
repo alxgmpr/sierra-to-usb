@@ -107,6 +107,11 @@ for i, x in enumerate((3.25, 12.0, 20.75, 29.5)):   # one column per cable pair:
                  f'R{1713+i}': (x + 4.25, 43.75, 0), f'C{1709+i}': (x + 4.25, 45.5, 0), f'R{1709+i}': (x + 4.25, 47.25, 0)})
 ANCH['C1865'] = (8, 26, 180)   # Bob Smith common to chassis, at the end of the row next to the shield pin
 ANCH.update({'L1702': (6, 55, 180), 'D1705': (14, 54.5, 270), 'C1717': (22, 55, 90), 'U1701': (31, 55, 0)})
+# Flyback secondary in flow order from T1702's pins: rectifier and its snubber at the return pins, the three
+# raw-output caps at the output pins, then filter inductor -> bulk cap, with the regulators in the band above.
+ANCH.update({'D1718': (61, 70.5, 0), 'R1747': (62.5, 65.5, 0), 'R1748': (62.5, 61.5, 0),
+             'C1728': (60, 78, 0), 'C1729': (60, 81.5, 0), 'C1730': (60, 85, 0),
+             'L1708': (66.5, 81.5, 270), 'C1727': (76, 81.5, 90)})
 BARRIER = {'T1701', 'T1702', 'U1703', 'U1801', 'U1802', 'U1803'}
 
 def short(n): return re.sub(r'^/.*/', '', n)
@@ -267,7 +272,7 @@ for ref in sorted(BARRIER - set(ANCH), key=lambda r: (-len(fps[r]['pads']), r)):
 ORDER = ['U901', 'U1101', 'U2001', 'U2002', 'U1604', 'U501', 'U1001', 'U902', 'U1302', 'Y1301', 'U1503',
          'U1701', 'U1702', 'Q1705', 'U701', 'U601', 'U401']
 HALO = {'U901': 3.0, 'U1101': 2.0, 'U501': 3.0}
-TARGET = {'U2001': (130, 49), 'U2002': (130, 41), 'U501': (100, 74)}   # keep SoC->M.2 lane corridor for the muxes
+TARGET = {'U2001': (130, 49), 'U2002': (130, 41), 'U501': (100, 74), 'U701': (66, 53), 'U601': (77, 50), 'U401': (77, 60)}   # keep SoC->M.2 lane corridor for the muxes
 for ref in ORDER:
     if ref not in placed: place_ic(ref, TARGET.get(ref) or target_of(ref), HALO.get(ref, 1.5), 1.0 if ref in TARGET else 0.1)
 while True:
