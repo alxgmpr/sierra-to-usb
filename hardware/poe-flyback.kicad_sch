@@ -45140,7 +45140,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100nF"
 			(at 87.63 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -45713,6 +45713,39 @@
 			)
 		)
 		(property "MPN" "C2012X7R2A104K125AA"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "100V"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -54493,7 +54526,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "PARTNUMBER" "GRM1885C1H101JA01D"
+		(property "PARTNUMBER" "CL10C101JB8NNNC"
 			(at 170.18 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -54516,7 +54549,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "MANUFACTURER" "MuRata"
+		(property "MANUFACTURER" "Samsung Electro-Mechanics"
 			(at 170.18 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -54972,7 +55005,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "MPN" "GRM1885C1H101JA01D"
+		(property "MPN" "CL10C101JB8NNNC"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -54983,7 +55016,51 @@
 				)
 			)
 		)
-		(property "Manufacturer" "MuRata"
+		(property "LCSC" "C14858"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "5%"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "C0G"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -57211,7 +57288,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100nF"
 			(at 234.95 147.32 90)
 			(hide yes)
 			(show_name no)
@@ -57472,7 +57549,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "MANUFACTURER" "AVX"
+		(property "MANUFACTURER" "Samsung Electro-Mechanics"
 			(at 234.95 147.32 90)
 			(hide yes)
 			(show_name no)
@@ -57604,7 +57681,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "PARTNUMBER" "06033C104JAT2A"
+		(property "PARTNUMBER" "CL10B104KA8NNNC"
 			(at 234.95 147.32 90)
 			(hide yes)
 			(show_name no)
@@ -57770,7 +57847,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "MPN" "06033C104JAT2A"
+		(property "MPN" "CL10B104KA8NNNC"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -57781,7 +57858,51 @@
 				)
 			)
 		)
-		(property "Manufacturer" "AVX"
+		(property "LCSC" "C1590"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -61685,7 +61806,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "MANUFACTURER" "Kemet"
+		(property "MANUFACTURER" "Samsung Electro-Mechanics"
 			(at 58.42 72.39 90)
 			(hide yes)
 			(show_name no)
@@ -61805,7 +61926,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "PARTNUMBER" "C0603C221J5GACTU"
+		(property "PARTNUMBER" "CL10C221JB8NNNC"
 			(at 58.42 72.39 90)
 			(hide yes)
 			(show_name no)
@@ -62019,7 +62140,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "MPN" "C0603C221J5GACTU"
+		(property "MPN" "CL10C221JB8NNNC"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -62030,7 +62151,40 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Kemet"
+		(property "Tolerance" "5%"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "C0G"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -68339,7 +68493,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "PARTNUMBER" "GRM1885C1H101JA01D"
+		(property "PARTNUMBER" "CL10C101JB8NNNC"
 			(at 340.36 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -68362,7 +68516,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MANUFACTURER" "MuRata"
+		(property "MANUFACTURER" "Samsung Electro-Mechanics"
 			(at 340.36 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -68818,7 +68972,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MPN" "GRM1885C1H101JA01D"
+		(property "MPN" "CL10C101JB8NNNC"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -68829,7 +68983,51 @@
 				)
 			)
 		)
-		(property "Manufacturer" "MuRata"
+		(property "LCSC" "C14858"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "5%"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "C0G"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -71570,7 +71768,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100nF"
 			(at 181.61 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -72143,6 +72341,39 @@
 			)
 		)
 		(property "MPN" "C2012X7R2A104K125AA"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "100V"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -80224,7 +80455,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "0.047uF"
+		(property "Value" "47nF"
 			(at 347.98 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -80317,7 +80548,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "PARTNUMBER" "C1608X7R1H473K080AA"
+		(property "PARTNUMBER" "CL10B473KB8NNNC"
 			(at 347.98 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -80340,7 +80571,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MANUFACTURER" "TDK"
+		(property "MANUFACTURER" "Samsung Electro-Mechanics"
 			(at 347.98 191.77 0)
 			(hide yes)
 			(show_name no)
@@ -80796,7 +81027,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MPN" "C1608X7R1H473K080AA"
+		(property "MPN" "CL10B473KB8NNNC"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -80807,7 +81038,51 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "LCSC" "C1622"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "50V"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)

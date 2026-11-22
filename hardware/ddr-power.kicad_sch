@@ -2104,6 +2104,17 @@
 				)
 			)
 		)
+		(property "Tolerance" "10%"
+			(at 266.7 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 266.7 162.56 0)
 			(hide yes)
@@ -2941,7 +2952,18 @@
 				)
 			)
 		)
-		(property "MPN" "CL31B106KAHNNNE"
+		(property "MPN" "CL31B106KBHNNNE"
+			(at 304.8 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
 			(at 304.8 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -2963,7 +2985,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14860"
+		(property "LCSC" "C89632"
 			(at 304.8 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -2974,7 +2996,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "50V"
 			(at 304.8 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -3183,6 +3205,28 @@
 			)
 		)
 		(property "MPN" "CL32B226KAJNNNE"
+			(at 139.7 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 139.7 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 139.7 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -3778,7 +3822,29 @@
 				)
 			)
 		)
-		(property "MPN" "CL31B106KAHNNNE"
+		(property "MPN" "CL31B106KBHNNNE"
+			(at 177.8 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 177.8 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 177.8 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -3800,7 +3866,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14860"
+		(property "LCSC" "C89632"
 			(at 177.8 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -3811,7 +3877,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "50V"
 			(at 177.8 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -3917,6 +3983,17 @@
 			)
 		)
 		(property "MPN" "CL32B226KAJNNNE"
+			(at 228.6 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
 			(at 228.6 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -4330,7 +4407,29 @@
 				)
 			)
 		)
-		(property "MPN" "CL31B106KAHNNNE"
+		(property "MPN" "CL31B106KBHNNNE"
+			(at 63.5 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 63.5 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 63.5 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -4352,7 +4451,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14860"
+		(property "LCSC" "C89632"
 			(at 63.5 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -4363,7 +4462,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "50V"
 			(at 63.5 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -4788,7 +4887,29 @@
 				)
 			)
 		)
-		(property "MPN" "CL31B106KAHNNNE"
+		(property "MPN" "CL31B106KBHNNNE"
+			(at 139.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 139.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 139.7 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -4810,7 +4931,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14860"
+		(property "LCSC" "C89632"
 			(at 139.7 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -4821,7 +4942,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "50V"
 			(at 139.7 223.52 0)
 			(hide yes)
 			(show_name no)

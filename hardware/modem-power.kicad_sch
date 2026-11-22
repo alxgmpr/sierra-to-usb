@@ -5886,6 +5886,39 @@
 				)
 			)
 		)
+		(property "LCSC" "C309062"
+			(at 485.14 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 485.14 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 485.14 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 485.14 55.88 0)
 			(hide yes)
@@ -7121,6 +7154,39 @@
 				)
 			)
 		)
+		(property "LCSC" "C309062"
+			(at 525.78 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 525.78 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 525.78 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 525.78 55.88 0)
 			(hide yes)
@@ -7227,6 +7293,39 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
+			(at 495.3 401.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 495.3 401.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 495.3 401.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 495.3 401.32 0)
 			(hide yes)
 			(show_name no)
@@ -8498,7 +8597,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL10B103KB8NNNC"
+		(property "MPN" "C1608X7R2A103K"
 			(at 688.34 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -8509,7 +8608,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Tolerance" "10%"
 			(at 688.34 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -8520,7 +8619,18 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "50V"
+		(property "Manufacturer" "TDK"
+			(at 688.34 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "100V"
 			(at 688.34 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -8636,7 +8746,40 @@
 				)
 			)
 		)
-		(property "MPN" "CL31B106KAHNNNE"
+		(property "MPN" "CL31B106KBHNNNE"
+			(at 444.5 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C89632"
+			(at 444.5 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 444.5 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 444.5 127 0)
 			(hide yes)
 			(show_name no)
@@ -8658,7 +8801,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "50V"
 			(at 444.5 127 0)
 			(hide yes)
 			(show_name no)
@@ -9017,6 +9160,28 @@
 				)
 			)
 		)
+		(property "LCSC" "C1622"
+			(at 63.5 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 63.5 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 63.5 228.6 0)
 			(hide yes)
@@ -9311,6 +9476,39 @@
 				)
 			)
 		)
+		(property "LCSC" "C309062"
+			(at 444.5 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 444.5 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 444.5 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 444.5 55.88 0)
 			(hide yes)
@@ -9427,6 +9625,39 @@
 				)
 			)
 		)
+		(property "LCSC" "C1590"
+			(at 187.96 401.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 187.96 401.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 187.96 401.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 187.96 401.32 0)
 			(hide yes)
@@ -9533,6 +9764,39 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
+			(at 525.78 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 525.78 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 525.78 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 525.78 127 0)
 			(hide yes)
 			(show_name no)
@@ -9779,6 +10043,39 @@
 				)
 			)
 		)
+		(property "LCSC" "C1590"
+			(at 769.62 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 769.62 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 769.62 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 769.62 223.52 0)
 			(hide yes)
@@ -9885,6 +10182,39 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
+			(at 233.68 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 233.68 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 233.68 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 233.68 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -10127,7 +10457,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL10B102KB8NNNC"
+		(property "MPN" "C1608X7R2A102K"
 			(at 314.96 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -10138,7 +10468,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Tolerance" "10%"
 			(at 314.96 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -10149,7 +10479,18 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "50V"
+		(property "Manufacturer" "TDK"
+			(at 314.96 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "100V"
 			(at 314.96 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -10254,7 +10595,40 @@
 				)
 			)
 		)
-		(property "MPN" "CL31B106KAHNNNE"
+		(property "MPN" "CL31B106KBHNNNE"
+			(at 485.14 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C89632"
+			(at 485.14 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 485.14 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 485.14 127 0)
 			(hide yes)
 			(show_name no)
@@ -10276,7 +10650,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "25V"
+		(property "Voltage Rating" "50V"
 			(at 485.14 127 0)
 			(hide yes)
 			(show_name no)
@@ -10627,6 +11001,39 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
+			(at 203.2 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 203.2 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 203.2 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 203.2 55.88 0)
 			(hide yes)
 			(show_name no)

@@ -36072,7 +36072,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "Value" "1000pF"
+		(property "Value" "1nF"
 			(at 284.48 162.56 90)
 			(hide yes)
 			(show_name no)
@@ -36548,6 +36548,39 @@
 			)
 		)
 		(property "MPN" "C1608X7R2A102K"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "100V"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -40683,7 +40716,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "Value" "1000pF"
+		(property "Value" "1nF"
 			(at 327.66 162.56 90)
 			(hide yes)
 			(show_name no)
@@ -41159,6 +41192,39 @@
 			)
 		)
 		(property "MPN" "C1608X7R2A102K"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "100V"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)

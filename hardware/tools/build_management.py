@@ -19,8 +19,10 @@ LED = 'LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder'
 SAMSUNG, YAGEO, TI = 'Samsung Electro-Mechanics', 'Yageo', 'Texas Instruments'
 RES = {'100kR': 'RC0603FR-07100KL', '10kR': 'RC0603FR-0710KL', '4.7kR': 'RC0603FR-074K7L',
        '1kR': 'RC0603FR-071KL', '22R': 'RC0603FR-0722RL', '0R': 'RC0603JR-070RL'}
-CAP = {'100nF': ('CL10B104KA8NNNC', C0603, SAMSUNG, '25V'), '1nF': ('C1608X7R2A102K', C0603, 'TDK', '100V'),
-       '4.7uF': ('CL10A475KA8NQNC', C0603, SAMSUNG, '25V'), '10uF': ('CL31B106KBHNNNE', C1206, SAMSUNG, '50V')}
+CAP = {'100nF': ('CL10B104KA8NNNC', C0603, SAMSUNG, '25V', {'Dielectric': 'X7R', 'Tolerance': '10%', 'LCSC': 'C1590'}),
+       '1nF': ('C1608X7R2A102K', C0603, 'TDK', '100V', {'Dielectric': 'X7R', 'Tolerance': '10%'}),
+       '4.7uF': ('CL10A475KA8NQNC', C0603, SAMSUNG, '25V', {}),
+       '10uF': ('CL31B106KBHNNNE', C1206, SAMSUNG, '50V', {'Dielectric': 'X7R', 'Tolerance': '10%', 'LCSC': 'C89632'})}
 
 
 def lib_body(sheet, lib_id):
@@ -40,8 +42,8 @@ def res(s, ref, value, x, y, a, b, horizontal=False):
 
 
 def cap(s, ref, value, x, y, a, b='GND'):
-    mpn, fp, maker, volts = CAP[value]
-    return s.passive('C', ref, value, x, y, a, b, mpn, fp, maker, {'Voltage Rating': volts})
+    mpn, fp, maker, volts, extra = CAP[value]
+    return s.passive('C', ref, value, x, y, a, b, mpn, fp, maker, {'Voltage Rating': volts, **extra})
 
 
 def part(s, lib, name, ref, value, x, y, fp, fields, nets, body=None):

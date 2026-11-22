@@ -2555,7 +2555,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22uF / 25V"
+		(property "Value" "22uF"
 			(at 190.5 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2598,6 +2598,39 @@
 			)
 		)
 		(property "MPN" "CL32B226KAJNNNE"
+			(at 200.66 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 200.66 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 200.66 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
 			(at 200.66 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -2684,7 +2717,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22uF / 25V"
+		(property "Value" "22uF"
 			(at 45.72 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2727,6 +2760,39 @@
 			)
 		)
 		(property "MPN" "CL32B226KAJNNNE"
+			(at 55.88 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 55.88 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 55.88 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
 			(at 55.88 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -2813,7 +2879,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100nF / 25V"
+		(property "Value" "100nF"
 			(at 243.84 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2856,6 +2922,39 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
+			(at 254 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 254 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 254 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
 			(at 254 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -3781,7 +3880,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22uF / 25V"
+		(property "Value" "22uF"
 			(at 165.1 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3824,6 +3923,39 @@
 			)
 		)
 		(property "MPN" "CL32B226KAJNNNE"
+			(at 175.26 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 175.26 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 175.26 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage Rating" "25V"
 			(at 175.26 91.44 0)
 			(hide yes)
 			(show_name no)

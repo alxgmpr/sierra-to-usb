@@ -6428,6 +6428,39 @@
 				)
 			)
 		)
+		(property "LCSC" "C1590"
+			(at 205.74 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 205.74 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 205.74 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 205.74 213.36 0)
 			(hide yes)
@@ -6798,6 +6831,39 @@
 				)
 			)
 		)
+		(property "LCSC" "C1590"
+			(at 134.62 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 134.62 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 134.62 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 134.62 213.36 0)
 			(hide yes)
@@ -6862,7 +6928,7 @@
 				)
 			)
 		)
-		(property "Value" "10nF / 100V"
+		(property "Value" "10nF"
 			(at 143.51 278.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6904,6 +6970,17 @@
 			)
 		)
 		(property "MPN" "C1608X7R2A103K"
+			(at 134.62 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 134.62 276.86 0)
 			(hide yes)
 			(show_name no)
@@ -7042,6 +7119,39 @@
 			)
 		)
 		(property "MPN" "CL10B104KA8NNNC"
+			(at 276.86 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 276.86 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 276.86 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 276.86 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -7666,7 +7776,7 @@
 				)
 			)
 		)
-		(property "Value" "10nF / 100V"
+		(property "Value" "10nF"
 			(at 72.39 278.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7708,6 +7818,17 @@
 			)
 		)
 		(property "MPN" "C1608X7R2A103K"
+			(at 63.5 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 63.5 276.86 0)
 			(hide yes)
 			(show_name no)
@@ -7983,6 +8104,39 @@
 				)
 			)
 		)
+		(property "LCSC" "C1590"
+			(at 63.5 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 63.5 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
+			(at 63.5 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 63.5 213.36 0)
 			(hide yes)
@@ -8174,7 +8328,7 @@
 				)
 			)
 		)
-		(property "Value" "10nF / 100V"
+		(property "Value" "10nF"
 			(at 285.75 278.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8216,6 +8370,17 @@
 			)
 		)
 		(property "MPN" "C1608X7R2A103K"
+			(at 276.86 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 276.86 276.86 0)
 			(hide yes)
 			(show_name no)
@@ -8439,7 +8604,7 @@
 				)
 			)
 		)
-		(property "Value" "10nF / 100V"
+		(property "Value" "10nF"
 			(at 214.63 278.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8481,6 +8646,17 @@
 			)
 		)
 		(property "MPN" "C1608X7R2A103K"
+			(at 205.74 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Dielectric" "X7R"
 			(at 205.74 276.86 0)
 			(hide yes)
 			(show_name no)

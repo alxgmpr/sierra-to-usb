@@ -30,7 +30,7 @@ def validate(tree,directory):
  def connected(ref,mapping):
   for net,pins in mapping.items():
    for pin in pins.split():on(ref,pin,net)
- assert len(C)==819,len(C)
+ assert len(C)==827,len(C)
  assert len(B)==sum(len(p) for p in N.values()),'Physical pin appears in two nets'
  for ref in C:
   if ref in ['TP1101','TP1102','TP1103'] or ref.startswith('TP24'):assert C[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
@@ -58,7 +58,7 @@ def validate(tree,directory):
  for row in csv.DictReader((ROOT/'reference/ram-local-bypass-plan.csv').open()):
   on(row['reference'],'1',row['rail']);on(row['reference'],'2','GND')
   assert C[row['reference']].findtext('value')==row['value']
-  assert float(F(row['reference'])['Voltage Rating'].rstrip('V'))>=25
+  assert float(F(row['reference'])['Voltage Rating'].rstrip('V'))>=3*{'VCC_1V8':1.8,'VDD_DDR_1V1':1.1,'VDD_DDR_0V6':0.6}[row['rail']],row   # >= 3x rail
  exact('DDR_VDDQ_SW','U902:3','L902:1');exact('DDR_VDDQ_FB','U902:5','R905:2','R906:1','C959:2')
  subset('VDD_DDR_0V6','L902:2','C956:1','C957:1','C958:1','R903:1','R905:1','C959:1')
  exact('DDR_VDDQ_EN','U902:1','R907:2','R908:1','C960:1')

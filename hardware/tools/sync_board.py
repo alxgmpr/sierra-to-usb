@@ -61,11 +61,24 @@ def refresh_nets(ref, item, nets):
     out.append(item[pos:])
     return ''.join(out)
 
+def refresh_fields(ref, item, props):
+    """Update existing property values in place; append hidden ones the footprint lacks."""
+    for name, value in props.items():
+        m = re.search(r'\(property "' + re.escape(quote(name)) + r'" "((?:[^"\\]|\\.)*)"', item)
+        if m:
+            item = item[:m.start()] + f'(property "{quote(name)}" "{quote(value)}"' + item[m.end():]
+        elif value:
+            end = item.rstrip().rindex(')')
+            item = item[:end] + '\t' + property_text(ref, name, value) + '\n\t' + item[end:]
+    return item
+
+
 def synchronize(output):
     output.mkdir(parents=True, exist_ok=True)
     board_path = ROOT / 'appliance.kicad_pcb'
     board = board_path.read_text()
-    assert not re.search(r'\((segment|arc|via|zone)\b', board), 'Routed board: use native update.'
+    # Footprints may embed keepout zones; only board-level copper counts as routing.
+    assert not any(tag(x) in ('segment', 'arc', 'via', 'zone') for x in children(board)), 'Routed board: use native update.'
     shutil.copy2(board_path, output / 'appliance-before-sync.kicad_pcb')
     subprocess.run([CLI, 'sch', 'export', 'netlist', '--format', 'kicadxml',
                     '--output', str(output / 'appliance.xml'), str(ROOT / 'appliance.kicad_sch')], check=True)
@@ -95,7 +108,9 @@ def synchronize(output):
         source = (base / (library + '.pretty') / (name + '.kicad_mod')).read_text()
         old = existing.get(ref, '')
         if old:
-            refreshed.append((old, refresh_nets(ref, old, nets)))
+            props = {f.get('name'): f.text or '' for f in comp.findall('./fields/field') if f.get('name') != 'Footprint'}
+            props.update(Value=comp.findtext('value', ''), Datasheet=comp.findtext('datasheet', ''))
+            refreshed.append((old, refresh_fields(ref, refresh_nets(ref, old, nets), props)))
             continue
         old_items = []
         transform = next((x for x in old_items if tag(x) == 'transform'), None)

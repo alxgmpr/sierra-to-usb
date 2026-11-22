@@ -3298,7 +3298,7 @@
 				)
 			)
 		)
-		(property "MPN" "06033D104KAT2A"
+		(property "MPN" "CL10B104KA8NNNC"
 			(at 358.14 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -3309,7 +3309,18 @@
 				)
 			)
 		)
-		(property "Manufacturer" "KYOCERA AVX"
+		(property "LCSC" "C1590"
+			(at 358.14 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 358.14 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -3563,7 +3574,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0805C104K1RACTU"
+		(property "MPN" "C2012X7R2A104K125AA"
 			(at 441.96 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -3574,7 +3585,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "KEMET"
+		(property "Manufacturer" "TDK"
 			(at 441.96 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -3920,7 +3931,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM188R61H103KA01D"
+		(property "MPN" "C1608X7R2A103K"
 			(at 274.32 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -3931,7 +3942,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "TDK"
 			(at 274.32 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -3942,7 +3953,7 @@
 				)
 			)
 		)
-		(property "Voltage Rating" "50V"
+		(property "Voltage Rating" "100V"
 			(at 274.32 233.68 0)
 			(hide yes)
 			(show_name no)
