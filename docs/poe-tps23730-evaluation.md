@@ -11,7 +11,7 @@ Swap to TPS23730/PMP22477 only if all four conditions hold:
 
 1. **The flyback transformer can be bought.** PMP22477 uses LinkCom LDT9055-51R. Its
    listed alternates are Würth 750320319 and Sumida PS21-212. None of the three had a
-   DigiKey listing on 2026-11-22, and LCSC stock was not checked. Get a quote and
+   DigiKey listing or LCSC (tscircuit index) entry on 2026-11-22. Get a quote and
    samples first. The current Würth 750317065 is not a drop-in (§4).
 2. **A preload goes on `ISO_12V_PSU`.** 470 Ω in a 2512 (about 0.3–0.4 W) holds the
    light-load output near 13.4 V instead of 15.7 V. If standby power matters, use an
@@ -267,14 +267,24 @@ the power limiter. Our 3.3 A allocation does not reach it.
 
 TIDA-050023 efficiency is not in the repo, so a like-for-like delta is not given.
 
-**Stock and lifecycle** (cached distributor pages, 2026-11-22, not reservations):
+**Stock and lifecycle** (2026-11-22, not reservations). DigiKey figures are from cached
+regional pages. LCSC figures are from the tscircuit JLC parts index
+(`jlcsearch.tscircuit.com/api/search`), which mirrors the LCSC catalogue with some lag.
 
-| Part | Status | Stock / price |
-|---|---|---|
-| TPS23730RMTR | TI: **ACTIVE** | DigiKey 13280037: ~5,000–6,000, $4.41 (1) → $2.41 (3k reel), 18-week factory lead. LCSC C3189530: 10–42 pcs, $3.53 → $2.24. JLC assembly would need a pre-order |
-| LDT9055-51R / 750320319 / PS21-212 | Unknown | Not found |
-| FSV1060V (onsemi), FDMS86252 | FDMS86252 is already on our BOM | Stock not checked |
-| TPS2373-3RGWR, LM51551QDSSRQ1 (incumbent) | — | Not checked this session (LCSC pages need JavaScript) |
+| Part | Status | DigiKey | LCSC (tscircuit index) |
+|---|---|---|---|
+| TPS23730RMTR | TI: **ACTIVE** | 13280037: ~5,000–6,000, $4.41 (1) → $2.41 (3k reel), 18-week factory lead | C3189530: no stock listed, $4.23 (an earlier cached LCSC page showed 10–42 pcs) |
+| TPS2373-3RGWR (incumbent PD) | — | not checked | C2860885: **4 pcs**, $3.71 |
+| LM51551QDSSRQ1 (incumbent flyback) | — | not checked | C2860796: **2 pcs**, $1.52 |
+| TLP293(GB-TPL,E) (grant optos, kept) | — | — | C77656: 39,845, $0.16 |
+| FDMS86252 (primary FET, both designs) | already on BOM | not checked | Exact part not indexed; only FDMS86252L (logic-level variant, C606108, 2,313) |
+| CSD17577Q5A / LM74700QDBVRQ1 (aux ORing, unchanged) | — | — | C475504: 757, $0.52 / C2941042: 8,790, $1.06 |
+| LDT9055-51R / 750320319 / PS21-212 (PMP22477 T2) | unknown | not found | not indexed |
+| Würth 750317065 (incumbent T1702), FSV1060V, SBRT20U60, B2100 | — | not checked | not indexed |
+
+At LCSC, the incumbent TPS2373-3 + LM51551-Q1 pair is no better stocked than
+TPS23730, so JLC stock does not favour either design. Both need a pre-order or
+consigned parts. The flyback transformer is a non-LCSC part in both designs.
 
 ## 5. What must be re-verified
 
@@ -344,4 +354,4 @@ TIDA-050023 efficiency is not in the repo, so a like-for-like delta is not given
 - PMP22477: <https://www.ti.com/tool/PMP22477>. Test report TIDT259 (Mar 2022): <https://www.ti.com/lit/pdf/tidt259>. Schematic TIDMA48A and BOM TIDMA49A (Rev D, 3/5/2024): <https://www.ti.com/lit/pdf/tidma48a>, <https://www.ti.com/lit/pdf/tidma49a>
 - LinkCom LDT9055-51R spec (via TI E2E): <https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/196/LDT9055_2D00_51R.pdf>
 - TPS2373 SLUSCD1C, TPS54620, TPS56837, TPS62175/7: local copies in `hardware/reference/`
-- Stock: DigiKey TPS23730RMTR <https://www.digikey.com/en/products/detail/texas-instruments/TPS23730RMTR/13280037>. LCSC C3189530 <https://lcsc.com/product-detail/Power-Over-Ethernet-PoE-Controllers_Texas-Instruments-TPS23730RMTR_C3189530.html>
+- Stock: DigiKey TPS23730RMTR <https://www.digikey.com/en/products/detail/texas-instruments/TPS23730RMTR/13280037>. LCSC C3189530 <https://lcsc.com/product-detail/Power-Over-Ethernet-PoE-Controllers_Texas-Instruments-TPS23730RMTR_C3189530.html>. tscircuit JLC parts index: <https://jlcsearch.tscircuit.com/api/search?q=C3189530>
