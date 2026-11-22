@@ -5,34 +5,94 @@
  "attached": [
   {
    "footprint": "Appliance:Sierra_MDT420B01411_2x38-1MP_P0.5mm",
-   "file": "Appliance.3dshapes/MDT420B01411.step",
-   "sha256": "7e802d17dedfb43006eba2093bdbc170126a46fbda51b4f07cbbb7f2b6f92f28",
+   "file": "Appliance.3dshapes/Sierra_MDT420B01411.step",
+   "sha256": "ae34bfa45e6023786aa3f3b0d1b3c1eeea99d28dc8231a50a8cecbb358127aaf",
    "references": [
     "J2001"
    ],
    "offset_xyz_mm": [
     0,
-    1.9,
-    -2.43
+    0,
+    0
    ],
    "rotation_xyz_degrees": [
-    -90,
+    0,
     0,
     0
    ],
    "size_xyz_mm": [
     21.9,
-    4.7,
-    8.4
+    8.4,
+    4.7
    ],
-   "z_min_mm": -3.95,
+   "z_min_mm": -0.5,
    "kind": "vendor",
-   "source": "Amphenol MDT420B0X411 Rev A vendor STEP (reference/amphenol-mdt420-3d.zip). Native X row axis, Y height, Z depth; all contact/retention feet bottom at Y=2.43 (pegs 0.5 lower into the NPTH), housing 4.20 above (drawing p1). Foot centres odd Z=-3.615, even Z=+4.171, retention Z=-3.0 vs lands -5.25/+2.275/-4.9 -> footprint y = Z - 1.9. Key gaps at the same -X: no mirror. KiCad (rotate (xyz -90 0 0)) offset (0 1.9 -2.43) verified against a pre-rotated copy via board STEP export."
+   "source": "Amphenol MDT420B0X411 Rev A vendor STEP (reference/amphenol-mdt420-3d.zip, byte-identical to the\ndownload from Amphenol). Native X row axis, Y height, Z depth; all contact/retention feet bottom at\nY=2.43 (pegs 0.5 lower into the NPTH), housing 4.20 above (drawing p1). Foot centres odd Z=-3.615,\neven Z=+4.171, retention Z=-3.0 vs lands -5.25/+2.275/-4.9 -> footprint y = Z - 1.9. Key gaps at the\nsame -X: no mirror. Baked KiCad transform: rotate (-90 0 0), offset (0 1.9 -2.43)."
+  },
+  {
+   "footprint": "PoE:TI_Keystone_5019",
+   "file": "Appliance.3dshapes/Sierra_Keystone5019.step",
+   "sha256": "12830338126e7637656d453deb4167fae49742326201f64547d90e732d896b55",
+   "references": [
+    "TP1719",
+    "TP1720",
+    "TP1721",
+    "TP1722",
+    "TP1723",
+    "TP1724",
+    "TP1725",
+    "TP1726",
+    "TP1727"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    3.81,
+    2.032,
+    2.286
+   ],
+   "z_min_mm": -0.0,
+   "kind": "vendor",
+   "source": "Keystone 5019 test point (TP17xx), TI TIDA-050023 embedded STEP; footprint transform baked in."
+  },
+  {
+   "footprint": "PoE:TI_Wurth_EFD25_4476",
+   "file": "Appliance.3dshapes/Sierra_EFD25_4476.step",
+   "sha256": "ad28f19ba4c7daccf8d6c7b86e609bd380ded908b9d753a8f3c53578bf793544",
+   "references": [
+    "T1702"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    32.31,
+    26.0,
+    13.0719
+   ],
+   "z_min_mm": 0.0127,
+   "kind": "vendor",
+   "source": "Wurth EFD25 flyback transformer (T1702), TI TIDA-050023 embedded STEP; footprint transform baked in."
   },
   {
    "footprint": "Appliance:Diodes_PowerDI-5_3Pin_Derived",
    "file": "Appliance.3dshapes/Sierra_PowerDI-5_SBRT20U60SP5.step",
-   "sha256": "009d8f8c7d743e25a9d68e1eda4a06bd282124ad6d397040e51e648a7457ac9b",
+   "sha256": "56971d6db2d81a304a8518fc008f18aded7daae45ecd5d7dda573aeea2035606",
    "references": [
     "D1718"
    ],
@@ -58,7 +118,7 @@
   {
    "footprint": "Appliance:TQFN-48_L6.0-W6.0-P0.40-BL-EP4.5",
    "file": "Appliance.3dshapes/Sierra_RTL8125BG_TQFN48.step",
-   "sha256": "0e8f303e05b38c0ec9bcda06be58ba3bfd9b4032dfdb552d212f3910be302be6",
+   "sha256": "da5c2098416ad116952d89cb92d9db2df9cf06b4db80e0a448b517becc5d72ac",
    "references": [
     "U1301"
    ],
@@ -84,7 +144,7 @@
   {
    "footprint": "Appliance:Texas_RPA0010A_TPS56837",
    "file": "Appliance.3dshapes/Sierra_TPS56837_RPA0010A.step",
-   "sha256": "fca9001a33797116d53a69c955ede1273740470ad246ce134d9c200197a72aff",
+   "sha256": "eef3e07553adeaac7580e1ec500a79a6c2b8b97e63214d9fdf22ec1ef1884dfb",
    "references": [
     "U701"
    ],
@@ -110,7 +170,7 @@
   {
    "footprint": "Appliance:UQFN-10_L2.0-W1.5-P0.50-BL",
    "file": "Appliance.3dshapes/Sierra_TS3USB221A_RSE0010A.step",
-   "sha256": "3cb369d6648f2dfb7ce464066c7445b9f9c38cbc48d961fe7b3e842391128bf3",
+   "sha256": "a8843202e44b873884f49f623be9fb0d44bcd52b3ac5f6d02723a1aad74a1331",
    "references": [
     "U2002"
    ],
@@ -136,7 +196,7 @@
   {
    "footprint": "Appliance:VQFN-10_L2.0-W2.0-P0.45-TL",
    "file": "Appliance.3dshapes/Sierra_TPS259474L_RPW0010A.step",
-   "sha256": "c458849e6be5d0968ca82ca903a25c3418317f7d06d97ed37b0596d1480aef5c",
+   "sha256": "31cf873432a9b4869fbd178d446318fd3412991424190e105c67ac8ad460d56d",
    "references": [
     "U1902"
    ],
@@ -162,7 +222,7 @@
   {
    "footprint": "Appliance:VQFN-14_L3.5-W3.5-P0.50-TL-EP_TPS54622RHLT",
    "file": "Appliance.3dshapes/Sierra_TPS54620_RHL0014A.step",
-   "sha256": "bb3bc826aedac4488db76418d78ddc15fdd559a41a4246eba773e3f4f318a2b5",
+   "sha256": "b746821d4eeab3871dab6658c5ded423ff426354e123b7c3bb84646ca7c75d61",
    "references": [
     "U1901"
    ],
@@ -188,7 +248,7 @@
   {
    "footprint": "Appliance:WLCSP-20_L2.0-W1.6-R5-C4-P0.40-TL",
    "file": "Appliance.3dshapes/Sierra_TCS4525_WLCSP20.step",
-   "sha256": "2f736985d44a6f430fb5b6be251c9ccef47e40ec12e7a3a08a3a232b711a7fe6",
+   "sha256": "542f906793cf408962aef91d3644438944297b627b9d09178aec4f2ccab5515a",
    "references": [
     "U1001"
    ],
@@ -214,7 +274,7 @@
   {
    "footprint": "Inductor_SMD:L_Coilcraft_LPS4018",
    "file": "Appliance.3dshapes/Sierra_LPS4018.step",
-   "sha256": "6bf37abc8a3b82d2c811b61394d1e1e1cd8694ac4e70fcd1d7b20051b6d1bcc5",
+   "sha256": "4213263292bf1f55a12b1c51edf7decf7b1dd7b07075cfac210ef829adf86ac0",
    "references": [
     "L401"
    ],
@@ -240,7 +300,7 @@
   {
    "footprint": "Oscillator:Oscillator_SMD_SiT_PQFN-4Pin_3.2x2.5mm",
    "file": "Appliance.3dshapes/Sierra_SiT8008_PQFN4_3.2x2.5.step",
-   "sha256": "20552efcbd8982206d07e1313c900a7495fbf03ca95e3e2b6ba985a363d214f6",
+   "sha256": "d3292b4d8bdb460d36b42d4e82dc85e524258c752324ade20c0b23ae49874bec",
    "references": [
     "Y1101"
    ],
@@ -266,7 +326,7 @@
   {
    "footprint": "Package_BGA:LFBGA-153_11.5x13mm_Layout14x14_P0.5mm",
    "file": "Appliance.3dshapes/Sierra_IS21TF16G_VFBGA153.step",
-   "sha256": "94a4bef7ebf79d8720ce50ae63be9b0231eaa3bb6228e9005adb5f09a5ab41bd",
+   "sha256": "758fa88d77abb9da4d573654b0d5d1d5121655a03b84cd3e2e63514415bcad05",
    "references": [
     "U1101"
    ],

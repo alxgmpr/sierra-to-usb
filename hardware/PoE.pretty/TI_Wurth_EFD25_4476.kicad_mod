@@ -1725,4 +1725,15 @@
 			(xyz -90 -0 -180)
 		)
 	)
+	(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_EFD25_4476.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

@@ -165,4 +165,15 @@
 			(xyz -90 -0 0)
 		)
 	)
+	(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

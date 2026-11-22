@@ -11025,7 +11025,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "0dc7ef6c-fece-446d-88c8-3f726a8c05a3")
@@ -20230,7 +20230,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "194be66d-d544-4062-b1a6-4d2712520f38")
@@ -22589,15 +22589,15 @@
 			(uuid "bda19892-3f29-58d3-9204-c7b8a682366b")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/5019.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
 			(offset
-				(xyz -0.00009 -0.00008 0.127)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -52307,15 +52307,15 @@
 			(uuid "d7a1697d-8eb2-52b6-9944-5db52703d655")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/5019.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
 			(offset
-				(xyz -0.00009 -0.00008 0.127)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -56899,15 +56899,15 @@
 			(uuid "36524f17-e2ea-5bfd-a9b2-d6c176674ba8")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/5019.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
 			(offset
-				(xyz -0.00009 -0.00008 0.127)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -63836,15 +63836,15 @@
 			(uuid "da9e9e22-eb49-5053-99e4-25342d953d03")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/5019.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
 			(offset
-				(xyz -0.00009 -0.00008 0.127)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -86194,7 +86194,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "69132649-4239-40ee-b0c2-3090be9f4f23")
@@ -92525,15 +92525,15 @@
 			(uuid "7ccf68eb-5b1b-5475-be6f-ca4b4badbf16")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/5019.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
 			(offset
-				(xyz -0.00009 -0.00008 0.127)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -102396,15 +102396,15 @@
 			(uuid "c3e19ee3-ee8f-5904-afca-38d826c72af9")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/5019.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
 			(offset
-				(xyz -0.00009 -0.00008 0.127)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -105222,18 +105222,18 @@
 			(uuid "0ca6c61c-481e-501e-b432-9f1ab893b75f")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/Appliance.3dshapes/MDT420B01411.step"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_MDT420B01411.step"
 			(offset
-				(xyz 0 1.9 -2.43)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 0 0)
+				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "8126b025-9edc-454e-b8d4-13f5118a0d6a")
@@ -116459,15 +116459,15 @@
 			(uuid "6f280236-7547-526c-bc1e-c40db3173a3c")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/5019.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
 			(offset
-				(xyz -0.00009 -0.00008 0.127)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -124546,7 +124546,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Capacitor_SMD:C_0201_0603Metric_Pad0.64x0.40mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "9be8f23e-b454-4e56-a4e3-10cc913eeadb")
@@ -126792,7 +126792,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "9db4e775-4d84-4a78-b525-599adcc7227d")
@@ -154350,15 +154350,15 @@
 			(uuid "a72b38ac-58ad-5f24-a93e-27ad4d4dd987")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/5019.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
 			(offset
-				(xyz -0.00009 -0.00008 0.127)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -177899,15 +177899,15 @@
 			(uuid "8be9724f-9a20-5402-90b4-c8da39e6b98c")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/EFD25_4476.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_EFD25_4476.step"
 			(offset
-				(xyz -16.18809 13.51504 -0.22083)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 -180)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -192823,7 +192823,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Package_TO_SOT_SMD:SOT-23_Handsoldering"
 		(layer "F.Cu")
 		(uuid "e243af5a-0e7b-4cb9-8486-2e4af278bf53")
@@ -196860,7 +196860,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "e7f67b90-76b3-4c13-a4d0-7dc9c09aef24")
@@ -197843,7 +197843,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "e95d7221-a11b-472e-8b4c-5066bc8b4b1c")
@@ -199336,7 +199336,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 	(layer "B.Cu")
 	(uuid "eb327aaa-2cc1-40b2-9d36-4ccbde55687f")
@@ -201648,7 +201648,7 @@
 				(xyz 0 0 0)
 			)
 		)
-)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "ee4b1501-dfc9-42f3-88b9-dfbd7ac41452")
@@ -208783,15 +208783,15 @@
 			(uuid "8ccb78d5-f319-5da9-b640-1072b91f6d24")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/PoE.3dshapes/5019.stp"
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step"
 			(offset
-				(xyz -0.00009 -0.00008 0.127)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)

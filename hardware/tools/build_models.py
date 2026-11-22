@@ -2,14 +2,13 @@
 """Build and attach the 3D models that close the 2026-10-21 model holds.
 
 Generated models are written in KiCad's footprint frame (X right, Y up = -footprint y,
-Z up from the board, seating plane Z=0) and attach with zero offset/rotation.
-Vendor STEPs that are attached unmodified carry a KiCad transform instead. KiCad turns
-a model by -angle: (rotate (xyz -90 0 0)) maps native (x, y, z) to (x, -z, y),
-verified by exporting the board STEP and matching a pre-rotated copy.
+Z up from the board, seating plane Z=0) and attach with zero offset/rotation. Vendor STEPs
+get their datum transform baked in (kicad_trsf) and are rewritten flat with their colours.
 
 usage: uv run --with cadquery python hardware/tools/build_models.py [--attach]
 """
-import json, re, sys
+import json, re, sys, tempfile
+from math import pi
 from pathlib import Path
 import cadquery as cq
 sys.path.insert(0, str(Path(__file__).parent))
@@ -17,6 +16,108 @@ from check_footprint_reviews import strip_models
 
 HW = Path(__file__).resolve().parents[1]
 ZERO = ((0, 0, 0), (0, 0, 0))   # (offset, rotate)
+
+
+# ------------------------------------------------------------------ STEP I/O
+# Every model is written as ONE flat product: placements baked into the geometry, no assembly tree,
+# zero attach transform. Backplane's 3D tab mis-composes nested STEP placements and reads (rotate)
+# with the opposite sign to KiCad; a flat zero-transform file renders the same in both. XCAF keeps the
+# vendor colours (the plain STEPControl writer drops them and the part renders as one grey slab).
+from OCP.BRepBuilderAPI import BRepBuilderAPI_Transform
+from OCP.gp import gp_Trsf, gp_Ax1, gp_Pnt, gp_Dir, gp_Vec
+from OCP.IFSelect import IFSelect_RetDone
+from OCP.Interface import Interface_Static
+from OCP.Quantity import Quantity_Color
+from OCP.STEPCAFControl import STEPCAFControl_Reader, STEPCAFControl_Writer
+from OCP.STEPControl import STEPControl_AsIs
+from OCP.TCollection import TCollection_ExtendedString
+from OCP.TDF import TDF_Label, TDF_LabelSequence
+from OCP.TDocStd import TDocStd_Document
+from OCP.TopAbs import TopAbs_FACE
+from OCP.TopExp import TopExp_Explorer
+from OCP.TopLoc import TopLoc_Location
+from OCP.TopoDS import TopoDS_Compound
+from OCP.BRep import BRep_Builder
+from OCP.XCAFDoc import XCAFDoc_DocumentTool, XCAFDoc_ColorTool, XCAFDoc_ColorSurf, XCAFDoc_ColorGen
+
+
+def xcaf_doc():
+    return TDocStd_Document(TCollection_ExtendedString('MDTV-XCAF'))
+
+
+def read_parts(path, trsf=None):
+    """Flatten a STEP into [(shape, colour, [(face, colour)])] with every placement (and trsf) baked in."""
+    doc = xcaf_doc(); r = STEPCAFControl_Reader(); r.SetColorMode(True)
+    assert r.ReadFile(str(path)) == IFSelect_RetDone, path
+    r.Transfer(doc)
+    st = XCAFDoc_DocumentTool.ShapeTool_s(doc.Main()); ct = XCAFDoc_DocumentTool.ColorTool_s(doc.Main())
+    def colour(label):
+        for kind in (XCAFDoc_ColorSurf, XCAFDoc_ColorGen):
+            c = Quantity_Color()
+            if XCAFDoc_ColorTool.GetColor_s(label, kind, c): return c
+    parts = []
+    def walk(label, loc, inherited):
+        if st.IsAssembly_s(label):
+            comps = TDF_LabelSequence(); st.GetComponents_s(label, comps)
+            for i in range(1, comps.Length() + 1):
+                comp = comps.Value(i); ref = TDF_Label(); st.GetReferredShape_s(comp, ref)
+                walk(ref, loc.Multiplied(st.GetLocation_s(comp)), colour(comp) or colour(ref) or inherited)
+            return
+        shape = st.GetShape_s(label); base = colour(label) or inherited
+        subs = TDF_LabelSequence(); st.GetSubShapes_s(label, subs)
+        coloured = [(st.GetShape_s(subs.Value(i)), colour(subs.Value(i))) for i in range(1, subs.Length() + 1)]
+        coloured = [(s, c) for s, c in coloured if c]
+        t = loc.Transformation() if trsf is None else trsf.Multiplied(loc.Transformation())
+        mk = BRepBuilderAPI_Transform(shape, t, True)
+        faces = []
+        if coloured:
+            ex = TopExp_Explorer(shape, TopAbs_FACE)
+            while ex.More():
+                f = ex.Current(); ex.Next()
+                c = next((c for s, c in coloured if s.IsSame(f)), None)
+                if c is None:   # colour set on the solid/shell that owns this face
+                    c = next((c for s, c in coloured if s.ShapeType() != TopAbs_FACE and any_face(s, f)), None)
+                if c is not None: faces.append((mk.ModifiedShape(f), c))
+        parts.append((mk.Shape(), base, faces))
+    free = TDF_LabelSequence(); st.GetFreeShapes(free)
+    for i in range(1, free.Length() + 1):
+        walk(free.Value(i), TopLoc_Location(), colour(free.Value(i)))
+    return parts
+
+
+def any_face(shape, face):
+    ex = TopExp_Explorer(shape, TopAbs_FACE)
+    while ex.More():
+        if ex.Current().IsSame(face): return True
+        ex.Next()
+    return False
+
+
+def write_parts(path, parts):
+    """Write parts as a single flat, coloured STEP product."""
+    comp = TopoDS_Compound(); bb = BRep_Builder(); bb.MakeCompound(comp)
+    for shape, _, _ in parts: bb.Add(comp, shape)
+    doc = xcaf_doc()
+    st = XCAFDoc_DocumentTool.ShapeTool_s(doc.Main()); ct = XCAFDoc_DocumentTool.ColorTool_s(doc.Main())
+    top = st.AddShape(comp, False, False)
+    for shape, base, faces in parts:
+        if base is not None: ct.SetColor(st.AddSubShape(top, shape), base, XCAFDoc_ColorSurf)
+        for f, c in faces: ct.SetColor(st.AddSubShape(top, f), c, XCAFDoc_ColorSurf)
+    Interface_Static.SetIVal_s('write.step.assembly', 0)
+    Interface_Static.SetIVal_s('write.surfacecurve.mode', 0)
+    w = STEPCAFControl_Writer(); w.SetColorMode(True)
+    assert w.Transfer(doc, STEPControl_AsIs) and w.Write(str(path)) == IFSelect_RetDone, path
+    return cq.Compound(comp)
+
+
+def kicad_trsf(offset, rotate):
+    """KiCad's model transform as a gp_Trsf: each angle negated, applied X, then Y, then Z, then the offset
+    (checked against kicad-cli STEP export)."""
+    t = gp_Trsf()
+    for axis, angle in zip(((1, 0, 0), (0, 1, 0), (0, 0, 1)), rotate):
+        r = gp_Trsf(); r.SetRotation(gp_Ax1(gp_Pnt(0, 0, 0), gp_Dir(*axis)), -angle * pi / 180); t = r.Multiplied(t)
+    m = gp_Trsf(); m.SetTranslation(gp_Vec(*offset))
+    return m.Multiplied(t)
 
 
 # ------------------------------------------------------------------ vendor models
@@ -29,8 +130,31 @@ def powerdi5():
     pads 1/2 at x=2.862, y=+-0.92 (1.84 apart); Fab body 5.45 x 4.05 centred.
     Map: X = z, Y = x + 9.568, Z = y + 7.976 (a proper rotation: 120 deg about (1,1,1)).
     """
-    shape = cq.importers.importStep(str(HW / 'PoE.3dshapes/PowerDI-5.stp')).val()
-    return shape.rotate((0, 0, 0), (1, 1, 1), 120).translate((0, 9.568, 7.976))
+    r = gp_Trsf(); r.SetRotation(gp_Ax1(gp_Pnt(0, 0, 0), gp_Dir(1, 1, 1)), 120 * pi / 180)
+    m = gp_Trsf(); m.SetTranslation(gp_Vec(0, 9.568, 7.976))
+    return read_parts(HW / 'PoE.3dshapes/PowerDI-5.stp', m.Multiplied(r))
+
+
+def keystone5019():
+    """Keystone 5019 test point (TP17xx), TI TIDA-050023 embedded STEP; footprint transform baked in."""
+    return read_parts(HW / 'PoE.3dshapes/5019.stp', kicad_trsf((-0.00009, -0.00008, 0.127), (-90, 0, 0)))
+
+def efd25():
+    """Wurth EFD25 flyback transformer (T1702), TI TIDA-050023 embedded STEP; footprint transform baked in."""
+    return read_parts(HW / 'PoE.3dshapes/EFD25_4476.stp', kicad_trsf((-16.18809, 13.51504, -0.22083), (-90, 0, -180)))
+
+def mdt420():
+    """Amphenol MDT420B0X411 Rev A vendor STEP (reference/amphenol-mdt420-3d.zip, byte-identical to the
+    download from Amphenol). Native X row axis, Y height, Z depth; all contact/retention feet bottom at
+    Y=2.43 (pegs 0.5 lower into the NPTH), housing 4.20 above (drawing p1). Foot centres odd Z=-3.615,
+    even Z=+4.171, retention Z=-3.0 vs lands -5.25/+2.275/-4.9 -> footprint y = Z - 1.9. Key gaps at the
+    same -X: no mirror. Baked KiCad transform: rotate (-90 0 0), offset (0 1.9 -2.43)."""
+    import tempfile, zipfile
+    with tempfile.TemporaryDirectory() as tmp:
+        src = zipfile.ZipFile(HW / 'reference/amphenol-mdt420-3d.zip').extract('MDT420B0X411_A.stp', tmp)
+        return read_parts(src, kicad_trsf((0, 1.9, -2.43), (-90, 0, 0)))
+
+VENDOR_BUILDS = {powerdi5, keystone5019, efd25, mdt420}
 
 
 # ------------------------------------------------------------------ envelope models
@@ -175,17 +299,16 @@ BUILD = {
     'Sierra_LPS4018': lps4018,
     'Sierra_SiT8008_PQFN4_3.2x2.5': sit8008,
     'Sierra_IS21TF16G_VFBGA153': emmc153,
+    'Sierra_Keystone5019': keystone5019,
+    'Sierra_EFD25_4476': efd25,
+    'Sierra_MDT420B01411': mdt420,
 }
 
 # footprint -> (model path, offset, rotate)
 ATTACH = {
-    # MDT420B01411: native X row axis, Y height, Z depth. All contact/retention feet bottom
-    # out at Y=2.43 (housing pegs reach 0.5 mm lower, into the NPTH); housing top 4.20 above.
-    # Feet: odd row Z=-3.615, even Z=+4.171, retention Z=-3.0; lands odd y=-5.25 (1.50 long),
-    # even y=+2.275, retention y=-4.9 -> footprint y = Z - 1.9. Key gaps (odd 13-19, even
-    # 12-18) at the same -X in STEP and footprint: no mirror.
-    'Appliance:Sierra_MDT420B01411_2x38-1MP_P0.5mm':
-        ('${KIPRJMOD}/Appliance.3dshapes/MDT420B01411.step', (0, 1.9, -2.43), (-90, 0, 0)),
+    'Appliance:Sierra_MDT420B01411_2x38-1MP_P0.5mm': ('${KIPRJMOD}/Appliance.3dshapes/Sierra_MDT420B01411.step', *ZERO),
+    'PoE:TI_Keystone_5019': ('${KIPRJMOD}/Appliance.3dshapes/Sierra_Keystone5019.step', *ZERO),
+    'PoE:TI_Wurth_EFD25_4476': ('${KIPRJMOD}/Appliance.3dshapes/Sierra_EFD25_4476.step', *ZERO),
     'Appliance:Diodes_PowerDI-5_3Pin_Derived':
         ('${KIPRJMOD}/Appliance.3dshapes/Sierra_PowerDI-5_SBRT20U60SP5.step', *ZERO),
     **{fp: (f'${{KIPRJMOD}}/Appliance.3dshapes/{name}.step', *ZERO) for fp, name in {
@@ -211,7 +334,7 @@ def model_block(path, offset, rotate, indent='\t\t'):
 def with_model(block, path, offset, rotate, indent):
     block = re.sub(r'\s*\(model "[^"]*"(?:[^()]|\((?:[^()]|\([^()]*\))*\))*\)', '', block)   # one model per footprint
     end = block.rstrip().rfind(')')
-    return block[:end].rstrip() + '\n' + model_block(path, offset, rotate, indent) + block[end:].lstrip('\n').rstrip() + ('\n' if block.endswith('\n') else '')
+    return block[:end].rstrip() + '\n' + model_block(path, offset, rotate, indent) + indent[:-1] + block[end:].lstrip('\n').rstrip() + ('\n' if block.endswith('\n') else '')
 
 def attach():
     sys.path.insert(0, str(Path(__file__).parent))
@@ -252,11 +375,11 @@ def record(reviewed='2026-11-21'):
         rel = path.replace('${KIPRJMOD}/', '')
         name = Path(rel).stem
         shape = cq.importers.importStep(str(HW / rel)).val(); b = shape.BoundingBox()
-        doc = inspect.getdoc(BUILD[name]) if name in BUILD else ATTACH_NOTES.get(fp_id, '')
+        doc = inspect.getdoc(BUILD[name])
         attached.append({'footprint': fp_id, 'file': rel, 'sha256': hashlib.sha256((HW / rel).read_bytes()).hexdigest(),
                          'references': refs(fp_id), 'offset_xyz_mm': list(offset), 'rotation_xyz_degrees': list(rotate),
                          'size_xyz_mm': [round(b.xlen, 4), round(b.ylen, 4), round(b.zlen, 4)], 'z_min_mm': round(b.zmin, 4),
-                         'kind': 'vendor' if name not in BUILD or BUILD[name] is powerdi5 else 'envelope', 'source': doc})
+                         'kind': 'vendor' if name not in BUILD or BUILD[name] in VENDOR_BUILDS else 'envelope', 'source': doc})
     holds = [{'footprint': fp, 'references': sorted(r for r, f in policy['assignments'].items() if f == fp), 'blocker': why}
              for fp, why in policy['model_release_holds'].items()]
     out = {'reviewed': reviewed,
@@ -268,22 +391,13 @@ def record(reviewed='2026-11-21'):
     print(f'record: {len(attached)} attached, {len(holds)} holds')
 
 
-ATTACH_NOTES = {'Appliance:Sierra_MDT420B01411_2x38-1MP_P0.5mm':
-                'Amphenol MDT420B0X411 Rev A vendor STEP (reference/amphenol-mdt420-3d.zip). Native X row axis, Y height, '
-                'Z depth; all contact/retention feet bottom at Y=2.43 (pegs 0.5 lower into the NPTH), housing 4.20 above '
-                '(drawing p1). Foot centres odd Z=-3.615, even Z=+4.171, retention Z=-3.0 vs lands -5.25/+2.275/-4.9 -> '
-                'footprint y = Z - 1.9. Key gaps at the same -X: no mirror. KiCad (rotate (xyz -90 0 0)) offset (0 1.9 -2.43) '
-                'verified against a pre-rotated copy via board STEP export.'}
-
 if __name__ == '__main__':
     for name, build in BUILD.items():
-        model = build(); path = str(HW / f'Appliance.3dshapes/{name}.step')
-        if isinstance(model, cq.Assembly):
-            model.save(path, exportType='STEP')
-            shape = model.toCompound()
-        else:
-            shape = model
-            cq.exporters.export(cq.Workplane().add(shape), path, opt={'write_pcurves': False})
+        model = build(); path = HW / f'Appliance.3dshapes/{name}.step'
+        if isinstance(model, cq.Assembly):   # envelopes: round-trip through cadquery's STEP to pick up part colours
+            with tempfile.TemporaryDirectory() as tmp:
+                model.save(f'{tmp}/a.step', exportType='STEP'); model = read_parts(f'{tmp}/a.step')
+        shape = write_parts(path, model)
         assert shape.isValid(), name
         b = shape.BoundingBox()
         print(f'{name}: X {b.xmin:.3f}..{b.xmax:.3f}  Y {b.ymin:.3f}..{b.ymax:.3f}  Z {b.zmin:.3f}..{b.zmax:.3f}')

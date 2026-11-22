@@ -617,15 +617,15 @@
 		(roundrect_rratio 0.25)
 	)
 (embedded_fonts no)
-	(model "${KIPRJMOD}/Appliance.3dshapes/MDT420B01411.step"
+	(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_MDT420B01411.step"
 		(offset
-			(xyz 0 1.9 -2.43)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz -90 0 0)
+			(xyz 0 0 0)
 		)
 	)
 )
