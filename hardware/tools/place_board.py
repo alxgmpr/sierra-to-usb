@@ -65,13 +65,14 @@ fps = parse(s)
 X0, Y0 = 333.8, 38.05      # outline top-left stays put
 W, H = 200.0, 100.0        # placement sandbox; outline is trimmed to fit afterwards
 XB, MOAT = 40.0, 1.25      # vertical PoE isolation line, half of the 2.5 mm moat
+XN, NY = 30.0, 25.0        # above NY the line steps left to XN so the magnetics sit right behind the RJ45
 GAP = 0.25                 # minimum courtyard-to-courtyard spacing
 INSET = 1.0                # keep parts this far inside their block -> 2 mm channels between blocks
 EDGE = 1.0
 
 BLOCKS = {   # block: (sheets, region rectangles)
-    'PRIM':  ((), [(0, 0, XB, 100)]),
-    'NIC':   (('nic', 'nic-power', 'nic-bypass', 'nic-interface', 'phy-power', 'ethernet-ingress'), [(XB, 0, 83, 42)]),
+    'PRIM':  ((), [(0, 0, XN, 100), (0, NY, XB, 100)]),
+    'NIC':   (('nic', 'nic-power', 'nic-bypass', 'nic-interface', 'phy-power', 'ethernet-ingress'), [(XB, 0, 83, 42), (XN, 0, 83, NY)]),
     'PSEC':  (('poe-input', 'poe-pd', 'poe-flyback', 'poe-status', 'main5v', 'main3v3', 'always-on'), [(XB, 42, 83, 100)]),
     'CORE':  (('processor', 'ram', 'boot', 'pmic', 'cpu-power', 'ddr-power', 'core-power', 'peripheral-power'), [(83, 0, 140, 91)]),
     'MODEM': (('modem-socket', 'modem-power', 'modem-bypass', 'modem-interface'), [(140, 0, 200, 70), (121, 30, 141, 66)]),
@@ -81,8 +82,9 @@ ANCH = {   # most important first: core, then the connectors and magnetics that 
     'U801':  (111, 46, 0),      # RK3566; DDR balls top-left, USB3/PCIe on the right
     'J2001': (144, 50, 90),     # M.2 Key-B; card extends to +x towards the right edge
     'J1701': (17.5, 14, 270),   # RJ45, opening on the left edge
-    'T1701': (XB, 14, 90),      # magnetics straddle the isolation line, cable side left
-    'U1301': (51, 13, 180),     # NIC, MDI pins facing the magnetics
+    'T1701': (XN, 14, 90),      # magnetics straddle the isolation line, cable side left, hard behind the jack
+    'D1851': (38, 17, 180), 'D1852': (38, 9.5, 180),   # ESD arrays in the MDI lane, each centred on its two pairs
+    'U1301': (45, 14, 180),     # NIC on the magnetics' axis, MDI pins facing them
     'T1702': (XB, 78, 0),       # flyback transformer, primary left
     'U1901': (160, 14, 0),      # modem buck
     'J2002': (184, 13, 0),      # SIM
@@ -96,6 +98,15 @@ OVERHANG = {'J1701', 'J1201'}             # connectors allowed to sit on/over th
 CARD = (146.0, 34.5, 199.5, 65.5)         # M.2 3042/3052 card: keep clear
 TIDY = {'CORE', 'PSEC', 'NIC', 'MODEM', 'CTRL'} # blocks whose passives are fanned around their host in rows
 STAGE = {'PSEC', 'NIC', 'MODEM', 'CTRL'} # blocks of discrete regulators: ICs keep pin 1 one way and get their inductor placed with them
+# PoE front end in flow order below the jack: Bob Smith row, bridge (high side over low side, every cathode up,
+# so the pair nodes sit between the rows and the rails run along the top and bottom), ideal-diode FET with its
+# gate network beside each low-side diode, then choke -> TVS -> bulk cap -> PD controller left to right.
+ANCH.update({r: (13 + 2*i, 26, 90) for i, r in enumerate(('C1861', 'R1861', 'C1862', 'R1862', 'C1863', 'R1863', 'C1864', 'R1864'))})
+for i, x in enumerate((3.25, 12.0, 20.75, 29.5)):   # one column per cable pair: 12, 36, 45, 78
+    ANCH.update({f'D{1701+i}': (x, 33, 270), f'D{1706+i}': (x, 43, 270), f'Q{1701+i}': (x + 4.25, 40.5, 90),
+                 f'R{1713+i}': (x + 4.25, 43.75, 0), f'C{1709+i}': (x + 4.25, 45.5, 0), f'R{1709+i}': (x + 4.25, 47.25, 0)})
+ANCH['C1865'] = (8, 26, 180)   # Bob Smith common to chassis, at the end of the row next to the shield pin
+ANCH.update({'L1702': (6, 55, 180), 'D1705': (14, 54.5, 270), 'C1717': (22, 55, 90), 'U1701': (31, 55, 0)})
 BARRIER = {'T1701', 'T1702', 'U1703', 'U1801', 'U1802', 'U1803'}
 
 def short(n): return re.sub(r'^/.*/', '', n)
@@ -172,8 +183,9 @@ def legal(ref, R):
     """R is the courtyard grown by GAP/2 on each side."""
     if ref not in OVERHANG and not inside(R, (0, 0, W, H), EDGE - GAP/2): return False
     d = domain[ref]
-    if d == 'P' and R[2] > XB - MOAT + GAP/2: return False
-    if d == 'S' and R[0] < XB + MOAT - GAP/2: return False
+    m = MOAT - GAP/2   # the isolation line runs down XN to NY, across to XB, then down XB
+    if d == 'P' and R[2] > XN - m and (R[2] > XB - m or R[1] < NY + m): return False
+    if d == 'S' and R[0] < XB + m and (R[0] < XN + m or R[3] > NY - m): return False
     if d != 'B':
         if side[ref] == 'F' and R[0] < CARD[2] and CARD[0] < R[2] and R[1] < CARD[3] and CARD[1] < R[3]: return False
         if block[ref] and not any(inside(R, b, INSET - GAP/2) for b in BLOCKS[block[ref]][1]): return False
@@ -238,7 +250,7 @@ def target_of(ref):
 # ============================================================== phase 2: barrier parts on the line
 for ref in sorted(BARRIER - set(ANCH), key=lambda r: (-len(fps[r]['pads']), r)):
     f = fps[ref]; best = None; cv = target_of(ref)[1]
-    for v in [y*0.5 for y in range(4, int(H*2) - 4)]:
+    for v in [y*0.5 for y in range(int(NY*2) + 6, int(H*2) - 4)]:
         for r in (0, 90, 180, 270):
             ok = True
             for p in f['pads']:
@@ -257,7 +269,7 @@ ORDER = ['U901', 'U1101', 'U2001', 'U2002', 'U1604', 'U501', 'U1001', 'U902', 'U
 HALO = {'U901': 3.0, 'U1101': 2.0, 'U501': 3.0}
 TARGET = {'U2001': (130, 49), 'U2002': (130, 41), 'U501': (100, 74)}   # keep SoC->M.2 lane corridor for the muxes
 for ref in ORDER:
-    place_ic(ref, TARGET.get(ref) or target_of(ref), HALO.get(ref, 1.5), 1.0 if ref in TARGET else 0.1)
+    if ref not in placed: place_ic(ref, TARGET.get(ref) or target_of(ref), HALO.get(ref, 1.5), 1.0 if ref in TARGET else 0.1)
 while True:
     rest = [r for r, f in fps.items() if r not in placed and not is_small(f)]
     if not rest: break
