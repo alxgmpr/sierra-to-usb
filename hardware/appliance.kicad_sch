@@ -1138,6 +1138,10 @@
 			)
 		)
 	)
+	(sheet (at 523.24 35.56) (size 96.52 50.8) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "b8288ffd-68fc-546d-950b-30c1ade20c31") (property "Sheetname" "Auxiliary 12V input and bus monitor" (at 523.24 33.02 0) (effects (font (size 1.27 1.27)))) (property "Sheetfile" "aux-power.kicad_sch" (at 523.24 88.9 0) (effects (font (size 1.27 1.27)))) (instances (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985" (page "31")))))
+	(sheet (at 523.24 106.68) (size 96.52 50.8) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "eaea8cc8-1019-586c-ba90-dfd3656db65a") (property "Sheetname" "Supervisor link, LEDs and sensing" (at 523.24 104.14 0) (effects (font (size 1.27 1.27)))) (property "Sheetfile" "management.kicad_sch" (at 523.24 160.02 0) (effects (font (size 1.27 1.27)))) (instances (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985" (page "32")))))
+	(sheet (at 523.24 177.8) (size 96.52 50.8) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "c93a8870-80be-588f-9dd5-237ed14afbc6") (property "Sheetname" "SPI flash, microSD and eSIM options" (at 523.24 175.26000000000002 0) (effects (font (size 1.27 1.27)))) (property "Sheetfile" "boot-media.kicad_sch" (at 523.24 231.14000000000001 0) (effects (font (size 1.27 1.27)))) (instances (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985" (page "33")))))
+	(sheet (at 523.24 248.92) (size 96.52 50.8) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "4d201ddc-6360-5995-8ecd-9f1338aeb41e") (property "Sheetname" "Bring-up test pads" (at 523.24 246.38 0) (effects (font (size 1.27 1.27)))) (property "Sheetfile" "test-points.kicad_sch" (at 523.24 302.26 0) (effects (font (size 1.27 1.27)))) (instances (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985" (page "34")))))
 	(sheet_instances
 		(path "/"
 			(page "1")

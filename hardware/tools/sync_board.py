@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Refresh footprint geometry/fields/nets in the canonical unrouted appliance board.
+"""Add new footprints and refresh pad nets in the canonical unrouted appliance board.
 
-Existing footprint identities and transforms are preserved. Refuses routed boards:
-use KiCad's native update dialog once routing has started.
+Footprints already on the board keep their exact text (side, pose, pad angles and
+geometry) and only get their pad nets refreshed: re-sourcing them from the library
+would put bottom-side parts back on F.Cu and reset absolute pad angles. New parts
+are generated from the library and parked off-board for place_board.py --keep.
+Geometry changes to existing footprints go through KiCad's native update dialog.
+Refuses routed boards.
 """
 import argparse
 import json
@@ -30,6 +34,33 @@ def property_text(ref, name, value):
             '(effects (font (size 1 1) (thickness 0.15))))')
 
 
+def refresh_nets(ref, item, nets):
+    """Substitute net/pinfunction/pintype values in place, only on pads whose values changed."""
+    def pad(text):
+        number = re.match(r'\(pad (?:"([^"]*)"|([^\s()]+))', text)
+        number = number[1] if number[1] is not None else number[2]
+        if not number:
+            return text
+        net, attrs = nets[(ref, number)]
+        if net.startswith('unconnected-'):
+            net = net.replace('/', '{slash}')
+        for field, value in [('net', net), ('pinfunction', attrs.get('pinfunction')), ('pintype', attrs.get('pintype'))]:
+            if value is None:
+                continue
+            new = f'({field} "{quote(value)}")'
+            old = re.search(r'\(' + field + r' "(?:[^"\\]|\\.)*"\)', text)
+            assert old, (ref, number, field)
+            text = text.replace(old[0], new, 1)
+        return text
+    out, pos = [], 0
+    for child in children(item):
+        start = item.index(child, pos)
+        out.append(item[pos:start])
+        out.append(pad(child) if tag(child) == 'pad' else child)
+        pos = start + len(child)
+    out.append(item[pos:])
+    return ''.join(out)
+
 def synchronize(output):
     output.mkdir(parents=True, exist_ok=True)
     board_path = ROOT / 'appliance.kicad_pcb'
@@ -51,6 +82,7 @@ def synchronize(output):
             existing[ref] = item
     assert set(existing) <= set(components), 'PCB-only components need explicit review.'
     footprints = []
+    refreshed = []
     missing = []
     new_count = 0
     for ref, comp in components.items():
@@ -62,7 +94,10 @@ def synchronize(output):
         base = ROOT if library in ['Appliance', 'Recovery', 'PoE'] else Path(policy['default_library_root'])
         source = (base / (library + '.pretty') / (name + '.kicad_mod')).read_text()
         old = existing.get(ref, '')
-        old_items = list(children(old)) if old else []
+        if old:
+            refreshed.append((old, refresh_nets(ref, old, nets)))
+            continue
+        old_items = []
         transform = next((x for x in old_items if tag(x) == 'transform'), None)
         if transform is None:
             transform = f'(transform (translate {400 + 50 * new_count} 300) (rotate 0) (scale 1 1))'
@@ -148,9 +183,17 @@ def synchronize(output):
                     ref, 'Add multi-unit symbols through KiCad Update PCB to establish native links.')
                 sheet = comp.find('sheetpath').get('tstamps').rstrip('/')
                 output_items.append(f'(path "{sheet}/{stamps[0]}")')
+            elif name == 'sheetname':
+                output_items.append(f'(sheetname "{quote(comp.find("sheetpath").get("names"))}")')
+            elif name == 'sheetfile':
+                sheetfile = comp.find('property[@name="Sheetfile"]')
+                output_items.append(f'(sheetfile "{quote(sheetfile.get("value"))}")')
         footprints.append('(footprint "' + fp + '"\n' + '\n'.join(output_items) + '\n)')
-    other = [x for x in children(board) if tag(x) != 'footprint']
-    board_path.write_text('(kicad_pcb\n' + '\n'.join(other + footprints) + '\n)\n')
+    # Splice into the original text so existing formatting (and the git diff) stays intact.
+    for old, new in refreshed:
+        board = board.replace(old, new, 1)
+    end = board.rstrip().rindex(')')
+    board_path.write_text(board[:end] + ''.join('\t' + f + '\n' for f in footprints) + board[end:])
     print(f'Synchronized {len(footprints)} footprints; unassigned: {missing}')
 
 

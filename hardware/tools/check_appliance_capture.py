@@ -22,17 +22,18 @@ def validate(tree,directory):
  B={p:n for n,ps in N.items() for p in ps}
  F=lambda ref:{f.get('name'):f.text for f in C[ref].findall('./fields/field')}
  def on(ref,pin,net):assert B[(ref,pin)]==net,(ref,pin,B.get((ref,pin)),net)
- def exact(net,*pins):assert N[net]=={tuple(p.split(':')) for p in pins},(net,N[net],pins)
+ probe=lambda ps:{p for p in ps if not p[0].startswith('TP24')}   # bring-up probe pads never count toward exact membership
+ def exact(net,*pins):assert probe(N[net])=={tuple(p.split(':')) for p in pins},(net,N[net],pins)
  def subset(net,*pins):assert {tuple(p.split(':')) for p in pins}<=N[net],(net,N[net],pins)
  def nc(ref,pin):
   name=B[(ref,pin)];assert name.startswith('unconnected-') and N[name]=={(ref,pin)},(ref,pin,name)
  def connected(ref,mapping):
   for net,pins in mapping.items():
    for pin in pins.split():on(ref,pin,net)
- assert len(C)==663,len(C)
+ assert len(C)==819,len(C)
  assert len(B)==sum(len(p) for p in N.values()),'Physical pin appears in two nets'
  for ref in C:
-  if ref in ['TP1101','TP1102','TP1103']:assert C[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
+  if ref in ['TP1101','TP1102','TP1103'] or ref.startswith('TP24'):assert C[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
   else:assert F(ref).get('MPN') and F(ref).get('Manufacturer'),ref
  libs={(p.get('lib'),p.get('part')):{v.get('num') for v in p.findall('./pins/pin')} for p in tree.findall('./libparts/libpart')}
  counts={'U801':565,'U901':200,'U1101':153,'U501':69,'U1001':20,'U1301':49,'U201':48,'U1701':21,'U1901':15,'U1902':10,'J2001':67,'J2002':12}
@@ -100,7 +101,7 @@ def validate(tree,directory):
  exact('MODEM_MON_CT','U1903:4','R1926:2');on('R1926','1','+3V3')
  connected('U1904',{'MCU_MODEM_POWER_EN':'2','GND':'3','MODEM_DISCHARGE_GATE':'4','+3V3':'5'})
  connected('Q1901',{'MODEM_DISCHARGE_GATE':'1','GND':'2','MODEM_DISCHARGE_DRAIN':'3'});on('R1924','1','MODEM_VCC');on('R1924','2','MODEM_DISCHARGE_DRAIN')
- connected('U201',{'MCU_MODEM_POWER_EN':'11','MODEM_RAIL_GOOD':'25','MODEM_SWITCH_GOOD':'26','MODEM_BUCK_GOOD':'27'})
+ connected('U201',{'MCU_MODEM_POWER_EN':'40','MODEM_RAIL_GOOD':'25','MODEM_SWITCH_GOOD':'26','MODEM_BUCK_GOOD':'27'})
  connected('U2001',{'+3V3':'1 6 10','GND':'5 9 11 20 21','MODEM_USB_OE_N':'2','MODEM_TXP_AC':'3','MODEM_TXN_AC':'4','MODEM_USB_RXP':'7','MODEM_USB_RXN':'8','MODEM_TXP_PORT':'17','MODEM_TXN_PORT':'16','MODEM_RXP_PORT':'19','MODEM_RXN_PORT':'18'})
  connected('U2002',{'+3V3':'10','GND':'5 9','MODEM_USB_OE_N':'6','MODEM_USB_DP':'8','MODEM_USB_DM':'7','MODEM_USB_DP_PORT':'1','MODEM_USB_DM_PORT':'2'})
  connected('U2003',{'MAIN3V3_GOOD':'1','MODEM_RAIL_GOOD':'2','GND':'3','MODEM_USB_VALID':'4','+3V3':'5'})
@@ -113,6 +114,22 @@ def validate(tree,directory):
   on(ref,'2',f'M2_PIN{pin}')
  exact('MODEM_RESET_N','Q301:3','J102:3','J2001:67');subset('MODEM_OFF_N','Q302:3','J102:4','J2001:6','R2018:2');on('R2018','1','MODEM_VCC')
  default_dnp={r for r,c in C.items() if c.find('property[@name="dnp"]') is not None}
+ # 2026-11-22 bring-up additions: MCU link, sensing, aux power path, boot media, eSIM and test pads.
+ connected('U201',{'ADC_AUX_12V':'11','ADC_5V_MAIN':'12','ADC_3V3_MAIN':'15','ADC_MODEM_VCC':'16','ADC_MODEM_ILM':'17','ADC_NTC_MODEM':'18','ADC_NTC_POWER':'21','MCU_LINK_TX':'30','MCU_LINK_RX':'31','MON_I2C_SCL':'47','MON_I2C_SDA':'48','MON_ALERT_N':'2','LED_PWR_N':'28','LED_SYS_N':'37','LED_WAN_N':'38','LED_FAULT_N':'39','MCU_HEALTH_IN':'1','MCU_ETH_POWER_EN':'41','MCU_PROCESSOR_RESET_ASSERT':'9'})
+ connected('U2201',{'GND':'1 3','SOC_LINK_TX':'2','MCU_LINK_RX':'4','+3V3':'5'});connected('U2202',{'GND':'1 3','MCU_LINK_TX':'2','SOC_LINK_RX':'4','3V3_MAIN':'5'})
+ on('U801','B22','SOC_LINK_TX');on('U801','A22','SOC_LINK_RX');on('R2213','1','MODEM_FUSE_ILM');on('R2213','2','ADC_MODEM_ILM')
+ for q,u,src,tag in [('Q2101','U2101','AUX_12V_IN','AUX'),('Q2102','U2102','ISO_12V_PSU','PSU')]:
+  connected(q,{src:'1 2 3',f'{tag}_DIODE_GATE':'4','ISO_12V_BUS':'5'});connected(u,{src:'3 6','ISO_12V_BUS':'4',f'{tag}_DIODE_GATE':'5','GND':'2'})
+ on('R2101','1','ISO_12V_BUS');on('R2101','2','ISO_12V');connected('U2103',{'ISO_12V_BUS':'10','ISO_12V':'8 9','+3V3':'6','GND':'1 2 7'})
+ assert not any(r in ['U701','U401','U1901'] for r,p in N['ISO_12V_PSU']|N['ISO_12V_BUS'])
+ assert {'C1727','J1711','L1708','R1753','TP1719'}<={r for r,p in N['ISO_12V_PSU']}
+ connected('U2301',{'FSPI_CS0_N':'1','FSPI_D1':'2','FSPI_WP_N':'3','GND':'4 9','FSPI_D0':'5','FSPI_CLK':'6','FSPI_D3':'7','VCC_1V8':'8'})
+ for ball,net in {'1A15':'FSPI_CLK','1A17':'FSPI_D0','1A18':'FSPI_D1','1B17':'FSPI_CS0_N','1C15':'FSPI_D3','1B16':'EMMC_RESET_N'}.items():on('U801',ball,net)
+ connected('J2301',{'SD_D2':'1','SD_D3':'2','SD_CMD':'3','SD_VDD':'4','SD_CLK':'5','GND':'6 10 SH','SD_D0':'7','SD_D1':'8','SDMMC0_DET':'9'})
+ for pin,ref in [('48','R2311'),('46','R2312'),('44','R2313'),('42','R2314')]:exact(f'M2_PIN{pin}',f'J2001:{pin}',f'{ref}:1')
+ for ref in ['J2301','R2304','U2302','D2301','D2302','U2303','R2311','R2312','R2313','R2314','C2305']:assert ref in default_dnp,ref
+ tps=[r for r in C if r.startswith('TP24')];assert len(tps)==80
+ for r in tps:assert B[(r,'1')]==C[r].findtext('value'),(r,B[(r,'1')])
  profiles=json.loads((ROOT/'reference/modem-assembly-profiles.json').read_text())
  for profile in profiles:
   populated=set(profile['populate_optional']);assert not profile['released'];graph={}

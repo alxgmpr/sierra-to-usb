@@ -5,7 +5,10 @@ Phases: anchors (core first, then edge connectors and magnetics) -> parts that
 straddle the PoE isolation line -> remaining ICs by ratsnest -> passives packed
 next to the pad they serve. The outline is trimmed to the placed parts.
 
-usage: uv run python hardware/tools/place_board.py IN.kicad_pcb OUT.kicad_pcb
+usage: uv run python hardware/tools/place_board.py IN.kicad_pcb OUT.kicad_pcb [--keep]
+
+--keep: incremental. Parts already inside the outline stay exactly where they are
+(anchors included); only parts parked off-board by sync_board.py are placed.
 """
 import math, re, sys
 from collections import defaultdict
@@ -60,6 +63,7 @@ def parse(s):
 
 # ============================================================== floorplan (board-local mm, x right, y down)
 SRC, DST = sys.argv[1], sys.argv[2]   # input board, output board
+KEEP = '--keep' in sys.argv[3:]
 s = open(SRC).read()
 fps = parse(s)
 X0, Y0 = 333.8, 38.05      # outline top-left stays put
@@ -73,10 +77,10 @@ EDGE = 1.0
 BLOCKS = {   # block: (sheets, region rectangles)
     'PRIM':  ((), [(0, 0, XN, 100), (0, NY, XB, 100)]),
     'NIC':   (('nic', 'nic-power', 'nic-bypass', 'nic-interface', 'phy-power', 'ethernet-ingress'), [(XB, 0, 83, 42), (XN, 0, 83, NY)]),
-    'PSEC':  (('poe-input', 'poe-pd', 'poe-flyback', 'poe-status', 'main5v', 'main3v3', 'always-on'), [(XB, 42, 83, 100)]),
-    'CORE':  (('processor', 'ram', 'boot', 'pmic', 'cpu-power', 'ddr-power', 'core-power', 'peripheral-power'), [(83, 0, 140, 91)]),
+    'PSEC':  (('poe-input', 'poe-pd', 'poe-flyback', 'poe-status', 'main5v', 'main3v3', 'always-on', 'aux-power'), [(XB, 42, 83, 100)]),
+    'CORE':  (('processor', 'ram', 'boot', 'pmic', 'cpu-power', 'ddr-power', 'core-power', 'peripheral-power', 'boot-media'), [(83, 0, 140, 91)]),
     'MODEM': (('modem-socket', 'modem-power', 'modem-bypass', 'modem-interface'), [(140, 0, 200, 70), (121, 30, 141, 66)]),
-    'CTRL':  (('supervisor', 'controls', 'host-interface', 'recovery'), [(140, 70, 200, 100), (83, 91, 140, 100)]),
+    'CTRL':  (('supervisor', 'controls', 'host-interface', 'recovery', 'management'), [(140, 70, 200, 100), (83, 91, 140, 100)]),
 }
 ANCH = {   # most important first: core, then the connectors and magnetics that fix the edges
     'U801':  (111, 46, 0),      # RK3566; DDR balls top-left, USB3/PCIe on the right
@@ -133,7 +137,7 @@ RAIL = {n for n, v in netpads.items() if len({r for r, _ in v}) > 8 or short(n) 
 def is_small(f): return len(f['pads']) <= 3 or bool(re.match(r'^(C|R|FB|TP|L|D)\d', f['ref']))
 
 prim_nets = {n for n in netpads if re.fullmatch(r'CABLE_MDI\d_[NP]|POE_PAIR\d+|POE_(VDD|VSS|RTN|VCIN|VCOUT|DEN|CLSA|CLSB|REF|UVLO|TPH|TPL|BT|AMPS_CTL)|CHASSIS', short(n))}
-stop = {n for n in netpads if short(n) in ('GND', 'ISO_12V', '+3V3')}
+stop = {n for n in netpads if short(n) in ('GND', 'ISO_12V', 'ISO_12V_PSU', 'ISO_12V_BUS', '+3V3')}
 changed = True
 while changed:
     changed = False
@@ -147,7 +151,10 @@ for f in fps.values():
     ns = {p['net'] for p in f['pads'] if p['net'] in netpads}
     domain[f['ref']] = 'B' if f['ref'] in BARRIER or (ns & prim_nets and ns & stop) else 'P' if ns & prim_nets else 'S'
 BARRIER |= {r for r, d in domain.items() if d == 'B'}
-block = {r: 'PRIM' if domain[r] == 'P' else None if domain[r] == 'B' else sheet_block[f['sheet']] for r, f in fps.items()}
+# Parts that belong next to another block's hardware; test pads go wherever their net is (no block).
+PART_BLOCK = {**{r: 'MODEM' for r in ('U2303', 'R2311', 'R2312', 'R2313', 'R2314', 'C2305', 'R2213', 'C2206', 'RT2201', 'C2207', 'R2214')},
+              **{r: 'PSEC' for r in ('RT2202', 'C2208', 'R2215')}}
+block = {r: 'PRIM' if domain[r] == 'P' else None if domain[r] == 'B' or f['sheet'] == 'test-points.kicad_sch' else PART_BLOCK.get(r) or sheet_block[f['sheet']] for r, f in fps.items()}
 
 # Local bypass caps of the SoC, RAM and eMMC go on the bottom, under or beside their package.
 BGAS = ('U801', 'U901', 'U1101')
@@ -171,6 +178,7 @@ def rect(f, u, v, r, infl=0.0, flip=None):
     return (u + min(p[0] for p in pts) - infl, v + min(p[1] for p in pts) - infl,
             u + max(p[0] for p in pts) + infl, v + max(p[1] for p in pts) + infl)
 placed = {}
+SPILL = []   # --keep: new parts that had to go on the bottom side
 def pad_abs(ref, i, pos=None):
     u, v, r = pos or placed[ref]; p = fps[ref]['pads'][i]
     dx, dy = rot_pt(p['x'], -p['y'] if side[ref] == 'B' else p['y'], r); return u + dx, v + dy
@@ -200,12 +208,36 @@ def legal(ref, R):
     if d != 'B':
         if side[ref] == 'F' and R[0] < CARD[2] and CARD[0] < R[2] and R[1] < CARD[3] and CARD[1] < R[3]: return False
         if block[ref] and not any(inside(R, b, INSET - GAP/2) for b in BLOCKS[block[ref]][1]): return False
-    if side[ref] == 'B': return not collide(R, grid_b)
+    if side[ref] == 'B':   # through-hole pins of a bottom part also pierce the top side
+        return not collide(R, grid_b) and not (any('thru_hole' in p['kind'] for p in fps[ref]['pads']) and collide(R))
     return not collide(R)
 
 # ============================================================== phase 1: anchors
-for ref, (u, v, r) in ANCH.items():
-    commit(ref, u, v, r, rect(fps[ref], u, v, r, GAP/2))
+# DNP microSD: no top-side room left, so it sits on the bottom under the M.2 card (empty there),
+# card opening (footprint +y) facing the right edge; its DNP support parts go on the bottom beside it.
+SD_BOTTOM = ('J2301', 'D2301', 'D2302', 'R2305', 'R2306', 'R2307', 'R2308', 'R2309', 'U2302', 'R2310', 'C2302', 'C2303', 'C2304')
+KEEP_ANCH = {'J2301': (190, 50, 270),
+             # status LEDs in a column by the MCU, top to bottom: PWR, SYS, WAN, FAULT
+             'D2201': (180.7, 72, 0), 'D2202': (180.7, 76, 0), 'D2203': (180.7, 80, 0), 'D2204': (180.7, 82, 0)}
+# --keep search targets: the aux power path and the power NTC belong under the flyback secondary (bottom side).
+KEEP_TARGET = {**{r: (70, 90) for r in ('J2101', 'U2101', 'U2102', 'Q2101', 'Q2102')}, 'U2103': (55, 86), 'R2101': (55, 91), 'RT2202': (55, 80)}
+if KEEP:   # every part already on the board is fixed in its current pose and side
+    for ref, f in fps.items():
+        u, v = f['x'] - X0, f['y'] - Y0
+        if 0 <= u <= W and 0 <= v <= H:
+            side[ref] = f['side']; commit(ref, u, v, f['rot'], rect(f, u, v, f['rot'], GAP/2))
+    for ref in SD_BOTTOM:
+        if ref in fps and ref not in placed: side[ref] = 'B'; block[ref] = None
+    for ref, (u, v, r) in KEEP_ANCH.items():
+        if ref in fps and ref not in placed: commit(ref, u, v, r, rect(fps[ref], u, v, r, GAP/2))
+    for ref in list(placed):   # through-hole pins of fixed parts occupy the bottom side too
+        for i, p in enumerate(fps[ref]['pads']):
+            if 'thru_hole' in p['kind']:
+                x, y = pad_abs(ref, i); e = max(p['w'], p['h'])/2 + 0.25
+                for c in cells((x-e, y-e, x+e, y+e)): grid_b[c].append((x-e, y-e, x+e, y+e))
+else:
+    for ref, (u, v, r) in ANCH.items():
+        commit(ref, u, v, r, rect(fps[ref], u, v, r, GAP/2))
 
 # ============================================================== scoring
 def ratsnest(ref, pos):
@@ -237,6 +269,7 @@ ROT_PEN = 2.0   # mm of ratsnest a non-zero IC rotation has to save
 def area(ref): c = fps[ref]['crt']; return (c[2]-c[0]) * (c[3]-c[1])
 def place_ic(ref, target, halo, dist_w, rmax=60):
     best = None
+    if KEEP and ref in KEEP_TARGET: dist_w = max(dist_w, 5.0)   # targets beat ratsnest (INA226 Kelvin sense at the shunt)
     for du, dv in offsets(rmax, 1.0):
         u, v = round(target[0] + du), round(target[1] + dv)
         for r in (0, 90, 180, 270):
@@ -245,6 +278,8 @@ def place_ic(ref, target, halo, dist_w, rmax=60):
             sc = ratsnest(ref, (u, v, r)) + dist_w * math.hypot(du, dv)
             if block[ref] in STAGE and r: sc += ROT_PEN   # pin 1 the same way unless turning pays off
             if best is None or sc < best[0]: best = (sc, u, v, r, R)
+    if best is None and KEEP and side[ref] == 'F':   # top side full: fall back to the bottom, free of block regions
+        side[ref] = 'B'; block[ref] = None; SPILL.append(ref); return place_ic(ref, target, halo, dist_w, rmax)
     if best is None: raise SystemExit(f'no spot for {ref} ({block[ref]})')
     commit(ref, *best[1:4], best[4])
     if block[ref] in STAGE and not is_small(fps[ref]):   # power inductors go in next, hard against the switch pin
@@ -252,6 +287,7 @@ def place_ic(ref, target, halo, dist_w, rmax=60):
             sw = [pad_abs(ref, j) for p in fps[ind]['pads'] for r2, j in netpads.get(p['net'], ()) if r2 == ref and p['net'] not in RAIL]
             place_ic(ind, sw[0], 0.0, 1.0, rmax=20)
 def target_of(ref):
+    if KEEP and ref in KEEP_TARGET: return KEEP_TARGET[ref]
     f = fps[ref]; nb = [r for r in neighbours(ref) if r in placed]
     nb = [r for r in nb if fps[r]['sheet'] == f['sheet']] or [r for r in placed if fps[r]['sheet'] == f['sheet']] \
         or [r for r in nb if block[r] == block[ref]] or [r for r in placed if block[r] == block[ref]] or nb
@@ -259,7 +295,7 @@ def target_of(ref):
     b = BLOCKS[block[ref]][1][0]; return (b[0]+b[2])/2, (b[1]+b[3])/2
 
 # ============================================================== phase 2: barrier parts on the line
-for ref in sorted(BARRIER - set(ANCH), key=lambda r: (-len(fps[r]['pads']), r)):
+for ref in sorted(BARRIER - set(ANCH) - set(placed), key=lambda r: (-len(fps[r]['pads']), r)):
     f = fps[ref]; best = None; cv = target_of(ref)[1]
     for v in [y*0.5 for y in range(int(NY*2) + 6, int(H*2) - 4)]:
         for r in (0, 90, 180, 270):
@@ -323,6 +359,7 @@ def fan(ref, u, v):
         if not loose and (m < 0 or abs(aa-a) > SNAP/2 + 1e-6): continue
         yield (t, aa, r) if vert else (aa, t, r)
 def target_for(ref, defer):
+    if KEEP and ref in KEEP_TARGET: return 0, KEEP_TARGET[ref]
     f = fps[ref]; cands = []
     for i, p in enumerate(f['pads']):
         net = p['net']
@@ -371,6 +408,8 @@ def place_small(ref, own_pad, tgt, lattice=True):
         if best: break
     if (tidy and best is None) or (one and (best is None or best[0] > 10)):
         return place_small(ref, own_pad, tgt, False)   # lattice full, or no room nearby at 0 deg: free placement
+    if best is None and KEEP and side[ref] == 'F':
+        side[ref] = 'B'; block[ref] = None; SPILL.append(ref); return place_small(ref, own_pad, tgt, False)
     if best is None: return False
     commit(ref, *best[1:4], best[4]); return True
 def prio(ref):
@@ -407,7 +446,7 @@ for ref in placed:   # through-hole pins also occupy the bottom side
             x, y = pad_abs(ref, i); e = max(p['w'], p['h'])/2 + 0.25
             for c in cells((x-e, y-e, x+e, y+e)): grid_b[c].append((x-e, y-e, x+e, y+e))
 load.clear()
-for ref in sorted(BOTTOM, key=prio):
+for ref in sorted(BOTTOM - set(placed), key=prio):
     t = target_for(ref, defer=False)
     if not t or not place_small(ref, *t): raise SystemExit(f'no bottom room for {ref}')
 
@@ -416,6 +455,7 @@ ext = [rect(fps[r], *placed[r]) for r in placed if r not in OVERHANG]
 TW = min(W, math.ceil(max(max(R[2] for R in ext), CARD[2]) + 0.5))
 TH = min(H, math.ceil(max(R[3] for R in ext) + 0.5))
 print(f'placed {len(placed)}/{len(fps)}  outline {TW} x {TH} mm')
+if SPILL: print('bottom-side fallback:', ' '.join(sorted(set(SPILL))))
 
 # ============================================================== write back (pose + absolute pad/text angles)
 out = []; last = 0

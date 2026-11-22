@@ -1,8 +1,8 @@
 # Appliance schematic
 
 The complete engineering capture is [appliance.kicad_sch](appliance.kicad_sch), with
-30 sheets, 663 components and 823 native nets. Open [appliance.kicad_pro](appliance.kicad_pro)
-in KiCad. [appliance.kicad_pcb](appliance.kicad_pcb) contains all 663 footprints
+34 sheets, 819 components and 856 native nets. Open [appliance.kicad_pro](appliance.kicad_pro)
+in KiCad. [appliance.kicad_pcb](appliance.kicad_pcb) contains all 819 footprints
 with native schematic links; placement and routing are still pending.
 
 The remaining processor, boot storage, CPU power, Ethernet, isolated PoE,
@@ -33,9 +33,9 @@ The checker validates the native netlist and all-severity ERC; all 565 RK3566,
 200 RAM, 153 eMMC and other major-device contacts are accounted for. It checks
 65 manufacturer DDR pair mappings, the complete retained TI bridge/flyback net
 partitions, critical rail/reset/interface connections, four assembly-profile power
-maps, deterministic identities and exact pad-number parity for all 663 assigned
+maps, deterministic identities and exact pad-number parity for all 819 assigned
 footprints. Pad parity establishes identity, not a fabrication land-pattern review.
-626 components use default KiCad footprints, including 572 stock hand-solder
+781 components use default KiCad footprints, including 531 stock hand-solder
 variants. Existing package sizes are retained. All attached model paths resolve;
 missing or mechanically unverified models are explicitly recorded in
 [footprint-policy.json](footprint-policy.json). Imported TI embedded STEP assets
@@ -65,6 +65,47 @@ refresh helper and refuses routed boards.
 
 The PDF was rendered and all 30 sheets inspected. Cropped modem content, a duplicate
 crystal-ground wire and the recovery USB shell-pad model were corrected during review.
+
+## Bring-up additions — 2026-11-22
+
+Four sheets from [tools/build_management.py](tools/build_management.py), plus native label edits on the
+supervisor, processor, modem-socket, flyback, PMIC and 3.3 V sheets:
+
+- **SoC <-> STM32 UART.** RK3566 UART3_M0 (A22 RX, B22 TX, VCCIO1 = 3V3_MAIN) to STM32 LPUART2
+  (PC7 RX, PC6 TX) through two LVC1G125 buffers, each powered by its receiving side so neither
+  back-powers the other. Carries telemetry, LED overrides, power-cycle requests and reset cause.
+- **Status LEDs.** PWR/SYS/WAN (green) and FAULT (yellow) sink into STM32 PA8/PA15/PD0/PD1, all
+  timer-PWM pins. They are dark from MCU reset until firmware drives them; Linux overrides over the UART.
+- **Sensing on the STM32 ADC.** To free seven ADC inputs, seven digital signals moved to spare GPIOs
+  ([assignment table](pinmaps/supervisor-appliance-assignment.csv)). PA0 AUX_12V/11, PA1 5V_MAIN/2,
+  PA4 3V3_MAIN/2, PA5 MODEM_VCC/2, PA6 modem current from the TPS25947 ILM pin (R2213 must sit at U1902
+  pin 9: the pin tolerates < 50 pF), PA7/PB2 10k NTCs at the M.2 bay and the flyback secondary.
+  INA226 (I2C1 PB8/PB9, 0x40, alert on PC14) measures the whole 12 V bus through a 10 mOhm shunt.
+- **Aux 12 V input.** J2101 (ED555) feeds ISO_12V_BUS through an LM74700 + CSD17577Q5A ideal diode; the
+  flyback output (now `ISO_12V_PSU`) gets its own. `ISO_12V` is the monitored bus after the shunt.
+  **Firmware:** aux power gives no PoE grant (TPH_N/TPL_N/BT_N all high). Bypass the grant gate only while
+  ADC_AUX_12V reads above 10.5 V, and re-apply it as soon as aux drops. Aux is 12 V nominal, 12.6 V max.
+- **Boot media.** 1.8 V SPI NOR W25Q128JWEIQ on FSPI CS0/CLK/D0/D1/D3 (D2 shares 1B16 with EMMC_RESET_N,
+  so x1/x2 only); the WSON-8 8x6 land also takes W25N01GWZEIG SPI NAND. DNP microSD on SDMMC0
+  (VCCIO_SD) with a TPS22965 card switch on GPIO0_A6 (SD_PWR_EN) and SDMMC0_DET card detect.
+- **eSIM.** DNP MFF2 land on M.2 SIM2 contacts 42/44/46/48 through DNP 0R links, so every modem profile
+  keeps those contacts open by default. The land is a placeholder pending a chosen eUICC drawing.
+- **Test pads.** 80 bare 1.0 mm pads (TP2401-TP2480): 44 resets/enables/power-goods, 26 rails, 10 GND.
+  PMIC_PWRON_N and MAIN3V3_EN became global nets for this. MCU_NRST_N/SWD stay on J201 and the
+  service UART/modem controls on J102.
+
+Board: placed incrementally with `place_board.py --keep` after `sync_board.py`, which now keeps existing
+footprints byte-for-byte except changed pad nets. The top side had no room for 20 new parts, so they
+fell back to the bottom: the aux power path and INA226 under the flyback secondary, and the SPI flash
+under the SoC. J2101 is a bottom-side through-hole terminal block. The DNP microSD group is on the bottom
+by design, under the M.2 card with the card opening at the right edge. DRC adds no shorts, bridges or courtyard overlaps; the six new clearance
+findings are pad-to-pad inside U2103's 0.5 mm MSOP. `check_board_sync.py` still stops on six
+`lib_footprint_mismatch` findings (J101, J102, J201, J202, J1202, J1701) that were already present at
+the previous commit.
+
+Open before order: SPI flash and SMBJ12CA LCSC stock; RK3566 FSPI boot behavior with a blank or
+present NOR; the MFF2 land against a real eUICC drawing; microSD trace length (about 80 mm, fine for
+SDR25, marginal for SDR104); the WSON-8 8x6 STEP model hold.
 
 ## Assembly and software obligations
 

@@ -3123,80 +3123,16 @@
 		(uuid "dc7f7aec-e555-4717-af95-f10852c62dfd")
 	)
 	(no_connect
-		(at 78.74 114.3)
-		(uuid "0218e3f8-0b49-52d5-a675-58c170b8aff3")
-	)
-	(no_connect
-		(at 78.74 119.38)
-		(uuid "0a966d1b-95d6-591f-bdbf-a7b4f5eadfd2")
-	)
-	(no_connect
-		(at 78.74 132.08)
-		(uuid "0b0c2c1a-8ed3-5f10-bb37-f5369c2c5e8e")
-	)
-	(no_connect
-		(at 134.62 165.1)
-		(uuid "0fed5a37-c2d2-5515-b2d3-16e019e2e869")
-	)
-	(no_connect
-		(at 134.62 137.16)
-		(uuid "1564ba63-65e1-5070-8f46-25df8a01fbe1")
-	)
-	(no_connect
-		(at 78.74 106.68)
-		(uuid "192af8e8-1d83-5fbe-83c4-b33478da5547")
-	)
-	(no_connect
 		(at 134.62 124.46)
 		(uuid "31b57d63-e5e2-5d11-9773-06ca4cea8d6b")
-	)
-	(no_connect
-		(at 134.62 162.56)
-		(uuid "3a7046d9-dd0b-526f-9dc2-ddb71493ecae")
-	)
-	(no_connect
-		(at 134.62 119.38)
-		(uuid "3d164cdc-ff99-5f70-97fd-f4c2f983e855")
-	)
-	(no_connect
-		(at 78.74 129.54)
-		(uuid "3ddec474-4f2b-53f2-b716-97877b19b442")
 	)
 	(no_connect
 		(at 134.62 129.54)
 		(uuid "6a15b3d6-9014-5255-90b9-5b9b07d59053")
 	)
 	(no_connect
-		(at 134.62 121.92)
-		(uuid "779d3cef-72e0-55c2-a9b3-050bfe7258ed")
-	)
-	(no_connect
-		(at 78.74 134.62)
-		(uuid "8111f9cc-e9aa-5be9-b07d-80fe09ab2fed")
-	)
-	(no_connect
 		(at 78.74 137.16)
 		(uuid "87cc1624-46ae-5ff4-a630-67707e59cf81")
-	)
-	(no_connect
-		(at 78.74 116.84)
-		(uuid "8e4eeaae-f4e2-57af-a203-955032a8bd64")
-	)
-	(no_connect
-		(at 78.74 121.92)
-		(uuid "94b96dfe-c2f9-5ff6-924f-631c28be0d80")
-	)
-	(no_connect
-		(at 78.74 104.14)
-		(uuid "afb69f1e-5b3d-52fe-b679-4788f66fec2b")
-	)
-	(no_connect
-		(at 134.62 127)
-		(uuid "d4ac9912-ad6f-5b7c-962b-48f95f862b41")
-	)
-	(no_connect
-		(at 78.74 127)
-		(uuid "dc9b0ace-9090-5b64-87f2-ac1d2dd7ec00")
 	)
 	(wire
 		(pts
@@ -3220,16 +3156,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 116.84) (xy 142.24 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f1a857d-6ef5-50ee-92a2-d3a637946b0f")
-	)
-	(wire
-		(pts
 			(xy 218.44 172.72) (xy 218.44 185.42)
 		)
 		(stroke
@@ -3247,16 +3173,6 @@
 			(type default)
 		)
 		(uuid "258fc5b2-ffa4-5db5-a0b5-b51b57460529")
-	)
-	(wire
-		(pts
-			(xy 134.62 111.76) (xy 142.24 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "25d0e37d-d539-58f6-ad0c-215b9001749f")
 	)
 	(wire
 		(pts
@@ -3400,26 +3316,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 99.06) (xy 142.24 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "56526dd3-81b4-508a-85b8-d87269d34d59")
-	)
-	(wire
-		(pts
-			(xy 134.62 101.6) (xy 142.24 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b3009e6-caf0-5bfa-a25d-a5b09fb398b4")
-	)
-	(wire
-		(pts
 			(xy 154.94 63.5) (xy 154.94 55.88)
 		)
 		(stroke
@@ -3470,16 +3366,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 147.32) (xy 142.24 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "798d04e2-4aab-53b1-ae82-3b98dde0df41")
-	)
-	(wire
-		(pts
 			(xy 312.42 43.18) (xy 312.42 40.64)
 		)
 		(stroke
@@ -3517,16 +3403,6 @@
 			(type default)
 		)
 		(uuid "8c93da2b-34be-5999-a4b0-55721a28698d")
-	)
-	(wire
-		(pts
-			(xy 134.62 114.3) (xy 142.24 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "937a1490-663b-5ced-aa06-0fe0aea83831")
 	)
 	(wire
 		(pts
@@ -3810,16 +3686,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 109.22) (xy 142.24 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f102e132-f451-51e2-9697-ab90d5cd7266")
-	)
-	(wire
-		(pts
 			(xy 292.1 40.64) (xy 312.42 40.64)
 		)
 		(stroke
@@ -4007,28 +3873,6 @@
 			(justify left bottom)
 		)
 		(uuid "ecf38be7-e6d5-51f9-925f-69a3987a902d")
-	)
-	(global_label "MCU_PROCESSOR_RESET_ASSERT"
-		(shape passive)
-		(at 142.24 147.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "029c84ea-0068-55b1-8fa4-7646acaea517")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 142.24 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(global_label "POE_BT_N"
 		(shape passive)
@@ -4294,61 +4138,6 @@
 		)
 		(uuid "5baee910-368b-5a86-8d0e-2ec45bad4f7b")
 	)
-	(hierarchical_label "MODEM_RESET_ASSERT"
-		(shape output)
-		(at 142.24 109.22 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8bead52c-b66f-5cac-aee3-06c2ec8ecf75")
-	)
-	(hierarchical_label "ETH_RESET_ASSERT"
-		(shape output)
-		(at 142.24 114.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8cc5301e-1c9b-51f6-a574-def56b13c2e6")
-	)
-	(hierarchical_label "MODEM_OFF_ASSERT"
-		(shape output)
-		(at 142.24 111.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a969e629-1c1b-50c2-8ecf-a8c62e9ef092")
-	)
-	(hierarchical_label "MODEM_POWER_EN"
-		(shape output)
-		(at 142.24 99.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c532c5af-a8f9-5119-bb1d-e89a9bf37105")
-	)
-	(hierarchical_label "HEALTH_IN"
-		(shape input)
-		(at 142.24 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d476a37e-ddb4-5e50-8bc5-2e26639bc346")
-	)
 	(hierarchical_label "SERVICE_RX"
 		(shape input)
 		(at 142.24 106.68 0)
@@ -4359,17 +4148,6 @@
 			(justify left)
 		)
 		(uuid "d5b6d96e-5da0-5880-a981-bb5b82587f50")
-	)
-	(hierarchical_label "ETH_POWER_EN"
-		(shape output)
-		(at 142.24 101.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e7c465fc-56b3-579f-9c4d-91c7d7cf1e1b")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7433,4 +7211,51 @@
 			)
 		)
 	)
-)
+
+	(wire (pts (xy 78.74 119.38) (xy 71.12 119.38)) (stroke (width 0) (type default)) (uuid "b29206ed-072b-5307-9fc0-044cfc673a98"))
+	(hierarchical_label "MODEM_POWER_EN" (shape output) (at 71.12 119.38 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fef8f3be-aca4-5b29-a0c4-67f60fb9cbd0"))
+	(wire (pts (xy 78.74 121.92) (xy 71.12 121.92)) (stroke (width 0) (type default)) (uuid "a12273f0-382b-581b-b4de-a62319699658"))
+	(hierarchical_label "ETH_POWER_EN" (shape output) (at 71.12 121.92 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3abc99be-082e-5cff-9f61-a9e7df7b897b"))
+	(wire (pts (xy 134.62 121.92) (xy 142.24 121.92)) (stroke (width 0) (type default)) (uuid "b95bc4fa-0490-5961-a714-0fbe2d003e5d"))
+	(hierarchical_label "MODEM_RESET_ASSERT" (shape output) (at 142.24 121.92 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8774afd8-2abb-5171-abca-6eb1563a464a"))
+	(wire (pts (xy 134.62 127.0) (xy 142.24 127.0)) (stroke (width 0) (type default)) (uuid "92262c65-af2d-581b-9869-2decc2bee3d3"))
+	(hierarchical_label "MODEM_OFF_ASSERT" (shape output) (at 142.24 127.0 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d83d971d-a788-55e9-b142-9731e058bde2"))
+	(wire (pts (xy 78.74 104.14) (xy 71.12 104.14)) (stroke (width 0) (type default)) (uuid "ac477081-4ffd-57b8-acf8-c897c1e25d4c"))
+	(hierarchical_label "ETH_RESET_ASSERT" (shape output) (at 71.12 104.14 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fa887242-2202-57aa-9dba-3119d5357189"))
+	(wire (pts (xy 78.74 132.08) (xy 71.12 132.08)) (stroke (width 0) (type default)) (uuid "7693b964-59b4-5622-9150-ce13e39f8f81"))
+	(hierarchical_label "HEALTH_IN" (shape input) (at 71.12 132.08 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6160b3b4-00cf-5ed1-b5b5-f3e81d541972"))
+	(wire (pts (xy 78.74 106.68) (xy 71.12 106.68)) (stroke (width 0) (type default)) (uuid "571a4a7f-29ed-5090-8d1a-a2deceb62ca4"))
+	(global_label "MCU_PROCESSOR_RESET_ASSERT" (shape passive) (at 71.12 106.68 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5239afee-12e0-554f-ba2c-a35fc135130f"))
+	(wire (pts (xy 134.62 99.06) (xy 142.24 99.06)) (stroke (width 0) (type default)) (uuid "3944b23d-b0c6-5a59-b908-2e174e236670"))
+	(global_label "ADC_AUX_12V" (shape passive) (at 142.24 99.06 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "93c5ac2a-d173-556a-acfc-f8b55f68039e"))
+	(wire (pts (xy 134.62 101.6) (xy 142.24 101.6)) (stroke (width 0) (type default)) (uuid "b66821c7-0132-57c4-858c-2bf339108cc2"))
+	(global_label "ADC_5V_MAIN" (shape passive) (at 142.24 101.6 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "48469fb7-f5f7-5595-83e0-5e9f933da5eb"))
+	(wire (pts (xy 134.62 109.22) (xy 142.24 109.22)) (stroke (width 0) (type default)) (uuid "d099820d-ab4d-5785-8de2-ea8a933f9294"))
+	(global_label "ADC_3V3_MAIN" (shape passive) (at 142.24 109.22 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1d04530f-f4be-5b62-a9c6-0accd4d7e410"))
+	(wire (pts (xy 134.62 111.76) (xy 142.24 111.76)) (stroke (width 0) (type default)) (uuid "4e3ff216-ff0c-524d-af13-f4847b0cb27a"))
+	(global_label "ADC_MODEM_VCC" (shape passive) (at 142.24 111.76 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "dba606f9-ab67-521a-a472-70e4662b04c2"))
+	(wire (pts (xy 134.62 114.3) (xy 142.24 114.3)) (stroke (width 0) (type default)) (uuid "61ba0609-3b7a-556b-9bb5-61d57d13f9dc"))
+	(global_label "ADC_MODEM_ILM" (shape passive) (at 142.24 114.3 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "767c154e-9b06-516f-81ed-d75f968c4e24"))
+	(wire (pts (xy 134.62 116.84) (xy 142.24 116.84)) (stroke (width 0) (type default)) (uuid "253211d6-ebbb-5586-a8f6-4f607e460a46"))
+	(global_label "ADC_NTC_MODEM" (shape passive) (at 142.24 116.84 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d8e69272-f48c-5802-a537-a9a9437dd13d"))
+	(wire (pts (xy 134.62 147.32) (xy 142.24 147.32)) (stroke (width 0) (type default)) (uuid "42521399-3943-5590-8e21-4fc907166ac9"))
+	(global_label "ADC_NTC_POWER" (shape passive) (at 142.24 147.32 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d521bc65-2e92-5e3b-b8ec-68fa165c53fd"))
+	(wire (pts (xy 78.74 127.0) (xy 71.12 127.0)) (stroke (width 0) (type default)) (uuid "b5a5e566-cc88-5a7c-8b65-8a24fe64a7d7"))
+	(global_label "MCU_LINK_TX" (shape passive) (at 71.12 127.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "972a10ef-578d-51b3-bc97-77ca4afc4851"))
+	(wire (pts (xy 78.74 129.54) (xy 71.12 129.54)) (stroke (width 0) (type default)) (uuid "eeb4f697-064e-51c7-aed3-f1822895fe6d"))
+	(global_label "MCU_LINK_RX" (shape passive) (at 71.12 129.54 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "973503bd-ee94-5ea4-8753-9cc62639c634"))
+	(wire (pts (xy 134.62 162.56) (xy 142.24 162.56)) (stroke (width 0) (type default)) (uuid "fa8e97d1-9bc7-55af-bfd3-78cff60afb13"))
+	(global_label "MON_I2C_SCL" (shape passive) (at 142.24 162.56 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "968b2e92-f175-57bb-b583-455285da857c"))
+	(wire (pts (xy 134.62 165.1) (xy 142.24 165.1)) (stroke (width 0) (type default)) (uuid "f24b4f11-6e0a-5ff2-b299-87b1fba6a5a2"))
+	(global_label "MON_I2C_SDA" (shape passive) (at 142.24 165.1 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ed0f37b4-ea38-5244-a5b4-cca1041ce644"))
+	(wire (pts (xy 78.74 134.62) (xy 71.12 134.62)) (stroke (width 0) (type default)) (uuid "d76fb06c-b7b9-5a0c-bb39-48a3929a95d2"))
+	(global_label "MON_ALERT_N" (shape passive) (at 71.12 134.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "420d2670-c85e-5537-9714-5a77cb4a0801"))
+	(wire (pts (xy 134.62 119.38) (xy 142.24 119.38)) (stroke (width 0) (type default)) (uuid "eacd37bd-9d5e-5683-8e07-5f0a61927522"))
+	(global_label "LED_PWR_N" (shape passive) (at 142.24 119.38 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "420eb9f4-6008-5034-b0e8-4fe38f4baa25"))
+	(wire (pts (xy 134.62 137.16) (xy 142.24 137.16)) (stroke (width 0) (type default)) (uuid "ca88ecb0-5727-50f8-b34e-c034d99feb40"))
+	(global_label "LED_SYS_N" (shape passive) (at 142.24 137.16 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "46c4ffa4-c505-506d-8017-9ef6a0f78d73"))
+	(wire (pts (xy 78.74 114.3) (xy 71.12 114.3)) (stroke (width 0) (type default)) (uuid "d9cc5971-5711-5bce-a65e-95fd51138b59"))
+	(global_label "LED_WAN_N" (shape passive) (at 71.12 114.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6bf4d59e-8c5f-53b2-b986-02de1cd85f5a"))
+	(wire (pts (xy 78.74 116.84) (xy 71.12 116.84)) (stroke (width 0) (type default)) (uuid "0e5c972d-9f88-5923-8241-041cd8db1fb6"))
+	(global_label "LED_FAULT_N" (shape passive) (at 71.12 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2b6078c7-ded4-5ff5-9deb-493f4cbbc602"))
+	)

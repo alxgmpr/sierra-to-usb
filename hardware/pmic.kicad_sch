@@ -4953,7 +4953,7 @@
 		)
 		(uuid "548d9333-e887-56a2-8c5d-62df80862442")
 	)
-	(label "PMIC_PWRON_N"
+	(global_label "PMIC_PWRON_N" (shape passive)
 		(at 50.8 355.6 0)
 		(effects
 			(font
@@ -4963,7 +4963,7 @@
 		)
 		(uuid "5c635c89-7d02-502d-b193-2d069441ee4f")
 	)
-	(label "PMIC_PWRON_N"
+	(global_label "PMIC_PWRON_N" (shape passive)
 		(at 60.96 246.38 180)
 		(effects
 			(font
@@ -4993,7 +4993,7 @@
 		)
 		(uuid "70bc94ef-25e3-57b6-a18c-b60b1d2766e1")
 	)
-	(label "PMIC_PWRON_N"
+	(global_label "PMIC_PWRON_N" (shape passive)
 		(at 129.54 355.6 0)
 		(effects
 			(font

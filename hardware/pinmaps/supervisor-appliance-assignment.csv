@@ -9,3 +9,26 @@ POE_BT_N,24,PB12,Input,Captured in full appliance; qualify firmware sequencing a
 MODEM_RAIL_GOOD,25,PB13,Input,Captured in full appliance; qualify firmware sequencing and fault response,ST DS13560 LQFP48 native pads; TPS2373/TPS3808/TPS259474 power circuitry
 MODEM_SWITCH_GOOD,26,PB14,Input,Captured in full appliance; qualify firmware sequencing and fault response,ST DS13560 LQFP48 native pads; TPS2373/TPS3808/TPS259474 power circuitry
 MODEM_BUCK_GOOD,27,PB15,Input,Captured in full appliance; qualify firmware sequencing and fault response,ST DS13560 LQFP48 native pads; TPS2373/TPS3808/TPS259474 power circuitry
+MCU_HEALTH_IN,1,PC13,Input,"Moved from PA7 to free ADC1_IN7",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MON_ALERT_N,2,PC14,Input,"INA226 alert, open drain, R2104 pull-up",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+ETH_RESET_ASSERT,8,PF0,Output,"Moved from PA6",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MCU_PROCESSOR_RESET_ASSERT,9,PF1,Output,"Moved from PB2",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+ADC_AUX_12V,11,PA0,Analog,"ADC1_IN0, AUX_12V_IN/11",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+ADC_5V_MAIN,12,PA1,Analog,"ADC1_IN1, 5V_MAIN/2",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+ADC_3V3_MAIN,15,PA4,Analog,"ADC1_IN4, 3V3_MAIN/2",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+ADC_MODEM_VCC,16,PA5,Analog,"ADC1_IN5, MODEM_VCC/2",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+ADC_MODEM_ILM,17,PA6,Analog,"ADC1_IN6, TPS25947 ILM current monitor",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+ADC_NTC_MODEM,18,PA7,Analog,"ADC1_IN7, 10k NTC",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+ADC_NTC_POWER,21,PB2,Analog,"ADC1_IN10, 10k NTC",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+LED_PWR_N,28,PA8,Output,"TIM1_CH1 PWM, sink",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MCU_LINK_TX,30,PC6,Output,"LPUART2_TX to SoC via U2202",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MCU_LINK_RX,31,PC7,Input,"LPUART2_RX from SoC via U2201",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MODEM_RESET_ASSERT,33,PA11,Output,"Moved from PA4",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MODEM_OFF_ASSERT,34,PA12,Output,"Moved from PA5",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+LED_SYS_N,37,PA15,Output,"TIM2_CH1 PWM, sink",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+LED_WAN_N,38,PD0,Output,"TIM16_CH1 PWM, sink",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+LED_FAULT_N,39,PD1,Output,"TIM17_CH1 PWM, sink",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MCU_MODEM_POWER_EN,40,PD2,Output,"Moved from PA0",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MCU_ETH_POWER_EN,41,PD3,Output,"Moved from PA1",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MON_I2C_SCL,47,PB8,Bidirectional,"I2C1_SCL, INA226",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs
+MON_I2C_SDA,48,PB9,Bidirectional,"I2C1_SDA, INA226",ST STM32G0B1 LQFP48 alternates (KiCad MCU_ST_STM32G0 symbol); 2026-11-22 reassignment to free ADC inputs

@@ -1620,7 +1620,7 @@
 		)
 		(uuid "fa73451f-6d94-5b9c-8d3f-d28b74ec7bc4")
 	)
-	(label "MAIN3V3_EN"
+	(global_label "MAIN3V3_EN" (shape passive)
 		(at 78.74 73.66 180)
 		(effects
 			(font
@@ -1670,7 +1670,7 @@
 		)
 		(uuid "c2bb6f0e-b2fa-5209-8ffa-946fdb717a59")
 	)
-	(label "MAIN3V3_EN"
+	(global_label "MAIN3V3_EN" (shape passive)
 		(at 210.82 134.62 0)
 		(effects
 			(font

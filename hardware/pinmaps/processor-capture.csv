@@ -4,10 +4,10 @@ ball,net,unused_function,evidence
 1A11,LPDDR4_DM1_B,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1A13,,GPIO1_A4_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1A14,,GPIO1_A6_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1A15,,GPIO1_D0_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+1A15,FSPI_CLK,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 1A16,EMMC_STROBE,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1A17,,GPIO1_D1_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1A18,,GPIO1_D2_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+1A17,FSPI_D0,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
+1A18,FSPI_D1,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 1A19,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1A2,,AC17,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1A20,,GPIO2_A6_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
@@ -25,7 +25,7 @@ ball,net,unused_function,evidence
 1B14,,GPIO1_B3_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1B15,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1B16,EMMC_RESET_N,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1B17,,GPIO1_D3_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+1B17,FSPI_CS0_N,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 1B18,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1B19,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1B20,,GPIO2_C4_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
@@ -40,7 +40,7 @@ ball,net,unused_function,evidence
 1C12,VDD_CPU,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1C13,VCC_1V8,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1C14,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1C15,,GPIO1_D4_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+1C15,FSPI_D3,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 1C16,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1C17,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1C18,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
@@ -66,7 +66,7 @@ ball,net,unused_function,evidence
 1D18,,GPIO2_A5_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1D19,,GPIO2_C3_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1D2,,AC1,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1D20,,GPIO1_D7_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+1D20,SD_D2,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 1D3,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1D4,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1D5,VDD_DDR_1V1,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
@@ -84,9 +84,9 @@ ball,net,unused_function,evidence
 1E16,VCC_1V8,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1E17,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1E18,,GPIO2_A4_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1E19,,GPIO2_A1_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+1E19,SD_CMD,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 1E2,LPDDR4_DM0_A,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1E20,,GPIO1_D5_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+1E20,SD_D0,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 1E3,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1E4,VDD_DDR_1V1,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1E6,VDD_DDR_0V6,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
@@ -102,8 +102,8 @@ ball,net,unused_function,evidence
 1F15,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1F16,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1F17,VCCIO_SD,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1F18,,GPIO2_A0_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-1F19,,GPIO1_D6_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+1F18,SD_D3,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
+1F19,SD_D1,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 1F2,LPDDR4_DQ13_A,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1F20,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 1F3,DDR_SOC_RZQ,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
@@ -351,7 +351,7 @@ A17,DDR_B_DQS1P,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 A19,LPDDR4_DQ9_B,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 A2,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 A20,LPDDR4_DQ10_B,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-A22,,GPIO1_A0_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+A22,SOC_LINK_RX,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 A23,,GPIO1_A2_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 A26,,GPIO1_B1_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 A27,EMMC_CMD,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
@@ -393,7 +393,7 @@ AH37,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 AJ1,,GPIO4_A5_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 AJ2,,GPIO4_A3_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 AJ37,PMIC_I2C_SCL,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-AJ38,,GPIO0_A6_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+AJ38,SD_PWR_EN,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 AK2,,GPIO4_A0_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 AK37,,GPIO0_B3_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 AK38,PMIC_I2C_SDA,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
@@ -483,7 +483,7 @@ B19,LPDDR4_DQ8_B,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 B2,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 B20,LPDDR4_DQ11_B,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 B21,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-B22,,GPIO1_A1_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+B22,SOC_LINK_TX,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 B23,,GPIO1_A3_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 B24,,GPIO1_A5_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 B25,,GPIO1_A7_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
@@ -522,7 +522,7 @@ F37,,GPIO2_B5_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 F38,,GPIO2_B4_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 G2,LPDDR4_DQ0_A,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 G37,,GPIO2_B6_u,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
-G38,,GPIO2_A2_d,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
+G38,SD_CLK_SOC,,RK3566 datasheet Rev 1.2 pin table (IO domains); 2026-11-22 bring-up additions
 H1,DDR_A_DQS0N,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 H2,DDR_A_DQS0P,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"
 H37,GND,,"RK3566 guide 2.1,2.2,2.7; NanoPi R3S sheets 5,8,9"

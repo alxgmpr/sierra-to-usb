@@ -1,0 +1,1458 @@
+(kicad_sch (version 20250114) (generator eeschema) (uuid "3e9eccee-7794-51a9-860e-ea8fb61744a1") (paper "A2") (title_block (title "SPI boot flash, microSD and eSIM options") (date "2026-10-07")) (lib_symbols (symbol "Memory_Flash:W25Q128JVE"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -6.35 11.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "W25Q128JVE"
+			(at 7.62 11.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm"
+			(at 0 22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.winbond.com/resource-files/w25q128jv_dtr%20revc%2003272018%20plus.pdf"
+			(at 0 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "128Mbit / 16MiB Serial Flash Memory, Standard/Dual/Quad SPI, 2.7-3.6V, WSON-8"
+			(at 0 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flash memory SPI QPI DTR"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "WSON*1EP*8x6mm*P1.27mm*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "W25Q128JVE_0_1"
+			(rectangle
+				(start -7.62 10.16)
+				(end 10.16 -10.16)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "W25Q128JVE_1_1"
+			(pin input line
+				(at -10.16 7.62 0)
+				(length 2.54)
+				(name "~{CS}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -10.16 0 0)
+				(length 2.54)
+				(name "DO/IO_{1}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "~{WP}/IO_{2}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -12.7 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -10.16 2.54 0)
+				(length 2.54)
+				(name "DI/IO_{0}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 5.08 0)
+				(length 2.54)
+				(name "CLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -10.16 -5.08 0)
+				(length 2.54)
+				(name "~{HOLD}/~{RESET}/IO_{3}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 12.7 270)
+				(length 2.54)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -12.7 90)
+				(length 2.54)
+				(name "EP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:R_Small_US"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 0.762 0.508 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_Small_US"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "r resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_Small_US_1_1"
+			(polyline
+				(pts
+					(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 2.54 270)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:C_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.254 1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 0.254 -2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "capacitor cap"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.524 0.508) (xy 1.524 0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.524 -0.508) (xy 1.524 -0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Connector:Micro_SD_Card_Det2"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at -16.51 17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Micro_SD_Card_Det2"
+			(at 16.51 17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.hirose.com/en/product/document?clcode=&productname=&series=DM3&documenttype=Catalog&lang=en&documentid=D49662_en"
+			(at 2.54 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Micro SD Card Socket with two card detection pins"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector SD microsd"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "microSD*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Micro_SD_Card_Det2_0_1"
+			(polyline
+				(pts
+					(xy -8.89 -8.89) (xy -8.89 11.43) (xy -1.27 11.43) (xy 2.54 15.24) (xy 3.81 15.24) (xy 3.81 13.97)
+					(xy 6.35 13.97) (xy 7.62 15.24) (xy 20.32 15.24) (xy 20.32 -8.89) (xy -8.89 -8.89)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -7.62 10.795)
+				(end -5.08 9.525)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -7.62 8.255)
+				(end -5.08 6.985)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -7.62 5.715)
+				(end -5.08 4.445)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -7.62 3.175)
+				(end -5.08 1.905)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -7.62 0.635)
+				(end -5.08 -0.635)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -7.62 -1.905)
+				(end -5.08 -3.175)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -7.62 -4.445)
+				(end -5.08 -5.715)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -7.62 -6.985)
+				(end -5.08 -8.255)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 16.51 15.24) (xy 16.51 16.51) (xy -19.05 16.51) (xy -19.05 -16.51) (xy 16.51 -16.51) (xy 16.51 -8.89)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Micro_SD_Card_Det2_1_1"
+			(pin bidirectional line
+				(at -22.86 10.16 0)
+				(length 3.81)
+				(name "DAT2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -22.86 7.62 0)
+				(length 3.81)
+				(name "DAT3/CD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -22.86 5.08 0)
+				(length 3.81)
+				(name "CMD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -22.86 2.54 0)
+				(length 3.81)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -22.86 0 0)
+				(length 3.81)
+				(name "CLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -22.86 -2.54 0)
+				(length 3.81)
+				(name "VSS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -22.86 -5.08 0)
+				(length 3.81)
+				(name "DAT0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -22.86 -7.62 0)
+				(length 3.81)
+				(name "DAT1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -22.86 -12.7 0)
+				(length 3.81)
+				(name "DET_B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -22.86 -10.16 0)
+				(length 3.81)
+				(name "DET_A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 20.32 -12.7 180)
+				(length 3.81)
+				(name "SHIELD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "SH"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Appliance:TPS22965_DSG"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TPS22965_DSG"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TPS22965_DSG_1_0"
+				(pin power_in line
+					(at -2.54 12.7 270)
+					(length 5.08)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 5.08)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -22.86 0 0)
+					(length 5.08)
+					(name "ON"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 12.7 270)
+					(length 5.08)
+					(name "VBIAS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -12.7 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -22.86 -2.54 0)
+					(length 5.08)
+					(name "CT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 22.86 0 180)
+					(length 5.08)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 -2.54 180)
+					(length 5.08)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -12.7 90)
+					(length 5.08)
+					(name "EP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TPS22965_DSG_1_1"
+				(rectangle
+					(start -17.78 7.62)
+					(end 17.78 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)(symbol "Appliance:TPD4E02B04_DQA"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TPD4E02B04_DQA"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TPD4E02B04_DQA_1_0"
+				(pin passive line
+					(at -22.86 2.54 0)
+					(length 5.08)
+					(name "IO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -22.86 0 0)
+					(length 5.08)
+					(name "IO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -12.7 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -22.86 -2.54 0)
+					(length 5.08)
+					(name "IO3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -22.86 -5.08 0)
+					(length 5.08)
+					(name "IO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 2.54 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 0 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -12.7 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 -2.54 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 -5.08 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TPD4E02B04_DQA_1_1"
+				(rectangle
+					(start -17.78 7.62)
+					(end 17.78 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)(symbol "Appliance:MFF2_eUICC" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))(property "Value" "MFF2_eUICC" (at 0 2.54 0) (effects (font (size 1.27 1.27))))(symbol "MFF2_eUICC_1_1" (rectangle (start -17.78 7.62) (end 17.78 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "MFF2_eUICC_1_0" (pin passive line (at -22.86 2.54 0) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -0.0 0) (length 5.08) (name "RST" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin input line (at -22.86 -2.54 0) (length 5.08) (name "CLK" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at -22.86 -5.08 0) (length 5.08) (name "I/O" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin no_connect line (at 22.86 2.54 180) (length 5.08) (name "VPP/NC" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin no_connect line (at 22.86 -0.0 180) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin no_connect line (at 22.86 -2.54 180) (length 5.08) (name "NC" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin no_connect line (at 22.86 -5.08 180) (length 5.08) (name "EP" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0.0 -12.7 90) (length 5.08) (name "VSS" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))))) (rectangle (start 20.32 20.32) (end 269.24 152.4) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "f9794651-3cdb-52b0-a0ac-caa00b41baa9"))(text "1.8 V SPI FLASH ON FSPI (VCCIO2 = VCC_1V8): NOR FITTED, SPI NAND DROP-IN" (at 22.86 24.13 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "223e8e79-e813-5841-ac40-a9a9226eee22"))(symbol (lib_id "Memory_Flash:W25Q128JVE") (at 83.82 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9e23b67c-82fd-54d9-9d74-ff37d27a1b0b") (property "Reference" "U2301" (at 83.82 43.18 0) (effects (font (size 1.27 1.27))))(property "Value" "W25Q128JWEIQ" (at 83.82 45.72 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm" (at 83.82 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "W25Q128JWEIQ" (at 83.82 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Winbond" (at 83.82 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/" (at 83.82 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Alternate" "W25N01GWZEIG 1.8 V SPI NAND, same WSON-8 8x6 footprint and pinout" (at 83.82 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Stock and RK3566 bootrom FSPI support to confirm before order" (at 83.82 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "U2301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "U2301") (unit 1)))))(wire (pts (xy 83.82 88.9) (xy 83.82 99.06)) (stroke (width 0) (type default)) (uuid "8aef63cc-58b9-59f8-bfb0-8869368c605f"))(wire (pts (xy 86.36 88.9) (xy 86.36 99.06)) (stroke (width 0) (type default)) (uuid "dc96cca3-4f7b-5310-a1c7-c90a8b57e204"))(wire (pts (xy 83.82 99.06) (xy 86.36 99.06)) (stroke (width 0) (type default)) (uuid "1609cd38-f098-50e4-91e1-3ef548e67ac3"))(global_label "GND" (shape passive) (at 83.82 99.06 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5d0e8eae-73b0-568d-874e-9ae71b2288de"))(wire (pts (xy 73.66 68.58) (xy 63.5 68.58)) (stroke (width 0) (type default)) (uuid "11100662-10ab-5114-bdeb-fa728ab73341"))(global_label "FSPI_CS0_N" (shape passive) (at 63.5 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "319275b1-4b13-542c-89b9-c00e3f8df848"))(wire (pts (xy 73.66 76.2) (xy 63.5 76.2)) (stroke (width 0) (type default)) (uuid "7a18f865-ebb4-551b-a3b7-e2ccb052cffe"))(global_label "FSPI_D1" (shape passive) (at 63.5 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e3679137-16ad-5669-b563-129dd7759896"))(wire (pts (xy 73.66 78.74) (xy 63.5 78.74)) (stroke (width 0) (type default)) (uuid "778b48d5-ed58-5366-ae9f-82efaeb7e7d4"))(global_label "FSPI_WP_N" (shape passive) (at 63.5 78.74 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "05762ebd-1bb5-56fd-b40f-be3a0e287464"))(wire (pts (xy 73.66 73.66) (xy 63.5 73.66)) (stroke (width 0) (type default)) (uuid "5a0091b0-310a-580e-8471-94b294d87933"))(global_label "FSPI_D0" (shape passive) (at 63.5 73.66 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "91117d50-ef51-54d7-a696-6451432640ad"))(wire (pts (xy 73.66 71.12) (xy 63.5 71.12)) (stroke (width 0) (type default)) (uuid "02f5bda9-dce1-5a98-832b-29c1619bb4e3"))(global_label "FSPI_CLK" (shape passive) (at 63.5 71.12 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "93a311b8-3fe2-575a-931e-136be6857510"))(wire (pts (xy 73.66 81.28) (xy 63.5 81.28)) (stroke (width 0) (type default)) (uuid "f03f5fb2-1a3f-551f-84c9-52a1a8af38c1"))(global_label "FSPI_D3" (shape passive) (at 63.5 81.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e6fdb0ae-e7ed-5b6b-8c60-8b649436867e"))(wire (pts (xy 83.82 63.5) (xy 83.82 53.34)) (stroke (width 0) (type default)) (uuid "aedc08d9-7b24-5dc8-8566-8227c47e2440"))(global_label "VCC_1V8" (shape passive) (at 83.82 53.34 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1515795c-b0be-55e4-bc4a-5fa4411fdcf6"))(symbol (lib_id "Device:R_Small_US") (at 165.1 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "02420af5-c9e2-583d-b63f-4d895a25f76c") (property "Reference" "R2301" (at 173.99 49.529999999999994 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 173.99 52.07 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 165.1 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 165.1 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 165.1 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 165.1 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 165.1 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2301") (unit 1)))))(wire (pts (xy 165.1 48.26) (xy 165.1 38.1)) (stroke (width 0) (type default)) (uuid "7db2c388-2bd7-553a-99c1-c7d84a556664"))(global_label "VCC_1V8" (shape passive) (at 165.1 38.1 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ba2a9768-3170-559d-9734-4eaacc459441"))(wire (pts (xy 165.1 53.34) (xy 165.1 63.5)) (stroke (width 0) (type default)) (uuid "ca36b1b5-0643-59fc-838f-636be445b0ad"))(global_label "FSPI_CS0_N" (shape passive) (at 165.1 63.5 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a95f0ff7-6263-5702-a520-315c5f3b040b"))(symbol (lib_id "Device:R_Small_US") (at 185.42 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "732648f2-b745-507d-91a6-1818e0bde5d0") (property "Reference" "R2302" (at 194.31 49.529999999999994 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 194.31 52.07 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 185.42 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 185.42 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 185.42 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 185.42 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 185.42 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2302") (unit 1)))))(wire (pts (xy 185.42 48.26) (xy 185.42 38.1)) (stroke (width 0) (type default)) (uuid "e05301ee-ed9a-53cd-9285-6accb7b434bd"))(global_label "VCC_1V8" (shape passive) (at 185.42 38.1 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7bfd643e-54aa-5ca5-8830-c047339b6052"))(wire (pts (xy 185.42 53.34) (xy 185.42 63.5)) (stroke (width 0) (type default)) (uuid "a57ef885-271e-5fa1-82d9-72cca02412e3"))(global_label "FSPI_WP_N" (shape passive) (at 185.42 63.5 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2d5cf875-ff2f-58f2-819b-4b234a78e570"))(symbol (lib_id "Device:R_Small_US") (at 205.74 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "47af71c2-bbf2-5018-97c1-78ec55e63ad4") (property "Reference" "R2303" (at 214.63 49.529999999999994 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 214.63 52.07 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 205.74 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 205.74 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 205.74 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 205.74 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 205.74 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2303") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2303") (unit 1)))))(wire (pts (xy 205.74 48.26) (xy 205.74 38.1)) (stroke (width 0) (type default)) (uuid "31eabe24-8731-5481-916d-83bf289718cb"))(global_label "VCC_1V8" (shape passive) (at 205.74 38.1 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "21269aec-19b3-5ae4-ae76-a53cdc7a368b"))(wire (pts (xy 205.74 53.34) (xy 205.74 63.5)) (stroke (width 0) (type default)) (uuid "d3f71068-6451-52c0-8140-83151fa5dfee"))(global_label "FSPI_D3" (shape passive) (at 205.74 63.5 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8e7f2567-3feb-518e-947c-006d309574ec"))(symbol (lib_id "Device:C_Small") (at 226.06 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b2b955ce-1cf7-515f-908c-910a0c6cba24") (property "Reference" "C2301" (at 234.95 49.529999999999994 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 234.95 52.07 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 226.06 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 226.06 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 226.06 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 226.06 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "C2301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "C2301") (unit 1)))))(wire (pts (xy 226.06 48.26) (xy 226.06 38.1)) (stroke (width 0) (type default)) (uuid "55772fe0-c786-5e91-bef6-529757fd513d"))(global_label "VCC_1V8" (shape passive) (at 226.06 38.1 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "184d49b3-1232-58d3-990a-0ba3d19c4535"))(wire (pts (xy 226.06 53.34) (xy 226.06 63.5)) (stroke (width 0) (type default)) (uuid "6e0610aa-7ba1-536f-bdb1-2e5625b718f3"))(global_label "GND" (shape passive) (at 226.06 63.5 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ea51c290-4673-59bd-9a2b-23a7834436ac"))(text "FSPI_D2 shares ball 1B16 with EMMC_RESET_N, so the flash runs x1/x2: WP# is pulled up, not wired.\nFSPI_D3 reaches HOLD#/IO3 for a later quad rework. Blank flash falls through to eMMC." (at 25.4 144.78 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "50cf5f00-d9b3-58ec-baff-e33c00b2510f"))(rectangle (start 284.48 20.32) (end 563.88 198.12) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "ecbfdb90-6db3-5714-9b2a-44827f24e1d0"))(text "MICROSD (DNP): SDMMC0 ON VCCIO3 = VCCIO_SD, 3.3/1.8 V SWITCHED BY RK809" (at 287.02000000000004 24.13 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "083d418a-c7c8-5803-a55a-dffe49be9369"))(symbol (lib_id "Connector:Micro_SD_Card_Det2") (at 330.2 81.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "268994ec-2208-57ff-b58f-2064097690ef") (property "Reference" "J2301" (at 330.2 50.800000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "DM3AT-SF-PEJM5" (at 330.2 53.34 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5" (at 330.2 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "DM3AT-SF-PEJM5" (at 330.2 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Hirose" (at 330.2 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C114218" (at 330.2 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.hirose.com/product/document?clcode=CL0609-0033-6-00&productname=DM3AT-SF-PEJM5" (at 330.2 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "J2301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "J2301") (unit 1)))))(wire (pts (xy 307.34 71.12) (xy 297.18 71.12)) (stroke (width 0) (type default)) (uuid "29d3683d-7e60-5aae-8021-4f11c1f73657"))(global_label "SD_D2" (shape passive) (at 297.18 71.12 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "dbe33ec1-c3af-5ddb-8539-23f8cbe6633f"))(wire (pts (xy 307.34 73.66) (xy 297.18 73.66)) (stroke (width 0) (type default)) (uuid "cec046c5-47af-5cd7-a6be-dc52769c803e"))(global_label "SD_D3" (shape passive) (at 297.18 73.66 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "021e139f-8d9c-5475-a21f-f5e8efd4e112"))(wire (pts (xy 307.34 76.2) (xy 297.18 76.2)) (stroke (width 0) (type default)) (uuid "9152629a-4f36-57ab-84da-30b69876cb41"))(global_label "SD_CMD" (shape passive) (at 297.18 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6e124614-f905-51f2-ab30-d56623b2bcda"))(wire (pts (xy 307.34 78.74) (xy 297.18 78.74)) (stroke (width 0) (type default)) (uuid "042b4b0f-6d53-5adf-a980-1001b387b010"))(global_label "SD_VDD" (shape passive) (at 297.18 78.74 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5910762f-40aa-52a1-b72e-14bb8cb40540"))(wire (pts (xy 307.34 81.28) (xy 297.18 81.28)) (stroke (width 0) (type default)) (uuid "51db899e-c48f-58b5-bb0c-0cc8b812d203"))(global_label "SD_CLK" (shape passive) (at 297.18 81.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a4e83ef3-4133-5642-bb22-e936bace1584"))(wire (pts (xy 307.34 83.82) (xy 297.18 83.82)) (stroke (width 0) (type default)) (uuid "5b2443ce-3792-5e65-ad33-f8cf35ae9fa9"))(global_label "GND" (shape passive) (at 297.18 83.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "eab82732-3868-5d6a-bb2a-63aa1e8fc3bf"))(wire (pts (xy 307.34 86.36) (xy 297.18 86.36)) (stroke (width 0) (type default)) (uuid "dea89441-a499-56f6-8db2-33708490eb8d"))(global_label "SD_D0" (shape passive) (at 297.18 86.36 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fee02eb4-71f8-5381-8249-1cd39b4a3d37"))(wire (pts (xy 307.34 88.9) (xy 297.18 88.9)) (stroke (width 0) (type default)) (uuid "519f0d3d-e583-57df-8734-53e3abdd1acd"))(global_label "SD_D1" (shape passive) (at 297.18 88.9 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "51e1861c-8e12-5199-b7c8-bd769848d74b"))(wire (pts (xy 307.34 93.98) (xy 297.18 93.98)) (stroke (width 0) (type default)) (uuid "cf5a53c1-d253-56ef-86e7-40a5f225a9c8"))(global_label "SDMMC0_DET" (shape passive) (at 297.18 93.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "172507b2-cbd9-5205-b361-e365f5112a29"))(wire (pts (xy 307.34 91.44) (xy 297.18 91.44)) (stroke (width 0) (type default)) (uuid "9ef17c1d-b707-5562-80b0-6ded97301575"))(global_label "GND" (shape passive) (at 297.18 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4c7c45b5-a4d8-58d0-802b-dc5a9699c061"))(wire (pts (xy 350.52 93.98) (xy 360.68 93.98)) (stroke (width 0) (type default)) (uuid "dc632962-e582-5625-a2e6-ad784c15ce9f"))(global_label "GND" (shape passive) (at 360.68 93.98 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a407bd08-d20b-550f-b501-082a10c7c50b"))(symbol (lib_id "Device:R_Small_US") (at 431.8 45.72 90) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "e838527a-95f6-51a3-a254-241486343be9") (property "Reference" "R2304" (at 431.8 38.1 90) (effects (font (size 1.27 1.27))))(property "Value" "22R" (at 431.8 40.64 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 431.8 45.72 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0722RL" (at 431.8 45.72 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 431.8 45.72 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 431.8 45.72 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 431.8 45.72 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2304") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2304") (unit 1)))))(wire (pts (xy 429.26 45.72) (xy 419.1 45.72)) (stroke (width 0) (type default)) (uuid "c95dd3dd-3361-5d1e-be09-20745d17d36f"))(global_label "SD_CLK_SOC" (shape passive) (at 419.1 45.72 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2398d5ae-336d-5b38-917c-1b0f4f097aba"))(wire (pts (xy 434.34 45.72) (xy 444.5 45.72)) (stroke (width 0) (type default)) (uuid "65cbfbfa-4bdc-5e98-b61b-a6f23b625acb"))(global_label "SD_CLK" (shape passive) (at 444.5 45.72 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d4da3ad0-0764-5fcc-94ee-b7cbe71f26a6"))(symbol (lib_id "Device:R_Small_US") (at 431.8 81.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "057f4818-cf11-5d32-bb53-9c46530aa9bd") (property "Reference" "R2305" (at 440.69 80.01 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 440.69 82.55 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 431.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 431.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 431.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 431.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 431.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2305") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2305") (unit 1)))))(wire (pts (xy 431.8 78.74) (xy 431.8 68.58)) (stroke (width 0) (type default)) (uuid "f95e61dc-b79b-5b56-bb68-df095f1916fd"))(global_label "VCCIO_SD" (shape passive) (at 431.8 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "461447a9-20a6-5d8e-b322-8f74b450e54f"))(wire (pts (xy 431.8 83.82) (xy 431.8 93.98)) (stroke (width 0) (type default)) (uuid "635c212c-ac3b-541b-9914-389a070e0b86"))(global_label "SD_CMD" (shape passive) (at 431.8 93.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "bcc79a79-9c21-5a3b-ab64-d71ec32ccb4c"))(symbol (lib_id "Device:R_Small_US") (at 452.12 81.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "d15ed20c-cc3b-5a70-867d-5b7af6d859ab") (property "Reference" "R2306" (at 461.01 80.01 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 461.01 82.55 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 452.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 452.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 452.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 452.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 452.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2306") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2306") (unit 1)))))(wire (pts (xy 452.12 78.74) (xy 452.12 68.58)) (stroke (width 0) (type default)) (uuid "ac0e00cb-2dcf-5135-a22b-6ad1e33a4022"))(global_label "VCCIO_SD" (shape passive) (at 452.12 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1ecb7155-b880-5b33-9d72-190dd86dfb4b"))(wire (pts (xy 452.12 83.82) (xy 452.12 93.98)) (stroke (width 0) (type default)) (uuid "11e8cf58-d6a8-5c75-84fa-477645c59d11"))(global_label "SD_D0" (shape passive) (at 452.12 93.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6b08d75a-9c3b-579c-b3ca-d91c7dd26a5b"))(symbol (lib_id "Device:R_Small_US") (at 472.44 81.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "967fd802-2779-5a8c-97ed-ddea0bc00db8") (property "Reference" "R2307" (at 481.33 80.01 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 481.33 82.55 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 472.44 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 472.44 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 472.44 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 472.44 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 472.44 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2307") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2307") (unit 1)))))(wire (pts (xy 472.44 78.74) (xy 472.44 68.58)) (stroke (width 0) (type default)) (uuid "eac6466a-04d4-5577-8e6e-3e2f28dac51d"))(global_label "VCCIO_SD" (shape passive) (at 472.44 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "91755952-8514-5f77-8f94-002b9a480c44"))(wire (pts (xy 472.44 83.82) (xy 472.44 93.98)) (stroke (width 0) (type default)) (uuid "5ce24124-ca49-5dc8-b3f3-ecf84de8ee26"))(global_label "SD_D1" (shape passive) (at 472.44 93.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "aaf80466-a295-5667-ba66-6a309fceff25"))(symbol (lib_id "Device:R_Small_US") (at 492.76 81.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "ee1d6674-7219-5562-936b-42a7ecfb8646") (property "Reference" "R2308" (at 501.65 80.01 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 501.65 82.55 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 492.76 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 492.76 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 492.76 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 492.76 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 492.76 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2308") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2308") (unit 1)))))(wire (pts (xy 492.76 78.74) (xy 492.76 68.58)) (stroke (width 0) (type default)) (uuid "16578199-e0c0-536e-87ea-d6b10558ac89"))(global_label "VCCIO_SD" (shape passive) (at 492.76 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "48620391-72bf-59ac-939c-8f5724af28a3"))(wire (pts (xy 492.76 83.82) (xy 492.76 93.98)) (stroke (width 0) (type default)) (uuid "c1268417-ac28-555b-9ae5-d44d49a22c9c"))(global_label "SD_D2" (shape passive) (at 492.76 93.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "db60bb3a-9731-5d35-9bf1-7415c8a036ff"))(symbol (lib_id "Device:R_Small_US") (at 513.08 81.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "a228061e-9c06-5e8e-bd3c-8bbb256469e7") (property "Reference" "R2309" (at 521.97 80.01 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 521.97 82.55 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 513.08 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 513.08 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 513.08 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 513.08 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 513.08 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2309") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2309") (unit 1)))))(wire (pts (xy 513.08 78.74) (xy 513.08 68.58)) (stroke (width 0) (type default)) (uuid "a762ccf6-4db5-5a8a-99e7-0715c9aaf3b8"))(global_label "VCCIO_SD" (shape passive) (at 513.08 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d1fe60a3-5c92-59d9-b2c3-e732798af3d1"))(wire (pts (xy 513.08 83.82) (xy 513.08 93.98)) (stroke (width 0) (type default)) (uuid "0c49339c-79d2-5e5b-96f1-7a72c21b29d2"))(global_label "SD_D3" (shape passive) (at 513.08 93.98 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7f58bb43-3f38-5c62-9bba-b14abe0fddba"))(symbol (lib_id "Appliance:TPS22965_DSG") (at 345.44 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "c3c8ebfd-441a-5079-bc95-664f3597398d") (property "Reference" "U2302" (at 345.44 124.46 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS22965DSGR" (at 345.44 127.0 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" (at 345.44 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TPS22965DSGR" (at 345.44 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 345.44 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C122837" (at 345.44 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps22965.pdf" (at 345.44 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "U2302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "U2302") (unit 1)))))(wire (pts (xy 342.9 144.78) (xy 342.9 134.62)) (stroke (width 0) (type default)) (uuid "ff454d21-c948-5b22-938e-72149e3df4da"))(wire (pts (xy 345.44 144.78) (xy 345.44 134.62)) (stroke (width 0) (type default)) (uuid "c1a4675a-84eb-5ecd-b3fe-fc9d55cf9ae3"))(wire (pts (xy 342.9 134.62) (xy 345.44 134.62)) (stroke (width 0) (type default)) (uuid "1e2e2e38-024f-5fec-9549-c39b0660a9b5"))(global_label "3V3_MAIN" (shape passive) (at 342.9 134.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9da768c2-cef8-58ab-94dc-2ad3b43a6bcc"))(wire (pts (xy 345.44 170.18) (xy 345.44 180.34)) (stroke (width 0) (type default)) (uuid "2e8649b4-d98d-52da-bd30-4df6118465a0"))(wire (pts (xy 347.98 170.18) (xy 347.98 180.34)) (stroke (width 0) (type default)) (uuid "35e1d2ca-a653-59c0-a1ef-13b953a3db01"))(wire (pts (xy 345.44 180.34) (xy 347.98 180.34)) (stroke (width 0) (type default)) (uuid "87fec1a6-4806-51f8-996b-7c69e4b8e5b1"))(global_label "GND" (shape passive) (at 345.44 180.34 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6fc08756-9662-5107-bd92-b2ae7e4cd51f"))(wire (pts (xy 322.58 157.48) (xy 312.42 157.48)) (stroke (width 0) (type default)) (uuid "8e7b7fb6-eebb-57b9-98e0-90536b6d02f1"))(global_label "SD_PWR_EN" (shape passive) (at 312.42 157.48 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1b236758-eda6-568e-88bb-8ee60605f3b0"))(wire (pts (xy 347.98 144.78) (xy 347.98 134.62)) (stroke (width 0) (type default)) (uuid "52d52581-60de-5212-af66-ef77934bc001"))(global_label "5V_MAIN" (shape passive) (at 347.98 134.62 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4bee1be9-af2f-5dba-bfd1-e2fd6af751f9"))(wire (pts (xy 322.58 160.02) (xy 312.42 160.02)) (stroke (width 0) (type default)) (uuid "b70b5569-fb2a-5b8f-b7b6-7ecc5c7b5647"))(global_label "SD_SWITCH_CT" (shape passive) (at 312.42 160.02 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4e334476-5d8a-534e-9b89-5fa236d38dfb"))(wire (pts (xy 368.3 157.48) (xy 378.46 157.48)) (stroke (width 0) (type default)) (uuid "4c10cde4-4da7-579c-97f4-4d02f818bdaf"))(global_label "SD_VDD" (shape passive) (at 378.46 157.48 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "588f07ee-1424-5451-93b4-c0005a643108"))(wire (pts (xy 368.3 160.02) (xy 378.46 160.02)) (stroke (width 0) (type default)) (uuid "d5a7514a-d6ec-55be-9de7-6fdf24e07065"))(global_label "SD_VDD" (shape passive) (at 378.46 160.02 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2805454c-2ced-597d-a6af-4038db2b1d0b"))(symbol (lib_id "Device:R_Small_US") (at 431.8 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "5231ab21-cd72-55ab-80fe-45ea578256e9") (property "Reference" "R2310" (at 440.69 156.20999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 440.69 158.75 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 431.8 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 431.8 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 431.8 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 431.8 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 431.8 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2310") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2310") (unit 1)))))(wire (pts (xy 431.8 154.94) (xy 431.8 144.78)) (stroke (width 0) (type default)) (uuid "b312dbc0-85f6-57ce-a4a3-4a12efc456bb"))(global_label "SD_PWR_EN" (shape passive) (at 431.8 144.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "423112f4-88c8-5bbf-aea8-72e345082961"))(wire (pts (xy 431.8 160.02) (xy 431.8 170.18)) (stroke (width 0) (type default)) (uuid "dcc8d2b8-cf97-508a-8479-115c62fe98ec"))(global_label "GND" (shape passive) (at 431.8 170.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e20e7740-0550-515e-957e-7bd5d8fa076b"))(symbol (lib_id "Device:C_Small") (at 452.12 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "39d03f8e-c726-571a-8ebf-8d2f7bad18dc") (property "Reference" "C2302" (at 461.01 156.20999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "1nF" (at 461.01 158.75 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 452.12 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "C1608X7R2A102K" (at 452.12 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TDK" (at 452.12 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "100V" (at 452.12 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "C2302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "C2302") (unit 1)))))(wire (pts (xy 452.12 154.94) (xy 452.12 144.78)) (stroke (width 0) (type default)) (uuid "da482e82-7b3f-5b87-9f50-1baf660a792a"))(global_label "SD_SWITCH_CT" (shape passive) (at 452.12 144.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a1e4f36c-c5cf-54d2-b690-26204d9121f3"))(wire (pts (xy 452.12 160.02) (xy 452.12 170.18)) (stroke (width 0) (type default)) (uuid "e5b89314-3554-5696-b65f-8d8538aafe69"))(global_label "GND" (shape passive) (at 452.12 170.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "edc467ec-9a80-5fed-a2f7-c5acc1311231"))(symbol (lib_id "Device:C_Small") (at 472.44 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "901f216a-c968-5c6f-834d-65c81ac8f32c") (property "Reference" "C2303" (at 481.33 156.20999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7uF" (at 481.33 158.75 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 472.44 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10A475KA8NQNC" (at 472.44 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 472.44 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 472.44 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "C2303") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "C2303") (unit 1)))))(wire (pts (xy 472.44 154.94) (xy 472.44 144.78)) (stroke (width 0) (type default)) (uuid "c00be2ac-07ea-5945-a035-2719791f97bc"))(global_label "SD_VDD" (shape passive) (at 472.44 144.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cf155115-93f9-53a5-ad34-f6ccae246650"))(wire (pts (xy 472.44 160.02) (xy 472.44 170.18)) (stroke (width 0) (type default)) (uuid "b433bb4b-4c58-55a6-afa0-08c271278553"))(global_label "GND" (shape passive) (at 472.44 170.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d517d2ed-14fa-5c82-960d-f43774003cb0"))(symbol (lib_id "Device:C_Small") (at 492.76 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "ff8308d9-45be-58d4-a27f-1be5dcfa3b42") (property "Reference" "C2304" (at 501.65 156.20999999999998 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 501.65 158.75 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 492.76 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 492.76 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 492.76 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 492.76 157.48 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "C2304") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "C2304") (unit 1)))))(wire (pts (xy 492.76 154.94) (xy 492.76 144.78)) (stroke (width 0) (type default)) (uuid "3d7a0c5f-b448-51cd-8647-ac923528b850"))(global_label "SD_VDD" (shape passive) (at 492.76 144.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "53f14ec0-fd8e-5f3c-b4f9-78949d924a9a"))(wire (pts (xy 492.76 160.02) (xy 492.76 170.18)) (stroke (width 0) (type default)) (uuid "ee137a12-5c21-54c7-9a72-9952abf22f64"))(global_label "GND" (shape passive) (at 492.76 170.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f29d2b83-985e-537e-b3bd-4cd94db5509c"))(symbol (lib_id "Appliance:TPD4E02B04_DQA") (at 528.32 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "7324b3a4-68ac-50e5-9dcb-7ccc06ad280b") (property "Reference" "D2301" (at 528.32 35.56 0) (effects (font (size 1.27 1.27))))(property "Value" "TPD4E02B04DQAR" (at 528.32 38.1 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_SON:USON-10_2.5x1.0mm_P0.5mm" (at 528.32 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TPD4E02B04DQAR" (at 528.32 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 528.32 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C106794" (at 528.32 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf" (at 528.32 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "D2301") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "D2301") (unit 1)))))(wire (pts (xy 528.32 76.2) (xy 528.32 86.36)) (stroke (width 0) (type default)) (uuid "1aebbcf5-b23c-52bd-bfed-f1d568321d5e"))(wire (pts (xy 530.86 76.2) (xy 530.86 86.36)) (stroke (width 0) (type default)) (uuid "5cc22e7a-e211-5386-9991-5bde25f9efd0"))(wire (pts (xy 528.32 86.36) (xy 530.86 86.36)) (stroke (width 0) (type default)) (uuid "659fb279-7982-5ff2-98eb-206a2686b645"))(global_label "GND" (shape passive) (at 528.32 86.36 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "84a7b965-c9f6-549d-a274-d3403d2d649c"))(wire (pts (xy 505.46 60.96) (xy 495.3 60.96)) (stroke (width 0) (type default)) (uuid "532cdab3-a637-5379-9b05-4b7df595f086"))(global_label "SD_CLK" (shape passive) (at 495.3 60.96 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ceb2e4f3-4ea2-59a3-b7fc-45d522e3c66a"))(wire (pts (xy 505.46 63.5) (xy 495.3 63.5)) (stroke (width 0) (type default)) (uuid "1246fd3f-a7bd-5db3-a37a-2b8e10a5d4f7"))(global_label "SD_CMD" (shape passive) (at 495.3 63.5 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "abc893d0-b4c4-574b-853b-b57bd7bd5da4"))(wire (pts (xy 505.46 66.04) (xy 495.3 66.04)) (stroke (width 0) (type default)) (uuid "e5116be1-fd06-585c-8367-6528f8268e10"))(global_label "SD_D0" (shape passive) (at 495.3 66.04 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ad7016cc-ba1b-569e-94f9-3559651b01da"))(wire (pts (xy 505.46 68.58) (xy 495.3 68.58)) (stroke (width 0) (type default)) (uuid "2e95a808-9145-56b0-ba83-7c15c6ca042d"))(global_label "SD_D1" (shape passive) (at 495.3 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ee551bd4-52bf-52b3-b94f-890a971e764e"))(no_connect (at 551.18 60.96) (uuid "54b91e71-2d16-5c18-ae42-1e6810108599"))(no_connect (at 551.18 63.5) (uuid "b816c826-987e-5482-ac4c-a8a340f7d9ec"))(no_connect (at 551.18 66.04) (uuid "3830e95e-d054-542b-96b2-77dea186de57"))(no_connect (at 551.18 68.58) (uuid "c2362279-385c-5ca3-a94b-37dedf873619"))(symbol (lib_id "Appliance:TPD4E02B04_DQA") (at 528.32 119.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "73b95cc9-f3f1-580c-a0bf-f5b8a898d627") (property "Reference" "D2302" (at 528.32 91.44 0) (effects (font (size 1.27 1.27))))(property "Value" "TPD4E02B04DQAR" (at 528.32 93.97999999999999 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_SON:USON-10_2.5x1.0mm_P0.5mm" (at 528.32 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "TPD4E02B04DQAR" (at 528.32 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 528.32 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C106794" (at 528.32 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf" (at 528.32 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "D2302") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "D2302") (unit 1)))))(wire (pts (xy 528.32 132.08) (xy 528.32 142.24)) (stroke (width 0) (type default)) (uuid "a1adfd29-cceb-5fa9-a3bb-4ddb2fbe368f"))(wire (pts (xy 530.86 132.08) (xy 530.86 142.24)) (stroke (width 0) (type default)) (uuid "b65cf638-504b-522f-b439-fa5c2ae4a489"))(wire (pts (xy 528.32 142.24) (xy 530.86 142.24)) (stroke (width 0) (type default)) (uuid "3cd22e89-933c-5498-979d-8025fd7fe1bd"))(global_label "GND" (shape passive) (at 528.32 142.24 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "78a9544f-bb58-5651-b1db-48d48d165827"))(wire (pts (xy 505.46 116.84) (xy 495.3 116.84)) (stroke (width 0) (type default)) (uuid "e8b44950-6694-5027-b971-d58c6847adc4"))(global_label "SD_D2" (shape passive) (at 495.3 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e9d8187c-8199-5fc0-850a-26ea9e67c029"))(wire (pts (xy 505.46 119.38) (xy 495.3 119.38)) (stroke (width 0) (type default)) (uuid "814e877e-6a80-5036-8e20-9c0d28a601f5"))(global_label "SD_D3" (shape passive) (at 495.3 119.38 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cfe77a98-445c-5e47-9e50-90c2163bf5da"))(no_connect (at 505.46 121.92) (uuid "94d751c9-3ca4-5465-9473-bc8702a52790"))(no_connect (at 505.46 124.46) (uuid "f4258f63-3f0b-52ee-ac68-b5ae3f03b91f"))(no_connect (at 551.18 116.84) (uuid "e446fbfa-f437-57c8-8b50-0f088b703f57"))(no_connect (at 551.18 119.38) (uuid "b54a6d46-60cd-5079-a201-f3988ecfbfce"))(no_connect (at 551.18 121.92) (uuid "1e06184c-5c38-51c8-892a-74e1dc29411a"))(no_connect (at 551.18 124.46) (uuid "cb4f15fa-14a1-58d3-a0e8-c6d3a417322b"))(text "All DNP. Card detect closes DET_B to GND on insertion: SDMMC0_DET (R1202 pull-up) goes low = SD mode.\nSD_PWR_EN = GPIO0_A6 (PMUIO1, 3.3 V), pulled low: card power stays off until Linux enables it, which\nalso lets UHS cards be power-cycled out of 1.8 V signalling." (at 289.56 190.5 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fdd40cde-bc59-5553-9001-15b327a72e53"))(rectangle (start 20.32 220.98) (end 360.68 332.74) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "ffe72510-f9b5-5524-aa34-fe4d3b023a6f"))(text "MFF2 eSIM (DNP) ON M.2 SIM2 CONTACTS 42/44/46/48" (at 22.86 224.79 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "98d1a6a9-14ea-54bb-abf7-6c215766fc2f"))(symbol (lib_id "Device:R_Small_US") (at 50.8 264.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "65bfae0b-ded7-5d5b-b875-00ef64e32173") (property "Reference" "R2311" (at 59.69 262.89000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "0R ESIM / DNP" (at 59.69 265.43 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 50.8 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603JR-070RL" (at 50.8 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 50.8 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 50.8 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 50.8 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement" "At J2001; Quectel eSIM-variant modules need 40-48 open" (at 50.8 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2311") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2311") (unit 1)))))(wire (pts (xy 50.8 261.62) (xy 50.8 251.46)) (stroke (width 0) (type default)) (uuid "3bb8d87e-c074-5866-ab02-426474311584"))(global_label "M2_PIN48" (shape passive) (at 50.8 251.46 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "94c3b460-d236-57f4-887b-765e4af1d007"))(wire (pts (xy 50.8 266.7) (xy 50.8 276.86)) (stroke (width 0) (type default)) (uuid "d94ff92f-f8a4-55f1-b543-1eb7cf6a5482"))(global_label "ESIM_VDD" (shape passive) (at 50.8 276.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0d407908-11db-5b30-820d-c160736f3057"))(symbol (lib_id "Device:R_Small_US") (at 76.19999999999999 264.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "34c7a57d-d177-5ae0-91a2-39058eaf0b52") (property "Reference" "R2312" (at 85.08999999999999 262.89000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "0R ESIM / DNP" (at 85.08999999999999 265.43 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 76.19999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603JR-070RL" (at 76.19999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 76.19999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 76.19999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 76.19999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement" "At J2001; Quectel eSIM-variant modules need 40-48 open" (at 76.19999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2312") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2312") (unit 1)))))(wire (pts (xy 76.2 261.62) (xy 76.2 251.46)) (stroke (width 0) (type default)) (uuid "499ce61e-2462-519f-beba-1c5534413231"))(global_label "M2_PIN46" (shape passive) (at 76.2 251.46 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9895083a-3d59-5bc2-ace1-8311a72b9884"))(wire (pts (xy 76.2 266.7) (xy 76.2 276.86)) (stroke (width 0) (type default)) (uuid "2c96e44e-4a2e-5c63-9742-51d43bfc57eb"))(global_label "ESIM_RST" (shape passive) (at 76.2 276.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8c4c0ba4-0537-56fa-a83e-93cfd259d4eb"))(symbol (lib_id "Device:R_Small_US") (at 101.6 264.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "1720acc5-2245-581f-9817-089d269a0023") (property "Reference" "R2313" (at 110.49 262.89000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "0R ESIM / DNP" (at 110.49 265.43 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 101.6 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603JR-070RL" (at 101.6 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 101.6 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 101.6 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 101.6 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement" "At J2001; Quectel eSIM-variant modules need 40-48 open" (at 101.6 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2313") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2313") (unit 1)))))(wire (pts (xy 101.6 261.62) (xy 101.6 251.46)) (stroke (width 0) (type default)) (uuid "6f9758ed-c55a-5e6c-9471-e172851179e6"))(global_label "M2_PIN44" (shape passive) (at 101.6 251.46 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "df51f926-df5b-5806-878a-10d9193ff977"))(wire (pts (xy 101.6 266.7) (xy 101.6 276.86)) (stroke (width 0) (type default)) (uuid "9c6c7a6a-6694-58d4-9b9a-641572d7a37c"))(global_label "ESIM_CLK" (shape passive) (at 101.6 276.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c14f5e79-be08-5850-8648-a9950a2092d6"))(symbol (lib_id "Device:R_Small_US") (at 126.99999999999999 264.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "bfd6b9e5-10f0-5ebe-9520-d96786ee0370") (property "Reference" "R2314" (at 135.89 262.89000000000004 0) (effects (font (size 1.27 1.27))))(property "Value" "0R ESIM / DNP" (at 135.89 265.43 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 126.99999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603JR-070RL" (at 126.99999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 126.99999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "5%" (at 126.99999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 126.99999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement" "At J2001; Quectel eSIM-variant modules need 40-48 open" (at 126.99999999999999 264.16 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "R2314") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "R2314") (unit 1)))))(wire (pts (xy 127.0 261.62) (xy 127.0 251.46)) (stroke (width 0) (type default)) (uuid "7460faa0-6537-5df3-8ca2-83a6572b1c9c"))(global_label "M2_PIN42" (shape passive) (at 127.0 251.46 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9de9391a-c63f-589d-b8eb-f088fb05b029"))(wire (pts (xy 127.0 266.7) (xy 127.0 276.86)) (stroke (width 0) (type default)) (uuid "4ffb2b39-711f-531a-b298-8d2a96cfdc5f"))(global_label "ESIM_IO" (shape passive) (at 127.0 276.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "921384d3-f693-5df4-a0a0-c17acd7ae241"))(symbol (lib_id "Appliance:MFF2_eUICC") (at 220.98 271.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "00c41292-ad35-5248-8bcb-2bc1b5139a01") (property "Reference" "U2303" (at 220.98 248.92000000000002 0) (effects (font (size 1.27 1.27))))(property "Value" "MFF2 eUICC" (at 220.98 251.46 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm" (at 220.98 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "MFF2-EUICC-TBD" (at 220.98 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TBD (select per carrier/eUICC vendor)" (at 220.98 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Placeholder land: pin 1 VSS(C5), 3 I/O(C7), 6 CLK(C3), 7 RST(C2), 8 VCC(C1), EP not connected. Verify against the chosen eUICC drawing before fitting." (at 220.98 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "U2303") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "U2303") (unit 1)))))(wire (pts (xy 220.98 284.48) (xy 220.98 294.64)) (stroke (width 0) (type default)) (uuid "206f309a-76e2-5dce-84b3-72951da32321"))(global_label "GND" (shape passive) (at 220.98 294.64 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4ec169ad-e135-58b8-bf70-dedbd7e46a39"))(no_connect (at 243.84 269.24) (uuid "01c67fae-e6e4-50b1-96a8-e98a6338f50c"))(wire (pts (xy 198.12 276.86) (xy 187.96 276.86)) (stroke (width 0) (type default)) (uuid "fc934a1a-90ea-5b56-8230-8ef668283918"))(global_label "ESIM_IO" (shape passive) (at 187.96 276.86 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e08741f1-fd89-52f9-b742-e969fd73d797"))(no_connect (at 243.84 271.78) (uuid "cc6c92eb-8e15-5f8e-86c0-8586297be1cb"))(no_connect (at 243.84 274.32) (uuid "c307e5d8-0b3c-5c0f-922a-dda9eff03047"))(wire (pts (xy 198.12 274.32) (xy 187.96 274.32)) (stroke (width 0) (type default)) (uuid "dc4e70a3-76b7-5456-8653-5486cafc1234"))(global_label "ESIM_CLK" (shape passive) (at 187.96 274.32 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e586647c-d10b-52f1-8a94-fd8c4196b14d"))(wire (pts (xy 198.12 271.78) (xy 187.96 271.78)) (stroke (width 0) (type default)) (uuid "faecd4f8-d5f1-5d19-a01c-c614f57f50f0"))(global_label "ESIM_RST" (shape passive) (at 187.96 271.78 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9d58ca88-eccd-51ec-ba1f-d9029d9c6075"))(wire (pts (xy 198.12 269.24) (xy 187.96 269.24)) (stroke (width 0) (type default)) (uuid "968448b3-5235-50f4-90a0-28ae2e2df9ae"))(global_label "ESIM_VDD" (shape passive) (at 187.96 269.24 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5452ca5c-2205-5b35-ab4a-6c7ceb25f9ba"))(no_connect (at 243.84 276.86) (uuid "bbf3c499-71a6-5beb-8905-32027ddaf8a3"))(symbol (lib_id "Device:C_Small") (at 297.18 271.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid "efb4f86a-c097-5275-8740-99f4f4e65f38") (property "Reference" "C2305" (at 306.07 270.51 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 306.07 273.04999999999995 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 297.18 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 297.18 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 297.18 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 297.18 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "boot-media" (path "/3e9eccee-7794-51a9-860e-ea8fb61744a1" (reference "C2305") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/c93a8870-80be-588f-9dd5-237ed14afbc6" (reference "C2305") (unit 1)))))(wire (pts (xy 297.18 269.24) (xy 297.18 259.08)) (stroke (width 0) (type default)) (uuid "947e274b-c6f4-5cae-9462-0f4e08227647"))(global_label "ESIM_VDD" (shape passive) (at 297.18 259.08 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d5052509-c044-5dd3-af90-7501caf5439c"))(wire (pts (xy 297.18 274.32) (xy 297.18 284.48)) (stroke (width 0) (type default)) (uuid "85c1f90c-2a45-5a55-b360-8b9a8e81363c"))(global_label "GND" (shape passive) (at 297.18 284.48 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7e9dc02f-6455-5f27-b586-5981ad72dbe4"))(text "SIM2 contacts per EM92xx PTS r1 and RM520N-GL HW guide 4.1.6: 40 detect, 42 data, 44 clk, 46 reset, 48 VDD.\nAll DNP, so every profile keeps 42-48 open. Fitting needs the module SIM2 enable and an LPA (e.g. lpac)." (at 25.4 325.12 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e5ac2cbe-757c-505b-9327-c4e362d07afc")))

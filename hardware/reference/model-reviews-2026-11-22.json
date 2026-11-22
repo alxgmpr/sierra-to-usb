@@ -1,0 +1,64 @@
+{
+  "reviewed": "2026-11-22",
+  "scope": "Bring-up additions (aux power path, management, boot media, test pads). No new STEP assets; one stock model absent from the install is held.",
+  "source_hashes": {},
+  "attached": [],
+  "remaining_holds": [
+    {
+      "footprint": "Appliance:SIM-SMD_1042240820",
+      "references": [
+        "J2002"
+      ],
+      "blocker": "Molex 1042240820 hinged/cover geometry and insertion clearance require exact vendor CAD and seating datum; no verified asset obtained."
+    },
+    {
+      "footprint": "Appliance:Sierra_HX4110NL_2x12_P1.27mm",
+      "references": [
+        "T1701"
+      ],
+      "blocker": "Pulse HX4110NL drawing is archived; transformer body, stand-off and lead bend need a matching model; installed stock path is absent."
+    },
+    {
+      "footprint": "Appliance:Sierra_RJE491881401_1x08-1MP_P1.02mm",
+      "references": [
+        "J1701"
+      ],
+      "blocker": "Amphenol RJE49 drawing archived; no exact CAD obtained. RJ45 substitutes have different panel, shield-tab and LED geometry."
+    },
+    {
+      "footprint": "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal",
+      "references": [
+        "J1201"
+      ],
+      "blocker": "No exact matching Amphenol shell/retention-tab CAD obtained; installed model path absent. Mating-face and board-edge datum must be checked."
+    },
+    {
+      "footprint": "PoE:TI_Molex_87898-0204",
+      "references": [
+        "J1712"
+      ],
+      "blocker": "Molex 87898-0204 exact shroud, latch and mating envelope not verified; a generic 2-pin header would hide connector clearance."
+    },
+    {
+      "footprint": "PoE:TI_TRANS_Fairchild_PQFN08A",
+      "references": [
+        "Q1705"
+      ],
+      "blocker": "FDMS86252 exact Power56/PQFN terminal arrangement and seating geometry need vendor package CAD; generic eight-pin QFN is not sufficient."
+    },
+    {
+      "footprint": "PoE:TI_WE-SL5",
+      "references": [
+        "L1702"
+      ],
+      "blocker": "Wurth publishes exact 744272251 STEP (rev1), but automated retrieval returned HTTP 403. Archived 744272222 is wrong MPN and has invalid solids; remains detached."
+    },
+    {
+      "footprint": "Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm",
+      "references": [
+        "U2301"
+      ],
+      "blocker": "The KiCad 10.99 install ships no STEP for this stock footprint; a Winbond WSON-8 8x6 envelope model (build_models.py) is not built yet."
+    }
+  ]
+}

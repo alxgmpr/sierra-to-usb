@@ -1,0 +1,971 @@
+(kicad_sch (version 20250114) (generator eeschema) (uuid "c601823f-2e75-5043-a1e3-0e6da84d9747") (paper "A2") (title_block (title "Supervisor link, status LEDs and sensing") (date "2026-10-07")) (lib_symbols (symbol "74xGxx:SN74LVC1G125DCK"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -10.16 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SN74LVC1G125DCK"
+			(at 2.54 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:Texas_R-PDSO-G5_DCK-5"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74lvc1g125.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Single Buffer Gate Tri-State, Low-Voltage CMOS, SOT-353"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Single Gate Buff Tri-State LVC CMOS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Texas?R?PDSO?G5?DCK*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SN74LVC1G125DCK_0_1"
+			(polyline
+				(pts
+					(xy -7.62 6.35) (xy -7.62 -6.35) (xy 5.08 0) (xy -7.62 6.35)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "SN74LVC1G125DCK_1_1"
+			(pin input inverted
+				(at 0 10.16 270)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 0 0)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -5.08 -10.16 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin tri_state line
+				(at 12.7 0 180)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -5.08 10.16 270)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:R_Small_US"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 0.762 0.508 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_Small_US"
+			(at 0.762 -1.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "r resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_Small_US_1_1"
+			(polyline
+				(pts
+					(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 2.54 270)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 1.016)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:C_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.254 1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 0.254 -2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "capacitor cap"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_Small_0_1"
+			(polyline
+				(pts
+					(xy -1.524 0.508) (xy 1.524 0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.524 -0.508) (xy 1.524 -0.508)
+				)
+				(stroke
+					(width 0.3048)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_Small_1_1"
+			(pin passive line
+				(at 0 2.54 270)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.032)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:LED_Small"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at -1.27 3.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED_Small"
+			(at -4.445 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "LED diode light-emitting-diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LED_Small_0_1"
+			(polyline
+				(pts
+					(xy -0.762 -1.016) (xy -0.762 1.016)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0.762) (xy -0.508 1.27) (xy -0.254 1.27) (xy -0.508 1.27) (xy -0.508 1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 1.27) (xy 0 1.778) (xy 0.254 1.778) (xy 0 1.778) (xy 0 1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.016) (xy -0.762 0) (xy 0.762 1.016) (xy 0.762 -1.016)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.016 0) (xy -0.762 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "LED_Small_1_1"
+			(pin passive line
+				(at -2.54 0 0)
+				(length 1.778)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 0 180)
+				(length 1.778)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:Thermistor_NTC"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TH"
+			(at -4.445 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Thermistor_NTC"
+			(at 3.175 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Temperature dependent resistor, negative temperature coefficient"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "thermistor NTC resistor sensor RTD"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_* RV_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Thermistor_NTC_0_1"
+			(arc
+				(start -3.175 2.413)
+				(mid -3.0506 2.3165)
+				(end -3.048 2.159)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -3.048 2.794)
+				(mid -2.9736 2.9736)
+				(end -2.794 3.048)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.794 3.048)
+				(mid -2.6144 2.9736)
+				(end -2.54 2.794)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.794 2.54)
+				(mid -2.9736 2.6144)
+				(end -3.048 2.794)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.794 1.905)
+				(mid -2.9736 1.9794)
+				(end -3.048 2.159)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 2.159)
+				(mid -2.6144 1.9794)
+				(end -2.794 1.905)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.159 2.794)
+				(mid -2.434 2.5608)
+				(end -2.794 2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 2.159) (xy -2.54 2.794)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -3.683) (xy -2.54 -1.397) (xy -2.794 -2.159) (xy -2.286 -2.159) (xy -2.54 -1.397) (xy -2.54 -1.651)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 2.54) (xy -1.778 1.524) (xy 1.778 -1.524) (xy 1.778 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 -1.397) (xy -1.778 -3.683) (xy -2.032 -2.921) (xy -1.524 -2.921) (xy -1.778 -3.683)
+					(xy -1.778 -3.429)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -1.016 2.54)
+				(end 1.016 -2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Thermistor_NTC_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)) (rectangle (start 20.32 20.32) (end 287.02 134.62) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "79ccfc41-a57a-5e6d-b4a6-df757417a2b7"))(text "POWERED-OFF-SAFE SOC <-> STM32 UART (SoC UART3_M0, MCU LPUART2)" (at 22.86 24.13 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c7d4ea0e-53ef-51ec-9690-ef1f9ca92567"))(symbol (lib_id "74xGxx:SN74LVC1G125DCK") (at 76.2 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3585a8cd-9e9f-5be3-a4ea-8493acac1ba7") (property "Reference" "U2201" (at 76.2 25.4 0) (effects (font (size 1.27 1.27))))(property "Value" "SN74LVC1G125DCKR" (at 76.2 27.939999999999998 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 76.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SN74LVC1G125DCKR" (at 76.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 76.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C7833" (at 76.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g125.pdf" (at 76.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Ioff: no back-power into an unpowered side" (at 76.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "U2201") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "U2201") (unit 1)))))(wire (pts (xy 76.2 45.72) (xy 76.2 35.56)) (stroke (width 0) (type default)) (uuid "a3edac89-b1fe-5ab4-a9d1-a182b1c94cf1"))(global_label "GND" (shape passive) (at 76.2 35.56 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "75b6f6bc-f192-5190-a1a3-6d601c5373d1"))(wire (pts (xy 60.96 55.88) (xy 50.8 55.88)) (stroke (width 0) (type default)) (uuid "72aa1de4-959d-5d9f-828a-a7ca79f10c70"))(global_label "SOC_LINK_TX" (shape passive) (at 50.8 55.88 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "63c1fb28-18eb-50c9-bfe1-4521a8921b53"))(wire (pts (xy 71.12 66.04) (xy 71.12 76.2)) (stroke (width 0) (type default)) (uuid "175f405a-d998-5b03-886c-86159a332114"))(global_label "GND" (shape passive) (at 71.12 76.2 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b81a78cd-0812-5089-84ba-0077c26d6604"))(wire (pts (xy 88.9 55.88) (xy 99.06 55.88)) (stroke (width 0) (type default)) (uuid "80b20aa2-4a64-53a7-accb-f2150bc4fcda"))(global_label "MCU_LINK_RX" (shape passive) (at 99.06 55.88 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "bf2d1ef9-d594-5478-955a-e5070a9d5e95"))(wire (pts (xy 71.12 45.72) (xy 71.12 35.56)) (stroke (width 0) (type default)) (uuid "de6b712d-ac81-5338-9e67-74dd0842555c"))(global_label "+3V3" (shape passive) (at 71.12 35.56 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3172a478-5c3d-5970-be4a-073add9effb7"))(symbol (lib_id "74xGxx:SN74LVC1G125DCK") (at 76.2 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b562fde5-479f-547c-b15a-796ea3c8dec9") (property "Reference" "U2202" (at 76.2 73.66 0) (effects (font (size 1.27 1.27))))(property "Value" "SN74LVC1G125DCKR" (at 76.2 76.2 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 76.2 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SN74LVC1G125DCKR" (at 76.2 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Texas Instruments" (at 76.2 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C7833" (at 76.2 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g125.pdf" (at 76.2 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Qualification" "Ioff: no back-power into an unpowered side" (at 76.2 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "U2202") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "U2202") (unit 1)))))(wire (pts (xy 76.2 93.98) (xy 76.2 83.82)) (stroke (width 0) (type default)) (uuid "4250fa85-2c87-5639-b402-35f625f4c630"))(global_label "GND" (shape passive) (at 76.2 83.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b2843d9f-63e3-506f-8118-5045acfab093"))(wire (pts (xy 60.96 104.14) (xy 50.8 104.14)) (stroke (width 0) (type default)) (uuid "e3cb65de-c10f-5996-aa0e-0c21d21ecacd"))(global_label "MCU_LINK_TX" (shape passive) (at 50.8 104.14 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "99ad8d94-fde8-51f1-ab0c-cd6d15a8189b"))(wire (pts (xy 71.12 114.3) (xy 71.12 124.46)) (stroke (width 0) (type default)) (uuid "5d00f2ed-a1d1-5dd2-b9e7-9edf2cc9ca82"))(global_label "GND" (shape passive) (at 71.12 124.46 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3f89e437-0f79-5367-914c-bdb7091abf7f"))(wire (pts (xy 88.9 104.14) (xy 99.06 104.14)) (stroke (width 0) (type default)) (uuid "e53fc3db-37a4-5daa-ae9c-6f14b2137ef0"))(global_label "SOC_LINK_RX" (shape passive) (at 99.06 104.14 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "bcba6530-6faf-52b5-bb4d-a68088153fb5"))(wire (pts (xy 71.12 93.98) (xy 71.12 83.82)) (stroke (width 0) (type default)) (uuid "097fcaea-fbf7-57b6-b2ca-075d167880d3"))(global_label "3V3_MAIN" (shape passive) (at 71.12 83.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3963409c-2307-5f69-86f2-d3b6c12d4199"))(symbol (lib_id "Device:R_Small_US") (at 160.02 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4188555e-1f0e-5e31-909b-3d35a1dd877d") (property "Reference" "R2201" (at 168.91000000000003 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 168.91000000000003 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 160.02 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 160.02 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 160.02 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 160.02 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 160.02 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2201") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2201") (unit 1)))))(wire (pts (xy 160.02 53.34) (xy 160.02 43.18)) (stroke (width 0) (type default)) (uuid "3bd83df0-c340-53fb-ac8c-95d09c06ffed"))(global_label "3V3_MAIN" (shape passive) (at 160.02 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "24239bf4-3a1c-53c2-98a4-573067a52318"))(wire (pts (xy 160.02 58.42) (xy 160.02 68.58)) (stroke (width 0) (type default)) (uuid "a23017f6-b407-57e1-8da3-152d26e37092"))(global_label "SOC_LINK_TX" (shape passive) (at 160.02 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "01753939-4a2e-517a-8808-adb0ff5c3c34"))(symbol (lib_id "Device:R_Small_US") (at 160.02 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e8659b5a-2c10-5fba-a277-9b333e47f1c5") (property "Reference" "R2202" (at 168.91000000000003 102.87 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 168.91000000000003 105.41 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 160.02 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 160.02 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 160.02 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 160.02 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 160.02 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2202") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2202") (unit 1)))))(wire (pts (xy 160.02 101.6) (xy 160.02 91.44)) (stroke (width 0) (type default)) (uuid "297bc425-2863-5842-80e2-2a0ac0feff3b"))(global_label "+3V3" (shape passive) (at 160.02 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "63b34fef-26c9-5f38-9ce5-c8a9baa70c89"))(wire (pts (xy 160.02 106.68) (xy 160.02 116.84)) (stroke (width 0) (type default)) (uuid "b6cdc3e7-d75a-56bc-aef4-a9cf6c428428"))(global_label "MCU_LINK_TX" (shape passive) (at 160.02 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5ca35d79-5c35-509f-9b7f-6cd0bdf6394a"))(symbol (lib_id "Device:C_Small") (at 205.74 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bb10b9ab-61c3-575b-a75e-3d88949c0320") (property "Reference" "C2201" (at 214.63 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 214.63 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 205.74 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 205.74 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 205.74 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 205.74 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "C2201") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "C2201") (unit 1)))))(wire (pts (xy 205.74 53.34) (xy 205.74 43.18)) (stroke (width 0) (type default)) (uuid "71502cac-e810-56df-83f4-ca7c948a73a0"))(global_label "+3V3" (shape passive) (at 205.74 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d20553c3-0fa5-5c51-889a-6b01f7dc782f"))(wire (pts (xy 205.74 58.42) (xy 205.74 68.58)) (stroke (width 0) (type default)) (uuid "ea4d0827-d1f3-5a01-a492-4c6f414ffbc9"))(global_label "GND" (shape passive) (at 205.74 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ab2b9ffb-4eae-5b6a-b9f1-370108430ba8"))(symbol (lib_id "Device:C_Small") (at 205.74 104.14 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d4fa37e3-5b77-5345-a2a6-b03adc8d321c") (property "Reference" "C2202" (at 214.63 102.87 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 214.63 105.41 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 205.74 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 205.74 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 205.74 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 205.74 104.14 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "C2202") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "C2202") (unit 1)))))(wire (pts (xy 205.74 101.6) (xy 205.74 91.44)) (stroke (width 0) (type default)) (uuid "125f6132-17e9-5afa-9022-189c745a5e2f"))(global_label "3V3_MAIN" (shape passive) (at 205.74 91.44 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0a4b0923-3cb1-55dd-8a8c-5aa2fe2e0098"))(wire (pts (xy 205.74 106.68) (xy 205.74 116.84)) (stroke (width 0) (type default)) (uuid "e7ea98c8-11ec-53d9-a1c2-c4e98b900e8b"))(global_label "GND" (shape passive) (at 205.74 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "54ef1e2f-a5cd-5b62-b7ed-628882cb551e"))(text "Each buffer is powered by its receiving side: SoC->MCU from +3V3, MCU->SoC from 3V3_MAIN.\nSoC: A22 UART3_RX_M0 / B22 UART3_TX_M0, VCCIO1 = 3V3_MAIN. MCU: PC7 LPUART2_RX / PC6 LPUART2_TX.\nCarries telemetry, LED overrides, power-cycle requests and reset-cause reporting." (at 25.4 129.54 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1e72cbee-5c77-5a41-a2e8-7b59652a4f4b"))(rectangle (start 302.26 20.32) (end 556.26 134.62) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "058d2a38-d6f4-5897-9fa9-a1839e0f174f"))(text "STATUS LEDS: MCU-DRIVEN, LINUX OVERRIDE OVER THE LINK" (at 304.8 24.13 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7560be5f-dbfc-503e-9320-552575af4912"))(symbol (lib_id "Device:R_Small_US") (at 330.2 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0f8dbefa-7c7e-5fb5-81a1-be91e03b8be9") (property "Reference" "R2203" (at 339.09 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "1kR" (at 339.09 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 330.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-071KL" (at 330.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 330.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 330.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 330.2 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2203") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2203") (unit 1)))))(wire (pts (xy 330.2 53.34) (xy 330.2 43.18)) (stroke (width 0) (type default)) (uuid "c812580c-e82e-51db-acdb-8f6f50c905e4"))(global_label "+3V3" (shape passive) (at 330.2 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "be03f960-1d7c-5f5a-a2f4-d9cd58590d75"))(wire (pts (xy 330.2 58.42) (xy 330.2 68.58)) (stroke (width 0) (type default)) (uuid "f6da7792-61e6-59ef-be9e-f26092821f12"))(global_label "LED_PWR_A" (shape passive) (at 330.2 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b8d3ab29-5025-5beb-892e-0fd742d695b0"))(symbol (lib_id "Device:LED_Small") (at 330.2 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e2530416-edea-5d4a-8eb3-a868569881db") (property "Reference" "D2201" (at 330.2 68.58 0) (effects (font (size 1.27 1.27))))(property "Value" "Green" (at 330.2 71.12 0) (effects (font (size 1.27 1.27))))(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 330.2 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "150060GS75000" (at 330.2 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Wurth Elektronik" (at 330.2 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C5252984" (at 330.2 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060GS75000.pdf" (at 330.2 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Function" "PWR: MCU PA8 sinks, timer PWM" (at 330.2 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "D2201") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "D2201") (unit 1)))))(wire (pts (xy 327.66 96.52) (xy 317.5 96.52)) (stroke (width 0) (type default)) (uuid "18cf0a57-f14e-5335-803a-1e552e444248"))(global_label "LED_PWR_N" (shape passive) (at 317.5 96.52 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fd8801af-e75b-5cf0-87f1-0f7c26a851d0"))(wire (pts (xy 332.74 96.52) (xy 342.9 96.52)) (stroke (width 0) (type default)) (uuid "72df1214-8318-5dc5-8115-c03e81cd4af5"))(global_label "LED_PWR_A" (shape passive) (at 342.9 96.52 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f751f2ea-b9eb-5cfc-aa20-5442ad056ccc"))(symbol (lib_id "Device:R_Small_US") (at 386.08 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a61fe64d-0b02-5334-a10d-c991470bc55c") (property "Reference" "R2204" (at 394.96999999999997 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "1kR" (at 394.96999999999997 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 386.08 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-071KL" (at 386.08 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 386.08 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 386.08 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 386.08 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2204") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2204") (unit 1)))))(wire (pts (xy 386.08 53.34) (xy 386.08 43.18)) (stroke (width 0) (type default)) (uuid "fa0900a6-880c-5cbd-b55d-114bab52c446"))(global_label "+3V3" (shape passive) (at 386.08 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "206d5b24-aaef-5a95-bc6b-e8f259f85b01"))(wire (pts (xy 386.08 58.42) (xy 386.08 68.58)) (stroke (width 0) (type default)) (uuid "4944c42f-9f22-5037-b872-50b894cc68b3"))(global_label "LED_SYS_A" (shape passive) (at 386.08 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2bb2517d-0a1e-5463-b4f1-0dff12b09543"))(symbol (lib_id "Device:LED_Small") (at 386.08 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8ce4a289-d786-5de9-b691-2f9838ba1521") (property "Reference" "D2202" (at 386.08 68.58 0) (effects (font (size 1.27 1.27))))(property "Value" "Green" (at 386.08 71.12 0) (effects (font (size 1.27 1.27))))(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 386.08 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "150060GS75000" (at 386.08 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Wurth Elektronik" (at 386.08 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C5252984" (at 386.08 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060GS75000.pdf" (at 386.08 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Function" "SYS: MCU PA15 sinks, timer PWM" (at 386.08 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "D2202") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "D2202") (unit 1)))))(wire (pts (xy 383.54 96.52) (xy 373.38 96.52)) (stroke (width 0) (type default)) (uuid "792b261a-24f2-5702-8bfc-f3f7e755e7e4"))(global_label "LED_SYS_N" (shape passive) (at 373.38 96.52 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a28b1b3b-b87a-5bf5-9dc8-eda0104ba7d3"))(wire (pts (xy 388.62 96.52) (xy 398.78 96.52)) (stroke (width 0) (type default)) (uuid "9f2405fb-8ded-5716-bace-06f6fb96f502"))(global_label "LED_SYS_A" (shape passive) (at 398.78 96.52 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1e2b1c58-d2ae-5158-9202-75dc3b3a5925"))(symbol (lib_id "Device:R_Small_US") (at 441.96 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "65f4a43b-4c79-5c46-8435-d9a850d0d6a8") (property "Reference" "R2205" (at 450.84999999999997 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "1kR" (at 450.84999999999997 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 441.96 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-071KL" (at 441.96 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 441.96 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 441.96 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 441.96 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2205") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2205") (unit 1)))))(wire (pts (xy 441.96 53.34) (xy 441.96 43.18)) (stroke (width 0) (type default)) (uuid "979c9f20-0a1f-5a46-854b-54df71eb6a3e"))(global_label "+3V3" (shape passive) (at 441.96 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "25eb7db2-f698-55cf-82db-a3d3f7d7e689"))(wire (pts (xy 441.96 58.42) (xy 441.96 68.58)) (stroke (width 0) (type default)) (uuid "69bd007f-9139-5cbe-9dce-53751b29614a"))(global_label "LED_WAN_A" (shape passive) (at 441.96 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "17f31838-0c29-5bcb-b9c1-b05045827d7e"))(symbol (lib_id "Device:LED_Small") (at 441.96 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "59b6ee6b-2ec3-5c05-a09c-1b06d710df7b") (property "Reference" "D2203" (at 441.96 68.58 0) (effects (font (size 1.27 1.27))))(property "Value" "Green" (at 441.96 71.12 0) (effects (font (size 1.27 1.27))))(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 441.96 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "150060GS75000" (at 441.96 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Wurth Elektronik" (at 441.96 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C5252984" (at 441.96 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060GS75000.pdf" (at 441.96 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Function" "WAN: MCU PD0 sinks, timer PWM" (at 441.96 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "D2203") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "D2203") (unit 1)))))(wire (pts (xy 439.42 96.52) (xy 429.26 96.52)) (stroke (width 0) (type default)) (uuid "c70c5a60-5b48-5365-b77a-4e6ba5c8f33b"))(global_label "LED_WAN_N" (shape passive) (at 429.26 96.52 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "89278e44-0ebf-5fdf-b83a-ca38dad92883"))(wire (pts (xy 444.5 96.52) (xy 454.66 96.52)) (stroke (width 0) (type default)) (uuid "47c52c3e-e9b9-58f3-9868-f5c103ce3441"))(global_label "LED_WAN_A" (shape passive) (at 454.66 96.52 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6d2ca798-c70e-5ba4-b3bf-9a33464d61ad"))(symbol (lib_id "Device:R_Small_US") (at 497.84000000000003 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f4299acd-e356-55fd-a287-1845be6e0498") (property "Reference" "R2206" (at 506.73 54.61 0) (effects (font (size 1.27 1.27))))(property "Value" "1kR" (at 506.73 57.150000000000006 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 497.84000000000003 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-071KL" (at 497.84000000000003 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 497.84000000000003 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 497.84000000000003 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 497.84000000000003 55.88 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2206") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2206") (unit 1)))))(wire (pts (xy 497.84 53.34) (xy 497.84 43.18)) (stroke (width 0) (type default)) (uuid "157b3635-4093-5615-96fa-04c448d42a81"))(global_label "+3V3" (shape passive) (at 497.84 43.18 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "314ee180-37d0-5309-ad7e-3c5d89a802b7"))(wire (pts (xy 497.84 58.42) (xy 497.84 68.58)) (stroke (width 0) (type default)) (uuid "08f5528b-61dd-5764-8360-cd8afeba4ac0"))(global_label "LED_FAULT_A" (shape passive) (at 497.84 68.58 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4ebfd986-4ab8-5ab3-8c97-6a42a696dec1"))(symbol (lib_id "Device:LED_Small") (at 497.84000000000003 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "51968ce4-2b18-548b-857f-11294e1889ff") (property "Reference" "D2204" (at 497.84000000000003 68.58 0) (effects (font (size 1.27 1.27))))(property "Value" "Yellow" (at 497.84000000000003 71.12 0) (effects (font (size 1.27 1.27))))(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 497.84000000000003 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "150060YS75000" (at 497.84000000000003 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Wurth Elektronik" (at 497.84000000000003 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "http://katalog.we-online.de/led/datasheet/150060YS75000.pdf" (at 497.84000000000003 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Function" "FAULT: MCU PD1 sinks, timer PWM" (at 497.84000000000003 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "D2204") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "D2204") (unit 1)))))(wire (pts (xy 495.3 96.52) (xy 485.14 96.52)) (stroke (width 0) (type default)) (uuid "c846a998-7bf6-59df-a6ac-72d5629fd84c"))(global_label "LED_FAULT_N" (shape passive) (at 485.14 96.52 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "79f40c93-626f-5f12-aeb9-33bf4e27e680"))(wire (pts (xy 500.38 96.52) (xy 510.54 96.52)) (stroke (width 0) (type default)) (uuid "c6a63f07-be3b-52ee-ba64-4ede8775d483"))(global_label "LED_FAULT_A" (shape passive) (at 510.54 96.52 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "73e2606f-091b-59fb-b808-43ce9fc8099c"))(text "LEDs are off from MCU reset until firmware drives them; Linux can override each over the UART link.\n~1.3 mA each from 3.3 V through 1 kOhm." (at 307.34 129.54 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "770ae80d-c4c7-5bd4-b9c5-03dc6571bfa8"))(rectangle (start 20.32 154.94) (end 557.2600000000001 337.82) (stroke (width 0.254) (type default)) (fill (color 0 0 0 0)) (uuid "ca80e30b-a143-50c7-8d68-2c13b41d30b9"))(text "ANALOG MONITORS ON THE STM32 ADC (VREF+ = +3V3)" (at 22.86 158.75 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "eac18541-2381-5f7e-b3ca-45bf9b9f9c46"))(symbol (lib_id "Device:R_Small_US") (at 50.8 198.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "69baecc3-0958-5425-9f4e-ccee44bc86c5") (property "Reference" "R2207" (at 59.69 196.85 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 59.69 199.39000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 50.8 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 50.8 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 50.8 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 50.8 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 50.8 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2207") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2207") (unit 1)))))(wire (pts (xy 50.8 195.58) (xy 50.8 185.42)) (stroke (width 0) (type default)) (uuid "63550c55-17d2-5626-8dac-eb9d77e04154"))(global_label "5V_MAIN" (shape passive) (at 50.8 185.42 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5da58eb7-5617-5ddc-bdc8-757d4354edf1"))(wire (pts (xy 50.8 200.66) (xy 50.8 210.82)) (stroke (width 0) (type default)) (uuid "2602c0fa-630d-578f-8591-b579a52a3add"))(global_label "ADC_5V_MAIN" (shape passive) (at 50.8 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c72745f1-41b7-5e8a-81e3-29f5cface4db"))(symbol (lib_id "Device:R_Small_US") (at 50.8 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5a2eee7d-1d98-59cc-bb3e-d2f18f48ae4d") (property "Reference" "R2208" (at 59.69 240.03 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 59.69 242.57000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 50.8 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 50.8 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 50.8 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 50.8 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 50.8 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2208") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2208") (unit 1)))))(wire (pts (xy 50.8 238.76) (xy 50.8 228.6)) (stroke (width 0) (type default)) (uuid "54ce7fd2-9ef9-5286-a9fe-ed7fb44155a9"))(global_label "ADC_5V_MAIN" (shape passive) (at 50.8 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2a200d7a-ba5e-5955-9850-c11b0926719f"))(wire (pts (xy 50.8 243.84) (xy 50.8 254.0)) (stroke (width 0) (type default)) (uuid "9709a2e5-24e3-5631-abf7-f950f154b110"))(global_label "GND" (shape passive) (at 50.8 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6ccea0c2-a9c9-52d3-9e60-1126f91385b6"))(symbol (lib_id "Device:C_Small") (at 76.19999999999999 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a954f7e3-7c5f-53d3-b94a-4b5129edbab1") (property "Reference" "C2203" (at 85.08999999999999 240.03 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 85.08999999999999 242.57000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 76.19999999999999 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 76.19999999999999 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 76.19999999999999 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 76.19999999999999 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "C2203") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "C2203") (unit 1)))))(wire (pts (xy 76.2 238.76) (xy 76.2 228.6)) (stroke (width 0) (type default)) (uuid "02c9fb0a-726c-5cb6-a45e-cae6047a405d"))(global_label "ADC_5V_MAIN" (shape passive) (at 76.2 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "89fa8aea-3e4d-527d-a656-ab91f60bdaf4"))(wire (pts (xy 76.2 243.84) (xy 76.2 254.0)) (stroke (width 0) (type default)) (uuid "530a6896-6323-5c5f-9833-b02a2f0248e7"))(global_label "GND" (shape passive) (at 76.2 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a7d9abac-4c36-5a61-9275-c91946c8acd5"))(symbol (lib_id "Device:R_Small_US") (at 127.0 198.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "11fc7565-fcba-5dc4-ad81-3478660fe1ef") (property "Reference" "R2209" (at 135.89 196.85 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 135.89 199.39000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 127.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 127.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 127.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 127.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 127.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2209") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2209") (unit 1)))))(wire (pts (xy 127.0 195.58) (xy 127.0 185.42)) (stroke (width 0) (type default)) (uuid "2c97fcf1-eb71-54ec-bd1c-e14865b59677"))(global_label "3V3_MAIN" (shape passive) (at 127.0 185.42 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "97db7d1a-0816-53af-a68b-c028992f4808"))(wire (pts (xy 127.0 200.66) (xy 127.0 210.82)) (stroke (width 0) (type default)) (uuid "af32f9af-082d-57ac-bb5f-c8111251e21f"))(global_label "ADC_3V3_MAIN" (shape passive) (at 127.0 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1bca14ca-0855-5446-9706-8fdbf83866bc"))(symbol (lib_id "Device:R_Small_US") (at 127.0 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4e3b7bae-b15e-529f-86ee-78876e1fe73e") (property "Reference" "R2210" (at 135.89 240.03 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 135.89 242.57000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 127.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 127.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 127.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 127.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 127.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2210") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2210") (unit 1)))))(wire (pts (xy 127.0 238.76) (xy 127.0 228.6)) (stroke (width 0) (type default)) (uuid "0afdcb2b-261a-5b80-8978-965580219ab0"))(global_label "ADC_3V3_MAIN" (shape passive) (at 127.0 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9f796006-de31-5013-9eee-b2fbdff8a18b"))(wire (pts (xy 127.0 243.84) (xy 127.0 254.0)) (stroke (width 0) (type default)) (uuid "a6117a34-83d7-5625-87d6-7946476bb6f7"))(global_label "GND" (shape passive) (at 127.0 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "04702aa9-a550-54e7-b98f-bb9b91dff497"))(symbol (lib_id "Device:C_Small") (at 152.4 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "90597164-9381-5ac9-b8f3-d7df3752379d") (property "Reference" "C2204" (at 161.29000000000002 240.03 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 161.29000000000002 242.57000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 152.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 152.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 152.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 152.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "C2204") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "C2204") (unit 1)))))(wire (pts (xy 152.4 238.76) (xy 152.4 228.6)) (stroke (width 0) (type default)) (uuid "df305356-66fe-570d-9d65-84888e14aaa4"))(global_label "ADC_3V3_MAIN" (shape passive) (at 152.4 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1d592751-a931-541f-b05f-d4ce9d7bbc82"))(wire (pts (xy 152.4 243.84) (xy 152.4 254.0)) (stroke (width 0) (type default)) (uuid "d0280d27-9c88-508b-a602-dc7785671f48"))(global_label "GND" (shape passive) (at 152.4 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8d06dc44-e4ca-584a-a4df-cf38afe4662a"))(symbol (lib_id "Device:R_Small_US") (at 203.2 198.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "809cb60a-0a81-5d72-a5f3-e5ca0d304d8c") (property "Reference" "R2211" (at 212.08999999999997 196.85 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 212.08999999999997 199.39000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 203.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 203.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 203.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 203.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 203.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2211") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2211") (unit 1)))))(wire (pts (xy 203.2 195.58) (xy 203.2 185.42)) (stroke (width 0) (type default)) (uuid "1acb2b51-e048-5a0e-a256-0853eebe97e0"))(global_label "MODEM_VCC" (shape passive) (at 203.2 185.42 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6cc016e2-fd69-5d4e-b6d6-07568fd8a717"))(wire (pts (xy 203.2 200.66) (xy 203.2 210.82)) (stroke (width 0) (type default)) (uuid "790d03b2-c5ae-5573-85ea-d4930f9f937d"))(global_label "ADC_MODEM_VCC" (shape passive) (at 203.2 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3b1bdd0e-328a-5cab-953d-91e5d50a9268"))(symbol (lib_id "Device:R_Small_US") (at 203.2 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9a7c8e71-be3a-53a2-b6b3-e4230ac067bc") (property "Reference" "R2212" (at 212.08999999999997 240.03 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 212.08999999999997 242.57000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 203.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 203.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 203.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 203.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 203.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2212") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2212") (unit 1)))))(wire (pts (xy 203.2 238.76) (xy 203.2 228.6)) (stroke (width 0) (type default)) (uuid "6f11a7f4-18aa-5cdf-97f1-c4a61434da16"))(global_label "ADC_MODEM_VCC" (shape passive) (at 203.2 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c53b4fa8-75f3-5fc7-80ce-6c11f1b434d5"))(wire (pts (xy 203.2 243.84) (xy 203.2 254.0)) (stroke (width 0) (type default)) (uuid "b0972bc7-65d3-5f65-861b-11fb8aa78ba2"))(global_label "GND" (shape passive) (at 203.2 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9cd84f70-b761-54e2-b239-e0e565cc591e"))(symbol (lib_id "Device:C_Small") (at 228.6 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bdd9047b-3e3a-5bb6-8234-9613a7dbbc71") (property "Reference" "C2205" (at 237.49 240.03 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 237.49 242.57000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 228.6 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 228.6 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 228.6 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 228.6 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "C2205") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "C2205") (unit 1)))))(wire (pts (xy 228.6 238.76) (xy 228.6 228.6)) (stroke (width 0) (type default)) (uuid "96bf0e2c-9110-547c-9b00-3802c349456d"))(global_label "ADC_MODEM_VCC" (shape passive) (at 228.6 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7a08dbc5-71c3-5504-8155-748ff15cba5f"))(wire (pts (xy 228.6 243.84) (xy 228.6 254.0)) (stroke (width 0) (type default)) (uuid "188f0793-c5fa-5461-b3e6-98fecfa4bf4c"))(global_label "GND" (shape passive) (at 228.6 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "214acbe1-c6a4-5f9c-834c-6f7445a1d847"))(symbol (lib_id "Device:R_Small_US") (at 279.4 198.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b7bb994b-a906-50fe-a1e7-7546cd506917") (property "Reference" "R2213" (at 288.28999999999996 196.85 0) (effects (font (size 1.27 1.27))))(property "Value" "100kR" (at 288.28999999999996 199.39000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 279.4 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-07100KL" (at 279.4 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 279.4 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 279.4 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 279.4 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2213") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2213") (unit 1)))))(wire (pts (xy 279.4 195.58) (xy 279.4 185.42)) (stroke (width 0) (type default)) (uuid "dd6c831d-3a4d-5dff-896d-1f6c5984d6e7"))(global_label "MODEM_FUSE_ILM" (shape passive) (at 279.4 185.42 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3cbaae0c-b354-554c-b146-c45019d3a31e"))(wire (pts (xy 279.4 200.66) (xy 279.4 210.82)) (stroke (width 0) (type default)) (uuid "7985672b-4da4-5175-83a2-e2261afbb97e"))(global_label "ADC_MODEM_ILM" (shape passive) (at 279.4 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "87de23e4-3dea-5b6f-937e-adc98c20a2fe"))(symbol (lib_id "Device:C_Small") (at 279.4 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2ecfae6f-76db-5386-8b6f-e761b41d5770") (property "Reference" "C2206" (at 288.28999999999996 240.03 0) (effects (font (size 1.27 1.27))))(property "Value" "1nF" (at 288.28999999999996 242.57000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 279.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "C1608X7R2A102K" (at 279.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "TDK" (at 279.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "100V" (at 279.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "C2206") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "C2206") (unit 1)))))(wire (pts (xy 279.4 238.76) (xy 279.4 228.6)) (stroke (width 0) (type default)) (uuid "bf3152e6-373c-5ce3-a55d-eb5b216818e9"))(global_label "ADC_MODEM_ILM" (shape passive) (at 279.4 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "368ab2a8-910a-5b49-882b-b52adf8bbcf4"))(wire (pts (xy 279.4 243.84) (xy 279.4 254.0)) (stroke (width 0) (type default)) (uuid "e2f36bc0-eed1-5fcb-bad3-4395b69baae4"))(global_label "GND" (shape passive) (at 279.4 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "00737a76-e372-53a8-b5c4-d4b967d006a8"))(symbol (lib_id "Device:R_Small_US") (at 381.0 198.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "422846ac-8419-5d03-9525-8a45dafd912f") (property "Reference" "R2214" (at 389.89 196.85 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 389.89 199.39000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 381.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 381.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 381.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 381.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 381.0 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2214") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2214") (unit 1)))))(wire (pts (xy 381.0 195.58) (xy 381.0 185.42)) (stroke (width 0) (type default)) (uuid "960a8672-c9b5-5875-8d84-0eb2ab99e511"))(global_label "+3V3" (shape passive) (at 381.0 185.42 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "236db873-3edd-59b6-b4ed-23f68b4f3e82"))(wire (pts (xy 381.0 200.66) (xy 381.0 210.82)) (stroke (width 0) (type default)) (uuid "2e5f321e-e908-5d71-afa8-a102cdeff3c2"))(global_label "ADC_NTC_MODEM" (shape passive) (at 381.0 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d01ace53-99af-5821-be3f-919f6d321e93"))(symbol (lib_id "Device:Thermistor_NTC") (at 381.0 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "954deb07-d70e-5456-b61c-b077777184fb") (property "Reference" "RT2201" (at 381.0 213.36 0) (effects (font (size 1.27 1.27))))(property "Value" "10k B3380" (at 381.0 215.9 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 381.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "NCP18XH103F03RB" (at 381.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Murata" (at 381.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C13564" (at 381.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement" "M.2 module bay, under the card centre" (at 381.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.murata.com/en-us/products/productdata/8796836626462/NTHCG83.pdf" (at 381.0 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "RT2201") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "RT2201") (unit 1)))))(wire (pts (xy 381.0 237.49) (xy 381.0 227.33)) (stroke (width 0) (type default)) (uuid "ecd20fa4-2b72-5ac6-b784-fd6eb4cc86a6"))(global_label "ADC_NTC_MODEM" (shape passive) (at 381.0 227.33 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "978de00a-9e05-56ab-97df-7f19c0f6bc9d"))(wire (pts (xy 381.0 245.11) (xy 381.0 255.27)) (stroke (width 0) (type default)) (uuid "000a7f80-2f07-5e04-8cb7-596192d9a3bd"))(global_label "GND" (shape passive) (at 381.0 255.27 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "de979632-eab9-5d0d-a725-139f8e5cd11a"))(symbol (lib_id "Device:C_Small") (at 406.4 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c71b279b-3b3c-5c4a-b807-200f98a46f39") (property "Reference" "C2207" (at 415.28999999999996 240.03 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 415.28999999999996 242.57000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 406.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 406.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 406.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 406.4 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "C2207") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "C2207") (unit 1)))))(wire (pts (xy 406.4 238.76) (xy 406.4 228.6)) (stroke (width 0) (type default)) (uuid "d025818b-c4dc-5e31-8a38-4103993b04e8"))(global_label "ADC_NTC_MODEM" (shape passive) (at 406.4 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "464075ef-4c7e-5dde-bb13-3523a21fbc27"))(wire (pts (xy 406.4 243.84) (xy 406.4 254.0)) (stroke (width 0) (type default)) (uuid "807b1909-a1d1-58af-a494-a74144e7f719"))(global_label "GND" (shape passive) (at 406.4 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "359c5e56-e2db-535b-8a64-91db64a454c7"))(symbol (lib_id "Device:R_Small_US") (at 457.2 198.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ede3d620-2265-5958-8fab-eef7c13dc781") (property "Reference" "R2215" (at 466.09 196.85 0) (effects (font (size 1.27 1.27))))(property "Value" "10kR" (at 466.09 199.39000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 457.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "RC0603FR-0710KL" (at 457.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Yageo" (at 457.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Tolerance" "1%" (at 457.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Power Rating" "0.1W" (at 457.2 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "R2215") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "R2215") (unit 1)))))(wire (pts (xy 457.2 195.58) (xy 457.2 185.42)) (stroke (width 0) (type default)) (uuid "bf2b8bdf-4e53-56f1-a539-98334061b5ed"))(global_label "+3V3" (shape passive) (at 457.2 185.42 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "dcea08db-f19b-54bd-8d5b-4d2e4bf4d7a8"))(wire (pts (xy 457.2 200.66) (xy 457.2 210.82)) (stroke (width 0) (type default)) (uuid "34f67735-56e1-52f5-97a4-2162581f8ce1"))(global_label "ADC_NTC_POWER" (shape passive) (at 457.2 210.82 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c3853c4a-08ef-52bc-8e22-280939ff5d14"))(symbol (lib_id "Device:Thermistor_NTC") (at 457.2 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6ffe7040-ec1a-5afa-b676-db1ff7d47dea") (property "Reference" "RT2202" (at 457.2 213.36 0) (effects (font (size 1.27 1.27))))(property "Value" "10k B3380" (at 457.2 215.9 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 457.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "NCP18XH103F03RB" (at 457.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Murata" (at 457.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C13564" (at 457.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Placement" "between T1702 secondary and U1901" (at 457.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.murata.com/en-us/products/productdata/8796836626462/NTHCG83.pdf" (at 457.2 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "RT2202") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "RT2202") (unit 1)))))(wire (pts (xy 457.2 237.49) (xy 457.2 227.33)) (stroke (width 0) (type default)) (uuid "74e2d467-0906-59f7-8481-ddd8cfe4022c"))(global_label "ADC_NTC_POWER" (shape passive) (at 457.2 227.33 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "009e4661-7143-50ed-9ec5-e0b29caa9993"))(wire (pts (xy 457.2 245.11) (xy 457.2 255.27)) (stroke (width 0) (type default)) (uuid "d47bec5e-7348-5335-9d3f-230f0e946fc4"))(global_label "GND" (shape passive) (at 457.2 255.27 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b4cee10a-08d5-582d-930e-913f09b3178a"))(symbol (lib_id "Device:C_Small") (at 482.59999999999997 241.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7a0165e7-0a6c-543f-be51-d1931aa19b5c") (property "Reference" "C2208" (at 491.48999999999995 240.03 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 491.48999999999995 242.57000000000002 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 482.59999999999997 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL10B104KA8NNNC" (at 482.59999999999997 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 482.59999999999997 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Voltage Rating" "25V" (at 482.59999999999997 241.3 0) (effects (font (size 1.27 1.27)) (hide yes)))(instances (project "management" (path "/c601823f-2e75-5043-a1e3-0e6da84d9747" (reference "C2208") (unit 1))) (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/eaea8cc8-1019-586c-ba90-dfd3656db65a" (reference "C2208") (unit 1)))))(wire (pts (xy 482.6 238.76) (xy 482.6 228.6)) (stroke (width 0) (type default)) (uuid "f7468959-1ad0-59c9-aba2-6107dbdeb2ad"))(global_label "ADC_NTC_POWER" (shape passive) (at 482.6 228.6 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c6c29c38-d121-599b-92e3-12b28f126275"))(wire (pts (xy 482.6 243.84) (xy 482.6 254.0)) (stroke (width 0) (type default)) (uuid "d9c4fe1b-d042-50d5-a42a-8059bd86397a"))(global_label "GND" (shape passive) (at 482.6 254.0 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8e128b46-1e05-52be-bd94-520517ea8e58"))(text "PA1 ADC_5V_MAIN = 5V/2, PA4 ADC_3V3_MAIN = 3V3/2, PA5 ADC_MODEM_VCC = VCC/2, PA6 ADC_MODEM_ILM,\nPA7 ADC_NTC_MODEM, PB2 ADC_NTC_POWER (10k NTC to GND, 10k pull-up: ratiometric to VREF+).\nILM: TPS25947 analog current monitor (V = I_OUT x G_IMON x R_ILM). Its pin must see < 50 pF:\nplace R2213 at U1902 pin 9; C2206 sits at the MCU end. Calibrate gain against the INA226." (at 25.4 299.72 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "75096c3c-cc7b-540e-a578-13128d0df1c4")))

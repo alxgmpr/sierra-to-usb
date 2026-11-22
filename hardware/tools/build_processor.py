@@ -49,6 +49,8 @@ control_nets.update({
  '1K19':'PCIE_REFCLK_P','1K20':'PCIE_REFCLK_N','AG37':'PCIE_CLKREQ_N','1U20':'PCIE_WAKE_N','1R16':'PCIE_PERST_SOC_N',
  '1V19':'DEBUG_UART_RX','1U18':'DEBUG_UART_TX','AN37':'SOC_HEALTH',
  '1R20':'TSADC_SHUTDOWN',
+ # 2026-11-22: MCU link UART3_M0, FSPI boot flash, SDMMC0 and SD power enable (native-edited; see build_management.py).
+ 'A22':'SOC_LINK_RX','B22':'SOC_LINK_TX','1A15':'FSPI_CLK','1A17':'FSPI_D0','1A18':'FSPI_D1','1B17':'FSPI_CS0_N','1C15':'FSPI_D3','1E20':'SD_D0','1F19':'SD_D1','1D20':'SD_D2','1F18':'SD_D3','1E19':'SD_CMD','G38':'SD_CLK_SOC','AJ38':'SD_PWR_EN',
  '1C17':'GND','1B18':'GND','1A19':'GND',
 })
 # Retain reference analog power, even for disabled display/camera blocks.

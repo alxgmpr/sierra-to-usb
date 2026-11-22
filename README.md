@@ -21,12 +21,12 @@ exact firmware and NIC qualification. No modem combination is qualified.
 - [Actual KiCad recovery schematic](hardware/recovery.kicad_sch)
 - [Implemented circuit, checks and outstanding qualification](hardware/README.md)
 
-The full [30-sheet appliance schematic](hardware/appliance.kicad_sch) now captures
+The full [34-sheet appliance schematic](hardware/appliance.kicad_sch) now captures
 processor/RAM/eMMC, all supplies, 2.5GbE, isolated PoE, modem/SIM and recovery
-interfaces: 663 components, 823 nets, **zero full ERC violations**.
+interfaces: 819 components, 856 nets, **zero full ERC violations**.
 [Review PDF](hardware/review/2026-10-07/appliance.pdf) and
 [completion / release holds](docs/schematic-completion.md) are available.
-All 663 PCB footprints are assigned, including 572 stock hand-solder variants.
+All 819 PCB footprints are assigned, including 531 stock hand-solder variants.
 Current CLI schematic/PCB parity is clean. October 7 native update-dialog
 results are retained in the [footprint and model audit](docs/footprint-audit.md). Two BGA land-pattern/process
 reviews, remaining model holds, current modem guides and physical/software
