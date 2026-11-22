@@ -94,6 +94,8 @@ ANCH = {   # most important first: core, then the connectors and magnetics that 
 }
 OVERHANG = {'J1701', 'J1201'}             # connectors allowed to sit on/over the board edge
 CARD = (146.0, 34.5, 199.5, 65.5)         # M.2 3042/3052 card: keep clear
+TIDY = {'CORE', 'PSEC'}   # blocks whose passives are fanned around their host in rows
+STAGE = {'PSEC'}          # blocks of discrete regulators: ICs keep pin 1 one way and get their inductor placed with them
 BARRIER = {'T1701', 'T1702', 'U1703', 'U1801', 'U1802', 'U1803'}
 
 def short(n): return re.sub(r'^/.*/', '', n)
@@ -208,6 +210,8 @@ def offsets(rmax, step):
 OFF_FINE, OFF_COARSE = offsets(16, 0.5), offsets(80, 1.0)
 SNAP = 0.5   # passives on a 0.5 mm grid -> aligned rows and columns
 
+ROT_PEN = 2.0   # mm of ratsnest a non-zero IC rotation has to save
+def area(ref): c = fps[ref]['crt']; return (c[2]-c[0]) * (c[3]-c[1])
 def place_ic(ref, target, halo, dist_w, rmax=60):
     best = None
     for du, dv in offsets(rmax, 1.0):
@@ -216,9 +220,14 @@ def place_ic(ref, target, halo, dist_w, rmax=60):
             R = rect(fps[ref], u, v, r, GAP/2 + halo)
             if not legal(ref, R): continue
             sc = ratsnest(ref, (u, v, r)) + dist_w * math.hypot(du, dv)
+            if block[ref] in STAGE and r: sc += ROT_PEN   # pin 1 the same way unless turning pays off
             if best is None or sc < best[0]: best = (sc, u, v, r, R)
     if best is None: raise SystemExit(f'no spot for {ref} ({block[ref]})')
     commit(ref, *best[1:4], best[4])
+    if block[ref] in STAGE and not is_small(fps[ref]):   # power inductors go in next, hard against the switch pin
+        for ind in sorted(n for n in neighbours(ref) if n not in placed and re.match(r'L\d', n) and area(n) > 15 and block[n] == block[ref]):
+            sw = [pad_abs(ref, j) for p in fps[ind]['pads'] for r2, j in netpads.get(p['net'], ()) if r2 == ref and p['net'] not in RAIL]
+            place_ic(ind, sw[0], 0.0, 1.0, rmax=20)
 def target_of(ref):
     f = fps[ref]; nb = [r for r in neighbours(ref) if r in placed]
     nb = [r for r in nb if fps[r]['sheet'] == f['sheet']] or [r for r in placed if fps[r]['sheet'] == f['sheet']] \
@@ -265,24 +274,30 @@ def val(f):
     return float(m[1]) * {'p': 1e-12, 'n': 1e-9, 'u': 1e-6, 'µ': 1e-6, 'm': 1e-3, '': 1}[m[2]] if m else 1.0
 load = defaultdict(int)
 host = {}                  # passive -> the IC (or connector) it is laid out around
-TIDY = {'CORE'}            # blocks whose passives are fanned around their host in rows
+BIG = 7.0                  # hosts at least this wide get their own rings; smaller ones share the board lattice
 def q(x, step, up): return (math.ceil(x/step - 1e-6) if up else math.floor(x/step + 1e-6)) * step
 def fan(ref, u, v):
     """Fan lattice around the host: two-pad parts stand radially (pads pointing at the host) in rows
     along each host edge. Along a row the pitch is the part width on the SNAP grid, centred on the host;
-    rings start at the host courtyard and step by the part length. Yields the poses (u, v, r) that grid point (u, v) maps to, none if it is off the lattice."""
+    rings start at the host courtyard and step by the part length. Around a small host the same
+    pitches are counted from the board origin instead. Yields the poses (u, v, r) that grid point (u, v) maps to, none if it is off the lattice."""
     f = fps[ref]; hx, hy, hr = placed[host[ref]]; h = rect(fps[host[ref]], hx, hy, hr, flip=False)
     ox, oy = max(h[0]-u, u-h[2], 0), max(h[1]-v, v-h[3], 0)
     if not ox and not oy: return
     vert = oy >= ox            # above or below the host: rows run along x
     a, t, t0, lo, hi = (v, u, hx, h[1], h[3]) if vert else (u, v, hy, h[0], h[2])
+    loose = min(h[2]-h[0], h[3]-h[1]) < BIG   # small host: rows on the board-wide lattice so neighbouring groups line up
+    if loose: t0 = 0
     for r in ((90, 270) if vert else (0, 180)):
         p = rect(f, 0, 0, r, GAP/2); p = (p[1], p[3], p[2]-p[0]) if vert else (p[0], p[2], p[3]-p[1])
         k = (t-t0) / q(p[2], SNAP, True); pr = q(p[1]-p[0], SNAP/2, True)
         if abs(k - round(k)) > 1e-6: continue
-        if a < (lo+hi)/2: base = q(lo - GAP/2 - p[1], SNAP/2, False); m = round((base-a)/pr); aa = base - m*pr
+        if loose:
+            pr = q(p[1]-p[0], SNAP, True); aa = round(a/pr) * pr
+            if abs(aa-a) > SNAP/2 + 1e-6: continue
+        elif a < (lo+hi)/2: base = q(lo - GAP/2 - p[1], SNAP/2, False); m = round((base-a)/pr); aa = base - m*pr
         else: base = q(hi + GAP/2 - p[0], SNAP/2, True); m = round((a-base)/pr); aa = base + m*pr
-        if m < 0 or abs(aa-a) > SNAP/2 + 1e-6: continue
+        if not loose and (m < 0 or abs(aa-a) > SNAP/2 + 1e-6): continue
         yield (t, aa, r) if vert else (aa, t, r)
 def target_for(ref, defer):
     f = fps[ref]; cands = []
@@ -337,18 +352,31 @@ def place_small(ref, own_pad, tgt, lattice=True):
     commit(ref, *best[1:4], best[4]); return True
 def prio(ref):
     k = 0 if ref.startswith('L') else 1 if ref.startswith('C') else 2 if ref.startswith(('R', 'FB')) else 3
+    if block[ref] in TIDY and area(ref) > (15 if k > 1 else 30): k = 0   # big parts first: the rows leave no room later
     return (k, val(fps[ref]) if k == 1 else 0, ref)
-pending = sorted([r for r in fps if r not in placed and r not in BOTTOM], key=prio)
-for it in range(16):
-    nxt = []
+def top_passives(first):
+    """Place the top-side passives, those in `first` before the rest. Returns a part that found no room."""
+    for ref in first:
+        if not place_small(ref, *(target_for(ref, defer=False) or (0, target_of(ref)))): return ref
+    pending = sorted([r for r in fps if r not in placed and r not in BOTTOM], key=prio)
+    for it in range(16):
+        nxt = []
+        for ref in pending:
+            t = target_for(ref, defer=it < 8)
+            if t is None: nxt.append(ref)
+            elif not place_small(ref, *t): return ref
+        if not nxt or (nxt == pending and it >= 8): pending = nxt; break
+        pending = sorted(nxt, key=prio)
     for ref in pending:
-        t = target_for(ref, defer=it < 8)
-        if t is None: nxt.append(ref)
-        elif not place_small(ref, *t): raise SystemExit(f'no room for {ref} ({block[ref]})')
-    if not nxt or (nxt == pending and it >= 8): pending = nxt; break
-    pending = sorted(nxt, key=prio)
-for ref in pending:
-    if not place_small(ref, 0, target_of(ref)): raise SystemExit(f'no room for {ref}')
+        if not place_small(ref, 0, target_of(ref)): return ref
+ics = dict(placed), {c: list(v) for c, v in grid.items()}
+first = []   # parts that ran out of room go to the front of the queue and the pass is repeated
+while True:
+    ref = top_passives(first)
+    if ref is None: break
+    if ref in first: raise SystemExit(f'no room for {ref} ({block[ref]})')
+    first.append(ref); load.clear(); host.clear()
+    placed.clear(); placed.update(ics[0]); grid.clear(); grid.update({c: list(v) for c, v in ics[1].items()})
 
 for ref in placed:   # through-hole pins also occupy the bottom side
     for i, p in enumerate(fps[ref]['pads']):
