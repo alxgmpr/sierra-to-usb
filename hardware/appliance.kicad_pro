@@ -966,6 +966,10 @@
         "pattern": "RECOVERY_PORT_D_?"
       },
       {
+        "netclass": "USB90",
+        "pattern": "*/MODEM_USB_MUX_D_?"
+      },
+      {
         "netclass": "PCIE85",
         "pattern": "PCIE_SOC_?X?"
       },

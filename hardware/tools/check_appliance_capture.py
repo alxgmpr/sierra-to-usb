@@ -30,7 +30,7 @@ def validate(tree,directory):
  def connected(ref,mapping):
   for net,pins in mapping.items():
    for pin in pins.split():on(ref,pin,net)
- assert len(C)==818,len(C)
+ assert len(C)==820,len(C)
  assert len(B)==sum(len(p) for p in N.values()),'Physical pin appears in two nets'
  for ref in C:
   if ref in ['TP1101','TP1102','TP1103'] or ref.startswith('TP24'):assert C[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
@@ -105,8 +105,9 @@ def validate(tree,directory):
  connected('Q1901',{'MODEM_DISCHARGE_GATE':'1','GND':'2','MODEM_DISCHARGE_DRAIN':'3'});on('R1924','1','MODEM_VCC');on('R1924','2','MODEM_DISCHARGE_DRAIN')
  connected('U201',{'MCU_MODEM_POWER_EN':'40','MODEM_RAIL_GOOD':'25','MODEM_SWITCH_GOOD':'26','MODEM_BUCK_GOOD':'27'})
  connected('U2001',{'+3V3':'1 6 10','GND':'5 9 11 20 21','MODEM_USB_OE_N':'2','MODEM_AC_TXP':'3','MODEM_AC_TXN':'4','MODEM_USB_RXP':'7','MODEM_USB_RXN':'8','MODEM_PORT_TXP':'17','MODEM_PORT_TXN':'16','MODEM_PORT_RXP':'19','MODEM_PORT_RXN':'18'})
- connected('U2002',{'+3V3':'10','GND':'5 9','MODEM_USB_OE_N':'6','MODEM_USB_D_P':'8','MODEM_USB_D_N':'7','MODEM_USB_PORT_D_P':'1','MODEM_USB_PORT_D_N':'2'})
+ connected('U2002',{'+3V3':'10','GND':'5 9','MODEM_USB_OE_N':'6','/Modem USB isolation/MODEM_USB_MUX_D_P':'8','/Modem USB isolation/MODEM_USB_MUX_D_N':'7','MODEM_USB_PORT_D_P':'1','MODEM_USB_PORT_D_N':'2'})
  connected('U2003',{'MAIN3V3_GOOD':'1','MODEM_RAIL_GOOD':'2','GND':'3','MODEM_USB_VALID':'4','+3V3':'5'})
+ for i,pol in enumerate(['P','N']):on(f'R{2004+i}','1',f'MODEM_USB_D_{pol}');on(f'R{2004+i}','2',f'/Modem USB isolation/MODEM_USB_MUX_D_{pol}')
  for i,pol in enumerate(['P','N']):on(f'C{2001+i}','1',f'MODEM_USB_SOC_TX{pol}');on(f'C{2001+i}','2',f'MODEM_AC_TX{pol}')
  connected('J2001',{'MODEM_VCC':'2 4 70 72 74','GND':'3 5 11 27 33 39 45 51 57 71 73','MODEM_OFF_N':'6','MODEM_RESET_N':'67','MODEM_USB_PORT_D_P':'7','MODEM_USB_PORT_D_N':'9','MODEM_PORT_TXN':'29','MODEM_PORT_TXP':'31','MODEM_PORT_RXN':'35','MODEM_PORT_RXP':'37','SIM1_RESET_MODEM':'30','SIM1_CLK_MODEM':'32','SIM1_DATA_MODEM':'34','SIM1_VCC':'36','M2_PIN20':'20','M2_PIN22':'22','M2_PIN24':'24','M2_PIN38':'38','M2_PIN68':'68'})
  nc('J2001','66');connected('J2002',{'SIM1_VCC':'1','SIM1_RESET':'2','SIM1_CLK':'3','SIM1_DATA':'6','GND':'4 9 10 11 12'})

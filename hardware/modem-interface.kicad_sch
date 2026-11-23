@@ -1584,7 +1584,7 @@
 	)
 	(wire
 		(pts
-			(xy 419.1 78.74) (xy 408.94 78.74)
+			(xy 419.1 78.74) (xy 414.02 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2408,7 +2408,7 @@
 	)
 	(global_label "MODEM_USB_D_P"
 		(shape passive)
-		(at 408.94 78.74 180)
+		(at 368.3 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2417,7 +2417,7 @@
 		)
 		(uuid "5daa793d-c73b-55ca-88d8-961ba5974dce")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 408.94 78.74 0)
+			(at 368.3 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2936,7 +2936,7 @@
 	)
 	(global_label "MODEM_USB_D_N"
 		(shape passive)
-		(at 408.94 81.28 180)
+		(at 368.3 71.12 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2945,7 +2945,7 @@
 		)
 		(uuid "f49f8e41-6ffa-5610-944e-61b90d8c50ce")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 408.94 81.28 0)
+			(at 368.3 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4718,5 +4718,339 @@
 				)
 			)
 		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 381.0 60.96 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4103115e-6b43-47f1-a230-e9c78b3508d7")
+		(property "Reference" "R2004"
+			(at 381.0 53.34 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2R"
+			(at 381.0 55.88 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 381.0 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 381.0 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 381.0 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-072R2L"
+			(at 381.0 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 381.0 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 381.0 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 381.0 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "24a8f6d6-584f-4216-9e52-9f7f990cb839")
+		)
+		(pin "2"
+			(uuid "330ab2fb-5085-4240-9a5d-49af38605346")
+		)
+		(instances
+			(project "modem-interface"
+				(path "/2ab50ce3-1683-5168-b47b-8108f46be465"
+					(reference "R2004")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/32f2f75d-b8ee-5fdf-b94f-fec3d37fea9c"
+					(reference "R2004")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 381.0 71.12 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e28ffeb1-8cf1-452a-96db-65ab91c66312")
+		(property "Reference" "R2005"
+			(at 381.0 63.5 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2R"
+			(at 381.0 66.04 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 381.0 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 381.0 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 381.0 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-072R2L"
+			(at 381.0 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 381.0 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 381.0 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power Rating" "0.1W"
+			(at 381.0 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cb27b6ce-6737-48af-b5b3-2ad81f7c7cfa")
+		)
+		(pin "2"
+			(uuid "f2ebb7e0-95a9-40d2-8556-41dc1c05b5c5")
+		)
+		(instances
+			(project "modem-interface"
+				(path "/2ab50ce3-1683-5168-b47b-8108f46be465"
+					(reference "R2005")
+					(unit 1)
+				)
+			)
+			(project "appliance"
+				(path "/4be0941e-e923-51bb-85b8-e69833501985/32f2f75d-b8ee-5fdf-b94f-fec3d37fea9c"
+					(reference "R2005")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 368.3 60.96) (xy 378.46 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a18823d0-4732-4e18-9e58-bcb8c47ff3a0")
+	)
+	(wire
+		(pts
+			(xy 383.54 60.96) (xy 414.02 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f0a1c0e-f599-4128-9e85-7c1b998d2a14")
+	)
+	(wire
+		(pts
+			(xy 414.02 60.96) (xy 414.02 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff24423f-5ce9-438d-908b-e119bdbb2175")
+	)
+	(wire
+		(pts
+			(xy 368.3 71.12) (xy 378.46 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd3575f7-3b60-4fe2-8227-89c706b5184c")
+	)
+	(wire
+		(pts
+			(xy 383.54 71.12) (xy 408.94 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c91c8f19-728f-4afc-a6f8-ff1a706694bc")
+	)
+	(wire
+		(pts
+			(xy 408.94 71.12) (xy 408.94 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49b1ff65-ad58-4a2d-bf6a-a54f616dafaf")
+	)
+	(label "MODEM_USB_MUX_D_P"
+		(at 384.81 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fbaa526e-a42d-4a00-93b9-0a625e03bc45")
+	)
+	(label "MODEM_USB_MUX_D_N"
+		(at 384.81 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9e8992d-51e0-4a93-8e0b-fe579ece6840")
 	)
 )

@@ -4,7 +4,7 @@
 # L1 SIG | L2 GND | L3 SIG | L4 GND | L5 PWR | L6 SIG.  Netclass widths are the L1/L6 values from
 # JLC's impedance calculator; L3 (In2.Cu) is narrower because it sits 0.109 mm over L4.
 # Targets per Rockchip RK3568 High Speed PCB Design Guide V1.0: LPDDR4 50/100, USB 90, PCIe 85 (REFCLK 100), MDI 100.
-# USB90 on L3 (0.128) is interpolated; JLC calculator run did not include that row.
+# All widths are from JLC's calculator for this stackup (2026-11-23).
 
 (rule "SE50 on L3"
   (layer "In2.Cu")

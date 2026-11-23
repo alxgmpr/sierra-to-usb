@@ -63,8 +63,10 @@ up=native_pins(ROOT/'reference/modem-C128396-native.kicad_sym','TS3USB221ARSER')
 assert up=={'1':'1D+','2':'1D-','3':'2D+','4':'2D-','5':'GND','6':'~{OE}','7':'D-','8':'D+','9':'S','10':'VCC'}
 usb2=grouped('TS3USB221A_RSE',up,[{'left':['8','7','6','9'],'right':['1','2','3','4'],'top':['10'],'bottom':['5']}],{n:'power_in' if n in ['5','10'] else 'input' if n in ['6','9'] else 'passive' for n in up})
 p=s.symbol('Appliance:TS3USB221A_RSE',usb2,'U2002','TS3USB221ARSER',441.96,81.28,'Appliance:UQFN-10_L2.0-W1.5-P0.50-BL',{'MPN':'TS3USB221ARSER','Manufacturer':'Texas Instruments','LCSC':'C128396','Datasheet':'https://www.ti.com/lit/ds/symlink/ts3usb221a.pdf','Supply Intent':'Always-on +3V3; OE high disconnects both USB2 conductors'})
-s.attach(p,{'1':'MODEM_USB_PORT_D_P','2':'MODEM_USB_PORT_D_N','3':None,'4':None,'5':'GND','6':'MODEM_USB_OE_N','7':'MODEM_USB_D_N','8':'MODEM_USB_D_P','9':'GND','10':'+3V3'})
+s.attach(p,{'1':'MODEM_USB_PORT_D_P','2':'MODEM_USB_PORT_D_N','3':None,'4':None,'5':'GND','6':'MODEM_USB_OE_N','7':'MODEM_USB_MUX_D_N','8':'MODEM_USB_MUX_D_P','9':'GND','10':'+3V3'})
 s.cap('C2004','100nF',533.4,81.28,'+3V3')
+for ref,y,pol in [('R2004',60.96,'P'),('R2005',71.12,'N')]:  # RK3566 HDG: 2.2R series on USB2 DP/DM
+    s.resistor(ref,'2.2R',381.0,y,f'MODEM_USB_D_{pol}',f'MODEM_USB_MUX_D_{pol}','RC0603FR-072R2L',horizontal=True)
 ap=native_pins(ROOT/'reference/modem-C7832-native.kicad_sym','SN74LVC1G08DCKR');assert ap=={'1':'A','2':'B','3':'GND','4':'Y','5':'VCC'}
 gate=grouped('SN74LVC1G08_DCK',ap,[{'left':['1','2'],'right':['4'],'top':['5'],'bottom':['3']}],{'1':'input','2':'input','3':'power_in','4':'output','5':'power_in'})
 p=s.symbol('Appliance:SN74LVC1G08_DCK',gate,'U2003','SN74LVC1G08DCKR',175.26,304.8,'Package_TO_SOT_SMD:SOT-353_SC-70-5',{'MPN':'SN74LVC1G08DCKR','Manufacturer':'Texas Instruments','LCSC':'C7832','Datasheet':'https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf'})
