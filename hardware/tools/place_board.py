@@ -114,7 +114,8 @@ side = {r: ('B' if r in BOTTOM else 'F') for r in fps}
 # ceramics over pin 1, clamp diode and RC between them and the FET, FET drain facing pin 3, sense resistor beside the source,
 # gate and aux-winding parts below. The controller cluster is TI's turned 180 deg so it sits above the transformer next to the
 # bridge. Secondary: rectifier facing pins 6/7, a ceramic column back to GND pins 9/10, a second column, then the bulk can.
-# Y caps under the transformer on the bottom, as TI does. Fixed parts these overlap are released and placed again (--keep).
+# Y caps under the transformer on the bottom, as TI does. C1729 sits 7.6 mm above TI's spot to make room for the
+# aux OR-ing stage (J2101, Q2101/Q2102) on the top side. Fixed parts these overlap are released and placed again (--keep).
 HAND = {
     # transformer and primary power stage
     'C1721': (40, 73, 180, 'B'), 'C1722': (40, 68, 180, 'B'), 'C1723': (8, 93.5, 0), 'C1724': (3.45, 66.05, 90),
@@ -132,7 +133,7 @@ HAND = {
     'R1768': (17.55, 50.2, 90), 'R1769': (30.25, 49.95, 270), 'R1770': (33.4, 52, 0), 'R1771': (22.2, 49.65, 270),
     'R1774': (24.9, 50.6, 180), 'U1710': (26, 55.5, 180),
     # secondary
-    'C1729': (75.2, 74.5, 90), 'C1730': (60.9, 78, 0), 'C1731': (60.9, 74.5, 0), 'C1732': (60.9, 71, 0),
+    'C1729': (75.2, 66.9, 90), 'C1730': (60.9, 78, 0), 'C1731': (60.9, 74.5, 0), 'C1732': (60.9, 71, 0),
     'C1733': (67.6, 78, 180), 'C1734': (67.6, 74.5, 180), 'C1735': (67.6, 71, 180), 'C1736': (67.25, 84.5, 90),
     'C1737': (68.3, 92.3, 270), 'C1752': (60.9, 67.5, 0), 'C1753': (60.9, 64, 0), 'D1711': (61.7, 85, 90),
     'R1742': (62.3, 90.2, 0), 'R1743': (62.3, 94.4, 0), 'R1775': (75.5, 84.5, 180),
