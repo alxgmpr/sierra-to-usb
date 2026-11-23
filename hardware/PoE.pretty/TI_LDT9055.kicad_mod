@@ -145,6 +145,9 @@
 				(justify left bottom)
 			)
 		)
+
+
+	(fp_rect (start -16.9 -14) (end 16.9 14) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd"))
 	(pad "1" smd roundrect
 			(at -15.365 -10)
 			(size 2.52 1.6)

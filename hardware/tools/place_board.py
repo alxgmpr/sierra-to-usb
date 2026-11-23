@@ -12,53 +12,7 @@ usage: uv run python hardware/tools/place_board.py IN.kicad_pcb OUT.kicad_pcb [-
 """
 import math, re, sys
 from collections import defaultdict
-def blocks(s):
-    idx=[m.start()+2 for m in re.finditer(r'\n\t\(footprint "',s)]
-    ends=[]
-    for a in idx:
-        d=0;i=a
-        while True:
-            c=s[i]
-            if c=='(':d+=1
-            elif c==')':
-                d-=1
-                if d==0: ends.append(i+1);break
-            elif c=='"':
-                i+=1
-                while s[i]!='"':
-                    if s[i]=='\\': i+=1
-                    i+=1
-            i+=1
-    return list(zip(idx,ends))
-NUM=r'(-?[\d.]+)'
-def parse(s):
-    fps={}
-    for a,b in blocks(s):
-        t=s[a:b]
-        ref=re.search(r'\(property "Reference" "([^"]+)"',t)[1]
-        m=re.search(r'\(transform\s*\(translate '+NUM+' '+NUM+r'\)\s*\(rotate '+NUM+r'\)',t)
-        pads=[]
-        for pm in re.finditer(r'\(pad "([^"]*)" (\w+) (\w+)\s*\(at '+NUM+' '+NUM+r'(?: '+NUM+r')?\)\s*\(size '+NUM+' '+NUM+r'\)(.*?)\(uuid',t,re.S):
-            net=re.search(r'\(net "([^"]*)"\)',pm[9]);
-            pads.append(dict(num=pm[1],kind=pm[2],x=float(pm[4]),y=float(pm[5]),w=float(pm[7]),h=float(pm[8]),net=net[1] if net else ''))
-        xs=[];ys=[]
-        for cm in re.finditer(r'\((fp_line|fp_rect|fp_poly|fp_circle|fp_arc)(.*?)\(layer "[FB]\.(?:CrtYd|Fab)"\)',t,re.S):
-            pts=[(float(p[1]),float(p[2])) for p in re.finditer(r'\((?:start|end|xy|center|mid) '+NUM+' '+NUM+r'\)',cm[2])]
-            if cm[1]=='fp_circle':
-                (cx,cy),(ex,ey)=pts[:2]; rr=math.hypot(ex-cx,ey-cy); pts=[(cx-rr,cy-rr),(cx+rr,cy+rr)]
-            for x,y in pts: xs.append(x);ys.append(y)
-        for p in pads:   # pads always inside the keep-out (some courtyards omit tabs)
-            e=max(p['w'],p['h'])/2+.15; xs+= [p['x']-e,p['x']+e]; ys+=[p['y']-e,p['y']+e]
-        sh=re.search(r'\(sheetfile "([^"]+)"',t)
-        side=re.search(r'\(layer "([^"]+)"',t)[1][0]
-        if side=='B':   # store bottom parts in their top-side (unflipped) shape
-            for p in pads: p['y']=-p['y']
-            ys=[-y for y in ys]
-        fps[ref]=dict(side=side,ref=ref,lib=re.match(r'\(footprint "([^"]+)"',t)[1],x=float(m[1]),y=float(m[2]),rot=float(m[3]),
-            layer=re.search(r'\(layer "([^"]+)"',t)[1],sheet=sh[1] if sh else '',
-            val=re.search(r'\(property "Value" "([^"]*)"',t)[1],pads=pads,
-            crt=(min(xs),min(ys),max(xs),max(ys)),span=(a,b))
-    return fps
+from board_pose import blocks, parse, write
 
 
 # ============================================================== floorplan (board-local mm, x right, y down)
@@ -66,7 +20,7 @@ SRC, DST = sys.argv[1], sys.argv[2]   # input board, output board
 KEEP = '--keep' in sys.argv[3:]
 s = open(SRC).read()
 fps = parse(s)
-X0, Y0 = 333.8, 38.05      # outline top-left stays put
+from board_pose import X0, Y0   # outline top-left stays put
 W, H = 200.0, 100.0        # placement sandbox; outline is trimmed to fit afterwards
 XB, MOAT = 40.0, 1.25      # vertical PoE isolation line, half of the 2.5 mm moat
 XN, NY = 30.0, 25.0        # above NY the line steps left to XN so the magnetics sit right behind the RJ45
@@ -495,37 +449,7 @@ print(f'placed {len(placed)}/{len(fps)}  outline {TW} x {TH} mm')
 if SPILL: print('bottom-side fallback:', ' '.join(sorted(set(SPILL))))
 
 # ============================================================== write back (pose + absolute pad/text angles)
-out = []; last = 0
-for ref, f in sorted(fps.items(), key=lambda kv: kv[1]['span'][0]):
-    a, b = f['span']; t = s[a:b]
-    u, v, r = placed[ref]
-    t = re.sub(r'\(translate [-\d.]+ [-\d.]+\)', f'(translate {X0+u:.4f} {Y0+v:.4f})', t, count=1)
-    t = re.sub(r'\(rotate [-\d.]+\)', f'(rotate {r % 360:g})', t, count=1)
-    if side[ref] != f['side']:   # flip: mirror local y, swap F/B layers, mirror text, reflect angles
-        old = f['rot']
-        def flip_at(m):
-            a = (r - (float(m[3] or 0) - old)) % 360
-            return f'(at {m[1]} {-float(m[2]):g}' + (f' {a:g})' if a else ')')
-        t = re.sub(r'\(at (-?[\d.]+) (-?[\d.]+)(?: (-?[\d.]+))?\)', flip_at, t)
-        t = re.sub(r'\((start|end|mid|center|xy) (-?[\d.]+) (-?[\d.]+)\)', lambda m: f'({m[1]} {m[2]} {-float(m[3]):g})', t)
-        t = re.sub(r'"([FB])\.(Cu|Paste|Mask|SilkS|Fab|CrtYd|Adhes)"', lambda m: f'"{"B" if m[1] == "F" else "F"}.{m[2]}"', t)
-        def mirror(m):
-            flags = sorted(set((m[3] or '').split()) ^ {'mirror'})
-            return '(effects' + m[1] + (' (justify ' + ' '.join(flags) + ')' if flags else '')
-        t = re.sub(r'\(effects(\s*\(font(?:[^()]|\([^()]*\))*\))(\s*\(justify ([^)]*)\))?', mirror, t)
-        delta = 0
-    else:
-        delta = (r - f['rot']) % 360
-    if delta:
-        def fix(m):
-            a = (float(m[3] or 0) + delta) % 360
-            return f'(at {m[1]} {m[2]}' + (f' {a:g})' if a else ')')
-        t = re.sub(r'\(at (-?[\d.]+) (-?[\d.]+)(?: (-?[\d.]+))?\)', fix, t)
-    if re.match(r'^(C|R|L|FB|TP|D|Q)\d', ref) and len(f['pads']) <= 4:   # passive refs to assembly drawing
-        t = re.sub(r'(\(property "Reference" "[^"]*"\s*\(at [^)]*\)\s*\(layer )"F\.SilkS"', r'\1"F.Fab"', t, count=1)
-    out.append(s[last:a]); out.append(t); last = b
-out.append(s[last:])
-board = ''.join(out)
+board = write(s, fps, {ref: (*placed[ref], side[ref]) for ref in fps})
 board, n = re.subn(r'(\(gr_rect\s*\(start )[-\d.]+ [-\d.]+(\)\s*\(end )[-\d.]+ [-\d.]+(\)(?:(?!\(gr_rect).)*?\(layer "Edge\.Cuts"\))',
                    lambda m: f'{m[1]}{X0:g} {Y0:g}{m[2]}{X0+TW:g} {Y0+TH:g}{m[3]}', board, count=1, flags=re.S)
 assert n == 1, 'outline rectangle not found'

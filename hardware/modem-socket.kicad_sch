@@ -9,6 +9,129 @@
 		(date "2026-10-07")
 	)
 	(lib_symbols
+		(symbol "Mechanical:MountingHole_Pad"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "H"
+			(at 0 6.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 0 4.445 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "mounting hole"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "MountingHole*Pad*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "MountingHole_Pad_0_1"
+			(circle
+				(center 0 1.27)
+				(radius 1.27)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "MountingHole_Pad_1_1"
+			(pin input line
+				(at 0 -2.54 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 		(symbol "Appliance:M2_B_67"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1749,9 +1872,9 @@
 					)
 				)
 				(pin passive line
-					(at 22.86 2.54 180)
+					(at 22.86 -5.08 180)
 					(length 5.08)
-					(name "NC"
+					(name "FT4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1767,9 +1890,9 @@
 					)
 				)
 				(pin passive line
-					(at 22.86 0 180)
+					(at 22.86 -2.54 180)
 					(length 5.08)
-					(name "NC"
+					(name "FT3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1803,9 +1926,9 @@
 					)
 				)
 				(pin passive line
-					(at 22.86 -2.54 180)
+					(at 22.86 0 180)
 					(length 5.08)
-					(name "NC"
+					(name "FT2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1821,9 +1944,9 @@
 					)
 				)
 				(pin passive line
-					(at 22.86 -5.08 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
-					(name "NC"
+					(name "FT1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2401,11 +2524,7 @@
 		(at 441.96 96.52)
 		(uuid "05027f44-be71-5a09-963e-a2624610012f")
 	)
-	(no_connect
-		(at 444.5 457.2)
-		(uuid "0a16703a-ce2c-5226-8369-e963ee620efb")
-	)
-	(no_connect
+		(no_connect
 		(at 441.96 93.98)
 		(uuid "0b8326ce-41ad-54a7-b0b3-40fc06ffb3f1")
 	)
@@ -2413,11 +2532,7 @@
 		(at 441.96 106.68)
 		(uuid "0d085d8c-32bf-55e8-a980-87d2a2493094")
 	)
-	(no_connect
-		(at 444.5 454.66)
-		(uuid "168f04a3-52f3-5f6b-9f90-475a26e576bb")
-	)
-	(no_connect
+		(no_connect
 		(at 441.96 101.6)
 		(uuid "19db1906-741f-50d7-aa2b-d09c81757d6d")
 	)
@@ -2485,11 +2600,7 @@
 		(at 487.68 76.2)
 		(uuid "7c9285fb-2b06-5659-8da9-225915b529af")
 	)
-	(no_connect
-		(at 444.5 452.12)
-		(uuid "7fb4952e-5ed1-55b9-802d-138a02f92d00")
-	)
-	(no_connect
+		(no_connect
 		(at 487.68 101.6)
 		(uuid "86c8f307-6730-5de3-8885-db4b3f3585c7")
 	)
@@ -2537,11 +2648,7 @@
 		(at 441.96 104.14)
 		(uuid "f202f89a-a10a-5a7f-a47f-ec8e4cf202ae")
 	)
-	(no_connect
-		(at 444.5 459.74)
-		(uuid "f4dbd95b-b77a-50df-8337-9144e096cb04")
-	)
-	(wire
+		(wire
 		(pts
 			(xy 114.3 99.06) (xy 104.14 99.06)
 		)
@@ -8059,4 +8166,137 @@
 	(global_label "M2_PIN46" (shape passive) (at 495.3 81.28 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4746eb09-ad68-5121-8ad2-5ca89fb2035e"))
 	(wire (pts (xy 487.68 83.82) (xy 495.3 83.82)) (stroke (width 0) (type default)) (uuid "475d15fb-9e1f-533b-ad9e-f09254138b95"))
 	(global_label "M2_PIN48" (shape passive) (at 495.3 83.82 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "63672d43-62d3-5c52-bd0e-66ff419b01c3"))
+		(wire
+		(pts
+			(xy 444.5 452.12) (xy 454.66 452.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "737ade32-8187-5bf1-ae33-efb6428a1829")
 	)
+	(global_label "SIM1_RESET"
+		(shape passive)
+		(at 454.66 452.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "323fc9b6-eabd-5d59-841d-57c7900746cc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 454.66 452.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 444.5 454.66) (xy 454.66 454.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "626d9536-8771-55e4-91a3-6f277b0bab29")
+	)
+	(global_label "SIM1_CLK"
+		(shape passive)
+		(at 454.66 454.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8b94913d-49a7-5f24-b2ca-65964fa40846")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 454.66 454.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 444.5 457.2) (xy 454.66 457.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a5e630a-b9f1-52de-a43a-dcfd6c3da3fa")
+	)
+	(global_label "SIM1_DATA"
+		(shape passive)
+		(at 454.66 457.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0d3c794b-1486-53a1-82ae-0c02de558f0e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 454.66 457.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 444.5 459.74) (xy 454.66 459.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bafaa311-45f4-5840-be1f-568fc55d67b7")
+	)
+	(global_label "SIM1_VCC"
+		(shape passive)
+		(at 454.66 459.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9406e70b-ace4-5473-923f-693345b02573")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 454.66 459.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(symbol (lib_id "Mechanical:MountingHole_Pad") (at 551.18 101.6 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "52116f5e-2868-5a18-bdc7-b82ff0ecfca4") (property "Reference" "H2001" (at 553.7199999999999 100.33 0) (effects (font (size 1.27 1.27))))(property "Value" "M.2 3042 standoff" (at 553.7199999999999 102.86999999999999 0) (effects (font (size 1.27 1.27))))(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad" (at 551.18 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 551.18 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Description" "M2 card hold-down at the end of a type 3042 module; plated, tied to GND" (at 551.18 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "338c4836-2c65-57d2-bc20-b3b900cc1d87")) (instances (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "H2001") (unit 1))) (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "H2001") (unit 1)))))
+	(global_label "GND" (shape passive) (at 551.18 104.14 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "21a7828c-96ff-51cd-8f16-a3725d07f143"))
+	(symbol (lib_id "Mechanical:MountingHole_Pad") (at 568.96 101.6 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "236b33d9-aa11-52f9-9247-7a147825881a") (property "Reference" "H2002" (at 571.5 100.33 0) (effects (font (size 1.27 1.27))))(property "Value" "M.2 3052 standoff" (at 571.5 102.86999999999999 0) (effects (font (size 1.27 1.27))))(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad" (at 568.96 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 568.96 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Description" "M2 card hold-down at the end of a type 3052 module; plated, tied to GND" (at 568.96 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "d66f2d89-9842-569b-8faf-d192eb5ff199")) (instances (project "appliance" (path "/4be0941e-e923-51bb-85b8-e69833501985/32323d0b-421a-50fa-979e-c218b8a047ae" (reference "H2002") (unit 1))) (project "modem-socket" (path "/8d52cbde-7436-51e9-9286-bc7e0a90a1f2" (reference "H2002") (unit 1)))))
+	(global_label "GND" (shape passive) (at 568.96 104.14 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6d004baa-41a6-52ee-9eec-0a92b1735d90"))
+	(text "M.2 card hold-downs: plated M2 holes on the card centreline at the end of a 3042 (H2001) and a 3052 (H2002)\nmodule. Card stop estimated from the MDT420 side view; confirm against a seated card before release." (at 520.7 88.9 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3110c211-92de-51b0-b0e8-3866cdfea4d0"))
+)

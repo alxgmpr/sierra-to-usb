@@ -400,6 +400,7 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Appliance:USB_C_Receptacle_USB2.0_Device" (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "J" (at 0 10.16 0) (effects (font (size 1.27 1.27)))) (property "Value" "USB_C_Receptacle_USB2.0_Device" (at 0 7.62 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "USB 2.0 Type-C receptacle, device (UFP) wiring" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "USB_C_Receptacle_USB2.0_Device_0_1" (rectangle (start -17.78 5.08) (end 17.78 -7.62) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "USB_C_Receptacle_USB2.0_Device_1_1" (pin passive line (at -22.86 2.54 0) (length 5.08) (name "VBUS" (effects (font (size 1.27 1.27)))) (number "A4" (effects (font (size 1.27 1.27))))) (pin passive line (at -22.86 2.54 0) (length 5.08) (hide yes) (name "VBUS" (effects (font (size 1.27 1.27)))) (number "A9" (effects (font (size 1.27 1.27))))) (pin passive line (at -22.86 2.54 0) (length 5.08) (hide yes) (name "VBUS" (effects (font (size 1.27 1.27)))) (number "B4" (effects (font (size 1.27 1.27))))) (pin passive line (at -22.86 2.54 0) (length 5.08) (hide yes) (name "VBUS" (effects (font (size 1.27 1.27)))) (number "B9" (effects (font (size 1.27 1.27))))) (pin passive line (at -22.86 0 0) (length 5.08) (name "D-" (effects (font (size 1.27 1.27)))) (number "A7" (effects (font (size 1.27 1.27))))) (pin passive line (at -22.86 0 0) (length 5.08) (hide yes) (name "D-" (effects (font (size 1.27 1.27)))) (number "B7" (effects (font (size 1.27 1.27))))) (pin passive line (at -22.86 -2.54 0) (length 5.08) (name "D+" (effects (font (size 1.27 1.27)))) (number "A6" (effects (font (size 1.27 1.27))))) (pin passive line (at -22.86 -2.54 0) (length 5.08) (hide yes) (name "D+" (effects (font (size 1.27 1.27)))) (number "B6" (effects (font (size 1.27 1.27))))) (pin passive line (at -2.54 -12.7 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "A1" (effects (font (size 1.27 1.27))))) (pin passive line (at -2.54 -12.7 90) (length 5.08) (hide yes) (name "GND" (effects (font (size 1.27 1.27)))) (number "A12" (effects (font (size 1.27 1.27))))) (pin passive line (at -2.54 -12.7 90) (length 5.08) (hide yes) (name "GND" (effects (font (size 1.27 1.27)))) (number "B1" (effects (font (size 1.27 1.27))))) (pin passive line (at -2.54 -12.7 90) (length 5.08) (hide yes) (name "GND" (effects (font (size 1.27 1.27)))) (number "B12" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 -12.7 90) (length 5.08) (name "SHIELD" (effects (font (size 1.27 1.27)))) (number "SH" (effects (font (size 1.27 1.27))))) (pin passive line (at 22.86 2.54 180) (length 5.08) (name "CC1" (effects (font (size 1.27 1.27)))) (number "A5" (effects (font (size 1.27 1.27))))) (pin passive line (at 22.86 0 180) (length 5.08) (name "CC2" (effects (font (size 1.27 1.27)))) (number "B5" (effects (font (size 1.27 1.27))))) (pin passive line (at 22.86 -2.54 180) (length 5.08) (name "SBU1" (effects (font (size 1.27 1.27)))) (number "A8" (effects (font (size 1.27 1.27))))) (pin passive line (at 22.86 -5.08 180) (length 5.08) (name "SBU2" (effects (font (size 1.27 1.27)))) (number "B8" (effects (font (size 1.27 1.27)))))) (embedded_fonts no))
 		(symbol "Connector_Generic:Conn_01x03"
 			(pin_names
 				(offset 1.016)
@@ -1631,16 +1632,6 @@
 		)
 		(uuid "e931866b-f099-5c33-959c-14907ac09859")
 	)
-	(junction
-		(at 73.66 231.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d56eb700-cfd3-4572-a40c-5627b72f993e")
-	)
-	(no_connect
-		(at 50.8 213.36)
-		(uuid "84a663e7-3437-59a0-9d43-dd0e041a06c2")
-	)
 	(wire
 		(pts
 			(xy 223.52 309.88) (xy 223.52 320.04)
@@ -1820,16 +1811,6 @@
 			(type default)
 		)
 		(uuid "58584adf-98c0-53f4-abf6-1043305a5e2c")
-	)
-	(wire
-		(pts
-			(xy 73.66 220.98) (xy 73.66 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e09bc10-dbbb-5b05-9593-034e426707c7")
 	)
 	(wire
 		(pts
@@ -4463,7 +4444,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Appliance:USB_B_Micro_Device")
+		(lib_id "Appliance:USB_C_Receptacle_USB2.0_Device")
 		(at 73.66 208.28 0)
 		(unit 1)
 		(body_style 1)
@@ -4483,7 +4464,7 @@
 				)
 			)
 		)
-		(property "Value" "RECOVERY USB"
+		(property "Value" "RECOVERY USB-C"
 			(at 73.66 187.96 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4493,7 +4474,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 			(at 73.66 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -4524,7 +4505,7 @@
 				)
 			)
 		)
-		(property "MPN" "10103594-0001LF"
+		(property "MPN" "USB4105-GF-A"
 			(at 73.66 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -4535,7 +4516,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Amphenol ICC"
+		(property "Manufacturer" "GCT"
 			(at 73.66 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -4546,7 +4527,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C428495"
+		(property "LCSC" "C3020560"
 			(at 73.66 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -4557,27 +4538,7 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "49a4cc54-3c37-41e2-b2fd-83a5dbc89569")
-		)
-		(pin "2"
-			(uuid "7924e7e8-46a1-4b02-aa57-d65d45ea16ec")
-		)
-		(pin "3"
-			(uuid "3c859c5b-685a-476a-8c99-9c7ac6a37385")
-		)
-		(pin "4"
-			(uuid "c623bb0d-c3cb-4ac9-8857-65f21bdfbd44")
-		)
-		(pin "5"
-			(uuid "0f3abcf0-d00b-4b24-90ff-6fcc6a8851cd")
-		)
-		(pin "6"
-			(uuid "d1395e08-5799-46bb-9e6a-fc22cff811c2")
-		)
-		(pin "SH"
-			(uuid "be811642-d592-4c56-b3e5-d1a53059a4ca")
-		)
+		(pin "A4" (uuid "b67dae0c-4255-5e1b-ad0c-ab347734e212"))(pin "A9" (uuid "5d0bca03-66a0-5843-8298-94e47f5f7035"))(pin "B4" (uuid "8b3d28e8-11ce-59fd-b724-ed9a00489def"))(pin "B9" (uuid "d76957c2-4c14-58e2-9cc4-b8ce4e48fc52"))(pin "A7" (uuid "9b50ac1c-0366-50ca-ac24-b6ef614b8d93"))(pin "B7" (uuid "5a379f06-9293-5147-a85a-b1c31b06e7b7"))(pin "A6" (uuid "9f71f9c2-3f04-5b96-b178-c4aad4c73208"))(pin "B6" (uuid "c849e8b0-d989-5650-9acb-e3067a417425"))(pin "A1" (uuid "cce45a2f-44cf-554e-8f88-2a5c5a7e78f2"))(pin "A12" (uuid "00d5be17-0408-56ad-817e-4d7afbf53304"))(pin "B1" (uuid "c13e167a-1c1d-553c-91d1-a0f75237bd30"))(pin "B12" (uuid "67fe0ec1-e2a2-5fb2-af1d-4412c1f1edb4"))(pin "SH" (uuid "a787739f-355b-57dc-a750-53e54799289e"))(pin "A5" (uuid "d3b27e52-7ee1-53de-ab0a-b9bc44a67147"))(pin "B5" (uuid "f5e787fb-5d3b-5c58-8289-61140e231cf9"))(pin "A8" (uuid "a85da5a4-1b41-51b0-985d-775fbdc1cf32"))(pin "B8" (uuid "02d9d6a6-4647-50c8-82ac-646794c27f47"))
 		(instances
 			(project "appliance"
 				(path "/4be0941e-e923-51bb-85b8-e69833501985/267a3cab-d941-544f-a8cc-2a9d0af95195"
@@ -8112,4 +8073,15 @@
 			)
 		)
 	)
+
+	(label "RECOVERY_CC1" (at 96.52 205.74 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e453b0f3-1b33-5ae6-a3db-4c350e7f413e"))
+	(label "RECOVERY_CC2" (at 96.52 208.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c22bfa14-4382-55b6-a34f-6eedbcea963f"))
+	(no_connect (at 96.52 210.82) (uuid "56a2bf36-a13c-58bb-bb80-54e58c2a4676"))
+	(no_connect (at 96.52 213.36) (uuid "e0481659-e3d0-5d86-9891-fdd8f9d78649"))
+	(symbol (lib_id "Device:R_Small_US") (at 119.38 210.82 0) 		(unit 1) 		(body_style 1) 		(exclude_from_sim no) 		(in_bom yes) 		(on_board yes) 		(in_pos_files yes) 		(dnp no) 		(uuid "c1cf49af-649a-5188-b781-829b90c2ad85") 		(property "Reference" "R1212" 			(at 123.19 209.54999999999998 0) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Value" "5.1kR" 			(at 123.19 212.08999999999997 0) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" 			(at 119.38 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Datasheet" "" 			(at 119.38 210.82 0) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Description" "" 			(at 119.38 210.82 0) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "MPN" "RC0603FR-075K1L" 			(at 119.38 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Manufacturer" "Yageo" 			(at 119.38 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Tolerance" "1%" 			(at 119.38 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Power Rating" "0.1W" 			(at 119.38 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(pin "1" 			(uuid "dd9e0db7-bc3a-5e03-9c77-f151daa18c79") 		) 		(pin "2" 			(uuid "9022dc99-0745-56f9-820c-4c21b6f4311a") 		) 		(instances 			(project "appliance" 				(path "/4be0941e-e923-51bb-85b8-e69833501985/267a3cab-d941-544f-a8cc-2a9d0af95195" 					(reference "R1212") 					(unit 1) 				) 			) 			(project "host-interface" 				(path "/5f14727b-a713-5e04-952a-c7e872fa1af3" 					(reference "R1212") 					(unit 1) 				) 			) 		) 	)
+	(label "RECOVERY_CC1" (at 119.38 208.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8527677a-812a-5467-b4d1-e8d572ebc89f"))
+	(global_label "GND" (shape passive) (at 119.38 213.35999999999999 270) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1281a33c-66cb-5b81-9761-9d4da355bed4"))
+	(symbol (lib_id "Device:R_Small_US") (at 129.54 210.82 0) 		(unit 1) 		(body_style 1) 		(exclude_from_sim no) 		(in_bom yes) 		(on_board yes) 		(in_pos_files yes) 		(dnp no) 		(uuid "45f62c16-4fe3-5ae3-a984-91b739187a60") 		(property "Reference" "R1213" 			(at 133.35 209.54999999999998 0) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Value" "5.1kR" 			(at 133.35 212.08999999999997 0) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" 			(at 129.54 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Datasheet" "" 			(at 129.54 210.82 0) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Description" "" 			(at 129.54 210.82 0) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "MPN" "RC0603FR-075K1L" 			(at 129.54 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Manufacturer" "Yageo" 			(at 129.54 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Tolerance" "1%" 			(at 129.54 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(property "Power Rating" "0.1W" 			(at 129.54 210.82 0) 			(hide yes) 			(show_name no) 			(do_not_autoplace no) 			(effects 				(font 					(size 1.27 1.27) 				) 			) 		) 		(pin "1" 			(uuid "00fdc462-ab1f-5e62-9dd5-b24770113f8b") 		) 		(pin "2" 			(uuid "d5793bfd-8276-5af2-897a-82f99599ea76") 		) 		(instances 			(project "appliance" 				(path "/4be0941e-e923-51bb-85b8-e69833501985/267a3cab-d941-544f-a8cc-2a9d0af95195" 					(reference "R1213") 					(unit 1) 				) 			) 			(project "host-interface" 				(path "/5f14727b-a713-5e04-952a-c7e872fa1af3" 					(reference "R1213") 					(unit 1) 				) 			) 		) 	)
+	(label "RECOVERY_CC2" (at 129.54 208.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "23084cca-dd1a-5406-8f3f-7438c08ba434"))
+	(global_label "GND" (shape passive) (at 129.54 213.35999999999999 270) (effects (font (size 1.27 1.27)) (justify left)) (uuid "74a9fcc8-2192-526e-82d7-c610a233459d"))
 )

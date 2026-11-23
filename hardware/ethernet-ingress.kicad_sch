@@ -3099,9 +3099,9 @@
 					)
 				)
 				(pin passive line
-					(at 22.86 2.54 180)
+					(at 22.86 -5.08 180)
 					(length 5.08)
-					(name "NC"
+					(name "FT4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3117,9 +3117,9 @@
 					)
 				)
 				(pin passive line
-					(at 22.86 0 180)
+					(at 22.86 -2.54 180)
 					(length 5.08)
-					(name "NC"
+					(name "FT3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3153,9 +3153,9 @@
 					)
 				)
 				(pin passive line
-					(at 22.86 -2.54 180)
+					(at 22.86 0 180)
 					(length 5.08)
-					(name "NC"
+					(name "FT2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3171,9 +3171,9 @@
 					)
 				)
 				(pin passive line
-					(at 22.86 -5.08 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
-					(name "NC"
+					(name "FT1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3901,39 +3901,7 @@
 		)
 		(uuid "5eeae4dd-b8de-5e0a-8215-17d076aa45ca")
 	)
-	(no_connect
-		(at 434.34 213.36)
-		(uuid "32aa3f53-65c6-552e-854e-740a98de9a24")
-	)
-	(no_connect
-		(at 434.34 210.82)
-		(uuid "4482859a-c303-5767-9658-3ee8d22a0ffe")
-	)
-	(no_connect
-		(at 434.34 215.9)
-		(uuid "4b120c94-e8f1-5de7-a2d2-30e48b7f5203")
-	)
-	(no_connect
-		(at 434.34 299.72)
-		(uuid "4b1b57c9-737c-5889-9bfc-59068ec0809a")
-	)
-	(no_connect
-		(at 434.34 302.26)
-		(uuid "4c0fc493-7aa1-5651-927f-098ced453c1d")
-	)
-	(no_connect
-		(at 434.34 304.8)
-		(uuid "508e0b94-a2b0-5201-b6e3-d65e72007ffd")
-	)
-	(no_connect
-		(at 434.34 297.18)
-		(uuid "569b40e5-1de7-5733-9693-4291310bd8db")
-	)
-	(no_connect
-		(at 434.34 208.28)
-		(uuid "e3ecb3b1-b7fe-5d32-8888-3b4e63096042")
-	)
-	(wire
+									(wire
 		(pts
 			(xy 403.86 91.44) (xy 414.02 91.44)
 		)
@@ -8728,6 +8696,262 @@
 				(path "/c24c6c8d-1d8a-59ff-8ae8-b2406620f0c4"
 					(reference "C1863")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 208.28) (xy 444.5 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd5dd845-9f62-5afd-bd79-5ac78eb8d159")
+	)
+	(global_label "ETH_MDI0_P"
+		(shape passive)
+		(at 444.5 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bf8f41d1-d987-5c56-915c-ddf78e5727af")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 444.5 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 210.82) (xy 444.5 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93f954b5-278f-50f9-9f79-9b701d98f30e")
+	)
+	(global_label "ETH_MDI0_N"
+		(shape passive)
+		(at 444.5 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c52f27b9-b991-5a76-9934-330492cda229")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 444.5 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 213.36) (xy 444.5 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69ff2907-2084-52c3-98a6-e1e568b698a5")
+	)
+	(global_label "ETH_MDI1_P"
+		(shape passive)
+		(at 444.5 213.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7087208d-d99d-59a0-862d-2845b033768f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 444.5 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 215.9) (xy 444.5 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36d48746-43f8-5596-b5a1-38f3dab2b125")
+	)
+	(global_label "ETH_MDI1_N"
+		(shape passive)
+		(at 444.5 215.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4c3e40e1-0b2d-5985-976e-8b40b6599cc2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 444.5 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 297.18) (xy 444.5 297.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "236f540e-e3f6-5593-af86-4431f79259ea")
+	)
+	(global_label "ETH_MDI2_P"
+		(shape passive)
+		(at 444.5 297.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a5710657-77f4-5f04-9b89-d3035bfd0ccd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 444.5 297.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 299.72) (xy 444.5 299.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "611b2508-37c6-575d-95d6-da03154222c5")
+	)
+	(global_label "ETH_MDI2_N"
+		(shape passive)
+		(at 444.5 299.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0a4a5893-a97d-572f-ac6e-85e18c2b10df")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 444.5 299.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 302.26) (xy 444.5 302.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b53f130-e0ef-5809-b715-c9b583431e7c")
+	)
+	(global_label "ETH_MDI3_P"
+		(shape passive)
+		(at 444.5 302.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "449bd537-c7b7-5ca6-8a55-30d2d4d5c9a0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 444.5 302.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 304.8) (xy 444.5 304.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53c59da1-f61a-5a46-a875-9e869e21bb26")
+	)
+	(global_label "ETH_MDI3_N"
+		(shape passive)
+		(at 444.5 304.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4e06df20-c271-569d-b59d-98a8e2a1984d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 444.5 304.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)

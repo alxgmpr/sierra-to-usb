@@ -444,6 +444,280 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Appliance:TC2030_SWD"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TC2030_SWD"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TC2030_SWD_1_1"
+				(rectangle
+					(start -1.27 6.35)
+					(end 1.27 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "SWDIO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "SWCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "nRESET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "SWO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -3116,12 +3390,6 @@
 		(color 0 0 0 0)
 		(uuid "bbc012ee-b25c-5c3e-9862-a85b3a1b1746")
 	)
-	(junction
-		(at 218.44 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dc7f7aec-e555-4717-af95-f10852c62dfd")
-	)
 	(no_connect
 		(at 134.62 124.46)
 		(uuid "31b57d63-e5e2-5d11-9773-06ca4cea8d6b")
@@ -3153,16 +3421,6 @@
 			(type default)
 		)
 		(uuid "1a6c6b24-9a4a-529d-9f2c-50514ec0b490")
-	)
-	(wire
-		(pts
-			(xy 218.44 172.72) (xy 218.44 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24c6cf03-7c04-5ca5-98e4-07685faf0a3c")
 	)
 	(wire
 		(pts
@@ -3393,16 +3651,6 @@
 			(type default)
 		)
 		(uuid "86c9d742-baec-553f-8268-875925156957")
-	)
-	(wire
-		(pts
-			(xy 243.84 172.72) (xy 218.44 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c93da2b-34be-5999-a4b0-55721a28698d")
 	)
 	(wire
 		(pts
@@ -4705,7 +4953,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x06")
+		(lib_id "Appliance:TC2030_SWD")
 		(at 248.92 165.1 0)
 		(unit 1)
 		(body_style 1)
@@ -4726,7 +4974,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SWD / recovery"
+		(property "Value" "SWD TC2030"
 			(at 252.73 160.02 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4737,7 +4985,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Recovery:Wuerth_61300611121_1x06_P2.54mm_Vertical"
+		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical"
 			(at 248.92 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -7423,4 +7671,8 @@
 	(global_label "LED_WAN_N" (shape passive) (at 71.12 114.3 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6bf4d59e-8c5f-53b2-b986-02de1cd85f5a"))
 	(wire (pts (xy 78.74 116.84) (xy 71.12 116.84)) (stroke (width 0) (type default)) (uuid "0e5c972d-9f88-5923-8241-041cd8db1fb6"))
 	(global_label "LED_FAULT_N" (shape passive) (at 71.12 116.84 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2b6078c7-ded4-5ff5-9deb-493f4cbbc602"))
+		(no_connect
+		(at 243.84 172.72)
+		(uuid "f84007f7-73f1-5d5f-9332-acc3997ac94c")
 	)
+)

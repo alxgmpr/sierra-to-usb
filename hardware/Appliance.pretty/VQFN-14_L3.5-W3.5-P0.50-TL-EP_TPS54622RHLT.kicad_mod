@@ -173,46 +173,10 @@
 		(layer "Cmts.User")
 		(uuid "8457e0e9-b342-4007-ac4c-57c47d2d9295")
 	)
-	(fp_line
-		(start -1.75 -1.75)
-		(end 1.75 -1.75)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "12dd4a37-7402-4c42-99b4-b31bb64b8c9d")
-	)
-	(fp_line
-		(start -1.75 1.75)
-		(end -1.75 -1.75)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "ca2f9e7d-75e1-432d-99a2-bbbd8a5b1c9b")
-	)
-	(fp_line
-		(start 1.75 -1.75)
-		(end 1.75 1.75)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "71289dda-899a-42d2-ad50-637ac0731ab9")
-	)
-	(fp_line
-		(start 1.75 1.75)
-		(end -1.75 1.75)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "826cab8f-6dc3-4173-94fe-10609c05e41c")
-	)
+
+
+
+
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
@@ -224,6 +188,8 @@
 			)
 		)
 	)
+
+	(fp_rect (start -2.4 -2.4) (end 2.4 2.4) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd"))
 	(pad "1" smd rect
 		(at -0.75 -1.72 90)
 		(size 0.8 0.28)
