@@ -320,6 +320,12 @@
 		(uuid "f4e43de4-00a9-47b7-9406-6d22998224a0")
 	)
 (pad "5" smd rect
+		(at 0.66 0 180)
+		(size 3.75 3.91)
+		(layers "F.Cu")
+		(uuid "e419909e-5214-502d-9a3c-fc2b7feadb0b")
+	)
+(pad "5" smd rect
 		(at 2.67 1.905 180)
 		(size 1.27 0.61)
 		(layers "F.Cu" "F.Mask" "F.Paste")
@@ -344,4 +350,15 @@
 		(uuid "a36af04f-5005-4c40-84f8-e8c0a26cb18c")
 	)
 (embedded_fonts no)
+	(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_FDMS86252_Power56.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

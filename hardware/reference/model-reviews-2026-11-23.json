@@ -1,6 +1,6 @@
 {
  "reviewed": "2026-11-23",
- "scope": "Envelope models for U2301 (W25Q128JW WSON-8 8x6) and U1710 (TPS23730 RMT VQFN). C1723/C1729 moved to stock CP_Elec footprints with stock models, J1201 to a stock USB-C footprint with its stock model. Remaining holds need vendor CAD (RJ45, magnetics, SIM, Q1706, WE-SL5) or are bare-copper / mechanical footprints.",
+ "scope": "Envelope models for U2301 (W25Q128JW WSON-8 8x6) and U1710 (TPS23730 RMT VQFN). C1723/C1729 moved to stock CP_Elec footprints with stock models, J1201 to a stock USB-C footprint with its stock model. Remaining holds need vendor CAD (RJ45, magnetics, SIM, Q1706, WE-SL5) or are bare-copper / mechanical footprints. Vendor STEPs (Amphenol RJE49, Pulse HX4110NL, Wurth 744272251) fitted to their footprints by matching lead/pin feet to pad centres; FDMS86252 and the Molex nano-SIM are envelopes measured from download-only vendor CAD.",
  "source_hashes": {},
  "attached": [
   {
@@ -54,47 +54,142 @@
    "z_min_mm": 0.0,
    "kind": "envelope",
    "source": "TPS23730 RMT0045A VQFN-45: 5.00 (x) x 7.00 (y) nominal per the TI PMP22477 footprint's body outline,\nA 1.00 max (TI VQFN family); terminals and the two thermal pads at the footprint copper shrunk 0.05 per\nside. Pin 1 top-left (-2.4, -2.6)."
+  },
+  {
+   "footprint": "Appliance:Sierra_RJE491881401_1x08-1MP_P1.02mm",
+   "file": "Appliance.3dshapes/Sierra_RJE491881401.step",
+   "sha256": "c9d91ecc6574ded6805a42dfac8fb2ea966f246af70883967b42b8ca127aa9c3",
+   "references": [
+    "J1701"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    16.9,
+    20.7004,
+    15.9602
+   ],
+   "z_min_mm": -3.0,
+   "kind": "vendor",
+   "source": "Amphenol RJE49-188-1X01 Rev T1 vendor STEP (reference/vendor-3d/amphenol-rje49-188-1x01-3d.zip, family file\ncovering RJE491881401). Native Z is height (top +1.01, standoffs -11.95, pin tips -14.95). Fitted to the\nfootprint: all 10 pin tips land on the pad centres within 0.001 mm with no rotation; seating on the standoffs.\nBaked: translate (42.9, -17.031, 11.95)."
+  },
+  {
+   "footprint": "Appliance:Sierra_HX4110NL_2x12_P1.27mm",
+   "file": "Appliance.3dshapes/Sierra_HX4110NL.step",
+   "sha256": "125b39a27fabfff8c6af891d65790cfd8bff35ac56f482b748b954dfd5a65f03",
+   "references": [
+    "T1701"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    16.4592,
+    9.525,
+    2.032
+   ],
+   "z_min_mm": -0.0002,
+   "kind": "vendor",
+   "source": "Pulse HX4110NL vendor STEP (reference/vendor-3d/pulse-hx4110nl-3d.zip). Native X length, Y height (lead feet at\n-0.121), Z width. Map X = x, Y = -z, Z = y; the 24 lead feet land on the pad centres within 0.03 mm and the\npin-1 dot sits next to pad 1 (the 180-degree fit puts it at pad 13). Baked translate (2.1054, 0.529, 0.121)."
+  },
+  {
+   "footprint": "Inductor_SMD:L_CommonModeChoke_Wuerth_WE-SL5",
+   "file": "Appliance.3dshapes/Sierra_WE-SL5_744272251.step",
+   "sha256": "7bcae009c6d90ce2c69d2f775f47cd7df6a018c2b09739f8eea4b7e0f9301895",
+   "references": [
+    "L1702"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    8.7,
+    10.0,
+    6.0
+   ],
+   "z_min_mm": -0.0,
+   "kind": "vendor",
+   "source": "Wurth 744272251 (WE-SL5) rev1 vendor STEP (reference/vendor-3d/wurth-744272251-rev1-3d.zip). Native frame is\nKiCad's (Z up, centred); the terminal bottoms sit 0.3 below the body at Z=-0.3 and land on the stock\nL_CommonModeChoke_Wuerth_WE-SL5 pads (rms 0.16 mm). Baked translate (0, 0, 0.3)."
+  },
+  {
+   "footprint": "PoE:TI_TRANS_Fairchild_PQFN08A",
+   "file": "Appliance.3dshapes/Sierra_FDMS86252_Power56.step",
+   "sha256": "80fc622c00f7df80942dc58803a6c43c4ed9bd435ef4fbc6673c6640b7cf9d5c",
+   "references": [
+    "Q1706"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    6.51,
+    4.9,
+    1.11
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "FDMS86252 Power56 (Q1706): envelope measured from the onsemi/SnapMagic STEP (not redistributable, so not\nstored): body 5.80 (x) x 4.90 (y), top 1.10, standoff 0.05; terminals and drain tab at the footprint copper\nshrunk 0.05. Native fit put pin 1's marker next to pad 1 at (-2.67, -1.905)."
+  },
+  {
+   "footprint": "Appliance:SIM-SMD_1042240820",
+   "file": "Appliance.3dshapes/Sierra_Molex_1042240820.step",
+   "sha256": "aa6a94ff3663edfc1951448e7a66c80be1d7d2c6c3d0a682217ae1f9a10836ab",
+   "references": [
+    "J2002"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    11.0,
+    12.98,
+    1.16
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "Molex 1042240820 nano-SIM push/pull (J2002): envelope measured from the Molex/TraceParts STEP (terms bar\nredistribution, so not stored): shell 10.35 (x) x 12.58 (y) at y -6.37..6.21, height 1.16 (1.11 nominal);\ncontact and peg lands at the footprint copper shrunk 0.1."
   }
  ],
  "attachment_references": {
   "Appliance.3dshapes/Sierra_EEEFK1J470P.step": []
  },
  "remaining_holds": [
-  {
-   "footprint": "Appliance:SIM-SMD_1042240820",
-   "references": [
-    "J2002"
-   ],
-   "blocker": "Molex 1042240820 hinged/cover geometry and insertion clearance require exact vendor CAD and seating datum; no verified asset obtained."
-  },
-  {
-   "footprint": "Appliance:Sierra_HX4110NL_2x12_P1.27mm",
-   "references": [
-    "T1701"
-   ],
-   "blocker": "Pulse HX4110NL drawing is archived; transformer body, stand-off and lead bend need a matching model; installed stock path is absent."
-  },
-  {
-   "footprint": "Appliance:Sierra_RJE491881401_1x08-1MP_P1.02mm",
-   "references": [
-    "J1701"
-   ],
-   "blocker": "Amphenol RJE49 drawing archived; no exact CAD obtained. RJ45 substitutes have different panel, shield-tab and LED geometry."
-  },
-  {
-   "footprint": "PoE:TI_TRANS_Fairchild_PQFN08A",
-   "references": [
-    "Q1706"
-   ],
-   "blocker": "FDMS86252 exact Power56/PQFN terminal arrangement and seating geometry need vendor package CAD; generic eight-pin QFN is not sufficient."
-  },
-  {
-   "footprint": "Inductor_SMD:L_CommonModeChoke_Wuerth_WE-SL5",
-   "references": [
-    "L1702"
-   ],
-   "blocker": "Wurth publishes the exact 744272251 STEP (WE-SL5), but automated retrieval returns HTTP 403 and the KiCad 10.99 install ships no STEP for this stock footprint; needs a manual download."
-  },
   {
    "footprint": "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical",
    "references": [

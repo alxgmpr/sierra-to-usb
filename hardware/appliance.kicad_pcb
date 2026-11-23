@@ -96646,6 +96646,17 @@
 			(uuid "4234af46-3849-56c5-9151-ebbff34892e5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_Molex_1042240820.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 		(layer "F.Cu")
@@ -121345,6 +121356,17 @@
 			(uuid "85139bf8-f77d-56db-94ec-8ce366e689e9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_HX4110NL.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 	(layer "B.Cu")
@@ -139203,6 +139225,17 @@
 			(uuid "b6523f70-10fb-506e-9798-223b1fc9ae9c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_RJE491881401.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 	(layer "B.Cu")
@@ -175425,6 +175458,13 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 	 (net "/PoE PD and isolated 12V flyback/PMP_D1715_A") (pinfunction "G_4") (pintype "passive") (uuid "f3f2bec8-30c4-5d32-8a03-32d882f73205"))
 (pad "5" smd rect
+		(at 0.66 0 180)
+		(size 3.75 3.91)
+		(layers "F.Cu")
+		 (net "/PoE PD and isolated 12V flyback/PMP_D1712_A") (pinfunction "D_5") (pintype "passive")
+		(uuid "f730100f-aa61-5e42-be12-721ab12a005a")
+	)
+(pad "5" smd rect
 		(at 2.67 1.905 180)
 		(size 1.27 0.61)
 		(layers "F.Cu" "F.Mask" "F.Paste")
@@ -175452,7 +175492,18 @@
 (path "/09654a72-b250-5725-8eb9-71b50392f44d/75355ea4-58a1-5ac6-b9ba-b8ddee17a858")
 (sheetname "/PoE PD and isolated 12V flyback/")
 (sheetfile "poe-flyback.kicad_sch")
-)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_FDMS86252_Power56.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 (layer "F.Cu")
 (uuid "c87d14f8-2fb5-5e2b-ab9c-5183d164cdc3")
@@ -180022,7 +180073,18 @@
 (path "/d141ea62-a75e-563e-b360-af2f82564db9/31365eda-8be5-44bd-a135-e489785acde6")
 (sheetname "/PoE active input bridge/")
 (sheetfile "poe-input.kicad_sch")
-)
+		(model "${KIPRJMOD}/Appliance.3dshapes/Sierra_WE-SL5_744272251.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Capacitor_SMD:CP_Elec_10x10.5"
 (layer "F.Cu")
 (uuid "e60c4c20-41b2-5342-b654-3821a3978d5b")

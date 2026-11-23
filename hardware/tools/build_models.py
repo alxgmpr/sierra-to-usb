@@ -154,7 +154,38 @@ def mdt420():
         src = zipfile.ZipFile(HW / 'reference/amphenol-mdt420-3d.zip').extract('MDT420B0X411_A.stp', tmp)
         return read_parts(src, kicad_trsf((0, 1.9, -2.43), (-90, 0, 0)))
 
-VENDOR_BUILDS = {powerdi5, keystone5019, efd25, mdt420}
+def mat_trsf(rows, offset):
+    """gp_Trsf from a 3x3 axis permutation (rows map native -> KiCad axes) and a translation."""
+    t = gp_Trsf(); (a, b, c), (d, e, f), (g, h, i) = rows
+    t.SetValues(a, b, c, offset[0], d, e, f, offset[1], g, h, i, offset[2]); return t
+
+def vendor_zip(name, member):
+    import tempfile, zipfile
+    tmp = tempfile.mkdtemp(); return zipfile.ZipFile(HW / 'reference/vendor-3d' / name).extract(member, tmp)
+
+def rje49():
+    """Amphenol RJE49-188-1X01 Rev T1 vendor STEP (reference/vendor-3d/amphenol-rje49-188-1x01-3d.zip, family file
+    covering RJE491881401). Native Z is height (top +1.01, standoffs -11.95, pin tips -14.95). Fitted to the
+    footprint: all 10 pin tips land on the pad centres within 0.001 mm with no rotation; seating on the standoffs.
+    Baked: translate (42.9, -17.031, 11.95)."""
+    return read_parts(vendor_zip('amphenol-rje49-188-1x01-3d.zip', 'M-RJE49-188-1X01-REVT1.STEP'),
+                      mat_trsf(((1, 0, 0), (0, 1, 0), (0, 0, 1)), (42.9, -17.031, 11.95)))
+
+def hx4110nl():
+    """Pulse HX4110NL vendor STEP (reference/vendor-3d/pulse-hx4110nl-3d.zip). Native X length, Y height (lead feet at
+    -0.121), Z width. Map X = x, Y = -z, Z = y; the 24 lead feet land on the pad centres within 0.03 mm and the
+    pin-1 dot sits next to pad 1 (the 180-degree fit puts it at pad 13). Baked translate (2.1054, 0.529, 0.121)."""
+    return read_parts(vendor_zip('pulse-hx4110nl-3d.zip', 'HX4110NL_3D.STEP'),
+                      mat_trsf(((1, 0, 0), (0, 0, -1), (0, 1, 0)), (2.1054, 0.529, 0.121)))
+
+def we_sl5():
+    """Wurth 744272251 (WE-SL5) rev1 vendor STEP (reference/vendor-3d/wurth-744272251-rev1-3d.zip). Native frame is
+    KiCad's (Z up, centred); the terminal bottoms sit 0.3 below the body at Z=-0.3 and land on the stock
+    L_CommonModeChoke_Wuerth_WE-SL5 pads (rms 0.16 mm). Baked translate (0, 0, 0.3)."""
+    return read_parts(vendor_zip('wurth-744272251-rev1-3d.zip', '744272251.stp'),
+                      mat_trsf(((1, 0, 0), (0, 1, 0), (0, 0, 1)), (0, 0, 0.3)))
+
+VENDOR_BUILDS = {powerdi5, keystone5019, efd25, mdt420, rje49, hx4110nl, we_sl5}
 
 
 # ------------------------------------------------------------------ envelope models
@@ -302,6 +333,20 @@ def tps23730_rmt():
     t = lands('PoE:TI_RMT0045A', shrink=0.05, numbers=[str(i) for i in range(1, 48)])
     return envelope((-2.5, -3.5, 2.5, 3.5), 1.00, terminals=t, pin1=(-1.9, -3.0))
 
+def fdms86252():
+    """FDMS86252 Power56 (Q1706): envelope measured from the onsemi/SnapMagic STEP (not redistributable, so not
+    stored): body 5.80 (x) x 4.90 (y), top 1.10, standoff 0.05; terminals and drain tab at the footprint copper
+    shrunk 0.05. Native fit put pin 1's marker next to pad 1 at (-2.67, -1.905)."""
+    t = lands('PoE:TI_TRANS_Fairchild_PQFN08A', shrink=0.05, z1=0.1)
+    return envelope((-2.9, -2.45, 2.9, 2.45), 1.10, standoff=0.05, terminals=t, pin1=(-2.3, -1.9))
+
+def nano_sim_1042240820():
+    """Molex 1042240820 nano-SIM push/pull (J2002): envelope measured from the Molex/TraceParts STEP (terms bar
+    redistribution, so not stored): shell 10.35 (x) x 12.58 (y) at y -6.37..6.21, height 1.16 (1.11 nominal);
+    contact and peg lands at the footprint copper shrunk 0.1."""
+    t = lands('Appliance:SIM-SMD_1042240820', shrink=0.1, z1=0.1)
+    return envelope((-5.175, -6.37, 5.175, 6.21), 1.16, terminals=t, body_color=METAL)
+
 BUILD = {
     'Sierra_PowerDI-5_SBRT20U60SP5': powerdi5,
     'Sierra_RTL8125BG_TQFN48': rtl8125,
@@ -318,6 +363,11 @@ BUILD = {
     'Sierra_MDT420B01411': mdt420,
     'Sierra_W25Q128JW_WSON8_8x6': w25q128_wson8,
     'Sierra_TPS23730_RMT0045A': tps23730_rmt,
+    'Sierra_RJE491881401': rje49,
+    'Sierra_HX4110NL': hx4110nl,
+    'Sierra_WE-SL5_744272251': we_sl5,
+    'Sierra_FDMS86252_Power56': fdms86252,
+    'Sierra_Molex_1042240820': nano_sim_1042240820,
 }
 
 # footprint -> (model path, offset, rotate)
@@ -339,6 +389,11 @@ ATTACH = {
         'Package_BGA:LFBGA-153_11.5x13mm_Layout14x14_P0.5mm': 'Sierra_IS21TF16G_VFBGA153',
         'Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm': 'Sierra_W25Q128JW_WSON8_8x6',
         'PoE:TI_RMT0045A': 'Sierra_TPS23730_RMT0045A',
+        'Appliance:Sierra_RJE491881401_1x08-1MP_P1.02mm': 'Sierra_RJE491881401',
+        'Appliance:Sierra_HX4110NL_2x12_P1.27mm': 'Sierra_HX4110NL',
+        'Inductor_SMD:L_CommonModeChoke_Wuerth_WE-SL5': 'Sierra_WE-SL5_744272251',
+        'PoE:TI_TRANS_Fairchild_PQFN08A': 'Sierra_FDMS86252_Power56',
+        'Appliance:SIM-SMD_1042240820': 'Sierra_Molex_1042240820',
     }.items()},
 }
 
