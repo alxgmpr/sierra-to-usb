@@ -288,6 +288,20 @@ def emmc153():
     return a
 
 
+def w25q128_wson8():
+    """W25Q128JWEIQ WSON-8 8x6 (Winbond package code E, same outline as the stock KiCad
+    WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm land): D 8.00 (x) x E 6.00 (y) nominal, A 0.80 max; terminals
+    and the 3.4 x 4.3 exposed pad modelled at the footprint's own copper shrunk 0.1 per side. Pin 1 top-left."""
+    t = lands('Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm', shrink=0.1, numbers=[str(i) for i in range(1, 10)])
+    return envelope((-4.0, -3.0, 4.0, 3.0), 0.80, terminals=t, pin1=(-3.3, -2.3))
+
+def tps23730_rmt():
+    """TPS23730 RMT0045A VQFN-45: 5.00 (x) x 7.00 (y) nominal per the TI PMP22477 footprint's body outline,
+    A 1.00 max (TI VQFN family); terminals and the two thermal pads at the footprint copper shrunk 0.05 per
+    side. Pin 1 top-left (-2.4, -2.6)."""
+    t = lands('PoE:TI_RMT0045A', shrink=0.05, numbers=[str(i) for i in range(1, 48)])
+    return envelope((-2.5, -3.5, 2.5, 3.5), 1.00, terminals=t, pin1=(-1.9, -3.0))
+
 BUILD = {
     'Sierra_PowerDI-5_SBRT20U60SP5': powerdi5,
     'Sierra_RTL8125BG_TQFN48': rtl8125,
@@ -302,6 +316,8 @@ BUILD = {
     'Sierra_Keystone5019': keystone5019,
     'Sierra_EFD25_4476': efd25,
     'Sierra_MDT420B01411': mdt420,
+    'Sierra_W25Q128JW_WSON8_8x6': w25q128_wson8,
+    'Sierra_TPS23730_RMT0045A': tps23730_rmt,
 }
 
 # footprint -> (model path, offset, rotate)
@@ -321,6 +337,8 @@ ATTACH = {
         'Inductor_SMD:L_Coilcraft_LPS4018': 'Sierra_LPS4018',
         'Oscillator:Oscillator_SMD_SiT_PQFN-4Pin_3.2x2.5mm': 'Sierra_SiT8008_PQFN4_3.2x2.5',
         'Package_BGA:LFBGA-153_11.5x13mm_Layout14x14_P0.5mm': 'Sierra_IS21TF16G_VFBGA153',
+        'Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm': 'Sierra_W25Q128JW_WSON8_8x6',
+        'PoE:TI_RMT0045A': 'Sierra_TPS23730_RMT0045A',
     }.items()},
 }
 

@@ -4958,9 +4958,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "3cf2b22c-84bb-5e9b-808b-72972da43952")
 		(property "Reference" "J201"

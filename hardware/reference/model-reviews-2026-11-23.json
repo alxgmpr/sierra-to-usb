@@ -1,0 +1,114 @@
+{
+ "reviewed": "2026-11-23",
+ "scope": "Envelope models for U2301 (W25Q128JW WSON-8 8x6) and U1710 (TPS23730 RMT VQFN). C1723/C1729 moved to stock CP_Elec footprints with stock models, J1201 to a stock USB-C footprint with its stock model. Remaining holds need vendor CAD (RJ45, magnetics, SIM, Q1706, WE-SL5) or are bare-copper / mechanical footprints.",
+ "source_hashes": {},
+ "attached": [
+  {
+   "footprint": "Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm",
+   "file": "Appliance.3dshapes/Sierra_W25Q128JW_WSON8_8x6.step",
+   "sha256": "be0426fbee7ce5f38da860f4c85754451ec69fb28fdb6512bb637e88a062e51e",
+   "references": [
+    "U2301"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    8.0,
+    6.0,
+    0.81
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "W25Q128JWEIQ WSON-8 8x6 (Winbond package code E, same outline as the stock KiCad\nWSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm land): D 8.00 (x) x E 6.00 (y) nominal, A 0.80 max; terminals\nand the 3.4 x 4.3 exposed pad modelled at the footprint's own copper shrunk 0.1 per side. Pin 1 top-left."
+  },
+  {
+   "footprint": "PoE:TI_RMT0045A",
+   "file": "Appliance.3dshapes/Sierra_TPS23730_RMT0045A.step",
+   "sha256": "8bed84e7bca7c6bbd0dc1c78a78eefdd5287037267f666dbd723a3007c1ffbd2",
+   "references": [
+    "U1710"
+   ],
+   "offset_xyz_mm": [
+    0,
+    0,
+    0
+   ],
+   "rotation_xyz_degrees": [
+    0,
+    0,
+    0
+   ],
+   "size_xyz_mm": [
+    5.3,
+    7.3,
+    1.01
+   ],
+   "z_min_mm": 0.0,
+   "kind": "envelope",
+   "source": "TPS23730 RMT0045A VQFN-45: 5.00 (x) x 7.00 (y) nominal per the TI PMP22477 footprint's body outline,\nA 1.00 max (TI VQFN family); terminals and the two thermal pads at the footprint copper shrunk 0.05 per\nside. Pin 1 top-left (-2.4, -2.6)."
+  }
+ ],
+ "attachment_references": {
+  "Appliance.3dshapes/Sierra_EEEFK1J470P.step": []
+ },
+ "remaining_holds": [
+  {
+   "footprint": "Appliance:SIM-SMD_1042240820",
+   "references": [
+    "J2002"
+   ],
+   "blocker": "Molex 1042240820 hinged/cover geometry and insertion clearance require exact vendor CAD and seating datum; no verified asset obtained."
+  },
+  {
+   "footprint": "Appliance:Sierra_HX4110NL_2x12_P1.27mm",
+   "references": [
+    "T1701"
+   ],
+   "blocker": "Pulse HX4110NL drawing is archived; transformer body, stand-off and lead bend need a matching model; installed stock path is absent."
+  },
+  {
+   "footprint": "Appliance:Sierra_RJE491881401_1x08-1MP_P1.02mm",
+   "references": [
+    "J1701"
+   ],
+   "blocker": "Amphenol RJE49 drawing archived; no exact CAD obtained. RJ45 substitutes have different panel, shield-tab and LED geometry."
+  },
+  {
+   "footprint": "PoE:TI_TRANS_Fairchild_PQFN08A",
+   "references": [
+    "Q1706"
+   ],
+   "blocker": "FDMS86252 exact Power56/PQFN terminal arrangement and seating geometry need vendor package CAD; generic eight-pin QFN is not sufficient."
+  },
+  {
+   "footprint": "Inductor_SMD:L_CommonModeChoke_Wuerth_WE-SL5",
+   "references": [
+    "L1702"
+   ],
+   "blocker": "Wurth publishes the exact 744272251 STEP (WE-SL5), but automated retrieval returns HTTP 403 and the KiCad 10.99 install ships no STEP for this stock footprint; needs a manual download."
+  },
+  {
+   "footprint": "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical",
+   "references": [
+    "J201"
+   ],
+   "blocker": "Bare copper pads and leg holes for a Tag-Connect TC2030-IDC cable; no component is fitted, so there is nothing to model."
+  },
+  {
+   "footprint": "MountingHole:MountingHole_2.2mm_M2_Pad",
+   "references": [
+    "H2001",
+    "H2002"
+   ],
+   "blocker": "Plated M2 hold-down for the M.2 card; the standoff/screw is mechanical hardware, not a fitted component."
+  }
+ ]
+}
