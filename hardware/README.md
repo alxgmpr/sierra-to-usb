@@ -141,9 +141,18 @@ two curves, not by the grant. Never run loads on aux while PoE is present with a
 **Release holds:** LDT9055-51R (and its alternates Würth 750320319, Sumida PS21-212) had no
 distributor stock on 2026-11-22: get a quote and samples before ordering. Confirm its isolation
 rating against 802.3 / IEC 62368-1. Bench: light-load and no-load VOUT with the preload, load release
-at the TPS54620 input, grant timing on a real Type 3 PSE, droop sharing with aux. The flyback layout
-from 997fb5e/cff4aee is gone; the new stage is placed by `place_board.py --keep` and needs a
-hand-layout pass (rectifier loop, output caps currently partly on the bottom).
+at the TPS54620 input, grant timing on a real Type 3 PSE, droop sharing with aux.
+
+Flyback layout: `HAND` in `tools/place_board.py` holds a hand placement taken from TI's own PMP22477
+Rev C board (the archived PcbDoc, imported natively), mapped onto T1702 where it already sat on the
+isolation line. The primary stage keeps TI's arrangement left of the transformer, and TI's controller
+cluster is turned 180° to sit above the transformer by the bridge. Distances: transformer pin 3 to the
+FET drain 3.1 mm, pin 1 to the nearest input ceramic 4.5 mm, pins 6/7 to the rectifier anode 4.7 mm,
+pins 9/10 to the output ceramics 4.0 mm. Every output part, C1729 included, is on top. Only the two Y
+caps are on the bottom, under the transformer as in TI's layout. The always-on buck, three main
+3V3/5V resistors and two test pads were moved out of the secondary area and placed again, the
+buck below the flyback output. `place_board.py --keep` releases any fixed part a `HAND` entry
+overlaps, and now checks a top part's through-hole pads and thermal vias against bottom parts.
 
 ## Assembly and software obligations
 

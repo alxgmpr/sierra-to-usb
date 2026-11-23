@@ -155,6 +155,36 @@ def bottom_cap(f):
 BOTTOM = {r for r, f in fps.items() if bottom_cap(f)}
 side = {r: ('B' if r in BOTTOM else 'F') for r in fps}
 
+# Hand layout of the PoE flyback (TPS23730, TI PMP22477 Rev C): TI's own placement mapped onto T1702, which keeps its spot
+# on the isolation line. Board-local (u, v, rotation[, 'B']). Primary power stage as TI has it left of the transformer: input
+# ceramics over pin 1, clamp diode and RC between them and the FET, FET drain facing pin 3, sense resistor beside the source,
+# gate and aux-winding parts below. The controller cluster is TI's turned 180 deg so it sits above the transformer next to the
+# bridge. Secondary: rectifier facing pins 6/7, a ceramic column back to GND pins 9/10, a second column, then the bulk can.
+# Y caps under the transformer on the bottom, as TI does. Fixed parts these overlap are released and placed again (--keep).
+HAND = {
+    # transformer and primary power stage
+    'C1721': (40, 73, 180, 'B'), 'C1722': (40, 68, 180, 'B'), 'C1723': (8, 93.5, 0), 'C1724': (3.45, 66.05, 90),
+    'C1725': (12.75, 65.95, 90), 'C1726': (16.45, 65.95, 90), 'C1727': (20.1, 65.95, 90), 'C1728': (11.25, 70.55, 180),
+    'C1740': (20.35, 89.45, 0), 'C1749': (20.45, 81.55, 0), 'C1750': (29.35, 92.5, 180), 'C1751': (7.15, 79, 0),
+    'D1712': (17.95, 72.15, 0), 'D1714': (16.9, 83.15, 270), 'D1715': (12.9, 86.4, 0), 'L1707': (4.6, 72, 270),
+    'Q1706': (18.85, 77.1, 0), 'R1717': (10.4, 73.05, 180), 'R1745': (20.25, 84.5, 0), 'R1746': (19.75, 87.15, 180),
+    'R1761': (9, 86, 90), 'R1763': (11.6, 81.8, 180), 'R1766': (24.7, 92.75, 180), 'R1767': (11.2, 76.35, 180),
+    'R1772': (10.95, 79, 0), 'T1702': (40, 77.5, 0),
+    # controller
+    'C1738': (19.6, 59.6, 180), 'C1739': (20, 52.6, 90), 'C1741': (22.95, 61.8, 270), 'C1743': (20.15, 61.5, 0),
+    'C1744': (26.5, 61.8, 270), 'C1745': (24.75, 61.8, 270), 'C1746': (33.3, 59.1, 180), 'C1747': (29.3, 61.8, 90),
+    'R1741': (31.25, 61.8, 90), 'R1744': (29.85, 58.05, 270), 'R1747': (17.4, 56.6, 90), 'R1750': (19.5, 56.6, 270),
+    'R1751': (31.6, 56.45, 90), 'R1753': (32, 53.8, 0), 'R1758': (21.6, 56.6, 270), 'R1764': (27.8, 49.7, 270),
+    'R1768': (17.55, 50.2, 90), 'R1769': (30.25, 49.95, 270), 'R1770': (33.4, 52, 0), 'R1771': (22.2, 49.65, 270),
+    'R1774': (24.9, 50.6, 180), 'U1710': (26, 55.5, 180),
+    # secondary
+    'C1729': (75.2, 74.5, 90), 'C1730': (60.9, 78, 0), 'C1731': (60.9, 74.5, 0), 'C1732': (60.9, 71, 0),
+    'C1733': (67.6, 78, 180), 'C1734': (67.6, 74.5, 180), 'C1735': (67.6, 71, 180), 'C1736': (67.25, 84.5, 90),
+    'C1737': (68.3, 92.3, 270), 'C1752': (60.9, 67.5, 0), 'C1753': (60.9, 64, 0), 'D1711': (61.7, 85, 90),
+    'R1742': (62.3, 90.2, 0), 'R1743': (62.3, 94.4, 0), 'R1775': (75.5, 84.5, 180),
+}
+for ref, p in HAND.items(): side[ref] = p[3] if len(p) > 3 else 'F'
+
 # ============================================================== geometry and legality
 def rot_pt(x, y, r):
     a = math.radians(r); return x*math.cos(a) + y*math.sin(a), -x*math.sin(a) + y*math.cos(a)
@@ -185,8 +215,8 @@ def commit(ref, u, v, r, R):
     placed[ref] = (u, v, r)
     for c in cells(R): (grid_b if side[ref] == 'B' else grid)[c].append(R)
 def inside(R, box, m): return R[0] >= box[0] + m and R[1] >= box[1] + m and R[2] <= box[2] - m and R[3] <= box[3] - m
-def legal(ref, R):
-    """R is the courtyard grown by GAP/2 on each side."""
+def legal(ref, R, pos=None):
+    """R is the courtyard grown by GAP/2 on each side; pos (u, v, r) also checks a top part's through-hole pads against the bottom."""
     if ref not in OVERHANG and not inside(R, (0, 0, W, H), EDGE - GAP/2): return False
     d = domain[ref]
     m = MOAT - GAP/2   # the isolation line runs down XN to NY, across to XB, then down XB
@@ -197,7 +227,12 @@ def legal(ref, R):
         if block[ref] and not any(inside(R, b, INSET - GAP/2) for b in BLOCKS[block[ref]][1]): return False
     if side[ref] == 'B':   # through-hole pins of a bottom part also pierce the top side
         return not collide(R, grid_b) and not (any('thru_hole' in p['kind'] for p in fps[ref]['pads']) and collide(R))
-    return not collide(R)
+    if collide(R): return False
+    for i, p in enumerate(fps[ref]['pads'] if pos else ()):   # a top part's pins and thermal vias also pierce the bottom side
+        if 'thru_hole' in p['kind']:
+            x, y = pad_abs(ref, i, pos); e = max(p['w'], p['h'])/2 + 0.25
+            if collide((x-e, y-e, x+e, y+e), grid_b): return False
+    return True
 
 # ============================================================== phase 1: anchors
 # DNP microSD: no top-side room left, so it sits on the bottom under the M.2 card (empty there),
@@ -207,12 +242,17 @@ KEEP_ANCH = {'J2301': (190, 50, 270),
              # status LEDs in a column by the MCU, top to bottom: PWR, SYS, WAN, FAULT
              'D2201': (180.7, 72, 0), 'D2202': (180.7, 76, 0), 'D2203': (180.7, 80, 0), 'D2204': (180.7, 82, 0)}
 # --keep search targets: the aux power path and the power NTC belong under the flyback secondary (bottom side).
-KEEP_TARGET = {**{r: (70, 90) for r in ('J2101', 'U2101', 'U2102', 'Q2101', 'Q2102')}, 'U2103': (55, 86), 'R2101': (55, 91), 'RT2202': (55, 80)}
+KEEP_TARGET = {**{r: (70, 90) for r in ('J2101', 'U2101', 'U2102', 'Q2101', 'Q2102')}, 'U2103': (55, 86), 'R2101': (55, 91), 'RT2202': (55, 80),
+               'U401': (75, 96.5), 'C401': (72, 90), 'C403': (80.5, 93), 'R606': (71, 67)}   # always-on buck below the flyback output; main3v3 PG pull-down by U601
 if KEEP:   # every part already on the board is fixed in its current pose and side
+    hand = {ref: rect(fps[ref], *p[:3], GAP/2) for ref, p in HAND.items()}
     for ref, f in fps.items():
         u, v = f['x'] - X0, f['y'] - Y0
-        if 0 <= u <= W and 0 <= v <= H:
-            side[ref] = f['side']; commit(ref, u, v, f['rot'], rect(f, u, v, f['rot'], GAP/2))
+        if ref in HAND or not (0 <= u <= W and 0 <= v <= H): continue
+        side[ref] = f['side']; R = rect(f, u, v, f['rot'], GAP/2)
+        if any(side[h] == side[ref] and R[0] < Q[2] and Q[0] < R[2] and R[1] < Q[3] and Q[1] < R[3] for h, Q in hand.items()):
+            continue   # in the way of the hand layout: placed again below
+        commit(ref, u, v, f['rot'], R)
     for ref in SD_BOTTOM:
         if ref in fps and ref not in placed: side[ref] = 'B'; block[ref] = None
     for ref, (u, v, r) in KEEP_ANCH.items():
@@ -222,7 +262,11 @@ if KEEP:   # every part already on the board is fixed in its current pose and si
             if 'thru_hole' in p['kind']:
                 x, y = pad_abs(ref, i); e = max(p['w'], p['h'])/2 + 0.25
                 for c in cells((x-e, y-e, x+e, y+e)): grid_b[c].append((x-e, y-e, x+e, y+e))
+    for ref, p in HAND.items():
+        if not legal(ref, hand[ref], p[:3]): raise SystemExit(f'hand-placed {ref} collides or breaks a block/isolation rule')
+        commit(ref, *p[:3], hand[ref])
 else:
+    ANCH.update({ref: p[:3] for ref, p in HAND.items()})
     for ref, (u, v, r) in ANCH.items():
         commit(ref, u, v, r, rect(fps[ref], u, v, r, GAP/2))
 
@@ -261,7 +305,7 @@ def place_ic(ref, target, halo, dist_w, rmax=60):
         u, v = round(target[0] + du), round(target[1] + dv)
         for r in (0, 90, 180, 270):
             R = rect(fps[ref], u, v, r, GAP/2 + halo)
-            if not legal(ref, R): continue
+            if not legal(ref, R, (u, v, r)): continue
             sc = ratsnest(ref, (u, v, r)) + dist_w * math.hypot(du, dv)
             if block[ref] in STAGE and r: sc += ROT_PEN   # pin 1 the same way unless turning pays off
             if best is None or sc < best[0]: best = (sc, u, v, r, R)
@@ -310,9 +354,15 @@ while True:
     ref = max(rest, key=lambda r: (len([n for n in neighbours(r) if n in placed]), len(fps[r]['pads'])))
     place_ic(ref, target_of(ref), 1.0, 0.5)
 
-grid.clear()   # passives may use the IC halos
+grid.clear()   # passives may use the IC halos; bottom parts stay in grid_b, only their through-hole pins block the top
 for ref, (u, v, r) in placed.items():
-    for c in cells(rect(fps[ref], u, v, r, GAP/2)): grid[c].append(rect(fps[ref], u, v, r, GAP/2))
+    if side[ref] == 'F':
+        for c in cells(rect(fps[ref], u, v, r, GAP/2)): grid[c].append(rect(fps[ref], u, v, r, GAP/2))
+        continue
+    for i, p in enumerate(fps[ref]['pads']):
+        if 'thru_hole' in p['kind']:
+            x, y = pad_abs(ref, i); e = max(p['w'], p['h'])/2 + 0.25
+            for c in cells((x-e, y-e, x+e, y+e)): grid[c].append((x-e, y-e, x+e, y+e))
 
 # ============================================================== phase 4: passives next to the pad they serve
 def val(f):
@@ -388,7 +438,7 @@ def place_small(ref, own_pad, tgt, lattice=True):
             else: poses = [(u, v, r) for r in (0, 90, 180, 270)]
             for u, v, r in poses:
                 R = rect(f, u, v, r, GAP/2)
-                if not legal(ref, R): continue
+                if not legal(ref, R, (u, v, r)): continue
                 a = pad_abs(ref, own_pad, (u, v, r))
                 sc = math.hypot(a[0]-tgt[0], a[1]-tgt[1]) + (0.15 if r >= 180 else 0)   # prefer 0/90 for tidy silk
                 if best is None or sc < best[0]: best = (sc, u, v, r, R)
