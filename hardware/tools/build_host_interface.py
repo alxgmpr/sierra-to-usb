@@ -17,11 +17,11 @@ s.note('One 100nF capacitor at every VCCIO ball:\n1D13, 1C13, 1F17, 1E16, 1N5/6,
 
 s.rectangle('USB OTG0 — DEVICE-ONLY RECOVERY PORT',20.32,147.32,259.08,190.5)
 p=s.symbol('Appliance:USB_B_Micro_Device',usb,'J1201','RECOVERY USB',73.66,208.28,'Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal',{'MPN':'10103594-0001LF','Manufacturer':'Amphenol ICC','LCSC':'C428495'})
-s.attach(p,{'1':'RECOVERY_VBUS','2':'RECOVERY_DM_PORT','3':'RECOVERY_DP_PORT','4':None,'5':'GND','6':'GND','SH':'GND'})
-for ref,y,a,b in [('R1203',195.58,'RECOVERY_DP_PORT','RECOVERY_USB_DP'),('R1204',220.98,'RECOVERY_DM_PORT','RECOVERY_USB_DM')]:
+s.attach(p,{'1':'RECOVERY_VBUS','2':'RECOVERY_PORT_D_N','3':'RECOVERY_PORT_D_P','4':None,'5':'GND','6':'GND','SH':'GND'})
+for ref,y,a,b in [('R1203',195.58,'RECOVERY_PORT_D_P','RECOVERY_USB_D_P'),('R1204',220.98,'RECOVERY_PORT_D_N','RECOVERY_USB_D_N')]:
     s.resistor(ref,'2.2R',185.42,y,a,b,'RC0603FR-072R2L',horizontal=True)
 p=s.symbol('Power_Protection:TPD2EUSB30',stock('Power_Protection','TPD2EUSB30'),'D1201','TPD2EUSB30DRTR',127,274.32,'Appliance:SOT-9X3-3_L1.0-W0.8-P0.35-LS1.0-BR',{'MPN':'TPD2EUSB30DRTR','Manufacturer':'Texas Instruments','LCSC':'C97502','Datasheet':'https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf'})
-s.attach(p,{'1':'RECOVERY_DP_PORT','2':'RECOVERY_DM_PORT','3':'GND'})
+s.attach(p,{'1':'RECOVERY_PORT_D_P','2':'RECOVERY_PORT_D_N','3':'GND'})
 s.resistor('R1205','10kR',223.52,269.24,'RECOVERY_VBUS','RECOVERY_VBUS_DET','RC0603FR-0710KL')
 s.resistor('R1206','16.5kR',223.52,307.34,'RECOVERY_VBUS_DET','GND','RC0603FR-0716K5L')
 s.note('VBUS senses cable presence only; it does not power the board.\n10k/16.5k divider: 2.718–3.293V at 4.4–5.25V, 1% resistor corners.\nUSB OTG ID floats: internal 1.8V pull-up selects device mode.\nPlace ESD at port; route DP/DM as a short 90-ohm pair.\nRecovery through Rockusb/MaskROM still requires device testing.',30.48,320.04)

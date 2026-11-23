@@ -20,7 +20,7 @@ pins.update(names);pins.update({n:'VCC' for n in power});pins.update({n:'GND' fo
 remaining=sorted(set(pins)-set(power+grounds+left+right),key=int)
 body=grouped('M2_B_67',pins,[{'top':power,'bottom':grounds,'left':left,'right':right},{'left':remaining[::2],'right':remaining[1::2]}],{n:'passive' for n in pins})
 nets={n:None for n in pins};nets.update({n:'MODEM_VCC' for n in power});nets.update({n:'GND' for n in grounds})
-nets.update({'6':'MODEM_OFF_N','67':'MODEM_RESET_N','20':'M2_PIN20','22':'M2_PIN22','24':'M2_PIN24','38':'M2_PIN38','68':'M2_PIN68','30':'SIM1_RESET_MODEM','32':'SIM1_CLK_MODEM','34':'SIM1_DATA_MODEM','36':'SIM1_VCC','7':'MODEM_USB_DP_PORT','9':'MODEM_USB_DM_PORT','29':'MODEM_TXN_PORT','31':'MODEM_TXP_PORT','35':'MODEM_RXN_PORT','37':'MODEM_RXP_PORT'})
+nets.update({'6':'MODEM_OFF_N','67':'MODEM_RESET_N','20':'M2_PIN20','22':'M2_PIN22','24':'M2_PIN24','38':'M2_PIN38','68':'M2_PIN68','30':'SIM1_RESET_MODEM','32':'SIM1_CLK_MODEM','34':'SIM1_DATA_MODEM','36':'SIM1_VCC','7':'MODEM_USB_PORT_D_P','9':'MODEM_USB_PORT_D_N','29':'MODEM_PORT_TXN','31':'MODEM_PORT_TXP','35':'MODEM_PORT_RXN','37':'MODEM_PORT_RXP'})
 for unit,x in [(1,137.16),(2,464.82)]:
     p=s.symbol('Appliance:M2_B_67',body,'J2001','MDT420B01411',x,86.36,'',{'MPN':'MDT420B01411','Manufacturer':'Amphenol Communications Solutions','Datasheet':'https://www.amphenol-cs.com/product/mdt420b01411.html','Contact Rating':'1A/power contact continuous at 25C, <=30C rise; hot derating and sharing require qualification','Footprint Hold':'Exact CMDT420X0X411 Rev A land pattern and retention pads required; do not reuse TE 2199119 footprint'},unit=unit)
     s.attach(p,{n:nets[n] for n in p})
@@ -56,14 +56,14 @@ for name,symbol in [('m2-b',body),('nano-sim',sim)]:
 s=Sheet('modem-interface','Modem USB data isolation and coupling','A2')
 raw=(ROOT/'reference/tmuxhs4212-captured.kicad_sym').read_text();mux=block(raw,raw.index('(symbol "TMUXHS4212_RKS"'))
 p=s.symbol('Appliance:TMUXHS4212_RKS',mux,'U2001','TMUXHS4212IRKSR',182.88,81.28,'Appliance:DHVQFN-20_L4.5-W2.5-P0.50-BL-EP',{'MPN':'TMUXHS4212IRKSR','Manufacturer':'Texas Instruments','LCSC':'C3656912','Datasheet':'https://www.ti.com/lit/ds/symlink/tmuxhs4212.pdf','Supply Intent':'Always-on +3V3. Disabled when host or modem rail invalid. Do not rely on powered-off protection.'})
-n={k:None for k in p};n.update({'1':'+3V3','6':'+3V3','10':'+3V3','2':'MODEM_USB_OE_N','9':'GND','3':'MODEM_TXP_AC','4':'MODEM_TXN_AC','7':'MODEM_USB_RXP','8':'MODEM_USB_RXN','19':'MODEM_RXP_PORT','18':'MODEM_RXN_PORT','17':'MODEM_TXP_PORT','16':'MODEM_TXN_PORT','5':'GND','11':'GND','20':'GND','21':'GND'});s.attach(p,n)
-for i,pol in enumerate(['P','N']):s.passive('C',f'C{2001+i}','100nF',71.12,175.26+43.18*i,f'MODEM_USB_TX{pol}_SOC',f'MODEM_TX{pol}_AC','CL10B104KA8NNNC','Capacitor_SMD:C_0603_1608Metric','Samsung Electro-Mechanics',{'Voltage Rating':'25V','Placement':'At SoC USB3 transmitter; do not add receiver-side coupling'},horizontal=True)
+n={k:None for k in p};n.update({'1':'+3V3','6':'+3V3','10':'+3V3','2':'MODEM_USB_OE_N','9':'GND','3':'MODEM_AC_TXP','4':'MODEM_AC_TXN','7':'MODEM_USB_RXP','8':'MODEM_USB_RXN','19':'MODEM_PORT_RXP','18':'MODEM_PORT_RXN','17':'MODEM_PORT_TXP','16':'MODEM_PORT_TXN','5':'GND','11':'GND','20':'GND','21':'GND'});s.attach(p,n)
+for i,pol in enumerate(['P','N']):s.passive('C',f'C{2001+i}','100nF',71.12,175.26+43.18*i,f'MODEM_USB_SOC_TX{pol}',f'MODEM_AC_TX{pol}','CL10B104KA8NNNC','Capacitor_SMD:C_0603_1608Metric','Samsung Electro-Mechanics',{'Voltage Rating':'25V','Placement':'At SoC USB3 transmitter; do not add receiver-side coupling'},horizontal=True)
 s.cap('C2003','100nF',307.34,81.28,'+3V3')
 up=native_pins(ROOT/'reference/modem-C128396-native.kicad_sym','TS3USB221ARSER')
 assert up=={'1':'1D+','2':'1D-','3':'2D+','4':'2D-','5':'GND','6':'~{OE}','7':'D-','8':'D+','9':'S','10':'VCC'}
 usb2=grouped('TS3USB221A_RSE',up,[{'left':['8','7','6','9'],'right':['1','2','3','4'],'top':['10'],'bottom':['5']}],{n:'power_in' if n in ['5','10'] else 'input' if n in ['6','9'] else 'passive' for n in up})
 p=s.symbol('Appliance:TS3USB221A_RSE',usb2,'U2002','TS3USB221ARSER',441.96,81.28,'Appliance:UQFN-10_L2.0-W1.5-P0.50-BL',{'MPN':'TS3USB221ARSER','Manufacturer':'Texas Instruments','LCSC':'C128396','Datasheet':'https://www.ti.com/lit/ds/symlink/ts3usb221a.pdf','Supply Intent':'Always-on +3V3; OE high disconnects both USB2 conductors'})
-s.attach(p,{'1':'MODEM_USB_DP_PORT','2':'MODEM_USB_DM_PORT','3':None,'4':None,'5':'GND','6':'MODEM_USB_OE_N','7':'MODEM_USB_DM','8':'MODEM_USB_DP','9':'GND','10':'+3V3'})
+s.attach(p,{'1':'MODEM_USB_PORT_D_P','2':'MODEM_USB_PORT_D_N','3':None,'4':None,'5':'GND','6':'MODEM_USB_OE_N','7':'MODEM_USB_D_N','8':'MODEM_USB_D_P','9':'GND','10':'+3V3'})
 s.cap('C2004','100nF',533.4,81.28,'+3V3')
 ap=native_pins(ROOT/'reference/modem-C7832-native.kicad_sym','SN74LVC1G08DCKR');assert ap=={'1':'A','2':'B','3':'GND','4':'Y','5':'VCC'}
 gate=grouped('SN74LVC1G08_DCK',ap,[{'left':['1','2'],'right':['4'],'top':['5'],'bottom':['3']}],{'1':'input','2':'input','3':'power_in','4':'output','5':'power_in'})

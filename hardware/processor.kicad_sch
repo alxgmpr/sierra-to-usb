@@ -18618,7 +18618,7 @@
 			)
 		)
 	)
-	(global_label "PCIE_RXP_SOC"
+	(global_label "PCIE_SOC_RXP"
 		(shape passive)
 		(at 497.84 336.55 0)
 		(effects
@@ -19718,7 +19718,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_DP"
+	(global_label "MODEM_USB_D_P"
 		(shape passive)
 		(at 391.16 346.71 180)
 		(effects
@@ -19740,7 +19740,7 @@
 			)
 		)
 	)
-	(global_label "PCIE_TXN_SOC"
+	(global_label "PCIE_SOC_TXN"
 		(shape passive)
 		(at 497.84 339.09 0)
 		(effects
@@ -20026,7 +20026,7 @@
 			)
 		)
 	)
-	(global_label "RECOVERY_USB_DP"
+	(global_label "RECOVERY_USB_D_P"
 		(shape passive)
 		(at 391.16 336.55 180)
 		(effects
@@ -22402,7 +22402,7 @@
 			)
 		)
 	)
-	(global_label "RECOVERY_USB_DM"
+	(global_label "RECOVERY_USB_D_N"
 		(shape passive)
 		(at 391.16 339.09 180)
 		(effects
@@ -22886,7 +22886,7 @@
 			)
 		)
 	)
-	(global_label "PCIE_RXN_SOC"
+	(global_label "PCIE_SOC_RXN"
 		(shape passive)
 		(at 497.84 334.01 0)
 		(effects
@@ -24118,7 +24118,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_TXN_SOC"
+	(global_label "MODEM_USB_SOC_TXN"
 		(shape passive)
 		(at 497.84 349.25 0)
 		(effects
@@ -25130,7 +25130,7 @@
 			)
 		)
 	)
-	(global_label "PCIE_TXP_SOC"
+	(global_label "PCIE_SOC_TXP"
 		(shape passive)
 		(at 497.84 341.63 0)
 		(effects
@@ -25218,7 +25218,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_DM"
+	(global_label "MODEM_USB_D_N"
 		(shape passive)
 		(at 391.16 349.25 180)
 		(effects
@@ -25856,7 +25856,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_TXP_SOC"
+	(global_label "MODEM_USB_SOC_TXP"
 		(shape passive)
 		(at 497.84 351.79 0)
 		(effects

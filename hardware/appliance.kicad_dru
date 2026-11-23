@@ -1,0 +1,77 @@
+(version 1)
+
+# Stackup: JLC06161H-3313 (6L 1.6 mm, 1 oz outer / 0.5 oz inner).
+# L1 SIG | L2 GND | L3 SIG | L4 GND | L5 PWR | L6 SIG.  Netclass widths are the L1/L6 values from
+# JLC's impedance calculator; L3 (In2.Cu) is narrower because it sits 0.109 mm over L4.
+# Targets per Rockchip RK3568 High Speed PCB Design Guide V1.0: LPDDR4 50/100, USB 90, PCIe 85 (REFCLK 100), MDI 100.
+# USB90 on L3 (0.128) is interpolated; JLC calculator run did not include that row.
+
+(rule "SE50 on L3"
+  (layer "In2.Cu")
+  (condition "A.hasNetclass('SE50')")
+  (constraint track_width (opt 0.142mm))
+)
+
+(rule "DDR on L3"
+  (layer "In2.Cu")
+  (condition "A.hasNetclass('DDR')")
+  (constraint track_width (opt 0.142mm))
+)
+
+(rule "DDR_DIFF on L3"
+  (layer "In2.Cu")
+  (condition "A.hasNetclass('DDR_DIFF')")
+  (constraint track_width (opt 0.11mm))
+  (constraint diff_pair_gap (opt 0.2mm))
+)
+
+(rule "REFCLK100 on L3"
+  (layer "In2.Cu")
+  (condition "A.hasNetclass('REFCLK100')")
+  (constraint track_width (opt 0.11mm))
+  (constraint diff_pair_gap (opt 0.2mm))
+)
+
+(rule "MDI100 on L3"
+  (layer "In2.Cu")
+  (condition "A.hasNetclass('MDI100')")
+  (constraint track_width (opt 0.11mm))
+  (constraint diff_pair_gap (opt 0.2mm))
+)
+
+(rule "USB90 on L3"
+  (layer "In2.Cu")
+  (condition "A.hasNetclass('USB90')")
+  (constraint track_width (opt 0.128mm))
+  (constraint diff_pair_gap (opt 0.15mm))
+)
+
+(rule "PCIE85 on L3"
+  (layer "In2.Cu")
+  (condition "A.hasNetclass('PCIE85')")
+  (constraint track_width (opt 0.146mm))
+  (constraint diff_pair_gap (opt 0.15mm))
+)
+
+# BGA breakout: netclass spacing (2W-4W) cannot hold between 0.4/0.5/0.65 mm balls.
+(rule "BGA breakout"
+  (condition "A.intersectsCourtyard('U801') || A.intersectsCourtyard('U901') || A.intersectsCourtyard('U1101')")
+  (constraint clearance (min 0.09mm))
+)
+
+# Pad-to-pad gaps are fixed by the footprint (QFN/ESD/BGA pitch). Netclass spacing is for routed copper;
+# courtyard checks cover part-to-part placement.
+(rule "Pad to pad"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad'")
+  (constraint clearance (min 0.09mm))
+)
+
+# Planes: no routing on the reference layers.
+(rule "No tracks on L2 GND"
+  (layer "In1.Cu")
+  (constraint disallow track)
+)
+(rule "No tracks on L4 GND"
+  (layer "In3.Cu")
+  (constraint disallow track)
+)

@@ -2142,7 +2142,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_DP_PORT"
+	(global_label "MODEM_USB_PORT_D_P"
 		(shape passive)
 		(at 474.98 78.74 0)
 		(effects
@@ -2164,7 +2164,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_TXP_AC"
+	(global_label "MODEM_AC_TXP"
 		(shape passive)
 		(at 83.82 175.26 0)
 		(effects
@@ -2208,7 +2208,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_DM_PORT"
+	(global_label "MODEM_USB_PORT_D_N"
 		(shape passive)
 		(at 474.98 81.28 0)
 		(effects
@@ -2296,7 +2296,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_TXN_PORT"
+	(global_label "MODEM_PORT_TXN"
 		(shape passive)
 		(at 215.9 81.28 0)
 		(effects
@@ -2318,7 +2318,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_TXN_AC"
+	(global_label "MODEM_AC_TXN"
 		(shape passive)
 		(at 149.86 78.74 180)
 		(effects
@@ -2340,7 +2340,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_TXP_PORT"
+	(global_label "MODEM_PORT_TXP"
 		(shape passive)
 		(at 215.9 78.74 0)
 		(effects
@@ -2406,7 +2406,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_DP"
+	(global_label "MODEM_USB_D_P"
 		(shape passive)
 		(at 408.94 78.74 180)
 		(effects
@@ -2516,7 +2516,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_TXP_AC"
+	(global_label "MODEM_AC_TXP"
 		(shape passive)
 		(at 149.86 76.2 180)
 		(effects
@@ -2538,7 +2538,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_RXP_PORT"
+	(global_label "MODEM_PORT_RXP"
 		(shape passive)
 		(at 215.9 73.66 0)
 		(effects
@@ -2582,7 +2582,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_TXN_SOC"
+	(global_label "MODEM_USB_SOC_TXN"
 		(shape passive)
 		(at 58.42 218.44 180)
 		(effects
@@ -2670,7 +2670,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_TXP_SOC"
+	(global_label "MODEM_USB_SOC_TXP"
 		(shape passive)
 		(at 58.42 175.26 180)
 		(effects
@@ -2802,7 +2802,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_TXN_AC"
+	(global_label "MODEM_AC_TXN"
 		(shape passive)
 		(at 83.82 218.44 0)
 		(effects
@@ -2912,7 +2912,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_RXN_PORT"
+	(global_label "MODEM_PORT_RXN"
 		(shape passive)
 		(at 215.9 76.2 0)
 		(effects
@@ -2934,7 +2934,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_DM"
+	(global_label "MODEM_USB_D_N"
 		(shape passive)
 		(at 408.94 81.28 180)
 		(effects

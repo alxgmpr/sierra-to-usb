@@ -1934,7 +1934,7 @@
 			)
 		)
 	)
-	(global_label "PCIE_TXP_SOC"
+	(global_label "PCIE_SOC_TXP"
 		(shape passive)
 		(at 66.04 66.04 180)
 		(effects
@@ -2506,7 +2506,7 @@
 			)
 		)
 	)
-	(global_label "PCIE_TXN_SOC"
+	(global_label "PCIE_SOC_TXN"
 		(shape passive)
 		(at 66.04 109.22 180)
 		(effects
@@ -2660,7 +2660,7 @@
 			)
 		)
 	)
-	(global_label "PCIE_RXP_SOC"
+	(global_label "PCIE_SOC_RXP"
 		(shape passive)
 		(at 91.44 152.4 0)
 		(effects
@@ -2814,7 +2814,7 @@
 			)
 		)
 	)
-	(global_label "PCIE_RXN_SOC"
+	(global_label "PCIE_SOC_RXN"
 		(shape passive)
 		(at 91.44 195.58 0)
 		(effects

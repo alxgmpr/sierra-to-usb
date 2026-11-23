@@ -2,7 +2,7 @@
 """PCIe coupling, reset/wake isolation and reference-clock disconnect for NIC power cycling."""
 from capture import ROOT, Sheet, grouped, native_pins, stock, block
 s=Sheet('nic-interface','PCIe and powered-off-safe Ethernet interfaces','A2')
-for i,(a,b) in enumerate([('PCIE_TXP_SOC','ETH_PCIE_RXP'),('PCIE_TXN_SOC','ETH_PCIE_RXN'),('ETH_PCIE_TXP','PCIE_RXP_SOC'),('ETH_PCIE_TXN','PCIE_RXN_SOC')]):
+for i,(a,b) in enumerate([('PCIE_SOC_TXP','ETH_PCIE_RXP'),('PCIE_SOC_TXN','ETH_PCIE_RXN'),('ETH_PCIE_TXP','PCIE_SOC_RXP'),('ETH_PCIE_TXN','PCIE_SOC_RXN')]):
  s.passive('C',f'C{1601+i}','100nF',78.74,66.04+43.18*i,a,b,'GRM033R60J104KE19D','Capacitor_SMD:C_0201_0603Metric','Murata',{'Voltage Rating':'6.3V','Tolerance':'10%','Dielectric':'X5R','Placement Intent':'at transmitter; Realtek small-package PCIe recommendation'},horizontal=True)
 s.note('100-ohm differential pairs; one AC-coupling capacitor per conductor at transmitter.\nSoC TX reaches NIC HSIP/HSIN; NIC HSOP/HSON reaches SoC RX.\nKeep PCIe controller quiescent before Ethernet power removal.',25.4,233.68)
 # Open-drain buffers tolerate a powered host while the NIC domain is off.

@@ -3871,7 +3871,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_DM_PORT"
+	(global_label "MODEM_USB_PORT_D_N"
 		(shape passive)
 		(at 170.18 83.82 0)
 		(effects
@@ -3915,7 +3915,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_TXP_PORT"
+	(global_label "MODEM_PORT_TXP"
 		(shape passive)
 		(at 170.18 88.9 0)
 		(effects
@@ -4091,7 +4091,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_RXN_PORT"
+	(global_label "MODEM_PORT_RXN"
 		(shape passive)
 		(at 170.18 91.44 0)
 		(effects
@@ -4267,7 +4267,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_RXP_PORT"
+	(global_label "MODEM_PORT_RXP"
 		(shape passive)
 		(at 170.18 93.98 0)
 		(effects
@@ -4553,7 +4553,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_TXN_PORT"
+	(global_label "MODEM_PORT_TXN"
 		(shape passive)
 		(at 170.18 86.36 0)
 		(effects
@@ -4883,7 +4883,7 @@
 			)
 		)
 	)
-	(global_label "MODEM_USB_DP_PORT"
+	(global_label "MODEM_USB_PORT_D_P"
 		(shape passive)
 		(at 170.18 81.28 0)
 		(effects
