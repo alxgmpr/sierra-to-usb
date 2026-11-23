@@ -1,6 +1,6 @@
 {
   "reviewed": "2026-11-22",
-  "scope": "Bring-up additions (aux power path, management, boot media, test pads). No new STEP assets; one stock model absent from the install is held.",
+  "scope": "Bring-up additions (aux power path, management, boot media, test pads). No new STEP assets; one stock model absent from the install is held. TPS23730/PMP22477 swap: two TI land patterns without STEP are held; J1712 (Molex 87898) removed with the TIDA flyback.",
   "source_hashes": {},
   "attached": [],
   "remaining_holds": [
@@ -33,16 +33,9 @@
       "blocker": "No exact matching Amphenol shell/retention-tab CAD obtained; installed model path absent. Mating-face and board-edge datum must be checked."
     },
     {
-      "footprint": "PoE:TI_Molex_87898-0204",
-      "references": [
-        "J1712"
-      ],
-      "blocker": "Molex 87898-0204 exact shroud, latch and mating envelope not verified; a generic 2-pin header would hide connector clearance."
-    },
-    {
       "footprint": "PoE:TI_TRANS_Fairchild_PQFN08A",
       "references": [
-        "Q1705"
+        "Q1706"
       ],
       "blocker": "FDMS86252 exact Power56/PQFN terminal arrangement and seating geometry need vendor package CAD; generic eight-pin QFN is not sufficient."
     },
@@ -59,6 +52,45 @@
         "U2301"
       ],
       "blocker": "The KiCad 10.99 install ships no STEP for this stock footprint; a Winbond WSON-8 8x6 envelope model (build_models.py) is not built yet."
+    },
+    {
+      "footprint": "PoE:TI_RMT0045A",
+      "references": [
+        "U1710"
+      ],
+      "blocker": "TI PMP22477 PcbDoc carries no STEP for the TPS23730 RMT0045A VQFN-45; envelope model not built yet."
+    },
+    {
+      "footprint": "PoE:TI_SM_RADIAL_G",
+      "references": [
+        "C1723"
+      ],
+      "blocker": "TI PMP22477 PcbDoc carries no STEP for the Panasonic FK size-G can (EEE-FK1K470P); envelope model not built yet."
     }
-  ]
+  ],
+  "attachment_references": {
+    "Appliance.3dshapes/Sierra_XxL4020.step": [
+      "L1001",
+      "L1501",
+      "L501",
+      "L502",
+      "L504",
+      "L505",
+      "L901",
+      "L902"
+    ],
+    "Appliance.3dshapes/Sierra_EEEFK1J470P.step": [
+      "C1729"
+    ],
+    "Appliance.3dshapes/Sierra_PCV1E271MCL1GS.step": [],
+    "Appliance.3dshapes/Sierra_LM51551_DSS0012B.step": [],
+    "Appliance.3dshapes/Sierra_Keystone5019.step": [],
+    "Appliance.3dshapes/Sierra_EFD25_4476.step": [],
+    "Appliance.3dshapes/Sierra_PowerDI-5_SBRT20U60SP5.step": [],
+    "Appliance.3dshapes/Sierra_LPS4018.step": [
+      "L1707",
+      "L401"
+    ]
+  },
+  "attachment_note": "TPS23730 swap: TIDA flyback parts removed (empty lists). C1729 (EEE-FK1E221P, Panasonic FK case F) reuses the case-F EEE-FK1J470P envelope; L1707 (LPS4018-332) reuses the LPS4018 envelope."
 }

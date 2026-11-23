@@ -30,13 +30,13 @@ def validate(tree,directory):
  def connected(ref,mapping):
   for net,pins in mapping.items():
    for pin in pins.split():on(ref,pin,net)
- assert len(C)==843,len(C)
+ assert len(C)==818,len(C)
  assert len(B)==sum(len(p) for p in N.values()),'Physical pin appears in two nets'
  for ref in C:
   if ref in ['TP1101','TP1102','TP1103'] or ref.startswith('TP24'):assert C[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
   else:assert F(ref).get('MPN') and F(ref).get('Manufacturer'),ref
  libs={(p.get('lib'),p.get('part')):{v.get('num') for v in p.findall('./pins/pin')} for p in tree.findall('./libparts/libpart')}
- counts={'U801':565,'U901':200,'U1101':153,'U501':69,'U1001':20,'U1301':49,'U201':48,'U1701':21,'U1901':15,'U1902':10,'J2001':67,'J2002':12}
+ counts={'U801':565,'U901':200,'U1101':153,'U501':69,'U1001':20,'U1301':49,'U201':48,'U1710':47,'U1901':15,'U1902':10,'J2001':67,'J2002':12}
  for ref,count in counts.items():
   src=C[ref].find('libsource');numbers=libs[(src.get('lib'),src.get('part'))]
   assert len(numbers)==count,(ref,len(numbers),count)
@@ -88,9 +88,11 @@ def validate(tree,directory):
   connected('T1701',{f'ETH_CT{i}':ct,f'ETH_MDI{i}_P':p,f'ETH_MDI{i}_N':n,f'CABLE_MDI{i}_P':cp,f'CABLE_MDI{i}_N':cn,'POE_PAIR'+['12','36','45','78'][i]:cc})
   on('J1701',rp,f'CABLE_MDI{i}_P');on('J1701',rn,f'CABLE_MDI{i}_N')
  on('J1701','SH','CHASSIS')
- connected('U1701',{'POE_VDD':'1','POE_VSS':'4 5 21','POE_RTN':'10 11 12','POE_VCIN':'15','POE_VCOUT':'14','POE_UVLO':'13'})
- on('R1723','1','POE_VDD');on('R1723','2','POE_DEN');assert F('R1723')['MPN']=='CRCW060324K9FKEA'
- for ref,pin,net in [('R1724','3','POE_CLSA'),('R1727','6','POE_CLSB'),('R1732','7','POE_REF')]:on(ref,'1',net);on(ref,'2','POE_VSS');on('U1701',pin,net)
+ # TPS23730 (PMP22477): straps tie APD/EMPS/EA_DIS/PSRS to RTN and DTHR/DT to VB; PPD to VSS; SCDIS open = parallel grant pins.
+ connected('U1710',{'POE_VDD':'23','POE_VSS':'19 27 28 47','POE_RTN':'2 5 7 8 9 11 36 39 45 46','POE_TPH':'13','POE_TPL':'14','POE_BT':'12','POE_VCC':'42','POE_VB':'3 31 37'});nc('U1710','18')
+ on('R1771','1','POE_VDD');on('R1771','2',B[('U1710','24')]);assert F('R1771')['MPN']=='RC0603FR-0725K5L'   # DEN 25.5k
+ for r,pin,mpn in [('R1768','21','CRCW080531R6FKEA'),('R1769','20','CRCW0805130RFKEA')]:on(r,'1','POE_VSS');on(r,'2',B[('U1710',pin)]);assert F(r)['MPN']==mpn   # Class 6 CLSA/CLSB
+ on('R1801','1','POE_VCC');on('R1802','1','POE_VCC');on('R1803','1','POE_VB')   # BT pin abs max 6.5 V: its opto hangs off VB
  for i,sig in enumerate(['TPH','TPL','BT']):
   ref=f'U{1801+i}';on(ref,'2',f'POE_{sig}');on(ref,'3','GND');on(ref,'4',f'POE_{sig}_N');on('U201',str(22+i),f'POE_{sig}_N')
  connected('U1901',{'ISO_12V':'4 5 6','GND':'2 3 15','MODEM_BUCK_SW':'11 12','MODEM_BUCK_FB':'7','MODEM_BUCK_BOOT':'13','MODEM_BUCK_COMP':'8','MODEM_BUCK_SS':'9','MODEM_BUCK_EN':'10','MODEM_BUCK_RT':'1','MODEM_BUCK_GOOD':'14'})
@@ -122,7 +124,7 @@ def validate(tree,directory):
   connected(q,{src:'1 2 3',f'{tag}_DIODE_GATE':'4','ISO_12V_BUS':'5'});connected(u,{src:'3 6','ISO_12V_BUS':'4',f'{tag}_DIODE_GATE':'5','GND':'2'})
  on('R2101','1','ISO_12V_BUS');on('R2101','2','ISO_12V');connected('U2103',{'ISO_12V_BUS':'10','ISO_12V':'8 9','+3V3':'6','GND':'1 2 7'})
  assert not any(r in ['U701','U401','U1901'] for r,p in N['ISO_12V_PSU']|N['ISO_12V_BUS'])
- assert {'C1727','J1711','L1708','R1753','TP1719'}<={r for r,p in N['ISO_12V_PSU']}
+ assert {'C1729','D1711','R1775'}<={r for r,p in N['ISO_12V_PSU']}
  connected('U2301',{'FSPI_CS0_N':'1','FSPI_D1':'2','FSPI_WP_N':'3','GND':'4 9','FSPI_D0':'5','FSPI_CLK':'6','FSPI_D3':'7','VCC_1V8':'8'})
  for ball,net in {'1A15':'FSPI_CLK','1A17':'FSPI_D0','1A18':'FSPI_D1','1B17':'FSPI_CS0_N','1C15':'FSPI_D3','1B16':'EMMC_RESET_N'}.items():on('U801',ball,net)
  connected('J2301',{'SD_D2':'1','SD_D3':'2','SD_CMD':'3','SD_VDD':'4','SD_CLK':'5','GND':'6 10 SH','SD_D0':'7','SD_D1':'8','SDMMC0_DET':'9'})
@@ -145,7 +147,7 @@ def validate(tree,directory):
   if profile['vendor']=='Quectel':assert not populated & {'R2011','R2012','R2013','R2016','R2017','C2036','C2037','C2038'}
  # Prove TI retained net partitions; intentional deleted evaluation hardware is excluded.
  golden=[]
- for source in ['input','flyback']:
+ for source in ['input']:
   old=export(ROOT/f'reference/tida-import/{source}.kicad_sch',directory/f'poe-{source}.xml')
   removed=({'T1','J1','J2','TP1','TP2','TP3','TP4','TP5'}|{f'{k}{n}' for k in 'RC' for n in range(1,7)}|{'R7','R8'}) if source=='input' else set()
   rename=lambda r:re.sub(r'\d+$',lambda m:str(1700+int(m[0])),r)
@@ -154,6 +156,13 @@ def validate(tree,directory):
   allpins=set().union(*groups);projected={frozenset(ps & allpins) for ps in N.values() if ps & allpins}
   assert projected==groups,(source,'Native TI net partition changed',groups-projected,projected-groups)
   golden.append({'source':source,'retained_components':len(live),'pins':len(allpins),'net_groups':len(groups)})
+ # PMP22477 PD + flyback (native Altium import): same partition after the documented drops, straps and ties.
+ from build_poe_tps23730 import import_netlist, groups as pmp_groups
+ pmp={frozenset(v) for v in pmp_groups(import_netlist()).values()}
+ allpins=set().union(*pmp);projected={frozenset(ps & allpins) for ps in N.values() if ps & allpins}
+ assert projected==pmp,('PMP22477 net partition changed',pmp-projected,projected-pmp)
+ assert {r for r,p in allpins}=={r for r,c in C.items() if c.find('sheetpath').get('names')=='/PoE PD and isolated 12V flyback/'}-{'R1775'}
+ golden.append({'source':'PMP22477 power stage','retained_components':len({r for r,p in allpins}),'pins':len(allpins),'net_groups':len(pmp)})
  # Every assigned footprint must contain exactly the model's electrical pads.
  policy=json.loads((ROOT/'footprint-policy.json').read_text())
  holds=set(policy['land_pattern_release_holds'])

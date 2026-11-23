@@ -5,7 +5,7 @@ import re
 import subprocess
 import sys
 from capture import ROOT, block, register
-names=['poe','poe_pd','poe_status','ingress','cpu_power','boot','host_interface','peripheral_power','nic','nic_power','nic_interface','ddr_power','pmic','processor','main3v3','main5v','always_on','modem_power','modem','phy_power']
+names=['poe','poe_tps23730','poe_status','ingress','cpu_power','boot','host_interface','peripheral_power','nic','nic_power','nic_interface','ddr_power','pmic','processor','main3v3','main5v','always_on','modem_power','modem','phy_power']
 for name in names:subprocess.run([sys.executable,str(ROOT/'tools'/f'build_{name}.py')],check=True)
 symbols={}
 for path in sorted((ROOT/'reference').glob('*-captured.kicad_sym')):

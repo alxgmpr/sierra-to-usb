@@ -22,9 +22,9 @@ def setfield(item,name,value):
  return item[:-1]+prop(name,value,0,0,True)+')'
 
 fmap=json.loads((ROOT/'reference/tida-import/footprints.json').read_text())
-libs={};meta={'poe-pd':Sheet('poe-pd','').root};counter=0
+libs={};meta={};counter=0
 renets={'VDD':'POE_VDD','VSS1':'POE_VSS','VSS':'POE_VSS','RTN':'POE_RTN','UVLO':'POE_UVLO','VCOUT':'POE_VCOUT','VCIN':'POE_VCIN','TPH':'POE_TPH','TPL':'POE_TPL','BT':'POE_BT','APD':'POE_APD','MPS_DUTY':'POE_MPS_DUTY','PR12':'POE_PAIR12','PR36':'POE_PAIR36','PR45':'POE_PAIR45','PR78':'POE_PAIR78','VOUT':'ISO_12V','EARTH':'CHASSIS'}
-for source,name in [('input','poe-input'),('flyback','poe-flyback')]:
+for source,name in [('input','poe-input')]:   # flyback + PD now come from build_poe_tps23730.py (PMP22477)
  raw=(ROOT/f'reference/tida-import/{source}.kicad_sch').read_text()
  rootid=re.search(r'\(uuid "([^"]+)"',raw)[1]
  meta[name]=rootid
@@ -80,13 +80,6 @@ for source,name in [('input','poe-input'),('flyback','poe-flyback')]:
   output.append(item)
  # Add labels at the actual native pin/wire endpoints, then snap a proven 50-mil import grid.
  s=Sheet(name,'')
- if source=='flyback':
-  s.net('ISO_12V',(359.41,66.294)) # C27 positive: output AFTER L8.
-  s.net('POE_PWM_BIAS',(71.628,107.696)) # LM51551 BIAS, after R45.
-  s.flag('#FLG1701','ISO_12V',381,25.4,'Isolated T1702 flyback secondary through D1718 and L1708')
-  s.flag('#FLG1706','POE_VCIN',25.4,254,'T1702 auxiliary winding rectified by D1717')
-  s.flag('#FLG1705','POE_PWM_BIAS',40.64,218.44,'TPS2373 VC_OUT through R1745 (zero-ohm bias link)')
-  s.nc((273.05,71.374));s.nc((273.05,73.914)) # T2 NC pads 7 and 10.
  if source=='input':s.note('Cable pair feeds from HX4110NL 2.5G / four-pair 60W ingress.\nReference active bridge retained. Permanent VSS1-to-VSS current-link is now a PCB trace.\nPOE_VSS and POE_RTN remain isolated from system GND.',20.32,25.4)
  output+=s.items
  # Every native pin coordinate is on 1.27mm local grid. Snapping instance origins and

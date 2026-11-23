@@ -23,6 +23,9 @@ def check(root=ROOT, geometry=False):
     board = {re.search(r'\(property "Reference" "([^"]+)"', f)[1]: f
              for f in children((root / 'appliance.kicad_pcb').read_text())
              if f.startswith('(footprint ')}
+    current = {}   # later records may re-state which references carry an earlier record's model
+    for r in records:
+        current.update(r.get('attachment_references', {}))
     for entry in (e for r in records for e in r['attached']):
         path = root / entry['file']
         assert hashlib.sha256(path.read_bytes()).hexdigest() == entry['sha256'], path
@@ -34,7 +37,7 @@ def check(root=ROOT, geometry=False):
                     assert vector(model, 'offset') == tuple(entry['offset_xyz_mm']), ref
                     assert vector(model, 'rotate') == tuple(entry['rotation_xyz_degrees']), ref
                     assert vector(model, 'scale') == (1, 1, 1), ref
-        assert sorted(attached) == entry['references'], entry['file']
+        assert sorted(attached) == current.get(entry['file'], entry['references']), entry['file']
         if geometry:
             import cadquery as cq
             shape = cq.importers.importStep(str(path)).val()

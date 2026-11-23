@@ -1,8 +1,8 @@
 # Appliance schematic
 
 The complete engineering capture is [appliance.kicad_sch](appliance.kicad_sch), with
-34 sheets, 843 components and 856 native nets. Open [appliance.kicad_pro](appliance.kicad_pro)
-in KiCad. [appliance.kicad_pcb](appliance.kicad_pcb) contains all 843 footprints
+33 sheets, 818 components and 856 native nets. Open [appliance.kicad_pro](appliance.kicad_pro)
+in KiCad. [appliance.kicad_pcb](appliance.kicad_pcb) contains all 818 footprints
 with native schematic links; placement and routing are still pending.
 
 The remaining processor, boot storage, CPU power, Ethernet, isolated PoE,
@@ -33,9 +33,9 @@ The checker validates the native netlist and all-severity ERC; all 565 RK3566,
 200 RAM, 153 eMMC and other major-device contacts are accounted for. It checks
 65 manufacturer DDR pair mappings, the complete retained TI bridge/flyback net
 partitions, critical rail/reset/interface connections, four assembly-profile power
-maps, deterministic identities and exact pad-number parity for all 843 assigned
+maps, deterministic identities and exact pad-number parity for all 818 assigned
 footprints. Pad parity establishes identity, not a fabrication land-pattern review.
-805 components use default KiCad footprints, including 531 stock hand-solder
+791 components use default KiCad footprints, including 521 stock hand-solder
 variants. Existing package sizes are retained. All attached model paths resolve;
 missing or mechanically unverified models are explicitly recorded in
 [footprint-policy.json](footprint-policy.json). Imported TI embedded STEP assets
@@ -107,6 +107,44 @@ Open before order: SPI flash and SMBJ12CA LCSC stock; RK3566 FSPI boot behavior 
 present NOR; the MFF2 land against a real eUICC drawing; microSD trace length (about 80 mm, fine for
 SDR25, marginal for SDR104); the WSON-8 8x6 STEP model hold.
 
+## PoE stage: TPS23730 / PMP22477 — 2026-11-22
+
+The TPS2373-3 PD and the LM5155 / TL431 / opto flyback (TIDA-050023, 88 parts on two sheets) are
+replaced by TI's TPS23730 PD + primary-side-regulated flyback from reference design PMP22477
+(63 parts on one sheet, `poe-flyback`), per [the evaluation](../docs/poe-tps23730-evaluation.md).
+[tools/build_poe_tps23730.py](tools/build_poe_tps23730.py) captures it from TI's native Altium
+project (`reference/pmp22477-cad.zip`, Rev C sheet 2, imported to `reference/pmp22477-import/`).
+`check_appliance_capture.py` proves the captured net partition against that import, the same way
+the TIDA input bridge is still proven.
+
+- Kept: our TIDA active input bridge (`poe-input`, option B in the evaluation, about 1 W better than
+  PMP's Schottky bridge) and the three TLP293 grant optos. Grant decoding stays parallel: R65
+  (SCDIS to VSS, serial mode) is left out, so firmware still enforces TPH_N/TPL_N/BT_N = 0/1/0.
+  TPH/TPL optos now pull up from TPS23730 VCC (`POE_VCC`); the BT opto hangs off VB (`POE_VB`)
+  through R1803 = 2.2 kOhm, because the BT pin is rated 6.5 V absolute maximum.
+- Dropped from PMP sheet 2: the adapter input path (D10, L4–L6, C15, C19, C20, J10–J12), output and
+  jumper terminals (J13, J14), the setpoint-shift circuit (U11, Q5, R54, R56, R57, R62), the input TVS
+  D13 (D1705 on the bridge already clamps), and the whole power-limit sheet 3. The 0 Ohm straps
+  R48/R49/R52/R55/R59/R60/R73 became direct ties; PPD is tied to VSS. R58 stays: it is the PSR
+  feedback divider's bottom resistor, not part of the setpoint shift.
+- Added: R1775, 470 Ohm 1 W preload on `ISO_12V_PSU`. The PSR output rises to about 15.7 V with no
+  load (TIDT259); the preload holds about 13.4 V in standby. The `ISO_12V` normal maximum is now
+  14 V (was 13.2 V); TPS54620 keeps 3.6 V margin to its 17 V limit.
+- Passives use the board's standard MPNs where the spec is the same or better; the TPS23730
+  (RMT0045A), LDT9055-51R transformer, FSV1060V (TO-277A) and the 47 uF can use TI's land patterns
+  from the PMP22477 PCB (`PoE.pretty/TI_*`). The RMT0045A and radial-G lands have no STEP (model holds).
+
+**Firmware:** with PSR the flyback droops with load, so with aux present the PoE share is set by the
+two curves, not by the grant. Never run loads on aux while PoE is present with a grant other than
+0/1/0 (PMP22477's power limiter, which handled this, is not fitted).
+
+**Release holds:** LDT9055-51R (and its alternates Würth 750320319, Sumida PS21-212) had no
+distributor stock on 2026-11-22: get a quote and samples before ordering. Confirm its isolation
+rating against 802.3 / IEC 62368-1. Bench: light-load and no-load VOUT with the preload, load release
+at the TPS54620 input, grant timing on a real Type 3 PSE, droop sharing with aux. The flyback layout
+from 997fb5e/cff4aee is gone; the new stage is placed by `place_board.py --keep` and needs a
+hand-layout pass (rectifier loop, output caps currently partly on the bottom).
+
 ## Assembly and software obligations
 
 The default is the Quectel stuffing pattern. R2011/R2012/R2013/R2016/R2017 and
@@ -151,7 +189,7 @@ USB isolation, off-time and per-model timing remain required.
   require an actual software image and boot/traffic/recovery tests.
 
 Sources, revisions and hashes are saved in [reference/sources.json](reference/sources.json).
-TI's source archive retains its notices; imported symbols and footprints are derived
-from TIDA-050023. The topology comparison excludes deleted evaluation headers,
-auxiliary input and the old 1 GbE transformer. The new capture requests Class 6,
-extracts all four PoE pairs with 2.5 GbE magnetics, and isolates allocation status.
+TI's source archives retain their notices. The active input bridge is derived from TIDA-050023 (its
+golden check excludes the deleted evaluation headers, auxiliary input and old 1 GbE transformer). The
+PD and flyback come from PMP22477 (below). The capture requests Class 6, extracts all four PoE pairs
+with 2.5 GbE magnetics, and isolates allocation status.

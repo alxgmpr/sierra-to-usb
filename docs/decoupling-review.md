@@ -6,7 +6,8 @@ Section 4 consolidation, plus the rail fixes, gives 48 → 36 capacitor MPNs. Tw
 deliberately kept:
 
 - C1104 keeps 4.7 uF, because eMMC VDDI needs ≥ 2.2 uF (RK3566 guide 2.1.10).
-- C1743, the TIDA-050023 flyback COMP cap, keeps its 5% part.
+- C1743, the TIDA-050023 flyback COMP cap, keeps its 5% part. (Later the same day the whole
+  TIDA flyback was replaced by the TPS23730 / PMP22477 stage; its flyback references below are historical.)
 
 Rail fixes:
 

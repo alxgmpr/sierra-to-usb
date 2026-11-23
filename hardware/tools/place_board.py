@@ -89,11 +89,9 @@ ANCH = {   # most important first: core, then the connectors and magnetics that 
     'T1701': (XN, 14, 90),      # magnetics straddle the isolation line, cable side left, hard behind the jack
     'D1851': (38, 17, 180), 'D1852': (38, 9.5, 180),   # ESD arrays in the MDI lane, each centred on its two pairs
     'U1301': (45, 14, 180),     # NIC on the magnetics' axis, MDI pins facing them
-    'T1702': (XB, 78, 0),       # flyback transformer, primary left
     'U1901': (160, 14, 0),      # modem buck
     'J2002': (184, 13, 0),      # SIM
     'U201':  (166, 82, 0),      # supervisor MCU
-    'J1711': (58, 94.9, 0), 'J1712': (68, 95.5, 90),
     'J1201': (152, 96.6, 0), 'SW201': (163, 96, 0), 'SW801': (173, 96, 0), 'SW802': (183, 96, 0),
     'J1202': (190.5, 97.2, 90),
     'J101': (87, 97.2, 90), 'J102': (93.5, 97.2, 90), 'J201': (122, 97.2, 90), 'J202': (141, 97.2, 90),
@@ -110,19 +108,8 @@ for i, x in enumerate((3.25, 12.0, 20.75, 29.5)):   # one column per cable pair:
     ANCH.update({f'D{1701+i}': (x, 33, 270), f'D{1706+i}': (x, 43, 270), f'Q{1701+i}': (x + 4.25, 40.5, 90),
                  f'R{1713+i}': (x + 4.25, 43.75, 0), f'C{1709+i}': (x + 4.25, 45.5, 0), f'R{1709+i}': (x + 4.25, 47.25, 0)})
 ANCH['C1865'] = (8, 26, 180)   # Bob Smith common to chassis, at the end of the row next to the shield pin
-ANCH.update({'L1702': (6, 55, 180), 'D1705': (14, 54.5, 270), 'C1717': (22, 55, 90), 'U1701': (31, 55, 0)})
-# Flyback secondary in flow order from T1702's pins: rectifier and its snubber at the return pins, the three
-# raw-output caps at the output pins, then filter inductor -> bulk cap, with the regulators in the band above.
-ANCH.update({'D1718': (61, 70.5, 0), 'R1747': (62.5, 65.5, 0), 'R1748': (62.5, 61.5, 0),
-             'C1728': (60, 78, 0), 'C1729': (60, 81.5, 0), 'C1730': (60, 85, 0),
-             'L1708': (66.5, 81.5, 270), 'C1727': (76, 81.5, 90)})
-# Flyback primary at T1702's primary pins: input filter (inductor, then the cap column at the Vin pins), switch
-# FET at the drain pins with its sense resistor behind it, clamp diode between them, snubber below.
-ANCH.update({'C1722': (5.5, 66, 0), 'L1707': (12.5, 66, 0), 'C1723': (19.5, 64.5, 180), 'C1724': (19.5, 68, 180),
-             'C1725': (19.5, 71.5, 180), 'D1714': (11.5, 73, 0), 'Q1705': (19.5, 78, 0), 'R1738': (11.5, 78, 0),
-             'R1736': (11.5, 82.5, 0),
-             'U1703': (XB, 94.5, 180), 'U1702': (30, 96, 270)})   # feedback opto and controller below T1702, opposite the TL431
-BARRIER = {'T1701', 'T1702', 'U1703', 'U1801', 'U1802', 'U1803'}
+ANCH.update({'L1702': (6, 55, 180), 'D1705': (14, 54.5, 270)})
+BARRIER = {'T1701', 'T1702', 'U1801', 'U1802', 'U1803'}
 
 def short(n): return re.sub(r'^/.*/', '', n)
 sheet_block = {sh + '.kicad_sch': b for b, (shs, _) in BLOCKS.items() for sh in shs}
@@ -312,7 +299,7 @@ for ref in sorted(BARRIER - set(ANCH) - set(placed), key=lambda r: (-len(fps[r][
 
 # ============================================================== phase 3: other ICs, most important first
 ORDER = ['U901', 'U1101', 'U2001', 'U2002', 'U1604', 'U501', 'U1001', 'U902', 'U1302', 'Y1301', 'U1503',
-         'U1701', 'U1702', 'Q1705', 'U701', 'U601', 'U401']
+         'U1710', 'Q1706', 'U701', 'U601', 'U401']
 HALO = {'U901': 3.0, 'U1101': 2.0, 'U501': 3.0}
 TARGET = {'U2001': (130, 49), 'U2002': (130, 41), 'U501': (100, 74), 'U701': (66, 53), 'U601': (77, 50), 'U401': (77, 60)}   # keep SoC->M.2 lane corridor for the muxes
 for ref in ORDER:

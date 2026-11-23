@@ -188,7 +188,8 @@ C703/C704 are each Samsung CL31B106KBHNNNE, 10 uF/50 V X7R
 ratings and mass-production status; original HTML archived and hashed.
 C705 is CL10B104KA8NNNC, 100 nF/25 V X7R in 0603 for high-frequency
 bypass. All connect from U701 VIN to PGND/GND on isolated ISO_12V.
-Their voltage ratings exceed the assumed 13.2 V normal maximum, but
+Their voltage ratings exceed the 14 V normal maximum (13.2 V before the TPS23730 PSR flyback;
+see [poe-tps23730-evaluation.md](poe-tps23730-evaluation.md) §3), but
 input transient protection is not yet qualified. Nominal bulk capacitance
 is 20 uF; DC bias, temperature, ripple heating and upstream bulk
 requirements must still be verified. This is not permission to apply

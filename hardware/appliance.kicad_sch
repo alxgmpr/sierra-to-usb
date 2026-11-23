@@ -35,7 +35,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "09654a72-b250-5725-8eb9-71b50392f44d")
-		(property "Sheetname" "Isolated 12V flyback"
+		(property "Sheetname" "PoE PD and isolated 12V flyback"
 			(at 401.32 317.5 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -790,49 +790,6 @@
 			(project "appliance"
 				(path "/4be0941e-e923-51bb-85b8-e69833501985"
 					(page "18")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 279.4 320.04)
-		(size 96.52 50.8)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(stroke
-			(width 0.254)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "a5cfd84a-3f34-536b-8366-238e726dec2f")
-		(property "Sheetname" "PoE PD / Class 6"
-			(at 279.4 317.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sheetfile" "poe-pd.kicad_sch"
-			(at 279.4 373.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "appliance"
-				(path "/4be0941e-e923-51bb-85b8-e69833501985"
-					(page "23")
 				)
 			)
 		)

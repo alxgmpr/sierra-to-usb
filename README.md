@@ -18,16 +18,17 @@ exact firmware and NIC qualification. No modem combination is qualified.
 - [Block diagram and BOM qualification status](docs/qualification-status.md)
 - [Power and complete-cost estimates](docs/power-and-cost.md)
 - [Decoupling review and capacitor consolidation](docs/decoupling-review.md)
+- [PoE stage: TPS23730 / PMP22477 evaluation (adopted)](docs/poe-tps23730-evaluation.md)
 - [Reopened Rockchip Linux comparison and sourcing](docs/rockchip-options.md)
 - [Actual KiCad recovery schematic](hardware/recovery.kicad_sch)
 - [Implemented circuit, checks and outstanding qualification](hardware/README.md)
 
-The full [34-sheet appliance schematic](hardware/appliance.kicad_sch) now captures
+The full [33-sheet appliance schematic](hardware/appliance.kicad_sch) now captures
 processor/RAM/eMMC, all supplies, 2.5GbE, isolated PoE, modem/SIM and recovery
-interfaces: 843 components, 856 nets, **zero full ERC violations**.
+interfaces: 818 components, 856 nets, **zero full ERC violations**.
 [Review PDF](hardware/review/2026-10-07/appliance.pdf) and
 [completion / release holds](docs/schematic-completion.md) are available.
-All 843 PCB footprints are assigned, including 531 stock hand-solder variants.
+All 818 PCB footprints are assigned, including 521 stock hand-solder variants.
 Current CLI schematic/PCB parity is clean. October 7 native update-dialog
 results are retained in the [footprint and model audit](docs/footprint-audit.md). Two BGA land-pattern/process
 reviews, remaining model holds, current modem guides and physical/software

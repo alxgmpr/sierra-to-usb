@@ -933,7 +933,7 @@
 			)
 		)
 	)
-	(global_label "POE_VCOUT"
+	(global_label "POE_VB"
 		(shape passive)
 		(at 83.82 193.04 180)
 		(effects
@@ -1153,7 +1153,7 @@
 			)
 		)
 	)
-	(global_label "POE_VCOUT"
+	(global_label "POE_VCC"
 		(shape passive)
 		(at 83.82 121.92 180)
 		(effects
@@ -1307,7 +1307,7 @@
 			)
 		)
 	)
-	(global_label "POE_VCOUT"
+	(global_label "POE_VCC"
 		(shape passive)
 		(at 83.82 50.8 180)
 		(effects
@@ -2407,7 +2407,7 @@
 				)
 			)
 		)
-		(property "Value" "6.8kR"
+		(property "Value" "2.2kR"
 			(at 92.71 207.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2448,7 +2448,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-076K8L"
+		(property "MPN" "RC0603FR-072K2L"
 			(at 83.82 205.74 0)
 			(hide yes)
 			(show_name no)

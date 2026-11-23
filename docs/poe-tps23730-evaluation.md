@@ -1,6 +1,10 @@
 # PoE stage: TPS23730 / PMP22477 evaluation
 
-2026-11-22. Engineering evaluation only. No schematic or PCB file was changed.
+2026-11-22. **Adopted the same day** with option B (TIDA active bridge kept), parallel grant mode
+(R65 left open), D13 dropped, a 470 Ω preload (R1775) and the `ISO_12V` maximum raised to 14 V.
+One correction to §1: R58 is the PSR feedback divider's bottom resistor and stays; it is not part
+of the setpoint shift. See [hardware/README.md](../hardware/README.md). The text below is the
+evaluation as written.
 Baseline is `layout/placement` at 1556f20 (843 components, placed, unrouted).
 The candidate is TI **TPS23730** (802.3bt Type 3 PD + PWM controller), adapted from
 TI reference design **PMP22477** (Class 6, 12 V / 3.8 A, PSR flyback, diode rectifier).
