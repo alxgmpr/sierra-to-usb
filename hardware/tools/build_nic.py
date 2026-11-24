@@ -13,7 +13,7 @@ sym=grouped('RTL8125BG_CG',pins,[
 s=Sheet('nic','2.5GbE controller — RTL8125BG external-core variant','A2')
 nets={n:None for n in pins}
 nets.update({'1':'ETH_ISOLATE_N','2':'ETH_WAKE_N','6':'ETH_CORE_EN','8':'ETH_0V95','28':'ETH_0V95','47':'ETH_0V95','29':'ETH_3V3','46':'ETH_3V3','37':'ETH_PCIE_0V95','43':'ETH_3V3','9':'ETH_XTAL_OUT','10':'ETH_XTAL_IN','11':'ETH_ANALOG_0V95','16':'ETH_ANALOG_0V95','22':'ETH_ANALOG_0V95','12':'ETH_RSET','15':'ETH_ANALOG_3V3','19':'ETH_ANALOG_3V3','33':'ETH_ANALOG_3V3','34':'ETH_XTAL_3V3','25':'ETH_EE_DO','27':'ETH_EE_CLK','30':'ETH_EE_DI','31':'ETH_EE_CS','32':'ETH_EE_SEL','36':'ETH_PERST_N','38':'ETH_PCIE_TXP','39':'ETH_PCIE_TXN','40':'GND','41':'ETH_PCIE_RXP','42':'ETH_PCIE_RXN','44':'ETH_REFCLK_P','45':'ETH_REFCLK_N','48':'ETH_CLKREQ_N','49':'GND'})
-for n,name in [('13','ETH_MDI0_P'),('14','ETH_MDI0_N'),('17','ETH_MDI1_P'),('18','ETH_MDI1_N'),('20','ETH_MDI2_P'),('21','ETH_MDI2_N'),('23','ETH_MDI3_P'),('24','ETH_MDI3_N')]:nets[n]=name
+for n,name in [('13','ETH_MDI3_P'),('14','ETH_MDI3_N'),('17','ETH_MDI2_P'),('18','ETH_MDI2_N'),('20','ETH_MDI1_P'),('21','ETH_MDI1_N'),('23','ETH_MDI0_P'),('24','ETH_MDI0_N')]:nets[n]=name
 for unit,x,y in [(1,114.3,106.68),(2,408.94,106.68),(3,106.68,246.38)]:
  p=s.symbol('Appliance:RTL8125BG_CG',sym,'U1301','RTL8125BG-CG',x,y,'Appliance:TQFN-48_L6.0-W6.0-P0.40-BL-EP4.5',{'MPN':'RTL8125BG-CG','Manufacturer':'Realtek','LCSC':'C3013605','Datasheet':'https://gzhls.at/blob/ldb/4/2/8/6/7a314000645b287070e0d89fb96ceb1faf4a.pdf','Qualification':'BG variant: external 0.95V supply; no BGS substitution'},unit=unit)
  s.attach(p,{n:nets[n] for n in p})
