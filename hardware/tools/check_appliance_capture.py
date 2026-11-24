@@ -30,10 +30,11 @@ def validate(tree,directory):
  def connected(ref,mapping):
   for net,pins in mapping.items():
    for pin in pins.split():on(ref,pin,net)
- assert len(C)==820,len(C)
+ assert len(C)==816,len(C)
  assert len(B)==sum(len(p) for p in N.values()),'Physical pin appears in two nets'
  for ref in C:
-  if ref in ['TP1101','TP1102','TP1103'] or ref.startswith('TP24'):assert C[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
+  if ref in ['H2001','H2002']:continue  # plated card hold-down holes, no part
+  if ref in ['TP1101','TP1102','TP1103'] or ref.startswith('TP24') and ref!='TP2473':assert C[ref].findtext('footprint')=='TestPoint:TestPoint_Pad_D1.0mm'
   else:assert F(ref).get('MPN') and F(ref).get('Manufacturer'),ref
  libs={(p.get('lib'),p.get('part')):{v.get('num') for v in p.findall('./pins/pin')} for p in tree.findall('./libparts/libpart')}
  counts={'U801':565,'U901':200,'U1101':153,'U501':69,'U1001':20,'U1301':49,'U201':48,'U1710':47,'U1901':15,'U1902':10,'J2001':67,'J2002':12}
@@ -79,7 +80,7 @@ def validate(tree,directory):
  # Memory and host interfaces checked against manufacturer pin tables and reference.
  for net,pin in {'EMMC_D0':'A3','EMMC_D1':'A4','EMMC_D2':'A5','EMMC_D3':'B2','EMMC_D4':'B3','EMMC_D5':'B4','EMMC_D6':'B5','EMMC_D7':'B6','EMMC_CMD':'M5','EMMC_CLK':'M6','EMMC_STROBE':'H5','EMMC_RESET_N':'K5'}.items():on('U1101',pin,net)
  exact('EMMC_CLK_SOC','U801:A29','R1103:1');subset('EMMC_CLK','R1103:2','TP1101:1')
- connected('J1201',{'GND':'5 6','RECOVERY_VBUS':'1','RECOVERY_PORT_D_P':'3','RECOVERY_PORT_D_N':'2'});nc('J1201','4')
+ connected('J1201',{'GND':'A1 A12 B1 B12 SH','RECOVERY_VBUS':'A4 A9 B4 B9','RECOVERY_PORT_D_P':'A6 B6','RECOVERY_PORT_D_N':'A7 B7','/Host recovery interfaces/RECOVERY_CC1':'A5','/Host recovery interfaces/RECOVERY_CC2':'B5'});nc('J1201','A8');nc('J1201','B8')
  assert not any(r in ['U401','U701'] for r,p in N['RECOVERY_VBUS'])
  connected('U1301',{'GND':'40 49','ETH_0V95':'8 28 47','ETH_PCIE_0V95':'37','ETH_3V3':'29 43 46','ETH_ANALOG_0V95':'11 16 22','ETH_ANALOG_3V3':'15 19 33','ETH_XTAL_3V3':'34','ETH_CORE_EN':'6','ETH_PERST_N':'36','ETH_PCIE_RXP':'41','ETH_PCIE_RXN':'42','ETH_PCIE_TXP':'38','ETH_PCIE_TXN':'39','ETH_REFCLK_P':'44','ETH_REFCLK_N':'45'})
  for pin in ['4','5','7']:nc('U1301',pin)
@@ -131,8 +132,8 @@ def validate(tree,directory):
  connected('J2301',{'SD_D2':'1','SD_D3':'2','SD_CMD':'3','SD_VDD':'4','SD_CLK':'5','GND':'6 10 SH','SD_D0':'7','SD_D1':'8','SDMMC0_DET':'9'})
  for pin,ref in [('48','R2311'),('46','R2312'),('44','R2313'),('42','R2314')]:exact(f'M2_PIN{pin}',f'J2001:{pin}',f'{ref}:1')
  for ref in ['J2301','R2304','U2302','D2301','D2302','U2303','R2311','R2312','R2313','R2314','C2305']:assert ref in default_dnp,ref
- tps=[r for r in C if r.startswith('TP24')];assert len(tps)==80
- for r in tps:assert B[(r,'1')]==C[r].findtext('value'),(r,B[(r,'1')])
+ tps=[r for r in C if r.startswith('TP24')];assert len(tps)==72
+ for r in tps:assert B[(r,'1')]==('GND' if r=='TP2473' else C[r].findtext('value')),(r,B[(r,'1')])
  profiles=json.loads((ROOT/'reference/modem-assembly-profiles.json').read_text())
  for profile in profiles:
   populated=set(profile['populate_optional']);assert not profile['released'];graph={}
