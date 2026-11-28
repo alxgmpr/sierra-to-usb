@@ -121315,309 +121315,6 @@
 			)
 		)
 	)
-	(footprint "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical"
-		(layer "F.Cu")
-		(uuid "b4eb2722-1e58-587f-b7e4-59ea490c5766")
-		(transform
-			(translate 507.8 110.05)
-			(rotate 90)
-			(scale 1 1)
-		)
-		(descr "Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2030-IDC.pdf")
-		(tags "tag connect programming header pogo pins")
-		(property "Reference" "J201"
-			(at -4.925 0.000)
-			(layer "F.SilkS")
-			(uuid "eaef1d49-8fc2-5253-9781-6f56d3ce2b9c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "SWD TC2030"
-			(at 0 -4.7 90)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "91821755-4bac-52cf-bf33-9566bebe5ecd")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/61300611121.pdf"
-			(at 0 0 90)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d62aa286-a6aa-5d07-86ea-b0e7e3723eae")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 90)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "4f3a2a68-0c97-50a4-88a4-84d0e1eb1cd9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "MPN" "61300611121"
-			(at 0 0 90)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "ccd37597-910d-5cd6-b6fa-5c7735ccbb3b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Manufacturer" "Wuerth Elektronik"
-			(at 0 0 90)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "2a4e88b0-f622-5d7e-8b51-cea7a3e24af0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(path "/ecaae96a-d952-55db-8fd2-e06cc742f8aa/3d1f41aa-40e8-59ac-82e1-1b8621dcb8ce/3cf2b22c-84bb-5e9b-808b-72972da43952")
-		(sheetname "/Recovery and always-on supply/Supervisor/")
-		(sheetfile "supervisor.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
-		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -1.905 1.27)
-			(end -1.905 0.635)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "bc9f0c7b-7feb-44e0-abcf-e6dd5196ca40")
-		)
-		(fp_line
-			(start -1.27 1.27)
-			(end -1.905 1.27)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "b0522be7-9c00-4db5-b37c-4e0f7d347ade")
-		)
-		(fp_line
-			(start -4.25 -4.25)
-			(end 3.75 -4.25)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "4f7f5781-20dc-45fb-9a10-64728b0b1e5a")
-		)
-		(fp_line
-			(start -4.25 4.25)
-			(end -4.25 -4.25)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "6981919b-cf8d-4d17-a006-fb863e1c862d")
-		)
-		(fp_line
-			(start 3.75 -4.25)
-			(end 3.75 4.25)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "0ba90e11-5c2f-41d4-bbd6-d89503c538d5")
-		)
-		(fp_line
-			(start 3.75 4.25)
-			(end -4.25 4.25)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "d3f287ac-43da-4c2e-9e9c-c4456ad17d9a")
-		)
-		(fp_text user "KEEPOUT"
-			(at 0 0 90)
-			(layer "Cmts.User")
-			(uuid "7138c155-3d65-419c-98aa-9c7413a0afb9")
-			(effects
-				(font
-					(size 0.4 0.4)
-					(thickness 0.07)
-				)
-			)
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
-			(layer "F.Fab")
-			(uuid "788e8c5d-3794-4920-a893-b49236efc3c2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "" np_thru_hole circle
-			(at -2.54 -2.54 90)
-			(size 2.3749 2.3749)
-			(drill 2.3749)
-			(layers "*.Cu" "*.Mask")
-			(uuid "fbba5f82-0366-5465-9adb-dd6ae4ed8f93")
-		)
-		(pad "" np_thru_hole circle
-			(at -2.54 0 90)
-			(size 0.9906 0.9906)
-			(drill 0.9906)
-			(layers "*.Cu" "*.Mask")
-			(uuid "d0621f28-40b6-521a-a7cd-6191f6b0e464")
-		)
-		(pad "" np_thru_hole circle
-			(at -2.54 2.54 90)
-			(size 2.3749 2.3749)
-			(drill 2.3749)
-			(layers "*.Cu" "*.Mask")
-			(uuid "d9ba7d0d-8068-5dcd-a5f2-35671e12fec0")
-		)
-		(pad "" np_thru_hole circle
-			(at 0.635 -2.54 90)
-			(size 2.3749 2.3749)
-			(drill 2.3749)
-			(layers "*.Cu" "*.Mask")
-			(uuid "4fa70222-c143-50d3-9d8e-57d99bbe4590")
-		)
-		(pad "" np_thru_hole circle
-			(at 0.635 2.54 90)
-			(size 2.3749 2.3749)
-			(drill 2.3749)
-			(layers "*.Cu" "*.Mask")
-			(uuid "571693cd-f498-5101-acb9-aa38896da2f0")
-		)
-		(pad "" np_thru_hole circle
-			(at 2.54 -1.016 90)
-			(size 0.9906 0.9906)
-			(drill 0.9906)
-			(layers "*.Cu" "*.Mask")
-			(uuid "f5a5c18d-bb72-58b6-bdb6-29056db3cc6d")
-		)
-		(pad "" np_thru_hole circle
-			(at 2.54 1.016 90)
-			(size 0.9906 0.9906)
-			(drill 0.9906)
-			(layers "*.Cu" "*.Mask")
-			(uuid "e6c1352f-8c83-5343-bf13-e63e962d678c")
-		)
-		(pad "1" connect circle
-			(at -1.27 0.635 90)
-			(size 0.7874 0.7874)
-			(layers "F.Cu" "F.Mask")
-			(net "+3V3")
-			(pinfunction "VCC_1")
-			(pintype "passive")
-			(uuid "bc50e1f5-2459-5532-b14b-2ff359af3281")
-		)
-		(pad "2" connect circle
-			(at -1.27 -0.635 90)
-			(size 0.7874 0.7874)
-			(layers "F.Cu" "F.Mask")
-			(net "/Recovery and always-on supply/Supervisor/SWDIO")
-			(pinfunction "SWDIO_2")
-			(pintype "passive")
-			(uuid "7e26ca0b-c386-5ada-bf9d-62d89fa5ac4a")
-		)
-		(pad "3" connect circle
-			(at 0 0.635 90)
-			(size 0.7874 0.7874)
-			(layers "F.Cu" "F.Mask")
-			(net "/Recovery and always-on supply/Supervisor/MCU_NRST_N")
-			(pinfunction "nRESET_3")
-			(pintype "passive")
-			(uuid "a7ba8d92-f2d1-5ce5-be1d-68329d2160af")
-		)
-		(pad "4" connect circle
-			(at 0 -0.635 90)
-			(size 0.7874 0.7874)
-			(layers "F.Cu" "F.Mask")
-			(net "/Recovery and always-on supply/Supervisor/SWCLK")
-			(pinfunction "SWCLK_4")
-			(pintype "passive")
-			(uuid "bd4201fa-c36e-5efa-a5a0-ce6cb72bb6e3")
-		)
-		(pad "5" connect circle
-			(at 1.27 0.635 90)
-			(size 0.7874 0.7874)
-			(layers "F.Cu" "F.Mask")
-			(net "GND")
-			(pinfunction "GND_5")
-			(pintype "passive")
-			(uuid "1a6c9743-15c3-5539-83b2-c98522a37f17")
-		)
-		(pad "6" connect circle
-			(at 1.27 -0.635 90)
-			(size 0.7874 0.7874)
-			(layers "F.Cu" "F.Mask")
-			(net "unconnected-(J201-SWO-Pad6)")
-			(pinfunction "SWO_6")
-			(pintype "passive+no_connect")
-			(uuid "98659db0-d41e-510e-a492-e99390502759")
-		)
-		(zone
-			(layer "F.Cu")
-			(uuid "a33ef27c-5801-4f34-94bd-1cacf08d7e20")
-			(hatch full 0.508)
-			(connect_pads
-				(clearance 0)
-			)
-			(min_thickness 0.254)
-			(keepout
-				(tracks allowed)
-				(vias not_allowed)
-				(pads allowed)
-				(copperpour not_allowed)
-				(footprints not_allowed)
-			)
-			(placement
-				(enabled no)
-				(sheetname "")
-			)
-			(fill
-				(thermal_gap 0.508)
-				(thermal_bridge_width 0.508)
-				(island_removal_mode 0)
-			)
-			(polygon
-				(pts
-					(xy 1.27 -0.635) (xy -1.27 -0.635) (xy -1.27 0.635) (xy 1.27 0.635)
-				)
-			)
-		)
-		(embedded_fonts no)
-	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "b5877d89-c393-4c15-8004-7a97e2effc63")
@@ -215546,4 +215243,236 @@
 		(uuid "e7ce5ec2-94de-428f-ad07-dea99b6e1815")
 	)
 	(embedded_fonts no)
+	(footprint "Connector:Tag-Connect_TC2050-IDC-FP_2x05_P1.27mm_Vertical"
+(layer "F.Cu")
+(uuid "b4eb2722-1e58-587f-b7e4-59ea490c5766")
+(transform (translate 507.5500 110.4500) (rotate 0) (scale 1 1))
+(descr "Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2050-IDC-430%20Datasheet.pdf")
+(tags "tag connect programming header pogo pins")
+(property "Reference" "J201"
+		(at -0.375 4.925)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	 (uuid "eaef1d49-8fc2-5253-9781-6f56d3ce2b9c"))
+(property "Value" "SWD TC2050"
+		(at 0 -4.8 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	 (uuid "91821755-4bac-52cf-bf33-9566bebe5ecd") (hide yes))
+(attr exclude_from_bom exclude_from_pos_files)
+(duplicate_pad_numbers_are_jumpers no)
+(fp_line
+		(start -3.175 1.27)
+		(end -3.175 0.635)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+(fp_line
+		(start -2.54 1.27)
+		(end -3.175 1.27)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+(fp_line
+		(start -5.5 -4.25)
+		(end 4.75 -4.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+(fp_line
+		(start -5.5 4.25)
+		(end -5.5 -4.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+(fp_line
+		(start 4.75 -4.25)
+		(end 4.75 4.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+(fp_line
+		(start 4.75 4.25)
+		(end -5.5 4.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+(fp_text user "KEEPOUT"
+		(at 0 0 0)
+		(layer "Cmts.User")
+		(effects
+			(font
+				(size 0.4 0.4)
+				(thickness 0.07)
+			)
+		)
+	)
+(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+(pad "" np_thru_hole circle
+		(at -3.81 -2.54)
+		(size 2.3749 2.3749)
+		(drill 2.3749)
+		(layers "*.Cu" "*.Mask")
+	 (uuid "fbba5f82-0366-5465-9adb-dd6ae4ed8f93"))
+(pad "" np_thru_hole circle
+		(at -3.81 0)
+		(size 0.9906 0.9906)
+		(drill 0.9906)
+		(layers "*.Cu" "*.Mask")
+	 (uuid "d0621f28-40b6-521a-a7cd-6191f6b0e464"))
+(pad "" np_thru_hole circle
+		(at -3.81 2.54)
+		(size 2.3749 2.3749)
+		(drill 2.3749)
+		(layers "*.Cu" "*.Mask")
+	 (uuid "d9ba7d0d-8068-5dcd-a5f2-35671e12fec0"))
+(pad "" np_thru_hole circle
+		(at 1.905 -2.54)
+		(size 2.3749 2.3749)
+		(drill 2.3749)
+		(layers "*.Cu" "*.Mask")
+	 (uuid "4fa70222-c143-50d3-9d8e-57d99bbe4590"))
+(pad "" np_thru_hole circle
+		(at 1.905 2.54)
+		(size 2.3749 2.3749)
+		(drill 2.3749)
+		(layers "*.Cu" "*.Mask")
+	 (uuid "571693cd-f498-5101-acb9-aa38896da2f0"))
+(pad "" np_thru_hole circle
+		(at 3.81 -1.016)
+		(size 0.9906 0.9906)
+		(drill 0.9906)
+		(layers "*.Cu" "*.Mask")
+	 (uuid "f5a5c18d-bb72-58b6-bdb6-29056db3cc6d"))
+(pad "" np_thru_hole circle
+		(at 3.81 1.016)
+		(size 0.9906 0.9906)
+		(drill 0.9906)
+		(layers "*.Cu" "*.Mask")
+	 (uuid "e6c1352f-8c83-5343-bf13-e63e962d678c"))
+(pad "1" connect circle
+		(at -2.54 0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "+3V3") (pinfunction "VCC_1") (pintype "passive") (uuid "bc50e1f5-2459-5532-b14b-2ff359af3281"))
+(pad "2" connect circle
+		(at -1.27 0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "/Recovery and always-on supply/Supervisor/SWDIO") (pinfunction "SWDIO_2") (pintype "passive") (uuid "7e26ca0b-c386-5ada-bf9d-62d89fa5ac4a"))
+(pad "3" connect circle
+		(at 0 0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "GND") (pinfunction "GND_3") (pintype "passive") (uuid "a7ba8d92-f2d1-5ce5-be1d-68329d2160af"))
+(pad "4" connect circle
+		(at 1.27 0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "/Recovery and always-on supply/Supervisor/SWCLK") (pinfunction "SWCLK_4") (pintype "passive") (uuid "bd4201fa-c36e-5efa-a5a0-ce6cb72bb6e3"))
+(pad "5" connect circle
+		(at 2.54 0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "GND") (pinfunction "GND_5") (pintype "passive") (uuid "1a6c9743-15c3-5539-83b2-c98522a37f17"))
+(pad "6" connect circle
+		(at 2.54 -0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "unconnected-(J201-SWO-Pad6)") (pinfunction "SWO_6") (pintype "passive+no_connect") (uuid "98659db0-d41e-510e-a492-e99390502759"))
+(pad "7" connect circle
+		(at 1.27 -0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "unconnected-(J201-KEY-Pad7)") (pinfunction "KEY_7") (pintype "no_connect") (uuid "d85f59de-130d-5022-9a61-e0b6a5d6863f"))
+(pad "8" connect circle
+		(at 0 -0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "unconnected-(J201-NC-Pad8)") (pinfunction "NC_8") (pintype "no_connect") (uuid "fc6999c8-e8ba-5de0-9bd8-f3c3b9ba312e"))
+(pad "9" connect circle
+		(at -1.27 -0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "GND") (pinfunction "GND_9") (pintype "passive") (uuid "a4043076-33a5-560a-abc9-41a2e7bb729c"))
+(pad "10" connect circle
+		(at -2.54 -0.635)
+		(size 0.7874 0.7874)
+		(layers "F.Cu" "F.Mask")
+	 (net "/Recovery and always-on supply/Supervisor/MCU_NRST_N") (pinfunction "nRESET_10") (pintype "passive") (uuid "2bddccc2-1139-5131-906a-2fe77c7dbf92"))
+(zone
+		(layer "F.Cu")
+		(hatch full 0.508)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.254)
+		(keepout
+			(tracks allowed)
+			(vias not_allowed)
+			(pads allowed)
+			(copperpour not_allowed)
+			(footprints not_allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.508)
+			(thermal_bridge_width 0.508)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy -2.54 0.635) (xy 2.54 0.635) (xy 2.54 -0.635) (xy -2.54 -0.635)
+			)
+		)
+	)
+(embedded_fonts no)
+(property "MPN" "TC2050-IDC" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "ccd37597-910d-5cd6-b6fa-5c7735ccbb3b") (effects (font (size 1 1) (thickness 0.15))))
+(property "Manufacturer" "Tag-Connect" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "2a4e88b0-f622-5d7e-8b51-cea7a3e24af0") (effects (font (size 1 1) (thickness 0.15))))
+(property "Datasheet" "http://www.tag-connect.com/Materials/TC2050-IDC-430%20Datasheet.pdf" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "d62aa286-a6aa-5d07-86ea-b0e7e3723eae") (effects (font (size 1 1) (thickness 0.15))))
+(property "Description" "" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "4f3a2a68-0c97-50a4-88a4-84d0e1eb1cd9") (effects (font (size 1 1) (thickness 0.15))))
+(path "/ecaae96a-d952-55db-8fd2-e06cc742f8aa/3d1f41aa-40e8-59ac-82e1-1b8621dcb8ce/3cf2b22c-84bb-5e9b-808b-72972da43952")
+(sheetname "/Recovery and always-on supply/Supervisor/")
+(sheetfile "supervisor.kicad_sch")
+)
 )

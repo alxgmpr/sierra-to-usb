@@ -444,7 +444,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Appliance:TC2030_SWD"
+		(symbol "Appliance:TC2050_SWD"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -464,8 +464,8 @@
 					)
 				)
 			)
-			(property "Value" "TC2030_SWD"
-				(at 0 -10.16 0)
+			(property "Value" "TC2050_SWD"
+				(at 0 -16.51 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -496,7 +496,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Tag-Connect TC2050-IDC footprint, ARM Cortex 10-pin SWD pinout (GND 3/5/9 stacked)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -518,7 +518,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(property "ki_fp_filters" "Tag?Connect*TC2050*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -529,10 +529,10 @@
 					)
 				)
 			)
-			(symbol "TC2030_SWD_1_1"
+			(symbol "TC2050_SWD_1_1"
 				(rectangle
 					(start -1.27 6.35)
-					(end 1.27 -8.89)
+					(end 1.27 -13.97)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -607,6 +607,28 @@
 						(type none)
 					)
 				)
+				(rectangle
+					(start -1.27 -10.033)
+					(end 0 -10.287)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -12.573)
+					(end 0 -12.827)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
 					(at -5.08 5.08 0)
 					(length 3.81)
@@ -653,7 +675,45 @@
 							)
 						)
 					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -689,7 +749,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -708,6 +768,42 @@
 						)
 					)
 					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -5.08 -10.16 0)
+					(length 3.81)
+					(name "KEY"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -5.08 -12.7 0)
+					(length 3.81)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4953,7 +5049,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Appliance:TC2030_SWD")
+		(lib_id "Appliance:TC2050_SWD")
 		(at 248.92 165.1 0)
 		(unit 1)
 		(body_style 1)
@@ -4974,7 +5070,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SWD TC2030"
+		(property "Value" "SWD TC2050"
 			(at 252.73 160.02 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4985,7 +5081,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical"
+		(property "Footprint" "Connector:Tag-Connect_TC2050-IDC-FP_2x05_P1.27mm_Vertical"
 			(at 248.92 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -4997,7 +5093,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/61300611121.pdf"
+		(property "Datasheet" "http://www.tag-connect.com/Materials/TC2050-IDC-430%20Datasheet.pdf"
 			(at 248.92 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -5019,7 +5115,7 @@
 				)
 			)
 		)
-		(property "MPN" "61300611121"
+		(property "MPN" "TC2050-IDC"
 			(at 248.92 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -5030,7 +5126,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Wuerth Elektronik"
+		(property "Manufacturer" "Tag-Connect"
 			(at 248.92 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -5058,6 +5154,18 @@
 		)
 		(pin "6"
 			(uuid "08fd8471-75d7-5546-8bf9-08a54f2b60b8")
+		)
+		(pin "7"
+			(uuid "2a8ecd92-4b3b-5b03-9208-aee3113d5c0f")
+		)
+		(pin "8"
+			(uuid "7e35cf1d-0778-5c50-9ff5-c2196d492c6d")
+		)
+		(pin "9"
+			(uuid "5f57d3d4-5fcd-5e26-9c9b-faec6c78f885")
+		)
+		(pin "10"
+			(uuid "83bc1cfe-5140-58eb-9738-e7c5e4113f31")
 		)
 		(instances
 			(project "recovery"

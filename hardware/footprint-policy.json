@@ -439,7 +439,7 @@
     "J1701": "Appliance:Sierra_RJE491881401_1x08-1MP_P1.02mm",
     "J2001": "Appliance:Sierra_MDT420B01411_2x38-1MP_P0.5mm",
     "J2002": "Appliance:SIM-SMD_1042240820",
-    "J201": "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical",
+    "J201": "Connector:Tag-Connect_TC2050-IDC-FP_2x05_P1.27mm_Vertical",
     "J202": "Recovery:Wuerth_61300211121_1x02_P2.54mm_Vertical",
     "J2101": "PoE:TI_TERM_BLK_ED555-2DS",
     "J2301": "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5",
@@ -843,7 +843,7 @@
     "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_CommonModeChoke_Wuerth_WE-SL5.step": "${KIPRJMOD}/Appliance.3dshapes/Sierra_WE-SL5_744272251.step"
   },
   "model_release_holds": {
-    "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical": "Bare copper pads and leg holes for a Tag-Connect TC2030-IDC cable; no component is fitted, so there is nothing to model.",
+    "Connector:Tag-Connect_TC2050-IDC-FP_2x05_P1.27mm_Vertical": "Bare copper pads and leg holes for a Tag-Connect TC2050-IDC cable; no component is fitted, so there is nothing to model.",
     "MountingHole:MountingHole_2.2mm_M2_Pad": "Plated M2 hold-down for the M.2 card; the standoff/screw is mechanical hardware, not a fitted component."
   },
   "drawing_review": "reference/footprint-reviews-2026-10-21.json"
